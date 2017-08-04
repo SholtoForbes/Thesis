@@ -1,0 +1,53 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\contentsline {chapter}{List of figures}{xiii}{chapter*.15}
+\contentsline {chapter}{List of tables}{xv}{chapter*.16}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Research aims}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Thesis outline}{3}{section.1.2}
+\contentsline {chapter}{\numberline {2}Literature review}{5}{chapter.2}
+\contentsline {subsection}{\numberline {2.0.1}Airbreathing Access to Space Systems}{5}{subsection.2.0.1}
+\contentsline {subsection}{\numberline {2.0.2}Scramjets}{6}{subsection.2.0.2}
+\contentsline {subsection}{\numberline {2.0.3}The SPARTAN}{7}{subsection.2.0.3}
+\contentsline {subsubsection}{Scramjet Engine Model}{8}{section*.25}
+\contentsline {subsection}{\numberline {2.0.4}Partially-Airbreathing Launch Vehicle Trajectories}{8}{subsection.2.0.4}
+\contentsline {subsection}{\numberline {2.0.5}Optimal Control}{11}{subsection.2.0.5}
+\contentsline {subsection}{\numberline {2.0.6}The Single Shooting Method}{13}{subsection.2.0.6}
+\contentsline {subsection}{\numberline {2.0.7}The Multiple Shooting Method}{13}{subsection.2.0.7}
+\contentsline {subsection}{\numberline {2.0.8}The Pseudospectral Method}{15}{subsection.2.0.8}
+\contentsline {subsection}{\numberline {2.0.9}Pseudospectral Examples}{17}{subsection.2.0.9}
+\contentsline {subsection}{\numberline {2.0.10}Available Solvers}{19}{subsection.2.0.10}
+\contentsline {section}{\numberline {2.1}Summary}{20}{section.2.1}
+\contentsline {chapter}{\numberline {3}Launch Vehicle Design}{21}{chapter.3}
+\contentsline {section}{\numberline {3.1}First Stage Rocket}{21}{section.3.1}
+\contentsline {section}{\numberline {3.2}Second Stage Scramjet}{21}{section.3.2}
+\contentsline {section}{\numberline {3.3}Third Stage Rocket}{22}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Fuel Tank Sizing}{22}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Aerodynamics}{22}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Thrust Vectoring}{22}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Heat Shield Sizing}{23}{subsection.3.3.4}
+\contentsline {chapter}{\numberline {4}LODESTAR}{25}{chapter.4}
+\contentsline {subsection}{\numberline {4.0.1}Dynamic Model}{25}{subsection.4.0.1}
+\contentsline {subsection}{\numberline {4.0.2}The Pseudospectral Method}{26}{subsection.4.0.2}
+\contentsline {subsection}{\numberline {4.0.3}Trajectory Connection Points}{26}{subsection.4.0.3}
+\contentsline {subsection}{\numberline {4.0.4}First Stage Trajectory}{26}{subsection.4.0.4}
+\contentsline {subsubsection}{Control Variables}{27}{section*.30}
+\contentsline {subsubsection}{Primal Variables}{27}{section*.31}
+\contentsline {subsection}{\numberline {4.0.5}First Stage Return Trajectory}{27}{subsection.4.0.5}
+\contentsline {subsubsection}{Control Variables}{27}{section*.32}
+\contentsline {subsubsection}{Primal Variables}{27}{section*.33}
+\contentsline {subsection}{\numberline {4.0.6}Second Stage Trajectory}{27}{subsection.4.0.6}
+\contentsline {subsubsection}{Control Variables}{27}{section*.34}
+\contentsline {subsubsection}{Primal Variables}{27}{section*.35}
+\contentsline {subsection}{\numberline {4.0.7}Second Stage Return Trajectory}{27}{subsection.4.0.7}
+\contentsline {subsubsection}{Control Variables}{28}{section*.36}
+\contentsline {subsection}{\numberline {4.0.8}Third Stage Trajectory}{28}{subsection.4.0.8}
+\contentsline {subsubsection}{Control Variables}{28}{section*.37}
+\contentsline {chapter}{\numberline {5}Trajectory Results}{29}{chapter.5}
+\contentsline {section}{\numberline {5.1}Third Stage trajectory}{29}{section.5.1}
+\contentsline {section}{\numberline {5.2}SPARTAN trajectory}{29}{section.5.2}
+\contentsline {section}{\numberline {5.3}First Stage Trajectory}{29}{section.5.3}
+\contentsline {section}{\numberline {5.4}Flyback trajectories }{29}{section.5.4}
+\contentsline {chapter}{\numberline {6}bleh}{31}{chapter.6}
+\contentsline {chapter}{\numberline {7}Conclusions}{33}{chapter.7}
+\contentsline {section}{\numberline {7.1}Recommendations for future work}{33}{section.7.1}
+\contentsline {chapter}{\numberline {A}Details of test conditions}{35}{appendix.A}

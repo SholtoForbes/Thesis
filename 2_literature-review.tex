@@ -1,0 +1,316 @@
+% 2_literature-review.tex
+
+\cleardoublepage
+\chapter{Literature review}\label{chapter:literature-review}
+
+  This chapter examines the relevant literature associated with the different aspects of the work conducted as part of this thesis. Explain order and of literature and what was examined.
+  \nomenclature[a]{REST}{Rectangular-to-Elliptical Shape Transition}
+  
+\subsection{Airbreathing Access to Space Systems}
+
+The possibility of using airbreathing stages in access to space systems has been studied in some detail, and there are multiple systems currently under preliminary development. These systems have been investigated in various forms including; single stage, dual stage and tri stage designs. Single stage designs are currently undergoing evaluation, the most prominent of which is the SKYLON Spaceplane being developed by Reaction Engines Limited \cite{Varvill2004}. The SKYLON is a spaceplane which utilises SABRE, a combined cycle airbreathing rocket propulsion system potentially reusable for 200 flights, and is being developed to deliver payloads on the order of 2800kg to heliosynchronous orbit \cite{Sky-rel-ma-}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.6\linewidth]{SKYLON}
+	\caption{The SKYLON spaceplane \cite{Varvill2008}.}
+	\label{fig:SKYLON}
+\end{figure}
+A single stage design has the advantage of being fully contained within one vehicle, which is convenient for reusability and return trajectories however is has been suggested by Smart \& Tetlow \cite{Smart2009} that these designs suffer from severe limitations as they must contain multiple engines which add mass at later stages of the trajectory and decrease the efficiency of the vehicle. Smart \& Tetlow suggest that multistage systems offer significant improvements in payload mass fractions, and have the advantage of using airbreathing stages only within their operable range.
+Dual stage designs have been investigated in some detail using the 'spaceplane' concept by Mehta \& Bowles \cite{Mehta2001} using life cycle cost analysis in order to take flexibility and reusability into account. Mehta \& Bowles conclude that a two stage design is the optimal configuration for reusable hypersonic space access systems, however this study is only based on comparison with single stage to orbit systems, and it is more useful to consider their conclusions as an endorsement of multi stage airbreathing designs in general. They find that multi stage vehicles have higher potential for payload that single stage to orbit (SSTO) systems and have less propellant requirements, partly due to a greater atmospheric cruise capability. 
+
+
+
+
+\subsection{Scramjets}
+
+
+A Scramjet, or supersonic combustion ramjet, is an airbreathing engine design which combusts air at supersonic speeds and is capable of high Mach number operation. Scramjets were proposed in the 1940's \cite{Curran2001} and found to be capable of positive net thrust in 1993 \cite{Paull1993} but have yet to be developed to a level which would allow for commercial application. Scramjet powered vehicles are a primary candidate for small payload delivery systems, offering much higher specific impulse than rockets over their operating range \cite{Billig1993} \cite{Cook2003}. Scramjet engines exhibit this advantage within their operating range of Mach 6-12 due to using atmospheric oxygen for reaction and only carrying fuel, increasing the payload mass that the scramjet vehicle is able to carry. Figure \ref{fig:AirbreathingCorridor} shows the operating corridor for scramjet engines, indicating the point at which transition to rocket stage would occur, the lower dynamic pressure limit on engine operation and the upper dynamic pressure limit on the aircraft structure.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\linewidth]{AirbreathingCorridor}
+	\caption{The airbreathing vehicle flight corridor \cite{Smart2010}.}
+	\label{fig:AirbreathingCorridor}
+\end{figure}
+
+Smart \& Tetlow \cite{Smart2009} have found that the fuel savings achieved by using a scramjet engine within these limits, coupled with small necessary payload mass, may enable the development of a partially or fully reusable space access system utilising a scramjet powered stage in the near future. Simulations carried out  for three stage systems utilising scramjet and rocket engines for small payload delivery show possible payload mass fractions of around 1.5\% to 200km orbit with a reusable scramjet stage  \cite{Smart2009}. Scramjet powered vehicles may also offer the ability to put small payloads into orbit with greatly increased flexibility and launch window when compared to similarly sized rocket systems. This has been assessed in a study by Flaherty  \cite{Flaherty2010} comparing the United States Air Force's Reusable Military Launch System all-rocket launch vehicle RMLS102 against the Alliant Techsystems rocket/scramjet launch system ATK-RBCC. These vehicles are similarly sized and comparisons were made for payloads launched to rendezvous with satellites in randomly generated orbits. These vehicles were compared using the range of orbital trajectories that each vehicle was able to rendezvous with within one day, determined by launch vehicle range. The rocket/scramjet ATK-RBCC was found to have a large advantage in trajectory flexibility over the rocket only vehicle, in a large part due to the scramjets ability to fly fuel efficiently over long distances. This means in general that a partially scramjet powered accelerator  is able to fulfil the specific delivery needs of small payloads over a wider range of orbits within smaller time periods when compared to a fully rocket powered accelerator. This can be advantageous for time critical and orbit dependant payloads which have specific mission requirements to be met. 
+
+
+
+
+\subsection{The SPARTAN}
+
+
+The University of Queensland is developing a three stage partially reusable access to space system utilising the SPARTAN scramjet powered vehicle as the reusable second stage shown in Figure \ref{fig:SPARTAN} \cite{Jazra2013}. This is the system which is considered in this study and is used as a representative system for three stage airbreathing access to space system designs. This system is designed for small payload deliveries to orbit and will utilise the ALV rocket booster to accelerate the SPARTAN stage to minimum Mach number required for stable burn, at which point separation occurs and the second stage uses a scramjet engine to accelerate to between Mach 6-10.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\linewidth]{SPARTAN}
+	\caption{The SPARTAN system \cite{Jazra2013}.}
+	\label{fig:SPARTAN}
+\end{figure}
+
+The third stage will be a disposable rocket stage, which will then deliver the payload to orbit via a pull up manoeuvre to leave the atmosphere, followed by a Hohmann transfer. The first and second stages will be reusable, the first stage via conversion into a propeller powered drone, and the second stage through either a glide or extra scramjet powered flight to a suitable landing site. 
+
+This system has been designed to initial design stages, with estimates of  payload mass fraction indicating that 1.26\% PMF is possible when delivering a 257.4kg payload to low earth orbit \cite{Preller2015a}. This compares well with existing space systems of similar size, with the advantage of being designed for reusability. The second stage vehicle has been designed to a detailed level, and optimised for payload delivery to heliosynchronous orbit. The first stage ALV is being designed by Heliaq engineering and is in initial testing stages.
+
+The SPARTAN has been studied in some detail, simulating over a constant dynamic pressure trajectory and varying the aerodynamic surface properties of the vehicle. The Aerodynamic analysis has been performed using HYPAERO, which uses strip theory to calculate aerodynamic properties along the aircraft as illustrated in Figure \ref{fig:strip}. In strip theory two dimensional sections are created running the length of the vehicle, defining streamlines along the vehicle faces. Pressure, Mach number and skin friction are calculated along these streamlines to compute the aerodynamic coefficients of the vehicle. The aerodynamic coefficients for the SPARTAN vehicle have been developed by Jazra et al. \cite{Jazra2013} and have been provided for this study by Dawid Preller.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\linewidth]{strip}
+	\caption{HYPAERO analysis surface grid \cite{Jazra2013}.}
+	\label{fig:strip}
+\end{figure}
+
+
+\subsubsection{Scramjet Engine Model}
+%To deliver a payload to orbit, the SPARTAN uses four Rectangular-to-Elliptical Shape Transition (REST) scramjet engines aligned on the underside of the fuselage. The REST model has been studied experimentally for flight at off design conditions by Smart \& Ruf \cite{Smart2006} and data has been provided by Michael Smart for use in this study. The REST engine has been used as it has been proven to operate successfully at off-design conditions, an extremely important property for this study as the scramjet stage is expected to accelerate the payload as well as potentially change altitude. %
+
+
+
+
+\subsection{Partially-Airbreathing Launch Vehicle Trajectories}
+
+Current simulations of the SPARTAN vehicle have been carried out with the assumption of a 50kpa dynamic pressure trajectory, a likely design point of the vehicle and scramjet engine. 
+ Constant dynamic pressure trajectories have been used for airbreathing vehicle simulation due to the tradeoff between structural loading and engine performance for hypersonic vehicles \cite{Olds1998} . As dynamic pressure increases so does the structural loading on the vehicle, however scramjet thrust is directly reliant on dynamic pressure ie. an increase in dynamic pressure directly means more air into the engine inlet. A constant dynamic pressure is viewed as being an acceptable compromise between these two factors.   
+This form of trajectory has so far been simulated using proportional integral derivative (PID) feedback control, directly investigated since 1998 by Olds \& Budianto \cite{Olds1998}. This is a simple and effective form of control for systems being simulated over a constant dynamic pressure path \cite{Preller2015}. This form of control utilises minimises an error function as the vehicle moves along its trajectory. This error function causes the controls of the vehicle to be modified by a feedback term which is a function of the error including proportional, integral and derivative terms. The result is a trajectory which is suitably close to the objective design point, with minimal overshoot and steady state error which can cause oscillations around the specified design value. Figure \ref{fig:PID} shows an example of a constant gain PID controller as applied to the SPARTAN vehicle being simulated to a design point of 50kPa dynamic pressure. Oscillations can be observed around the design point due to overshoot and steady state error, factors which are prevalent in PID control systems.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.9\linewidth]{PID}
+	\caption{An example of a constant gain PID controller, controlling the SPARTAN trajectory around a 50kPa dynamic pressure design point \cite{Preller2015}.}
+	\label{fig:PID}
+\end{figure}
+
+
+It is possible that a constant dynamic pressure trajectory may not be the most appropriate trajectory for the second stage vehicle, as there is a variety of aerodynamic factors that must be considered in designing optimal payload to orbit flight. It may be optimal for the vehicle to fly at less than maximum dynamic pressure at point throughout the trajectory, most likely at the first to second and second to third stage separation points. For a constant dynamic pressure trajectory the second-third stage transition will occur at a very low trajectory angle. This is suboptimal for the third stage rocket, which needs to perform a large pull up manoeuvre at high dynamic pressure. Launching this system at higher angle or altitude may improve third stage fuel usage greatly, at a small cost to the second stage fuel, allowing a greater payload to be delivered to orbit. 
+
+Optimal trajectories have previously been developed for launch systems integrating airbreathing and rocket propulsion within single-stage-to-orbit (SSTO) vehicles \cite{Powell1991,Lu1993,Trefny1999}. These optimal trajectory studies found unanimously that a pull-up manoeuvre before the end of the airbreathing engine cut-off was the optimal flight path for the SSTO airbreathing-rocket vehicles being investigated. A pull-up was found to be optimal for vehicles where the rocket engines are not ignited until circularization altitude \cite{Powell1991,Lu1993} as well as vehicles where the rocket engine is ignited immediately after airbreathing engine cut-off \cite{Trefny1999}. For SSTO vehicles a pull-up manoeuvre is a simple trade-off between the altitude at airbreathing engine cut-off and the velocity achievable at cut-off. Due to the entire vehicle being lifted into orbit, this becomes a relatively simple problem of engine efficiency. 
+
+ \textcolor{red}{insert pull-up figure here}
+
+For a multi-stage to orbit vehicle, calculating the optimal trajectory for maximum payload flight is significantly more difficult. A multi-stage vehicle has one or more stage transition points, where the vehicle separates a component which is discarded or reused later, and does not continue to orbit. At a stage transition point there is a large change in the mass and aerodynamics of the launch system. 
+This change in flight dynamics makes finding the optimal stage transition point more complicated. To find the optimal separation point there is a trade-off between:
+ \rom{1}. The high efficiency of the scramjet engines,
+ \rom{2}. The thrust produced by the scramjet engines, 
+ \rom{3}. The potential thrust of the rocket engines,
+ \rom{4}. The energy necessary to increase the altitude of the scramjet stage,
+ \rom{5}. The aerodynamic efficiency when performing the required direction change.
+All of these factors must be considered in order to generate an optimal trajectory. 
+
+There has been a number of studies which have identified a pull-up manoeuvre as being advantageous for a multi-stage system \cite{Tsuchiya2005,Wilhite1991,Mehta2001}. However, in these studies a pull-up manoeuvre has been specified in order to decrease the dynamic pressure of the vehicle at airbreathing-rocket stage separation. In the studies by Tsuchiya et al.\cite{Tsuchiya2005} and Wilhite et al.\cite{Wilhite1991} decreased dynamic pressure is necessary for the successful operation of the rocket stages under investigation. 
+Mehta \& Bowles \cite{Mehta2001} prescribe a 2g pull-up at flight conditions of Mach 10, 95000 ft for an airbreathing stage in order to "lower dynamic pressures and to achieve the optimal launching flight path angle for the orbiter vehicle". This indicates that a pull-up manoeuvre is considered optimal before airbreathing-rocket transition, however this study does not optimise the shape or magnitude of the pull-up manoeuvre, only considering the increased performance of the rocket vehicle. 
+ 
+
+\subsection{Optimal Control}
+
+
+To this point analysis of the SPARTAN trajectory has been performed using PID feedback control, assuming a constant dynamic pressure trajectory \cite{Preller2015}. PID feedback control simulates the vehicle flight and manoeuvres the vehicle so that the trajectory conforms to a defined design point. Currently the trajectory of the SPARTAN has been simulated to align as closely as possible with 50kPa flight, a problem for which PID control is well suited. 
+
+This study aims to find the optimal trajectory path for the SPARTAN that will produce maximum payload to orbit capability for the three stage system. Feedback control is infeasible for finding an optimal trajectory shape as there is no single design point at each stage of the simulated trajectory to calibrate towards. A control method is required that can take into account all aerodynamic factors at every timestep in order to find an optimal trajectory. Defining the trajectory simulation as an optimisation problem allows the trajectory to be solved at every point simultaneously, producing an optimal trajectory over the entire simulation space. Optimal control theory is widely used in situations where an optimal trajectory path must be found, and has been used widely in aerospace applications. However a trajectory optimisation has not been attempted on a three stage airbreathing system, and is usually reserved for simpler systems as there can be issues with convergence and long computation times \cite{Diehl2006}. This does not rule out using an optimisation method on a complex aerodynamic system however it does reinforce that choosing the correct optimisation procedure and defining the problem in the correct way is integral to developing an accurate solution method. This study aims to find a method of optimisation that is applicable to a complex aerodynamic trajectory and to apply this to the SPARTAN vehicle to produce an optimal trajectory shape for maximum payload delivery to heliocentric orbit.
+
+For an optimisation of a complex trajectory there are a variety of optimal control methods that are useful for specific problem types. These are separated into two categories: direct and indirect solution methods. Indirect methods are based on the calculus of variations or minimum principle model, and generally result in high accuracy solutions to optimisation problems \cite{Bulirsch1993}. However indirect models suffer from the drawbacks of small radii of convergence and the fact that the equations to be solved often exhibit strong nonlinearity and discontinuities. This means that indirect methods will not be solvable unless the problem is very well defined with a minimum of nonlinearity, making indirect methods unsuitable for many complex optimisation problems such as aerospace vehicle simulations which can exhibit strong nonlinear behaviour and have a wide solution space. 
+
+Direct methods transform an optimisation problem into a nonlinear programming (NLP) problem which can be solved computationally \cite{Stryk1992}. NLP solvers solve the optimisation problem defined as \cite{Bazaraa2013}:
+
+\begin{equation}
+Minimise \qquad f(x)
+\end{equation}
+
+\begin{equation}
+Subject \quad to \qquad g_i(x)\leq0 \quad for \quad i=1,...,m
+\end{equation}
+
+\begin{equation}
+and \qquad h_j(x) = 0 \quad for \quad j=1,...,n
+\end{equation}
+
+An optimisation problem that has been discretised in this form can thus be solved using any of a variety of NLP solvers. One of the most effective methods of solving twice differentiable NLP problems is sequential quadratic programming (SQP) \cite{Boggs2000} for which there is a variety of commercial solvers available such as NPSOL, SNOPT and packages within MATLAB. 
+
+In order for these packages to be able to solve an optimisation problem it must be presented in discretised form, and as such must be transformed using approximation techniques. The task of approximating a continuous optimisation problem in discrete NLP solvable form is not simple. SQP solvers can very easily run into convergence issues when provided with an optimisation problem which has not been well defined over a logical solution space. Also, any approximation must be carried out with care that the accuracy of the solution is not compromised. There are multiple ways to approximate a continuous optimisation problem directly as an NLP problem, the most common of which are shooting and collocation methods. The differences in the behaviour of each method are related to the interaction between the SQP solver and the discretisation method by which the problem is defined, and can affect the stability and accuracy of the solution as well as the solution time of the problem. For this study of in atmosphere trajectory optimisation with complex atmospheric and vehicle properties it was desired that a method be found with maximum stability and accuracy for a relatively large solution space, while solution time is a secondary priority.
+\subsection{The Single Shooting Method}
+
+
+The oldest and simplest method of approximating continuous optimisation problems as NLP problems is the direct single shooting method. Direct single shooting discretises the control function over the solution space, and solves this directly as an NLP by integrating the vehicle dynamics, or state variables, along the trajectory at each trajectory guess. Single shooting is simple to apply and has been used since the 1970s for rocket trajectory optimisation \cite{jezewski1971}. Single shooting methods suffer from nonlinearity problems, ie. an optimisation problem solved using the single shooting method will potentially struggle to solve if the problem exhibits even small nonlinearities, due to being unable to converge to an optimal solution. This makes the single shooting method unsuitable for complex problems such as a scramjet model, as there are many nonlinear factors inherent in atmosphere and airbreathing engine modelling. 
+\subsection{The Multiple Shooting Method}
+
+
+
+Direct multiple shooting is a popular solution to trajectory optimisation problems. This method solves some of the instabilities of the single shooting method by splitting the trajectory into multiple shooting arcs, and collocating these at specific time points. This creates a system of discontinuities, illustrated in Figure \ref{fig:multipleshooting}, which are gradually removed by the solver algorithm until the trajectory is continuous. These discontinuities allow greater flexibility for the solver than is afforded by the single shooting method. The multiple shooting problem is solved as an NLP through discretisation of the state and control variables at each time node and integration for the state variables $x$ over each shooting arc $t_k$ \cite{Subchan2008}:
+\begin{equation}
+\dot{x} = v = f[x(t),u(t)]
+\end{equation}
+With the state variables subject to the boundary conditions:
+\begin{equation}
+\qquad r[x(t_0),x(t_f)] = 0
+\end{equation}
+And solving for the unknown values $s_i$:
+
+\begin{equation}
+x(t_i) = s_i, \qquad i = 1,2...N
+\end{equation}
+The control variables at the nodes are guessed and the state variables are integrated along the trajectory, with each node segment being considered separately. A matching condition is introduced that must be met between each segment; ie. the trajectory must be continuous. \cite{Michalik2009}
+
+\begin{equation}
+\textbf{X(s)} = \begin{Bmatrix}
+x(t_1;s_0,v_0) - s_1 \\
+x(t_2;s_1,v_1) - s_2  \\
+\vdots    \\
+x(t_N;s_{N-1},v_{N-1}) - s_N  \\
+r[x(s_0),x(s_N)]
+\end{Bmatrix} = \textbf{0}
+\end{equation}
+This is now in the form of an NLP problem which may be solved in a standard NLP solver. ie. minimise:
+
+\begin{equation}
+\min J(s,v) = \sum_{i=0}^{N-1}J_i(s_i,v_i)
+\end{equation}
+subject to:
+\begin{equation}
+x[t_{i+1},s_i,v_i] - s_{i+1} = 0
+\end{equation}
+
+\begin{equation}
+r[x(s_0),x(s_N)] = 0
+\end{equation}
+
+
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\linewidth]{multipleshooting}
+	\caption{An illustration of the subdivision associated with multiple shooting \cite{Michalik2009}. Dashed lines illustrate the initial trajectory guess and the solid line indicates the final trajectory once the joining conditions are met.}
+	\label{fig:multipleshooting}
+\end{figure}
+
+The multiple shooting method has greatly improved convergence compared to the single shooting method, removing much of the susceptibility to instabilities resulting from nonlinear effects. However, the multiple shooting approach still suffers from a relatively small radius of convergence and slow computation times. Radius of convergence is extremely important to this study as the optimal solution cannot be approximated to a great degree of accuracy, and as such multiple shooting was deemed inappropriate for this study. It was desired to find a method with a global radius of convergence to apply to the optimisation problem being considered.
+
+\subsection{The Pseudospectral Method}
+
+The most promising method found to address the issue of radius of convergence is the direct collocation approach, which provides global radius of convergence with the additional advantage of smaller computational time \cite{Fasano2013}. Direct collocation methods discretise the control and state equations of the optimal control problem, and use these as constraints in an NLP problem similarly to the multiple shooting approach. However the state functions in collocation methods are approximated by polynomial functions over the solution space, inherently being continuous at each collocation node rather than the state functions being integrated over each timestep. The derivative of the state functions then become a constraint within the NLP, being equated to the polynomial approximation functions by the solver algorithm. The method used to discretise the derivative functions is very important to the accuracy of the collocation method, with trapezoidal, Hermite-Simpson and pseudospectral methods being popular choices.
+
+
+The most accurate form of these as tested by Fahroo \& Ross \cite{Fahroo2000} is the pseudospectral method, which uses some elements of spectral method approximation to accurately approximate derivative terms. The pseudospectral method was first introduced in 1972 by Kreiss \& Oliger \cite{Kreiss1972} as an efficient way to compute meteorology and oceanography problems. The pseudospectral method employs the use of orthogonal polynomials such as Legendre or Chebychev polynomials to approximate the state and control functions over the solution space \cite{Fahroo2000}. The Legendre polynomial method as used by Fahroo \& Ross in 1999 \cite{Fahroo1999} is a method of transforming a continuous optimisation problem into an NLP problem. These pseudospectral methods have the property that when evaluated at specific Legendre-Gauss-Lobatto points, the approximate state and control functions are exactly equal to the continuous function being approximated at that point. These create efficient and simple relationships for the evaluation of time-continuous optimisation problems \cite{Fahroo2000}.  
+
+The pseudospectral method discretises the optimisation problem for application of an NLP solver. The initial form of the optimisation problem is that of a generic Bolza optimisation problem, described by a continuous Bolza cost function:
+
+\begin{equation} \label{eq:cost}
+J(\textbf{u},\textbf{x},\tau_f) = M[\textbf{x}(\tau_f),\tau_f] +   \int_{\tau_0}^{\tau_f} L[\textbf{x}(\tau),\textbf{u}(\tau)] d\tau
+\end{equation}
+
+Subject to a set of state dynamics, which describe the behaviour of the system over the solution space: 
+
+\begin{equation} \label{eq:state}
+\dot{\textbf{x}}(\tau) = f[\textbf{x}(\tau),\textbf{u}(\tau)]
+\end{equation}
+
+These are constrained by boundary conditions of the system at the initial and final time points:
+
+\begin{equation}
+\psi_0[\textbf{x}(\tau_0), \tau_0] = \textbf{0}
+\end{equation}
+
+\begin{equation} \label{eq:2}
+\psi_f[\textbf{x}(\tau_f), \tau_f] = \textbf{0}
+\end{equation}
+
+These equations must be discretised in such a way that an NLP solver can produce an optimal result. The pseudospectral method discretises the cost function (Equation \ref{eq:cost}) as follows:
+
+\begin{eqnarray}
+J[\textbf{x}(t_k),\textbf{u}(t_k)] = \frac{\tau_f - \tau_0}{2} \sum_{k=0}^{N}L[\textbf{x}(t_k),\textbf{u}(t_k)]w_k + M(\textbf{x}t_N,\tau_f)
+\end{eqnarray}
+
+where $ w_k $ is a weighting function defined by the Legendre polynomial $L_N$:
+
+\begin{eqnarray}
+L_N = \frac{1}{2^N N!} \frac{d^N}{dt^N}(t^2-1)^N
+\end{eqnarray}
+
+\begin{eqnarray}
+w_k = \frac{2}{N(N+1)} \frac{1}{[L_N(t_k)]^2}
+\end{eqnarray}
+
+The state equations (Equation \ref{eq:state}, in this case the system dynamics) are described by:
+
+\begin{eqnarray}
+\frac{(\tau_f - \tau_0)}{2}\textbf{f}[\textbf{x}(t_k),\textbf{u}(t_k)] - \sum_{l=0}^{N} D_{kl} \textbf{x}(t_l) = \textbf{0}
+\end{eqnarray}
+
+Where $D$ is the differentiation matrix, defined at each entry $k,l$ by:
+
+\begin{eqnarray}
+k \neq l\qquad
+D_{kl} = \frac{L_N(t_k)}{L_N(t_l)} \frac{1}{t_k - t_l}
+\end{eqnarray}
+
+\begin{eqnarray}
+k = l = 0\qquad
+D_{kl} = - \frac{N(N+1)}{4} 
+\end{eqnarray}
+
+\begin{eqnarray}
+k = l = N\qquad
+D_{kl} = \frac{N(N+1)}{4} 
+\end{eqnarray}
+
+\begin{eqnarray}
+otherwise \qquad
+D_{kl} = 0
+\end{eqnarray}
+
+The boundary conditions are expressed analogously to the continuous problem:
+
+\begin{equation}
+\psi_0[\textbf{x}(t_0), \tau_0] = \textbf{0}
+\end{equation}
+
+\begin{equation}
+\psi_f[\textbf{x}(t_N), \tau_f] = \textbf{0}
+\end{equation}
+
+However the pseudospectral optimisation problem must now be subject to a set of inequality constraints defining the bounds of the problem:
+
+\begin{eqnarray}
+\textbf{g}[\textbf{u}(t_k)] \leq \textbf{0}
+\end{eqnarray}
+
+In the context of applying this to an trajectory optimisation problem the inequality constraints are the upper and lower bounds of the system dynamics, expressing the physical limits on the simulated trajectory. 
+
+A large advantage of the pseudospectral method is the ability to generate Hamiltonian and costate values easily, detailed by Gong et al. \cite{Gong2010} and Fahro \& Ross \cite{Fahroo2001}. The Hamiltonian and costate values allow a solution to easily and quickly be checked for accuracy.  The Hamiltonian equalling zero is a necessary (but not sufficient) condition for optimality, and the costates represent the marginal cost of violating the system constraints. In order to make a preliminary test for an optimal solution the Hamiltonian and costates must simply by observed to be close to zero. 
+
+
+\subsection{Pseudospectral Examples}
+
+In order to assess the applicability of the pseudospectral method to an in atmosphere trajectory optimisation problem, the range of existing solutions utilising the pseudospectral method has been investigated. 
+The pseudospectral method has been proven to be extremely effective for simulations in aerospace applications and has been proven in flight applications such as the zero propellant manoeuvre of the International Space Station in 2007, where the ISS was rotated 180 degrees without any propellant used following a pseudospectral method solution \cite{Bedrossian}. 
+The pseudospectral method has also been utilised in the control of satellites in low Earth orbit in a study by Yan et al. \cite{Yan2007}. The satellites were required to be stabilised utilising the Earth's magnetic field, which requires a solution to the Riccati equation to be solved in real time, a potential computation burden to the legacy systems used. The pseudospectral method was tested as a possible solution. The satellites were controlled to a desired attitude in three dimensions using both the solution to the Riccati equation and the pseudospectral method. It was shown that the pseudospectral method matched the results of existing solutions and improved on computation time over that of the Riccati solution by an order of magnitude. This indicates that the pseudospectral method is not only accurate, but computationally efficient for systems with multiple state variables. 
+
+The pseudospectral method has also been utilised for the reconfiguration of spacecraft formations in a study by Huntington \& Rao \cite{Huntington2008}. A simulated tetrahedral spacecraft formation was reconfigured using the pseudospectral orbit in a fuel optimal manner within one orbit, necessary because the initial formation was observed to degrade significantly after being simulated forwards by three weeks. A new formation was found that minimised this degradation, and the movement of the spacecraft into new positions was computed using a pseudospectral method. Figure \ref{fig:initialtetra} and Figure \ref{fig:terminaltetra} show the initial and final configurations of the spacecraft respectively. 
+\begin{figure}[ht] 
+	\centering
+	\includegraphics[width=0.5\linewidth]{initialtetra}
+	\caption{Initial spacecraft formation configuration \cite{Huntington2008}.}
+	\label{fig:initialtetra}
+\end{figure}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.5\linewidth]{terminaltetra}
+	\caption[Hello World]{Terminal spacecraft formation configuration \cite{Huntington2008}.}
+	\label{fig:terminaltetra}
+\end{figure}
+This study uses five state variables, with complex codependency between each variable. The positive results of this study are an indication that the pseudospectral method retains accuracy for a large amount of state variables and can successfully solve when states are highly reliant on one another, as is the case for a trajectory with significant atmospheric effects. 
+
+
+These examples show the ability of the pseudospectral method to simulate complex simulated systems efficiently and accurately, however these examples are based on orbital dynamics and are potentially not indicative of pseudospectral method performance for more complex in-atmosphere dynamics. The pseudospectral method has been used for the guidance of re-entry vehicles including in-atmosphere dynamics, to keep a vehicle on a desired three degree of freedom path in real-time in a study by Tian \& Zong \cite{Tian2011}. The pseudospectral method was found to generate an accurate trajectory around the desired reference trajectory, satisfying all necessary constraints in real-time for six state variables with minimal error. This is a useful result as it shows that the pseudospectral method does not exhibit instabilities with nonlinear effects such as atmospheric density varying the dynamics of the system being optimised, and that the pseudospectral method can be used for systems with at least up to six state variables. Nonlinear effects are an intrinsic part of simulating a complex aerodynamic system, and this study indicates that the pseudospectral method will be able to simulate the SPARTAN vehicle and is appropriate for use in this study. 
+
+Based on the proven track record of the pseudospectral method in simulation situations, it was decided that using the pseudospectral method for the optimisation of the rocket-scramjet-rocket system was a sound and feasible decision. It has been necessary to investigate the range of solvers available that will utilise a pseudospectral method to solve an optimisation problem with the desired capabilities and usability. 
+
+\subsection{Available Solvers}
+
+The pseudospectral method has a number of solvers available commercially, the foremost of which are DIDO, produced by Elissar Global \cite{Ross2002}, GPOPS II \cite{Rao2010} and PROPT, a module integrated with TOMLAB \cite{Rutquist2010}. These solvers utilise nonlinear programming techniques to solve optimal control problems in discretised form and are all similar in their operation. These have been investigated for a variety of considerations with details available in Section \ref{Achievements to Date}. The most promising of the solvers investigated is DIDO. DIDO is a pseudospectral method solver that is capable of solving complex systems with multiple variables, and outputting Hamiltonian and costate values automatically. DIDO has been used in a wide variety of disciplines, including the solution for a zero-propellant manoeuvre of the ISS in 2006 \cite{Bedrossian}. DIDO has been selected for use in this study after evaluation of the available options, taking into account user friendliness as well as the program track record from publications (Table \ref{table:programs}).
+
+
+  \section{Summary}\label{chapter2:summary}
+
+      This chapter has reviewed literature relevant to this thesis. Add more details.

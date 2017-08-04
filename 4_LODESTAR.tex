@@ -1,0 +1,162 @@
+% proci.tex
+
+\cleardoublepage
+\chapter{LODESTAR}\label{chapter:experimental-results}
+
+	
+
+The program LODESTAR (Launch Optimisation and Data Evaluation for Scramjet Trajectory Analysis Research) has been developed to aid with the simulation and trajectory optimisation of space launch systems. LODESTAR is a MATLAB based trajectory optimiser which utilises DIDO, a proprietary pseudospectral method optimisation package. LODESTAR optimises a trajectory towards a user-defined objective function, such as constant dynamic pressure or maximum payload-to-orbit.  LODESTAR accurately models both rocket-powered and scramjet-powered vehicles in 5 degrees of freedom. LODESTAR contains multiple modules configured for the SPARTAN launch system, which are able to optimise trajectories for;
+\begin{enumerate}
+ \item The ascent of the first stage rocket.
+ \item The flyback of the first stage rocket.
+ \item The ascent of the second stage scramjet-powered accelerator.
+ \item The flyback of the second stage scramjet-powered accelerator.
+ \item The ascent of the third stage rocket.
+\end{enumerate}
+
+
+
+\subsection{Dynamic Model}
+The drag and lift produced by each stage of the vehicle are calculated using the standard definition of the aerodynamic coefficients:
+
+\begin{equation}
+F_d = \frac{1}{2}\rho c_d v^2 A ,
+\end{equation}
+\begin{equation}
+F_L = \frac{1}{2}\rho c_L v^2 A .
+\end{equation}
+
+The dynamics of all stages are calculated using an geodetic rotational reference frame, written in terms of the radius from centre of Earth $r$, longitude $\xi$, latitude $\phi$, flight path angle $\gamma$, velocity $v$ and heading angle $\zeta$. The equations of motion are \cite{Josselyn2002a}:
+
+
+\begin{equation}
+\dot{r} = v \sin \gamma
+\end{equation}
+
+\begin{equation}
+\dot{\xi} = \frac{v\cos \gamma \cos \zeta}{r \cos \phi}
+\end{equation}
+
+\begin{equation}
+\dot{\phi} = \frac{v\cos\gamma\sin\zeta}{r}
+\end{equation}
+\begin{equation}
+\dot{\gamma} = \frac{T\sin\alpha \cos\eta}{mv} + (\frac{v}{r}-\frac{\mu_E}{r^2 v})\cos\gamma + \frac{L}{mv}
++ \cos\phi[2\omega_E \cos\zeta + \frac{\omega_E^2 r}{v}(\cos\phi\cos\gamma+\sin\phi\sin\gamma\sin\zeta)]
+\end{equation}
+\begin{equation}
+\dot{v} = \frac{T\cos\alpha}{m}-\frac{\mu_E}{r^2}\sin\gamma - \frac{D}{m}
++ \omega_E^2 r\cos\phi(\cos\phi\sin\gamma-\sin\phi\cos\gamma\sin\zeta)
+\end{equation}
+\begin{equation}
+\dot{\zeta} = \frac{T\sin\alpha \sin\eta}{mv}-\frac{v}{r}\tan\phi\cos\gamma\cos\zeta +2\omega_E\cos\phi\tan\gamma\sin\zeta - \frac{\omega_E^2 r}{v\cos\gamma}\sin\phi\cos\phi\cos\zeta-2\omega_E\sin\phi 
+\end{equation}
+
+
+
+	Flow chart of modules
+	details of simulation (5DOF geodetic rotational)
+	details of limits
+	
+	verification methods
+	-hamiltonian/costates
+	-complementary conditions
+	-forward sim (for sanity checking, will need to detail deficiencies in this)
+	-forward integration
+	-logic check (ie solver is still a heuristic process, run multiple times with varying guess. Is solution logical?)
+
+-Geodetic rotational coordinates 
+-put coordinate system here
+-Pontani has a typo is his paper remember
+-add in portion of lift going towards changing heading angle due to roll. This is just simple centripetal force. 
+$F=mr\omega^2$ $v=\omega r$
+
+
+
+\subsection{The Pseudospectral Method}
+
+\subsection{Trajectory Connection Points}
+image here detailing the trajectory and separation points, including what the constraints of each trajectory are. Maybe number these separation points, and refer to these numbers in th constraint table for each trajectory stage. 
+
+
+
+\subsection{First Stage Trajectory}
+The first stage is launched from an area in northern Queensland.
+
+\begin{tabular}{|c|c|}
+	\hline Initial Constraints  & \\ 
+	\hline Terminal Constraints &  \\ 
+	\hline Path Constraints &  \\ 
+	\hline Target Cost &  \\ 
+	\hline 
+\end{tabular} 
+
+\subsubsection{Control Variables}
+
+\subsubsection{Primal Variables}
+
+\subsection{First Stage Return Trajectory} 
+
+\begin{tabular}{|c|c|}
+	\hline Initial Constraints  & \\ 
+	\hline Terminal Constraints &  \\ 
+	\hline Path Constraints &  \\ 
+	\hline Target Cost &  \\ 
+	\hline 
+\end{tabular} 
+
+\subsubsection{Control Variables}
+
+\subsubsection{Primal Variables}
+
+\subsection{Second Stage Trajectory}
+
+\begin{tabular}{|c|c|}
+	\hline Initial Constraints  & Velocity \\ & Fuel Mass  \\ & Latitude \\ & Longitude \\ 
+	\hline Terminal Constraints & Fuel mass \\ & Heading Angle \\ 
+	\hline Path Constraints & Dynamic Pressure \\ 
+	\hline Target Cost & Maximum Payload-to-Orbit \\ 
+	\hline 
+\end{tabular} 
+
+\subsubsection{Control Variables}
+
+\subsubsection{Primal Variables}
+primal variable limits:
+
+\subsection{Second Stage Return Trajectory}
+After releasing the third stage rocket, the scramjet-powered second stage must return back to an area close to the initial launch site.
+During the flyback, the SPARTAN cannot exceed its dynamic pressure limit of 50kPa. 
+The SPARTAN must land on the ground with minimum velocity, within close proximity to the launch area. It is assumed that a landing strip is available at the spot where the SPARTAN lands. The SPARTAN is required to land within a set radius of the launch site. This constraint is;
+\begin{equation}
+(\phi_{end} - \phi_{launch})^2 + (\xi_{end} - \xi_{launch})^2 - r^2 \leq 0
+\end{equation}
+
+
+
+Summary Table
+
+\begin{tabular}{|c|c|}
+	\hline Initial Constraints  & Altitude \\ & Velocity\\ & Flight Path Angle\\ & Heading Angle\\ & Latitude\\ & Longitude\\ 
+	\hline Terminal Constraints &  Distance From Launch Site \\ 
+	\hline Path Constraints & Dynamic Pressure \\ 
+	\hline Target Cost & Minimum End Velocity \\ 
+	\hline 
+\end{tabular} 
+
+\subsubsection{Control Variables}
+
+
+\subsection{Third Stage Trajectory}
+
+The third stage is required to deliver the payload into heliosynchronous orbit. The heliosynchronous orbit chosen is 566.89km. 
+
+\begin{tabular}{|c|c|}
+	\hline Initial Constraints  & \\ 
+	\hline Terminal Constraints &  \\ 
+	\hline Path Constraints & Angle of Attack \\ 
+	\hline Target Cost &  \\ 
+	\hline 
+\end{tabular} 
+
+\subsubsection{Control Variables}

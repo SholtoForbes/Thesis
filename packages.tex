@@ -1,0 +1,173 @@
+% packages.tex
+
+\pdfoptionpdfminorversion=6
+
+% Setting margins
+\usepackage[left=20mm,right=20mm,top=20mm,bottom=20mm,headheight=15pt,includehead,includefoot]{geometry}
+
+% For adding images
+\usepackage{graphicx}
+\graphicspath{{./figures/1_introduction/}
+              {./figures/1_introduction/}
+              {./figures/2_literature-review/}
+              {./figures/3_methodology/}
+              {./figures/4_experimental-results/}
+              {./figures/5_numerical-results/}
+              {./figures/6_conclusions}}
+
+% For colors
+\usepackage[svgnames,dvipsnames,x11names,table]{xcolor}
+
+% Nomenclature
+\usepackage[intoc]{nomencl}
+\usepackage{ifthen}
+\renewcommand\nomgroup[1]{%
+  \ifthenelse{\equal{#1}{A}}{%
+    \item[\textbf{Acronyms and Initialisms}]}{% A - Acronyms
+  \ifthenelse{\equal{#1}{R}}{%
+    \item[\textbf{Roman Symbols}]}{%            R - Roman
+  \ifthenelse{\equal{#1}{G}}{%
+    \item[\textbf{Greek Symbols}]}{%            G - Greek
+  \ifthenelse{\equal{#1}{S}}{%
+    \item[\textbf{Superscripts}]}{%             S - Superscripts
+  \ifthenelse{\equal{#1}{U}}{%
+    \item[\textbf{Subscripts}]}{%               U - Subscripts
+  \ifthenelse{\equal{#1}{X}}{%
+    \item[\textbf{Other Symbols}]}{%            X - Other Symbols
+  {}}}}}}}}
+\renewcommand*{\nompreamble}{\markboth{\nomname}{\nomname}}
+\renewcommand{\eqdeclaration}[1]{, see Equation~(#1)}
+\newcommand{\nomunit}[1]{%
+  \renewcommand{\nomentryend}{\hspace*{\fill}#1}%
+  }
+\renewcommand{\nompreamble}{The nomenclature used in this thesis is outlined here. In some cases, the same variable has been used to indicate different quantities. In these instances, the equation and/or page number of the `special' case has been included.}
+\setlength{\nomlabelwidth}{2.5cm}
+
+% I think this was just a formatting thing to fix long nomenclature entries
+% \newcommand{\nomunit}[1]{%
+%   \renewcommand{\nomentryend}{\hspace*{\fill}\makebox[1cm][l]{#1}}%
+%   }
+
+\makenomenclature
+
+% For subfigures
+\usepackage{subcaption}
+
+% Font
+\usepackage{mathptmx}
+\usepackage{amsmath}
+\DeclareMathOperator\erf{erf}
+
+% For the header/footer (Edit these as you wish)
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[LE]{\leftmark}
+\fancyhead[RO]{\rightmark}
+\fancyfoot{}
+\fancyfoot[LE,RO]{\thepage}
+
+% Chapter heading style (Edit these as you wish)
+\usepackage[Conny]{fncychap}
+\ChNameVar{\raggedleft\Large\scshape}
+\ChTitleVar{\Large\scshape}
+\ChNumVar{\Huge}
+
+% Clean empty pages of formatting
+\usepackage{emptypage}
+
+% Line spacing
+\usepackage{setspace}
+\onehalfspacing
+
+% Tables
+\usepackage{booktabs}
+\usepackage{threeparttable}
+
+% For diagrams
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,patterns}
+
+% For bibliography
+\usepackage[style=authoryear,
+            maxcitenames=1,
+            maxbibnames=10,
+            uniquelist=false,
+            uniquename=false,
+            backend=biber]{biblatex}
+\setcounter{biburllcpenalty}{9000}
+\setcounter{biburlucpenalty}{9000}
+\addbibresource{references.bib}
+\renewcommand*{\nameyeardelim}{\addcomma\space}
+\newcommand{\citeauthorandyear}[2][]{\citeauthor{#2} (\citeyear[#1]{#2})}
+
+\DeclareCiteCommand{\citelabelyear}
+  {\boolfalse{citetracker}%
+   \boolfalse{pagetracker}%
+   \usebibmacro{prenote}}
+  {\printtext[bibhyperlink]{\iffieldundef{labelyear}
+   {\printfield{year}}
+   {\printfield{labelyear}%
+    \iffieldundef{extrayear}
+      {}
+      {\printfield{extrayear}}}}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+
+\DeclareCiteCommand{\citeyear}
+    {}
+    {\bibhyperref{\printdate}}
+    {\multicitedelim}
+    {}
+
+% For links
+\PassOptionsToPackage{hyphens}{url}
+\usepackage[]{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor={blue!80!black},
+    citecolor={blue!80!black},
+    urlcolor={blue!80!black}
+}
+
+% \usepackage[hidelinks]{hyperref} % Hide links
+
+% For including PDF pages
+\usepackage{pdfpages}
+% For adding dummy text
+\usepackage{lipsum}
+% For trademark (TM) text
+\usepackage{textcomp}
+% Strikeout (line through text)
+\usepackage{soul}
+% multirow in tables
+\usepackage{multirow}
+% For including landscape pages
+\usepackage{lscape}
+% To scale content to fit pages
+\usepackage{adjustbox}
+
+% Remove spacing in itemize environment
+\newenvironment{myitemize}
+{ \begin{itemize}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}     }
+{ \end{itemize}                  }
+
+% For consistent units and number range formatting
+\usepackage[space-before-unit = true]{siunitx}
+\sisetup{%
+  inter-unit-product=\ensuremath{{}\cdot{}},
+  range-units = single,
+  range-phrase =-,
+  group-separator = \text{,},
+  }
+\DeclareSIUnit[]\atm{atm}
+\DeclareSIUnit[]\cal{cal}
+    
+% For controlling float positions
+\usepackage{placeins}
+
+% Forces something to do something. Can't quite remember
+\interfootnotelinepenalty=10000

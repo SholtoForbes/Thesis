@@ -1,0 +1,43 @@
+\BOOKMARK [0][-]{chapter*.15}{List of figures}{}% 1
+\BOOKMARK [0][-]{chapter*.16}{List of tables}{}% 2
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 3
+\BOOKMARK [1][-]{section.1.1}{Research aims}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.2}{Thesis outline}{chapter.1}% 5
+\BOOKMARK [0][-]{chapter.2}{Literature review}{}% 6
+\BOOKMARK [1][-]{subsection.2.0.1}{Airbreathing Access to Space Systems}{chapter.2}% 7
+\BOOKMARK [2][-]{subsection.2.0.2}{Scramjets}{subsection.2.0.1}% 8
+\BOOKMARK [2][-]{subsection.2.0.3}{The SPARTAN}{subsection.2.0.1}% 9
+\BOOKMARK [2][-]{subsection.2.0.4}{Partially-Airbreathing Launch Vehicle Trajectories}{subsection.2.0.1}% 10
+\BOOKMARK [2][-]{subsection.2.0.5}{Optimal Control}{subsection.2.0.1}% 11
+\BOOKMARK [2][-]{subsection.2.0.6}{The Single Shooting Method}{subsection.2.0.1}% 12
+\BOOKMARK [2][-]{subsection.2.0.7}{The Multiple Shooting Method}{subsection.2.0.1}% 13
+\BOOKMARK [2][-]{subsection.2.0.8}{The Pseudospectral Method}{subsection.2.0.1}% 14
+\BOOKMARK [2][-]{subsection.2.0.9}{Pseudospectral Examples}{subsection.2.0.1}% 15
+\BOOKMARK [2][-]{subsection.2.0.10}{Available Solvers}{subsection.2.0.1}% 16
+\BOOKMARK [1][-]{section.2.1}{Summary}{chapter.2}% 17
+\BOOKMARK [0][-]{chapter.3}{Launch Vehicle Design}{}% 18
+\BOOKMARK [1][-]{section.3.1}{First Stage Rocket}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.2}{Second Stage Scramjet}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.3}{Third Stage Rocket}{chapter.3}% 21
+\BOOKMARK [2][-]{subsection.3.3.1}{Fuel Tank Sizing}{section.3.3}% 22
+\BOOKMARK [2][-]{subsection.3.3.2}{Aerodynamics}{section.3.3}% 23
+\BOOKMARK [2][-]{subsection.3.3.3}{Thrust Vectoring}{section.3.3}% 24
+\BOOKMARK [2][-]{subsection.3.3.4}{Heat Shield Sizing}{section.3.3}% 25
+\BOOKMARK [0][-]{chapter.4}{LODESTAR}{}% 26
+\BOOKMARK [1][-]{subsection.4.0.1}{Dynamic Model}{chapter.4}% 27
+\BOOKMARK [2][-]{subsection.4.0.2}{The Pseudospectral Method}{subsection.4.0.1}% 28
+\BOOKMARK [2][-]{subsection.4.0.3}{Trajectory Connection Points}{subsection.4.0.1}% 29
+\BOOKMARK [2][-]{subsection.4.0.4}{First Stage Trajectory}{subsection.4.0.1}% 30
+\BOOKMARK [2][-]{subsection.4.0.5}{First Stage Return Trajectory}{subsection.4.0.1}% 31
+\BOOKMARK [2][-]{subsection.4.0.6}{Second Stage Trajectory}{subsection.4.0.1}% 32
+\BOOKMARK [2][-]{subsection.4.0.7}{Second Stage Return Trajectory}{subsection.4.0.1}% 33
+\BOOKMARK [2][-]{subsection.4.0.8}{Third Stage Trajectory}{subsection.4.0.1}% 34
+\BOOKMARK [0][-]{chapter.5}{Trajectory Results}{}% 35
+\BOOKMARK [1][-]{section.5.1}{Third Stage trajectory}{chapter.5}% 36
+\BOOKMARK [1][-]{section.5.2}{SPARTAN trajectory}{chapter.5}% 37
+\BOOKMARK [1][-]{section.5.3}{First Stage Trajectory}{chapter.5}% 38
+\BOOKMARK [1][-]{section.5.4}{Flyback trajectories }{chapter.5}% 39
+\BOOKMARK [0][-]{chapter.6}{bleh}{}% 40
+\BOOKMARK [0][-]{chapter.7}{Conclusions}{}% 41
+\BOOKMARK [1][-]{section.7.1}{Recommendations for future work}{chapter.7}% 42
+\BOOKMARK [0][-]{appendix.A}{Details of test conditions}{}% 43

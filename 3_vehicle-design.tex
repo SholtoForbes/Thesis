@@ -1,0 +1,122 @@
+% 3_methodology.tex
+
+\cleardoublepage
+\chapter{Launch Vehicle Design}\label{chapter:methodology}
+
+\section{First Stage Rocket}
+
+
+	detailed design
+	First Stage CART3D
+	- details of CAD, pointwise mesh, and CART3D gridding settings
+	
+	
+	\section{Second Stage Scramjet}
+		second stage redesign
+		
+		The SPARTAN has been designed to hold a 9 m long third stage. Two cylindrical tanks underneath the third stage and a conical tank situated in the nose have a total volume of 22.0m3 and hold a total of 1562kg of LH2 fuel. This assumes an LH2 density of 71kg/m3, slightly denser than LH2 at phase transition point at 1 atm.
+		
+		 %http://webbook.nist.gov/cgi/fluid.cgi?Action=Load&ID=C1333740&Type=SatT&Digits=5&PLow=.5&PHigh=1.5&PInc=.1&RefState=DEF&TUnit=K&PUnit=atm&DUnit=kg/m3&HUnit=kJ/mol&WUnit=m/s&VisUnit=uPa*s&STUnit=N/m%
+		
+		
+		
+		
+		
+		engine model
+		
+		-detail interpolation scheme
+		
+		The SPARTAN is powered by four underslung scramjet engines. These engines are Rectangular To Elliptical Shape Transition (REST) engines, configured to allow for a conical forebody (C-REST).
+		
+		method of calculating aerodynamics for trim at required lift
+		
+		conical shock calculation
+		
+		crestM10 engine model calculation
+		
+		
+		
+		
+		
+		
+	
+	\section{Third Stage Rocket}
+	The third stage rocket is released at the end of the scramjet accelerator burn, and lifts the payload out of the atmosphere and into the desired orbit. The third stage weighs a total of 3300kg. The third stage has a structural mass fraction of 0.09, similar to the Falcon 1 second stage \cite{Vehicle2008}. This gives a total structural mass of 285.7kg. 
+	
+	
+	Heat Shield Mass = 125kG (phenolic cork body, C-C Cone and Tungsten nose)
+	
+	mass flow rate = 9.8 kg/s
+	
+	Isp = 317s (vacuum)
+	
+	Area = 0.866
+	
+	Lnose = 3m, Centrebody = 4.5m, Engine = 1.5m. Note, some room has been left for the kestrel to go into the body slightly (about 0.5m)
+		
+		\subsection{Fuel Tank Sizing}
+		The fuel tanks have been sized assuming 100kg of payload-to-orbit. Note that the method of calculating final payload-to-orbit relies on using left over 'fuel mass' as effective payload mass. Realistically this would cause the fuel tanks to be resized slightly. For the purposes of this study the fuel tanks have been assumed to be of constant size for simplicity. Currently this is a reasonable assumption as the internals of the rocket are very simplified. The structural mass is held constant at 9\%. 
+		
+
+		
+		Propellant mass: 2736.7 kg.
+		
+		Propellant ratio is 2.56 LOX : 1 RP1
+		
+		mass LOX = 1968.0 kg.
+		$\rho_{LOX}$ = 1141kg/m3.
+		volume LOX = 1.7248m3
+		
+		
+		mass RP1 = 768.7 kg.
+		$\rho_{RP1}$ = 813kg/m3.
+		http://nvlpubs.nist.gov/nistpubs/Legacy/IR/nistir6646.pdf
+		
+		volume rp1 = 0.9455m3
+		
+		
+		
+		
+		
+		
+		\subsection{Aerodynamics}
+		Third Stage missile DATCOM details
+		
+		\subsection{Thrust Vectoring}
+		center of pressure - determined in missile datcom
+		
+		thrust vector matches lift moment. CG.
+		
+		Maximum thrust vector angle - 8 degrees. No data on the kestrel thrust vectoring could be found. 8 degrees matches the maximum gimbal for the aestus pressure fed engine, and the OMS engine. 
+		
+		
+		
+		\subsection{Heat Shield Sizing}
+		Tungsten Nose
+		50mm diameter, at the end of 50mm Cylinder
+		$\rho_{Tungsten} = 19.25$  g/cm$^3$
+		m = 12.6kg
+		
+		Carbon-Carbon shell
+		$\rho_{CC} = 1800$  kg/m$^3$
+		Thickness of 10mm
+		L = 3m
+		R = 0.525
+		Area = 5.0232m2 ( from Creo)
+		
+		Anose = 6.22e-2 m2
+		
+		m = (Area - Anose) t $\rho$ = 89.3kg
+		
+		
+		Cork Cylinder
+		t = 5mm
+		$\rho_{Cork} = 320$  kg/m$^3$
+		
+		Area = 14.844m2
+		
+		m = 23.7kg
+		
+		
+		$m_HS$ = 125.6kg
+		
