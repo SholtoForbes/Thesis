@@ -1,10 +1,30 @@
 % 3_methodology.tex
 
 \cleardoublepage
-\chapter{Launch Vehicle Design}\label{chapter:methodology}
+\chapter{Launch Vehicle Baseline Design}\label{chapter:methodology}
+
+This chapter presents the baseline three stage small satellite launch system utilised in this thesis. The design for the first stage rocket-powered vehicle, second stage scramjet-powered vehicle (the SPARTAN), and third stage rocket-powered vehicle are presented. This baseline design is used for the initial trajectory analysis and optimisation in this study. The launch system has been designed based on the SPARTAN vehicle developed by Preller \& Smart.
+
+This chapter also describes the aerodynamic models of the vehicles used in this study, including the engine models.
+
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/NoInternal}
+\caption{}
+\label{fig:NoInternal}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/INTERNALS}
+\caption{}
+\label{fig:INTERNALS}
+\end{figure}
+
 
 \section{First Stage Rocket}
-
+The first stage rocket-powered vehicle is based on the first stage of the SpaceX Falcon-1e. The Falcon-1e has been chosen due to its appropriate scale, and the proven flightworthiness of the Falcon-1.
 
 	detailed design
 	First Stage CART3D
@@ -12,9 +32,10 @@
 	
 	
 	\section{Second Stage Scramjet}
-		second stage redesign
+		\subsection{Baseline Vehicle}
+		The SPARTAN vehicle in this study has been designed based on the work by Preller \& Smart CITATION. 
 		
-		The SPARTAN has been designed to hold a 9 m long third stage. Two cylindrical tanks underneath the third stage and a conical tank situated in the nose have a total volume of 22.0m3 and hold a total of 1562kg of LH2 fuel. This assumes an LH2 density of 71kg/m3, slightly denser than LH2 at phase transition point at 1 atm.
+		The baseline SPARTAN has been designed to hold a 9 m long third stage.  Two cylindrical tanks underneath the third stage and a conical tank situated in the nose have a total volume of 22.0m3 and hold a total of 1562kg of LH2 fuel. This assumes an LH2 density of 71kg/m3, slightly denser than LH2 at phase transition point at 1 atm.
 		
 		 %http://webbook.nist.gov/cgi/fluid.cgi?Action=Load&ID=C1333740&Type=SatT&Digits=5&PLow=.5&PHigh=1.5&PInc=.1&RefState=DEF&TUnit=K&PUnit=atm&DUnit=kg/m3&HUnit=kJ/mol&WUnit=m/s&VisUnit=uPa*s&STUnit=N/m%
 		
@@ -22,37 +43,70 @@
 		
 		
 		
-		engine model
 		
-		-detail interpolation scheme
+		fuel tanks are sized to include a kestrel third stage
 		
-		The SPARTAN is powered by four underslung scramjet engines. These engines are Rectangular To Elliptical Shape Transition (REST) engines, configured to allow for a conical forebody (C-REST).
+		total tank volume = 22m$^3$
 		
+		gives a fuel mass of 1562kg
+		
+		
+		
+		Dawid has a fuel tank volume of 14.01m$^3$, mass of 132.8kg
+		
+		using 22$^2/3$  /  14.01$^2/3$  to approximate surface area ratio
+		
+		mass of new tank is 1.351*132.8 = 179.41kg
+		
+		
+		CG - determined using CREO
+		
+		\subsection{Aerodynamics}
 		method of calculating aerodynamics for trim at required lift
 		
 		conical shock calculation
 		
-		crestM10 engine model calculation
+		\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/CARTmesh}
+\caption{}
+\label{fig:CARTmesh}
+\end{figure}
+
+
+CART3D lift/drag 
+
 		
+		\subsection{Propulsion Modelling}
 		
-		
-		
-		
-		
+		The SPARTAN is powered by four underslung scramjet engines. These engines are Rectangular To Elliptical Shape Transition (REST) engines, configured to allow for a conical forebody (C-REST). The engine model used is a CRESTM10, analysed using quasi-1D simulation. The specific impulse and equivalence ratio data sets are shown in Figure XXX. The specific impulse and equivalence ratio during flight are determined by interpolating these data sets. 
+		As the equivalence ratio is equal to 1 in the majority of the Mach number and temperature regime, only the regions in which it is less than 1 are used for the interpolation. The equivalence ratio interpolation is linear, as the number of data points available for interpolation is low. 
+	
 	
 	\section{Third Stage Rocket}
+	
+	\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/3rdStage}
+\caption{}
+\label{fig:3rdStage}
+\end{figure}
+
+	The third stage vehicle has been designed to accommodate a SpaceX Kestrel engine. The Kestrel has been chosen for its cost effectiveness and proven capabilities. 
+	
 	The third stage rocket is released at the end of the scramjet accelerator burn, and lifts the payload out of the atmosphere and into the desired orbit. The third stage weighs a total of 3300kg. The third stage has a structural mass fraction of 0.09, similar to the Falcon 1 second stage \cite{Vehicle2008}. This gives a total structural mass of 285.7kg. 
 	
 	
-	Heat Shield Mass = 125kG (phenolic cork body, C-C Cone and Tungsten nose)
+
 	
-	mass flow rate = 9.8 kg/s
-	
-	Isp = 317s (vacuum)
+The kestrel engine has been modified to have 50\% increased propellant mass flow rate, giving a mass flow rate of 14.8kg/s. The nozzle of the Kestrel engine has been kept at XXXm diameter. This increase in mass flow results in a 2\% loss of efficiency from the nozzle (CITATION). The modified specific impulse of the engine is 310.7s.
+
 	
 	Area = 0.866
 	
 	Lnose = 3m, Centrebody = 4.5m, Engine = 1.5m. Note, some room has been left for the kestrel to go into the body slightly (about 0.5m)
+	
+	CG - determined using creo, assumed that structure is homogeneous for simplicity
 		
 		\subsection{Fuel Tank Sizing}
 		The fuel tanks have been sized assuming 100kg of payload-to-orbit. Note that the method of calculating final payload-to-orbit relies on using left over 'fuel mass' as effective payload mass. Realistically this would cause the fuel tanks to be resized slightly. For the purposes of this study the fuel tanks have been assumed to be of constant size for simplicity. Currently this is a reasonable assumption as the internals of the rocket are very simplified. The structural mass is held constant at 9\%. 
@@ -83,19 +137,16 @@
 		Third Stage missile DATCOM details
 		
 		\subsection{Thrust Vectoring}
-		center of pressure - determined in missile datcom
 		
-		thrust vector matches lift moment. CG.
-		
-		Maximum thrust vector angle - 8 degrees. No data on the kestrel thrust vectoring could be found. 8 degrees matches the maximum gimbal for the aestus pressure fed engine, and the OMS engine. 
-		
+		The third stage rocket is trimmed during the in-atmosphere portion of its ascent trajectory via thrust vectoring. The centre of pressure is calculated using missile DATCOM. The thrust vector is set so that the moment generated by the engine matches the lift force acting at the centre of pressure. The maximum thrust vector limit has been set to 8$^\circ$. As no data on the maximum thrust vectoring capabilities of the kestrel engine was able to be found, this was set to the maximum gimbal range of the Aestus pressure-fed engine and OMS, similar pressure fed engines. 
 		
 		
 		\subsection{Heat Shield Sizing}
-		Tungsten Nose
-		50mm diameter, at the end of 50mm Cylinder
-		$\rho_{Tungsten} = 19.25$  g/cm$^3$
-		m = 12.6kg
+		
+			The third stage is protected while in-atmosphere by a heat shield, weighting 130.9kg. This heat shield is constructed from a phenolic cork cylinder, a reinforced carbon-carbon nose cone, and a tungsten nose tip. 
+		
+		
+		The tungsten nose is 50mm diameter, at the end of a 50mm Cylinder. The density of tungsten is $\rho_{Tungsten} = 19.25$  g/cm$^3$, giving a total mass for the nose of m = 12.6kg.
 		
 		Carbon-Carbon shell
 		$\rho_{CC} = 1800$  kg/m$^3$

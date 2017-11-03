@@ -6,7 +6,7 @@
   This chapter examines the relevant literature associated with the different aspects of the work conducted as part of this thesis. Explain order and of literature and what was examined.
   \nomenclature[a]{REST}{Rectangular-to-Elliptical Shape Transition}
   
-\subsection{Airbreathing Access to Space Systems}
+\section{Airbreathing Access to Space Systems}
 
 The possibility of using airbreathing stages in access to space systems has been studied in some detail, and there are multiple systems currently under preliminary development. These systems have been investigated in various forms including; single stage, dual stage and tri stage designs. Single stage designs are currently undergoing evaluation, the most prominent of which is the SKYLON Spaceplane being developed by Reaction Engines Limited \cite{Varvill2004}. The SKYLON is a spaceplane which utilises SABRE, a combined cycle airbreathing rocket propulsion system potentially reusable for 200 flights, and is being developed to deliver payloads on the order of 2800kg to heliosynchronous orbit \cite{Sky-rel-ma-}.
 
@@ -22,7 +22,7 @@ Dual stage designs have been investigated in some detail using the 'spaceplane' 
 
 
 
-\subsection{Scramjets}
+\section{Scramjets}
 
 
 A Scramjet, or supersonic combustion ramjet, is an airbreathing engine design which combusts air at supersonic speeds and is capable of high Mach number operation. Scramjets were proposed in the 1940's \cite{Curran2001} and found to be capable of positive net thrust in 1993 \cite{Paull1993} but have yet to be developed to a level which would allow for commercial application. Scramjet powered vehicles are a primary candidate for small payload delivery systems, offering much higher specific impulse than rockets over their operating range \cite{Billig1993} \cite{Cook2003}. Scramjet engines exhibit this advantage within their operating range of Mach 6-12 due to using atmospheric oxygen for reaction and only carrying fuel, increasing the payload mass that the scramjet vehicle is able to carry. Figure \ref{fig:AirbreathingCorridor} shows the operating corridor for scramjet engines, indicating the point at which transition to rocket stage would occur, the lower dynamic pressure limit on engine operation and the upper dynamic pressure limit on the aircraft structure.
@@ -38,7 +38,7 @@ Smart \& Tetlow \cite{Smart2009} have found that the fuel savings achieved by us
 
 
 
-\subsection{The SPARTAN}
+\section{The SPARTAN}
 
 
 The University of Queensland is developing a three stage partially reusable access to space system utilising the SPARTAN scramjet powered vehicle as the reusable second stage shown in Figure \ref{fig:SPARTAN} \cite{Jazra2013}. This is the system which is considered in this study and is used as a representative system for three stage airbreathing access to space system designs. This system is designed for small payload deliveries to orbit and will utilise the ALV rocket booster to accelerate the SPARTAN stage to minimum Mach number required for stable burn, at which point separation occurs and the second stage uses a scramjet engine to accelerate to between Mach 6-10.
@@ -54,23 +54,60 @@ The third stage will be a disposable rocket stage, which will then deliver the p
 
 This system has been designed to initial design stages, with estimates of  payload mass fraction indicating that 1.26\% PMF is possible when delivering a 257.4kg payload to low earth orbit \cite{Preller2015a}. This compares well with existing space systems of similar size, with the advantage of being designed for reusability. The second stage vehicle has been designed to a detailed level, and optimised for payload delivery to heliosynchronous orbit. The first stage ALV is being designed by Heliaq engineering and is in initial testing stages.
 
-The SPARTAN has been studied in some detail, simulating over a constant dynamic pressure trajectory and varying the aerodynamic surface properties of the vehicle. The Aerodynamic analysis has been performed using HYPAERO, which uses strip theory to calculate aerodynamic properties along the aircraft as illustrated in Figure \ref{fig:strip}. In strip theory two dimensional sections are created running the length of the vehicle, defining streamlines along the vehicle faces. Pressure, Mach number and skin friction are calculated along these streamlines to compute the aerodynamic coefficients of the vehicle. The aerodynamic coefficients for the SPARTAN vehicle have been developed by Jazra et al. \cite{Jazra2013} and have been provided for this study by Dawid Preller.
+The SPARTAN has been studied in some detail, simulating over a constant dynamic pressure trajectory and varying the aerodynamic surface properties of the vehicle. 
 
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=0.7\linewidth]{strip}
-	\caption{HYPAERO analysis surface grid \cite{Jazra2013}.}
-	\label{fig:strip}
+\subsection{Scramjet Engine Model}
+To deliver a payload to orbit, the SPARTAN uses four Rectangular-to-Elliptical Shape Transition (REST) scramjet engines, with inlets configured to allow installation on a conical forebody. This study uses engines configured to fly between Mach 5 and 10, this type of engine is known as a C-RESTM10 engine\cite{Preller2017}. The REST model has been studied experimentally for flight at off design conditions by Smart \& Ruf \cite{Smart2006}. The REST engine has been used as it has been proven to operate successfully at off-design conditions, an extremely important property for this study as the scramjet stage experiences a range of Mach number flight conditions, and significant variation in dynamic pressure.  
+
+A propulsion database of the C-RESTM10 has been provided for this study by Prof. Michael Smart.
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/2_literature-review/C-REST}
+\caption{The C-RESTM10 propulsion database, specific impulse.}
+\label{fig:C-REST}
 \end{figure}
 
 
-\subsubsection{Scramjet Engine Model}
-%To deliver a payload to orbit, the SPARTAN uses four Rectangular-to-Elliptical Shape Transition (REST) scramjet engines aligned on the underside of the fuselage. The REST model has been studied experimentally for flight at off design conditions by Smart \& Ruf \cite{Smart2006} and data has been provided by Michael Smart for use in this study. The REST engine has been used as it has been proven to operate successfully at off-design conditions, an extremely important property for this study as the scramjet stage is expected to accelerate the payload as well as potentially change altitude. %
+
+\section{First Stage Rocket Boosters}
+
+The SPARTAN scramjet vehicle must be accelerated to its minimum operating speed by a first stage rocket booster. This booster must be capable of efficient operation from launch at sea level until staging. It is envisioned that the SPARTAN system will eventually use a reusable flyback booster\cite{Preller2017}. However the flyback of the first stage is outside the scope of this study. Instead, a model of an existing first stage booster will be used, for which the Falcon-1e was chosen.
+
+The SPARTAN mission requires a relatively small, modern booster. 
+
+-why did we choose the Falcon
+-compare to other, similar engines HM-60 and LE-7 are closest (they are still double the thrust.. so maybe cant compare these too well)
+
+The SpaceX Falcon-1e launch system was a proposed small satellite launch system which would have entered use after 2010\cite{Vehicle2008}, but was discontinued and superseded by the Falcon-9 project. The Falcon-1e was designed to launch payloads between 600-900kg to low Earth orbit, with flexible orbit altitude and inclination.  
+The first stage of the Falcon-1e is powered by a Merlin 1C LOX/Kerosene turbopump engine.
 
 
+\section{Exoatmospheric Rocket Engines}
+After scramjet stage burnout, the upper stage rocket must exit the atmosphere, and accelerate the payload to orbital velocity. This requires a rocket engine with sufficient thrust to accelerate the third stage rocket out of the atmosphere, and a diameter small enough to allow the rocket to fit within the fuselage of the SPARTAN. Table \ref{tab:Engine} shows a comparison study of upper stage rocket engines. 
+
+\begin{landscape}% Landscape page
+\begin{table}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+
+	\hline Engine & Fuel Supply & Fuel & Thrust & Isp & Mass & Diameter & Length & Thrust Vector Capability \\ 
+	\hline Aestus & Pressure-fed & MMH/NTO & 27.5kN & 320s & 110kg & 1.27m & 2.2m & 4$^\circ$ \& 4$^\circ$ by mechanical adjustment\\ 
+	\hline OMS & Pressure-fed  & MMH/NTO & 26.7kN & 316s & 118kg & 1.168m & 1.956m & 8$^\circ$\\ 
+	\hline Aestus II & Pump-fed & MMH/NTO & 46kN & 337.5s & 148 &  & 2.2m &\\ 
+	\hline RS-72 & Pump-fed & MMH/NTO & 55.4kN & 338s & 154kg &  & 2.286 &\\ 
+	\hline ATE & Pump-fed & MMH/NTO & 20kN & 345s & 57.9kg & 0.38m & 1.4m &\\ 
+	\hline AJ10-118K & Pressure-fed & A-50/NTO & 43.3kN & 320.5s & 124.5kg & 1.53m & 2.7m & \\ 
+	\hline Kestrel &  &  &  &  &  &  &   &\\ 
+	\hline Rl-10-3A &  &  &  &  &  &  &   &\\ 
+	\hline  &  &  &  &  &  &  &  & \\ 
+	\hline 
+\end{tabular} 
+\caption {Comparison of upper stage rocket engines.} 
+\label{tab:Engine}
+\end{table}
+\end{landscape}
 
 
-\subsection{Partially-Airbreathing Launch Vehicle Trajectories}
+\section{Partially-Airbreathing Launch Vehicle Ascent Trajectories}
 
 Current simulations of the SPARTAN vehicle have been carried out with the assumption of a 50kpa dynamic pressure trajectory, a likely design point of the vehicle and scramjet engine. 
  Constant dynamic pressure trajectories have been used for airbreathing vehicle simulation due to the tradeoff between structural loading and engine performance for hypersonic vehicles \cite{Olds1998} . As dynamic pressure increases so does the structural loading on the vehicle, however scramjet thrust is directly reliant on dynamic pressure ie. an increase in dynamic pressure directly means more air into the engine inlet. A constant dynamic pressure is viewed as being an acceptable compromise between these two factors.   
@@ -86,9 +123,26 @@ This form of trajectory has so far been simulated using proportional integral de
 
 It is possible that a constant dynamic pressure trajectory may not be the most appropriate trajectory for the second stage vehicle, as there is a variety of aerodynamic factors that must be considered in designing optimal payload to orbit flight. It may be optimal for the vehicle to fly at less than maximum dynamic pressure at point throughout the trajectory, most likely at the first to second and second to third stage separation points. For a constant dynamic pressure trajectory the second-third stage transition will occur at a very low trajectory angle. This is suboptimal for the third stage rocket, which needs to perform a large pull up manoeuvre at high dynamic pressure. Launching this system at higher angle or altitude may improve third stage fuel usage greatly, at a small cost to the second stage fuel, allowing a greater payload to be delivered to orbit. 
 
-Optimal trajectories have previously been developed for launch systems integrating airbreathing and rocket propulsion within single-stage-to-orbit (SSTO) vehicles \cite{Powell1991,Lu1993,Trefny1999}. These optimal trajectory studies found unanimously that a pull-up manoeuvre before the end of the airbreathing engine cut-off was the optimal flight path for the SSTO airbreathing-rocket vehicles being investigated. A pull-up was found to be optimal for vehicles where the rocket engines are not ignited until circularization altitude \cite{Powell1991,Lu1993} as well as vehicles where the rocket engine is ignited immediately after airbreathing engine cut-off \cite{Trefny1999}. For SSTO vehicles a pull-up manoeuvre is a simple trade-off between the altitude at airbreathing engine cut-off and the velocity achievable at cut-off. Due to the entire vehicle being lifted into orbit, this becomes a relatively simple problem of engine efficiency. 
+\subsection{Single-Stage Vehicles}
 
- \textcolor{red}{insert pull-up figure here}
+Optimal trajectories have previously been developed for launch systems integrating airbreathing and rocket propulsion within single-stage-to-orbit (SSTO) vehicles \cite{Powell1991,Lu1993,Trefny1999}. These optimal trajectory studies found unanimously that a pull-up manoeuvre before the end of the airbreathing engine cut-off was the optimal flight path for the SSTO airbreathing-rocket vehicles being investigated. A pull-up was found to be optimal for vehicles where the rocket engines are not ignited until circularization altitude \cite{Powell1991,Lu1993} as well as vehicles where the rocket engine is ignited immediately after airbreathing engine cut-off \cite{Trefny1999}. For SSTO vehicles a pull-up manoeuvre is a simple trade-off between the altitude at airbreathing engine cut-off and the velocity achievable at cut-off. Due to the entire vehicle being lifted into orbit, this becomes a relatively simple problem of engine efficiency. The airbreathing engine is used for its high efficiency, until the dynamic pressure drops below the operable limit of the airbreathing engine, or until the thrust provided by the airbreathing engine is significantly counteracted by the effects of drag and gravity. 
+\begin{figure}[h]
+	\centering
+	\begin{minipage}[b]{0.3\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{"figures/2_literature-review/Powell Vehicle"}
+		\caption{}
+		\label{fig:WilhiteBoosterVehicle}
+	\end{minipage}	
+	\begin{minipage}[b]{0.6\textwidth}
+		\includegraphics[width=\linewidth]{"figures/2_literature-review/Powell Trajectory"}
+		\caption{Powell}
+		\label{fig:WilHiteBoosterTrajectory}
+	\end{minipage}
+	
+\end{figure}
+ 
+ \subsection{Multi-Stage Vehicles}
 
 For a multi-stage to orbit vehicle, calculating the optimal trajectory for maximum payload flight is significantly more difficult. A multi-stage vehicle has one or more stage transition points, where the vehicle separates a component which is discarded or reused later, and does not continue to orbit. At a stage transition point there is a large change in the mass and aerodynamics of the launch system. 
 This change in flight dynamics makes finding the optimal stage transition point more complicated. To find the optimal separation point there is a trade-off between:
@@ -99,11 +153,100 @@ This change in flight dynamics makes finding the optimal stage transition point 
  \rom{5}. The aerodynamic efficiency when performing the required direction change.
 All of these factors must be considered in order to generate an optimal trajectory. 
 
-There has been a number of studies which have identified a pull-up manoeuvre as being advantageous for a multi-stage system \cite{Tsuchiya2005,Wilhite1991,Mehta2001}. However, in these studies a pull-up manoeuvre has been specified in order to decrease the dynamic pressure of the vehicle at airbreathing-rocket stage separation. In the studies by Tsuchiya et al.\cite{Tsuchiya2005} and Wilhite et al.\cite{Wilhite1991} decreased dynamic pressure is necessary for the successful operation of the rocket stages under investigation. 
-Mehta \& Bowles \cite{Mehta2001} prescribe a 2g pull-up at flight conditions of Mach 10, 95000 ft for an airbreathing stage in order to "lower dynamic pressures and to achieve the optimal launching flight path angle for the orbiter vehicle". This indicates that a pull-up manoeuvre is considered optimal before airbreathing-rocket transition, however this study does not optimise the shape or magnitude of the pull-up manoeuvre, only considering the increased performance of the rocket vehicle. 
- 
+There has been a number of studies which have identified a pull-up manoeuvre as being advantageous for a multi-stage system \cite{Tsuchiya2005,Wilhite1991,Mehta2001}. However, in these studies a pull-up manoeuvre has been specified in order to decrease the dynamic pressure of the vehicle at airbreathing-rocket stage separation. 
+\begin{figure}
+\centering
+\begin{minipage}[b]{0.45\textwidth}
+	\centering
+	\includegraphics[width=\linewidth]{"figures/2_literature-review/Wilhite Booster Vehicle"}
+	\caption{}
+	\label{fig:WilhiteBoosterVehicle}
+\end{minipage}	
+\begin{minipage}[b]{0.45\textwidth}
+\includegraphics[width=\linewidth]{"figures/2_literature-review/WilHite Booster Trajectory"}
+\caption{Wilhite}
+\label{fig:WilHiteBoosterTrajectory}
+\end{minipage}
+\end{figure}
+\begin{figure}
+	\centering
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{"figures/2_literature-review/Tsuchiya Vehicles"}
+		\caption{a) Airbreathing b) Airbreathing/Rocket}
+		\label{fig:WilhiteBoosterVehicle}
+	\end{minipage}	
+	\begin{minipage}[b]{0.45\textwidth}
+		\includegraphics[width=\linewidth]{"figures/2_literature-review/Tsuchiya"}
+		\caption{Tsuchiya}
+		\label{fig:WilHiteBoosterTrajectory}
+	\end{minipage}
+\end{figure}
 
-\subsection{Optimal Control}
+-talk about the vehicles being analysed (mention TSTO)
+
+In the studies by Tsuchiya et al.\cite{Tsuchiya2005} and Wilhite et al.\cite{Wilhite1991}, decreased dynamic pressure is necessary for the successful operation of the orbital rocket stages, of the systems under investigation. In these studies the airbreathing stages pull-up to the maximum allowable dynamic pressure for the rocket-powered orbital stages. When the orbital stages are able to operate, stage separation occurs. These pull-up manoeuvres demonstrate the advantages of a pull-up for the operation of the orbital stages, allowing the aerodynamic and thermal loading on the vehicle to be reduced. However these pull-up manoeuvres are not performed as part of optimal trajectories, instead they are designed to ensure that the performance constraints of the systems are met. 
+
+\begin{figure}
+	\centering
+	\begin{minipage}[b]{0.3\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{"figures/2_literature-review/Mehta Vehicle"}
+		\caption{}
+		\label{fig:WilhiteBoosterVehicle}
+	\end{minipage}	
+	\begin{minipage}[b]{0.6\textwidth}
+		\includegraphics[width=\linewidth]{"figures/2_literature-review/Mehta Trajectory"}
+		\caption{Mehta}
+		\label{fig:WilHiteBoosterTrajectory}
+	\end{minipage}
+	
+\end{figure}
+Mehta \& Bowles \cite{Mehta2001} prescribe a 2g pull-up at flight conditions of Mach 10, 95000 ft for an airbreathing stage in order to "lower dynamic pressures and to achieve the optimal launching flight path angle for the orbiter vehicle". This indicates that a pull-up manoeuvre before airbreathing-rocket transition is considered the optimal trajectory, however this study does not optimise the shape or magnitude of the pull-up manoeuvre, only considering the increased performance of the rocket vehicle. 
+
+
+
+\section{Hypersonic Vehicle Flyback Trajectories}
+
+  \textcolor{red}{THIS SECTION IS VERY ROUGH!}
+  
+full flyback is important to us, but i should look at some partial flyback cases too (look at federicos paper)
+
+
+mention skipping vs constant descent at max L/D (need to look at why this is)
+
+
+Due to the second-third stage staging velocity, the SPARTAN may be incapable of turning fast enough to cover the necessary fly-back distance. Multiple studies have investigated the maximum staging velocity allowable for the glide-back flight of a booster. 
+Tetlow et al. CITATION compare powered cruise-back to glide-back flight for the return of the first stage booster of a rocket powered two-stage launch vehicle. The powered flyback vehicle uses airbreathing engines to cruise back to the launch site at relatively low speeds. The powered flyback and the glide-back cases are analysed separately to determine the difference in the optimal staging velocities. Figure 2 shows the optimised deceleration phase for the cruise-back vehicle, terminating at cruise-back conditions. This trajectory shows three distinct ‘skips’, with the minimum trajectory angle progressively decreasing between each. The powered cruise-back vehicle is able to stage at 3000m/s due to the ability to cover a large distance during cruise-back. 
+The glide-back vehicle was optimised to find the maximum possible staging velocity at which a turn and glide-back is still possible. This was found to be at 1200m/. Figure 3 shows the corresponding optimal deceleration trajectory, terminating at sustainable glide conditions. This trajectory again shows multiple ‘skips’. The low allowable separation velocity of 1200m/s for the glide-back booster potentially suggests that the SPARTAN will require powered flyback. 
+Tetlow et al. assume an admittedly optimistic L/D of 7 at Mach 0.9, and maximum angle of attack of 40 deg. However, the mass of the vehicle in this study is up to 1182 tons. A lower L/D may be acceptable for a lighter vehicle.  
+
+A maximum staging velocity at which glide-back is possible is also investigated by Hellman CITATION. Hellman uses a suboptimal, scheduled trajectory simulation to investigate the flyback capabilities of a reusable rocket booster. Hellman finds that Mach 3 is the upper staging limit for a glide-back booster. This agrees with Tetlow et al. that high staging velocities are not possible for glide-back boosters, suggesting that the SPARTAN will require powered return flight.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{../../../Dropbox/phd/flyback/Glideback}
+\caption{}
+\label{fig:Glideback}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{../../../Dropbox/phd/flyback/Powered}
+\caption{}
+\label{fig:Powered}
+\end{figure}
+
+
+
+The possibility of an airbreathing vehicle reigniting high speed airbreathing engines for short periods has been investigated by Tsuchiya and Mori \cite{Tsuchiya2005}. Tsuchiya and Mori investigate a two-stage-to-orbit spaceplane, comparing two first stage configurations; an airbreathing accelerator and an accelerator with combined airbreathing/rocket propulsion. For the purposes of flyback there vehicles are very similar, both using the high speed airbreathing engines during return flight. The optimal launch trajectories for these vehicles is shown in Figure \ref{fig:Tsuchiya}. The separation for the airbreathing vehicle occurs at Mach 5.1, and the separation for the airbreathing/rocket vehicle at Mach 6.8. Both optimised return trajectories follow a relatively similar path. A long ‘skip’ is performed, with both vehicles hitting the dynamic pressure limit. Both vehicles ignite the airbreathing engines at around Mach 3.5 for “several tens of seconds” to extend the range of the flyback manoeuvres. After this, the vehicles descend and land at the launch site. The velocity at the landing point is not constrained, causing the airbreathing vehicle to land at slightly under Mach 1, and the airbreathing-rocket vehicle to land at approximately Mach 0.5. 
+The latter is comparable with the landing velocity of the space shuttle \cite{Romere1983}. 
+
+
+
+The SPARTAN is designed to separate the third stage above Mach 9. This is considerably higher than the separation velocities of the vehicles in the study by Tsuchiya and Mori. The SPARTAN will also release into a dynamic pressure considerably higher than 15kPa, and it is desired to land the SPARTAN at a comparably low velocity.
+
+\section{Optimal Control}
 
 
 To this point analysis of the SPARTAN trajectory has been performed using PID feedback control, assuming a constant dynamic pressure trajectory \cite{Preller2015}. PID feedback control simulates the vehicle flight and manoeuvres the vehicle so that the trajectory conforms to a defined design point. Currently the trajectory of the SPARTAN has been simulated to align as closely as possible with 50kPa flight, a problem for which PID control is well suited. 
@@ -310,6 +453,47 @@ Based on the proven track record of the pseudospectral method in simulation situ
 
 The pseudospectral method has a number of solvers available commercially, the foremost of which are DIDO, produced by Elissar Global \cite{Ross2002}, GPOPS II \cite{Rao2010} and PROPT, a module integrated with TOMLAB \cite{Rutquist2010}. These solvers utilise nonlinear programming techniques to solve optimal control problems in discretised form and are all similar in their operation. These have been investigated for a variety of considerations with details available in Section \ref{Achievements to Date}. The most promising of the solvers investigated is DIDO. DIDO is a pseudospectral method solver that is capable of solving complex systems with multiple variables, and outputting Hamiltonian and costate values automatically. DIDO has been used in a wide variety of disciplines, including the solution for a zero-propellant manoeuvre of the ISS in 2006 \cite{Bedrossian}. DIDO has been selected for use in this study after evaluation of the available options, taking into account user friendliness as well as the program track record from publications (Table \ref{table:programs}).
 
+\section{Aerodynamic Analysis}
+- preliminary design requires fast and easy aerodynamics 
+
+Simulating the trajectory of access to space vehicles requires the aerodynamics of the launch vehicle to be characterised accurately. This entails the creation of large aerodynamic coefficient databases, which cover the operable region of the vehicle, and include the effect of control surface deflections. The liability of the vehicle design to change during the preliminary design phases renders highly accurate CFD or experimental studies expensive and inefficient CITATION. Instead, solutions are found which are able to approximate the aerodynamic characteristics to an appropriate accuracy, while providing fast set-up speeds as well as computation times. 
+
+\subsection{HYPAERO}
+
+Hypaero is an aerodynamic calculation tool developed for the preliminary design of hypersonic vehicles. 
+HYPAERO uses strip theory, dividing the surface of the vehicle into panels to calculate aerodynamic properties along the aircraft as illustrated in Figure \ref{fig:strip}. In strip theory two dimensional sections are created running the length of the vehicle, defining streamlines along the vehicle faces. Pressure, Mach number and skin friction are calculated along these streamlines to compute the aerodynamic coefficients of the vehicle. The Aerodynamic analysis of the SPARTAN has been performed using HYPAERO by Jazra et al. \cite{Jazra2013}. The aerodynamic coefficients of the SPARTAN vehicle have been provided for this study by Dawid Preller.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\linewidth]{strip}
+	\caption{HYPAERO analysis surface grid \cite{Jazra2013}.}
+	\label{fig:strip}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/2_literature-review/HYPAERO-aero}
+\caption{SPARTAN aerodynamics, developed using HYPAERO \cite{Preller2017}.}
+\label{fig:HYPAERO-aero}
+\end{figure}
+
+
+\subsection{CART3D}
+CART3D is an inviscid CFD package, designed for use during preliminary vehicle design and analysis CITATION. CART3D requires only a surface triangulation of the vehicle being analysed. CART3D features adjoint mesh adaption, and uses cartesian 'cut-cells' which intersect the surface, allowing complex geometries to be analysed. The mesh automatically refines as the simulation progresses, reducing error. The absence of a requirement for a user generated mesh allows CART3D to be easily applied to complex launch vehicle designs, as well as allowing for simple modification of control surface deflections and flight conditions. 
+CART3D has been used extensively for aerodynamic simulations in preliminary design, including analysis of the Skylon spaceplane\cite{Mehta2016}, HIFiRE-5\cite{Kimmel2010}, and in low sonic boom shape optimisations\cite{Aftosmis2011}. 
+Mehta et al. used CART3D to analyse the Skylon spaceplane, in a study which investigated the aerodynamics of the vehicle as well as the plumes produced by the Reaction Engines LTD SABRE engines\cite{Mehta2016}. The Skylon was analysed at a range of mach numbers from 2.625 to 16.969, at altitudes from 15.326km to 75.771km. These results indicate the applicability of CART3D over a wide range of Mach numbers, which is of particular use to this study.
+\begin{figure}
+\centering
+\includegraphics[width=0.6\linewidth]{figures/2_literature-review/Skylon-CART3D}
+\caption{The Skylon spaceplane, simulated using CART3D at Mach 12.189, $\alpha=7.512^\circ$\cite{Mehta2016}. Cell distribution produced by mesh adaption is shown.}
+\label{fig:Skylon-CART3D}
+\end{figure}
+During a study by Aftosmis \& Nemec where CART3D was applied to low sonic boom shape optimisation, CART3D was shown to have good agreement with experimental results in tests at Mach 1.6. 
+
+The wide Mach number range of CART3D, along with its ease of use and demonstrated accuracy, makes CART3D a useful tool for this study. 
+
+\subsection{Missile DATCOM}
+Missile DATCOM is a widely used, semi-empirical, aerodynamic prediction tool for missile configurations. Missile DATCOM is capable of calculating the aerodynamic forces, stability derivatives and moments over a range of angle of attack and Mach number values, allowing an aerodynamic database to be generated simply and rapidly. Missile DATCOM has been shown to produce close agreement with experimental wind tunnel data for normal force and pitching moment coefficients, and reasonable agreement for axial force coefficients \cite{Sooy2005}. 
 
   \section{Summary}\label{chapter2:summary}
 

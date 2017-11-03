@@ -3,18 +3,24 @@
 \cleardoublepage
 \chapter{LODESTAR}\label{chapter:experimental-results}
 
-	
+ \textcolor{red}{Ingo said maybe have an example in here illustrating the optimisation. maybe something from a textbook. }	
 
-The program LODESTAR (Launch Optimisation and Data Evaluation for Scramjet Trajectory Analysis Research) has been developed to aid with the simulation and trajectory optimisation of space launch systems. LODESTAR is a MATLAB based trajectory optimiser which utilises DIDO, a proprietary pseudospectral method optimisation package. LODESTAR optimises a trajectory towards a user-defined objective function, such as constant dynamic pressure or maximum payload-to-orbit.  LODESTAR accurately models both rocket-powered and scramjet-powered vehicles in 5 degrees of freedom. LODESTAR contains multiple modules configured for the SPARTAN launch system, which are able to optimise trajectories for;
+The program LODESTAR (Launch Optimisation and Data Evaluation for Scramjet Trajectory Analysis Research) has been developed to aid with the simulation and trajectory optimisation of space launch systems. LODESTAR is a MATLAB based trajectory optimiser which utilises DIDO, a proprietary pseudospectral method optimisation package as well as MATLAB's inbuilt SQP solver. LODESTAR optimises a trajectory towards a user-defined objective function, such as constant dynamic pressure or maximum payload-to-orbit.  LODESTAR accurately models both rocket-powered and scramjet-powered vehicles in 5 degrees of freedom. LODESTAR contains multiple modules configured for the SPARTAN launch system, which are able to optimise trajectories for;
 \begin{enumerate}
  \item The ascent of the first stage rocket.
- \item The flyback of the first stage rocket.
  \item The ascent of the second stage scramjet-powered accelerator.
  \item The flyback of the second stage scramjet-powered accelerator.
  \item The ascent of the third stage rocket.
 \end{enumerate}
 
+\subsection{Optimal Control}
+The pseudospectral method and direct single shooting techniques used by LODESTAR are described in detail in sections X-X. Practically, the implementation of these techniques involves the specification of the set of constraints and objectives which govern the optimisation problem. These constraints inform the optimiser of the limits of the optimisation, and perform the functions of bounding the logical search space (eg. constraining altitude to be greater than ground level) as well as constraining the vehicle within its performance limits (eg. limiting the angle of attack). These constraints also come in the form of initial or terminal constraints, which define the initial conditions of the trajectory as well as any conditions which the trajectory must meet at termination. 
 
+The pseudospectral method requires the specification of a set of 'primal variables'. These primal variables describe the physical dynamics of the system. In the pseudospectral method, the dynamics of the system are used as constraints on the optimal control problem;
+\begin{equation} \label{eq:state2}
+\dot{\textbf{x}}(\tau) = f[\textbf{x}(\tau),\textbf{u}(\tau)].
+\end{equation}
+Implementing the dynamics as constraints allows the optimiser to explore each primal variable independently, greatly increasing the robustness of the optimal control problem. However, the constraints may be violated by the optimiser in the process of searching for an optimal solution. A violation of the physical dynamics constraints means that the dynamics of the system may not hold throughout the solution process, causing potential complications for the computational model of the vehicle. Much of the design of the vehicle simulation in this study is driven by the need for smooth, continuous interpolation schemes, and viable extrapolation regions ie. even if the solution is well within the range of all input data sets, the solver must be able to explore all regions within the set bounds. 
 
 \subsection{Dynamic Model}
 The drag and lift produced by each stage of the vehicle are calculated using the standard definition of the aerodynamic coefficients:
@@ -73,14 +79,42 @@ $F=mr\omega^2$ $v=\omega r$
 
 
 
-\subsection{The Pseudospectral Method}
+- outline the pseudospectral method, as implemented in GPOPS? ie with stage definitions
 
 \subsection{Trajectory Connection Points}
 image here detailing the trajectory and separation points, including what the constraints of each trajectory are. Maybe number these separation points, and refer to these numbers in th constraint table for each trajectory stage. 
 
+Flow chart here of how the main LODESTAR modules connect with reference to the trajectory diagram as well
+
+\begin{figure}
+\centering
+\includegraphics[width=1.\linewidth]{figures/4_LODESTAR/Traj}
+\caption{}
+\label{fig:Traj}
+\end{figure}
 
 
 \subsection{First Stage Trajectory}
+-detail the vehicle dynamics with a free body diagram 
+
+
+LODESTAR is able to optimise the first stage of a launch vehicle, for an angle of attack controlled trajectory, from launch to a pre-defined end point. 
+LODESTAR is able to optimise for either a maximum velocity or minimum mass optimisation objective. 
+
+A maximum velocity case is desired when a specific first stage vehicle design is being investigated. 
+ 
+A minimum mass objective is applicable when the first stage trajectory has a pre-defined end goal. This is the case with the SPARTAN vehicle where the SPARTAN scramjet accelerator is to be released at its minimum operating conditions at close to horizontal flight. 
+A variable mass for the first stage launch vehicle is desired as the mass has large effects on the dynamics of th vehicle, effecting the trajectory angle change rate, as well as the acceleration and time of flight of the vehicle.
+It is useful in the preliminary design stages to be able to optimise the mass of the first stage vehicle, allowing a less trial-and-error approach.
+Note that in the minimum mass case, the launch altitude is slightly variable, as LODESTAR starts optimisation from the pitchover time, and the pre-pitchover trajectory is calculated to match the pitchover mass. 
+
+\begin{tabular}{|c|c|}
+	\hline Input  & Contains\\ 
+	\hline Aerodynamic Database  & \\ 
+	\hline 
+\end{tabular} 
+
+
 The first stage is launched from an area in northern Queensland.
 
 \begin{tabular}{|c|c|}
@@ -95,21 +129,12 @@ The first stage is launched from an area in northern Queensland.
 
 \subsubsection{Primal Variables}
 
-\subsection{First Stage Return Trajectory} 
-
-\begin{tabular}{|c|c|}
-	\hline Initial Constraints  & \\ 
-	\hline Terminal Constraints &  \\ 
-	\hline Path Constraints &  \\ 
-	\hline Target Cost &  \\ 
-	\hline 
-\end{tabular} 
-
-\subsubsection{Control Variables}
-
-\subsubsection{Primal Variables}
-
 \subsection{Second Stage Trajectory}
+
+-detail the vehicle dynamics with a free body diagram 
+
+LODESTAR is able to optimise the trajectory of airbreathing accelerators in the supersonic or hypersonic regime. LODESTAR is able to optimise for a range of optimisation metrics, including a maximum payload-to-orbit and constant dynamic pressure.  
+The trajectory of the SPARTAN scramjet-powered accelerator has been simulated in LODESTAR. 
 
 \begin{tabular}{|c|c|}
 	\hline Initial Constraints  & Velocity \\ & Fuel Mass  \\ & Latitude \\ & Longitude \\ 
@@ -149,6 +174,20 @@ Summary Table
 
 \subsection{Third Stage Trajectory}
 
+-detail the vehicle dynamics with a free body diagram 
+
+\begin{tabular}{|c|c|}
+	\hline Input  & Contains\\ 
+	\hline Aerodynamic Database  & Mach Number, AoA, CA, CN, CD, CL, cP\\ 
+	\hline 
+\end{tabular} 
+
+\begin{tabular}{|c|c|}
+	\hline Output  & Contains\\ 
+	\hline   & \\ 
+	\hline 
+\end{tabular} 
+
 The third stage is required to deliver the payload into heliosynchronous orbit. The heliosynchronous orbit chosen is 566.89km. 
 
 \begin{tabular}{|c|c|}
@@ -159,4 +198,16 @@ The third stage is required to deliver the payload into heliosynchronous orbit. 
 	\hline 
 \end{tabular} 
 
+
+-Detail the hohmann transfer
 \subsubsection{Control Variables}
+
+\subsection{Combined Second Stage Ascent \& Return  Trajectory}
+
+\subsection{Validation}
+\subsubsection{Optimality Conditions}
+Hamiltonian = 0 because dH/dt = 0 (Hamiltonian does not depend explicitly on time) except at end due to final time being free.
+Costates
+Complementary conditions
+\subsubsection{Forward Simulations}
+-both the control check and derivative check

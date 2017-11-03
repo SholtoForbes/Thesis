@@ -5,12 +5,31 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces The SKYLON spaceplane \cite {Varvill2008}.\relax }}{6}{figure.caption.21}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces The airbreathing vehicle flight corridor \cite {Smart2010}.\relax }}{7}{figure.caption.22}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces The SPARTAN system \cite {Jazra2013}.\relax }}{8}{figure.caption.23}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces HYPAERO analysis surface grid \cite {Jazra2013}.\relax }}{9}{figure.caption.24}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces An example of a constant gain PID controller, controlling the SPARTAN trajectory around a 50kPa dynamic pressure design point \cite {Preller2015}.\relax }}{10}{figure.caption.26}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces An illustration of the subdivision associated with multiple shooting \cite {Michalik2009}. Dashed lines illustrate the initial trajectory guess and the solid line indicates the final trajectory once the joining conditions are met.\relax }}{14}{figure.caption.27}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Initial spacecraft formation configuration \cite {Huntington2008}.\relax }}{18}{figure.caption.28}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Hello World}}{19}{figure.caption.29}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces The C-RESTM10 propulsion database, specific impulse.\relax }}{9}{figure.caption.24}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces An example of a constant gain PID controller, controlling the SPARTAN trajectory around a 50kPa dynamic pressure design point \cite {Preller2015}.\relax }}{12}{figure.caption.26}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces \relax }}{13}{figure.caption.27}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Powell\relax }}{13}{figure.caption.27}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces \relax }}{14}{figure.caption.28}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Wilhite\relax }}{14}{figure.caption.28}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces a) Airbreathing b) Airbreathing/Rocket\relax }}{15}{figure.caption.29}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Tsuchiya\relax }}{15}{figure.caption.29}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces \relax }}{15}{figure.caption.30}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Mehta\relax }}{15}{figure.caption.30}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces \relax }}{17}{figure.caption.31}
+\contentsline {figure}{\numberline {2.15}{\ignorespaces \relax }}{17}{figure.caption.32}
+\contentsline {figure}{\numberline {2.16}{\ignorespaces An illustration of the subdivision associated with multiple shooting \cite {Michalik2009}. Dashed lines illustrate the initial trajectory guess and the solid line indicates the final trajectory once the joining conditions are met.\relax }}{21}{figure.caption.33}
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Initial spacecraft formation configuration \cite {Huntington2008}.\relax }}{25}{figure.caption.34}
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Hello World}}{26}{figure.caption.35}
+\contentsline {figure}{\numberline {2.19}{\ignorespaces HYPAERO analysis surface grid \cite {Jazra2013}.\relax }}{28}{figure.caption.36}
+\contentsline {figure}{\numberline {2.20}{\ignorespaces SPARTAN aerodynamics, developed using HYPAERO \cite {Preller2017}.\relax }}{29}{figure.caption.37}
+\contentsline {figure}{\numberline {2.21}{\ignorespaces The Skylon spaceplane, simulated using CART3D at Mach 12.189, $\alpha =7.512^\circ $\cite {Mehta2016}. Cell distribution produced by mesh adaption is shown.\relax }}{29}{figure.caption.38}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces \relax }}{31}{figure.caption.39}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces \relax }}{32}{figure.caption.40}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces \relax }}{33}{figure.caption.41}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces \relax }}{33}{figure.caption.42}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces \relax }}{39}{figure.caption.43}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

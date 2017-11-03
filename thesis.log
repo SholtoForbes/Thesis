@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.8)  4 AUG 2017 08:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.8)  31 OCT 2017 10:48
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1447,16 +1447,41 @@ Package: translator 2010/06/12 ver 1.10
 ("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\translator\translator-language-m
 appings.tex"))) ("C:\Program Files\MiKTeX 2.9\tex\latex\placeins\placeins.sty"
 Package: placeins 2005/04/18  v 2.2
-))
+)) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty"
+Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\lbx\english.lbx"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\lbx\english.lbx"
 File: english.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)
 )
 \@quotelevel=\count442
 \@quotereset=\count443
+ (thesis.aux
 
-(thesis.aux)
+LaTeX Warning: Label `fig:WilhiteBoosterVehicle' multiply defined.
+
+
+LaTeX Warning: Label `fig:WilHiteBoosterTrajectory' multiply defined.
+
+
+LaTeX Warning: Label `fig:WilhiteBoosterVehicle' multiply defined.
+
+
+LaTeX Warning: Label `fig:WilHiteBoosterTrajectory' multiply defined.
+
+
+LaTeX Warning: Label `fig:WilhiteBoosterVehicle' multiply defined.
+
+
+LaTeX Warning: Label `fig:WilHiteBoosterTrajectory' multiply defined.
+
+
+LaTeX Warning: Label `chapter:numerical' multiply defined.
+
+)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
@@ -1581,10 +1606,6 @@ LaTeX Info: Redefining \nameref on input line 11.
 \openout7 = `thesis.out'.
 
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty"
-Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
-Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
-)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\translator\dicts\translator-basi
 c-dictionary\translator-basic-dictionary-English.dict"
 Dictionary: translator-basic-dictionary, Language: English 
@@ -1625,7 +1646,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 11.
 \c__siunitx_mathtt_int=\count452
  (frontmatter.tex
-<figures/uq_logo.png, id=174, 286.00853pt x 114.36728pt>
+<figures/uq_logo.png, id=242, 286.00853pt x 114.36728pt>
 File: figures/uq_logo.png Graphic file (type png)
 
 <use figures/uq_logo.png>
@@ -1717,25 +1738,32 @@ y for the Award
 
 ] [10
 
-] (thesis.toc [11])
+] (thesis.toc [11] [12])
 \tf@toc=\write8
 \openout8 = `thesis.toc'.
 
- [12] (thesis.lof)
+ [13] [14
+
+] (thesis.lof
+Overfull \hbox (23.58748pt too wide) in paragraph at lines 25--25
+ [][] [][][]\OT1/ptm/m/n/12 The Sky-lon space-plane, sim-u-lated us-ing CART3D 
+at Mach 12.189, $\OML/ztmcm/m/it/12  \OT1/ztmcm/m/n/12 = 7\OML/ztmcm/m/it/12 :
+\OT1/ztmcm/m/n/12 512[]$[] 
+ []
+
+[15])
 \tf@lof=\write9
 \openout9 = `thesis.lof'.
 
- [13
-
-] [14
-
-] (thesis.lot)
+ [16] (thesis.lot)
 \tf@lot=\write10
 \openout10 = `thesis.lot'.
 
 )
 No file thesis.nls.
-[15] [16
+[17
+
+] [18
 
 ] (1_introduction.tex
 Chapter 1.
@@ -1746,7 +1774,7 @@ LaTeX Warning: Citation 'Denman2016a' on page 1 undefined on input line 6.
 LaTeX Warning: Citation 'Colket2001' on page 1 undefined on input line 6.
 
 
-<./figures/1_introduction/specific-impulse.png, id=323, 466.74374pt x 301.125pt
+<./figures/1_introduction/specific-impulse.png, id=455, 466.74374pt x 301.125pt
 >
 File: ./figures/1_introduction/specific-impulse.png Graphic file (type png)
  <use ./figures/1_introduction/specific-impulse.png>
@@ -1769,7 +1797,7 @@ LaTeX Warning: Reference `chapter:jpp' on page 3 undefined on input line 58.
 
 ) (2_literature-review.tex
 Overfull \hbox (21.0188pt too wide) in paragraph at lines 58--2
-\OT1/ptm/m/n/12 through [][]5[][]. Rec-om-men-da-tions for fu-ture stud-ies on 
+\OT1/ptm/m/n/12 through [][]6[][]. Rec-om-men-da-tions for fu-ture stud-ies on 
 cav-ity flame-hold-ers in three-dimensional, hydrocarbon-
  []
 
@@ -1780,16 +1808,12 @@ cav-ity flame-hold-ers in three-dimensional, hydrocarbon-
 ]
 Chapter 2.
 
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 9.
-
-
 LaTeX Warning: Citation 'Varvill2004' on page 5 undefined on input line 11.
 
 
 LaTeX Warning: Citation 'Sky-rel-ma-' on page 5 undefined on input line 11.
 
-<./figures/2_literature-review/SKYLON.png, id=351, 562.35094pt x 392.21532pt>
+<./figures/2_literature-review/SKYLON.png, id=483, 562.35094pt x 392.21532pt>
 File: ./figures/2_literature-review/SKYLON.png Graphic file (type png)
 
 <use ./figures/2_literature-review/SKYLON.png>
@@ -1825,7 +1849,7 @@ LaTeX Warning: Citation 'Billig1993' on page 6 undefined on input line 28.
 LaTeX Warning: Citation 'Cook2003' on page 6 undefined on input line 28.
 
 
-<./figures/2_literature-review/AirbreathingCorridor.png, id=357, 531.48563pt x 
+<./figures/2_literature-review/AirbreathingCorridor.png, id=489, 531.48563pt x 
 362.85562pt>
 File: ./figures/2_literature-review/AirbreathingCorridor.png Graphic file (type
  png)
@@ -1853,8 +1877,8 @@ LaTeX Warning: Citation 'Flaherty2010' on page 6 undefined on input line 36.
 
 LaTeX Warning: Citation 'Jazra2013' on page 7 undefined on input line 44.
 
-
-<./figures/2_literature-review/SPARTAN.png, id=364, 661.72218pt x 335.75438pt>
+[7 <./figures/2_literature-review/AirbreathingCorridor.png>]
+<./figures/2_literature-review/SPARTAN.png, id=502, 661.72218pt x 335.75438pt>
 File: ./figures/2_literature-review/SPARTAN.png Graphic file (type png)
 
 <use ./figures/2_literature-review/SPARTAN.png>
@@ -1863,293 +1887,556 @@ t line 48.
 (pdftex.def)             Requested size: 338.58632pt x 171.796pt.
 
 
-LaTeX Warning: Citation 'Jazra2013' on page 7 undefined on input line 49.
+LaTeX Warning: Citation 'Jazra2013' on page 8 undefined on input line 49.
 
 
-LaTeX Warning: Citation 'Jazra2013' on page 7 undefined on input line 49.
+LaTeX Warning: Citation 'Jazra2013' on page 8 undefined on input line 49.
 
-[7 <./figures/2_literature-review/AirbreathingCorridor.png>]
 
 LaTeX Warning: Citation 'Preller2015a' on page 8 undefined on input line 55.
 
 
-LaTeX Warning: Citation 'Jazra2013' on page 8 undefined on input line 57.
-
-<./figures/2_literature-review/strip.png, id=371, 426.84468pt x 245.41687pt>
-File: ./figures/2_literature-review/strip.png Graphic file (type png)
-
-<use ./figures/2_literature-review/strip.png>
-Package pdftex.def Info: ./figures/2_literature-review/strip.png used on input 
-line 61.
-(pdftex.def)             Requested size: 338.58632pt x 194.68605pt.
+LaTeX Warning: Citation 'Preller2017' on page 8 undefined on input line 60.
 
 
-LaTeX Warning: Citation 'Jazra2013' on page 8 undefined on input line 62.
-
-
-LaTeX Warning: Citation 'Jazra2013' on page 8 undefined on input line 62.
-
-
-LaTeX Warning: Citation 'Olds1998' on page 8 undefined on input line 76.
-
-
-LaTeX Warning: Citation 'Olds1998' on page 8 undefined on input line 77.
-
-
-LaTeX Warning: Citation 'Preller2015' on page 8 undefined on input line 77.
+LaTeX Warning: Citation 'Smart2006' on page 8 undefined on input line 60.
 
 [8 <./figures/2_literature-review/SPARTAN.png>]
-<./figures/2_literature-review/PID.png, id=379, 804.75656pt x 380.17032pt>
+<figures/2_literature-review/C-REST.png, id=508, 319.94531pt x 284.56313pt>
+File: figures/2_literature-review/C-REST.png Graphic file (type png)
+
+<use figures/2_literature-review/C-REST.png>
+Package pdftex.def Info: figures/2_literature-review/C-REST.png used on input l
+ine 65.
+(pdftex.def)             Requested size: 338.58632pt x 301.14915pt.
+
+
+LaTeX Warning: Citation 'Preller2017' on page 9 undefined on input line 74.
+
+
+LaTeX Warning: Citation 'Vehicle2008' on page 9 undefined on input line 81.
+
+[9 <./figures/2_literature-review/C-REST.png>] [10] [11]
+
+LaTeX Warning: Citation 'Olds1998' on page 12 undefined on input line 113.
+
+
+LaTeX Warning: Citation 'Olds1998' on page 12 undefined on input line 114.
+
+
+LaTeX Warning: Citation 'Preller2015' on page 12 undefined on input line 114.
+
+<./figures/2_literature-review/PID.png, id=524, 804.75656pt x 380.17032pt>
 File: ./figures/2_literature-review/PID.png Graphic file (type png)
 
 <use ./figures/2_literature-review/PID.png>
 Package pdftex.def Info: ./figures/2_literature-review/PID.png used on input li
-ne 81.
+ne 118.
 (pdftex.def)             Requested size: 435.32422pt x 205.64856pt.
 
 
-LaTeX Warning: Citation 'Preller2015' on page 9 undefined on input line 82.
+LaTeX Warning: Citation 'Preller2015' on page 12 undefined on input line 119.
 
 
-LaTeX Warning: Citation 'Preller2015' on page 9 undefined on input line 82.
+LaTeX Warning: Citation 'Preller2015' on page 12 undefined on input line 119.
+
+[12
 
 
-LaTeX Warning: Citation 'Powell1991' on page 9 undefined on input line 89.
+ <./figures/2_literature-review/PID.png>]
+
+LaTeX Warning: Citation 'Powell1991' on page 13 undefined on input line 128.
 
 
-LaTeX Warning: Citation 'Lu1993' on page 9 undefined on input line 89.
+LaTeX Warning: Citation 'Lu1993' on page 13 undefined on input line 128.
 
 
-LaTeX Warning: Citation 'Trefny1999' on page 9 undefined on input line 89.
+LaTeX Warning: Citation 'Trefny1999' on page 13 undefined on input line 128.
 
 
-LaTeX Warning: Citation 'Powell1991' on page 9 undefined on input line 89.
+LaTeX Warning: Citation 'Powell1991' on page 13 undefined on input line 128.
 
 
-LaTeX Warning: Citation 'Lu1993' on page 9 undefined on input line 89.
+LaTeX Warning: Citation 'Lu1993' on page 13 undefined on input line 128.
 
 
-LaTeX Warning: Citation 'Trefny1999' on page 9 undefined on input line 89.
+LaTeX Warning: Citation 'Trefny1999' on page 13 undefined on input line 128.
 
 
-Overfull \hbox (1.29036pt too wide) in paragraph at lines 89--90
-\OT1/ptm/m/n/12 and rocket propul-sion within single-stage-to-orbit (SSTO) ve-h
-i-cles []; []; []
- []
+<"figures/2_literature-review/Powell Vehicle".png, id=530, 386.94562pt x 247.67
+531pt>
+File: "figures/2_literature-review/Powell Vehicle".png Graphic file (type png)
+ <use "figures/2_literature-review/Powell Vehicle".png>
+Package pdftex.def Info: "figures/2_literature-review/Powell Vehicle".png used 
+on input line 133.
+(pdftex.def)             Requested size: 145.11053pt x 92.88179pt.
 
-[9 <./figures/2_literature-review/strip.png>]
+<"figures/2_literature-review/Powell Trajectory".png, id=531, 357.58594pt x 229
+.60782pt>
+File: "figures/2_literature-review/Powell Trajectory".png Graphic file (type pn
+g)
+ <use "figures/2_literature-review/Powell Trajectory".png>
+Package pdftex.def Info: "figures/2_literature-review/Powell Trajectory".png us
+ed on input line 138.
+(pdftex.def)             Requested size: 290.22107pt x 186.36319pt.
 
-LaTeX Warning: Citation 'Tsuchiya2005' on page 10 undefined on input line 102.
+Underfull \vbox (badness 1540) has occurred while \output is active []
 
+ [13 <./figures/2_literature-review/Powell Vehicle.png> <./figures/2_literature
+-review/Powell Trajectory.png>]
 
-LaTeX Warning: Citation 'Wilhite1991' on page 10 undefined on input line 102.
-
-
-LaTeX Warning: Citation 'Mehta2001' on page 10 undefined on input line 102.
-
-
-LaTeX Warning: Citation 'Tsuchiya2005' on page 10 undefined on input line 102.
-
-
-LaTeX Warning: Citation 'Wilhite1991' on page 10 undefined on input line 102.
-
-
-LaTeX Warning: Citation 'Mehta2001' on page 10 undefined on input line 103.
-
-
-Underfull \vbox (badness 1320) has occurred while \output is active []
-
- [10 <./figures/2_literature-review/PID.png>]
-
-LaTeX Warning: Citation 'Preller2015' on page 11 undefined on input line 109.
+LaTeX Warning: Citation 'Tsuchiya2005' on page 14 undefined on input line 156.
 
 
-LaTeX Warning: Citation 'Diehl2006' on page 11 undefined on input line 111.
+LaTeX Warning: Citation 'Wilhite1991' on page 14 undefined on input line 156.
 
 
-LaTeX Warning: Citation 'Bulirsch1993' on page 11 undefined on input line 113.
-
-[11]
-
-LaTeX Warning: Citation 'Stryk1992' on page 12 undefined on input line 115.
+LaTeX Warning: Citation 'Mehta2001' on page 14 undefined on input line 156.
 
 
-LaTeX Warning: Citation 'Bazaraa2013' on page 12 undefined on input line 115.
+<"figures/2_literature-review/Wilhite Booster Vehicle".png, id=539, 458.46281pt
+ x 333.49594pt>
+File: "figures/2_literature-review/Wilhite Booster Vehicle".png Graphic file (t
+ype png)
+
+<use "figures/2_literature-review/Wilhite Booster Vehicle".png>
+Package pdftex.def Info: "figures/2_literature-review/Wilhite Booster Vehicle".
+png used on input line 161.
+(pdftex.def)             Requested size: 217.66211pt x 158.3308pt.
+
+<"figures/2_literature-review/WilHite Booster Trajectory".png, id=540, 572.8903
+2pt x 415.5525pt>
+File: "figures/2_literature-review/WilHite Booster Trajectory".png Graphic file
+ (type png)
+
+<use "figures/2_literature-review/WilHite Booster Trajectory".png>
+Package pdftex.def Info: "figures/2_literature-review/WilHite Booster Trajector
+y".png used on input line 166.
+(pdftex.def)             Requested size: 217.66211pt x 157.88622pt.
+
+<"figures/2_literature-review/Tsuchiya Vehicles".png, id=541, 441.90094pt x 301
+.8778pt>
+File: "figures/2_literature-review/Tsuchiya Vehicles".png Graphic file (type pn
+g)
+ <use "figures/2_literature-review/Tsuchiya Vehicles".png>
+Package pdftex.def Info: "figures/2_literature-review/Tsuchiya Vehicles".png us
+ed on input line 175.
+(pdftex.def)             Requested size: 217.66211pt x 148.69527pt.
+
+<"figures/2_literature-review/Tsuchiya".png, id=542, 328.22626pt x 234.8775pt>
+File: "figures/2_literature-review/Tsuchiya".png Graphic file (type png)
+
+<use "figures/2_literature-review/Tsuchiya".png>
+Package pdftex.def Info: "figures/2_literature-review/Tsuchiya".png used on inp
+ut line 180.
+(pdftex.def)             Requested size: 217.66211pt x 155.75792pt.
 
 
-LaTeX Warning: Citation 'Boggs2000' on page 12 undefined on input line 129.
+LaTeX Warning: Citation 'Tsuchiya2005' on page 14 undefined on input line 188.
 
 
-LaTeX Warning: Citation 'jezewski1971' on page 12 undefined on input line 135.
+LaTeX Warning: Citation 'Wilhite1991' on page 14 undefined on input line 188.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+<"figures/2_literature-review/Mehta Vehicle".png, id=543, 153.57375pt x 292.844
+06pt>
+File: "figures/2_literature-review/Mehta Vehicle".png Graphic file (type png)
+ <use "figures/2_literature-review/Mehta Vehicle".png>
+Package pdftex.def Info: "figures/2_literature-review/Mehta Vehicle".png used o
+n input line 194.
+(pdftex.def)             Requested size: 145.11053pt x 276.72122pt.
 
- [12]
+<"figures/2_literature-review/Mehta Trajectory".png, id=544, 295.1025pt x 261.9
+7874pt>
+File: "figures/2_literature-review/Mehta Trajectory".png Graphic file (type png
+)
+ <use "figures/2_literature-review/Mehta Trajectory".png>
+Package pdftex.def Info: "figures/2_literature-review/Mehta Trajectory".png use
+d on input line 199.
+(pdftex.def)             Requested size: 290.22107pt x 257.64883pt.
 
-LaTeX Warning: Citation 'Subchan2008' on page 13 undefined on input line 140.
+
+LaTeX Warning: Citation 'Mehta2001' on page 14 undefined on input line 205.
+
+[14 <./figures/2_literature-review/Wilhite Booster Vehicle.png> <./figures/2_li
+terature-review/WilHite Booster Trajectory.png>] [15 <./figures/2_literature-re
+view/Tsuchiya Vehicles.png> <./figures/2_literature-review/Tsuchiya.png> <./fig
+ures/2_literature-review/Mehta Vehicle.png> <./figures/2_literature-review/Meht
+a Trajectory.png>]
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ˜ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ˜ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+
+<../../../Dropbox/phd/flyback/Glideback.png, id=559, 305.64188pt x 238.64156pt>
+File: ../../../Dropbox/phd/flyback/Glideback.png Graphic file (type png)
+<use ../../../Dropbox/phd/flyback/Glideback.png>
+Package pdftex.def Info: ../../../Dropbox/phd/flyback/Glideback.png used on inp
+ut line 228.
+(pdftex.def)             Requested size: 338.58632pt x 264.37453pt.
+
+<../../../Dropbox/phd/flyback/Powered.png, id=560, 297.36093pt x 243.15843pt>
+File: ../../../Dropbox/phd/flyback/Powered.png Graphic file (type png)
+
+<use ../../../Dropbox/phd/flyback/Powered.png>
+Package pdftex.def Info: ../../../Dropbox/phd/flyback/Powered.png used on input
+ line 235.
+(pdftex.def)             Requested size: 338.58632pt x 276.8844pt.
 
 
-LaTeX Warning: Citation 'Michalik2009' on page 13 undefined on input line 153.
+LaTeX Warning: Citation 'Tsuchiya2005' on page 16 undefined on input line 242.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: Reference `fig:Tsuchiya' on page 16 undefined on input line 242.
 
- [13]
-<./figures/2_literature-review/multipleshooting.png, id=413, 454.69875pt x 346.
+
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ˜ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no œ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no  in font ptmr7t!
+
+LaTeX Warning: Citation 'Romere1983' on page 16 undefined on input line 243.
+
+[16] [17 <../../../Dropbox/phd/flyback/Glideback.png> <../../../Dropbox/phd/fly
+back/Powered.png>]
+
+LaTeX Warning: Citation 'Preller2015' on page 18 undefined on input line 252.
+
+
+LaTeX Warning: Citation 'Diehl2006' on page 18 undefined on input line 254.
+
+[18]
+
+LaTeX Warning: Citation 'Bulirsch1993' on page 19 undefined on input line 256.
+
+
+LaTeX Warning: Citation 'Stryk1992' on page 19 undefined on input line 258.
+
+
+LaTeX Warning: Citation 'Bazaraa2013' on page 19 undefined on input line 258.
+
+
+LaTeX Warning: Citation 'Boggs2000' on page 19 undefined on input line 272.
+
+[19]
+
+LaTeX Warning: Citation 'jezewski1971' on page 20 undefined on input line 278.
+
+
+LaTeX Warning: Citation 'Subchan2008' on page 20 undefined on input line 283.
+
+
+LaTeX Warning: Citation 'Michalik2009' on page 20 undefined on input line 296.
+
+[20]
+<./figures/2_literature-review/multipleshooting.png, id=591, 454.69875pt x 346.
 29375pt>
 File: ./figures/2_literature-review/multipleshooting.png Graphic file (type png
 )
  <use ./figures/2_literature-review/multipleshooting.png>
 Package pdftex.def Info: ./figures/2_literature-review/multipleshooting.png use
-d on input line 182.
+d on input line 325.
 (pdftex.def)             Requested size: 338.58632pt x 257.86497pt.
 
 
-LaTeX Warning: Citation 'Michalik2009' on page 14 undefined on input line 183.
+LaTeX Warning: Citation 'Michalik2009' on page 21 undefined on input line 326.
 
 
-LaTeX Warning: Citation 'Michalik2009' on page 14 undefined on input line 183.
+LaTeX Warning: Citation 'Michalik2009' on page 21 undefined on input line 326.
 
-[14 <./figures/2_literature-review/multipleshooting.png>]
+[21 <./figures/2_literature-review/multipleshooting.png>]
 
-LaTeX Warning: Citation 'Fasano2013' on page 15 undefined on input line 191.
-
-
-LaTeX Warning: Citation 'Fahroo2000' on page 15 undefined on input line 194.
+LaTeX Warning: Citation 'Fasano2013' on page 22 undefined on input line 334.
 
 
-LaTeX Warning: Citation 'Kreiss1972' on page 15 undefined on input line 194.
+LaTeX Warning: Citation 'Fahroo2000' on page 22 undefined on input line 337.
 
 
-LaTeX Warning: Citation 'Fahroo2000' on page 15 undefined on input line 194.
+LaTeX Warning: Citation 'Kreiss1972' on page 22 undefined on input line 337.
 
 
-LaTeX Warning: Citation 'Fahroo1999' on page 15 undefined on input line 194.
+LaTeX Warning: Citation 'Fahroo2000' on page 22 undefined on input line 337.
 
 
-LaTeX Warning: Citation 'Fahroo2000' on page 15 undefined on input line 194.
-
-[15] [16]
-
-LaTeX Warning: Citation 'Gong2010' on page 17 undefined on input line 280.
+LaTeX Warning: Citation 'Fahroo1999' on page 22 undefined on input line 337.
 
 
-LaTeX Warning: Citation 'Fahroo2001' on page 17 undefined on input line 280.
+LaTeX Warning: Citation 'Fahroo2000' on page 22 undefined on input line 337.
+
+[22] [23]
+
+LaTeX Warning: Citation 'Gong2010' on page 24 undefined on input line 423.
 
 
-LaTeX Warning: Citation 'Bedrossian' on page 17 undefined on input line 286.
+LaTeX Warning: Citation 'Fahroo2001' on page 24 undefined on input line 423.
 
 
-LaTeX Warning: Citation 'Yan2007' on page 17 undefined on input line 287.
+LaTeX Warning: Citation 'Bedrossian' on page 24 undefined on input line 429.
 
-[17]
 
-LaTeX Warning: Citation 'Huntington2008' on page 18 undefined on input line 289
+LaTeX Warning: Citation 'Yan2007' on page 24 undefined on input line 430.
+
+[24]
+
+LaTeX Warning: Citation 'Huntington2008' on page 25 undefined on input line 432
 .
 
 
-<./figures/2_literature-review/initialtetra.png, id=458, 396.7322pt x 295.85532
+<./figures/2_literature-review/initialtetra.png, id=634, 396.7322pt x 295.85532
 pt>
 File: ./figures/2_literature-review/initialtetra.png Graphic file (type png)
  <use ./figures/2_literature-review/initialtetra.png>
 Package pdftex.def Info: ./figures/2_literature-review/initialtetra.png used on
- input line 292.
+ input line 435.
 (pdftex.def)             Requested size: 241.84843pt x 180.35861pt.
 
 
-LaTeX Warning: Citation 'Huntington2008' on page 18 undefined on input line 293
+LaTeX Warning: Citation 'Huntington2008' on page 25 undefined on input line 436
 .
 
 
-LaTeX Warning: Citation 'Huntington2008' on page 18 undefined on input line 293
+LaTeX Warning: Citation 'Huntington2008' on page 25 undefined on input line 436
 .
 
 
-<./figures/2_literature-review/terminaltetra.png, id=459, 387.69844pt x 292.844
+<./figures/2_literature-review/terminaltetra.png, id=635, 387.69844pt x 292.844
 06pt>
 File: ./figures/2_literature-review/terminaltetra.png Graphic file (type png)
  <use ./figures/2_literature-review/terminaltetra.png>
 Package pdftex.def Info: ./figures/2_literature-review/terminaltetra.png used o
-n input line 298.
+n input line 441.
 (pdftex.def)             Requested size: 241.84843pt x 182.67854pt.
 
 
-LaTeX Warning: Citation 'Huntington2008' on page 18 undefined on input line 299
+LaTeX Warning: Citation 'Huntington2008' on page 25 undefined on input line 442
 .
 
 
-LaTeX Warning: Citation 'Huntington2008' on page 18 undefined on input line 299
+LaTeX Warning: Citation 'Huntington2008' on page 25 undefined on input line 442
 .
 
 
-LaTeX Warning: Citation 'Tian2011' on page 18 undefined on input line 305.
+LaTeX Warning: Citation 'Tian2011' on page 25 undefined on input line 448.
 
-[18 <./figures/2_literature-review/initialtetra.png>]
+[25 <./figures/2_literature-review/initialtetra.png>]
 
-LaTeX Warning: Citation 'Ross2002' on page 19 undefined on input line 311.
-
-
-LaTeX Warning: Citation 'Rao2010' on page 19 undefined on input line 311.
+LaTeX Warning: Citation 'Ross2002' on page 26 undefined on input line 454.
 
 
-LaTeX Warning: Citation 'Rutquist2010' on page 19 undefined on input line 311.
+LaTeX Warning: Citation 'Rao2010' on page 26 undefined on input line 454.
 
 
-LaTeX Warning: Reference `Achievements to Date' on page 19 undefined on input l
-ine 311.
+LaTeX Warning: Citation 'Rutquist2010' on page 26 undefined on input line 454.
 
 
-LaTeX Warning: Citation 'Bedrossian' on page 19 undefined on input line 311.
+LaTeX Warning: Reference `Achievements to Date' on page 26 undefined on input l
+ine 454.
 
 
-LaTeX Warning: Reference `table:programs' on page 19 undefined on input line 31
-1.
-
-[19 <./figures/2_literature-review/terminaltetra.png>]) (3_vehicle-design.tex
-[20]
-Chapter 3.
-
-LaTeX Warning: Citation 'Vehicle2008' on page 21 undefined on input line 44.
+LaTeX Warning: Citation 'Bedrossian' on page 26 undefined on input line 454.
 
 
-Underfull \vbox (badness 4518) has occurred while \output is active []
+LaTeX Warning: Reference `table:programs' on page 26 undefined on input line 45
+4.
 
- [21
+[26 <./figures/2_literature-review/terminaltetra.png>]
 
+LaTeX Warning: Citation 'Jazra2013' on page 27 undefined on input line 464.
+
+<./figures/2_literature-review/strip.png, id=648, 426.84468pt x 245.41687pt>
+File: ./figures/2_literature-review/strip.png Graphic file (type png)
+
+<use ./figures/2_literature-review/strip.png>
+Package pdftex.def Info: ./figures/2_literature-review/strip.png used on input 
+line 468.
+(pdftex.def)             Requested size: 338.58632pt x 194.68605pt.
+
+
+LaTeX Warning: Citation 'Jazra2013' on page 27 undefined on input line 469.
+
+
+LaTeX Warning: Citation 'Jazra2013' on page 27 undefined on input line 469.
+
+
+<figures/2_literature-review/HYPAERO-aero.png, id=649, 472.76625pt x 322.95656p
+t>
+File: figures/2_literature-review/HYPAERO-aero.png Graphic file (type png)
+ <use figures/2_literature-review/HYPAERO-aero.png>
+Package pdftex.def Info: figures/2_literature-review/HYPAERO-aero.png used on i
+nput line 475.
+(pdftex.def)             Requested size: 338.58632pt x 231.30148pt.
+
+
+LaTeX Warning: Citation 'Preller2017' on page 27 undefined on input line 476.
+
+
+LaTeX Warning: Citation 'Preller2017' on page 27 undefined on input line 476.
+
+
+LaTeX Warning: Citation 'Mehta2016' on page 27 undefined on input line 483.
+
+
+LaTeX Warning: Citation 'Kimmel2010' on page 27 undefined on input line 483.
+
+
+LaTeX Warning: Citation 'Aftosmis2011' on page 27 undefined on input line 483.
+
+
+LaTeX Warning: Citation 'Mehta2016' on page 27 undefined on input line 484.
+
+
+<figures/2_literature-review/Skylon-CART3D.png, id=650, 545.78906pt x 570.63188
+pt>
+File: figures/2_literature-review/Skylon-CART3D.png Graphic file (type png)
+ <use figures/2_literature-review/Skylon-CART3D.png>
+Package pdftex.def Info: figures/2_literature-review/Skylon-CART3D.png used on 
+input line 487.
+(pdftex.def)             Requested size: 290.22107pt x 303.42607pt.
+
+
+LaTeX Warning: Citation 'Mehta2016' on page 27 undefined on input line 488.
+
+
+LaTeX Warning: Citation 'Mehta2016' on page 27 undefined on input line 488.
+
+
+Underfull \hbox (badness 3250) in paragraph at lines 488--488
+[]\OT1/ptm/m/n/12 Figure 2.21: |The Sky-lon space-plane, sim-u-lated us-ing CAR
+T3D at Mach 12.189, $\OML/ztmcm/m/it/12  \OT1/ztmcm/m/n/12 =
+ []
+
+[27]
+
+LaTeX Warning: Citation 'Sooy2005' on page 28 undefined on input line 496.
+
+) (3_vehicle-design.tex [28 <./figures/2_literature-review/strip.png>] [29 <./f
+igures/2_literature-review/HYPAERO-aero.png> <./figures/2_literature-review/Sky
+lon-CART3D.png>] [30
 
 ]
-Overfull \hbox (4.31425pt too wide) in paragraph at lines 71--74
+Chapter 3.
+<figures/3_vehicle_design/NoInternal.png, id=670, 1166.10657pt x 504.38437pt>
+File: figures/3_vehicle_design/NoInternal.png Graphic file (type png)
+
+<use figures/3_vehicle_design/NoInternal.png>
+Package pdftex.def Info: figures/3_vehicle_design/NoInternal.png used on input 
+line 13.
+(pdftex.def)             Requested size: 338.58632pt x 146.44473pt.
+
+<figures/3_vehicle_design/INTERNALS.jpg, id=671, 1412.27625pt x 245.41687pt>
+File: figures/3_vehicle_design/INTERNALS.jpg Graphic file (type jpg)
+
+<use figures/3_vehicle_design/INTERNALS.jpg>
+Package pdftex.def Info: figures/3_vehicle_design/INTERNALS.jpg used on input l
+ine 20.
+(pdftex.def)             Requested size: 338.58632pt x 58.83759pt.
+ [31
+
+ <./figures/3_vehicle_design/NoInternal.png>]
+<figures/3_vehicle_design/CARTmesh.png, id=678, 788.19469pt x 371.88937pt>
+File: figures/3_vehicle_design/CARTmesh.png Graphic file (type png)
+
+<use figures/3_vehicle_design/CARTmesh.png>
+Package pdftex.def Info: figures/3_vehicle_design/CARTmesh.png used on input li
+ne 71.
+(pdftex.def)             Requested size: 338.58632pt x 159.75041pt.
+ [32 <./figures/3_vehicle_design/INTERNALS.jpg>]
+<figures/3_vehicle_design/3rdStage.jpg, id=683, 1372.37718pt x 283.81032pt>
+File: figures/3_vehicle_design/3rdStage.jpg Graphic file (type jpg)
+
+<use figures/3_vehicle_design/3rdStage.jpg>
+Package pdftex.def Info: figures/3_vehicle_design/3rdStage.jpg used on input li
+ne 87.
+(pdftex.def)             Requested size: 338.58632pt x 70.02132pt.
+
+
+LaTeX Warning: Citation 'Vehicle2008' on page 33 undefined on input line 94.
+
+[33 <./figures/3_vehicle_design/CARTmesh.png> <./figures/3_vehicle_design/3rdSt
+age.jpg>]
+Overfull \hbox (4.31425pt too wide) in paragraph at lines 122--125
 []\OT1/ptm/m/n/12 mass RP1 = 768.7 kg. $\OML/ztmcm/m/it/12 []$ \OT1/ptm/m/n/12
  = 813kg/m3. http://nvlpubs.nist.gov/nistpubs/Legacy/IR/nistir6646.pdf 
  []
 
-[22]) (4_LODESTAR.tex [23] [24
+[34]) (4_LODESTAR.tex [35] [36
 
 ]
 Chapter 4.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 19.
+(hyperref)                than one, level fixed on input line 16.
 
+[37
 
-LaTeX Warning: Citation 'Josselyn2002a' on page 25 undefined on input line 29.
+]
 
-[25
+LaTeX Warning: Citation 'Josselyn2002a' on page 38 undefined on input line 35.
 
-] [26] [27]) (5_trajectory-results.tex [28]
+[38]
+Package epstopdf Info: Source file: <figures/4_LODESTAR/Traj.eps>
+(epstopdf)                    date: 2017-10-26 11:33:25
+(epstopdf)                    size: 87811 bytes
+(epstopdf)             Output file: <figures/4_LODESTAR/Traj-eps-converted-to.p
+df>
+(epstopdf)                    date: 2017-10-26 11:33:35
+(epstopdf)                    size: 33680 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/4_LODESTAR/Traj-eps
+-converted-to.pdf figures/4_LODESTAR/Traj.eps>
+(epstopdf)             \includegraphics on input line 90.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/4_LODESTAR/Traj-eps-converted-to.pdf, id=720, 741.77126pt x 325.215pt>
+File: figures/4_LODESTAR/Traj-eps-converted-to.pdf Graphic file (type pdf)
+<use figures/4_LODESTAR/Traj-eps-converted-to.pdf>
+Package pdftex.def Info: figures/4_LODESTAR/Traj-eps-converted-to.pdf used on i
+nput line 90.
+(pdftex.def)             Requested size: 483.69687pt x 212.07205pt.
+
+Underfull \vbox (badness 1325) has occurred while \output is active []
+
+ [39 <./figures/4_LODESTAR/Traj-eps-converted-to.pdf>]
+Underfull \vbox (badness 6063) has occurred while \output is active []
+
+ [40]
+Underfull \vbox (badness 5460) has occurred while \output is active []
+
+ [41])
+(5_Ascent.tex [42]
 Chapter 5.
-) (6_bleh.tex [29
+) (6_Flyback.tex [43
 
 
-] [30
+] [44
 
 ]
 Chapter 6.
-) (7_conclusions.tex [31] [32
+) (7_Design.tex [45
+
+] [46
 
 ]
 Chapter 7.
+) (8_conclusions.tex [47] [48
+
+]
+Chapter 8.
 
 Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
@@ -2185,14 +2472,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
-) (8_references.tex
+) (9_references.tex
 Underfull \hbox (badness 10000) in paragraph at lines 30--2
 
  []
 
-[33
+[49
 
-] [34
+] [50
 
 ]
 
@@ -2200,25 +2487,22 @@ LaTeX Warning: Empty bibliography on input line 5.
 
 ) (A1_details-of-test-conditions.tex
 Appendix A.
-) [35
+) [51
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 29.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 29.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 30.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 30.
  (thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 29.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 29.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 30.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 30.
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 9B5EB2589F8F4AC1A5DF594027A9C263;4128.
 
-
-Package rerunfilecheck Warning: File `thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: 133E6B58F0081FD7D752A4575463F79F;2955
-(rerunfilecheck)             After:  4DC7DF30A04DE00B58143820F5AFD3F4;3026.
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
 
 
 Package biblatex Warning: Please (re)run Biber on the file:
@@ -2230,10 +2514,10 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38309 strings out of 493323
- 754988 string characters out of 3139058
- 1253982 words of memory out of 3000000
- 41044 multiletter control sequences out of 15000+200000
+ 38511 strings out of 493323
+ 760718 string characters out of 3139058
+ 1255469 words of memory out of 3000000
+ 41149 multiletter control sequences out of 15000+200000
  566344 words of font info for 90 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,12n,77p,10386b,1408s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2247,9 +2531,9 @@ nts/cm/cmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb>
 MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/
 type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on thesis.pdf (51 pages, 1203639 bytes).
+Output written on thesis.pdf (69 pages, 3157297 bytes).
 PDF statistics:
- 632 PDF objects out of 1000 (max. 8388607)
- 172 named destinations out of 1000 (max. 500000)
- 399 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 881 PDF objects out of 1000 (max. 8388607)
+ 220 named destinations out of 1000 (max. 500000)
+ 625 words of extra memory for PDF output out of 10000 (max. 10000000)
 
