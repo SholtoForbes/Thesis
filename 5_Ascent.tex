@@ -4,6 +4,10 @@
 \chapter{Ascent Trajectory}\label{chapter:numerical}
 
 
+- keep this DIDO and hypaero and direct shooting
+
+-explain why I moved to other GPOPS and CART3D at the end of the chapter
+
 
 
 \section{Third Stage trajectory}
@@ -12,6 +16,21 @@
 -I should maybe run a case without these limits to show the difference
 -outline necessity for differing guess (will need to cite this as a regularly used process)
 
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/5_Ascent/ThirdStageConstQ}
+\caption{}
+\label{fig:ThirdStageConstQ}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/5_Ascent/ThirdStage50kpaconstrained}
+\caption{}
+\label{fig:ThirdStage50kpaconstrained}
+\end{figure}
+
+
+
 \section{SPARTAN trajectory}
 -constant q
 -45kPa,50kPa and 55kPa limited trajectories
@@ -19,10 +38,96 @@
 
 -it might be interesting to compare different third stage rocket engines 
 
+\subsection{Constant Dynamic Pressure}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/5_Ascent/Constq}
+\caption{}
+\label{fig:Constq}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/5_Ascent/Constq-Aero}
+\caption{}
+\label{fig:Constq-Aero}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/5_Ascent/Constq-Vehicle}
+\caption{}
+\label{fig:Constq-Vehicle}
+\end{figure}
+
+\subsubsection{Optimality Validation}
+
+
+\subsection{Optimal Payload}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/5_Ascent/qlimited50kpa}
+\caption{}
+\label{fig:qlimited50kpa}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/5_Ascent/qlimited50kpa-Aero}
+\caption{}
+\label{fig:qlimited50kpa-Aero}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/5_Ascent/qlimited-Vehicle}
+\caption{}
+\label{fig:qlimited-Vehicle}
+\end{figure}
+
+\subsection{Maximum Dynamic Pressure Variation}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/5_Ascent/Multipleq}
+\caption{}
+\label{fig:Multipleq}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/5_Ascent/MultipleqAero}
+\caption{}
+\label{fig:MultipleqAero}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/5_Ascent/Multipleq-Vehicle}
+\caption{}
+\label{fig:Multipleq-Vehicle}
+\end{figure}
+
+\subsection{Additional Drag Design Study}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/5_Ascent/DragComparisonTraj}
+\caption{}
+\label{fig:DragComparisonTraj}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/5_Ascent/DragComparisonOther}
+\caption{}
+\label{fig:DragComparisonOther}
+\end{figure}
+
 \section{First Stage Trajectory}
 multiple release points
 -fixed mass, optimal velocity
 -fixed velocity, optimal mass
+
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/5_Ascent/FirstStage}
+\caption{}
+\label{fig:FirstStage}
+\end{figure}
+
 
 \section{Flyback trajectories }
 

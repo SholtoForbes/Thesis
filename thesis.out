@@ -49,11 +49,15 @@
 \BOOKMARK [0][-]{chapter.5}{Ascent Trajectory}{}% 49
 \BOOKMARK [1][-]{section.5.1}{Third Stage trajectory}{chapter.5}% 50
 \BOOKMARK [1][-]{section.5.2}{SPARTAN trajectory}{chapter.5}% 51
-\BOOKMARK [1][-]{section.5.3}{First Stage Trajectory}{chapter.5}% 52
-\BOOKMARK [1][-]{section.5.4}{Flyback trajectories }{chapter.5}% 53
-\BOOKMARK [0][-]{chapter.6}{Trajectories Involving Flyback}{}% 54
-\BOOKMARK [1][-]{section.6.1}{Flyback trajectories }{chapter.6}% 55
-\BOOKMARK [0][-]{chapter.7}{Design Study}{}% 56
-\BOOKMARK [0][-]{chapter.8}{Conclusions}{}% 57
-\BOOKMARK [1][-]{section.8.1}{Recommendations for future work}{chapter.8}% 58
-\BOOKMARK [0][-]{appendix.A}{Details of test conditions}{}% 59
+\BOOKMARK [2][-]{subsection.5.2.1}{Constant Dynamic Pressure}{section.5.2}% 52
+\BOOKMARK [2][-]{subsection.5.2.2}{Optimal Payload}{section.5.2}% 53
+\BOOKMARK [2][-]{subsection.5.2.3}{Maximum Dynamic Pressure Variation}{section.5.2}% 54
+\BOOKMARK [2][-]{subsection.5.2.4}{Additional Drag Design Study}{section.5.2}% 55
+\BOOKMARK [1][-]{section.5.3}{First Stage Trajectory}{chapter.5}% 56
+\BOOKMARK [1][-]{section.5.4}{Flyback trajectories }{chapter.5}% 57
+\BOOKMARK [0][-]{chapter.6}{Trajectories Involving Flyback}{}% 58
+\BOOKMARK [1][-]{section.6.1}{Flyback trajectories }{chapter.6}% 59
+\BOOKMARK [0][-]{chapter.7}{Design Study}{}% 60
+\BOOKMARK [0][-]{chapter.8}{Conclusions}{}% 61
+\BOOKMARK [1][-]{section.8.1}{Recommendations for future work}{chapter.8}% 62
+\BOOKMARK [0][-]{appendix.A}{Details of test conditions}{}% 63
