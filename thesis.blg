@@ -1,5 +1,11 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
-I found no \citation commands---while reading file thesis.aux
-I found no \bibdata command---while reading file thesis.aux
-I found no \bibstyle command---while reading file thesis.aux
-(There were 3 error messages)
+The style file: biblatex.bst
+Database file #1: thesis-blx.bib
+Database file #2: library.bib
+Warning--I didn't find a database entry for "Denman2016a"
+Warning--I didn't find a database entry for "Denman2016b"
+Warning--I didn't find a database entry for "Denman2014"
+Warning--I didn't find a database entry for "Denman2016c"
+Warning--I didn't find a database entry for "Denman2017"
+Biblatex version: 3.3
+(There were 5 warnings)

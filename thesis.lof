@@ -1,50 +1,60 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Specific impulse of various engine types for hydrogen and hydrocarbon fuels \parencite {Fry2004}\relax }}{2}{figure.caption.17}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces The SKYLON spaceplane \cite {Varvill2008}.\relax }}{6}{figure.caption.21}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces The airbreathing vehicle flight corridor \cite {Smart2010}.\relax }}{7}{figure.caption.22}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces The SPARTAN system \cite {Jazra2013}.\relax }}{8}{figure.caption.23}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces The C-RESTM10 propulsion database, specific impulse.\relax }}{9}{figure.caption.24}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces An example of a constant gain PID controller, controlling the SPARTAN trajectory around a 50kPa dynamic pressure design point \cite {Preller2015}.\relax }}{12}{figure.caption.26}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces \relax }}{13}{figure.caption.27}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Powell\relax }}{13}{figure.caption.27}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces \relax }}{14}{figure.caption.28}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Wilhite\relax }}{14}{figure.caption.28}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces a) Airbreathing b) Airbreathing/Rocket\relax }}{15}{figure.caption.29}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Tsuchiya\relax }}{15}{figure.caption.29}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces \relax }}{15}{figure.caption.30}
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Mehta\relax }}{15}{figure.caption.30}
-\contentsline {figure}{\numberline {2.14}{\ignorespaces \relax }}{17}{figure.caption.31}
-\contentsline {figure}{\numberline {2.15}{\ignorespaces \relax }}{17}{figure.caption.32}
-\contentsline {figure}{\numberline {2.16}{\ignorespaces An illustration of the subdivision associated with multiple shooting \cite {Michalik2009}. Dashed lines illustrate the initial trajectory guess and the solid line indicates the final trajectory once the joining conditions are met.\relax }}{21}{figure.caption.33}
-\contentsline {figure}{\numberline {2.17}{\ignorespaces Initial spacecraft formation configuration \cite {Huntington2008}.\relax }}{25}{figure.caption.34}
-\contentsline {figure}{\numberline {2.18}{\ignorespaces Hello World}}{26}{figure.caption.35}
-\contentsline {figure}{\numberline {2.19}{\ignorespaces HYPAERO analysis surface grid \cite {Jazra2013}.\relax }}{28}{figure.caption.36}
-\contentsline {figure}{\numberline {2.20}{\ignorespaces SPARTAN aerodynamics, developed using HYPAERO \cite {Preller2017}.\relax }}{29}{figure.caption.37}
-\contentsline {figure}{\numberline {2.21}{\ignorespaces The Skylon spaceplane, simulated using CART3D at Mach 12.189, $\alpha =7.512^\circ $\cite {Mehta2016}. Cell distribution produced by mesh adaption is shown.\relax }}{29}{figure.caption.38}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces The SKYLON spaceplane \cite {Varvill2008}.\relax }}{7}{figure.caption.20}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces The airbreathing vehicle flight corridor \cite {Smart2010}.\relax }}{8}{figure.caption.21}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces The SPARTAN system \cite {Jazra2013}.\relax }}{9}{figure.caption.22}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces The C-RESTM10 propulsion database, specific impulse.\relax }}{11}{figure.caption.23}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces An example of a constant gain PID controller, controlling the SPARTAN trajectory around a 50kPa dynamic pressure design point \cite {Preller2015}.\relax }}{13}{figure.caption.25}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces \relax }}{14}{figure.caption.26}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Powell\relax }}{14}{figure.caption.26}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces \relax }}{15}{figure.caption.27}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Wilhite\relax }}{15}{figure.caption.27}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces a) Airbreathing b) Airbreathing/Rocket\relax }}{16}{figure.caption.28}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Tsuchiya\relax }}{16}{figure.caption.28}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces \relax }}{16}{figure.caption.29}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Mehta\relax }}{16}{figure.caption.29}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces \relax }}{18}{figure.caption.30}
+\contentsline {figure}{\numberline {2.15}{\ignorespaces \relax }}{18}{figure.caption.31}
+\contentsline {figure}{\numberline {2.16}{\ignorespaces An illustration of the subdivision associated with multiple shooting \cite {Michalik2009}. Dashed lines illustrate the initial trajectory guess and the solid line indicates the final trajectory once the joining conditions are met.\relax }}{22}{figure.caption.32}
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Initial spacecraft formation configuration \cite {Huntington2008}.\relax }}{26}{figure.caption.33}
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Hello World}}{27}{figure.caption.34}
+\contentsline {figure}{\numberline {2.19}{\ignorespaces HYPAERO analysis surface grid \cite {Jazra2013}.\relax }}{29}{figure.caption.35}
+\contentsline {figure}{\numberline {2.20}{\ignorespaces SPARTAN aerodynamics, developed using HYPAERO \cite {Preller2017}.\relax }}{30}{figure.caption.36}
+\contentsline {figure}{\numberline {2.21}{\ignorespaces The Skylon spaceplane, simulated using CART3D at Mach 12.189, $\alpha =7.512^\circ $\cite {Mehta2016}. Cell distribution produced by mesh adaption is shown.\relax }}{30}{figure.caption.37}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces \relax }}{31}{figure.caption.39}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces \relax }}{32}{figure.caption.40}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces \relax }}{33}{figure.caption.41}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces \relax }}{33}{figure.caption.42}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces \relax }}{31}{figure.caption.38}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces \relax }}{32}{figure.caption.39}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces \relax }}{33}{figure.caption.40}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces \relax }}{33}{figure.caption.41}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces \relax }}{33}{figure.caption.42}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces \relax }}{34}{figure.caption.43}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces \relax }}{34}{figure.caption.44}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces \relax }}{34}{figure.caption.45}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces \relax }}{35}{figure.caption.46}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces \relax }}{35}{figure.caption.47}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces \relax }}{36}{figure.caption.48}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces \relax }}{37}{figure.caption.49}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces \relax }}{39}{figure.caption.43}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces \relax }}{42}{figure.caption.50}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \relax }}{42}{figure.caption.51}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces \relax }}{44}{figure.caption.52}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces \relax }}{44}{figure.caption.52}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces \relax }}{44}{figure.caption.53}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces \relax }}{44}{figure.caption.54}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces \relax }}{45}{figure.caption.55}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces \relax }}{45}{figure.caption.56}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces \relax }}{46}{figure.caption.58}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces \relax }}{46}{figure.caption.59}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces \relax }}{47}{figure.caption.60}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces \relax }}{47}{figure.caption.61}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces \relax }}{48}{figure.caption.62}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces \relax }}{48}{figure.caption.63}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces \relax }}{49}{figure.caption.64}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces \relax }}{49}{figure.caption.65}
-\contentsline {figure}{\numberline {5.14}{\ignorespaces \relax }}{50}{figure.caption.66}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces \relax }}{50}{figure.caption.61}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces \relax }}{50}{figure.caption.62}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces \relax }}{51}{figure.caption.63}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces \relax }}{52}{figure.caption.64}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces \relax }}{52}{figure.caption.65}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces \relax }}{53}{figure.caption.66}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces \relax }}{53}{figure.caption.68}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces \relax }}{54}{figure.caption.69}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces \relax }}{54}{figure.caption.70}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces \relax }}{55}{figure.caption.71}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces \relax }}{55}{figure.caption.72}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces \relax }}{56}{figure.caption.73}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces \relax }}{56}{figure.caption.74}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces \relax }}{57}{figure.caption.75}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces \relax }}{57}{figure.caption.76}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -64,6 +64,10 @@ The first stage rocket-powered vehicle is based on the first stage of the SpaceX
 		\subsection{Aerodynamics}
 		method of calculating aerodynamics for trim at required lift
 		
+		-detail hypaero vs CART3D? 
+		
+		-detail  CG positioning and shifting during flight as well as method for calculating trim
+		
 		conical shock calculation
 		
 		\begin{figure}
@@ -72,12 +76,73 @@ The first stage rocket-powered vehicle is based on the first stage of the SpaceX
 \caption{}
 \label{fig:CARTmesh}
 \end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/CARTcontour}
+\caption{}
+\label{fig:CARTcontour}
+\end{figure}
 
 
 CART3D lift/drag 
 
 Images of CART3D results for a range of Mach numbers
 
+
+
+-show side and bottom results for M=0.5,1.1,5,9
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/M1p1AoA6}
+	\caption{}
+	\label{fig:M1}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/M3AoA6}
+	\caption{}
+	\label{fig:M3AoA6}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/M7AoA6}
+	\caption{}
+	\label{fig:M7AoA6}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/M3AoA6GRID}
+\caption{}
+\label{fig:M3AoA6GRID}
+\end{figure}
+
+
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/Cl}
+\caption{}
+\label{fig:Cl}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/Cd}
+\caption{}
+\label{fig:Cd}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/LD}
+\caption{}
+\label{fig:LD}
+\end{figure}
+
+-put in plots for moments, think about best way to present trim?
+
+\subsection{Engine-On Plume Check}
+-simulate engine-on conditions to check that the plumes do not adversely affect the tail of the vehicle (justify that I can just remove engines/boattail)
 		
 		\subsection{Propulsion Modelling}
 		
@@ -136,7 +201,8 @@ The kestrel engine has been modified to have 50\% increased propellant mass flow
 		
 		
 		\subsection{Aerodynamics}
-		Third Stage missile DATCOM details
+		
+		The third stage aerodynamics have been calculated using Missile DATCOM [REFXX], a preliminary design tool for estimating the aerodynamic characteristics of missile and rocket vehicles. Missile DATCOM utilises empirical methods, along with various estimation techniques, to compute the aerodynamics of missile-like vehicles across the subsonic, supersonic and hypersonic regimes.  The code used to compute the aerodynamics of the third stage rocket is detailed in Appendix XX.  
 		
 		\subsection{Thrust Vectoring}
 		

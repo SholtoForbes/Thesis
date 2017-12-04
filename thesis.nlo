@@ -1,5 +1,1 @@
-\nomenclatureentry{r$T$@[{$T$}]\begingroup Static temperature\nomunit{\si{\kelvin}}\nomeqref {1.0}|nompageref}{1}
-\nomenclatureentry{r$s$@[{$s$}]\begingroup Entropy\nomunit{\si{\joule\per\kelvin}}\nomeqref {1.0}|nompageref}{1}
-\nomenclatureentry{r$p$@[{$p$}]\begingroup Static pressure\nomunit{\si{\pascal}}\nomeqref {1.0}|nompageref}{1}
-\nomenclatureentry{g$\phi$@[{$\phi$}]\begingroup Equivalence ratio\nomunit{-}\nomeqref {1.0}|nompageref}{1}
 \nomenclatureentry{aREST@[{REST}]\begingroup Rectangular-to-Elliptical Shape Transition\nomeqref {2.0}|nompageref}{5}
