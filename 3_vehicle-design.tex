@@ -40,23 +40,9 @@ The first stage rocket-powered vehicle is based on the first stage of the SpaceX
 		 %http://webbook.nist.gov/cgi/fluid.cgi?Action=Load&ID=C1333740&Type=SatT&Digits=5&PLow=.5&PHigh=1.5&PInc=.1&RefState=DEF&TUnit=K&PUnit=atm&DUnit=kg/m3&HUnit=kJ/mol&WUnit=m/s&VisUnit=uPa*s&STUnit=N/m%
 		
 		
-		
-		
-		
-		
-		fuel tanks are sized to include a kestrel third stage
-		
-		total tank volume = 22m$^3$
-		
-		gives a fuel mass of 1562kg
-		
-		
-		
-		Dawid has a fuel tank volume of 14.01m$^3$, mass of 132.8kg
-		
-		using 22$^2/3$  /  14.01$^2/3$  to approximate surface area ratio
-		
-		mass of new tank is 1.351*132.8 = 179.41kg
+		The fuel tanks are sized to fit around the kestrel-powered third stage, described in Section XX. 
+The fuel tanks have a total tank volume of 22.0m$^3$, containing a fuel mass of 1562kg.
+The mass of the fuel tanks is scaled from Dawid Prellers model of the SPARTAN, giving a total fuel tank mass of 179.41kg.
 		
 		
 		CG - determined using CREO
@@ -119,7 +105,7 @@ Images of CART3D results for a range of Mach numbers
 \end{figure}
 
 
-
+CHANGE THESE GRAPHICS
 \begin{figure}
 \centering
 \includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/Cl}
@@ -146,10 +132,25 @@ Images of CART3D results for a range of Mach numbers
 		
 		\subsection{Propulsion Modelling}
 		
-		The SPARTAN is powered by four underslung scramjet engines. These engines are Rectangular To Elliptical Shape Transition (REST) engines, configured to allow for a conical forebody (C-REST). The engine model used is a CRESTM10, analysed using quasi-1D simulation. The specific impulse and equivalence ratio data sets are shown in Figure XXX. The specific impulse and equivalence ratio during flight are determined by interpolating these data sets. 
-		As the equivalence ratio is equal to 1 in the majority of the Mach number and temperature regime, only the regions in which it is less than 1 are used for the interpolation. The equivalence ratio interpolation is linear, as the number of data points available for interpolation is low. 
+		\textcolor{red}{conical shock calcs}
+		
+		\textcolor{red}{C-REST thrust calculator method?}
+		
+		The SPARTAN is powered by four underslung scramjet engines. These engines are Rectangular To Elliptical Shape Transition (REST) engines, configured to allow for a conical forebody (C-REST). The engine model used is a CRESTM10 database\cite{Preller2017}, analysed using quasi-1D simulation.
+	This database provides data points of engine performance over inlet conditions within the operational range, at 50kPa dynamic pressure equivalent conditions. The specific impulse and equivalence ratio data sets are shown in Figure XXX. This data is interpolated for the given inlet conditions to calculate the exit conditions and the specific impulse produced by the engine. The specific impulse is obtained by spline interpolation. As the available dataset is non-uniform in all directions, a linear interpolation is first performed to create a structured grid at all $T_1$ and $M_1$ data point locations. A spline is then fitted to this linearly interpolated grid. The thrust, $T$, is then obtained by inclusion of the mass flow rate ($\dot{m}$) obtained via the inlet conditions, ie. $T = g_0\dot{m}I_{sp}$.
+	The C-REST engine is a fixed geometry engine, designed for operability at high Mach numbers\cite{Preller2017}. At lower Mach numbers, the addition of excessive fuel may cause the engine to choke and unstart, resulting in total loss of thrust\cite{Preller2017}. To avoid unstart, an equivalence ratio ($\phi$) of less than 1 is set at low Mach numbers. As the equivalence ratio is equal to 1 in the majority of the Mach number and temperature regime, only the regions in which it is less than 1 are used for the interpolation. The equivalence ratio interpolation is linear, as the number of data points available for interpolation is low. 
 	
 	
+	
+	\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/ISPinterp}
+\caption{}
+\label{fig:ISPinterp}
+\end{figure}
+
+	
+	\textcolor{red}{Put Plot of eq Here too}
 	\section{Third Stage Rocket}
 	
 	\begin{figure}
@@ -166,7 +167,7 @@ Images of CART3D results for a range of Mach numbers
 	
 
 	
-The kestrel engine has been modified to have 50\% increased propellant mass flow rate, giving a mass flow rate of 14.8kg/s. The nozzle of the Kestrel engine has been kept at XXXm diameter. This increase in mass flow results in a 2\% loss of efficiency from the nozzle (CITATION). The modified specific impulse of the engine is 310.7s.
+The kestrel engine has been modified to have 50\% increased propellant mass flow rate, giving a mass flow rate of 14.8kg/s. The nozzle of the Kestrel engine has been kept at XXXm diameter. This increase in mass flow results in a 2\% loss of efficiency from the nozzle\cite{RPE}, due to the thrust coefficient decreasing as shown in Figure \ref{fig:ThrustCoefficient-Arat}. The modified specific impulse of the engine is 310.7s.
 
 	
 	Area = 0.866
@@ -174,26 +175,27 @@ The kestrel engine has been modified to have 50\% increased propellant mass flow
 	Lnose = 3m, Centrebody = 4.5m, Engine = 1.5m. Note, some room has been left for the kestrel to go into the body slightly (about 0.5m)
 	
 	CG - determined using creo, assumed that structure is homogeneous for simplicity
-		
-		\subsection{Fuel Tank Sizing}
-		The fuel tanks have been sized assuming 100kg of payload-to-orbit. Note that the method of calculating final payload-to-orbit relies on using left over 'fuel mass' as effective payload mass. Realistically this would cause the fuel tanks to be resized slightly. For the purposes of this study the fuel tanks have been assumed to be of constant size for simplicity. Currently this is a reasonable assumption as the internals of the rocket are very simplified. The structural mass is held constant at 9\%. 
-		
+	
+	
+	\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{"figures/3_vehicle_design/Thrust Coefficient - Arat"}
+\caption{\cite{RPE}}
+\label{fig:ThrustCoefficient-Arat}
+\end{figure}
 
 		
-		Propellant mass: 2736.7 kg.
+		\subsection{Fuel Tank Sizing}
+		The fuel tanks have been sized assuming 100kg of payload-to-orbit. Note that the method of calculating final payload-to-orbit relies on using left over 'fuel mass' as effective payload mass. Realistically this would cause the fuel tanks to be resized slightly. For the purposes of this study the fuel tanks have been assumed to be of constant size for simplicity. Currently this is a reasonable assumption as the internals of the rocket are very simplified. The structural mass is held constant at 9\%. The third stage carries a total propellant mass of 2736.7kg. Table XX breaks shows the component break-down of the LOX oxidiser and RP1 fuel.  
 		
-		Propellant ratio is 2.56 LOX : 1 RP1
-		
-		mass LOX = 1968.0 kg.
-		$\rho_{LOX}$ = 1141kg/m3.
-		volume LOX = 1.7248m3
-		
-		
-		mass RP1 = 768.7 kg.
-		$\rho_{RP1}$ = 813kg/m3.
-		http://nvlpubs.nist.gov/nistpubs/Legacy/IR/nistir6646.pdf
-		
-		volume rp1 = 0.9455m3
+\begin{tabular}{|c|c|c|}
+	\hline  & \textbf{LOX} & \textbf{RP1} \\ 
+	\hline Ratio & 2.56 & 1 \\ 
+	\hline Density & 1141kg/m3 & 813kg/m3 \cite{Magee}\\ 
+	\hline Volume & 1.7248m3 & 0.9455m3 \\ 
+	\hline Mass & 1968.0 kg & 768.7 kg \\ 
+	\hline 
+\end{tabular} 
 		
 		
 		

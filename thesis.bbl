@@ -1182,6 +1182,32 @@
     \field{year}{1993}
   \endentry
 
+  \entry{Magee}{report}{}
+    \name{author}{1}{}{%
+      {{hash=MJW}{%
+         family={{Magee Bruno, T.J., Friend, D. G., Huber, M.L., Laesecke, A.,
+  Lemmon, E.W., McLinden, M.O., Perkins, R.A., Baranski, J., Widegren, J.A.}},
+         familyi={M\bibinitperiod},
+         given={J\bibnamedelima W},
+         giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MJW1}
+    \strng{fullhash}{MJW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{{Thermophysical Properties Measurements and Models for Rocket
+  Propellant RP-1: Phase I, NIST- IR 6644, National Institute of Standards and
+  Technology (U.S.)}}
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Magee.pdf:pdf
+    \endverb
+    \field{type}{techreport}
+    \field{year}{2006}
+  \endentry
+
   \entry{Mehta2016}{article}{}
     \name{author}{4}{}{%
       {{hash=MU}{%
@@ -1866,6 +1892,44 @@
     \field{year}{2002}
   \endentry
 
+  \entry{Ross2004}{article}{}
+    \name{author}{2}{}{%
+      {{hash=RIM}{%
+         family={Ross},
+         familyi={R\bibinitperiod},
+         given={I.\bibnamedelima Michael},
+         giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=FF}{%
+         family={Fahroo},
+         familyi={F\bibinitperiod},
+         given={Fariba},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RIMFF2}
+    \strng{fullhash}{RIMFF2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \verb{doi}
+    \verb 10.2514/1.3426
+    \endverb
+    \field{isbn}{07315090 (ISSN)}
+    \field{issn}{0731-5090}
+    \field{number}{3}
+    \field{pages}{397\bibrangedash 405}
+    \field{title}{{Pseudospectral Knotting Methods for Solving Nonsmooth
+  Optimal Control Problems}}
+    \field{volume}{27}
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/IRoss 2004.pdf:pdf
+    \endverb
+    \field{journaltitle}{Journal of Guidance, Control, and Dynamics}
+    \field{year}{2004}
+  \endentry
+
   \entry{Rutquist2010}{article}{}
     \name{author}{2}{}{%
       {{hash=RPE}{%
@@ -2231,6 +2295,36 @@
     \field{journaltitle}{Proceedings of the IEEE International Conference on
   Control Applications}
     \field{year}{2008}
+  \endentry
+
+  \entry{RPE}{book}{}
+    \name{author}{2}{}{%
+      {{hash=SG}{%
+         family={Sutton},
+         familyi={S\bibinitperiod},
+         given={George},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=BO}{%
+         family={Biblarz},
+         familyi={B\bibinitperiod},
+         given={Oscar},
+         giveni={O\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {John Wiley \& Sons}%
+    }
+    \strng{namehash}{SGBO1}
+    \strng{fullhash}{SGBO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{edition}{8th}
+    \field{pages}{67}
+    \field{title}{{Rocket propulsion Elements}}
+    \field{year}{2010}
   \endentry
 
   \entry{Tian2011}{article}{}

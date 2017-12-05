@@ -116,11 +116,11 @@ After scramjet stage burnout, the upper stage rocket must exit the atmosphere, a
 	\hline Engine & Fuel Supply & Fuel & Thrust & Isp & Mass & Diameter & Length & Thrust Vector Capability \\ 
 	\hline Aestus & Pressure-fed & MMH/NTO & 27.5kN & 320s & 110kg & 1.27m & 2.2m & 4$^\circ$ \& 4$^\circ$ by mechanical adjustment\\ 
 	\hline OMS & Pressure-fed  & MMH/NTO & 26.7kN & 316s & 118kg & 1.168m & 1.956m & 8$^\circ$\\ 
-	\hline Aestus II & Pump-fed & MMH/NTO & 46kN & 337.5s & 148 &  & 2.2m &\\ 
-	\hline RS-72 & Pump-fed & MMH/NTO & 55.4kN & 338s & 154kg &  & 2.286 &\\ 
-	\hline ATE & Pump-fed & MMH/NTO & 20kN & 345s & 57.9kg & 0.38m & 1.4m &\\ 
-	\hline AJ10-118K & Pressure-fed & A-50/NTO & 43.3kN & 320.5s & 124.5kg & 1.53m & 2.7m & \\ 
-	\hline Kestrel &  &  &  &  &  &  &   &\\ 
+	\hline Aestus II & Pump-fed & MMH/NTO & 46kN & 337.5s & 148 &  & 2.2m  & 6$^\circ$\\ 
+	\hline RS-72 & Pump-fed & MMH/NTO & 55.4kN & 338s & 154kg &  & 2.286 &  6$^\circ$\\ 
+	\hline ATE & Pump-fed & MMH/NTO & 20kN & 345s & 57.9kg & 0.38m & 1.4m &  15$^\circ$\\ 
+	\hline AJ10-118K & Pressure-fed & A-50/NTO & 43.3kN & 320.5s & 124.5kg & 1.53m & 2.7m & Fixed \\ 
+	\hline Kestrel & Pressure-fed & LOX/Kerosene & 30.7kN & 317 & 52kg & 1.1m & 1.9m  & Yes, Unknown limits\\ 
 	\hline Rl-10-3A &  &  &  &  &  &  &   &\\ 
 	\hline  &  &  &  &  &  &  &  & \\ 
 	\hline 
@@ -134,7 +134,7 @@ After scramjet stage burnout, the upper stage rocket must exit the atmosphere, a
 \section{Partially-Airbreathing Launch Vehicle Ascent Trajectories}
 
 Current simulations of the SPARTAN vehicle have been carried out with the assumption of a 50kpa dynamic pressure trajectory, a likely design point of the vehicle and scramjet engine. 
- Constant dynamic pressure trajectories have been used for airbreathing vehicle simulation due to the tradeoff between structural loading and engine performance for hypersonic vehicles \cite{Olds1998} . As dynamic pressure increases so does the structural loading on the vehicle, however scramjet thrust is directly reliant on dynamic pressure ie. an increase in dynamic pressure directly means more air into the engine inlet. A constant dynamic pressure is viewed as being an acceptable compromise between these two factors.   
+ Constant dynamic pressure trajectories have been used for airbreathing vehicle simulation due to the trade-off between structural loading and engine performance for hypersonic vehicles \cite{Olds1998} . As dynamic pressure increases so does the structural loading on the vehicle, however scramjet thrust is directly reliant on dynamic pressure ie. an increase in dynamic pressure directly means more air into the engine inlet. A constant dynamic pressure is viewed as being an acceptable compromise between these two factors.   
 This form of trajectory has so far been simulated using proportional integral derivative (PID) feedback control, directly investigated since 1998 by Olds \& Budianto \cite{Olds1998}. This is a simple and effective form of control for systems being simulated over a constant dynamic pressure path \cite{Preller2015}. This form of control utilises minimises an error function as the vehicle moves along its trajectory. This error function causes the controls of the vehicle to be modified by a feedback term which is a function of the error including proportional, integral and derivative terms. The result is a trajectory which is suitably close to the objective design point, with minimal overshoot and steady state error which can cause oscillations around the specified design value. Figure \ref{fig:PID} shows an example of a constant gain PID controller as applied to the SPARTAN vehicle being simulated to a design point of 50kPa dynamic pressure. Oscillations can be observed around the design point due to overshoot and steady state error, factors which are prevalent in PID control systems.
 
 \begin{figure}[ht]
