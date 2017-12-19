@@ -78,7 +78,8 @@ F_d = \frac{1}{2}\rho c_d v^2 A ,
 F_L = \frac{1}{2}\rho c_L v^2 A .
 \end{equation}
 
-The dynamics of all stages are calculated using an geodetic rotational reference frame, written in terms of the radius from centre of Earth $r$, longitude $\xi$, latitude $\phi$, flight path angle $\gamma$, velocity $v$ and heading angle $\zeta$. The equations of motion are \cite{Josselyn2002a}:
+The dynamics of the vehicle are calculated in six degrees of freedom, with pitch constrained to zero. 
+The dynamics of all stages are calculated using an geodetic rotational reference frame, written in terms of the angle of attack $\alpha$, bank angle $\eta$, radius from centre of Earth $r$, longitude $\xi$, latitude $\phi$, flight path angle $\gamma$, velocity $v$ and heading angle $\zeta$. The equations of motion are \cite{Josselyn2002a}:
 \begin{figure}
 \centering
 \includegraphics[width=0.7\linewidth]{figures/4_LODESTAR/global}
@@ -140,9 +141,28 @@ $F=mr\omega^2$ $v=\omega r$
 - outline the pseudospectral method, as implemented in GPOPS? ie with stage definitions
 
 \subsection{Trajectory Connection Points}
-image here detailing the trajectory and separation points, including what the constraints of each trajectory are. Maybe number these separation points, and refer to these numbers in th constraint table for each trajectory stage. 
 
-Flow chart here of how the main LODESTAR modules connect with reference to the trajectory diagram as well
+The optimisation of a large, nonlinear system is a complex and time-consuming task. The optimisation of the trajectory of the rocket-scramjet-rocket launch system considered in this study is an extremely complex problem, if simulated in its entirety. It is a potentially unmanageable task to produce an optimised trajectory by considering the entire launch trajectory as a single nonlinear programming problem. 
+To mitigate the complexity of the simulation, the trajectory of the rocket-scramjet-rocket launch system has been broken down into subsections, shown in Figure \ref{fig:Traj}. These contiguous subsections are then able to be analysed and optimised independently. The subsections of the trajectory are connected through the use of initial and end constraints on the independent optimisation problems. These constraints are described in Table \ref{tab:constraints}.
+
+\begin{table}
+
+
+\begin{tabularx}{\linewidth}{|X|X|X|}
+	\hline \textbf{Section} & Initial Constraint & End Constraint  \\ 
+	\hline $1^{st}$ Stage Vertical Ascent (\textcolor{red}{\rom{1}}-\textcolor{red}{\rom{2}}) & Constrained to start at a velocity of 0m/s. & Constrained to fly to 90m altitude and 30m/s velocity. \\ 
+	\hline $1^{st}$ Stage Pitching Ascent (\textcolor{red}{\rom{2}}-\textcolor{red}{\rom{3}}) & Constrained to start at 90m altitude and 30m/s velocity & Constrained entirely to $2^{nd}$ stage initial conditions \\ 
+	\hline $2^{nd}$ Stage Ascent (\textcolor{red}{\rom{3}}-\textcolor{red}{\rom{4}}) & Constrained to 1520m/s velocity. & Constrained to 102.0$^\circ$ heading angle, the approximate angle which allows the third stage to reach sun synchronous orbit.\\ 
+	\hline $2^{nd}$ Stage Return (\textcolor{red}{\rom{4}}-\textcolor{red}{\rom{6}}) & Constrained entirely to $2^{nd}$ stage ascent end conditions. & Constrained to conditions approaching landing at the initial launch site. \\ 
+	\hline $3^{rd}$ Stage Ascent (\textcolor{red}{\rom{4}}-\textcolor{red}{\rom{5}}) & Constrained entirely to $2^{nd}$ stage ascent end conditions.  & Flight parallel with Earth's surface.  \\ 
+	\hline $3^{rd}$ Stage Hohmann Transfer (\textcolor{red}{\rom{5}}) & Constrained entirely to $3^{rd}$ stage ascent end conditions. & Constrained to sun synchronoud orbit.  \\ 
+	\hline 
+	
+\end{tabularx} 
+
+\label{tab:constraints}
+\caption{}
+\end{table}
 
 \begin{figure}
 \centering
@@ -153,7 +173,7 @@ Flow chart here of how the main LODESTAR modules connect with reference to the t
 
 
 \subsection{First Stage Trajectory}
--detail the vehicle dynamics with a free body diagram 
+
 
 
 LODESTAR is able to optimise the first stage of a launch vehicle, for an angle of attack controlled trajectory, from launch to a pre-defined end point. 
@@ -164,7 +184,7 @@ A maximum velocity case is desired when a specific first stage vehicle design is
 A minimum mass objective is applicable when the first stage trajectory has a pre-defined end goal. This is the case with the SPARTAN vehicle where the SPARTAN scramjet accelerator is to be released at its minimum operating conditions at close to horizontal flight. 
 A variable mass for the first stage launch vehicle is desired as the mass has large effects on the dynamics of th vehicle, effecting the trajectory angle change rate, as well as the acceleration and time of flight of the vehicle.
 It is useful in the preliminary design stages to be able to optimise the mass of the first stage vehicle, allowing a less trial-and-error approach.
-Note that in the minimum mass case, the launch altitude is slightly variable, as LODESTAR starts optimisation from the pitchover time, and the pre-pitchover trajectory is calculated to match the pitchover mass. 
+In the minimum mass case, the launch altitude is slightly variable, as LODESTAR starts optimisation from a set pitchover altitude and velocity, and the pre-pitchover trajectory is calculated to match the pitchover mass. 
 
 \begin{tabular}{|c|c|}
 	\hline Input  & Contains\\ 

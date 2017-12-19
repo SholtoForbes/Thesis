@@ -37,7 +37,9 @@
     \verb https://xcor.com/launch/lynx-spacecraft/
     \endverb
     \field{year}{2017}
-    \warn{\item Invalid format of field 'urldate'}
+    \field{urlday}{30}
+    \field{urlmonth}{11}
+    \field{urlyear}{2017}
   \endentry
 
   \entry{Aftosmis2011}{inproceedings}{}
@@ -128,7 +130,9 @@
     \verb http://www.arcaspace.com/en/haas2c.htm
     \endverb
     \field{year}{2017}
-    \warn{\item Invalid format of field 'urldate'}
+    \field{urlday}{01}
+    \field{urlmonth}{12}
+    \field{urlyear}{2017}
   \endentry
 
   \entry{Bazaraa2013}{book}{}
@@ -347,6 +351,81 @@
     \field{year}{1993}
   \endentry
 
+  \entry{Chai2015}{article}{}
+    \name{author}{4}{}{%
+      {{hash=CD}{%
+         family={Chai},
+         familyi={C\bibinitperiod},
+         given={Dong},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=FYW}{%
+         family={Fang},
+         familyi={F\bibinitperiod},
+         given={Yang\bibnamedelima Wang},
+         giveni={Y\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+      {{hash=WYL}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={You\bibnamedelima Li},
+         giveni={Y\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=XSH}{%
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={Su\bibnamedelima Hui},
+         giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier Masson SAS}%
+    }
+    \keyw{Air-breathing,Boost-skipping,Hypersonic missile,Pseudospectral
+  method,Trajectory optimization}
+    \strng{namehash}{CD+1}
+    \strng{fullhash}{CDFYWWYLXSH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{abstract}{%
+    To improve the range and penetration ability, a boost-skipping trajectory
+  is proposed for the air-breathing hypersonic missile, with its scramjet
+  ignited in break cycle mode. The longitudinal plane motion equations are
+  established including the thrust term of lateral jets, and constraints on
+  path parameters and terminal conditions are modeled. Using hp-adaptive Gauss
+  pseudospectral method, the optimal control problem is transformed into a
+  nonlinear programming problem with a series of algebraic constraints. And
+  then adopting the sequential quadratic programming algorithm, the optimal
+  trajectory is obtained satisfying the constraints. Several simulations and
+  comparative cases are carried out, simulation results illustrate the proposed
+  hp-adaptive pseudospectral method is superior to conventional optimization
+  method on both computing efficiency and accuracy. The range of the missile is
+  significantly enhanced in this optimized boost-skipping trajectory, which is
+  3.81 times longer compared with the existing level flight trajectory.%
+    }
+    \verb{doi}
+    \verb 10.1016/j.ast.2015.09.004
+    \endverb
+    \field{issn}{12709638}
+    \field{pages}{506\bibrangedash 513}
+    \field{title}{{Boost-skipping trajectory optimization for air-breathing
+  hypersonic missile}}
+    \verb{url}
+    \verb http://dx.doi.org/10.1016/j.ast.2015.09.004
+    \endverb
+    \field{volume}{46}
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Chai.pdf:pdf
+    \endverb
+    \field{journaltitle}{Aerospace Science and Technology}
+    \field{annotation}{%
+    may show similar characteristics to the return flight%
+    }
+    \field{year}{2015}
+  \endentry
+
   \entry{Cook2003}{article}{}
     \name{author}{2}{}{%
       {{hash=CS}{%
@@ -424,6 +503,63 @@
     \endverb
     \field{journaltitle}{Journal of Propulsion and Power}
     \field{year}{2001}
+  \endentry
+
+  \entry{Darby2011}{article}{}
+    \name{author}{3}{}{%
+      {{hash=DCL}{%
+         family={Darby},
+         familyi={D\bibinitperiod},
+         given={Christopher\bibnamedelima L.},
+         giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=HWW}{%
+         family={Hager},
+         familyi={H\bibinitperiod},
+         given={William\bibnamedelima W.},
+         giveni={W\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+      {{hash=RAV}{%
+         family={Rao},
+         familyi={R\bibinitperiod},
+         given={Anil\bibnamedelima V.},
+         giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DCLHWWRAV1}
+    \strng{fullhash}{DCLHWWRAV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{abstract}{%
+    A variable-order adaptive pseudospectral method is presented for solving
+  optimal control problems. The method developed in this paper adjusts both the
+  mesh spacing and the degree of the polynomial on each mesh interval until a
+  specified error tolerance is satisfied. In regions of relatively high
+  curvature, convergence is achieved by refining the mesh, while in regions of
+  relatively low curvature, convergence is achieved by increasing the degree of
+  the polynomial. An efficient iterative method is then described for
+  accurately solving a general nonlinear optimal control problem. Using four
+  examples, the adaptive pseudospectral method described in this paper is shown
+  to be more efficient than either a global pseudospectral method or a
+  fixed-order method. Copyright 2011 by the American Institute of Aeronautics
+  and Astronautics, Inc.%
+    }
+    \verb{doi}
+    \verb 10.2514/1.52136
+    \endverb
+    \field{issn}{0022-4650}
+    \field{number}{3}
+    \field{pages}{433\bibrangedash 445}
+    \field{title}{{Direct Trajectory Optimization Using a Variable Low-Order
+  Adaptive Pseudospectral Method}}
+    \field{volume}{48}
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Darby2011.pdf:pdf
+    \endverb
+    \field{journaltitle}{Journal of Spacecraft and Rockets}
+    \field{year}{2011}
   \endentry
 
   \entry{Diehl2006}{article}{}
@@ -679,6 +815,95 @@
     \field{year}{2010}
   \endentry
 
+  \entry{ForbesSpyratos2018}{article}{}
+    \name{author}{4}{}{%
+      {{hash=FSSO}{%
+         family={Forbes-Spyratos},
+         familyi={F\bibinitperiod-S\bibinitperiod},
+         given={Sholto\bibnamedelima O.},
+         giveni={S\bibinitperiod\bibinitdelim O\bibinitperiod},
+      }}%
+      {{hash=KMP}{%
+         family={Kearney},
+         familyi={K\bibinitperiod},
+         given={Michael\bibnamedelima P.},
+         giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=SMK}{%
+         family={Smart},
+         familyi={S\bibinitperiod},
+         given={Michael\bibnamedelima K.},
+         giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=JIH}{%
+         family={Jahn},
+         familyi={J\bibinitperiod},
+         given={Ingo\bibnamedelima H.},
+         giveni={I\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FSSO+1}
+    \strng{fullhash}{FSSOKMPSMKJIH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{{Trajectory Design of a Rocket-Scramjet-Rocket Multi-Stage
+  Launch System}}
+    \field{volume}{TBD}
+    \field{journaltitle}{Journal of Spacecraft and Rockets - Under
+  Consideration}
+    \field{year}{2018}
+  \endentry
+
+  \entry{ForbesSpyratos2017}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=FSS}{%
+         family={Forbes-Spyratos},
+         familyi={F\bibinitperiod-S\bibinitperiod},
+         given={S.O.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=KM}{%
+         family={Kearney},
+         familyi={K\bibinitperiod},
+         given={M.P.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Smart},
+         familyi={S\bibinitperiod},
+         given={M.K.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=JI}{%
+         family={Jahn},
+         familyi={J\bibinitperiod},
+         given={I.H.},
+         giveni={I\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FSS+1}
+    \strng{fullhash}{FSSKMSMJI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{booktitle}{21st AIAA International Space Planes and Hypersonics
+  Technologies Conference, Hypersonics 2017}
+    \field{isbn}{9781624104633}
+    \field{title}{{Trajectory design of a rocket-scramjet-rocket multi-stage
+  launch system}}
+    \list{location}{1}{%
+      {Xiamen, China}%
+    }
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Documents/GitHub/JSR-Article/SholtoFor
+    \verb besSpyratos.pdf:pdf
+    \endverb
+    \field{year}{2017}
+  \endentry
+
   \entry{Gilmour}{misc}{}
     \name{author}{1}{}{%
       {{hash=GA}{%
@@ -746,6 +971,34 @@
     \field{year}{2010}
   \endentry
 
+  \entry{Hellman}{report}{}
+    \name{author}{1}{}{%
+      {{hash=HBM}{%
+         family={Hellman},
+         familyi={H\bibinitperiod},
+         given={Barry\bibnamedelima Mark},
+         giveni={B\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HBM1}
+    \strng{fullhash}{HBM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{pages}{1\bibrangedash 18}
+    \field{title}{{Comparison of Return to Launch Site Options for a Reusable
+  Booster Stage}}
+    \list{institution}{1}{%
+      {Space Sytems Design Lab, Georgia Institute of technology}%
+    }
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Hellman.pdf:pdf
+    \endverb
+    \field{type}{techreport}
+    \field{year}{2005}
+  \endentry
+
   \entry{Sky-rel-ma-}{book}{}
     \name{author}{1}{}{%
       {{hash=HM}{%
@@ -793,47 +1046,6 @@
     \field{urlday}{01}
     \field{urlmonth}{12}
     \field{urlyear}{2017}
-  \endentry
-
-  \entry{Huntington2008}{article}{}
-    \name{author}{2}{}{%
-      {{hash=HGT}{%
-         family={Huntington},
-         familyi={H\bibinitperiod},
-         given={Geoffrey\bibnamedelima T.},
-         giveni={G\bibinitperiod\bibinitdelim T\bibinitperiod},
-      }}%
-      {{hash=RAV}{%
-         family={Rao},
-         familyi={R\bibinitperiod},
-         given={Anil\bibnamedelima V.},
-         giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{HGTRAV1}
-    \strng{fullhash}{HGTRAV1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{H}
-    \field{sortinithash}{H}
-    \verb{doi}
-    \verb 10.2514/1.31083
-    \endverb
-    \field{issn}{0731-5090}
-    \field{number}{3}
-    \field{pages}{689\bibrangedash 698}
-    \field{title}{{Optimal Reconfiguration of Spacecraft Formations Using the
-  Gauss Pseudospectral Method}}
-    \verb{url}
-    \verb http://arc.aiaa.org/doi/abs/10.2514/1.31083
-    \endverb
-    \field{volume}{31}
-    \verb{file}
-    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/GHuntington2008.pdf
-    \verb :pdf
-    \endverb
-    \field{journaltitle}{Journal of Guidance, Control, and Dynamics}
-    \field{year}{2008}
   \endentry
 
   \entry{Jazra2013}{article}{}
@@ -1059,7 +1271,9 @@
     \verb{url}
     \verb https://chinaspacereport.com/launch-vehicles/kuaizhou/
     \endverb
-    \warn{\item Invalid format of field 'urldate'}
+    \field{urlday}{01}
+    \field{urlmonth}{12}
+    \field{urlyear}{2017}
   \endentry
 
   \entry{Kuhn2017}{article}{}
@@ -1137,6 +1351,80 @@
     \field{journaltitle}{21st AIAA International Space Planes and Hypersonics
   Technologies Conference}
     \field{year}{2017}
+  \endentry
+
+  \entry{Li2012}{article}{}
+    \name{author}{4}{}{%
+      {{hash=LH}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Huifeng},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=ZR}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Ran},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=LZ}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Zhaoying},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=ZR}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Rui},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Chinese Journal of Aeronautics}%
+    }
+    \keyw{angle of attack optimization,bank angle
+  control,footprint,reentry,trajectory constraints}
+    \strng{namehash}{LH+1}
+    \strng{fullhash}{LHZRLZZR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{abstract}{%
+    A formal analysis to footprint problem with effects of angle of attack
+  (AOA) is presented. First a flexible and rapid standardized method for
+  footprint generation is developed. Zero bank angle control strategy and the
+  maximum crossrange method are used to obtain virtual target set; afterward,
+  closed-loop bank angle guidance law is used to find footprint by solving
+  closest approach problem for each element in virtual target set. Then based
+  on quasi-equilibrium glide condition, the typical inequality reentry
+  trajectory constraints are converted to angle of attack lower boundary
+  constraint. Constrained by the lower boundary, an original and practical
+  angle of attack parametric method is proposed. By using parametric angle of
+  attack profile, optimization algorithm for angle of attack is designed and
+  the impact of angle of attack to footprint is discussed. Simulations with
+  different angle of attack profiles are presented to demonstrate the
+  performance of the proposed footprint solution method and validity of optimal
+  algorithm. ?? 2012 Chinese Journal of Aeronautics.%
+    }
+    \verb{doi}
+    \verb 10.1016/S1000-9361(11)60384-1
+    \endverb
+    \field{issn}{10009361}
+    \field{number}{2}
+    \field{pages}{243\bibrangedash 251}
+    \field{title}{{Footprint problem with angle of attack optimization for high
+  lifting reentry vehicle}}
+    \verb{url}
+    \verb http://dx.doi.org/10.1016/S1000-9361(11)60384-1
+    \endverb
+    \field{volume}{25}
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Huifeng.pdf:pdf
+    \endverb
+    \field{journaltitle}{Chinese Journal of Aeronautics}
+    \field{year}{2012}
   \endentry
 
   \entry{Lu1993}{article}{}
@@ -1367,6 +1655,46 @@
     \field{year}{2009}
   \endentry
 
+  \entry{Moshman2014}{article}{}
+    \name{author}{2}{}{%
+      {{hash=MND}{%
+         family={Moshman},
+         familyi={M\bibinitperiod},
+         given={Nathan\bibnamedelima D.},
+         giveni={N\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=PRJ}{%
+         family={Proulx},
+         familyi={P\bibinitperiod},
+         given={Ronald\bibnamedelima J.},
+         giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MNDPRJ1}
+    \strng{fullhash}{MNDPRJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \verb{doi}
+    \verb 10.2514/1.A32764
+    \endverb
+    \field{issn}{0022-4650}
+    \field{number}{5}
+    \field{pages}{1681\bibrangedash 1694}
+    \field{title}{{Range Improvements in Gliding Reentry Vehicles from Thrust
+  Capability}}
+    \verb{url}
+    \verb http://arc.aiaa.org/doi/10.2514/1.A32764
+    \endverb
+    \field{volume}{51}
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Moshman.pdf:pdf
+    \endverb
+    \field{journaltitle}{Journal of Spacecraft and Rockets}
+    \field{year}{2014}
+  \endentry
+
   \entry{Olds1998}{inproceedings}{}
     \name{author}{2}{}{%
       {{hash=OJ}{%
@@ -1451,7 +1779,9 @@
     \verb http://www.orbital-access.com/the-orbital-500/
     \endverb
     \field{year}{2017}
-    \warn{\item Invalid format of field 'urldate'}
+    \field{urlday}{01}
+    \field{urlmonth}{12}
+    \field{urlyear}{2017}
   \endentry
 
   \entry{DARPA2017}{misc}{}
@@ -1514,6 +1844,33 @@
     \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Paull1993.pdf:pdf
     \endverb
     \field{year}{1993}
+  \endentry
+
+  \entry{Pointwise}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=P}{%
+         family={Pointwise},
+         familyi={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{P1}
+    \strng{fullhash}{P1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{title}{www.pointwise.com}
+    \verb{url}
+    \verb http://www.pointwise.com/
+    \endverb
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/AppData/Local/Mendeley Ltd./Mendeley D
+    \verb esktop/Downloaded/6ddb3dc8f9b1c7d233f0763b54367f233c96fe44.html:html
+    \endverb
+    \field{year}{2017}
+    \field{urlday}{01}
+    \field{urlmonth}{02}
+    \field{urlyear}{2017}
   \endentry
 
   \entry{Powell1991}{article}{}
@@ -1596,8 +1953,8 @@
          giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
       }}%
     }
-    \strng{namehash}{PDSMK3}
-    \strng{fullhash}{PDSMK3}
+    \strng{namehash}{PDSMK2}
+    \strng{fullhash}{PDSMK2}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{sortinit}{P}
@@ -1638,8 +1995,8 @@
          giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
       }}%
     }
-    \strng{namehash}{PDSMK1}
-    \strng{fullhash}{PDSMK1}
+    \strng{namehash}{PDSMK2}
+    \strng{fullhash}{PDSMK2}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{sortinit}{P}
@@ -1676,8 +2033,8 @@
          giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
       }}%
     }
-    \strng{namehash}{PDSMK2}
-    \strng{fullhash}{PDSMK2}
+    \strng{namehash}{PDSMK1}
+    \strng{fullhash}{PDSMK1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{sortinit}{P}
@@ -1782,6 +2139,83 @@
     \field{year}{2010}
   \endentry
 
+  \entry{Rizvi2015}{article}{}
+    \name{author}{3}{}{%
+      {{hash=RSTUI}{%
+         family={Rizvi},
+         familyi={R\bibinitperiod},
+         given={S.\bibnamedelima Tauqeer Ul\bibnamedelima Islam},
+         giveni={S\bibinitperiod\bibinitdelim T\bibinitperiod
+  U\bibinitperiod\bibinitdelim I\bibinitperiod},
+      }}%
+      {{hash=HLS}{%
+         family={He},
+         familyi={H\bibinitperiod},
+         given={Lin\bibnamedelima Shu},
+         giveni={L\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=XDJ}{%
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={Da\bibnamedelima Jun},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier Ltd}%
+    }
+    \keyw{Cross-range,Down-range,Heat rate limit,Hypersonic
+  boost-glide,Hypersonic missile,Lifting-body,Medium range,Pseudospectral
+  method,Trajectory optimization,Waverider vehicle,Wing-body}
+    \strng{namehash}{RSTUIHLSXDJ1}
+    \strng{fullhash}{RSTUIHLSXDJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{abstract}{%
+    The objective of the paper is to compute the optimal burn-out conditions
+  and control requirements that would result in maximum down-range/cross-range
+  performance of a waverider type hypersonic boost-glide (HBG) vehicle within
+  the medium and intermediate ranges, and compare its performance with the
+  performances of wing-body and lifting-body vehicles vis-\`{a}-vis the g-load
+  and the integrated heat load experienced by vehicles for the medium-sized
+  launch vehicle under study. Trajectory optimization studies were carried out
+  by considering the heat rate and dynamic pressure constraints. The trajectory
+  optimization problem is modeled as a nonlinear, multiphase, constraint
+  optimal control problem and is solved using a hp-adaptive pseudospectral
+  method. Detail modeling aspects of mass, aerodynamics and aerothermodynamics
+  for the launch and glide vehicles have been discussed. It was found that the
+  optimal burn-out angles for waverider and wing-body configurations are
+  approximately 5° and 14.8°, respectively, for maximum down-range
+  performance under the constraint heat rate environment. The down-range and
+  cross-range performance of HBG waverider configuration is nearly 1.3 and 2
+  times that of wing-body configuration respectively. The integrated heat load
+  experienced by the HBG waverider was found to be approximately an order of
+  magnitude higher than that of a lifting-body configuration and 5 times that
+  of a wing-body configuration. The footprints and corresponding heat loads and
+  control requirements for the three types of glide vehicles are discussed for
+  the medium range launch vehicle under consideration.%
+    }
+    \verb{doi}
+    \verb 10.1016/j.dt.2015.06.003
+    \endverb
+    \field{issn}{22149147}
+    \field{number}{4}
+    \field{pages}{350\bibrangedash 361}
+    \field{title}{{Optimal trajectory and heat load analysis of different shape
+  lifting reentry vehicles for medium range application}}
+    \verb{url}
+    \verb http://dx.doi.org/10.1016/j.dt.2015.06.003
+    \endverb
+    \field{volume}{11}
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Rizvi.pdf:pdf
+    \endverb
+    \field{journaltitle}{Defence Technology}
+    \field{year}{2015}
+  \endentry
+
   \entry{Electron}{misc}{}
     \name{author}{1}{}{%
       {{hash=R}{%
@@ -1800,7 +2234,9 @@
     \verb https://www.rocketlabusa.com/electron/
     \endverb
     \field{year}{2016}
-    \warn{\item Invalid format of field 'urldate'}
+    \field{urlday}{30}
+    \field{urlmonth}{11}
+    \field{urlyear}{2017}
   \endentry
 
   \entry{Intrepid}{misc}{}
@@ -1822,7 +2258,9 @@
     \verb y/intrepid-1/
     \endverb
     \field{year}{2017}
-    \warn{\item Invalid format of field 'urldate'}
+    \field{urlday}{01}
+    \field{urlmonth}{12}
+    \field{urlyear}{2017}
   \endentry
 
   \entry{Romere1983}{article}{}
@@ -2327,6 +2765,55 @@
     \field{year}{2010}
   \endentry
 
+  \entry{Tetlow1992}{article}{}
+    \name{author}{4}{}{%
+      {{hash=TMR}{%
+         family={Tetlow},
+         familyi={T\bibinitperiod},
+         given={M\bibnamedelima R},
+         giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=SoUM}{%
+         family={Sch-ograve},
+         familyi={S\bibinitperiod-o\bibinitperiod},
+         given={U\bibnamedelima M},
+         giveni={U\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=T}{%
+         family={Ttle},
+         familyi={T\bibinitperiod},
+      }}%
+      {{hash=SGM}{%
+         family={Schneider},
+         familyi={S\bibinitperiod},
+         given={G\bibnamedelima M},
+         giveni={G\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TMR+1}
+    \strng{fullhash}{TMRSoUMTSGM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \verb{doi}
+    \verb 10.2514/2.3742
+    \endverb
+    \field{issn}{0022-4650}
+    \field{number}{5}
+    \field{pages}{752\bibrangedash 758}
+    \field{title}{{Comparison of Glideback and Flyback Boosters}}
+    \verb{url}
+    \verb http://dx.doi.org/10.2514/2.3742
+    \endverb
+    \field{volume}{38}
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Tetlow.pdf:pdf
+    \endverb
+    \field{journaltitle}{Journal of Spacecraft and Rockets}
+    \field{year}{1992}
+  \endentry
+
   \entry{Tian2011}{article}{}
     \name{author}{2}{}{%
       {{hash=TB}{%
@@ -2542,7 +3029,9 @@
     \verb https://vectorspacesystems.com/technology/
     \endverb
     \field{year}{2017}
-    \warn{\item Invalid format of field 'urldate'}
+    \field{urlday}{01}
+    \field{urlmonth}{12}
+    \field{urlyear}{2017}
   \endentry
 
   \entry{Virgin}{misc}{}
@@ -2634,61 +3123,6 @@
     \field{year}{1991}
   \endentry
 
-  \entry{Yan2007}{article}{}
-    \name{author}{3}{}{%
-      {{hash=YH}{%
-         family={Yan},
-         familyi={Y\bibinitperiod},
-         given={Hui},
-         giveni={H\bibinitperiod},
-      }}%
-      {{hash=RIM}{%
-         family={Ross},
-         familyi={R\bibinitperiod},
-         given={I.\bibnamedelima Michael},
-         giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod},
-      }}%
-      {{hash=AKT}{%
-         family={Alfriend},
-         familyi={A\bibinitperiod},
-         given={Kyle\bibnamedelima T.},
-         giveni={K\bibinitperiod\bibinitdelim T\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{YHRIMAKT1}
-    \strng{fullhash}{YHRIMAKT1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{Y}
-    \field{sortinithash}{Y}
-    \field{abstract}{%
-    In this paper a pseudospectral control law is applied to the magnetic
-  attitude control of satellites in elliptic low Earth orbits. Our results show
-  that three-axis magnetic attitude stabilization can be achieved by using a
-  pseudospectral control law via the receding horizon control in elliptic
-  orbits. The solutions from the pseudospectral control law are in excellent
-  agreement with those obtained from the Riccati equation, but the computation
-  speed improves by one order of magnitude. For the case investigated, the
-  results show the effects of the known disturbing pitch torque are minimized
-  when the satellite is in an unstable gravity gradient configuration.%
-    }
-    \verb{doi}
-    \verb 10.2514/1.26591
-    \endverb
-    \field{issn}{0731-5090}
-    \field{number}{4}
-    \field{pages}{1107\bibrangedash 1115}
-    \field{title}{{Pseudospectral Feedback Control for Three-Axis Magnetic
-  Attitude Stabilization in Elliptic Orbits}}
-    \field{volume}{30}
-    \verb{file}
-    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/IRoss2007(2).pdf:pd
-    \verb f
-    \endverb
-    \field{journaltitle}{Journal of Guidance, Control, and Dynamics}
-    \field{year}{2007}
-  \endentry
-
   \entry{Bloostar}{misc}{}
     \name{author}{1}{}{%
       {{hash=Z}{%
@@ -2707,7 +3141,82 @@
     \verb http://www.zero2infinity.space/bloostar/
     \endverb
     \field{year}{2016}
-    \warn{\item Invalid format of field 'urldate'}
+    \field{urlday}{30}
+    \field{urlmonth}{11}
+    \field{urlyear}{2017}
+  \endentry
+
+  \entry{Zhao2013}{article}{}
+    \name{author}{2}{}{%
+      {{hash=ZJ}{%
+         family={Zhao},
+         familyi={Z\bibinitperiod},
+         given={Jiang},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=ZR}{%
+         family={Zhou},
+         familyi={Z\bibinitperiod},
+         given={Rui},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{2}{%
+      {Chinese Society of Aeronautics}%
+      {Astronautics}%
+    }
+    \keyw{Hypersonic vehicles,Multi-phase Gauss pseudospectral method
+  (MGPM),No-fly zone,Reentry trajectory optimization,Waypoint}
+    \strng{namehash}{ZJZR1}
+    \strng{fullhash}{ZJZR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \field{abstract}{%
+    The reentry trajectory optimization for hypersonic vehicle (HV) is a
+  current problem of great interest. Some complex constraints, such as
+  waypoints for reconnaissance and no-fly zones for threat avoidance, are
+  inevitably involved in a global strike mission. Of the many direct methods,
+  Gauss pseudospectral method (GPM) has been demonstrated as an effective tool
+  to solve the trajectory optimization problem with typical constraints.
+  However, a series of difficulties arises for complex constraints, such as the
+  uncertainty of passage time for waypoints and the inaccuracy of approximate
+  trajectory near no-fly zones. The research herein proposes a multi-phase
+  technique based on the GPM to generate an optimal reentry trajectory for HV
+  satisfying waypoint and no-fly zone constraints. Three kinds of specific
+  breaks are introduced to divide the full trajectory into multiple phases. The
+  continuity conditions are presented to ensure a smooth connection between
+  each pair of phases. Numerical examples for reentry trajectory optimization
+  in free-space flight and with complex constraints are used to demonstrate the
+  proposed technique. Simulation results show the feasible application of
+  multi-phase technique in reentry trajectory optimization with waypoint and
+  no-fly zone constraints. ?? 2013 Production and hosting by Elsevier Ltd. on
+  behalf of CSAA and BUAA.%
+    }
+    \verb{doi}
+    \verb 10.1016/j.cja.2013.10.009
+    \endverb
+    \field{isbn}{1000-9361}
+    \field{issn}{10009361}
+    \field{number}{6}
+    \field{pages}{1544\bibrangedash 1553}
+    \field{title}{{Reentry trajectory optimization for hypersonic vehicle
+  satisfying complex constraints}}
+    \verb{url}
+    \verb http://dx.doi.org/10.1016/j.cja.2013.10.009
+    \endverb
+    \field{volume}{26}
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Zhao.pdf:pdf
+    \endverb
+    \field{journaltitle}{Chinese Journal of Aeronautics}
+    \field{annotation}{%
+    It seems like this paper has discretised the trajectory into 'waypoints'.
+  This is a requirement of the mission, but means that they are not doing the
+  whole optimisation via the PS method at once.%
+    }
+    \field{year}{2013}
   \endentry
 \endsortlist
 \endinput
