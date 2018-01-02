@@ -385,18 +385,28 @@ r[x(s_0),x(s_N)] = 0
 
 The multiple shooting method has greatly improved convergence compared to the single shooting method, removing much of the susceptibility to instabilities resulting from nonlinear effects. However, the multiple shooting approach still suffers from a relatively small radius of convergence and slow computation times. Radius of convergence is extremely important to this study as the optimal solution cannot be approximated to a great degree of accuracy, and as such multiple shooting was deemed inappropriate for this study. It was desired to find a method with a global radius of convergence to apply to the optimisation problem being considered.
 
-\subsection{The Pseudospectral Method}
+\subsection{The Pseudospectral Method}\label{sec:PS}
 
 check some of my claims about the pseudospectral method and cite GPOPS papers
 
-GPOPS USES HP-ADAPTIVE, WHICH HAS BEEN SHOWN TO BE SUPERIOR TO GAUSS
+GPOPS USES HP-ADAPTIVE GAUSS, WHICH HAS BEEN SHOWN TO improve(?) GAUSS
 
-I should show the hp-adaptive method
+I should show the hp-adaptive gaussian method
+
+Direct Trajectory Optimization and
+Costate Estimation via an Orthogonal
+Collocation Method - benson
+is quite a good paper (the first?) explaining gaussian ps method
+
+also look at gpops 1 manual
 
 The most promising method found to address the issue of radius of convergence is the direct collocation approach, which provides global radius of convergence with the additional advantage of smaller computational time \cite{Fasano2013}. Direct collocation methods discretise the control and state equations of the optimal control problem, and use these as constraints in an NLP problem similarly to the multiple shooting approach. However the state functions in collocation methods are approximated by polynomial functions over the solution space, inherently being continuous at each collocation node rather than the state functions being integrated over each timestep. The derivative of the state functions then become a constraint within the NLP, being equated to the polynomial approximation functions by the solver algorithm. The method used to discretise the derivative functions is very important to the accuracy of the collocation method, with trapezoidal, Hermite-Simpson and pseudospectral methods being popular choices.
 
 
-The most accurate form of these as tested by Fahroo \& Ross \cite{Fahroo2000} is the pseudospectral method, which uses some elements of spectral method approximation to accurately approximate derivative terms. The pseudospectral method was first introduced in 1972 by Kreiss \& Oliger \cite{Kreiss1972} as an efficient way to compute meteorology and oceanography problems. The pseudospectral method employs the use of orthogonal polynomials such as Legendre or Chebychev polynomials to approximate the state and control functions over the solution space \cite{Fahroo2000}. The Legendre polynomial method as used by Fahroo \& Ross in 1999 \cite{Fahroo1999} is a method of transforming a continuous optimisation problem into an NLP problem. These pseudospectral methods have the property that when evaluated at specific Legendre-Gauss-Lobatto points, the approximate state and control functions are exactly equal to the continuous function being approximated at that point. These create efficient and simple relationships for the evaluation of time-continuous optimisation problems \cite{Fahroo2000}.  
+The most accurate form of collocation method is the pseudospectral, or orthogonal collocation method\cite{Fahroo2000}, which uses some elements of spectral method approximation to accurately approximate derivative terms. The pseudospectral method was first introduced in 1972 by Kreiss \& Oliger \cite{Kreiss1972} as an efficient way to compute meteorology and oceanography problems. The pseudospectral method is now garnering a large amount of attention for its ability to rapidly and accurately solve a wide variety of optimal control problems. The pseudospectral method employs the use of orthogonal polynomials such as Legendre or Chebychev polynomials to approximate the state and control functions at a specific set of collocation points\cite{Fahroo2000,Huntington2007}. The pseudospectral method has the property that when evaluated at the specific collocation points, the functions approximating approximate state and control are exactly equal to the continuous function being approximated at that point. 
+
+A large usability advantage of the pseudospectral method is the ability to generate Hamiltonian and costate values easily\cite{Gong2010,Fahroo2001}. The Hamiltonian and costate values allow a solution to easily and quickly be checked to determine if some of the necessary conditions for optimality are being met. This is useful to determine initially if the optimal solution calculated by the pseudospectral solver is valid.
+
 
 The pseudospectral method discretises the optimisation problem for application of an NLP solver. The initial form of the optimisation problem is that of a generic Bolza optimisation problem, described by a continuous Bolza cost function:
 
@@ -420,23 +430,39 @@ These are constrained by boundary conditions of the system at the initial and fi
 \psi_f[\textbf{x}(\tau_f), \tau_f] = \textbf{0}
 \end{equation}
 
-These equations must be discretised in such a way that an NLP solver can produce an optimal result. The pseudospectral method discretises the cost function (Equation \ref{eq:cost}) as follows:
+Three primary pseudospectral methods are described in this chapter. All of these methods make use of Lagrange interpolating polynomials. These methods use different collocation points.
 
-\begin{eqnarray}
-J[\textbf{x}(t_k),\textbf{u}(t_k)] = \frac{\tau_f - \tau_0}{2} \sum_{k=0}^{N}L[\textbf{x}(t_k),\textbf{u}(t_k)]w_k + M(\textbf{x}t_N,\tau_f)
-\end{eqnarray}
 
-where $ w_k $ is a weighting function defined by the Legendre polynomial $L_N$:
+\subsubsection{The Legendre Pseudospectral Method}
+
+The Legendre polynomial method\cite{Fahroo1999} Legendre-Gauss-Lobato points for collocation. These create efficient and simple relationships for the evaluation of time-continuous optimisation problems \cite{Fahroo2000}. 
+The Legendre  pseudospectral method uses the Legendre polynomial, defined as $L_N$:
 
 \begin{eqnarray}
 L_N = \frac{1}{2^N N!} \frac{d^N}{dt^N}(t^2-1)^N
 \end{eqnarray}
 
+The Legendre-Gauss-Lobatto points, $t_l, l=0,...,N$, are given by:
+
+$t_0 = 0$
+
+$t_N = 1$
+
+and $t_l, l=1\leq l \leq N-1$ are the zeros of $\dot{L}_N$.
+
+The Legendre pseudospectral method transforms the problem to lie on the interval $t \in [-1,1]$, so that the cost function  (Equation \ref{eq:cost}) is discretised as follows:
+
+\begin{eqnarray}
+J[\textbf{x}(t_k),\textbf{u}(t_k)] = \frac{\tau_f - \tau_0}{2} \sum_{k=0}^{N}L[\textbf{x}(t_k),\textbf{u}(t_k)]w_k + M(\textbf{x}t_N,\tau_f)
+\end{eqnarray}
+
+where $ w_k $ is a weighting function defined as:
+
 \begin{eqnarray}
 w_k = \frac{2}{N(N+1)} \frac{1}{[L_N(t_k)]^2}
 \end{eqnarray}
 
-The state equations (Equation \ref{eq:state}, in this case the system dynamics) are described by:
+The state equations (Equation \ref{eq:state}, in this case the system dynamics) are described at each LGL point by:
 
 \begin{eqnarray}
 \frac{(\tau_f - \tau_0)}{2}\textbf{f}[\textbf{x}(t_k),\textbf{u}(t_k)] - \sum_{l=0}^{N} D_{kl} \textbf{x}(t_l) = \textbf{0}
@@ -474,15 +500,16 @@ The boundary conditions are expressed analogously to the continuous problem:
 \psi_f[\textbf{x}(t_N), \tau_f] = \textbf{0}
 \end{equation}
 
-However the pseudospectral optimisation problem must now be subject to a set of inequality constraints defining the bounds of the problem:
 
-\begin{eqnarray}
-\textbf{g}[\textbf{u}(t_k)] \leq \textbf{0}
-\end{eqnarray}
+\subsubsection{The Chebychev Pseudospectral Method}
 
-In the context of applying this to an trajectory optimisation problem the inequality constraints are the upper and lower bounds of the system dynamics, expressing the physical limits on the simulated trajectory. 
+CGl collocation points \cite{Gong2010}
+$t_k = cos(\pi (N-k)/N), k=0,...,N$
 
-A large advantage of the pseudospectral method is the ability to generate Hamiltonian and costate values easily, detailed by Gong et al. \cite{Gong2010} and Fahro \& Ross \cite{Fahroo2001}. The Hamiltonian and costate values allow a solution to easily and quickly be checked for accuracy.  The Hamiltonian equalling zero is a necessary (but not sufficient) condition for optimality, and the costates represent the marginal cost of violating the system constraints. In order to make a preliminary test for an optimal solution the Hamiltonian and costates must simply by observed to be close to zero. 
+
+
+\subsubsection{The Gauss Pseudospectral Method}
+
 
 
 \subsection{Pseudospectral Examples}
@@ -512,9 +539,28 @@ These results indicate that the pseudospectral method does not exhibit instabili
 Based on the proven track record of the pseudospectral method in simulation situations, it was decided that using the pseudospectral method for the optimisation of the rocket-scramjet-rocket system was a sound and feasible decision. It has been necessary to investigate the range of solvers available that will utilise a pseudospectral method to solve an optimisation problem with the desired capabilities and usability. 
 
 \subsection{Available Solvers}
-change this section
+\textcolor{red}{change this section to reflect more current perspective}
 
-The pseudospectral method has a number of solvers available commercially, the foremost of which are DIDO, produced by Elissar Global \cite{Ross2002}, GPOPS II \cite{Rao2010} and PROPT, a module integrated with TOMLAB \cite{Rutquist2010}. These solvers utilise nonlinear programming techniques to solve optimal control problems in discretised form and are all similar in their operation. These have been investigated for a variety of considerations with details available in Section \ref{Achievements to Date}. The most promising of the solvers investigated is DIDO. DIDO is a pseudospectral method solver that is capable of solving complex systems with multiple variables, and outputting Hamiltonian and costate values automatically. DIDO has been used in a wide variety of disciplines, including the solution for a zero-propellant manoeuvre of the ISS in 2006 \cite{Bedrossian}. DIDO has been selected for use in this study after evaluation of the available options, taking into account user friendliness as well as the program track record from publications (Table \ref{table:programs}).
+The pseudospectral method has a number of solvers available commercially, the foremost of which are DIDO, produced by Elissar Global \cite{Ross2002}, GPOPS II \cite{Rao2010} and PROPT, a module integrated with TOMLAB \cite{Rutquist2010}. These solvers utilise nonlinear programming techniques to solve optimal control problems in discretised form and are all similar in their operation. These have been investigated for a variety of considerations with details available in Section \ref{Achievements to Date}. 
+
+There are a number of existing programs that can complete optimisation problems using the pseudospectral method and as such creating an optimiser from scratch was considered to be overly time consuming and not a useful contribution. A number of programs were found, which are detailed in Table \ref{table:programs}.
+\begin{table}[!ht]
+	
+	\begin{tabular}{|c|c|c| p{7cm}|}
+		\hline \textbf{Software} & \textbf{Platform} & \textbf{Cost} & \textbf{Notes} \\ 
+		\hline DIDO & MATLAB & \$50 (Student) & Simple and automated with free trial available. Documentation readily available. Can perform required problem. Provides costates and Hamiltonian values.\\ 
+		\hline GPOPS II & MATLAB & \$100 & Free trial available, but was unable to obtain. Some documentation available. Can perform required problem.\\ 
+		\hline ROC-HJ Solver & C++ & Free & A basic solver for some specific optimal control problems. Does not perform collocation. \\ 
+		\hline PROPT (IPOPT) & MATLAB & \$500 & No free trial. Documentation available. Can perform required problem. \\ 
+		\hline Imperial College OCS & MATLAB & Free & Documentation and download unavailable \\ 
+		\hline PSOPT & C++ & Free & Open source and can perform required problem. Not updated, many modules out of date. \\ 
+		\hline 
+	\end{tabular} 
+	
+	\caption{Summary of programs capable of pseudospectral optimisation.}
+	\label{table:programs}
+\end{table}
+An effort was made to find an open source program that could complete the desired optimisation however it was found that all open source programs studied were out of date or not well supported. Out of the premium packages available GPOPS II and DIDO were considered the best options, both being proven in aerospace applications, with available free trials and affordable price points. Free trials were requested from both, however the free trial for GPOPS II was not received while the free trial for DIDO was received with good customer service provided. On reception of the DIDO trial it was found that DIDO provides the required optimiser package in an easy to use form, with sufficient documentation and examples provided to streamline the simulation process. DIDO also provides costate and Hamiltonian values, used for verifying that the optimised solution is accurate and physically sound, as well as the lowest price point and benefit of being proven in both real space applications and in-atmosphere simulations. After weighing these considerations DIDO was selected as the best program to use for the pseudospectral optimisation and simulation. 
 
 \section{Aerodynamic Analysis}
 - preliminary design requires fast and easy aerodynamics 
@@ -526,7 +572,7 @@ Simulating the trajectory of access to space vehicles requires the aerodynamics 
 Hypaero is an aerodynamic calculation tool developed for the preliminary design of hypersonic vehicles. 
 HYPAERO uses strip theory, dividing the surface of the vehicle into panels to calculate aerodynamic properties along the aircraft as illustrated in Figure \ref{fig:strip}. In strip theory two dimensional sections are created running the length of the vehicle, defining streamlines along the vehicle faces. Pressure, Mach number and skin friction are calculated along these streamlines to compute the aerodynamic coefficients of the vehicle. The Aerodynamic analysis of the SPARTAN has been performed using HYPAERO by Jazra et al. \cite{Jazra2013}. The aerodynamic coefficients of the SPARTAN vehicle have been provided for this study by Dawid Preller.
 
-\textcolor{red}{NEED TO CHANGE THIS}
+\textcolor{red}{NEED TO CHANGE THIS to clarify where I'm using this}
 
 \begin{figure}[ht]
 	\centering

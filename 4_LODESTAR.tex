@@ -2,8 +2,10 @@
 
 \cleardoublepage
 \chapter{LODESTAR}\label{chapter:experimental-results}	
+This chapter covers the optimal control program LODESTAR, which has been used to simulate the optimal trajectories of the rocket-scramjet-rocket system. The basics of optimal control and the optimal control methods used are presented, as well as the specific problem formulation used by LODESTAR.
 
 The program LODESTAR (Launch Optimisation and Data Evaluation for Scramjet Trajectory Analysis Research) has been developed to aid with the simulation and trajectory optimisation of space launch systems. LODESTAR is a MATLAB based trajectory optimiser which utilises GPOPS-2, a proprietary pseudospectral method optimisation package as well as MATLAB's inbuilt SQP solver. LODESTAR optimises a trajectory towards a user-defined objective function, such as constant dynamic pressure or maximum payload-to-orbit.  LODESTAR accurately models both rocket-powered and scramjet-powered vehicles in 5 degrees of freedom. LODESTAR contains multiple modules configured for the SPARTAN launch system, which are able to optimise trajectories for;
+
 \begin{enumerate}
  \item The ascent of the first stage rocket.
  \item The ascent of the second stage scramjet-powered accelerator.
@@ -11,11 +13,17 @@ The program LODESTAR (Launch Optimisation and Data Evaluation for Scramjet Traje
  \item The ascent of the third stage rocket.
 \end{enumerate}
 
+LODESTAR performs optimisation using four classes of variables, primals, controls, constraints and costs, which define the optimisation problem being solved. Primals are the variables which define the physical trajectory and are dependent on other primals and the control variable. The control variables are independent in the solution space and can be modified freely by the solver algorithm within the prescribed limits.  Constraints bound the primal and control variables to a well defined solution space and events confine the primal and control values to a specified value at a specific point in time. The cost variables define the target of the optimisation problem. A solution is found when the cost is minimised to a suitable accuracy. 
+
+GPOPS-II and DIDO require these variables to be precisely described. LODESTAR contains multiple modules that calculate the vehicle aerodynamic properties and run external simulations which then feed data back data to the pseudospectral solver for evaluation. Modules calculate the vehicle aerodynamic and engine output at each point along the trajectory. The vehicle model module takes this data and calculates the mass of the vehicle as well as the 6 degree of freedom motion derivatives of the vehicle along the trajectory. As this is an iterative process, the calculated motion derivatives do not match the motion approximation exactly until convergence is achieved (This is a fundamental property of the pseudospectral method, see Section \ref{sec:PS}). 
+
+-XX define the iterative process here, include evaluation of the optimisation variables, and sequential quadratic programming
+
+The cost is calculated using the primal variables. The trajectory is evaluated to produce the final cost of the trajectory. The final step of each iteration is updating the primal derivatives, which is performed by the dynamics file. The primal derivatives and cost are evaluated by DIDO to determine if the trajectory has produced a suitable result.
+
+
 \section{Optimal Control}
--background of general optimal control? 
-
-
-The pseudospectral method and direct single shooting techniques used by LODESTAR are described in detail in sections X-X. Practically, the implementation of these techniques involves the specification of the set of constraints and objectives which govern the optimisation problem. These constraints inform the optimiser of the limits of the optimisation, and perform the functions of bounding the logical search space (eg. constraining altitude to be greater than ground level) as well as constraining the vehicle within its performance limits (eg. limiting the angle of attack). These constraints also come in the form of initial or terminal constraints, which define the initial conditions of the trajectory as well as any conditions which the trajectory must meet at termination. 
+The pseudospectral method and direct single shooting techniques used by LODESTAR are described in detail in sections XX. Practically, the implementation of these techniques involves the specification of the set of constraints and objectives which govern the optimisation problem. These constraints inform the optimiser of the bounds of the optimisation, and perform the functions of limiting the search space to the physically possible (eg. constraining altitude to be greater than ground level) as well as constraining the vehicle within its performance limits (eg. limiting the angle of attack). These constraints also come in the form of initial or terminal constraints, which define the initial conditions of the trajectory as well as any conditions which the trajectory must meet at termination. 
 
 The pseudospectral method requires the specification of a set of 'primal variables'. These primal variables describe the physical dynamics of the system. In the pseudospectral method, the dynamics of the system are used as constraints on the optimal control problem;
 \begin{equation} \label{eq:state2}
@@ -24,8 +32,8 @@ The pseudospectral method requires the specification of a set of 'primal variabl
 Implementing the dynamics as constraints allows the optimiser to explore each primal variable independently, greatly increasing the robustness of the optimal control problem. However, the constraints may be violated by the optimiser in the process of searching for an optimal solution. A violation of the physical dynamics constraints means that the dynamics of the system may not hold throughout the solution process, causing potential complications for the computational model of the vehicle. Much of the design of the vehicle simulation in this study is driven by the need for smooth, continuous interpolation schemes, and viable extrapolation regions ie. even if the solution is well within the range of all input data sets, the solver must be able to explore all regions within the set bounds. 
 
 \subsection{GPOPS-2 Example - Brachistochrone Problem}
+This section describes a short example optimal control problem solved in GPOPS-II. The purpose of this example is to demonstrate the effectiveness of the pseudospectral method and GPOPS-II, and to provide a simple example case to establish the terminology of an optimal control problem.  
 
--Maybe have analytical solution here?
 
 The brachistochrone (from the Greek for 'shortest time') problem is a simple optimal control problem, which describes a ball rolling in two dimensions under gravity. The objective is to find the curve of descent which will minimise the time from point \textit{a}, where the ball is at rest, to point \textit{b}. It is assumed that gravity is constant and that there is no forces other than gravity acting on the ball. 
 
@@ -36,7 +44,8 @@ $x = A(\theta - \sin\theta) $,
 $y=A(1 - \cos\theta)$
 
 This problem has been solved using GPOPS-2. Table XX describes the set-up of the optimal control problem in GPOPS-2. 
-
+\begin{table}
+\centering
 \begin{tabular}{|c|c|}
 	\hline Primal Variables  & x Position\\& y Position\\& Velocity\\ 
 	\hline Control Variables  & Angle of Descent\\ 
@@ -46,7 +55,7 @@ This problem has been solved using GPOPS-2. Table XX describes the set-up of the
 	\hline Target Cost & Minimum Time \\ 
 	\hline 
 \end{tabular} 
-
+\end{table}
 The dynamic equations for the Brachistochrone problem are:
 
 $\dot{x} = v*cos(u)$,
@@ -58,16 +67,14 @@ $\dot{v} = -g*sin(u)$.
 The GPOPS-2 solution to the Brachistochrone problem is shown in Figure XX. This is overlaid with a plot of the optimal solution.
 
 - xx put optimal solution in here 
+\textcolor{red}{compare to analytical solution (dont include, just have plot))}
+
 
 The dynamics of the basic Brachistochrone problem are very simple. As the dynamic become more complex, it is no longer possible to obtain an analytical solution. 
 
 \section{The Trajectory Optimal Control Problems}
 
 \subsection{Dynamic Model}
-
- \textcolor{red}{images here.}
- - image detailing the coordinate system?
- - image detailing the point mass of the aircraft along with angle of attack / bank angle
 
 The drag and lift produced by each stage of the vehicle are calculated using the standard definition of the aerodynamic coefficients:
 
@@ -129,12 +136,6 @@ The dynamics of all stages are calculated using an geodetic rotational reference
 	-forward sim (for sanity checking, will need to detail deficiencies in this)
 	-forward integration
 	-logic check (ie solver is still a heuristic process, run multiple times with varying guess. Is solution logical?)
-
--Geodetic rotational coordinates 
--put coordinate system here
--Pontani has a typo is his paper remember
--add in portion of lift going towards changing heading angle due to roll. This is just simple centripetal force. 
-$F=mr\omega^2$ $v=\omega r$
 
 
 
@@ -209,7 +210,25 @@ The first stage is launched from an area in northern Queensland.
 
 \subsection{Second Stage Trajectory}
 
--detail the vehicle dynamics with a free body diagram 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/4_LODESTAR/FlowChartSmall}
+	\caption{}
+	\label{fig:FlowChartSmall}
+\end{figure}
+
+
+\begin{landscape}% Landscape page
+\begin{figure}
+\centering
+\includegraphics[width=0.9\linewidth]{"figures/4_LODESTAR/Ascent Flowchart"}
+\caption{}
+\label{fig:AscentFlowchart}
+\end{figure} 
+\end{landscape}
+
+
+
 
 LODESTAR is able to optimise the trajectory of airbreathing accelerators in the supersonic or hypersonic regime. LODESTAR is able to optimise for a range of optimisation metrics, including a maximum payload-to-orbit and constant dynamic pressure.  
 The trajectory of the SPARTAN scramjet-powered accelerator has been simulated in LODESTAR. 
@@ -276,6 +295,8 @@ The third stage is required to deliver the payload into heliosynchronous orbit. 
 	\hline 
 \end{tabular} 
 
+The third stage trajectory angle is initiated at a heading angle of 102.0$^\circ$. This is chosen as the heading angle which allows the third stage to closely match the required orbital inclination angle for sun synchronous orbit at 567km, of 97.63$^\circ$. 
+
 
 -Detail the hohmann transfer
 
@@ -285,13 +306,36 @@ The third stage is required to deliver the payload into heliosynchronous orbit. 
 
 \subsection{Validation}
 \subsubsection{Optimality Conditions}
-Hamiltonian = 0 because dH/dt = 0 (Hamiltonian does not depend explicitly on time) except at end due to final time being free.
+
+LODESTAR provides the capacity to partially validate the optimal solution provided by the pseudospectral method solver. This partial validation is used to determine whether the pseudospectral method solver has converged close to an optimal solution of the nonlinear programming problem. It is particularly useful to validate that the optimality and constraint tolerances which have been chosen are sufficiently small, or to check whether the pseudospectral method solver has approached an optimal solution in the case that the defined tolerances are not able to be reached.   
+This partial validation is achieved through the examination of some of the necessary conditions for optimality. The necessary conditions 
+
+The control Hamiltonian is investigated to verify that the first order necessary conditions hold. Due to the unconstrained end time of the trajectory problems, $H\equiv 0 $ \cite{Pucci2007}. The Hamiltonian is defined as: $H(x(t),u(t),\lambda(t),t) = \lambda^T(t)f(x(t),u(t))+L(x(t),u(t))$.
+\textcolor{red}{Make sure this is consistent with format in lit review, link}
+This is calculated using LODESTAR and the Hamiltonian condition is able to be verified. The Hamiltonian will likely not be exactly equal to zero along the trajectory. This is due to the heuristic nature of the solver, which will approach close to an optimal solution, but never reach it exactly. A sufficiently small Hamiltonian indicates that the end solution approaches an optimal solution, and may be a candidate as an optimised trajectory case. 
+
+
+
 Costates
 Complementary conditions
 
 To assess the quality of the optimisation problem solved using the pseudospectral method, 
 
--need to calculate hamiltonian using continuous function... dont know that I can do this with GPOPS. the costates are different to what I understand. might not have enough info. 
+
+The primal feasibility of the solution is checked through a comparison of the state derivatives, $\dot{x} = f(x,u)$. $\dot{x}$ is first determined through numerical differentiation of the primal variables over the solution time. Then $f(x,u)$ is determined using the dynamics of the system and vehicle model, in the same way that $f(x,u)$ is input to the pseudospectral solver. Examination of the error between the 'expected' state derivatives, and the numerical approximation of the derivatives, $\dot{x} - f(x,u)$, allows the accuracy of the system dynamics to be verified. 
+
+
+GPOPS - 
+output.result.solution.phase.pathmultipliers
+I believe these should be 0, as they are the mu associated with path constraints (and the function C<0, meaning mu=0)
+
+output.result.solution.phase.costate
+gives costates, not sure how to use these
+
+
+
+include IPOPT infeasibilities infpr and infdu
+(need to mention GPOPS-2 is based on IPOPT)
 
 \subsubsection{Forward Simulations}
 -both the control check and derivative check
