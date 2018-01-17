@@ -225,14 +225,14 @@ A maximum staging velocity at which glide-back is possible is also investigated 
 
 \begin{figure}
 \centering
-\includegraphics[width=0.7\linewidth]{../../../Dropbox/phd/flyback/Glideback}
+\includegraphics[width=0.7\linewidth]{Glideback}
 \caption{}
 \label{fig:Glideback}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[width=0.7\linewidth]{../../../Dropbox/phd/flyback/Powered}
+\includegraphics[width=0.7\linewidth]{Powered}
 \caption{}
 \label{fig:Powered}
 \end{figure}
@@ -420,10 +420,12 @@ However the pseudospectral optimisation problem must now be subject to a set of 
 
 In the context of applying this to an trajectory optimisation problem the inequality constraints are the upper and lower bounds of the system dynamics, expressing the physical limits on the simulated trajectory. 
 
-A large advantage of the pseudospectral method is the ability to generate Hamiltonian and costate values easily, detailed by Gong et al. \cite{Gong2010} and Fahro \& Ross \cite{Fahroo2001}. The Hamiltonian and costate values allow a solution to easily and quickly be checked for accuracy.  The Hamiltonian equalling zero is a necessary (but not sufficient) condition for optimality, and the costates represent the marginal cost of violating the system constraints. In order to make a preliminary test for an optimal solution the Hamiltonian and costates must simply by observed to be close to zero. 
+A large advantage of the pseudospectral method is the ability to generate Hamiltonian and costate values easily, detailed by Gong et al. \cite{Gong2010} and Fahro \& Ross \cite{Fahroo2001}. The Hamiltonian and costate values allow a solution to easily and quickly be checked for accuracy.  The Hamiltonian equalling zero is a necessary (but not sufficient) condition for optimality. In order to make a preliminary test for an optimal solution, the Hamiltonian must be observed to be close to zero along the entire trajectory. 
 
+\textcolor{red}{expand on this, and optimality conditions}
 
 \subsection{Pseudospectral Examples}
+\textcolor{red}{this section needs to be linked with the hypersonic vehicle trajectories that use the pseudosspectral method}
 
 In order to assess the applicability of the pseudospectral method to an in atmosphere trajectory optimisation problem, the range of existing solutions utilising the pseudospectral method has been investigated. 
 The pseudospectral method has been proven to be extremely effective for simulations in aerospace applications and has been proven in flight applications such as the zero propellant manoeuvre of the International Space Station in 2007, where the ISS was rotated 180 degrees without any propellant used following a pseudospectral method solution \cite{Bedrossian}. 
@@ -479,6 +481,9 @@ HYPAERO uses strip theory, dividing the surface of the vehicle into panels to ca
 
 
 \subsection{CART3D}
+\textcolor{red}{Insert an example of a validation of CART3D}
+
+
 CART3D is an inviscid CFD package, designed for use during preliminary vehicle design and analysis CITATION. CART3D requires only a surface triangulation of the vehicle being analysed. CART3D features adjoint mesh adaption, and uses cartesian 'cut-cells' which intersect the surface, allowing complex geometries to be analysed. The mesh automatically refines as the simulation progresses, reducing error. The absence of a requirement for a user generated mesh allows CART3D to be easily applied to complex launch vehicle designs, as well as allowing for simple modification of control surface deflections and flight conditions. 
 CART3D has been used extensively for aerodynamic simulations in preliminary design, including analysis of the Skylon spaceplane\cite{Mehta2016}, HIFiRE-5\cite{Kimmel2010}, and in low sonic boom shape optimisations\cite{Aftosmis2011}. 
 Mehta et al. used CART3D to analyse the Skylon spaceplane, in a study which investigated the aerodynamics of the vehicle as well as the plumes produced by the Reaction Engines LTD SABRE engines\cite{Mehta2016}. The Skylon was analysed at a range of mach numbers from 2.625 to 16.969, at altitudes from 15.326km to 75.771km. These results indicate the applicability of CART3D over a wide range of Mach numbers, which is of particular use to this study.
