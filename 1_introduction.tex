@@ -3,41 +3,45 @@
 \cleardoublepage
 \chapter{Introduction}
 
-  This is where your introduction goes. There will probably be a some references here \parencite{Denman2016a}. The previous citation was done using the \texttt{parencite} command. There is also which the \texttt{textcite} command for in text citations. For instance, \textcite{Colket2001} is a product of the \texttt{textcite} command. Figure~\ref{introduction:specific-impulse} shows you what a figure is. Remember to update the \texttt{graphicspath} in the \texttt{packages.tex} file as you write your thesis.
-
-  \begin{figure}
-    \centering
-    \includegraphics[width=0.8\textwidth]{./figures/1_introduction/specific-impulse}
-    \caption{Specific impulse of various engine types for hydrogen and hydrocarbon fuels \parencite{Fry2004}}\label{introduction:specific-impulse}
-  \end{figure}
-
-  This template uses the \texttt{nomencl} package. Have a look at the lines below this paragraph in the \texttt{1\_introduction.tex} file to see how this works. Also take a look at lines 21--49 in \texttt{packages.tex} to see the groupings available.
-  \nomenclature[r]{$T$}{Static temperature\nomunit{\si{\kelvin}}}
-  \nomenclature[r]{$s$}{Entropy\nomunit{\si{\joule\per\kelvin}}}
-  \nomenclature[r]{$p$}{Static pressure\nomunit{\si{\pascal}}}
-  \nomenclature[g]{$\phi$}{Equivalence ratio\nomunit{-}}
-
-  The remainder of your introduction should include your thesis aim and objectives and a chapter summary.
+  
+  
+  The market for small satellites is increasing rapidly, driven primarily by the rapidly decreasing size of electronic components. Many of these small satellites are currently launched with multiple small satellites piggybacking onto the launch of larger satellites, comanifesting on a single launch to share costs. This has the result
+  of smaller payloads being subject to the schedule of the other parties involved, and being delivered into
+  an orbit determined by the requirements of the main payload. This dependence on a predetermined mission plan often has detrimental effects on the small satellite mission. Small satellites are often used in missions which require specific orbital and scheduling needs. Satellites to be used as part of constellations are especially sensitive to the orbit in which they are placed. Small satellites may be able to change orbits slightly, however larger changes mean additional fuel mass and potentially additional system mass if a larger drive is necessary. 
+  The production of a cheap and flexible small satellite delivery system would enable more small satellites to be delivered into customised orbits within relatively short time periods.
+  
+  Airbreathing engines are an ideal candidate for producing the next generation of space access
+  systems, producing higher specific impulse than rockets and requiring much less fuel to be carried
+  enabling the design of a reusable second stage vehicle. A three stage design utilising a scramjet
+  second stage with rocket powered first and third stages is being developed by The University of
+  Queensland. In previous studies it has been assumed that the optimal trajectory for a scramjet powered vehicle is at its
+  maximum dynamic pressure and all other trajectory stages have conformed to this assumption. This study will aim to produce an optimal
+  trajectory plan which may be applied to any rocket-airbreathing-rocket system for delivering small
+  satellites to Earth orbit. The SPARTAN vehicle being developed by the university of Queensland will
+  be used as a model for simulations.
   
   \section{Research aims}
 
-    The overall aim of this thesis is to
-
-    \begin{quote}
-      \emph{make scramjets fly}.
-    \end{quote}
+    The overall aim of this thesis is to apply state of the art numerical optimisation techniques to the trajectory of a rocket-scramjet-rocket small satellite launch system. The purpose of this optimised trajectory is to maximise the payload-to-orbit capabilities of the launch system, thereby also maximising the cost efficiency of the system. 
+    
 
     \noindent This will be achieved through the following objectives:
 
     \begin{enumerate}
-      \item \emph{Flying them}\\
-      Flying scramjets will conclusively prove that scramjets can fly.
+    	 \item \emph{Third stage redesign.}\\
+    	 To ensure that the simulated system is representative of an up-to-date, relevant design,
+    	 the third stage of the rocket-scramjet-rocket launch system is to be redesigned to use the Kestrel pressure-fed engine. This redesign requires the third stage  shape and internal layout to be changed considerably, as well as the second stage internal layout to be reconfigured. 
 
-      \item \emph{Fly different types of scramjets}\\
-      By flying lots of scramjets we can see that they are awesome. 
+\item \emph{First stage design.}\\
+		The first stage has not yet been studied previously, and as such a representative design of a first stage rocket is created. 
+    	
+      \item \emph{Launch system simulation.}\\
+      A thorough numerical simulation of the launch system is created, which fits into the format required by the optimisation algorithm. 
 
-      \item \emph{Having 3 objectives is typically good.}\\
-      Three objectives just makes this section look complete.
+      \item \emph{Optimisation integration}\\
+
+
+
     \end{enumerate}
 
   \clearpage

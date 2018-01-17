@@ -3,12 +3,56 @@
 \cleardoublepage
 \chapter{Literature review}\label{chapter:literature-review}
 
-  This chapter examines the relevant literature associated with the different aspects of the work conducted as part of this thesis. Explain order and of literature and what was examined.
+  This chapter examines the relevant literature associated with the different aspects of the work conducted as part of this thesis. 
+  
+ 
+  Explain order of literature and what was examined.
+  
+  
   \nomenclature[a]{REST}{Rectangular-to-Elliptical Shape Transition}
   
+  
+  \section{Small Satellite Launchers}
+  
+  What point do I want to make in this section?
+  
+  The rocket-scramjet rocket launch system under development at The University of Queensland will face competition from a number of private and public organisations.  
+  These organisations are currently developing small satellite launchers to offer bespoke launches with low costs and relatively rapid turn around times. A summary of the small satellite launchers currently in active development is shown in Table \ref{tab:smallsats}. Many of these launchers are projected to be available within the next few years, and will offer cost-per-kg comparable to piggybacking on larger launches. 
+  
+  Much of the market niche fulfilled by each launch system is determined by the payload to orbit capabilities of the vehicle. Although the launchers shown are all classed as 'small satellite launchers', organisations seeking a launch service will choose a launcher which is designed to launch payloads of comparable size to their desired payoad, for maximum cost efficiency. There is a large variation in the payload-to-orbit capabilities of the small satellite launchers in development, ranging between 50kg to 500kg. The rocket-scramjet-rocket system studied in this thesis will target approximately 150kg of payload to orbit, most similar to the Vector-H\cite{Vector}, Haas2CA\cite{ARCA}, Bloostar\cite{Bloostar}  and Electron\cite{Electron}. 
+  
+   There are two distinct design method currently employed by small satellite launcher developers; cost efficiency through simplicity, and cost efficiency through reusability. The majority of the small satellite launchers in development are non-reusable. The non-reusable small satellite launch systems aim to reduce costs by creating a launch system which is as cost-efficient as possible to produce and launch. This generally entails making use of conventional, well-tested designs, combined with state of the art manufacturing techniques, such as 3-D printing. This method allows for rapid development, although it has an intrinsic cost limit due to the requirement of manufacturing a new launch system for each launch.  The reusable small satellite launchers aim to reduce costs by virtue of much, or all, of the launch system being able to be used for multiple launches. This method of cost reduction has far higher initial development costs, but has the potential for greater cost savings in the long term. It is notable that the launchers with re-use capabilities are entirely within the early stages of development, with no currently projected completion dates. 
+   
+   The majority of the small satellite launch systems have projected launch costs between \$20000-\$40000USD/kg. The outlier is the Haas2CA\cite{ARCA}, developed by ARCA, which has the ambitious target of \$10000USD/kg. The Haas2CA is a single stage to orbit launcher, powered by a hydrogen peroxide/kerosene aerospike engine. 
+
+\begin{landscape}% Landscape page
+	\begin{table}
+
+  \begin{tabularx}{\linewidth}{|X|X|X|X|X|X|X|X|}
+  	
+  	\hline  \textbf{Launcher} & \textbf{Company} & \textbf{Country} & \textbf{Payload Capacity} & \textbf{Cost/Kg} (USD) & \textbf{Availability }& \textbf{Stages \& Propulsion} & \textbf{Reusability}  \\ 
+  	\hline  Electron \cite{Electron} & RocketLab & NZ/USA & 150Kg to SSO & \$32,600 & Available & Rocket-rocket & No \\ 
+  	\hline Lynx \cite{Lynx} &  XCOR & USA & - & - & - & rocket-rocket & First stage \\ 
+  	\hline LauncherOne \cite{Virgin} & Virgin Orbit & UK & 300kg to SSO & \$33,000 & - & Aircraft-rocket-rocket & Aircraft\\ 
+  	\hline Bloostar \cite{Bloostar} & Zero2Infinity & Spain & 100kg to SSO & \$40,000 &  - & Balloon-rocket-rocket-rocket & No \\ 
+  	\hline XS-1 \cite{DARPA2017} & Boeing & USA & - & - &  - & - & First Stage\\ 
+  	\hline Eris \cite{Gilmour} & Gilmour Space Technologies & Aus/SG& 380kg to LEO  &\$23,000-38,000   & Q4 2020 && No\\ 
+  	\hline Black Arrow 2 \cite{Horizon}& Horizon   & UK & 350kg to SSO & - & 2019 & Rocket-rocket & No \\ 
+  	\hline Haas 2CA \cite{ARCA} & ARCA  & USA & 100Kg to LEO & \$10,000 & 2018 & Rocket & No \\ 
+  	\hline Intrepid-1 \cite{Intrepid} & Rocket Crafters  & USA & 376kg to SSO & \$23,936 & Q1 2019 & Rocket-rocket & No \\ 
+  	\hline KZ-1A \cite{FT1} & CASIC  &  China & 250kg to SSO  & - & - & Rocket-rocket & No \\ 
+  	\hline 500R \cite{500R} & Orbital Access  & UK & 500kg to SSO & - & - & Aircraft-Rocket & Fully Reusable \\ 
+  	\hline Vector-H \cite{Vector}& Vector Space Systems  & USA & 160kg to LEO  & \$21,875 & 2018 & rocket-rocket-(third rocket optional)& No\\ 
+  	\hline SMILE \cite{Kuhn2017} & NLR &  EU & 50kg & $<$\$50,000 & -  & -& -\\ 
+  	\hline 
+  \end{tabularx} 
+  \label{tab:smallsats}
+\end{table}
+\end{landscape}
 \section{Airbreathing Access to Space Systems}
 
-The possibility of using airbreathing stages in access to space systems has been studied in some detail, and there are multiple systems currently under preliminary development. These systems have been investigated in various forms including; single stage, dual stage and tri stage designs. Single stage designs are currently undergoing evaluation, the most prominent of which is the SKYLON Spaceplane being developed by Reaction Engines Limited \cite{Varvill2004}. The SKYLON is a spaceplane which utilises SABRE, a combined cycle airbreathing rocket propulsion system potentially reusable for 200 flights, and is being developed to deliver payloads on the order of 2800kg to heliosynchronous orbit \cite{Sky-rel-ma-}.
+
+The possibility of using airbreathing stages in access to space systems has been studied in some detail. These systems have been investigated in various forms including; single stage\cite{Powell1991,Wilhite1991,Varvill2008}, dual stage \cite{Tsuchiya2005}\cite{Mehta2001} and tri stage \cite{Preller2017} designs. The most prominent of the airbreathing access to space systems currently in development is the SKYLON Spaceplane being developed by Reaction Engines Limited \cite{Varvill2004}. The SKYLON is a spaceplane which utilises SABRE, a combined cycle airbreathing rocket propulsion system potentially reusable for 200 flights, and is being developed to deliver payloads on the order of 2800kg to heliosynchronous orbit \cite{Sky-rel-ma-}.
 
 \begin{figure}[ht]
 	\centering
@@ -25,7 +69,8 @@ Dual stage designs have been investigated in some detail using the 'spaceplane' 
 \section{Scramjets}
 
 
-A Scramjet, or supersonic combustion ramjet, is an airbreathing engine design which combusts air at supersonic speeds and is capable of high Mach number operation. Scramjets were proposed in the 1940's \cite{Curran2001} and found to be capable of positive net thrust in 1993 \cite{Paull1993} but have yet to be developed to a level which would allow for commercial application. Scramjet powered vehicles are a primary candidate for small payload delivery systems, offering much higher specific impulse than rockets over their operating range \cite{Billig1993} \cite{Cook2003}. Scramjet engines exhibit this advantage within their operating range of Mach 6-12 due to using atmospheric oxygen for reaction and only carrying fuel, increasing the payload mass that the scramjet vehicle is able to carry. Figure \ref{fig:AirbreathingCorridor} shows the operating corridor for scramjet engines, indicating the point at which transition to rocket stage would occur, the lower dynamic pressure limit on engine operation and the upper dynamic pressure limit on the aircraft structure.
+
+A Scramjet, or supersonic combustion ramjet, is an airbreathing engine design which combusts air at supersonic speeds and is capable of high Mach number operation. Scramjets were proposed in the 1940's \cite{Curran2001} and found to be capable of positive net thrust in 1993 \cite{Paull1993} but have yet to be developed to a level which would allow for commercial application. Scramjet powered vehicles are a potential candidate for small payload delivery systems, offering much higher specific impulse than rockets over their operating range \cite{Billig1993} \cite{Cook2003}. Scramjet engines exhibit this advantage within their operating range due to using atmospheric oxygen for reaction and only carrying fuel, increasing the payload mass that the scramjet vehicle is able to carry. Figure \ref{fig:AirbreathingCorridor} shows the operating corridor for scramjet engines, indicating the point at which transition to rocket stage would occur, the lower dynamic pressure limit on engine operation and the upper dynamic pressure limit on the aircraft structure.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.7\linewidth]{AirbreathingCorridor}
@@ -33,7 +78,7 @@ A Scramjet, or supersonic combustion ramjet, is an airbreathing engine design wh
 	\label{fig:AirbreathingCorridor}
 \end{figure}
 
-Smart \& Tetlow \cite{Smart2009} have found that the fuel savings achieved by using a scramjet engine within these limits, coupled with small necessary payload mass, may enable the development of a partially or fully reusable space access system utilising a scramjet powered stage in the near future. Simulations carried out  for three stage systems utilising scramjet and rocket engines for small payload delivery show possible payload mass fractions of around 1.5\% to 200km orbit with a reusable scramjet stage  \cite{Smart2009}. Scramjet powered vehicles may also offer the ability to put small payloads into orbit with greatly increased flexibility and launch window when compared to similarly sized rocket systems. This has been assessed in a study by Flaherty  \cite{Flaherty2010} comparing the United States Air Force's Reusable Military Launch System all-rocket launch vehicle RMLS102 against the Alliant Techsystems rocket/scramjet launch system ATK-RBCC. These vehicles are similarly sized and comparisons were made for payloads launched to rendezvous with satellites in randomly generated orbits. These vehicles were compared using the range of orbital trajectories that each vehicle was able to rendezvous with within one day, determined by launch vehicle range. The rocket/scramjet ATK-RBCC was found to have a large advantage in trajectory flexibility over the rocket only vehicle, in a large part due to the scramjets ability to fly fuel efficiently over long distances. This means in general that a partially scramjet powered accelerator  is able to fulfil the specific delivery needs of small payloads over a wider range of orbits within smaller time periods when compared to a fully rocket powered accelerator. This can be advantageous for time critical and orbit dependant payloads which have specific mission requirements to be met. 
+Smart \& Tetlow \cite{Smart2009} have found that the fuel savings achieved by using a scramjet engine within these limits, coupled with small necessary payload mass, may enable the development of a partially or fully reusable space access system utilising a scramjet powered stage in the near future. Simulations carried out  for three stage systems utilising scramjet and rocket engines for small payload delivery show favourable payload mass fractions with a reusable scramjet stage  \cite{Smart2009}. Scramjet powered vehicles may also offer the ability to put small payloads into orbit with greatly increased flexibility and launch window when compared to similarly sized rocket systems. This has been assessed in a study by Flaherty  \cite{Flaherty2010} comparing the United States Air Force's Reusable Military Launch System all-rocket launch vehicle RMLS102 against the Alliant Techsystems rocket/scramjet launch system ATK-RBCC. These vehicles are similarly sized and comparisons were made for payloads launched to rendezvous with satellites in randomly generated orbits. These vehicles were compared using the range of orbital trajectories that each vehicle was able to rendezvous with within one day, determined by launch vehicle range. The rocket/scramjet ATK-RBCC was found to have a large advantage in trajectory flexibility over the rocket only vehicle, in a large part due to the scramjets ability to fly fuel efficiently over long distances. This means in general that a partially scramjet powered accelerator  is able to fulfil the specific delivery needs of small payloads over a wider range of orbits within smaller time periods when compared to a fully rocket powered accelerator. This can be advantageous for time critical and orbit dependant payloads which have specific mission requirements to be met. 
 
 
 
@@ -41,20 +86,23 @@ Smart \& Tetlow \cite{Smart2009} have found that the fuel savings achieved by us
 \section{The SPARTAN}
 
 
-The University of Queensland is developing a three stage partially reusable access to space system utilising the SPARTAN scramjet powered vehicle as the reusable second stage shown in Figure \ref{fig:SPARTAN} \cite{Jazra2013}. This is the system which is considered in this study and is used as a representative system for three stage airbreathing access to space system designs. This system is designed for small payload deliveries to orbit and will utilise the ALV rocket booster to accelerate the SPARTAN stage to minimum Mach number required for stable burn, at which point separation occurs and the second stage uses a scramjet engine to accelerate to between Mach 6-10.
+
+
+
+The three stage, partially reusable, access to space system under development at The University of Queensland utilises the SPARTAN\cite{Jazra2013} scramjet powered vehicle as the reusable second stage, shown in Figure \ref{fig:SPARTAN}. This system is considered in this study as a representative model for three stage, airbreathing access to space system designs. This launch system is designed for small payload deliveries to orbit and will in the future utilise a fly-back rocket booster to accelerate the SPARTAN stage to minimum Mach number required for stable burn, at which point separation occurs and the second stage uses a scramjet engine to accelerate to between approximately Mach 5-9. The first and second stages are to be reusable, the first stage via conversion into a propeller powered drone, and the second stage through either a glide or extra scramjet powered flight to a suitable landing site. However, the first stage booster considered in this study is a simple disposable design. The ascent profile is of interest to this study, however development of the fly-back trajectory profile requires detailed first stage vehicle design which is outside of the scope of this study. 
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.7\linewidth]{SPARTAN}
-	\caption{The SPARTAN system \cite{Jazra2013}.}
+	\caption{An early design of the socket-scramjet-rocket launch system incorporating the SPARTAN \cite{Jazra2013}.}
 	\label{fig:SPARTAN}
 \end{figure}
 
-The third stage will be a disposable rocket stage, which will then deliver the payload to orbit via a pull up manoeuvre to leave the atmosphere, followed by a Hohmann transfer. The first and second stages will be reusable, the first stage via conversion into a propeller powered drone, and the second stage through either a glide or extra scramjet powered flight to a suitable landing site. 
+The third stage will be a disposable rocket stage, which will then deliver the payload to orbit, exiting the atmosphere and performing a Hohmann transfer. 
 
-This system has been designed to initial design stages, with estimates of  payload mass fraction indicating that 1.26\% PMF is possible when delivering a 257.4kg payload to low earth orbit \cite{Preller2015a}. This compares well with existing space systems of similar size, with the advantage of being designed for reusability. The second stage vehicle has been designed to a detailed level, and optimised for payload delivery to heliosynchronous orbit. The first stage ALV is being designed by Heliaq engineering and is in initial testing stages.
+This system is in the preliminary design stage, with estimates of  payload mass fraction indicating that 1.26\% PMF is possible when delivering a 257.4kg payload to low earth orbit \cite{Preller2015a}. This compares well with existing space systems of similar size, with the advantage of being designed for reusability. The second stage vehicle has been designed to a detailed level, and optimised for payload delivery to heliosynchronous orbit.
 
-The SPARTAN has been studied in some detail, simulating over a constant dynamic pressure trajectory and varying the aerodynamic surface properties of the vehicle. 
+The SPARTAN has been studied in some detail, simulated over a constant dynamic pressure trajectory with variation in the aerodynamic surface properties of the vehicle. 
 
 \subsection{Scramjet Engine Model}
 To deliver a payload to orbit, the SPARTAN uses four Rectangular-to-Elliptical Shape Transition (REST) scramjet engines, with inlets configured to allow installation on a conical forebody. This study uses engines configured to fly between Mach 5 and 10, this type of engine is known as a C-RESTM10 engine\cite{Preller2017}. The REST model has been studied experimentally for flight at off design conditions by Smart \& Ruf \cite{Smart2006}. The REST engine has been used as it has been proven to operate successfully at off-design conditions, an extremely important property for this study as the scramjet stage experiences a range of Mach number flight conditions, and significant variation in dynamic pressure.  
@@ -69,17 +117,11 @@ A propulsion database of the C-RESTM10 has been provided for this study by Prof.
 
 
 
-\section{First Stage Rocket Boosters}
+\section{First Stage Rocket Booster}
 
 The SPARTAN scramjet vehicle must be accelerated to its minimum operating speed by a first stage rocket booster. This booster must be capable of efficient operation from launch at sea level until staging. It is envisioned that the SPARTAN system will eventually use a reusable flyback booster\cite{Preller2017}. However the flyback of the first stage is outside the scope of this study. Instead, a model of an existing first stage booster will be used, for which the Falcon-1e was chosen.
 
-The SPARTAN mission requires a relatively small, modern booster. 
-
--why did we choose the Falcon
--compare to other, similar engines HM-60 and LE-7 are closest (they are still double the thrust.. so maybe cant compare these too well)
-
-The SpaceX Falcon-1e launch system was a proposed small satellite launch system which would have entered use after 2010\cite{Vehicle2008}, but was discontinued and superseded by the Falcon-9 project. The Falcon-1e was designed to launch payloads between 600-900kg to low Earth orbit, with flexible orbit altitude and inclination.  
-The first stage of the Falcon-1e is powered by a Merlin 1C LOX/Kerosene turbopump engine.
+The SpaceX Falcon-1e launch system was a proposed small satellite launch system which would have entered use after 2010\cite{Vehicle2008}, but was discontinued and superseded by the Falcon-9 project. The Falcon-1e was designed to launch payloads between 600-900kg to low Earth orbit, with flexible orbit altitude and inclination. The Falcon-1e was to be the next generation of the Falcon-1\cite{Vehicle2008}, a launch tested, modern launch system. The Falcon-1e was chosen for its appropriate size and the proven flight effectiveness of the Falcon-1. The first stage of the Falcon-1e is powered by a Merlin 1C LOX/Kerosene turbopump engine. The first stage rocket is designed to be a Falcon-1e first stage scaled lengthwise to 50\% of its original length. 
 
 
 \section{Exoatmospheric Rocket Engines}
@@ -87,20 +129,21 @@ After scramjet stage burnout, the upper stage rocket must exit the atmosphere, a
 
 \begin{landscape}% Landscape page
 \begin{table}
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+
+\begin{tabularx}{\linewidth}{|X|X|X|X|X|X|X|X|X|}
 
 	\hline Engine & Fuel Supply & Fuel & Thrust & Isp & Mass & Diameter & Length & Thrust Vector Capability \\ 
 	\hline Aestus & Pressure-fed & MMH/NTO & 27.5kN & 320s & 110kg & 1.27m & 2.2m & 4$^\circ$ \& 4$^\circ$ by mechanical adjustment\\ 
 	\hline OMS & Pressure-fed  & MMH/NTO & 26.7kN & 316s & 118kg & 1.168m & 1.956m & 8$^\circ$\\ 
-	\hline Aestus II & Pump-fed & MMH/NTO & 46kN & 337.5s & 148 &  & 2.2m &\\ 
-	\hline RS-72 & Pump-fed & MMH/NTO & 55.4kN & 338s & 154kg &  & 2.286 &\\ 
-	\hline ATE & Pump-fed & MMH/NTO & 20kN & 345s & 57.9kg & 0.38m & 1.4m &\\ 
-	\hline AJ10-118K & Pressure-fed & A-50/NTO & 43.3kN & 320.5s & 124.5kg & 1.53m & 2.7m & \\ 
-	\hline Kestrel &  &  &  &  &  &  &   &\\ 
+	\hline Aestus II & Pump-fed & MMH/NTO & 46kN & 337.5s & 148 &  & 2.2m  & 6$^\circ$\\ 
+	\hline RS-72 & Pump-fed & MMH/NTO & 55.4kN & 338s & 154kg &  & 2.286 &  6$^\circ$\\ 
+	\hline ATE & Pump-fed & MMH/NTO & 20kN & 345s & 57.9kg & 0.38m & 1.4m &  15$^\circ$\\ 
+	\hline AJ10-118K & Pressure-fed & A-50/NTO & 43.3kN & 320.5s & 124.5kg & 1.53m & 2.7m & Fixed \\ 
+	\hline Kestrel & Pressure-fed & LOX/Kerosene & 30.7kN & 317 & 52kg & 1.1m & 1.9m  & Yes, Unknown limits\\ 
 	\hline Rl-10-3A &  &  &  &  &  &  &   &\\ 
 	\hline  &  &  &  &  &  &  &  & \\ 
 	\hline 
-\end{tabular} 
+\end{tabularx} 
 \caption {Comparison of upper stage rocket engines.} 
 \label{tab:Engine}
 \end{table}
@@ -110,7 +153,7 @@ After scramjet stage burnout, the upper stage rocket must exit the atmosphere, a
 \section{Partially-Airbreathing Launch Vehicle Ascent Trajectories}
 
 Current simulations of the SPARTAN vehicle have been carried out with the assumption of a 50kpa dynamic pressure trajectory, a likely design point of the vehicle and scramjet engine. 
- Constant dynamic pressure trajectories have been used for airbreathing vehicle simulation due to the tradeoff between structural loading and engine performance for hypersonic vehicles \cite{Olds1998} . As dynamic pressure increases so does the structural loading on the vehicle, however scramjet thrust is directly reliant on dynamic pressure ie. an increase in dynamic pressure directly means more air into the engine inlet. A constant dynamic pressure is viewed as being an acceptable compromise between these two factors.   
+ Constant dynamic pressure trajectories have been used for airbreathing vehicle simulation due to the trade-off between structural loading and engine performance for hypersonic vehicles \cite{Olds1998} . As dynamic pressure increases so does the structural loading on the vehicle, however scramjet thrust is directly reliant on dynamic pressure ie. an increase in dynamic pressure directly means more air into the engine inlet. A constant dynamic pressure is viewed as being an acceptable compromise between these two factors.   
 This form of trajectory has so far been simulated using proportional integral derivative (PID) feedback control, directly investigated since 1998 by Olds \& Budianto \cite{Olds1998}. This is a simple and effective form of control for systems being simulated over a constant dynamic pressure path \cite{Preller2015}. This form of control utilises minimises an error function as the vehicle moves along its trajectory. This error function causes the controls of the vehicle to be modified by a feedback term which is a function of the error including proportional, integral and derivative terms. The result is a trajectory which is suitably close to the objective design point, with minimal overshoot and steady state error which can cause oscillations around the specified design value. Figure \ref{fig:PID} shows an example of a constant gain PID controller as applied to the SPARTAN vehicle being simulated to a design point of 50kPa dynamic pressure. Oscillations can be observed around the design point due to overshoot and steady state error, factors which are prevalent in PID control systems.
 
 \begin{figure}[ht]
@@ -132,12 +175,12 @@ Optimal trajectories have previously been developed for launch systems integrati
 		\centering
 		\includegraphics[width=\linewidth]{"figures/2_literature-review/Powell Vehicle"}
 		\caption{}
-		\label{fig:WilhiteBoosterVehicle}
+		\label{fig:PowellVehicle}
 	\end{minipage}	
 	\begin{minipage}[b]{0.6\textwidth}
 		\includegraphics[width=\linewidth]{"figures/2_literature-review/Powell Trajectory"}
 		\caption{Powell}
-		\label{fig:WilHiteBoosterTrajectory}
+		\label{fig:PowellTrajectory}
 	\end{minipage}
 	
 \end{figure}
@@ -160,12 +203,12 @@ There has been a number of studies which have identified a pull-up manoeuvre as 
 	\centering
 	\includegraphics[width=\linewidth]{"figures/2_literature-review/Wilhite Booster Vehicle"}
 	\caption{}
-	\label{fig:WilhiteBoosterVehicle}
+	\label{fig:WilhiteVehicle}
 \end{minipage}	
 \begin{minipage}[b]{0.45\textwidth}
 \includegraphics[width=\linewidth]{"figures/2_literature-review/WilHite Booster Trajectory"}
 \caption{Wilhite}
-\label{fig:WilHiteBoosterTrajectory}
+\label{fig:WilHiteTrajectory}
 \end{minipage}
 \end{figure}
 \begin{figure}
@@ -174,16 +217,15 @@ There has been a number of studies which have identified a pull-up manoeuvre as 
 		\centering
 		\includegraphics[width=\linewidth]{"figures/2_literature-review/Tsuchiya Vehicles"}
 		\caption{a) Airbreathing b) Airbreathing/Rocket}
-		\label{fig:WilhiteBoosterVehicle}
+		\label{fig:TsuchiyaVehicle}
 	\end{minipage}	
 	\begin{minipage}[b]{0.45\textwidth}
 		\includegraphics[width=\linewidth]{"figures/2_literature-review/Tsuchiya"}
-		\caption{Tsuchiya}
-		\label{fig:WilHiteBoosterTrajectory}
+		\caption{The trajectory of the launch system developed by Tsuchiya and Mori \cite{Tsuchiya2005}}
+		\label{fig:TsuchiyaTrajectory}
 	\end{minipage}
 \end{figure}
 
--talk about the vehicles being analysed (mention TSTO)
 
 In the studies by Tsuchiya et al.\cite{Tsuchiya2005} and Wilhite et al.\cite{Wilhite1991}, decreased dynamic pressure is necessary for the successful operation of the orbital rocket stages, of the systems under investigation. In these studies the airbreathing stages pull-up to the maximum allowable dynamic pressure for the rocket-powered orbital stages. When the orbital stages are able to operate, stage separation occurs. These pull-up manoeuvres demonstrate the advantages of a pull-up for the operation of the orbital stages, allowing the aerodynamic and thermal loading on the vehicle to be reduced. However these pull-up manoeuvres are not performed as part of optimal trajectories, instead they are designed to ensure that the performance constraints of the systems are met. 
 
@@ -193,12 +235,12 @@ In the studies by Tsuchiya et al.\cite{Tsuchiya2005} and Wilhite et al.\cite{Wil
 		\centering
 		\includegraphics[width=\linewidth]{"figures/2_literature-review/Mehta Vehicle"}
 		\caption{}
-		\label{fig:WilhiteBoosterVehicle}
+		\label{fig:MehtaVehicle}
 	\end{minipage}	
 	\begin{minipage}[b]{0.6\textwidth}
 		\includegraphics[width=\linewidth]{"figures/2_literature-review/Mehta Trajectory"}
-		\caption{Mehta}
-		\label{fig:WilHiteBoosterTrajectory}
+		\caption{The trajectory of the launch system developed by Mehta and Bowles \cite{Mehta2001}.}
+		\label{fig:MehtaTrajectory}
 	\end{minipage}
 	
 \end{figure}
@@ -208,43 +250,66 @@ Mehta \& Bowles \cite{Mehta2001} prescribe a 2g pull-up at flight conditions of 
 
 \section{Hypersonic Vehicle Flyback Trajectories}
 
-  \textcolor{red}{THIS SECTION IS VERY ROUGH!}
-  
-full flyback is important to us, but i should look at some partial flyback cases too (look at federicos paper)
+Past studies of the SPARTAN vehicle have assumed that a fly-back to launch site is possible after third stage separation\cite{Preller2017}. However, this fly-back has not yet been simulated. A simulation of the fly-back of the SPARTAN is necessary in order to assess the viability of the SPARTAN concept.
+The fly-back of the SPARTAN is a crucial component to the viability of the rocket-scramjet-rocket launch system. The SPARTAN must return to the initial launch site to enable refurbishment to begin immediately, and so that there is no significant transportation of the SPARTAN required between launches. 
+Due to the second-third stage staging velocity, it is complicated for the SPARTAN to cover the necessary fly-back distance. 
+To maximise fuel efficiency, it is desirable for the SPARTAN to perform a minimum-fuel fly-back to the initial launch site, with the best-case scenario being for the fly-back to use no fuel at all.
 
+There are three main methods that have been studied for potential hypersonic vehicle return; glide-back, cruise-back and boost-back. Glide-back involves the hypersonic vehicle returning to base and landing entirely using its aerodynamics. This requires sufficient lift to sustain the hypersonic vehicle over the entire return range, as well as the controllability to land the hypersonic vehicle in level flight. 
+For a hypersonic trajectory a fully glide-back return flight is most likely unobtainable. This is due to the large downrange distance flown, and the large initial velocity at the beginning of the fly-back trajectory, when the vehicle is oriented away from the landing site. Multiple studies have investigated the maximum staging velocity allowable for the glide-back flight of a booster. 
+In these studies, the maximum separation velocity for glide-back to be feasible has been found to be between Mach 3-4 at 30km-120km downrange distance, with higher initial velocities or longer downrange distances requiring fly-back under power\cite{Hellman,Tetlow1992}.
 
-mention skipping vs constant descent at max L/D (need to look at why this is)
+Cruise-back involves the inclusion of subsonic engines, which are used to power the fly-back of the hypersonic vehicle until landing similar to a conventional aircraft. These engines may be included solely for the fly-back\cite{Hellman}, or used in the acceleration phase for low velocity acceleration\cite{Mehta2001,Tetlow1992,Wilhite1991}. The addition of subsonic engines powering a constant velocity cruise-back phase allows the accelerator to return to base with a similar trajectory to that of traditional aircraft, allowing the velocity and altitude of the accelerator to be precisely controlled. However, the addition of subsonic engines necessary for cruise-back increases the mass of the vehicle significantly, leading to decreased mass efficiency and increased design complexity\cite{Hellman}. 
 
+A preferable mode of powered fly-back is to use the existing hypersonic airbreathing engines during the return trajectory in a boost-back trajectory. Using the existing airbreathing engines allows for range to be added to the return trajectory, without the inclusion of additional engines. The hypersonic airbreathing engines can be operated at appropriate times during the fly-back, when they will be most impactful on the return trajectory range. However, the hypersonic airbreathing engines may only be used within their operating region, and vary in thrust and efficiency dependent on flight conditions. Hypersonic airbreathing engines have maximum efficiency at low Mach numbers\cite{Preller2017}, with the thrust produced depending on the dynamic pressure and inlet conditions, which vary with the trajectory path and angle of attack of the vehicle. This added complexity requires the use of trajectory optimisation methods to find the most efficient flight path for return to the launch site, and to ensure that the return of the vehicle under its own power is viable. 
 
-Due to the second-third stage staging velocity, the SPARTAN may be incapable of turning fast enough to cover the necessary fly-back distance. Multiple studies have investigated the maximum staging velocity allowable for the glide-back flight of a booster. 
-Tetlow et al. CITATION compare powered cruise-back to glide-back flight for the return of the first stage booster of a rocket powered two-stage launch vehicle. The powered flyback vehicle uses airbreathing engines to cruise back to the launch site at relatively low speeds. The powered flyback and the glide-back cases are analysed separately to determine the difference in the optimal staging velocities. Figure 2 shows the optimised deceleration phase for the cruise-back vehicle, terminating at cruise-back conditions. This trajectory shows three distinct ‘skips’, with the minimum trajectory angle progressively decreasing between each. The powered cruise-back vehicle is able to stage at 3000m/s due to the ability to cover a large distance during cruise-back. 
+\subsection{Examples of Optimised Fly-Back Trajectories}
+
+Tetlow et al. \cite{Tetlow1992} compare powered cruise-back to glide-back flight for the return of the first stage booster of a rocket powered two-stage launch vehicle. The powered flyback vehicle uses airbreathing engines to cruise back to the launch site at relatively low speeds. The powered flyback and the glide-back cases are analysed separately to determine the difference in the optimal staging velocities. Figure 2 shows the optimised deceleration phase for the cruise-back vehicle, terminating at cruise-back conditions. This trajectory shows three distinct ‘skips’, with the minimum trajectory angle progressively decreasing between each. Tetlow et al. conclude that the 'skips' are due to the rate of density increase being greater than the deceleration rate 'causing increased lift and levelling out of the altitude profile'\cite{Tetlow1992}. This trajectory was optimised for minimum cruise-back fuel mass, indicating that the 'skips' are the optimal trajectory shape to maximise range in high initial velocity fly-back. The powered cruise-back vehicle is able to stage at 3000m/s due to the ability to cover a large distance during cruise-back. 
 The glide-back vehicle was optimised to find the maximum possible staging velocity at which a turn and glide-back is still possible. This was found to be at 1200m/. Figure 3 shows the corresponding optimal deceleration trajectory, terminating at sustainable glide conditions. This trajectory again shows multiple ‘skips’. The low allowable separation velocity of 1200m/s for the glide-back booster potentially suggests that the SPARTAN will require powered flyback. 
 Tetlow et al. assume an admittedly optimistic L/D of 7 at Mach 0.9, and maximum angle of attack of 40 deg. However, the mass of the vehicle in this study is up to 1182 tons. A lower L/D may be acceptable for a lighter vehicle.  
 
-A maximum staging velocity at which glide-back is possible is also investigated by Hellman CITATION. Hellman uses a suboptimal, scheduled trajectory simulation to investigate the flyback capabilities of a reusable rocket booster. Hellman finds that Mach 3 is the upper staging limit for a glide-back booster. This agrees with Tetlow et al. that high staging velocities are not possible for glide-back boosters, suggesting that the SPARTAN will require powered return flight.
+A maximum staging velocity at which glide-back is possible is also investigated by Hellman \cite{Hellman}. Hellman uses a suboptimal, scheduled trajectory simulation to investigate the flyback capabilities of a reusable rocket booster. Hellman finds that Mach 3 is the upper staging limit for a glide-back booster. This agrees with Tetlow et al. that high staging velocities are not possible for glide-back boosters, suggesting that the SPARTAN will require powered return flight.
 
 \begin{figure}
 \centering
+<<<<<<< HEAD
 \includegraphics[width=0.7\linewidth]{Glideback}
 \caption{}
+=======
+\includegraphics[width=0.7\linewidth]{../../../Dropbox/phd/flyback/Glideback}
+\caption{The flight path of a glide-back booster, developed by Tetlow et al. CITEXX.}
+>>>>>>> c098a765a9f4e59c8dbdc110fd22c1fd561c0c5a
 \label{fig:Glideback}
 \end{figure}
 
 \begin{figure}
 \centering
+<<<<<<< HEAD
 \includegraphics[width=0.7\linewidth]{Powered}
 \caption{}
+=======
+\includegraphics[width=0.7\linewidth]{../../../Dropbox/phd/flyback/Powered}
+\caption{The flight path of a powered fly-back booster, developed by Tetlow et al. CITEXX.}
+>>>>>>> c098a765a9f4e59c8dbdc110fd22c1fd561c0c5a
 \label{fig:Powered}
 \end{figure}
 
 
+The possibility of an airbreathing vehicle reigniting high speed airbreathing engines for short periods has been investigated by Tsuchiya and Mori \cite{Tsuchiya2005}.  Tsuchiya and Mori investigate two conceptual launch vehicles; a vehicle powered solely by airbreathing propulsion returning after separation of an orbital stage at Mach 5.1, and an airbreathing/rocket vehicle returning after a separation at Mach 6.8\cite{Tsuchiya2005}.  For the purposes of fly-back these vehicles are very similar, both using the high speed airbreathing engines during return flight. The optimal launch and return trajectories for these vehicles are shown in Figure \ref{fig:TsuchiyaTrajectory}. The separation for the airbreathing vehicle occurs at Mach 5.1, and the separation for the airbreathing/rocket vehicle at Mach 6.8. Both optimised return trajectories follow a relatively similar path. A long ‘skip’ is performed, with both vehicles hitting the dynamic pressure limit. Both vehicles ignite the airbreathing engines at around Mach 3.5 for “several tens of seconds” to extend the range of the fly-back manoeuvres. After this, the vehicles descend and land at the launch site. The velocity at the landing point is not constrained, causing the airbreathing vehicle to land at slightly under Mach 1, and the airbreathing-rocket vehicle to land at approximately Mach 0.5. The latter is comparable with the landing velocity of the space shuttle \cite{Romere1983}. 
+These boosters fly to a downrange distance of 600-625km from the launch site, and separate from the orbital accelerator at a dynamic pressure of 15kPa\cite{Tsuchiya2005}. At the start of their respective return trajectories, both boosters turn with a bank angle of 130-145$^\circ$. Both the fully-airbreathing and partially-airbreathing vehicles ignite their airbreathing engines for 'several tens of seconds' at approximately Mach 3.5, in order to extend the flight range of the vehicles and return to the initial launch site\cite{Tsuchiya2005}. Less than 5\% of the vehicles initial propellant was required to return the vehicles to the initial launch sites\cite{Tsuchiya2005}.
 
-The possibility of an airbreathing vehicle reigniting high speed airbreathing engines for short periods has been investigated by Tsuchiya and Mori \cite{Tsuchiya2005}. Tsuchiya and Mori investigate a two-stage-to-orbit spaceplane, comparing two first stage configurations; an airbreathing accelerator and an accelerator with combined airbreathing/rocket propulsion. For the purposes of flyback there vehicles are very similar, both using the high speed airbreathing engines during return flight. The optimal launch trajectories for these vehicles is shown in Figure \ref{fig:Tsuchiya}. The separation for the airbreathing vehicle occurs at Mach 5.1, and the separation for the airbreathing/rocket vehicle at Mach 6.8. Both optimised return trajectories follow a relatively similar path. A long ‘skip’ is performed, with both vehicles hitting the dynamic pressure limit. Both vehicles ignite the airbreathing engines at around Mach 3.5 for “several tens of seconds” to extend the range of the flyback manoeuvres. After this, the vehicles descend and land at the launch site. The velocity at the landing point is not constrained, causing the airbreathing vehicle to land at slightly under Mach 1, and the airbreathing-rocket vehicle to land at approximately Mach 0.5. 
-The latter is comparable with the landing velocity of the space shuttle \cite{Romere1983}. 
+These optimised return trajectories show three distinct sections; a turn manoeuvre, a skipping phase, and a high L/D descent. The skipping phase is similar to the boost-skip trajectory of the space shuttle CITEXX, which uses repeated entries into the atmosphere, and skips out, to extend the range of an atmospheric entry. A skipping trajectory has been shown to be range optimal for hypersonic vehicles able to skip out of the atmosphere \cite{Moshman2014}, as well as vehicles flying entirely within the atmosphere\cite{Moshman2014,Darby2011}. A skipping trajectory has also been shown to be optimal for an air-breathing hypersonic vehicle thrusting throughout the trajectory\cite{Chai2015}. The range optimal operation of the air breathing engine is shown to be repeated ignitions at the trough of each skip. The scramjets are ignited as the vehicle climbs after the through, as the Mach number decreases to the minimum operable conditions of the scramjet engines. Minimising the Mach number during operation in this way maximises the efficiency of the scramjet engines.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.9\linewidth]{"figures/2_literature-review/chai-boost skip"}
+\caption{}
+\label{fig:chai-boostskip}
+\end{figure}
 
 
-
-The SPARTAN is designed to separate the third stage above Mach 9. This is considerably higher than the separation velocities of the vehicles in the study by Tsuchiya and Mori. The SPARTAN will also release into a dynamic pressure considerably higher than 15kPa, and it is desired to land the SPARTAN at a comparably low velocity.
+When compared to the vehicles investigated by Tsuchiya and Mori\cite{Tsuchiya2005}, the SPARTAN separates from its third stage rocket at a considerably higher Mach number of Mach 9.1, as well as at a considerably higher dynamic pressure of 33.9kPa. The SPARTAN must also cover a longer fly-back range of 878km. In addition, the C-REST scramjet engines are limited to operating at hypersonic speeds of Mach 5.1 or higher. These design differences create substantially more challenging conditions than those studied by Tsuchiya and Mori. Consequently, it is necessary to investigate the ability of the SPARTAN to return to the launch site following separation. From comparisons of the studies within this section it is evident that an optimisation of the return flight of the SPARTAN is required, and that a simply defined trajectory is not appropriate.
 
 \section{Optimal Control}
 
@@ -272,6 +337,7 @@ and \qquad h_j(x) = 0 \quad for \quad j=1,...,n
 An optimisation problem that has been discretised in this form can thus be solved using any of a variety of NLP solvers. One of the most effective methods of solving twice differentiable NLP problems is sequential quadratic programming (SQP) \cite{Boggs2000} for which there is a variety of commercial solvers available such as NPSOL, SNOPT and packages within MATLAB. 
 
 In order for these packages to be able to solve an optimisation problem it must be presented in discretised form, and as such must be transformed using approximation techniques. The task of approximating a continuous optimisation problem in discrete NLP solvable form is not simple. SQP solvers can very easily run into convergence issues when provided with an optimisation problem which has not been well defined over a logical solution space. Also, any approximation must be carried out with care that the accuracy of the solution is not compromised. There are multiple ways to approximate a continuous optimisation problem directly as an NLP problem, the most common of which are shooting and collocation methods. The differences in the behaviour of each method are related to the interaction between the SQP solver and the discretisation method by which the problem is defined, and can affect the stability and accuracy of the solution as well as the solution time of the problem. For this study of in atmosphere trajectory optimisation with complex atmospheric and vehicle properties it was desired that a method be found with maximum stability and accuracy for a relatively large solution space, while solution time is a secondary priority.
+
 \subsection{The Single Shooting Method}
 
 
@@ -329,12 +395,28 @@ r[x(s_0),x(s_N)] = 0
 
 The multiple shooting method has greatly improved convergence compared to the single shooting method, removing much of the susceptibility to instabilities resulting from nonlinear effects. However, the multiple shooting approach still suffers from a relatively small radius of convergence and slow computation times. Radius of convergence is extremely important to this study as the optimal solution cannot be approximated to a great degree of accuracy, and as such multiple shooting was deemed inappropriate for this study. It was desired to find a method with a global radius of convergence to apply to the optimisation problem being considered.
 
-\subsection{The Pseudospectral Method}
+\subsection{The Pseudospectral Method}\label{sec:PS}
+
+check some of my claims about the pseudospectral method and cite GPOPS papers
+
+GPOPS USES HP-ADAPTIVE GAUSS, WHICH HAS BEEN SHOWN TO improve(?) GAUSS
+
+I should show the hp-adaptive gaussian method
+
+Direct Trajectory Optimization and
+Costate Estimation via an Orthogonal
+Collocation Method - benson
+is quite a good paper (the first?) explaining gaussian ps method
+
+also look at gpops 1 manual
 
 The most promising method found to address the issue of radius of convergence is the direct collocation approach, which provides global radius of convergence with the additional advantage of smaller computational time \cite{Fasano2013}. Direct collocation methods discretise the control and state equations of the optimal control problem, and use these as constraints in an NLP problem similarly to the multiple shooting approach. However the state functions in collocation methods are approximated by polynomial functions over the solution space, inherently being continuous at each collocation node rather than the state functions being integrated over each timestep. The derivative of the state functions then become a constraint within the NLP, being equated to the polynomial approximation functions by the solver algorithm. The method used to discretise the derivative functions is very important to the accuracy of the collocation method, with trapezoidal, Hermite-Simpson and pseudospectral methods being popular choices.
 
 
-The most accurate form of these as tested by Fahroo \& Ross \cite{Fahroo2000} is the pseudospectral method, which uses some elements of spectral method approximation to accurately approximate derivative terms. The pseudospectral method was first introduced in 1972 by Kreiss \& Oliger \cite{Kreiss1972} as an efficient way to compute meteorology and oceanography problems. The pseudospectral method employs the use of orthogonal polynomials such as Legendre or Chebychev polynomials to approximate the state and control functions over the solution space \cite{Fahroo2000}. The Legendre polynomial method as used by Fahroo \& Ross in 1999 \cite{Fahroo1999} is a method of transforming a continuous optimisation problem into an NLP problem. These pseudospectral methods have the property that when evaluated at specific Legendre-Gauss-Lobatto points, the approximate state and control functions are exactly equal to the continuous function being approximated at that point. These create efficient and simple relationships for the evaluation of time-continuous optimisation problems \cite{Fahroo2000}.  
+The most accurate form of collocation method is the pseudospectral, or orthogonal collocation method\cite{Fahroo2000}, which uses some elements of spectral method approximation to accurately approximate derivative terms. The pseudospectral method was first introduced in 1972 by Kreiss \& Oliger \cite{Kreiss1972} as an efficient way to compute meteorology and oceanography problems. The pseudospectral method is now garnering a large amount of attention for its ability to rapidly and accurately solve a wide variety of optimal control problems. The pseudospectral method employs the use of orthogonal polynomials such as Legendre or Chebychev polynomials to approximate the state and control functions at a specific set of collocation points\cite{Fahroo2000,Huntington2007}. The pseudospectral method has the property that when evaluated at the specific collocation points, the functions approximating approximate state and control are exactly equal to the continuous function being approximated at that point. 
+
+A large usability advantage of the pseudospectral method is the ability to generate Hamiltonian and costate values easily\cite{Gong2010,Fahroo2001}. The Hamiltonian and costate values allow a solution to easily and quickly be checked to determine if some of the necessary conditions for optimality are being met. This is useful to determine initially if the optimal solution calculated by the pseudospectral solver is valid.
+
 
 The pseudospectral method discretises the optimisation problem for application of an NLP solver. The initial form of the optimisation problem is that of a generic Bolza optimisation problem, described by a continuous Bolza cost function:
 
@@ -358,23 +440,39 @@ These are constrained by boundary conditions of the system at the initial and fi
 \psi_f[\textbf{x}(\tau_f), \tau_f] = \textbf{0}
 \end{equation}
 
-These equations must be discretised in such a way that an NLP solver can produce an optimal result. The pseudospectral method discretises the cost function (Equation \ref{eq:cost}) as follows:
+Three primary pseudospectral methods are described in this chapter. All of these methods make use of Lagrange interpolating polynomials. These methods use different collocation points.
 
-\begin{eqnarray}
-J[\textbf{x}(t_k),\textbf{u}(t_k)] = \frac{\tau_f - \tau_0}{2} \sum_{k=0}^{N}L[\textbf{x}(t_k),\textbf{u}(t_k)]w_k + M(\textbf{x}t_N,\tau_f)
-\end{eqnarray}
 
-where $ w_k $ is a weighting function defined by the Legendre polynomial $L_N$:
+\subsubsection{The Legendre Pseudospectral Method}
+
+The Legendre polynomial method\cite{Fahroo1999} Legendre-Gauss-Lobato points for collocation. These create efficient and simple relationships for the evaluation of time-continuous optimisation problems \cite{Fahroo2000}. 
+The Legendre  pseudospectral method uses the Legendre polynomial, defined as $L_N$:
 
 \begin{eqnarray}
 L_N = \frac{1}{2^N N!} \frac{d^N}{dt^N}(t^2-1)^N
 \end{eqnarray}
 
+The Legendre-Gauss-Lobatto points, $t_l, l=0,...,N$, are given by:
+
+$t_0 = 0$
+
+$t_N = 1$
+
+and $t_l, l=1\leq l \leq N-1$ are the zeros of $\dot{L}_N$.
+
+The Legendre pseudospectral method transforms the problem to lie on the interval $t \in [-1,1]$, so that the cost function  (Equation \ref{eq:cost}) is discretised as follows:
+
+\begin{eqnarray}
+J[\textbf{x}(t_k),\textbf{u}(t_k)] = \frac{\tau_f - \tau_0}{2} \sum_{k=0}^{N}L[\textbf{x}(t_k),\textbf{u}(t_k)]w_k + M(\textbf{x}t_N,\tau_f)
+\end{eqnarray}
+
+where $ w_k $ is a weighting function defined as:
+
 \begin{eqnarray}
 w_k = \frac{2}{N(N+1)} \frac{1}{[L_N(t_k)]^2}
 \end{eqnarray}
 
-The state equations (Equation \ref{eq:state}, in this case the system dynamics) are described by:
+The state equations (Equation \ref{eq:state}, in this case the system dynamics) are described at each LGL point by:
 
 \begin{eqnarray}
 \frac{(\tau_f - \tau_0)}{2}\textbf{f}[\textbf{x}(t_k),\textbf{u}(t_k)] - \sum_{l=0}^{N} D_{kl} \textbf{x}(t_l) = \textbf{0}
@@ -412,48 +510,73 @@ The boundary conditions are expressed analogously to the continuous problem:
 \psi_f[\textbf{x}(t_N), \tau_f] = \textbf{0}
 \end{equation}
 
-However the pseudospectral optimisation problem must now be subject to a set of inequality constraints defining the bounds of the problem:
 
-\begin{eqnarray}
-\textbf{g}[\textbf{u}(t_k)] \leq \textbf{0}
-\end{eqnarray}
+\subsubsection{The Chebychev Pseudospectral Method}
 
-In the context of applying this to an trajectory optimisation problem the inequality constraints are the upper and lower bounds of the system dynamics, expressing the physical limits on the simulated trajectory. 
+CGl collocation points \cite{Gong2010}
+$t_k = cos(\pi (N-k)/N), k=0,...,N$
 
+
+
+\subsubsection{The Gauss Pseudospectral Method}
+
+<<<<<<< HEAD
 A large advantage of the pseudospectral method is the ability to generate Hamiltonian and costate values easily, detailed by Gong et al. \cite{Gong2010} and Fahro \& Ross \cite{Fahroo2001}. The Hamiltonian and costate values allow a solution to easily and quickly be checked for accuracy.  The Hamiltonian equalling zero is a necessary (but not sufficient) condition for optimality. In order to make a preliminary test for an optimal solution, the Hamiltonian must be observed to be close to zero along the entire trajectory. 
+=======
+>>>>>>> c098a765a9f4e59c8dbdc110fd22c1fd561c0c5a
 
 \textcolor{red}{expand on this, and optimality conditions}
 
 \subsection{Pseudospectral Examples}
 \textcolor{red}{this section needs to be linked with the hypersonic vehicle trajectories that use the pseudosspectral method}
 
+need a six dof example, and a multiple state example
+
 In order to assess the applicability of the pseudospectral method to an in atmosphere trajectory optimisation problem, the range of existing solutions utilising the pseudospectral method has been investigated. 
 The pseudospectral method has been proven to be extremely effective for simulations in aerospace applications and has been proven in flight applications such as the zero propellant manoeuvre of the International Space Station in 2007, where the ISS was rotated 180 degrees without any propellant used following a pseudospectral method solution \cite{Bedrossian}. 
-The pseudospectral method has also been utilised in the control of satellites in low Earth orbit in a study by Yan et al. \cite{Yan2007}. The satellites were required to be stabilised utilising the Earth's magnetic field, which requires a solution to the Riccati equation to be solved in real time, a potential computation burden to the legacy systems used. The pseudospectral method was tested as a possible solution. The satellites were controlled to a desired attitude in three dimensions using both the solution to the Riccati equation and the pseudospectral method. It was shown that the pseudospectral method matched the results of existing solutions and improved on computation time over that of the Riccati solution by an order of magnitude. This indicates that the pseudospectral method is not only accurate, but computationally efficient for systems with multiple state variables. 
+The pseudospectral method has been used successfully in a multitude of studies for the trajectory optimisation of hypersonic vehicles\cite{Li2012,Josselyn2002a,Zhao2013,Tian2011,Darby2011,Chai2015,Rizvi2015,Moshman2014}. 
 
-The pseudospectral method has also been utilised for the reconfiguration of spacecraft formations in a study by Huntington \& Rao \cite{Huntington2008}. A simulated tetrahedral spacecraft formation was reconfigured using the pseudospectral orbit in a fuel optimal manner within one orbit, necessary because the initial formation was observed to degrade significantly after being simulated forwards by three weeks. A new formation was found that minimised this degradation, and the movement of the spacecraft into new positions was computed using a pseudospectral method. Figure \ref{fig:initialtetra} and Figure \ref{fig:terminaltetra} show the initial and final configurations of the spacecraft respectively. 
-\begin{figure}[ht] 
-	\centering
-	\includegraphics[width=0.5\linewidth]{initialtetra}
-	\caption{Initial spacecraft formation configuration \cite{Huntington2008}.}
-	\label{fig:initialtetra}
+ The pseudospectral method has been used for the guidance of re-entry vehicles including in-atmosphere dynamics, to keep a vehicle on a desired three degree of freedom path in real-time in a study by Tian \& Zong \cite{Tian2011}. The pseudospectral method was found to generate an accurate trajectory around the desired reference trajectory, satisfying all necessary constraints in real-time for six state variables with minimal error.  Nonlinear effects are an intrinsic part of simulating a complex aerodynamic system, and this study indicates that the pseudospectral method will be able to simulate the SPARTAN vehicle and is appropriate for use in this study.
+ 
+ Chai et al.\cite{Chai2015} investigate the range optimal trajectory of a scramjet-powered hypersonic missile. Chai et. al successfully compute an optimal trajectory for an airbreathing hypersonic vehicle in three degrees of freedom\cite{Chai2015}.  The hp-adaptive pseudospectral method is compared to the Gauss pseudospectral method and the direct shooting method. Both pseudospectral methods show greater precision and robustness than the direct shooting method, and are reported to be much more computationally efficient. The direct shooting method takes 268.2s to complete,
+  whereas the Gauss pseudospectral method completes optimisation in 12.7s, and the hp-adaptive pseudospectral method takes only 5.3s\cite{Chai2015}. 
+  The pseudospectral methods produce similar results. The hp-adaptive pseudospectral method shows a slight range increase over the Gauss pseudospectral method due to its ability to redistribute the collocation points adaptively, which improves robustness. 
+ 
+ \begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/2_literature-review/OptimisationMethodComparisonChai}
+\caption{}
+\label{fig:OptimisationMethodComparisonChai}
 \end{figure}
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=0.5\linewidth]{terminaltetra}
-	\caption[Hello World]{Terminal spacecraft formation configuration \cite{Huntington2008}.}
-	\label{fig:terminaltetra}
-\end{figure}
-This study uses five state variables, with complex codependency between each variable. The positive results of this study are an indication that the pseudospectral method retains accuracy for a large amount of state variables and can successfully solve when states are highly reliant on one another, as is the case for a trajectory with significant atmospheric effects. 
 
 
-These examples show the ability of the pseudospectral method to simulate complex simulated systems efficiently and accurately, however these examples are based on orbital dynamics and are potentially not indicative of pseudospectral method performance for more complex in-atmosphere dynamics. The pseudospectral method has been used for the guidance of re-entry vehicles including in-atmosphere dynamics, to keep a vehicle on a desired three degree of freedom path in real-time in a study by Tian \& Zong \cite{Tian2011}. The pseudospectral method was found to generate an accurate trajectory around the desired reference trajectory, satisfying all necessary constraints in real-time for six state variables with minimal error. This is a useful result as it shows that the pseudospectral method does not exhibit instabilities with nonlinear effects such as atmospheric density varying the dynamics of the system being optimised, and that the pseudospectral method can be used for systems with at least up to six state variables. Nonlinear effects are an intrinsic part of simulating a complex aerodynamic system, and this study indicates that the pseudospectral method will be able to simulate the SPARTAN vehicle and is appropriate for use in this study. 
+These results indicate that the pseudospectral method does not exhibit instabilities with nonlinear effects such as atmospheric density varying the dynamics of the system being optimised, and that the pseudospectral method can be used for systems with at least up to six state variables.
 
 Based on the proven track record of the pseudospectral method in simulation situations, it was decided that using the pseudospectral method for the optimisation of the rocket-scramjet-rocket system was a sound and feasible decision. It has been necessary to investigate the range of solvers available that will utilise a pseudospectral method to solve an optimisation problem with the desired capabilities and usability. 
 
 \subsection{Available Solvers}
+\textcolor{red}{change this section to reflect more current perspective}
 
-The pseudospectral method has a number of solvers available commercially, the foremost of which are DIDO, produced by Elissar Global \cite{Ross2002}, GPOPS II \cite{Rao2010} and PROPT, a module integrated with TOMLAB \cite{Rutquist2010}. These solvers utilise nonlinear programming techniques to solve optimal control problems in discretised form and are all similar in their operation. These have been investigated for a variety of considerations with details available in Section \ref{Achievements to Date}. The most promising of the solvers investigated is DIDO. DIDO is a pseudospectral method solver that is capable of solving complex systems with multiple variables, and outputting Hamiltonian and costate values automatically. DIDO has been used in a wide variety of disciplines, including the solution for a zero-propellant manoeuvre of the ISS in 2006 \cite{Bedrossian}. DIDO has been selected for use in this study after evaluation of the available options, taking into account user friendliness as well as the program track record from publications (Table \ref{table:programs}).
+The pseudospectral method has a number of solvers available commercially, the foremost of which are DIDO, produced by Elissar Global \cite{Ross2002}, GPOPS II \cite{Rao2010} and PROPT, a module integrated with TOMLAB \cite{Rutquist2010}. These solvers utilise nonlinear programming techniques to solve optimal control problems in discretised form and are all similar in their operation. These have been investigated for a variety of considerations with details available in Section \ref{Achievements to Date}. 
+
+There are a number of existing programs that can complete optimisation problems using the pseudospectral method and as such creating an optimiser from scratch was considered to be overly time consuming and not a useful contribution. A number of programs were found, which are detailed in Table \ref{table:programs}.
+\begin{table}[!ht]
+	
+	\begin{tabular}{|c|c|c| p{7cm}|}
+		\hline \textbf{Software} & \textbf{Platform} & \textbf{Cost} & \textbf{Notes} \\ 
+		\hline DIDO & MATLAB & \$50 (Student) & Simple and automated with free trial available. Documentation readily available. Can perform required problem. Provides costates and Hamiltonian values.\\ 
+		\hline GPOPS II & MATLAB & \$100 & Free trial available, but was unable to obtain. Some documentation available. Can perform required problem.\\ 
+		\hline ROC-HJ Solver & C++ & Free & A basic solver for some specific optimal control problems. Does not perform collocation. \\ 
+		\hline PROPT (IPOPT) & MATLAB & \$500 & No free trial. Documentation available. Can perform required problem. \\ 
+		\hline Imperial College OCS & MATLAB & Free & Documentation and download unavailable \\ 
+		\hline PSOPT & C++ & Free & Open source and can perform required problem. Not updated, many modules out of date. \\ 
+		\hline 
+	\end{tabular} 
+	
+	\caption{Summary of programs capable of pseudospectral optimisation.}
+	\label{table:programs}
+\end{table}
+An effort was made to find an open source program that could complete the desired optimisation however it was found that all open source programs studied were out of date or not well supported. Out of the premium packages available GPOPS II and DIDO were considered the best options, both being proven in aerospace applications, with available free trials and affordable price points. Free trials were requested from both, however the free trial for GPOPS II was not received while the free trial for DIDO was received with good customer service provided. On reception of the DIDO trial it was found that DIDO provides the required optimiser package in an easy to use form, with sufficient documentation and examples provided to streamline the simulation process. DIDO also provides costate and Hamiltonian values, used for verifying that the optimised solution is accurate and physically sound, as well as the lowest price point and benefit of being proven in both real space applications and in-atmosphere simulations. After weighing these considerations DIDO was selected as the best program to use for the pseudospectral optimisation and simulation. 
 
 \section{Aerodynamic Analysis}
 - preliminary design requires fast and easy aerodynamics 
@@ -464,6 +587,8 @@ Simulating the trajectory of access to space vehicles requires the aerodynamics 
 
 Hypaero is an aerodynamic calculation tool developed for the preliminary design of hypersonic vehicles. 
 HYPAERO uses strip theory, dividing the surface of the vehicle into panels to calculate aerodynamic properties along the aircraft as illustrated in Figure \ref{fig:strip}. In strip theory two dimensional sections are created running the length of the vehicle, defining streamlines along the vehicle faces. Pressure, Mach number and skin friction are calculated along these streamlines to compute the aerodynamic coefficients of the vehicle. The Aerodynamic analysis of the SPARTAN has been performed using HYPAERO by Jazra et al. \cite{Jazra2013}. The aerodynamic coefficients of the SPARTAN vehicle have been provided for this study by Dawid Preller.
+
+\textcolor{red}{NEED TO CHANGE THIS to clarify where I'm using this}
 
 \begin{figure}[ht]
 	\centering
@@ -503,3 +628,7 @@ Missile DATCOM is a widely used, semi-empirical, aerodynamic prediction tool for
   \section{Summary}\label{chapter2:summary}
 
       This chapter has reviewed literature relevant to this thesis. Add more details.
+      
+      
+      
+      

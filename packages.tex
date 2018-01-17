@@ -1,6 +1,6 @@
 % packages.tex
 
-\pdfoptionpdfminorversion=6
+%\pdfoptionpdfminorversion=6
 
 % Setting margins
 \usepackage[left=20mm,right=20mm,top=20mm,bottom=20mm,headheight=15pt,includehead,includefoot]{geometry}
@@ -41,7 +41,7 @@
   \renewcommand{\nomentryend}{\hspace*{\fill}#1}%
   }
 \renewcommand{\nompreamble}{The nomenclature used in this thesis is outlined here. In some cases, the same variable has been used to indicate different quantities. In these instances, the equation and/or page number of the `special' case has been included.}
-\setlength{\nomlabelwidth}{2.5cm}
+%\setlength{\nomlabelwidth}{2.5cm}
 
 % I think this was just a formatting thing to fix long nomenclature entries
 % \newcommand{\nomunit}[1]{%
@@ -84,41 +84,38 @@
 \usepackage{booktabs}
 \usepackage{threeparttable}
 
+
 % For diagrams
 \usepackage{tikz}
 \usetikzlibrary{arrows,decorations.pathmorphing,patterns}
 
+
 % For bibliography
-\usepackage[style=authoryear,
-            maxcitenames=1,
-            maxbibnames=10,
-            uniquelist=false,
-            uniquename=false,
-            backend=biber]{biblatex}
-\setcounter{biburllcpenalty}{9000}
+\usepackage[backend=bibtex]{biblatex}
 \setcounter{biburlucpenalty}{9000}
-\addbibresource{references.bib}
-\renewcommand*{\nameyeardelim}{\addcomma\space}
-\newcommand{\citeauthorandyear}[2][]{\citeauthor{#2} (\citeyear[#1]{#2})}
+\addbibresource{library.bib}
+%
+%\renewcommand*{\nameyeardelim}{\addcomma\space}
+%\newcommand{\citeauthorandyear}[2][]{\citeauthor{#2} (\citeyear[#1]{#2})}
 
-\DeclareCiteCommand{\citelabelyear}
-  {\boolfalse{citetracker}%
-   \boolfalse{pagetracker}%
-   \usebibmacro{prenote}}
-  {\printtext[bibhyperlink]{\iffieldundef{labelyear}
-   {\printfield{year}}
-   {\printfield{labelyear}%
-    \iffieldundef{extrayear}
-      {}
-      {\printfield{extrayear}}}}}
-  {\multicitedelim}
-  {\usebibmacro{postnote}}
-
-\DeclareCiteCommand{\citeyear}
-    {}
-    {\bibhyperref{\printdate}}
-    {\multicitedelim}
-    {}
+%\DeclareCiteCommand{\citelabelyear}
+%  {\boolfalse{citetracker}%
+%   \boolfalse{pagetracker}%
+%   \usebibmacro{prenote}}
+%  {\printtext[bibhyperlink]{\iffieldundef{labelyear}
+%   {\printfield{year}}
+%   {\printfield{labelyear}%
+%    \iffieldundef{extrayear}
+%      {}
+%      {\printfield{extrayear}}}}}
+%  {\multicitedelim}
+%  {\usebibmacro{postnote}}
+%
+%\DeclareCiteCommand{\citeyear}
+%    {}
+%    {\bibhyperref{\printdate}}
+%    {\multicitedelim}
+%    {}
 
 % For links
 \PassOptionsToPackage{hyphens}{url}
@@ -159,13 +156,13 @@
 
 % For consistent units and number range formatting
 \usepackage[space-before-unit = true]{siunitx}
-\sisetup{%
-  inter-unit-product=\ensuremath{{}\cdot{}},
-  range-units = single,
-  range-phrase =-,
-  group-separator = \text{,},
-  }
-\DeclareSIUnit[]\atm{atm}
+%\sisetup{%
+%  inter-unit-product=\ensuremath{{}\cdot{}},
+%  range-units = single,
+%  range-phrase =-,
+%  group-separator = \text{,},
+%  }
+%\DeclareSIUnit[]\atm{atm}
 \DeclareSIUnit[]\cal{cal}
     
 % For controlling float positions
@@ -176,3 +173,5 @@
 
 
 \usepackage{pdflscape}
+
+\usepackage{tabularx}
