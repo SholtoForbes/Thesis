@@ -32,43 +32,45 @@
 \BOOKMARK [1][-]{section.3.2}{Second Stage Scramjet}{chapter.3}% 32
 \BOOKMARK [2][-]{subsection.3.2.1}{Baseline Vehicle}{section.3.2}% 33
 \BOOKMARK [2][-]{subsection.3.2.2}{Aerodynamics}{section.3.2}% 34
-\BOOKMARK [2][-]{subsection.3.2.3}{Propulsion Modelling}{section.3.2}% 35
-\BOOKMARK [1][-]{section.3.3}{Third Stage Rocket - Baseline}{chapter.3}% 36
-\BOOKMARK [2][-]{subsection.3.3.1}{Heat Shield Sizing}{section.3.3}% 37
-\BOOKMARK [2][-]{subsection.3.3.2}{Fuel Tank Sizing}{section.3.3}% 38
-\BOOKMARK [2][-]{subsection.3.3.3}{Aerodynamics}{section.3.3}% 39
-\BOOKMARK [2][-]{subsection.3.3.4}{Thrust Vectoring}{section.3.3}% 40
-\BOOKMARK [0][-]{chapter.4}{LODESTAR}{}% 41
-\BOOKMARK [1][-]{section.4.1}{Optimal Control}{chapter.4}% 42
-\BOOKMARK [2][-]{subsection.4.1.1}{GPOPS-2 Example - Brachistochrone Problem}{section.4.1}% 43
-\BOOKMARK [1][-]{section.4.2}{The Trajectory Optimal Control Problems}{chapter.4}% 44
-\BOOKMARK [2][-]{subsection.4.2.1}{Dynamic Model}{section.4.2}% 45
-\BOOKMARK [2][-]{subsection.4.2.2}{Trajectory Connection Points}{section.4.2}% 46
-\BOOKMARK [2][-]{subsection.4.2.3}{First Stage Trajectory}{section.4.2}% 47
-\BOOKMARK [2][-]{subsection.4.2.4}{Second Stage Trajectory}{section.4.2}% 48
-\BOOKMARK [2][-]{subsection.4.2.5}{Second Stage Return Trajectory}{section.4.2}% 49
-\BOOKMARK [2][-]{subsection.4.2.6}{Third Stage Trajectory}{section.4.2}% 50
-\BOOKMARK [2][-]{subsection.4.2.7}{Combined Second Stage Ascent \046 Return Trajectory}{section.4.2}% 51
-\BOOKMARK [2][-]{subsection.4.2.8}{Validation}{section.4.2}% 52
-\BOOKMARK [0][-]{chapter.5}{Ascent Trajectory}{}% 53
-\BOOKMARK [1][-]{section.5.1}{Third Stage trajectory}{chapter.5}% 54
-\BOOKMARK [2][-]{subsection.5.1.1}{Third Stage Optimisation Methodology}{section.5.1}% 55
-\BOOKMARK [2][-]{subsection.5.1.2}{Third Stage Optimisation Results}{section.5.1}% 56
-\BOOKMARK [1][-]{section.5.2}{SPARTAN trajectory}{chapter.5}% 57
-\BOOKMARK [2][-]{subsection.5.2.1}{Constant Dynamic Pressure - Minimum Pull-up}{section.5.2}% 58
-\BOOKMARK [2][-]{subsection.5.2.2}{Optimal Payload}{section.5.2}% 59
-\BOOKMARK [2][-]{subsection.5.2.3}{Maximum Dynamic Pressure Variation}{section.5.2}% 60
-\BOOKMARK [2][-]{subsection.5.2.4}{Drag Sensitivity Study}{section.5.2}% 61
-\BOOKMARK [1][-]{section.5.3}{First Stage Trajectory}{chapter.5}% 62
-\BOOKMARK [2][-]{subsection.5.3.1}{First Stage Optimised Trajectory Result}{section.5.3}% 63
-\BOOKMARK [0][-]{chapter.6}{Trajectories Involving Flyback}{}% 64
-\BOOKMARK [1][-]{section.6.1}{Flyback trajectories }{chapter.6}% 65
-\BOOKMARK [1][-]{section.6.2}{Sensitivity Analysis}{chapter.6}% 66
-\BOOKMARK [0][-]{chapter.7}{Full Trajectory Optimisation}{}% 67
-\BOOKMARK [0][-]{chapter.8}{Third Stage Sizing Study}{}% 68
-\BOOKMARK [0][-]{chapter.9}{Conclusions}{}% 69
-\BOOKMARK [1][-]{section.9.1}{Recommendations for future work}{chapter.9}% 70
-\BOOKMARK [0][-]{chapter*.94}{Library}{}% 71
-\BOOKMARK [0][-]{appendix.A}{CART3D Results}{}% 72
-\BOOKMARK [1][-]{section.A.1}{Engine-On Plume Check}{appendix.A}% 73
-\BOOKMARK [1][-]{section.A.2}{CART3D Results}{appendix.A}% 74
+\BOOKMARK [2][-]{subsection.3.2.3}{Engine-On Plume Model}{section.3.2}% 35
+\BOOKMARK [2][-]{subsection.3.2.4}{Propulsion Modelling}{section.3.2}% 36
+\BOOKMARK [1][-]{section.3.3}{Third Stage Rocket - Baseline}{chapter.3}% 37
+\BOOKMARK [2][-]{subsection.3.3.1}{Heat Shield Sizing}{section.3.3}% 38
+\BOOKMARK [2][-]{subsection.3.3.2}{Fuel Tank Sizing}{section.3.3}% 39
+\BOOKMARK [2][-]{subsection.3.3.3}{Aerodynamics}{section.3.3}% 40
+\BOOKMARK [2][-]{subsection.3.3.4}{Thrust Vectoring}{section.3.3}% 41
+\BOOKMARK [1][-]{section.3.4}{Third Stage Sizing}{chapter.3}% 42
+\BOOKMARK [0][-]{chapter.4}{LODESTAR}{}% 43
+\BOOKMARK [1][-]{section.4.1}{Optimal Control}{chapter.4}% 44
+\BOOKMARK [2][-]{subsection.4.1.1}{GPOPS-2 Example - Brachistochrone Problem}{section.4.1}% 45
+\BOOKMARK [1][-]{section.4.2}{The Trajectory Optimal Control Problems}{chapter.4}% 46
+\BOOKMARK [2][-]{subsection.4.2.1}{Dynamic Model}{section.4.2}% 47
+\BOOKMARK [2][-]{subsection.4.2.2}{Trajectory Connection Points}{section.4.2}% 48
+\BOOKMARK [2][-]{subsection.4.2.3}{First Stage Trajectory}{section.4.2}% 49
+\BOOKMARK [2][-]{subsection.4.2.4}{Second Stage Trajectory}{section.4.2}% 50
+\BOOKMARK [2][-]{subsection.4.2.5}{Second Stage Return Trajectory}{section.4.2}% 51
+\BOOKMARK [2][-]{subsection.4.2.6}{Third Stage Trajectory}{section.4.2}% 52
+\BOOKMARK [2][-]{subsection.4.2.7}{Combined Second Stage Ascent \046 Return Trajectory}{section.4.2}% 53
+\BOOKMARK [2][-]{subsection.4.2.8}{Validation}{section.4.2}% 54
+\BOOKMARK [0][-]{chapter.5}{Ascent Trajectory}{}% 55
+\BOOKMARK [1][-]{section.5.1}{Third Stage trajectory}{chapter.5}% 56
+\BOOKMARK [2][-]{subsection.5.1.1}{Third Stage Optimisation Methodology}{section.5.1}% 57
+\BOOKMARK [2][-]{subsection.5.1.2}{Third Stage Optimisation Results}{section.5.1}% 58
+\BOOKMARK [1][-]{section.5.2}{SPARTAN trajectory}{chapter.5}% 59
+\BOOKMARK [2][-]{subsection.5.2.1}{Constant Dynamic Pressure - Minimum Pull-up}{section.5.2}% 60
+\BOOKMARK [2][-]{subsection.5.2.2}{Optimal Payload}{section.5.2}% 61
+\BOOKMARK [2][-]{subsection.5.2.3}{Maximum Dynamic Pressure Variation}{section.5.2}% 62
+\BOOKMARK [2][-]{subsection.5.2.4}{Drag Sensitivity Study}{section.5.2}% 63
+\BOOKMARK [1][-]{section.5.3}{First Stage Trajectory}{chapter.5}% 64
+\BOOKMARK [2][-]{subsection.5.3.1}{First Stage Optimised Trajectory Result}{section.5.3}% 65
+\BOOKMARK [0][-]{chapter.6}{Trajectories Involving Flyback}{}% 66
+\BOOKMARK [1][-]{section.6.1}{Flyback trajectories }{chapter.6}% 67
+\BOOKMARK [1][-]{section.6.2}{Sensitivity Analysis}{chapter.6}% 68
+\BOOKMARK [0][-]{chapter.7}{Full Trajectory Optimisation}{}% 69
+\BOOKMARK [0][-]{chapter.8}{Third Stage Sizing Study}{}% 70
+\BOOKMARK [0][-]{chapter.9}{Conclusions}{}% 71
+\BOOKMARK [1][-]{section.9.1}{Recommendations for future work}{chapter.9}% 72
+\BOOKMARK [0][-]{chapter*.103}{Library}{}% 73
+\BOOKMARK [0][-]{appendix.A}{CART3D Results}{}% 74
+\BOOKMARK [1][-]{section.A.1}{Engine-On Plume Check}{appendix.A}% 75
+\BOOKMARK [1][-]{section.A.2}{CART3D Results}{appendix.A}% 76

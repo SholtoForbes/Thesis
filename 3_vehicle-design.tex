@@ -3,6 +3,15 @@
 \cleardoublepage
 \chapter{Launch Vehicle Baseline Design}\label{chapter:methodology}
 
+
+\textcolor{red}{show a schematic sketch of all the vehicles along the trajectory }
+
+
+\textcolor{red}{move tables to appendix, think of either moving performance maps to appendix, or including smaller images}
+
+
+\textcolor{red}{reorder, SPARTAN first, make clear that the SPARTAN size is being kep constant, at Dawids baseline size/geometry}
+
 This chapter presents the baseline three stage small satellite launch system utilised in this thesis. The design for the first stage rocket-powered vehicle, second stage scramjet-powered vehicle (the SPARTAN), and third stage rocket-powered vehicle are presented. This baseline design is used for the initial trajectory analysis and optimisation in this study. The launch system has been designed based on the SPARTAN vehicle developed by Preller \& Smart.
 
 This chapter also describes the aerodynamic models of the vehicles used in this study, including the engine models.
@@ -91,6 +100,23 @@ details of CART3D setup (no adapt levels / radius etc)
 CART3D validation
 
 -CG location and movement
+
+14.5m set as CG at end of burn, after third stage release. This is observed to produce a relatively stable trimmed acceleration and return. 
+
+A total of 9 aerodynamic matrices are created
+-CG no third stage, no fuel (assumed fly-back fuel does not change CG)
+-CG third stage, no fuel
+-CG third stage, full fuel
+
+for each of these
+
+-engine off coeffs
+-engine on coeffs
+-Flap Deflection coeffs
+
+\textcolor{red}{need to include cliccalc and CART3D into my process diagrams?}
+
+
 -moment of inertia
 
 -show side and bottom results for M=0.5,1.1,5,9 (appendix)
@@ -162,6 +188,10 @@ For the engine-on case, the engines and boat tail are removed from the aerodynam
 
 -put in plots for moments, think about best way to present trim?
 
+\subsection{Engine-On Plume Model}
+
+include plumes and small investigation showing that they will not impact my study significantly, and justify removing boat tail from aero
+
 
 		
 		\subsection{Propulsion Modelling}
@@ -170,6 +200,7 @@ For the engine-on case, the engines and boat tail are removed from the aerodynam
 		
 		\textcolor{red}{C-REST thrust calculator method?}
 		
+		\textcolor{red}{be more quantitative, include control law for mass flow rate (eq=1?)}
 		The SPARTAN is powered by four underslung scramjet engines. These engines are Rectangular To Elliptical Shape Transition (REST) engines, configured to allow for a conical forebody (C-REST). The engine model used is a CRESTM10 database\cite{Preller2017}, analysed using quasi-1D simulation.
 	This database provides data points of engine performance over inlet conditions within the operational range, at 50kPa dynamic pressure equivalent conditions. The specific impulse and equivalence ratio data sets are shown in Figure XXX. This data is interpolated for the given inlet conditions to calculate the exit conditions and the specific impulse produced by the engine. The specific impulse is obtained by spline interpolation. The thrust, $T$, is then obtained by inclusion of the mass flow rate ($\dot{m}$) obtained via the inlet conditions, ie. $T = g_0\dot{m}I_{sp}$.
 	The C-REST engine is a fixed geometry engine, designed for operability at high Mach numbers\cite{Preller2017}. At lower Mach numbers, the addition of excessive fuel may cause the engine to choke and unstart, resulting in total loss of thrust\cite{Preller2017}. To avoid unstart, an equivalence ratio ($\phi$) of less than 1 is set at low Mach numbers. As the equivalence ratio is equal to 1 in the majority of the Mach number and temperature regime, only the regions in which it is less than 1 are used for the interpolation. The equivalence ratio interpolation is linear, as the number of data points available for interpolation is low. 
@@ -194,7 +225,7 @@ For the engine-on case, the engines and boat tail are removed from the aerodynam
 \label{fig:3rdStage}
 \end{figure}
 	
-	In this study the third stage rocket has been designed to accommodate a SpaceX Kestrel engine. In previous studies, the third stage was designed to be powered by a Pratt \& Whitney RL-10-3A pump-fed engine. The Kestrel has been used over the RL-10-3A for its cost effectiveness. As a pressure-fed engine, the Kestrel trades off specific impulse for weight and cost savings when compared to the RL-10-3A. As the only expendable portion of the system; the cost of the third stage is one of the main drivers of overall system cost. Reducing the cost of the third stage allows the cost of launch to be directly reduced. 
+	In this study the third stage rocket has been designed to accommodate a SpaceX Kestrel engine. In previous studies, the third stage was designed to be powered by a Pratt \& Whitney RL-10-3A pump-fed engine, weighing 52kg. The Kestrel has been used over the RL-10-3A for its cost effectiveness. As a pressure-fed engine, the Kestrel trades off specific impulse for weight and cost savings when compared to the RL-10-3A. As the only expendable portion of the system; the cost of the third stage is one of the main drivers of overall system cost. Reducing the cost of the third stage allows the cost of launch to be directly reduced. 
 	
 	The third stage rocket is released at the end of the scramjet accelerator burn, and lifts the payload out of the atmosphere and into the desired orbit. The third stage weighs a total of 3300kg. This was chosen as a design weight, to fit the fuel necessary to achieve orbit with an acceptable payload while also allowing for ample payload volume. The third stage has a structural mass fraction of 0.09, similar to the Falcon 1 second stage \cite{Vehicle2008}. This gives a total structural mass of 285.7kg. 
 	
@@ -202,6 +233,8 @@ For the engine-on case, the engines and boat tail are removed from the aerodynam
 
 	
 The kestrel engine has been modified to have 50\% increased propellant mass flow rate, giving a mass flow rate of 14.8kg/s. The nozzle of the Kestrel engine has been kept at 1.1m diameter. This increase in mass flow results in a 2\% loss of efficiency from the nozzle\cite{RPE}, due to the thrust coefficient decreasing as shown in Figure \ref{fig:ThrustCoefficient-Arat}. The modified specific impulse of the engine is 310.7s.
+
+\textcolor{red}{Arat initial is 60 (reference, measured I think), after thrust increase Arat is 40}
 
 The third stage has a total length of 9m, with a 3m long nose, 4.5m long centrebody and 1.5m long engine.
 	
@@ -218,13 +251,16 @@ The third stage has a total length of 9m, with a 3m long nose, 4.5m long centreb
 
 
 \subsection{Heat Shield Sizing}
+\textcolor{red}{present more of the logic which led to this heat shield design}
 
 The third stage rocket is separated from the SPARTAN at a high dynamic pressure, after which it spends a considerable amount of time accelerating in-atmosphere before reaching exoatmospheric conditions. This release into a high dynamic pressure environment creates a large amount of heating, which must be mitigated by heat shielding. 
-The third stage is protected while in-atmosphere by a heat shield, weighting 130.9kg. This heat shield is constructed from a phenolic cork cylinder, a reinforced carbon-carbon nose cone, and a tungsten nose tip. 
+The third stage is protected while in-atmosphere by a heat shield, weighing 130.9kg. This heat shield is constructed from a phenolic cork cylinder, a reinforced carbon-carbon nose cone, and a tungsten nose tip. 
 The tungsten nose is 50mm diameter, at the end of a 50mm cylinder. The density of tungsten is $\rho_{Tungsten} = 19.25$  g/cm$^3$, giving a total mass for the nose of m = 12.6kg.
 The carbon-carbon shell has a density of $\rho_{CC} = 1800$  kg/m$^3$. The carbon-carbon shell has a thickness of 10mm. The mass of the carbon-carbon is 89.3kg. 
 The cork cylinder has a density of $\rho_{Cork} = 320$  kg/m$^3$, a thickness of 5mm and a total mass of 23.7kg. 
 The total mass of the heat shield is 125.6kg.
+
+\textcolor{red}{put info in table}
 		
 		\subsection{Fuel Tank Sizing}
 		The fuel tanks have been sized assuming 100kg of payload-to-orbit. Note that the method of calculating final payload-to-orbit relies on using left over 'fuel mass' as effective payload mass. Realistically this would cause the fuel tanks to be resized slightly. For the purposes of this study the fuel tanks have been assumed to be of constant size for simplicity. Currently this is a reasonable assumption as the internals of the rocket are very simplified. The structural mass is held constant at 9\%. The third stage carries a total propellant mass of 2736.7kg. Table XX breaks shows the component break-down of the LOX oxidiser and RP1 fuel.  
@@ -238,7 +274,7 @@ The total mass of the heat shield is 125.6kg.
 	\hline 
 \end{tabular} 
 		
-		
+		\textcolor{red}{it needs to be clearer here that the fuel tanks have been approximately sized, and that some fuel / payload is interchangeable}
 		
 		
 		
@@ -253,5 +289,21 @@ The total mass of the heat shield is 125.6kg.
 		
 		The third stage rocket is trimmed during the in-atmosphere portion of its ascent trajectory via thrust vectoring. The centre of pressure is calculated using missile DATCOM. The thrust vector is set so that the moment generated by the engine matches the lift force acting at the centre of pressure. The maximum thrust vector limit has been set to 8$^\circ$. As no data on the maximum thrust vectoring capabilities of the kestrel engine was able to be found, this was set to the maximum gimbal range of the Aestus pressure-fed engine and OMS, similar pressure fed engines. 
 		
+		\textcolor{red}{add a diagram}
 		
+\section{Third Stage Sizing}
+
+-diameter and length of centrebody changed independently
+
+-length varied
+
+	-changed mass of cork cylinder
+	-changed aerodynamics
+	-changed total mass
+
+-diameter varied
+	-changed mass of cork cylinder and C-C cone
+	-changed aerodynamics
+	-changed total mass
+	-changed engine efficiency from nozzle size
 		

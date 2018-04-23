@@ -3,7 +3,13 @@
 \cleardoublepage
 \chapter{Literature review}\label{chapter:literature-review}
 
+\textcolor{red}{KEEP THIS SECTION AN BROAD AS POSSIBLE}
+
+
   This chapter examines the relevant literature associated with the different aspects of the work conducted as part of this thesis. 
+  
+  
+ 
   
  
   Explain order of literature and what was examined.
@@ -18,6 +24,8 @@
   
   The rocket-scramjet rocket launch system under development at The University of Queensland will face competition from a number of private and public organisations.  
   These organisations are currently developing small satellite launchers to offer bespoke launches with low costs and relatively rapid turn around times. A summary of the small satellite launchers currently in active development is shown in Table \ref{tab:smallsats}. Many of these launchers are projected to be available within the next few years, and will offer cost-per-kg comparable to piggybacking on larger launches. 
+  
+\textcolor{red}{Too commercial - reframe in a more scientific way ie advancing human knowledge. cover alternate approaches.}
   
   Much of the market niche fulfilled by each launch system is determined by the payload to orbit capabilities of the vehicle. Although the launchers shown are all classed as 'small satellite launchers', organisations seeking a launch service will choose a launcher which is designed to launch payloads of comparable size to their desired payoad, for maximum cost efficiency. There is a large variation in the payload-to-orbit capabilities of the small satellite launchers in development, ranging between 50kg to 500kg. The rocket-scramjet-rocket system studied in this thesis will target approximately 150kg of payload to orbit, most similar to the Vector-H\cite{Vector}, Haas2CA\cite{ARCA}, Bloostar\cite{Bloostar}  and Electron\cite{Electron}. 
   
@@ -70,7 +78,24 @@ Dual stage designs have been investigated in some detail using the 'spaceplane' 
 
 
 
-A Scramjet, or supersonic combustion ramjet, is an airbreathing engine design which combusts air at supersonic speeds and is capable of high Mach number operation. Scramjets were proposed in the 1940's \cite{Curran2001} and found to be capable of positive net thrust in 1993 \cite{Paull1993} but have yet to be developed to a level which would allow for commercial application. Scramjet powered vehicles are a potential candidate for small payload delivery systems, offering much higher specific impulse than rockets over their operating range \cite{Billig1993} \cite{Cook2003}. Scramjet engines exhibit this advantage within their operating range due to using atmospheric oxygen for reaction and only carrying fuel, increasing the payload mass that the scramjet vehicle is able to carry. Figure \ref{fig:AirbreathingCorridor} shows the operating corridor for scramjet engines, indicating the point at which transition to rocket stage would occur, the lower dynamic pressure limit on engine operation and the upper dynamic pressure limit on the aircraft structure.
+\textcolor{red}{explain mechanisms}
+
+\textcolor{red}{add research exploring min/max speeds - expected thrust / Isp}
+
+\textcolor{red}{point of seciton - understanding expcted performance of scramjets}
+
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/2_literature-review/scramjet}
+	\caption{scramjet-CITE hypersonic airbreathing propulsion}
+	\label{fig:scramjet}
+\end{figure}
+
+
+
+A Scramjet, or supersonic combustion ramjet, is an airbreathing engine design which combusts air at supersonic speeds and is capable of high Mach number operation. Scramjets were proposed in the 1940's \cite{Curran2001} and found to be capable of positive net thrust in 1993 \cite{Paull1993} but have yet to be developed to a level which would allow for commercial application. Scramjet powered vehicles are a potential candidate for small payload delivery systems, offering much higher specific impulse than rockets over their operating range \cite{Billig1993} \cite{Cook2003}. Scramjet engines exhibit this advantage within their operating range due to using atmospheric oxygen for reaction and only carrying fuel, increasing the payload mass that the scramjet vehicle is able to carry \textcolor{red}{rephrase}. Figure \ref{fig:AirbreathingCorridor} shows the operating corridor for scramjet engines, indicating the point at which transition to rocket stage would occur, the lower dynamic pressure limit on engine operation and the upper dynamic pressure limit on the aircraft structure.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.7\linewidth]{AirbreathingCorridor}
@@ -78,18 +103,19 @@ A Scramjet, or supersonic combustion ramjet, is an airbreathing engine design wh
 	\label{fig:AirbreathingCorridor}
 \end{figure}
 
-Smart \& Tetlow \cite{Smart2009} have found that the fuel savings achieved by using a scramjet engine within these limits, coupled with small necessary payload mass, may enable the development of a partially or fully reusable space access system utilising a scramjet powered stage in the near future. Simulations carried out  for three stage systems utilising scramjet and rocket engines for small payload delivery show favourable payload mass fractions with a reusable scramjet stage  \cite{Smart2009}. Scramjet powered vehicles may also offer the ability to put small payloads into orbit with greatly increased flexibility and launch window when compared to similarly sized rocket systems. This has been assessed in a study by Flaherty  \cite{Flaherty2010} comparing the United States Air Force's Reusable Military Launch System all-rocket launch vehicle RMLS102 against the Alliant Techsystems rocket/scramjet launch system ATK-RBCC. These vehicles are similarly sized and comparisons were made for payloads launched to rendezvous with satellites in randomly generated orbits. These vehicles were compared using the range of orbital trajectories that each vehicle was able to rendezvous with within one day, determined by launch vehicle range. The rocket/scramjet ATK-RBCC was found to have a large advantage in trajectory flexibility over the rocket only vehicle, in a large part due to the scramjets ability to fly fuel efficiently over long distances. This means in general that a partially scramjet powered accelerator  is able to fulfil the specific delivery needs of small payloads over a wider range of orbits within smaller time periods when compared to a fully rocket powered accelerator. This can be advantageous for time critical and orbit dependant payloads which have specific mission requirements to be met. 
+Smart \& Tetlow \cite{Smart2009} have found that the fuel savings achieved by using a scramjet engine within these limits, coupled with small necessary payload mass, may enable the development of a partially or fully reusable space access system utilising a scramjet powered stage in the near future. Simulations carried out  for three stage systems utilising scramjet and rocket engines for small payload delivery show favourable payload mass fractions with a reusable scramjet stage  \cite{Smart2009}. Scramjet powered vehicles may also offer the ability to put small payloads into orbit with greatly increased flexibility and launch window when compared to similarly sized rocket systems. This has been assessed in a study by Flaherty  \cite{Flaherty2010} comparing the United States Air Force's Reusable Military Launch System all-rocket launch vehicle RMLS102 against the Alliant Techsystems rocket/scramjet launch system ATK-RBCC. These vehicles are similarly sized and comparisons were made for payloads launched to rendezvous with satellites in randomly generated orbits. These vehicles were compared using the range of orbital trajectories that each vehicle was able to rendezvous with within one day, determined by launch vehicle range. The rocket/scramjet ATK-RBCC was found to have a large advantage in trajectory flexibility over the rocket only vehicle, in a large part due to the scramjets ability to fly fuel efficiently over long distances. \textcolor{red}{put in some quantitative data abot this study} This means in general that a partially scramjet powered accelerator  is able to fulfil the specific delivery needs of small payloads over a wider range of orbits within smaller time periods when compared to a fully rocket powered accelerator. This can be advantageous for time critical and orbit dependant payloads which have specific mission requirements to be met. 
 
 
 
 
 \section{The SPARTAN}
 
+\textcolor{red}{reorder until after trajectory of 1,2,3 stage vehicles}
 
 
 
 
-The three stage, partially reusable, access to space system under development at The University of Queensland utilises the SPARTAN\cite{Jazra2013} scramjet powered vehicle as the reusable second stage, shown in Figure \ref{fig:SPARTAN}. This system is considered in this study as a representative model for three stage, airbreathing access to space system designs. This launch system is designed for small payload deliveries to orbit and will in the future utilise a fly-back rocket booster to accelerate the SPARTAN stage to minimum Mach number required for stable burn, at which point separation occurs and the second stage uses a scramjet engine to accelerate to between approximately Mach 5-9. The first and second stages are to be reusable, the first stage via conversion into a propeller powered drone, and the second stage through either a glide or extra scramjet powered flight to a suitable landing site. However, the first stage booster considered in this study is a simple disposable design. The ascent profile is of interest to this study, however development of the fly-back trajectory profile requires detailed first stage vehicle design which is outside of the scope of this study. 
+The three stage, partially reusable, access to space system under development at The University of Queensland utilises the SPARTAN\cite{Jazra2013} scramjet powered vehicle as the reusable second stage, shown in Figure \ref{fig:SPARTAN}. This system is considered in this study as a representative model for three stage, airbreathing access to space system designs. This launch system is designed for small payload deliveries to orbit and will in the future utilise a fly-back rocket booster to accelerate the SPARTAN stage to minimum Mach number required for stable burn, at which point separation occurs and the second stage uses a scramjet engine to accelerate to between approximately Mach 5-9. The first and second stages are to be reusable, the first stage via conversion into a propeller powered drone, and the second stage through either a glide or extra scramjet powered flight to a suitable landing site. \textcolor{red}{However, the first stage booster considered in this study is a simple disposable design. The ascent profile is of interest to this study, however development of the fly-back trajectory profile requires detailed first stage vehicle design which is outside of the scope of this study. DONT MIX LIT REVIEW AND STUDY}
 
 \begin{figure}[ht]
 	\centering
@@ -105,6 +131,9 @@ This system is in the preliminary design stage, with estimates of  payload mass 
 The SPARTAN has been studied in some detail, simulated over a constant dynamic pressure trajectory with variation in the aerodynamic surface properties of the vehicle. 
 
 \subsection{Scramjet Engine Model}
+
+\textcolor{red}{Much more info, how is off design performance calculated, what model is used.}
+
 To deliver a payload to orbit, the SPARTAN uses four Rectangular-to-Elliptical Shape Transition (REST) scramjet engines, with inlets configured to allow installation on a conical forebody. This study uses engines configured to fly between Mach 5 and 10, this type of engine is known as a C-RESTM10 engine\cite{Preller2017}. The REST model has been studied experimentally for flight at off design conditions by Smart \& Ruf \cite{Smart2006}. The REST engine has been used as it has been proven to operate successfully at off-design conditions, an extremely important property for this study as the scramjet stage experiences a range of Mach number flight conditions, and significant variation in dynamic pressure.  
 
 A propulsion database of the C-RESTM10 has been provided for this study by Prof. Michael Smart.
@@ -118,13 +147,19 @@ A propulsion database of the C-RESTM10 has been provided for this study by Prof.
 
 
 \section{First Stage Rocket Booster}
+\textcolor{red}{review engine options and modelling/scaling techniques}
 
-The SPARTAN scramjet vehicle must be accelerated to its minimum operating speed by a first stage rocket booster. This booster must be capable of efficient operation from launch at sea level until staging. It is envisioned that the SPARTAN system will eventually use a reusable flyback booster\cite{Preller2017}. However the flyback of the first stage is outside the scope of this study. Instead, a model of an existing first stage booster will be used, for which the Falcon-1e was chosen.
+The SPARTAN scramjet vehicle must be accelerated to its minimum operating speed by a first stage rocket booster. This booster must be capable of efficient operation from launch at sea level until staging. It is envisioned that the SPARTAN system will eventually use a reusable flyback booster\cite{Preller2017}. However the flyback of the first stage is outside the scope of this study. Instead, a model of an existing first stage booster will be used,\textcolor{red}{ for which the Falcon-1e was chosen.}
 
-The SpaceX Falcon-1e launch system was a proposed small satellite launch system which would have entered use after 2010\cite{Vehicle2008}, but was discontinued and superseded by the Falcon-9 project. The Falcon-1e was designed to launch payloads between 600-900kg to low Earth orbit, with flexible orbit altitude and inclination. The Falcon-1e was to be the next generation of the Falcon-1\cite{Vehicle2008}, a launch tested, modern launch system. The Falcon-1e was chosen for its appropriate size and the proven flight effectiveness of the Falcon-1. The first stage of the Falcon-1e is powered by a Merlin 1C LOX/Kerosene turbopump engine. The first stage rocket is designed to be a Falcon-1e first stage scaled lengthwise to 50\% of its original length. 
+\textcolor{red}{The SpaceX Falcon-1e launch system was a proposed small satellite launch system which would have entered use after 2010\cite{Vehicle2008}, but was discontinued and superseded by the Falcon-9 project. The Falcon-1e was designed to launch payloads between 600-900kg to low Earth orbit, with flexible orbit altitude and inclination. The Falcon-1e was to be the next generation of the Falcon-1\cite{Vehicle2008}, a launch tested, modern launch system. }
+
+\textcolor{red}{The Falcon-1e was chosen for its appropriate size and the proven flight effectiveness of the Falcon-1. The first stage of the Falcon-1e is powered by a Merlin 1C LOX/Kerosene turbopump engine. The first stage rocket is designed to be a Falcon-1e first stage scaled lengthwise to 50\% of its original length. REMOVE THIS -  do not describe design in lit review}
 
 
 \section{Exoatmospheric Rocket Engines}
+
+\textcolor{red}{expand this to include control of third stage, identify losses/penalties}
+
 After scramjet stage burnout, the upper stage rocket must exit the atmosphere, and accelerate the payload to orbital velocity. This requires a rocket engine with sufficient thrust to accelerate the third stage rocket out of the atmosphere, and a diameter small enough to allow the rocket to fit within the fuselage of the SPARTAN. Table \ref{tab:Engine} shows a comparison study of upper stage rocket engines. 
 
 \begin{landscape}% Landscape page
@@ -151,6 +186,7 @@ After scramjet stage burnout, the upper stage rocket must exit the atmosphere, a
 
 
 \section{Partially-Airbreathing Launch Vehicle Ascent Trajectories}
+\textcolor{red}{discuss trim - investigated by Dawid}
 
 Current simulations of the SPARTAN vehicle have been carried out with the assumption of a 50kpa dynamic pressure trajectory, a likely design point of the vehicle and scramjet engine. 
  Constant dynamic pressure trajectories have been used for airbreathing vehicle simulation due to the trade-off between structural loading and engine performance for hypersonic vehicles \cite{Olds1998} . As dynamic pressure increases so does the structural loading on the vehicle, however scramjet thrust is directly reliant on dynamic pressure ie. an increase in dynamic pressure directly means more air into the engine inlet. A constant dynamic pressure is viewed as being an acceptable compromise between these two factors.   
@@ -302,17 +338,20 @@ These optimised return trajectories show three distinct sections; a turn manoeuv
 \label{fig:chai-boostskip}
 \end{figure}
 
-
-When compared to the vehicles investigated by Tsuchiya and Mori\cite{Tsuchiya2005}, the SPARTAN separates from its third stage rocket at a considerably higher Mach number of Mach 9.1, as well as at a considerably higher dynamic pressure of 33.9kPa. The SPARTAN must also cover a longer fly-back range of 878km. In addition, the C-REST scramjet engines are limited to operating at hypersonic speeds of Mach 5.1 or higher. These design differences create substantially more challenging conditions than those studied by Tsuchiya and Mori. Consequently, it is necessary to investigate the ability of the SPARTAN to return to the launch site following separation. From comparisons of the studies within this section it is evident that an optimisation of the return flight of the SPARTAN is required, and that a simply defined trajectory is not appropriate.
+\textcolor{red}{
+When compared to the vehicles investigated by Tsuchiya and Mori\cite{Tsuchiya2005}, the SPARTAN separates from its third stage rocket at a considerably higher Mach number of Mach 9.1, as well as at a considerably higher dynamic pressure of 33.9kPa. The SPARTAN must also cover a longer fly-back range of 878km. In addition, the C-REST scramjet engines are limited to operating at hypersonic speeds of Mach 5.1 or higher. These design differences create substantially more challenging conditions than those studied by Tsuchiya and Mori. Consequently, it is necessary to investigate the ability of the SPARTAN to return to the launch site following separation. From comparisons of the studies within this section it is evident that an optimisation of the return flight of the SPARTAN is required, and that a simply defined trajectory is not appropriate. TALKIGN ABOUT MY WORK}
 
 \section{Optimal Control}
 
+\textcolor{red}{KEEP THIS SECTION AN BROAD AS POSSIBLE - describe all alternatives}
 
+\textcolor{red}{be more generic here}
 To this point analysis of the SPARTAN trajectory has been performed using PID feedback control, assuming a constant dynamic pressure trajectory \cite{Preller2015}. PID feedback control simulates the vehicle flight and manoeuvres the vehicle so that the trajectory conforms to a defined design point. Currently the trajectory of the SPARTAN has been simulated to align as closely as possible with 50kPa flight, a problem for which PID control is well suited. 
 
+\textcolor{red}{more concise}
 This study aims to find the optimal trajectory path for the SPARTAN that will produce maximum payload to orbit capability for the three stage system. Feedback control is infeasible for finding an optimal trajectory shape as there is no single design point at each stage of the simulated trajectory to calibrate towards. A control method is required that can take into account all aerodynamic factors at every timestep in order to find an optimal trajectory. Defining the trajectory simulation as an optimisation problem allows the trajectory to be solved at every point simultaneously, producing an optimal trajectory over the entire simulation space. Optimal control theory is widely used in situations where an optimal trajectory path must be found, and has been used widely in aerospace applications. However a trajectory optimisation has not been attempted on a three stage airbreathing system, and is usually reserved for simpler systems as there can be issues with convergence and long computation times \cite{Diehl2006}. This does not rule out using an optimisation method on a complex aerodynamic system however it does reinforce that choosing the correct optimisation procedure and defining the problem in the correct way is integral to developing an accurate solution method. This study aims to find a method of optimisation that is applicable to a complex aerodynamic trajectory and to apply this to the SPARTAN vehicle to produce an optimal trajectory shape for maximum payload delivery to heliocentric orbit.
 
-For an optimisation of a complex trajectory there are a variety of optimal control methods that are useful for specific problem types. These are separated into two categories: direct and indirect solution methods. Indirect methods are based on the calculus of variations or minimum principle model, and generally result in high accuracy solutions to optimisation problems \cite{Bulirsch1993}. However indirect models suffer from the drawbacks of small radii of convergence and the fact that the equations to be solved often exhibit strong nonlinearity and discontinuities. This means that indirect methods will not be solvable unless the problem is very well defined with a minimum of nonlinearity, making indirect methods unsuitable for many complex optimisation problems such as aerospace vehicle simulations which can exhibit strong nonlinear behaviour and have a wide solution space. 
+For an optimisation of a complex trajectory there are a variety of optimal control methods that are useful for specific problem types. These are separated into two categories: direct and indirect solution methods. Indirect methods are based on the calculus of variations or minimum principle model, and generally result in high accuracy solutions to optimisation problems \cite{Bulirsch1993}. However indirect models suffer from the drawbacks of small radii of convergence and the fact that the equations to be solved often exhibit strong nonlinearity and discontinuities. This means that indirect methods will not be solvable unless the problem is very well defined with a minimum of nonlinearity, making indirect methods unsuitable for many complex optimisation problems, such as aerospace vehicle simulations which can exhibit strong nonlinear behaviour and have a wide solution space. 
 
 Direct methods transform an optimisation problem into a nonlinear programming (NLP) problem which can be solved computationally \cite{Stryk1992}. NLP solvers solve the optimisation problem defined as \cite{Bazaraa2013}:
 
@@ -330,6 +369,7 @@ and \qquad h_j(x) = 0 \quad for \quad j=1,...,n
 
 An optimisation problem that has been discretised in this form can thus be solved using any of a variety of NLP solvers. One of the most effective methods of solving twice differentiable NLP problems is sequential quadratic programming (SQP) \cite{Boggs2000} for which there is a variety of commercial solvers available such as NPSOL, SNOPT and packages within MATLAB. 
 
+\textcolor{red}{more concise}
 In order for these packages to be able to solve an optimisation problem it must be presented in discretised form, and as such must be transformed using approximation techniques. The task of approximating a continuous optimisation problem in discrete NLP solvable form is not simple. SQP solvers can very easily run into convergence issues when provided with an optimisation problem which has not been well defined over a logical solution space. Also, any approximation must be carried out with care that the accuracy of the solution is not compromised. There are multiple ways to approximate a continuous optimisation problem directly as an NLP problem, the most common of which are shooting and collocation methods. The differences in the behaviour of each method are related to the interaction between the SQP solver and the discretisation method by which the problem is defined, and can affect the stability and accuracy of the solution as well as the solution time of the problem. For this study of in atmosphere trajectory optimisation with complex atmospheric and vehicle properties it was desired that a method be found with maximum stability and accuracy for a relatively large solution space, while solution time is a secondary priority.
 
 \subsection{The Single Shooting Method}
@@ -474,6 +514,7 @@ The state equations (Equation \ref{eq:state}, in this case the system dynamics) 
 
 Where $D$ is the differentiation matrix, defined at each entry $k,l$ by:
 
+\textcolor{red}{reduce the spacing between equations...}
 \begin{eqnarray}
 k \neq l\qquad
 D_{kl} = \frac{L_N(t_k)}{L_N(t_l)} \frac{1}{t_k - t_l}
@@ -548,7 +589,8 @@ These results indicate that the pseudospectral method does not exhibit instabili
 Based on the proven track record of the pseudospectral method in simulation situations, it was decided that using the pseudospectral method for the optimisation of the rocket-scramjet-rocket system was a sound and feasible decision. It has been necessary to investigate the range of solvers available that will utilise a pseudospectral method to solve an optimisation problem with the desired capabilities and usability. 
 
 \subsection{Available Solvers}
-\textcolor{red}{change this section to reflect more current perspective}
+\textcolor{red}{change this section to reflect more current perspectives.
+expand on what each program actually does. Add programs like POST/POST2 (direct shooting?), OTIS, TRANSWHORP, ASTOS}
 
 The pseudospectral method has a number of solvers available commercially, the foremost of which are DIDO, produced by Elissar Global \cite{Ross2002}, GPOPS II \cite{Rao2010} and PROPT, a module integrated with TOMLAB \cite{Rutquist2010}. These solvers utilise nonlinear programming techniques to solve optimal control problems in discretised form and are all similar in their operation. These have been investigated for a variety of considerations with details available in Section \ref{Achievements to Date}. 
 
@@ -577,6 +619,8 @@ An effort was made to find an open source program that could complete the desire
 Simulating the trajectory of access to space vehicles requires the aerodynamics of the launch vehicle to be characterised accurately. This entails the creation of large aerodynamic coefficient databases, which cover the operable region of the vehicle, and include the effect of control surface deflections. The liability of the vehicle design to change during the preliminary design phases renders highly accurate CFD or experimental studies expensive and inefficient CITATION. Instead, solutions are found which are able to approximate the aerodynamic characteristics to an appropriate accuracy, while providing fast set-up speeds as well as computation times. 
 
 \subsection{HYPAERO}
+\textcolor{red}{need to expand to be a general review of solvers available (unbiased). include brief discussion on turbulence. discuss viscous effects}
+
 
 Hypaero is an aerodynamic calculation tool developed for the preliminary design of hypersonic vehicles. 
 HYPAERO uses strip theory, dividing the surface of the vehicle into panels to calculate aerodynamic properties along the aircraft as illustrated in Figure \ref{fig:strip}. In strip theory two dimensional sections are created running the length of the vehicle, defining streamlines along the vehicle faces. Pressure, Mach number and skin friction are calculated along these streamlines to compute the aerodynamic coefficients of the vehicle. The Aerodynamic analysis of the SPARTAN has been performed using HYPAERO by Jazra et al. \cite{Jazra2013}. The aerodynamic coefficients of the SPARTAN vehicle have been provided for this study by Dawid Preller.
