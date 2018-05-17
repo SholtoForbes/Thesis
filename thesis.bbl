@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 2.9 $
+% $ biblatex bbl format version 2.8 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -16,7 +16,7 @@
   {}
 \endgroup
 
-\datalist[entry]{nty/global//global/global}
+\sortlist[entry]{nty/global/}
   \entry{Lynx}{misc}{}
     \name{author}{1}{}{%
       {{hash=AX}{%
@@ -3218,5 +3218,5 @@
     }
     \field{year}{2013}
   \endentry
-\enddatalist
+\endsortlist
 \endinput

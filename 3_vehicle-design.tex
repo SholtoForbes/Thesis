@@ -4,15 +4,26 @@
 \chapter{Launch Vehicle Baseline Design}\label{chapter:methodology}
 
 
-\textcolor{red}{show a schematic sketch of all the vehicles along the trajectory }
+
 
 
 \textcolor{red}{move tables to appendix, think of either moving performance maps to appendix, or including smaller images}
 
 
-\textcolor{red}{reorder, SPARTAN first, make clear that the SPARTAN size is being kep constant, at Dawids baseline size/geometry}
 
-This chapter presents the baseline three stage small satellite launch system utilised in this thesis. The design for the first stage rocket-powered vehicle, second stage scramjet-powered vehicle (the SPARTAN), and third stage rocket-powered vehicle are presented. This baseline design is used for the initial trajectory analysis and optimisation in this study. The launch system has been designed based on the SPARTAN vehicle developed by Preller \& Smart.
+
+
+This chapter presents the baseline three stage small satellite launch system utilised in this thesis. The launch system is launched vertically under rocket power, from a traditional small rocket launch facility. The SPARTAN vehicle is mounted to the front of the first stage rocket. This configuration allows the SPARTAN to take the brunt of the aerodynamic forces and heating, as well as allowing the use of the control surfaces of the SPARTAN. The SPARTAN is accelerated by the first stage rocket, to its minimum operating velocity, at which point separation occurs. The SPARTAN's four scramjet engines are ignited, and SPARTAN accelerated through the atmosphere, reaching approximately Mach 9. At this point, the specific impulse of the scramjet engines, and thus the efficiency of the SPARTAN, have decreased, and the third stage rocket is separated. The third stage rocket accelerates for a time, before cutting its engine and coasting out of the atmosphere. Once the rocket is exoatmospheric, the engine is reignited multiple times, performing first a circularisation burn, and then a Hohmann transfer to the intended orbit. Meanwhile, the SPARTAN banks and executes a fly-back manoeuvre to return to its initial launch site. The SPARTAN extends landing gear, and lands on a traditional runway in the style of a conventional aircraft. The SPARTAN is able to be rapidly refurbished and remounted for further launches. 
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\linewidth]{figures/3_vehicle_design/Trajsimple}
+	\caption{The launch process of the rocket-scramjet-rocket launch system, presented in simplified form.}
+	\label{fig:Trajsimple}
+\end{figure}
+
+The design for the first stage rocket-powered vehicle, second stage scramjet-powered vehicle (the SPARTAN), and third stage rocket-powered vehicle are presented. This baseline design is used for the initial trajectory analysis and optimisation in this study. The launch system has been designed based on the SPARTAN vehicle developed by Preller \& Smart. The size and external design of the SPARTAN are used exactly as defined by Preller \& Smart, and are not modified in any way. The internal component masses of the SPARTAN are either identical to those defined by Preller \& Smart, or are scaled if the internal component is modified. The first stage rocket, third stage rocket, and internal components have been designed to conform to the size and shape of the baseline SPARTAN vehicle as defined by Preller \& Smart.
 
 This chapter also describes the aerodynamic models of the vehicles used in this study, including the engine models.
 
@@ -32,14 +43,7 @@ This chapter also describes the aerodynamic models of the vehicles used in this 
 \end{figure}
 
 
-\section{First Stage Rocket}
-The first stage rocket-powered vehicle is based on the first stage of the SpaceX Falcon-1e. The Falcon-1e has been chosen due to its appropriate scale, and the proven flightworthiness of the Falcon-1.
 
-\begin{itemize}
-	\item detailed design
-	\item First Stage aerodynamic coefficients calculated in CART3D
-	\item details of CAD, pointwise mesh, and CART3D gridding settings
-\end{itemize}
 	
 	
 	\section{Second Stage Scramjet}
@@ -55,29 +59,47 @@ The first stage rocket-powered vehicle is based on the first stage of the SpaceX
 The fuel tanks have a total tank volume of 22.0m$^3$, containing a fuel mass of 1562kg.
 The mass of the fuel tanks is scaled from Dawid Prellers model of the SPARTAN, giving a total fuel tank mass of 179.41kg.
 		
-		
+		-detail individual fuel tank masses (and how they were designed)
 
 		
 		
 		\subsection{Aerodynamics}
+		
+		The aerodynamics of the SPARTAN have been calculated using CART3D, an inviscid CFD package used in the preliminary design of aerospace vehicles. Cart3D utilises adjoint mesh adaption with a Cartesian cut-cells approach to produce an iteratively refined mesh to fit a flow solution. CART3D has
+		been used to generate the aerodynamic database of the SPARTAN vehicle due to its applicability in both the subsonic
+		and supersonic regimes, and its robustness across multiple flow solutions [16]. CART3D has previously been used to
+		analyse hypersonic vehicles, and has shown good agreement with experimental data across multiple studies [24, 25].
+		The SPARTAN has been simulated in CART3D across Mach numbers from 0.2 to 10, and for angle of attack values from
+		0$^\circ$ to 10$^\circ$. Example cases are shown in Figure \ref{fig:M1}, \ref{fig:M3AoA6} and \ref{fig:M7AoA6}. Figures XXX and XXX show the lift and drag
+		coefficients of the SPARTAN vehicle over the range of Mach numbers and angle of attack values analysed.
+		
+		
+		
+		
 		method of calculating aerodynamics for trim at required lift
 		
 		-detail hypaero vs CART3D? 
 		
-				CG - determined using CREO.
-		-detail  CG positioning and shifting during flight as well as method for calculating trim
 		
 		conical shock calculation
 		
-  \subsubsection{Aerodynamics Including First Stage}
-		
+An initial centre of gravity of 14.0m was calculated using CREO, using the mass fractions calculated by Preller [CITATION]. This centre of gravity calculation assumes that the structural mass of the SPARTAN is evenly distributed throughout the body volume. As the SPARTAN is still in the preliminary design stages, it has been assumed that the centre of gravity is slightly variable. This assumption allows the centre of gravity to be varied slightly to improve the stability of the SPARTAN, as well as positioning the moment centre to minimise necessary flap deflection over the trajectory of the SPARTAN, improving the aerodynamic characteristics of the SPARTAN. 
+
+The SPARTAN is trimmed using control surfaces on the wings, shown in figure \ref{fig:SPARTAN_FLAPS}. 
 
 \begin{figure}
 \centering
-\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/CARTcontour}
-\caption{CART3D result for the SPARTAN and first stage vehicles at Mach 2, -1$^\circ$ angle of attack.}
-\label{fig:CARTcontour}
+\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/SPARTAN_FLAPS}
+\caption{}
+\label{fig:SPARTAN_FLAPS}
 \end{figure}
+
+
+The centre of gravity of the SPARTAN is varied as fuel is depleted throughout the acceleration phase, as well as when the third stage rocket is released. A point mass model is used in conjunction with the aerodynamic database,
+and atmospheric properties obtained from the U.S Standard Atmosphere 1976[26]. The SPARTAN is assumed to be
+trimmed at all conditions during flight.
+
+
 
 
 
@@ -99,7 +121,7 @@ details of CART3D setup (no adapt levels / radius etc)
 
 CART3D validation
 
--CG location and movement
+
 
 14.5m set as CG at end of burn, after third stage release. This is observed to produce a relatively stable trimmed acceleration and return. 
 
@@ -123,19 +145,19 @@ for each of these
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/M1p1AoA6}
+	\includegraphics[width=0.9\linewidth]{figures/3_vehicle_design/M1p1AoA6}
 	\caption{CART3D flow result for the SPARTAN, at Mach 1.1, 6$^\circ$ angle of attack.}
 	\label{fig:M1}
 \end{figure}
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/M3AoA6}
+	\includegraphics[width=0.9\linewidth]{figures/3_vehicle_design/M3AoA6}
 	\caption{CART3D flow result for the SPARTAN, at Mach 3, 6$^\circ$ angle of attack.}
 	\label{fig:M3AoA6}
 \end{figure}
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/M7AoA6}
+	\includegraphics[width=0.9\linewidth]{figures/3_vehicle_design/M7AoA6}
 	\caption{CART3D flow result for the SPARTAN, at Mach 7, 6$^\circ$ angle of attack.}
 	\label{fig:M7AoA6}
 \end{figure}
@@ -143,55 +165,56 @@ for each of these
 
 \textcolor{red}{need engine off, engine on and flap deflection comparisons}
 CHANGE THESE GRAPHICS
+
 \begin{figure}
+	\begin{subfigure}{.5\textwidth}
 \centering
-\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/Cl}
+\includegraphics[width=0.99\linewidth]{figures/3_vehicle_design/Cl}
 \caption{Coefficients of lift of the SPARTAN, calculated using CART3D.}
 \label{fig:Cl}
-\end{figure}
-\begin{figure}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
 \centering
-\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/Cd}
+\includegraphics[width=0.99\linewidth]{figures/3_vehicle_design/Cd}
 \caption{Coefficients of drag of the SPARTAN, calculated using CART3D.}
 \label{fig:Cd}
-\end{figure}
-\begin{figure}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
 \centering
-\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/LD}
+\includegraphics[width=0.99\linewidth]{figures/3_vehicle_design/LD}
 \caption{L/D of the SPARTAN.}
 \label{fig:LD}
+\end{subfigure}
 \end{figure}
+
 
 These results show a distinct maximum region in the L/D of the SPARTAN at high Mach numbers, within the hypersonic regime. Below Mach 5, the L/D of the SPARTAN decreases sharply. 
 
 \begin{figure}
+	\begin{subfigure}{.5\textwidth}
 	\centering
-	\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/Cl-EngineOn}
+	\includegraphics[width=0.99\linewidth]{figures/3_vehicle_design/Cl-EngineOn}
 	\caption{Coefficient of lift of the SPARTAN with the C-REST engines powered-on. This is obtained by removing the engines and boat-tail from the CART3D simulation results.}
 	\label{fig:Cl-EngineOn}
-\end{figure}
-\begin{figure}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
 	\centering
-	\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/Cd-EngineOn}
+	\includegraphics[width=0.99\linewidth]{figures/3_vehicle_design/Cd-EngineOn}
 	\caption{Coefficient of drag of the SPARTAN with the C-REST engines powered-on. This is obtained by removing the engines and boat-tail from the CART3D simulation results.}
 	\label{fig:Cd-EngineOn}
-\end{figure}
-\begin{figure}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
 	\centering
-	\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/LD-EngineOn}
+	\includegraphics[width=0.99\linewidth]{figures/3_vehicle_design/LD-EngineOn}
 	\caption{L/D of the SPARTAN with the C-REST engines powered on.}
 	\label{fig:LD-EngineOn}
+\end{subfigure}
 \end{figure}
 
 For the engine-on case, the engines and boat tail are removed from the aerodynamics of the vehicle. In the engine-on case the drag is decreased for all conditions. The lift is increased at low angle of attack, and increased at high angle of attack.
 
 
 -put in plots for moments, think about best way to present trim?
-
-\subsection{Engine-On Plume Model}
-
-include plumes and small investigation showing that they will not impact my study significantly, and justify removing boat tail from aero
-
 
 		
 		\subsection{Propulsion Modelling}
@@ -213,9 +236,84 @@ include plumes and small investigation showing that they will not impact my stud
 \caption{}
 \label{fig:ISPinterp}
 \end{figure}
+	\textcolor{red}{Put Plot of eq Here too}
+
+\subsection{Engine-On Plume Model}
+
+The operation of the scramjet engines changes the aerodynamic characteristics of the SPARTAN significantly. 
+The plumes of the scramjet engines exit the nozzle of the SPARTAN, and are further expanded onto the boat tail on the rear of the SPARTAN fuselage. This expansion causes significant force on the boat tail of the SPARTAN, generating additional lift, thrust and moment forces. The plumes of the SPARTAN have been simulated using CART3D, using surface boundary conditions which produce inflow and outflow conditions at the inlet and exit of the scramjet engines. The CRESTM10 database has been used to calculate the engine conditions at the exit of the scramjet engines, and this has been set as the outflow condition. These conditions are normalised for CART3D as follows:
+
+\begin{equation}
+P_e^* = P_e/(\gamma_e P_0)
+\end{equation}
+
+\begin{equation}
+\rho_e^* = \rho_e/\rho_0
+\end{equation}
+
+\begin{equation}
+M_e^* = \sqrt{\gamma_e/\gamma_0 (M_e \sqrt{ P_e^*/\rho_e^*})^2}
+\end{equation}
+This includes a correction on the Mach number to account for $\gamma_e$ variation, which is not possible to include directly in CART3D.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\linewidth]{figures/3_vehicle_design/EngineOn-M7AoA024km}
+	\caption{}
+	\label{fig:EngineOn-M7AoA624km}
+\end{figure}
+
+
+\section{First Stage Rocket}
+The first stage rocket-powered vehicle is based on the first stage of the SpaceX Falcon-1e. The Falcon-1e has been chosen due to its appropriate scale, and the proven flightworthiness of the Falcon-1.
+
+\begin{itemize}
+	\item detailed design
+	\item First Stage aerodynamic coefficients calculated in CART3D
+	\item details of CAD, pointwise mesh, and CART3D gridding settings
+\end{itemize}
+
+
+  \subsubsection{Aerodynamics Including First Stage}
+
+  
+  The aerodynamics of the SPARTAN and first stage rocket have been calculated using CART3D. For the purposes of these simulations, a connecting cowl has been modelled between the first stage rocket and the SPARTAN, to improve aerodynamics. The first stage aerodynamics have been modelled between angles of attack of 0$^\circ$ to -5$^\circ$, as the first stage will be flying at negative angle of attack to induce faster pitch-over. Mach numbers from 0.2 to 5.1 (second stage separation velocity) have been simulated. Figure \ref{fig:CARTcontour} shows an example CART3D simulation case, at Mach 2, -1$^\circ$ angle of attack. Figure \ref{fig:FirstStageAero} shows the lift and drag coefficients of the first stage, as well as the lift-over-drag, across the simulated Mach Numbers and angles of attack. 
+  
+  
+  
+  \begin{figure}
+  	\centering
+  	\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/CARTcontour}
+  	\caption{CART3D result for the SPARTAN and first stage vehicles at Mach 2, -1$^\circ$ angle of attack.}
+  	\label{fig:CARTcontour}
+  \end{figure}
+
+\begin{figure}
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.99\linewidth]{figures/3_vehicle_design/FirstStageCl}
+		\caption{Coefficient of lift.}
+		\label{fig:Cl-FirstStage}
+	\end{subfigure}
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.99\linewidth]{figures/3_vehicle_design/FirstStageCd}
+		\caption{Coefficient of drag.}
+		\label{fig:Cd-FirstStage}
+	\end{subfigure}
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.99\linewidth]{figures/3_vehicle_design/FirstStageLD}
+		\caption{L/D.}
+		\label{fig:LD-EFirstStage}
+	\end{subfigure}
+	\caption{Aerodynamic characteristics of the SPARTAN including the first stage rocket.}
+	\label{fig:FirstStageAero}
+\end{figure}
+
 
 	
-	\textcolor{red}{Put Plot of eq Here too}
+
 	\section{Third Stage Rocket - Baseline}
 	
 	\begin{figure}
