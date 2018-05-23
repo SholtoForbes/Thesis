@@ -4,15 +4,6 @@
 \chapter{Launch Vehicle Baseline Design}\label{chapter:methodology}
 
 
-
-
-
-\textcolor{red}{move tables to appendix, think of either moving performance maps to appendix, or including smaller images}
-
-
-
-
-
 This chapter presents the baseline three stage small satellite launch system utilised in this thesis. The launch system is launched vertically under rocket power, from a traditional small rocket launch facility. The SPARTAN vehicle is mounted to the front of the first stage rocket. This configuration allows the SPARTAN to take the brunt of the aerodynamic forces and heating, as well as allowing the use of the control surfaces of the SPARTAN. The SPARTAN is accelerated by the first stage rocket, to its minimum operating velocity, at which point separation occurs. The SPARTAN's four scramjet engines are ignited, and SPARTAN accelerated through the atmosphere, reaching approximately Mach 9. At this point, the specific impulse of the scramjet engines, and thus the efficiency of the SPARTAN, have decreased, and the third stage rocket is separated. The third stage rocket accelerates for a time, before cutting its engine and coasting out of the atmosphere. Once the rocket is exoatmospheric, the engine is reignited multiple times, performing first a circularisation burn, and then a Hohmann transfer to the intended orbit. Meanwhile, the SPARTAN banks and executes a fly-back manoeuvre to return to its initial launch site. The SPARTAN extends landing gear, and lands on a traditional runway in the style of a conventional aircraft. The SPARTAN is able to be rapidly refurbished and remounted for further launches. 
 
 
@@ -89,6 +80,13 @@ During flight the C-REST inlet conditions will stay within the region bounded by
 		
 		
 		\subsection{Aerodynamics}
+		An initial surface triangulation of the SPARTAN has been created in Pointwise, shown in Figure \ref{fig:Pointwise}.
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/Pointwise}
+			\caption{}
+			\label{fig:Pointwise}
+		\end{figure}
 		
 		The aerodynamics of the SPARTAN have been calculated using CART3D, an inviscid CFD package used in the preliminary design of aerospace vehicles. Cart3D utilises adjoint mesh adaption with a Cartesian cut-cells approach to produce an iteratively refined mesh to fit a flow solution. CART3D has
 		been used to generate the aerodynamic database of the SPARTAN vehicle due to its applicability in both the subsonic
@@ -99,9 +97,15 @@ During flight the C-REST inlet conditions will stay within the region bounded by
 		
 		The aerodynamics of the SPARTAN are calculated using for Mach numbers from 0.2 to 10, and angle of attack values from 0$^\circ$ to 10$^\circ$. Engine-on aerodynamic calculations are performed for Mach numbers 5,7,9 and 10, and at altitudes from 20km to 40km. 
 		
+		details of CART3D setup (no adapt levels / radius etc)
 		
-		Example cases are shown in Figure \ref{fig:M1}, \ref{fig:M3AoA6} and \ref{fig:M7AoA6}. Figures XXX and XXX show the lift and drag
-		coefficients of the SPARTAN vehicle over the range of Mach numbers and angle of attack values analysed.
+		CART3D Meshes were initiated with an outer boundary distance of 40 times the vehicle length. This boundary distance was observed to produce suitable free stream conditions and good mesh convergence. Nine mesh adaption levels were used. Nine levels were observed to generally produce good convergence, with moderate computation times of 1-3 hours per simulation. The convergence of the residuals and forces were investigated to ascertain if a solution has converged. 
+		
+		
+		CART3D validation
+		
+		
+		Example cases are shown in Figure \ref{fig:M1}, \ref{fig:M3AoA6} and \ref{fig:M7AoA6}. Figures XXX and XXX show the lift and drag coefficients of the SPARTAN vehicle over the range of Mach numbers and angle of attack values analysed.
 		
 		
 		
@@ -117,14 +121,6 @@ During flight the C-REST inlet conditions will stay within the region bounded by
 		
 An initial centre of gravity of 14.0m was calculated using CREO, using the mass fractions calculated by Preller [CITATION]. This centre of gravity calculation assumes that the structural mass of the SPARTAN is evenly distributed throughout the body volume. As the SPARTAN is still in the preliminary design stages, it has been assumed that the centre of gravity is slightly variable. This assumption allows the centre of gravity to be varied slightly to improve the stability of the SPARTAN, as well as positioning the moment centre to minimise necessary flap deflection over the trajectory of the SPARTAN, improving the aerodynamic characteristics of the SPARTAN. 
 
-The SPARTAN is trimmed using control surfaces on the wings, shown in figure \ref{fig:SPARTAN_FLAPS}. 
-
-\begin{figure}
-\centering
-\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/SPARTAN_FLAPS}
-\caption{}
-\label{fig:SPARTAN_FLAPS}
-\end{figure}
 
 
 The centre of gravity of the SPARTAN is varied as fuel is depleted throughout the acceleration phase, as well as when the third stage rocket is released. A point mass model is used in conjunction with the aerodynamic database,
@@ -143,15 +139,6 @@ This section details the aerodynamics of the SPARTAN, calculated using CART3D. A
 
 
 
-Images of pointwise mesh
-
-
-
-details of CART3D setup (no adapt levels / radius etc)
-
-
-CART3D validation
-
 
 
 14.5m set as CG at end of burn, after third stage release. This is observed to produce a relatively stable trimmed acceleration and return. 
@@ -167,7 +154,13 @@ for each of these
 -engine on coeffs
 -Flap Deflection coeffs
 
-\textcolor{red}{need to include cliccalc and CART3D into my process diagrams?}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/FlowChart}
+\caption{}
+\label{fig:FlowChart}
+\end{figure}
 
 
 -show side and bottom results for M=0.5,1.1,5,9 (appendix)
@@ -243,7 +236,46 @@ These results show a distinct maximum region in the L/D of the SPARTAN at high M
 For the engine-on case, the engines and boat tail are removed from the aerodynamics of the vehicle. In the engine-on case the drag is decreased for all conditions. The lift is increased at low angle of attack, and increased at high angle of attack.
 
 
--put in plots for moments, think about best way to present trim?
+
+
+The SPARTAN is trimmed using control surfaces on the wings, shown in figure \ref{fig:SPARTAN_FLAPS}. 
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/SPARTAN_FLAPS}
+	\caption{}
+	\label{fig:SPARTAN_FLAPS}
+\end{figure}
+
+
+The trimmed aerodynamics of the SPARTAN are determined by modelling the flaps at deflected states of -20$^\circ$, -10$^\circ$, 10$^\circ$, and 20$^\circ$. Each of these deflected states were modelled in CREO and a surface mesh was created in Pointwise. The aerodynamics at each flap deflection were calculated at 0$^\circ$ angle of attack for Mach numbers between 0.2 and 10. Trim is determined by calculating the aerodynamic moment coefficient with zero flap deflection, then calculating the flap deflection necessary to balance the aerodynamic moments to zero. This trim balancing is calculated prior to trajectory optimisation for computational efficiency. For each aerodynamic data point of Mach numbers between 0.2 and 10, and angle of attacks from 0$^\circ$ to 10$^\circ$, the necessary flap deflection are calculated, and the additional lift and drag produced by the flaps are added. The addition of trimmed aerodynamics is calculated for scramjet engines on, and engines off conditions. Due to centre of gravity variation, the trim analysis is calculated three times; at the beginning of SPARTAN acceleration; at the end of SPARTAN acceleration, when fuel has been depleted; and after the third stage has been released. The trimmed aerodynamic databases at the beginning and end of acceleration are interpolated between as the centre of gravity varies due to fuel depletion. After the third stage is released, the centre of gravity is kept constant, and a single trimmed aerodynamic database is used. 
+
+Figure \ref{fig:FlapDeflection} shows the necessary flap deflections to trim the SPARTAN. An Engine-on case is shown at a centre of gravity of  14.91m corresponding to full-fuel with third stage, and an Engine-off case is shown for a centre of gravity of 14.5m, corresponding to a fuel-empty state after third stage release. Additional figures illustrating the variation in moment coefficients are shown in Appendix XX.
+The flap deflections are designated as negative up. Negative flap deflection necessary for trim indicates that the centre of pressure is aft of the centre of gravity, and that the vehicle has positive static margin, and is generally likely to be stable. Figure \ref{fig:FlapDeflectionENgineOn} and XX indicate that the SPARTAN is stable for 
+
+
+\begin{figure}
+\begin{subfigure}{.5\textwidth}
+\centering
+\includegraphics[width=0.99\linewidth]{figures/3_vehicle_design/FlapDeflectionENgineOn}
+\caption{}
+\label{fig:FlapDeflectionENgineOn}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+	\centering
+	\includegraphics[width=0.99\linewidth]{figures/3_vehicle_design/FlapDeflectionENgineOn2}
+	\caption{}
+	\label{fig:FlapDeflectionENgineOn2}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+	\centering
+	\includegraphics[width=0.99\linewidth]{figures/3_vehicle_design/FlapDeflection}
+	\caption{}
+	\label{fig:FlapDeflectionEngineOff}
+\end{subfigure}
+\label{fig:FlapDeflection}
+\caption{Flap deflection required for trim of the SPARTAN. Negative up.}
+\end{figure}
 
 \subsection{Engine-On Plume Model}\label{sec:engine-on}
 
@@ -253,14 +285,14 @@ The plumes of the scramjet engines exit the nozzle of the SPARTAN, and are furth
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/Pointwise-EngineBC}
-	\caption{Pointwise view of the SPARTAN with engine outlet boundaries.}
+	\caption{Pointwise view of the SPARTAN showing engine outlet boundaries.}
 	\label{fig:Pointwise-EngineBC}
 \end{figure}
 
 The CRESTM10 database has been used to calculate the engine conditions at the exit of the scramjet engines, and this has been set as the outflow condition. These conditions are normalised for CART3D as follows CITATIONXX:
 
 \begin{equation}
-P_e^* = P_e/(\gamma_e P_0)
+P_e^* = P_e/(\gamma_0 P_0)
 \end{equation}
 
 \begin{equation}
