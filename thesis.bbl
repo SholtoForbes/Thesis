@@ -1695,6 +1695,34 @@
     \field{year}{2014}
   \endentry
 
+  \entry{Administration1976}{book}{}
+    \name{author}{1}{}{%
+      {{hash=N}{%
+         family={NASA},
+         familyi={N\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {U.S. Government Printing Office, Washington, D.C.}%
+    }
+    \strng{namehash}{N1}
+    \strng{fullhash}{N1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{pages}{1\bibrangedash 243}
+    \field{title}{{U.S. Standard Atmosphere, 1976}}
+    \verb{url}
+    \verb http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19770009539.pdf
+    \endverb
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/1976Atmosphere.pdf:
+    \verb pdf
+    \endverb
+    \field{year}{1976}
+  \endentry
+
   \entry{Olds1998}{inproceedings}{}
     \name{author}{2}{}{%
       {{hash=OJ}{%
@@ -1844,33 +1872,6 @@
     \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Paull1993.pdf:pdf
     \endverb
     \field{year}{1993}
-  \endentry
-
-  \entry{Pointwise}{misc}{}
-    \name{author}{1}{}{%
-      {{hash=P}{%
-         family={Pointwise},
-         familyi={P\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{P1}
-    \strng{fullhash}{P1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{P}
-    \field{sortinithash}{P}
-    \field{title}{www.pointwise.com}
-    \verb{url}
-    \verb http://www.pointwise.com/
-    \endverb
-    \verb{file}
-    \verb :C$\backslash$:/Users/uqsforb1/AppData/Local/Mendeley Ltd./Mendeley D
-    \verb esktop/Downloaded/6ddb3dc8f9b1c7d233f0763b54367f233c96fe44.html:html
-    \endverb
-    \field{year}{2017}
-    \field{urlday}{01}
-    \field{urlmonth}{02}
-    \field{urlyear}{2017}
   \endentry
 
   \entry{Powell1991}{article}{}
@@ -2695,6 +2696,70 @@
     \field{journaltitle}{Proceedings of the IEEE International Conference on
   Control Applications}
     \field{year}{2008}
+  \endentry
+
+  \entry{Suraweera2009}{article}{}
+    \name{author}{2}{}{%
+      {{hash=SM}{%
+         family={Suraweera},
+         familyi={S\bibinitperiod},
+         given={M},
+         giveni={M},
+      }}%
+      {{hash=SMK}{%
+         family={Smart},
+         familyi={S\bibinitperiod},
+         given={M\bibnamedelima K},
+         giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \keyw{Scramjet engine}
+    \strng{namehash}{SMSMK1}
+    \strng{fullhash}{SMSMK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{abstract}{%
+    A shock tunnel investigation of a scramjet with a
+  rectangular-to-elliptical$\backslash$nshape transition (REST) inlet and an
+  elliptical combustor has been$\backslash$nconducted at conditions simulating
+  flight at Mach 8.7. The inlet$\backslash$nwas designed using a
+  quasi-streamline-tracing method to have a design$\backslash$npoint of Mach
+  12.0 and operation down to Mach 6.0. The elliptical$\backslash$ncombustor
+  began with a rearward facing step around its perimeter,$\backslash$nand was
+  followed by a constant area and diverging section. The
+  flowpath$\backslash$nwas completed by a short thrust nozzle. Gaseous hydrogen
+  fuel was$\backslash$ninjected either through multiple portholes on the
+  intake, or a series$\backslash$nof 48 portholes on the rearward facing step
+  at the combustor entrance,$\backslash$nor a combination of the two. All
+  fuelling configurations resulted$\backslash$nin a positive thrust coefficient
+  at equivalence ratios above 0.3$\backslash$nwithout the use of ignition aids.
+  Fuel injection in the intake produced$\backslash$nrobust combustion and good
+  internal thrust levels, but led to inlet$\backslash$nunstart at fuel
+  equivalence ratios above 0.61. Stable, mixing limited$\backslash$ncombustion
+  was observed for fuel injection at the step at all
+  fuel$\backslash$nequivalence ratios up to 1.23. Combined intake and step
+  injection$\backslash$nwas observed to have the best performance. These
+  experimental results$\backslash$ndemonstrate that REST scramjets, designed
+  for access-to-space applications,$\backslash$ncan operate efficiently at
+  conditions below the design Mach number.%
+    }
+    \verb{doi}
+    \verb 10.2514/1.37946
+    \endverb
+    \field{issn}{0748-4658}
+    \field{number}{3}
+    \field{pages}{555\bibrangedash 564}
+    \field{title}{{Shock Tunnel Experiments with a Mach 12 \{REST\} Scramjet at
+  Off-Design Conditions}}
+    \field{volume}{25}
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Suraweera2009.pdf:p
+    \verb df
+    \endverb
+    \field{journaltitle}{Journal of Propulsion and Power}
+    \field{year}{2009}
   \endentry
 
   \entry{RPE}{book}{}

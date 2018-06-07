@@ -2,82 +2,83 @@
 \contentsline {chapter}{List of figures}{xv}{chapter*.14}
 \contentsline {chapter}{List of tables}{xvii}{chapter*.15}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Research aims}{2}{section.1.1}
-\contentsline {section}{\numberline {1.2}Thesis outline}{3}{section.1.2}
-\contentsline {chapter}{\numberline {2}Literature review}{5}{chapter.2}
-\contentsline {section}{\numberline {2.1}Scramjets}{5}{section.2.1}
-\contentsline {section}{\numberline {2.2}Reusable Satellite Launch Systems}{6}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Small Satellite Launchers}{7}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Airbreathing Access to Space Systems}{12}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Small Airbreathing Launchers}{13}{subsection.2.2.3}
-\contentsline {section}{\numberline {2.3}The SPARTAN}{14}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Scramjet Engine Model}{15}{subsection.2.3.1}
-\contentsline {section}{\numberline {2.4}First Stage Rocket Booster}{15}{section.2.4}
-\contentsline {section}{\numberline {2.5}Exoatmospheric Rocket Engines}{16}{section.2.5}
-\contentsline {section}{\numberline {2.6}Partially-Airbreathing Launch Vehicle Ascent Trajectories}{18}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Single-Stage Vehicles}{19}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {2.6.2}Multi-Stage Vehicles}{20}{subsection.2.6.2}
-\contentsline {section}{\numberline {2.7}Hypersonic Vehicle Flyback Trajectories}{22}{section.2.7}
-\contentsline {subsection}{\numberline {2.7.1}Examples of Optimised Fly-Back Trajectories}{23}{subsection.2.7.1}
-\contentsline {section}{\numberline {2.8}Optimal Control}{26}{section.2.8}
-\contentsline {subsection}{\numberline {2.8.1}The Single Shooting Method}{28}{subsection.2.8.1}
-\contentsline {subsection}{\numberline {2.8.2}The Multiple Shooting Method}{28}{subsection.2.8.2}
-\contentsline {subsection}{\numberline {2.8.3}The Pseudospectral Method}{30}{subsection.2.8.3}
-\contentsline {subsubsection}{The Legendre Pseudospectral Method}{31}{section*.40}
-\contentsline {subsubsection}{The Chebychev Pseudospectral Method}{33}{section*.41}
-\contentsline {subsubsection}{The Gauss Pseudospectral Method}{33}{section*.42}
-\contentsline {subsection}{\numberline {2.8.4}Pseudospectral Examples}{33}{subsection.2.8.4}
-\contentsline {subsection}{\numberline {2.8.5}Available Solvers}{34}{subsection.2.8.5}
-\contentsline {section}{\numberline {2.9}Aerodynamic Analysis}{36}{section.2.9}
-\contentsline {subsection}{\numberline {2.9.1}HYPAERO}{36}{subsection.2.9.1}
-\contentsline {subsection}{\numberline {2.9.2}CART3D}{37}{subsection.2.9.2}
-\contentsline {subsection}{\numberline {2.9.3}Missile DATCOM}{39}{subsection.2.9.3}
-\contentsline {section}{\numberline {2.10}Summary}{39}{section.2.10}
-\contentsline {chapter}{\numberline {3}Launch Vehicle Baseline Design}{41}{chapter.3}
-\contentsline {section}{\numberline {3.1}Second Stage Scramjet}{42}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Baseline SPARTAN Vehicle}{42}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Propulsion Modelling}{44}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Aerodynamics}{46}{subsection.3.1.3}
-\contentsline {subsubsection}{CART3D Set-Up}{48}{section*.56}
-\contentsline {subsubsection}{Engine-Off}{48}{section*.58}
-\contentsline {subsubsection}{Engine-On}{50}{section*.61}
-\contentsline {subsubsection}{Trim Analysis}{52}{section*.65}
-\contentsline {section}{\numberline {3.2}First Stage Rocket}{53}{section.3.2}
-\contentsline {subsubsection}{Aerodynamics Including First Stage}{54}{section*.68}
-\contentsline {section}{\numberline {3.3}Third Stage Rocket - Baseline}{54}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Heat Shield Sizing}{56}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Fuel Tank Sizing}{57}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Aerodynamics}{58}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Thrust Vectoring}{58}{subsection.3.3.4}
-\contentsline {chapter}{\numberline {4}LODESTAR}{61}{chapter.4}
-\contentsline {section}{\numberline {4.1}Optimal Control}{62}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}GPOPS-2 Example - Brachistochrone Problem}{63}{subsection.4.1.1}
-\contentsline {section}{\numberline {4.2}The Trajectory Optimal Control Problems}{64}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Dynamic Model}{64}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Trajectory Connection Points}{65}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}First Stage Trajectory}{66}{subsection.4.2.3}
-\contentsline {subsubsection}{Control Variables}{67}{section*.80}
-\contentsline {subsubsection}{Primal Variables}{67}{section*.81}
-\contentsline {subsection}{\numberline {4.2.4}Second Stage Trajectory}{67}{subsection.4.2.4}
-\contentsline {subsubsection}{Control Variables}{70}{section*.84}
-\contentsline {subsubsection}{Primal Variables}{70}{section*.85}
-\contentsline {subsection}{\numberline {4.2.5}Second Stage Return Trajectory}{70}{subsection.4.2.5}
-\contentsline {subsubsection}{Control Variables}{71}{section*.86}
-\contentsline {subsection}{\numberline {4.2.6}Third Stage Trajectory}{71}{subsection.4.2.6}
-\contentsline {subsubsection}{Control Variables}{71}{section*.87}
-\contentsline {subsection}{\numberline {4.2.7}Combined Second Stage Ascent \& Return Trajectory}{71}{subsection.4.2.7}
-\contentsline {subsection}{\numberline {4.2.8}Validation}{71}{subsection.4.2.8}
-\contentsline {subsubsection}{Optimality Conditions}{71}{section*.88}
-\contentsline {subsubsection}{Forward Simulations}{72}{section*.89}
-\contentsline {chapter}{\numberline {5}Trajectories Involving Flyback}{73}{chapter.5}
-\contentsline {section}{\numberline {5.1}Flyback trajectories }{73}{section.5.1}
-\contentsline {section}{\numberline {5.2}Sensitivity Analysis}{73}{section.5.2}
-\contentsline {chapter}{\numberline {6}Full Trajectory Optimisation}{75}{chapter.6}
-\contentsline {chapter}{\numberline {7}Third Stage Sizing Study}{81}{chapter.7}
-\contentsline {section}{\numberline {7.1}Third Stage Sizing}{81}{section.7.1}
-\contentsline {chapter}{\numberline {8}Conclusions}{83}{chapter.8}
-\contentsline {section}{\numberline {8.1}Recommendations for future work}{83}{section.8.1}
-\contentsline {chapter}{Library}{85}{chapter*.97}
-\contentsline {chapter}{\numberline {A}CART3D Results}{93}{appendix.A}
-\contentsline {section}{\numberline {A.1}Engine-On Plume Check}{93}{section.A.1}
-\contentsline {section}{\numberline {A.2}CART3D Results}{93}{section.A.2}
+\contentsline {section}{\numberline {1.1}Research aims}{3}{section.1.1}
+\contentsline {section}{\numberline {1.2}Thesis outline}{4}{section.1.2}
+\contentsline {chapter}{\numberline {2}Literature review}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Scramjets}{7}{section.2.1}
+\contentsline {section}{\numberline {2.2}Reusable Satellite Launch Systems}{8}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Small Satellite Launchers}{9}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Airbreathing Access to Space Systems}{14}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Small Airbreathing Launchers}{15}{subsection.2.2.3}
+\contentsline {section}{\numberline {2.3}The SPARTAN}{16}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Scramjet Engine Model}{17}{subsection.2.3.1}
+\contentsline {section}{\numberline {2.4}First Stage Rocket Booster}{17}{section.2.4}
+\contentsline {section}{\numberline {2.5}Exoatmospheric Rocket Engines}{18}{section.2.5}
+\contentsline {section}{\numberline {2.6}Partially-Airbreathing Launch Vehicle Ascent Trajectories}{20}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Single-Stage Vehicles}{21}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Multi-Stage Vehicles}{22}{subsection.2.6.2}
+\contentsline {section}{\numberline {2.7}Hypersonic Vehicle Flyback Trajectories}{24}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Examples of Optimised Fly-Back Trajectories}{25}{subsection.2.7.1}
+\contentsline {section}{\numberline {2.8}Optimal Control}{28}{section.2.8}
+\contentsline {subsection}{\numberline {2.8.1}The Single Shooting Method}{30}{subsection.2.8.1}
+\contentsline {subsection}{\numberline {2.8.2}The Multiple Shooting Method}{30}{subsection.2.8.2}
+\contentsline {subsection}{\numberline {2.8.3}The Pseudospectral Method}{32}{subsection.2.8.3}
+\contentsline {subsubsection}{The Legendre Pseudospectral Method}{33}{section*.44}
+\contentsline {subsubsection}{The Chebychev Pseudospectral Method}{35}{section*.45}
+\contentsline {subsubsection}{The Gauss Pseudospectral Method}{35}{section*.46}
+\contentsline {subsection}{\numberline {2.8.4}Pseudospectral Examples}{35}{subsection.2.8.4}
+\contentsline {subsection}{\numberline {2.8.5}Available Solvers}{36}{subsection.2.8.5}
+\contentsline {section}{\numberline {2.9}Aerodynamic Analysis}{38}{section.2.9}
+\contentsline {subsection}{\numberline {2.9.1}HYPAERO}{38}{subsection.2.9.1}
+\contentsline {subsection}{\numberline {2.9.2}CART3D}{39}{subsection.2.9.2}
+\contentsline {subsection}{\numberline {2.9.3}Missile DATCOM}{41}{subsection.2.9.3}
+\contentsline {section}{\numberline {2.10}Summary}{41}{section.2.10}
+\contentsline {chapter}{\numberline {3}Launch Vehicle Design and Simulation}{43}{chapter.3}
+\contentsline {section}{\numberline {3.1}Second Stage Scramjet}{46}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}The SPARTAN Accelerator}{46}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Propulsion}{47}{subsection.3.1.2}
+\contentsline {subsubsection}{Propulsion Modelling}{47}{section*.57}
+\contentsline {subsection}{\numberline {3.1.3}The Aerodynamics of the SPARTAN}{50}{subsection.3.1.3}
+\contentsline {subsubsection}{Trim Analysis}{51}{section*.62}
+\contentsline {subsubsection}{Database Generation}{52}{section*.65}
+\contentsline {subsubsection}{Engine-On Aerodynamics}{55}{section*.68}
+\contentsline {subsubsection}{Engine-Off Aerodynamics}{57}{section*.72}
+\contentsline {section}{\numberline {3.2}First Stage Rocket}{58}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Aerodynamics Including First Stage}{59}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.3}Third Stage Rocket - Baseline}{62}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Heat Shield Sizing}{63}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Fuel Tank Sizing}{63}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}The Aerodynamics of the Third Stage Rocket}{64}{subsection.3.3.3}
+\contentsline {subsubsection}{Thrust Vectoring}{64}{section*.84}
+\contentsline {chapter}{\numberline {4}LODESTAR}{67}{chapter.4}
+\contentsline {section}{\numberline {4.1}Optimal Control}{68}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}GPOPS-2 Example - Brachistochrone Problem}{69}{subsection.4.1.1}
+\contentsline {section}{\numberline {4.2}The Trajectory Optimal Control Problems}{70}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Dynamic Model}{70}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Trajectory Connection Points}{71}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}First Stage Trajectory}{73}{subsection.4.2.3}
+\contentsline {subsubsection}{Control Variables}{73}{section*.91}
+\contentsline {subsubsection}{Primal Variables}{73}{section*.92}
+\contentsline {subsection}{\numberline {4.2.4}Second Stage Trajectory}{73}{subsection.4.2.4}
+\contentsline {subsubsection}{Control Variables}{76}{section*.95}
+\contentsline {subsubsection}{Primal Variables}{76}{section*.96}
+\contentsline {subsection}{\numberline {4.2.5}Second Stage Return Trajectory}{76}{subsection.4.2.5}
+\contentsline {subsubsection}{Control Variables}{77}{section*.97}
+\contentsline {subsection}{\numberline {4.2.6}Third Stage Trajectory}{77}{subsection.4.2.6}
+\contentsline {subsubsection}{Control Variables}{77}{section*.98}
+\contentsline {subsection}{\numberline {4.2.7}Combined Second Stage Ascent \& Return Trajectory}{77}{subsection.4.2.7}
+\contentsline {subsection}{\numberline {4.2.8}Validation}{77}{subsection.4.2.8}
+\contentsline {subsubsection}{Optimality Conditions}{77}{section*.99}
+\contentsline {subsubsection}{Forward Simulations}{78}{section*.100}
+\contentsline {chapter}{\numberline {5}Trajectories Involving Flyback}{79}{chapter.5}
+\contentsline {section}{\numberline {5.1}Flyback trajectories }{79}{section.5.1}
+\contentsline {section}{\numberline {5.2}Sensitivity Analysis}{79}{section.5.2}
+\contentsline {chapter}{\numberline {6}Full Trajectory Optimisation}{81}{chapter.6}
+\contentsline {chapter}{\numberline {7}Third Stage Sizing Study}{87}{chapter.7}
+\contentsline {section}{\numberline {7.1}Third Stage Sizing}{87}{section.7.1}
+\contentsline {chapter}{\numberline {8}Conclusions}{89}{chapter.8}
+\contentsline {section}{\numberline {8.1}Recommendations for future work}{89}{section.8.1}
+\contentsline {chapter}{Library}{91}{chapter*.108}
+\contentsline {chapter}{\numberline {A}CART3D Results}{99}{appendix.A}
+\contentsline {section}{\numberline {A.1}Engine-On Plume Check}{99}{section.A.1}
+\contentsline {section}{\numberline {A.2}CART3D Results}{99}{section.A.2}
