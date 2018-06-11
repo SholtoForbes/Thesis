@@ -19,6 +19,21 @@
   <defs
      id="defs2">
     <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker1089"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1087"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="scale(0.4)" />
+    </marker>
+    <marker
        inkscape:stockid="TriangleInM"
        orient="auto"
        refY="0.0"
@@ -114,7 +129,8 @@
        refX="0"
        refY="0"
        orient="auto"
-       inkscape:stockid="TriangleOutM">
+       inkscape:stockid="TriangleOutM"
+       inkscape:collect="always">
       <path
          transform="scale(0.4)"
          style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
@@ -363,8 +379,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.0718723"
-     inkscape:cx="260.17644"
-     inkscape:cy="509.03089"
+     inkscape:cx="357.23996"
+     inkscape:cy="355.39853"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -698,23 +714,12 @@
          y="184.80511"
          style="font-size:3.88055563px;stroke-width:0.26458332px">F<tspan
    style="font-size:2.11666656px;stroke-width:0.26458332px"
-   id="tspan2017-6-6-5">aileron</tspan></tspan></text>
+   id="tspan2017-6-6-5">Aileron</tspan></tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker2468)"
        d="m 22.283597,188.08767 18.508415,-3.40769"
        id="path2458"
        inkscape:connector-curvature="0" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="35.797527"
-       y="189.048"
-       id="text1992-5-0-8-5-7"><tspan
-         sodipodi:role="line"
-         id="tspan1990-6-0-9-2-0"
-         x="35.797527"
-         y="189.048"
-         style="font-size:3.88055563px;stroke-width:0.26458332px">T</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker2765)"
        d="M 85.634826,167.44109 65.309813,171.1954"
@@ -805,5 +810,36 @@
          x="95.686066"
          y="172.30666"
          style="font-size:3.88055563px;stroke-width:0.26458332px">M</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker1089)"
+       d="m 31.156068,181.27746 2.547697,-9.50814"
+       id="path1079"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="28.946789"
+       y="170.27951"
+       id="text1992-5-0-8-5-9"><tspan
+         sodipodi:role="line"
+         id="tspan1990-6-0-9-2-6"
+         x="28.946789"
+         y="170.27951"
+         style="font-size:3.88055563px;stroke-width:0.26458332px">T<tspan
+   style="font-size:2.11666656px;stroke-width:0.26458332px"
+   id="tspan2017-6-6-5-1">Boat Tail</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="31.846928"
+       y="190.09023"
+       id="text1992-5-0-8-5-9-7"><tspan
+         sodipodi:role="line"
+         id="tspan1990-6-0-9-2-6-5"
+         x="31.846928"
+         y="190.09023"
+         style="font-size:3.88055563px;stroke-width:0.26458332px">T<tspan
+   style="font-size:2.11666656px;stroke-width:0.26458332px"
+   id="tspan2017-6-6-5-1-7">Engine</tspan></tspan></text>
   </g>
 </svg>

@@ -2,29 +2,50 @@
 
 \cleardoublepage
 \chapter{Introduction}
-
+\textcolor{red}{
 focus on objectives and chapter outlines,
 give to Kearney to review first
-
 for thesis review - 1 page dot point with where im up to
--refer to stated objectives from mid cand
+-refer to stated objectives from mid cand}	
   	
   	
-  	  Airbreathing engines are an ideal candidate for producing the next generation of space access
-  	systems. Airbreathing engines produce higher specific impulse than rockets, and require far less propellant to be carried on-board a launch vehicle.   	 
-  	The mass savings gained by using airbreathing engines allow launch vehicles to be designed to be reusable, capable of manoeuvring aerodynamically and landing similarly to a conventional aircraft. 
-  	The primary engines in consideration for launch vehicles are ramjet and scramjet engines.
+  	In recent years, the space sector has seen a significant shift in the paradigm of space launch system design. 
+  	The sector has moved towards privatisation, with new and innovative launch systems competing to offer the most cost-efficient and reliable launches. 
+  	The sector has also seen a split between those who produce large or small satellite launchers. 
+  	For large payload launchers, reusability is a major focus in the design of new launch systems, with the purpose of making a launch system cost efficient over multiple launches. 
+  	For small payload launchers, reusability is more complex than for large launchers, as the additional systems necessary for reusability add a larger fraction of system mass, and require a proportionally larger fuel mass. 
+  	Consequently, the focus of small launch system design is currently on producing expendable launch systems as cheaply and efficiently as possible, using state of the art technologies such as 3D printing to expedite the process.
+  	However, if reusability is able to be successfully integrated into small launch system design, it has the potential increase the cost efficiency and launch flexibility, potentially opening up the small satellite market significantly. 
+  	
+  	
+  	
+  	A potential candidate for integrating reusability into small satellite launch systems is the use of airbreathing engines.
+Airbreathing engines produce higher specific impulse than rockets, and require far less propellant to be carried on-board a launch vehicle.  
+ 	The use of airbreathing engines for reusability has particular applicability to small satellite launchers. 	 
+  	The higher efficiency and reduced propellant mass of airbreathing vehicles allows the additional mass of the systems necessary for reusability to be mitigated. An airbreathing vehicle can be designed in a similar fashion to a conventional aircraft, with wings, stabilisers and ailerons.
+  	
+  	The primary engines in consideration for launch vehicles are ramjet and scramjet engines. These engines offer good efficiency, and have operational regimes which allow them to effectively accelerate a launch vehicle over a range of Mach numbers. 
   	Ramjets and scramjets rely on the high velocity of the aircraft to compress the flow of air entering the engine before combustion.  Ramjets slow the air to subsonic speeds and are suited to operation at low Mach numbers, whereas scramjets keep the flow supersonic throughout, and operate within the hypersonic regime, above Mach 5. 
-  	
-  	
-
+  	The strict operational regime of these engines means that a launch system cannot be solely powered by airbreathing engines. Rocket power is necessary for at least the exoatmospheric portion of the trajectory, and is necessary also to accelerate the ramjet or scramjet to minimum operational speed.
+  	As a result, the designs of airbreathing launch systems are necessarily partially-airbreathing, usually separated into multiple stages to increase weight efficiency. 
   	 
-  	 
-  	 The use of airbreathing engines for reusability has particular applicability to small satellite launchers, currently an area of rapid expansion in the space sector. 
-  	 As the small satellite market increases, so does the demand for launchers tailored to the specific orbit and scheduling needs of each satellite. Reusability of small satellite launchers is more complex than for large launchers, as the additional systems necessary for reusability add a larger fraction of system mass, and require a proportionally larger fuel mass. 
-  	 The higher efficiency and reduced propellant mass of airbreathing vehicles allows the additional mass of the systems necessary for reusability to be mitigated. An airbreathing vehicle can be designed in a similar fashion to a conventional aircraft, with wings, stabilisers and ailerons. However, a launch system cannot be solely powered by airbreathing engines, rocket power is necessary for at least the exoatmospheric portion of the trajectory. The design of the trajectory of a partially-airbreathing launch system is particularly important to its performance. 
+  	 The design of the trajectory of a partially-airbreathing launch system is extremely important to its performance. 
   	   The airbreathing engines of a ramjet or scramjet-powered stage require high dynamic pressure to operate effectively, and airbreathing engines are generally designed for high lift-to-drag. Conversely, rocket-powered stages produce more thrust at higher altitude, and are generally designed for weight efficiency. For these launch systems, the various stages and engines involved during launch require trade-offs in engine efficiency and thrust generation, stage mass, and vehicle aerodynamics. These factors require the launch trajectory of the system to be thoroughly simulated and optimised, to ensure that the launch vehicle is operating effectively. 
  	  
+
+  Calculating the optimal trajectory for a space launch system is an integral part of the preliminary vehicle and mission design process. An optimal trajectory calculated without predispositions can offer valuable insights into the performance of a launch vehicle, and drive future design decisions. Calculating the optimal trajectory profile for a launch system typically requires the use of optimal control theory. Optimal control theory is a general set of techniques which find a control law to maximise a given metric of a system. For a launch vehicle, optimal control allows the best possible payload-to-orbit to be calculated in simulations during design. 
+Optimal control theory allows a trajectory to be calculated in which the flight path of each individual vehicle is considered simultaneously to produce a maximum-payload trajectory. 
+Optimal control is particularly important for launch systems incorporating airbreathing engines, where the performance of each vehicle is thoroughly different. 
+Optimal control is able to produce an optimised trajectory which satisfies equality or inequality constraints. These constraints allow for the physical limitations of the vehicle, such as heating and structural loading limits, to be imposed. These constraints also allow any necessary mission conditions to be established, such as orbital velocity and fly-back. 
+  
+  
+  	   This study applies optimal control theory to a three stage rocket-scramjet-rocket launch system being developed by The University of Queensland, designated The SPARTAN. This launch system is designed to be partially reusable, with at least the second stage scramjet vehicle flying back to the initial launch site. 
+  	   In previous studies it has been assumed that the optimal trajectory for the scramjet powered vehicle is at its
+  	   maximum dynamic pressure and all other trajectory stages have conformed to this assumption.
+  	   This study will develop an optimal trajectory profile for The SPARTAN, with the aim of producing an optimal
+  	   trajectory profile which may be applied to any rocket-airbreathing-rocket system for delivering small
+  	   satellites to Earth orbit. 
+  	   
   	  	\begin{figure}[ht]
   	  		\centering
   	  		\includegraphics[width=0.7\linewidth]{figures/1_introduction/project-spartan}
@@ -32,23 +53,6 @@ for thesis review - 1 page dot point with where im up to
   	  		\label{fig:project-spartan}
   	  	\end{figure}
   	  	
-
-
--something about taking out predispositions int rajectory design (we dont know what it should look like, so potimal control be good)
-
-  Calculating the optimal trajectory for a space launch system is an integral part of the preliminary vehicle and mission design process. Calculating the optimal trajectory profile for a launch system typically requires the use of optimal control theory. Optimal control theory is a general set of techniques which find a control law to maximise a given metric of a system. For a launch vehicle, optimal control allows the best possible payload-to-orbit to be calculated in simulations during design. 
-Optimal control theory allows a trajectory to be calculated in which the flight path of each individual vehicle is considered simultaneously to produce a maximum-payload trajectory. 
-Optimal control is particularly important for launch systems incorporating airbreathing engines, where the performance of each vehicle is thoroughly different. 
-Optimal control is able to produce an optimised trajectory which satisfies equality or inequality constraints. These constraints allow for the physical limitations of the vehicle, such as heating and structural loading limits, to be imposed. These constraints also allow any necessary mission conditions to be established, such as orbital velocity and fly-back. 
-  
-  
-  	   
-  	   A three stage rocket-scramjet-rocket launch system, designated the SPARTAN, is being developed by The University of Queensland. This system is designed to be partially reusable, with the first stage rocket and second stage scramjet vehicles flying back to the initial launch site. 
-  	   In previous studies it has been assumed that the optimal trajectory for the scramjet powered vehicle is at its
-  	   maximum dynamic pressure and all other trajectory stages have conformed to this assumption. This study will aim to produce an optimal
-  	   trajectory profile which may be applied to any rocket-airbreathing-rocket system for delivering small
-  	   satellites to Earth orbit. 
-
   	\textcolor{red}{Add image of the final trajectory}
   \section{Research aims}
 
