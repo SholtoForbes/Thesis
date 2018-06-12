@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.8)  11 JUN 2018 09:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.8)  12 JUN 2018 15:03
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1742,23 +1742,23 @@ File: figures/1_introduction/project-spartan.jpg Graphic file (type jpg)
 
 <use figures/1_introduction/project-spartan.jpg>
 Package pdftex.def Info: figures/1_introduction/project-spartan.jpg used on inp
-ut line 51.
+ut line 47.
 (pdftex.def)             Requested size: 338.58632pt x 177.20778pt.
 
 Underfull \vbox (badness 1043) has occurred while \output is active []
 
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 67--68
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--71
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 73--74
+[3 <./figures/1_introduction/project-spartan.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  []
 
@@ -1767,15 +1767,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
-[3 <./figures/1_introduction/project-spartan.jpg>]) (2_literature-review.tex
-Underfull \vbox (badness 4713) has occurred while \output is active []
+[4] [5
 
- [4
-
-]
-[5] [6
-
-]
+]) (2_literature-review.tex [6]
 Chapter 2.
 <figures/2_literature-review/scramjet.png, id=653, 468.62578pt x 228.47859pt>
 File: figures/2_literature-review/scramjet.png Graphic file (type png)
@@ -1798,6 +1792,7 @@ m-pres-sion re-quired for combustion[[]].
  []
 
 [7
+
 
  <./figures/2_literature-review/scramjet.png>]
 <figures/2_literature-review/Scramjet-Efficiency.png, id=665, 1010.27437pt x 65
@@ -2863,12 +2858,12 @@ Package pdftex.def Info: figures/3_vehicle_design/M3AoA6.png used on input line
 (pdftex.def)             Requested size: 435.32422pt x 154.38846pt.
 ) [99] [100 <./figures/3_vehicle_design/M3AoA6GRID.png> <./figures/3_vehicle_de
 sign/CARTmesh.png> <./figures/3_vehicle_design/M1p1AoA6.png (PNG copy)>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 36.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 37.
  [101 <./figures/3_vehicle_design/M3AoA6.png (PNG copy)>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 36.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 37.
  (thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 36.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 36.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 37.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 37.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 627D9F79786DC86F7B4D3AC631945196;4745.
 
@@ -2905,7 +2900,7 @@ nts/cm/cmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb>
 MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/
 type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on thesis.pdf (119 pages, 5635877 bytes).
+Output written on thesis.pdf (119 pages, 5638420 bytes).
 PDF statistics:
  1759 PDF objects out of 2073 (max. 8388607)
  415 named destinations out of 1000 (max. 500000)
