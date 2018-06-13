@@ -463,6 +463,51 @@
     \field{year}{2003}
   \endentry
 
+  \entry{Curran2001a}{article}{}
+    \name{author}{1}{}{%
+      {{hash=CET}{%
+         family={Curran},
+         familyi={C\bibinitperiod},
+         given={Edward\bibnamedelima T.},
+         giveni={E\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CET1}
+    \strng{fullhash}{CET1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{abstract}{%
+    Ageneral review of the emergence andmaturingof supersoniccombustionramjet
+  (scramjet) enginetechnologies over the last 40 years is presented. The review
+  is given in terms of the efforts completed or proceeding in theUnited States,
+  Russia, France, Germany, Japan, Australia, and other countries. A brief
+  account of the challenges of scramjet combustor development is given, and
+  attention is directed toward other source references for more detailed
+  accounts of technology evolution. Two emerging scramjet applications are
+  identi? ed, namely, hydrogen- fueled high-speed engines for access to space
+  and hydrocarbon-fueledengines for hypersonic air-launchedmissiles.%
+    }
+    \verb{doi}
+    \verb 10.2514/2.5875
+    \endverb
+    \field{isbn}{0748-4658}
+    \field{issn}{0748-4658}
+    \field{number}{6}
+    \field{pages}{1138\bibrangedash 1148}
+    \field{title}{{Scramjet Engines: The First Forty Years}}
+    \verb{url}
+    \verb http://arc.aiaa.org/doi/10.2514/2.5875
+    \endverb
+    \field{volume}{17}
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Curran2001.pdf:pdf
+    \endverb
+    \field{journaltitle}{Journal of Propulsion and Power}
+    \field{year}{2001}
+  \endentry
+
   \entry{Curran2001}{article}{}
     \name{author}{1}{}{%
       {{hash=CET}{%
@@ -658,7 +703,6 @@
     \field{pages}{3860\bibrangedash 3864}
     \field{title}{{Direct trajectory optimization by a Chebyshev pseudospectral
   method}}
-    \field{volume}{6}
     \list{location}{1}{%
       {Chicago, IL}%
     }
@@ -727,7 +771,10 @@
     \field{number}{May}
     \field{pages}{185\bibrangedash 200}
     \field{title}{{Computational Optimal Control By Spectral Collocation With
-  Differential Inclusion ..}}
+  Differential Inclusion}}
+    \list{location}{1}{%
+      {Greenbelt, MD}%
+    }
     \verb{file}
     \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Fahroo1999.pdf:pdf
     \endverb
@@ -766,6 +813,38 @@
       {New York, NY}%
     }
     \field{year}{2013}
+  \endentry
+
+  \entry{Fitzer}{book}{}
+    \name{author}{2}{}{%
+      {{hash=FE}{%
+         family={Fitzer},
+         familyi={F\bibinitperiod},
+         given={E.},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=ML}{%
+         family={Manocha},
+         familyi={M\bibinitperiod},
+         given={L.M.},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer Berlin Heidelberg}%
+    }
+    \strng{namehash}{FEML1}
+    \strng{fullhash}{FEML1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{isbn}{3-642-58745-3}
+    \field{title}{{Carbon Reinforcements and Carbon/Carbon Composites}}
+    \list{location}{1}{%
+      {Berlin, Heidelberg}%
+    }
+    \field{year}{1998}
   \endentry
 
   \entry{Flaherty2010}{article}{}
@@ -902,6 +981,58 @@
     \verb besSpyratos.pdf:pdf
     \endverb
     \field{year}{2017}
+  \endentry
+
+  \entry{Fry2004}{article}{}
+    \name{author}{1}{}{%
+      {{hash=FRS}{%
+         family={Fry},
+         familyi={F\bibinitperiod},
+         given={Ronald\bibnamedelima S.},
+         giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FRS1}
+    \strng{fullhash}{FRS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{abstract}{%
+    A general review is presented of the worldwide evolution of ramjet
+  propulsion since the Wright brothers first turned man's imagination to fly
+  into a practical reality. A perspective of the technological developments
+  from subsonic to hypersonic flight speeds is provided to allow an
+  appreciation for the advances made internationally from the early 1900s to
+  current times. Ramjet, scramjet, and mixed-cycle engine types, and their
+  operation and rationale for use are considered. The development history and
+  principal contributing development programs are reviewed. Major airbreathing
+  technologies that had significant impact on the maturation of ramjet
+  propulsion and enabled engine designs to mature to their current state are
+  identified. The general state of flight-demonstrated technology is summarized
+  and compared with the technology base of 1980. The current status of
+  ramjet/scramjet technology is identified. Ramjet and scramjet propulsion
+  technology has matured dramatically over the years in support of both
+  military and space access applications, yet many opportunities remain to
+  challenge future generations of explorers.%
+    }
+    \verb{doi}
+    \verb 10.2514/1.9178
+    \endverb
+    \field{isbn}{0748-4658}
+    \field{issn}{0748-4658}
+    \field{number}{1}
+    \field{pages}{27\bibrangedash 58}
+    \field{title}{{A Century of Ramjet Propulsion Technology Evolution}}
+    \verb{url}
+    \verb http://arc.aiaa.org/doi/10.2514/1.9178
+    \endverb
+    \field{volume}{20}
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Fry2004.pdf:pdf
+    \endverb
+    \field{journaltitle}{Journal of Propulsion and Power}
+    \field{year}{2004}
   \endentry
 
   \entry{Gilmour}{misc}{}
@@ -1046,6 +1177,52 @@
     \field{urlday}{01}
     \field{urlmonth}{12}
     \field{urlyear}{2017}
+  \endentry
+
+  \entry{Huntington2007}{article}{}
+    \name{author}{3}{}{%
+      {{hash=HG}{%
+         family={Huntington},
+         familyi={H\bibinitperiod},
+         given={Gt},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=BD}{%
+         family={Benson},
+         familyi={B\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=RA}{%
+         family={Rao},
+         familyi={R\bibinitperiod},
+         given={Av},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HGBDRA1}
+    \strng{fullhash}{HGBDRA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \verb{doi}
+    \verb 10.2514/6.2007-6405
+    \endverb
+    \field{isbn}{978-1-62410-015-4}
+    \field{pages}{1\bibrangedash 43}
+    \field{title}{{A Comparison of Accuracy and Computational E ciency of Three
+  Pseudospectral Methods}}
+    \verb{url}
+    \verb http://arc.aiaa.org/doi/abs/10.2514/6.2007-6405$\backslash$nhttp://ar
+    \verb c.aiaa.org/doi/pdf/10.2514/6.2007-6405
+    \endverb
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Huntington.pdf:pdf
+    \endverb
+    \field{journaltitle}{AIAA Guidance, Navigation and Control Conference and
+  Exhibit}
+    \field{year}{2007}
   \endentry
 
   \entry{Jazra2013}{article}{}
@@ -1837,6 +2014,67 @@
     \field{urlyear}{2017}
   \endentry
 
+  \entry{Pandya2004}{article}{}
+    \name{author}{3}{}{%
+      {{hash=PS}{%
+         family={Pandya},
+         familyi={P\bibinitperiod},
+         given={Shishir},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=MS}{%
+         family={Murman},
+         familyi={M\bibinitperiod},
+         given={Scott},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=AM}{%
+         family={Aftosmis},
+         familyi={A\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PSMSAM1}
+    \strng{fullhash}{PSMSAM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{abstract}{%
+    Inlets and exhaust nozzles are often omitted in aerodynamic simulations of
+  aircraft due to the complexities involved in the modeling of engine details
+  and flow physics. However, the omission is often improper since inlet or
+  plume flows may have a substantial effect on vehicle aerodynamics. A method
+  for modeling the effect of inlets and exhaust plumes using boundary
+  conditions within an inviscid Cartesian flow solver is presented. This ap
+  proach couples with both CAD systems and legacy geometry to provide an
+  automated tool suitable for parameter studies. The method is validated using
+  tw* and three-dimensional test problems which are compared with both
+  theoretical and experimental results. The numerical results demonstrate
+  excellent agreement with theory and available data, even for extremely strong
+  jets and very sensitive inlets.%
+    }
+    \verb{doi}
+    \verb 10.2514/6.2004-4837
+    \endverb
+    \field{isbn}{978-1-62410-025-3}
+    \field{issn}{10485953}
+    \field{number}{January}
+    \field{pages}{1\bibrangedash 16}
+    \field{title}{{Validation of Inlet and Exhaust Boundary Conditions for a
+  Cartesian Method}}
+    \verb{url}
+    \verb http://arc.aiaa.org/doi/10.2514/6.2004-4837
+    \endverb
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Pandya, Murman, Aft
+    \verb osmis - 2004 - Validation of Inlet and Exhaust Bounda....pdf:pdf
+    \endverb
+    \field{journaltitle}{22nd Applied Aerodynamics Conference and Exhibit}
+    \field{year}{2004}
+  \endentry
+
   \entry{Paull1993}{inproceedings}{}
     \name{author}{3}{}{%
       {{hash=PA}{%
@@ -1933,6 +2171,7 @@
     \verb{file}
     \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/powell.pdf:pdf
     \endverb
+    \field{journaltitle}{Journal of Guidance, Control, and Dynamics}
     \field{annotation}{%
     This is a single stage vehicle which coasts to apogee%
     }
@@ -2056,6 +2295,38 @@
     \endverb
     \field{journaltitle}{Journal of Spacecraft and Rockets}
     \field{year}{2017}
+  \endentry
+
+  \entry{Pucci2007}{report}{}
+    \name{author}{2}{}{%
+      {{hash=PP}{%
+         family={Pucci},
+         familyi={P\bibinitperiod},
+         given={Patrizia},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=SJB}{%
+         family={Serrin},
+         familyi={S\bibinitperiod},
+         given={James\bibnamedelima B},
+         giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PPSJB1}
+    \strng{fullhash}{PPSJB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{pages}{80\bibrangedash 104}
+    \field{title}{{The maximum principle}}
+    \field{volume}{73}
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Lectures13-16.pdf:p
+    \verb df
+    \endverb
+    \field{type}{techreport}
+    \field{year}{2007}
   \endentry
 
   \entry{Rao2010}{article}{}
@@ -2406,6 +2677,72 @@
     \endverb
     \field{type}{techreport}
     \field{year}{2010}
+  \endentry
+
+  \entry{Smart2012}{article}{}
+    \name{author}{1}{}{%
+      {{hash=SMK}{%
+         family={Smart},
+         familyi={S\bibinitperiod},
+         given={Michael\bibnamedelima K.},
+         giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SMK1}
+    \strng{fullhash}{SMK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{abstract}{%
+    The supersonic combustion ramjet, or scramjet, is the engine
+  cycle$\backslash$nmost suitable for sustained hypersonic flight
+  in$\backslash$n$\backslash$nthe atmosphere. This paper examines a key
+  decision in the design of$\backslash$nthe inlet or intake of these
+  hypersonic$\backslash$n$\backslash$nairbreathing engines, namely, the level
+  of compression to be performed.$\backslash$nToo much compression can lead to
+  onerous$\backslash$n$\backslash$nsystem level issues including the need for
+  bleed or variable geometry,$\backslash$nwhile too little compression can
+  result in low$\backslash$n$\backslash$ncycle efficiency and poor combustion
+  of fuel. An analysis of the important$\backslash$nfactors that affect the
+  choice of scramjet$\backslash$n$\backslash$ninlet compression ratio has been
+  performed for hydrogen-fueled scramjets$\backslash$nat Mach 6, 8, 10, and 12.
+  It was found that$\backslash$n$\backslash$ncontrary to classical
+  thermodynamic analyses, scramjet cycle efficiency$\backslash$nreaches an
+  optimum at a relatively low$\backslash$n$\backslash$ncompression ratio
+  between 50 and 100 for all Mach numbers. Practical$\backslash$nconstraints
+  related to nonequilibrium flow$\backslash$n$\backslash$neffects, inlet
+  starting, and boundary-layer separation were also shown$\backslash$nto prompt
+  a desire for low compression ratio.$\backslash$n$\backslash$nThe lower limit
+  on compression was found to be set by the need to$\backslash$ncomplete the
+  combustion reaction in the available$\backslash$n$\backslash$nengine length
+  and is therefore dependent on engine scale. On the basis$\backslash$nof these
+  factors it is recommended that$\backslash$n$\backslash$nscramjet inlet
+  compression ratio be set to the minimum that satisfies$\backslash$nthe robust
+  combustion requirement, with the$\backslash$n$\backslash$ncaveat that it not
+  be below 50 in order to maintain high cycle efficiency.$\backslash$nFor
+  typical wind-tunnel-scale engines, this$\backslash$n$\backslash$nresults in a
+  requirement for the inlet to compress airflow entering$\backslash$nthe
+  combustor to a pressure of approximately 1
+  atm,$\backslash$n$\backslash$n2$\backslash$n$\backslash$nregardless of the
+  flight Mach number.%
+    }
+    \verb{doi}
+    \verb 10.2514/1.J051281
+    \endverb
+    \field{issn}{0001-1452}
+    \field{number}{3}
+    \field{pages}{610\bibrangedash 619}
+    \field{title}{{How Much Compression Should a Scramjet Inlet Do?}}
+    \verb{url}
+    \verb http://arc.aiaa.org/doi/10.2514/1.J051281
+    \endverb
+    \field{volume}{50}
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Smart2012.pdf:pdf
+    \endverb
+    \field{journaltitle}{AIAA Journal}
+    \field{year}{2012}
   \endentry
 
   \entry{Smart2006}{article}{}
@@ -2786,7 +3123,11 @@
     \field{labeltitlesource}{title}
     \field{sortinit}{S}
     \field{sortinithash}{S}
+    \verb{doi}
+    \verb 10.1017/S0001924000034308
+    \endverb
     \field{edition}{8th}
+    \field{isbn}{978-0470080245}
     \field{pages}{67}
     \field{title}{{Rocket propulsion Elements}}
     \field{year}{2010}
@@ -2901,7 +3242,10 @@
     \field{labeltitlesource}{title}
     \field{sortinit}{T}
     \field{sortinithash}{T}
-    \field{booktitle}{35th Joing Propulsion Conference and Exhibit}
+    \field{booktitle}{35th Joint Propulsion Conference and Exhibit}
+    \verb{doi}
+    \verb 10.2514/6.1999-2730
+    \endverb
     \field{number}{May}
     \field{title}{{An Air-Breathing Concept Launch Vehicle for
   Single-Stage-to-Orbit}}
