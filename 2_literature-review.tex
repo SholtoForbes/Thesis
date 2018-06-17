@@ -3,16 +3,11 @@
 \cleardoublepage
 \chapter{Literature review}\label{chapter:literature-review}
 
-\textcolor{red}{KEEP THIS SECTION AN BROAD AS POSSIBLE}
 
-
-  This chapter examines the relevant literature associated with the different aspects of the work conducted as part of this thesis. 
+  This chapter examines the relevant literature associated with the different aspects of the work conducted as part of this thesis. A brief overview of the theory behind scramjet engines is presented, followed by surveys of the current state of small satellite and reusable launch systems. Next, various conceptual airbreathing launch systems are presented, along with the trajectories and return flights which have been simulated for these systems, with particular emphasis on whether the trajectories were optimised or not. The SPARTAN scramjet-powered accelerator is detailed, followed by a review of the design of the third stage rocket. Lastly, the theory behind optimal control methods is presented, followed by a survey into the solvers available for aerodynamic modelling. 
   
   
  
-  
- 
-  Explain order of literature and what was examined.
   
   
   \nomenclature[a]{REST}{Rectangular-to-Elliptical Shape Transition}
@@ -20,14 +15,8 @@
   
   
   \section{Scramjets}
-  
-  \textcolor{red}{make this section more general , move discussion of launchers later}
-  
-  \textcolor{red}{explain mechanisms}
-  
-  \textcolor{red}{add research exploring min/max speeds - expected thrust / Isp}
-  
-  \textcolor{red}{point of seciton - understanding expcted performance of scramjets}
+ 
+
   
   
   \begin{figure}
@@ -39,16 +28,42 @@
   
   
   
-  A Scramjet, or supersonic combustion ramjet, is an airbreathing engine design which combusts air at supersonic speeds and is capable of high Mach number operation. Scramjets compress air without moving parts, using geometry changes within the engine \cite{Curran2001a}, as well as on the forebody of the vehicle to create inlet shocks which provide the compression required for combustion\cite{Smart2012}. This is similar in operation to a ramjet engine, however a scramjet does not generate a normal shock, allowing supersonic air to enter the combustor. Maintaining supersonic speeds throughout the engine allows scramjets to operate efficiently at Mach numbers of 5 and greater, with a large operable range. Scramjets were proposed in the 1940's \cite{Curran2001} and found to be capable of positive net thrust in 1993 \cite{Paull1993} but have yet to be developed to a level which would allow for commercial application. 
+  A Scramjet, or supersonic combustion ramjet, is an airbreathing engine design which combusts air at supersonic speeds and is capable of high Mach number operation. 
+      Across their operating range, scramjets offer much higher specific impulse than rockets, the only other propulsion system capable of operating efficiently at hypersonic speeds\cite{Billig1993,Cook2003}.
+      Scramjets were proposed in the 1940's \cite{Curran2001} and found to be capable of positive net thrust in 1993 \cite{Paull1993} but have yet to be developed to a level which would allow for commercial application. 
+      Though scramjets are still in-development, the potential advantages which they offer over rockets for certain applications are driving their development in a number of institutions[CITATIONXX-Scramjet Propulsion].
   
-  Scramjets offer much higher specific impulse than rockets over their operating range \cite{Billig1993} \cite{Cook2003}. 
   
-  \begin{figure}
-\centering
-\includegraphics[width=0.7\linewidth]{figures/2_literature-review/Scramjet-Efficiency}
-\caption{Characteristic performance for airbreathing and rocket engines with Mach number\cite{Fry2004}.}
-\label{fig:Scramjet-Efficiency}
-\end{figure}
+  Scramjets compress air without moving parts, using geometry changes within the engine \cite{Curran2001a}, as well as on the forebody of the vehicle to create inlet shocks which provide the compression required for combustion\cite{Smart2012}. This is similar in operation to a ramjet engine, though a scramjet does not generate a normal shock, allowing supersonic air to enter the combustor. Maintaining supersonic speeds throughout the engine allows scramjets to operate efficiently at Mach numbers of 5 and greater. 
+  
+ 
+  
+  
+ It has been suggested that theoretically, scramjets are able to operate from Mach 4 all the way to Mach XX[CITATIONXX]. However, the operating range for a practical scramjet engine design is far more limited. 
+ For a particular scramjet-powered vehicle, the operable region of the scramjet engines is constrained by the geometries of the forebody of the vehicle, and the inlet and combustor of the scramjet engine[CITATIONXX - Scramjets-smart]. Typically, scramjet engines are designed to operate from Mach numbers of XX-XX up to Mach numbers of XX-XX. The operable range of scramjet engines can be improved with mechanisms to vary the geometry of the inlet during flight[CITATIONXX ]. However, the systems necessary for variable geometry inlets add weight and complexity to the scramjet engine, and can be detrimental to overall system performance\cite{Smart2010}.
+ 
+  Over the operational range of a scramjet engine, the specific impulse varies with velocity. 
+ 
+  
+      
+      \textcolor{red}{add research exploring min/max speeds - expected thrust / Isp}
+      
+      \textcolor{red}{point of seciton - understanding expcted performance of scramjets}
+  
+    \begin{figure}
+    	\centering
+    	\includegraphics[width=0.7\linewidth]{figures/2_literature-review/Scramjet-Efficiency}
+    	\caption{Characteristic performance for airbreathing and rocket engines with Mach number\cite{Fry2004}.}
+    	\label{fig:Scramjet-Efficiency}
+    \end{figure}
+  
+  
+  Scramjet engines are suitable for a number of applications where sustained flight or acceleration is desired at high Mach numbers. 
+  The high efficiency of scramjet engines means that significantly less propellant is used during flight compared to rocket engines, and consequently, that a much smaller fraction of a scramjet-powered vehicle consists of fuel mass. 
+  The small fuel mass fraction of a vehicle powered by scramjet engines mitigates the mass of the vehicle systems, allowing features such as wings, control surfaces, landing gear, and passengers to be included in the vehicle design. 
+  Missiles using scramjets are in development or in use by a number of nations, and passenger transport systems and satellite launch vehicles have been proposed which utilise scramjet engines.
+  
+
 
   
   
@@ -66,7 +81,8 @@
   
   For a launch vehicle to be reusable, it must necessarily have the ability to come back to Earth safely, without damage to major system components. This return flight requires the addition of system components which allow the reusable stage to fly to a specified landing point. Control surfaces, structural components, additional fuel, and in the case of the Adeline, additional engines, must be incorporated within a reusable launch vehicle design. The additional weight that these components contribute further increases the fuel and structural mass necessary to initially accelerate the reusable stage. The impact of reusability on the mass and cost of the vehicle is minimised when the stage is larger, and when the velocity at the initiation of the return trajectory is decreased. Because of this mass increase on any stage which is to be designed to be reusable, most current reusable launch vehicle designs include only reusable first stages, with later stages being expendable. 
   
-  The structural mass fraction of a rocket stage increases as the gross mass decreases. This means that the additional mass necessary for reusability will have a larger effect on a small launch system. Due to this, many of the current developments in small satellite launch systems are focussed on expendable rockets. 
+
+
   
   
 
@@ -101,24 +117,23 @@
   
  
   
-  \subsection{Small Satellite Launchers}
-  
-  What point do I want to make in this section?-tie in to other launchers and reusability-point out gaps in technology ie reusable small satellite launchers
-  
-  \textcolor{red}{Too commercial - reframe in a more scientific way ie advancing human knowledge. cover alternate approaches.}-i think focus on reusability-compare capability to similarly sized launchers
+  \section{Small Satellite Launchers}
+ 
+  The vast improvements in computational technologies in recent years have allowed satellites to decrease in size and cost to a large degree. These factors have lowered the barrier of entry into small satellite manufacturing significantly, driving a surge in the demand for small satellite launches. Many private and public companies are currently developing small satellite launchers which will allow small satellites to be launched into bespoke orbits on schedules determined by the customer. A summary of the small satellite launchers currently in active development is shown in Table \ref{tab:smallsats}. Many of these launchers are projected to be available within the next few years, and will offer cost-per-kg comparable to piggybacking on larger launches. 
   
   
-  The vast improvements in computational technologies in recent years have allowed satellites to decrease in size and cost to a large degree. These factors have lowered the barrier of entry into small satellite manufacturing significantly, driving a surge in the demand for small satellite launches. Many private and public companies are currently developing small satellite launchers to tap into this new market. 
-  These organisations are currently developing launchers to offer bespoke launches with low costs and relatively rapid turn around times. A summary of the small satellite launchers currently in active development is shown in Table \ref{tab:smallsats}. Many of these launchers are projected to be available within the next few years, and will offer cost-per-kg comparable to piggybacking on larger launches. 
   
-  The majority of the small satellite launchers in development are non-reusable. Non-reusable small satellite launch systems aim to reduce costs by creating a launch system which is as cost-efficient as possible to produce and launch. This generally entails making use of conventional, well-tested designs, combined with state of the art manufacturing techniques, such as 3-D printing. This method allows for rapid development, although it has an intrinsic cost limit due to the requirement of manufacturing a new launch system for each launch.  
-  Reusable small satellite launchers have far higher initial development costs, but also have the potential for large advantages in the long term. Reusable small satellite launchers have the potential for lower cost-per-launch than expendable systems, with increased launch flexibility. However, for small satellite systems, novel approaches are required for reusability. It is notable that the launchers with re-use capabilities are entirely within the early stages of development, with no currently projected completion dates. 
+  The majority of the small satellite launchers in development are expendable[CITATIONSXX]. These expendable small satellite launch systems aim to reduce costs by creating a launch system which is as cost-efficient as possible to produce and launch[CITATIONXX]. This generally entails making use of conventional, well-tested designs, combined with state of the art manufacturing techniques, such as 3-D printing[CITATIONXX]. This method allows for rapid development, although it has an intrinsic cost limit due to the requirement of manufacturing a new launch system for each launch.  
+  
+  Reusable small satellite launchers have far higher initial development costs, but also have the potential for large advantages in the long term. Reusable small satellite launchers have the potential for lower cost-per-launch than expendable systems, with increased launch flexibility[CITATIONXX]. 
+   However, due to the structural mass fraction of a rocket stage increasing as the gross mass decreases, reusability will have a larger effect on a small launch system[CITATIONXX]. 
+  The increased relative mass penalty for reusable systems on small launchers means that novel approaches are required for reusability[CITATIONSXX]. 
+   It is notable that the launchers with re-use capabilities are entirely within the early stages of development, with no currently projected completion dates[CITATIONSXX]. 
    
-  Much of the market niche fulfilled by each launch system is determined by the payload to orbit capabilities of the vehicle. Although the launchers shown are all classed as 'small satellite launchers', organisations seeking a launch service will choose a launcher which is designed to launch payloads of comparable size to their desired payoad, for maximum cost efficiency. There is a large variation in the payload-to-orbit capabilities of the small satellite launchers in development, ranging between 50kg to 500kg. The rocket-scramjet-rocket system studied in this thesis will target approximately 150kg of payload to orbit, most similar to the Vector-H\cite{Vector}, Haas2CA\cite{ARCA}, Bloostar\cite{Bloostar}  and Electron\cite{Electron}. 
+
   
   
-  
-  The majority of the small satellite launch systems have projected launch costs between \$20000-\$40000USD/kg. The outlier is the Haas2CA\cite{ARCA}, developed by ARCA, which has the ambitious target of \$10000USD/kg. The Haas2CA is a single stage to orbit launcher, powered by a hydrogen peroxide/kerosene aerospike engine. 
+  \textcolor{red}{Add in Falcon 1/1-e info.}
   
   \begin{landscape}% Landscape page
   	\begin{table}
@@ -141,6 +156,7 @@
   			\hline SMILE \cite{Kuhn2017} & NLR &  EU & 50kg & $<$\$50,000 & -  & -& -\\ 
   			\hline 
   		\end{tabularx} 
+  		\caption{Summary of small satellite launchers, operational and in development.}
   		\label{tab:smallsats}
   	\end{table}
   \end{landscape}
@@ -148,7 +164,10 @@
   
   
   
-  \subsection{Airbreathing Access to Space Systems}
+  \section{Airbreathing Access to Space Systems}
+    The addition of a scramjet-powered stage to a small satellite launch system may allow for 
+    
+  
   -need to generalise this section and add more
   
   The possibility of using airbreathing stages in access to space systems has been studied in some detail. These systems have been investigated in various forms including; single stage\cite{Powell1991,Wilhite1991,Varvill2008}, dual stage \cite{Tsuchiya2005}\cite{Mehta2001} and tri stage \cite{Preller2017} designs. The most prominent of the airbreathing access to space systems currently in development is the SKYLON Spaceplane being developed by Reaction Engines Limited \cite{Varvill2004}. The SKYLON is a spaceplane which utilises SABRE, a combined cycle airbreathing rocket propulsion system potentially reusable for 200 flights, and is being developed to deliver payloads on the order of 2800kg to heliosynchronous orbit \cite{Sky-rel-ma-}.
@@ -162,9 +181,7 @@
   A single stage design has the advantage of being fully contained within one vehicle, which is convenient for reusability and return trajectories however is has been suggested by Smart \& Tetlow \cite{Smart2009} that these designs suffer from severe limitations as they must contain multiple engines which add mass at later stages of the trajectory and decrease the efficiency of the vehicle. Smart \& Tetlow suggest that multistage systems offer significant improvements in payload mass fractions, and have the advantage of using airbreathing stages only within their operable range.
   Dual stage designs have been investigated in some detail using the 'spaceplane' concept by Mehta \& Bowles \cite{Mehta2001} using life cycle cost analysis in order to take flexibility and reusability into account. Mehta \& Bowles conclude that a two stage design is the optimal configuration for reusable hypersonic space access systems, however this study is only based on comparison with single stage to orbit systems, and it is more useful to consider their conclusions as an endorsement of multi stage airbreathing designs in general. They find that multi stage vehicles have higher potential for payload that single stage to orbit (SSTO) systems and have less propellant requirements, partly due to a greater atmospheric cruise capability. 
   
-  
-  \textcolor{red}{make the point that all of the proposed launchers are large, but that scramjets are easily scalable and efficient at small scales, connect with the next section}
-  
+
 \subsection{Small Airbreathing Launchers}
 
 Figure \ref{fig:AirbreathingCorridor} shows the operating corridor for scramjet engines, indicating the point at which transition to rocket stage would occur, the lower dynamic pressure limit on engine operation and the upper dynamic pressure limit on the aircraft structure.
@@ -179,88 +196,7 @@ Smart \& Tetlow \cite{Smart2009} have found that the fuel savings achieved by us
 
 
 
-\section{The SPARTAN}
-
-
-
-
-
-\textcolor{red}{reorder until after trajectory of 1,2,3 stage vehicles}
-
-
-
-
-The three stage, partially reusable, access to space system under development at The University of Queensland utilises the SPARTAN\cite{Jazra2013} scramjet powered vehicle as the reusable second stage, shown in Figure \ref{fig:SPARTAN}. This system is considered in this study as a representative model for three stage, airbreathing access to space system designs. This launch system is designed for small payload deliveries to orbit and will in the future utilise a fly-back rocket booster to accelerate the SPARTAN stage to minimum Mach number required for stable burn, at which point separation occurs and the second stage uses a scramjet engine to accelerate to between approximately Mach 5-9. The first and second stages are to be reusable, the first stage via conversion into a propeller powered drone, and the second stage through either a glide or extra scramjet powered flight to a suitable landing site. \textcolor{red}{However, the first stage booster considered in this study is a simple disposable design. The ascent profile is of interest to this study, however development of the fly-back trajectory profile requires detailed first stage vehicle design which is outside of the scope of this study. DONT MIX LIT REVIEW AND STUDY}
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=0.7\linewidth]{SPARTAN}
-	\caption{An early design of the socket-scramjet-rocket launch system incorporating the SPARTAN \cite{Jazra2013}.}
-	\label{fig:SPARTAN}
-\end{figure}
-
-The third stage will be a disposable rocket stage, which will then deliver the payload to orbit, exiting the atmosphere and performing a Hohmann transfer. 
-
-This system is in the preliminary design stage, with estimates of  payload mass fraction indicating that 1.26\% PMF is possible when delivering a 257.4kg payload to low earth orbit \cite{Preller2015a}. This compares well with existing space systems of similar size, with the advantage of being designed for reusability. The second stage vehicle has been designed to a detailed level, and optimised for payload delivery to heliosynchronous orbit.
-
-The SPARTAN has been studied in some detail, simulated over a constant dynamic pressure trajectory with variation in the aerodynamic surface properties of the vehicle. 
-
-\subsection{Scramjet Engine Model}
-
-\textcolor{red}{Much more info, how is off design performance calculated, what model is used.}
-
-To deliver a payload to orbit, the SPARTAN uses four Rectangular-to-Elliptical Shape Transition (REST) scramjet engines, with inlets configured to allow installation on a conical forebody. This study uses engines configured to fly between Mach 5 and 10, this type of engine is known as a C-RESTM10 engine\cite{Preller2017}. The REST model has been studied experimentally for flight at off design conditions by Smart \& Ruf \cite{Smart2006}. The REST engine has been used as it has been proven to operate successfully at off-design conditions, an extremely important property for this study as the scramjet stage experiences a range of Mach number flight conditions, and significant variation in dynamic pressure.  
-
-A propulsion database of the C-RESTM10 has been provided for this study by Prof. Michael Smart.
-\begin{figure}
-\centering
-\includegraphics[width=0.7\linewidth]{figures/2_literature-review/C-REST}
-\caption{The C-RESTM10 propulsion database, specific impulse.}
-\label{fig:C-REST}
-\end{figure}
-
-
-
-\section{First Stage Rocket Booster}
-\textcolor{red}{review engine options and modelling/scaling techniques}
-
-The SPARTAN scramjet vehicle must be accelerated to its minimum operating speed by a first stage rocket booster. This booster must be capable of efficient operation from launch at sea level until staging. It is envisioned that the SPARTAN system will eventually use a reusable flyback booster\cite{Preller2017}. However the flyback of the first stage is outside the scope of this study. Instead, a model of an existing first stage booster will be used,\textcolor{red}{ for which the Falcon-1e was chosen.}
-
-\textcolor{red}{The SpaceX Falcon-1e launch system was a proposed small satellite launch system which would have entered use after 2010\cite{Vehicle2008}, but was discontinued and superseded by the Falcon-9 project. The Falcon-1e was designed to launch payloads between 600-900kg to low Earth orbit, with flexible orbit altitude and inclination. The Falcon-1e was to be the next generation of the Falcon-1\cite{Vehicle2008}, a launch tested, modern launch system. }
-
-\textcolor{red}{The Falcon-1e was chosen for its appropriate size and the proven flight effectiveness of the Falcon-1. The first stage of the Falcon-1e is powered by a Merlin 1C LOX/Kerosene turbopump engine. The first stage rocket is designed to be a Falcon-1e first stage scaled lengthwise to 50\% of its original length. REMOVE THIS -  do not describe design in lit review}
-
-
-\section{Exoatmospheric Rocket Engines}
-
-\textcolor{red}{expand this to include control of third stage, identify losses/penalties}
-
-After scramjet stage burnout, the upper stage rocket must exit the atmosphere, and accelerate the payload to orbital velocity. This requires a rocket engine with sufficient thrust to accelerate the third stage rocket out of the atmosphere, and a diameter small enough to allow the rocket to fit within the fuselage of the SPARTAN. Table \ref{tab:Engine} shows a comparison study of upper stage rocket engines. 
-
-\begin{landscape}% Landscape page
-\begin{table}
-
-\begin{tabularx}{\linewidth}{|X|X|X|X|X|X|X|X|X|}
-
-	\hline Engine & Fuel Supply & Fuel & Thrust & Isp & Mass & Diameter & Length & Thrust Vector Capability \\ 
-	\hline Aestus & Pressure-fed & MMH/NTO & 27.5kN & 320s & 110kg & 1.27m & 2.2m & 4$^\circ$ \& 4$^\circ$ by mechanical adjustment\\ 
-	\hline OMS & Pressure-fed  & MMH/NTO & 26.7kN & 316s & 118kg & 1.168m & 1.956m & 8$^\circ$\\ 
-	\hline Aestus II & Pump-fed & MMH/NTO & 46kN & 337.5s & 148 &  & 2.2m  & 6$^\circ$\\ 
-	\hline RS-72 & Pump-fed & MMH/NTO & 55.4kN & 338s & 154kg &  & 2.286 &  6$^\circ$\\ 
-	\hline ATE & Pump-fed & MMH/NTO & 20kN & 345s & 57.9kg & 0.38m & 1.4m &  15$^\circ$\\ 
-	\hline AJ10-118K & Pressure-fed & A-50/NTO & 43.3kN & 320.5s & 124.5kg & 1.53m & 2.7m & Fixed \\ 
-	\hline Kestrel & Pressure-fed & LOX/Kerosene & 30.7kN & 317 & 52kg & 1.1m & 1.9m  & Yes, Unknown limits\\ 
-	\hline Rl-10-3A &  &  &  &  &  &  &   &\\ 
-	\hline  &  &  &  &  &  &  &  & \\ 
-	\hline 
-\end{tabularx} 
-\caption {Comparison of upper stage rocket engines.} 
-\label{tab:Engine}
-\end{table}
-\end{landscape}
-
-
-\section{Partially-Airbreathing Launch Vehicle Ascent Trajectories}
+\subsection{Partially-Airbreathing Launch Vehicle Ascent Trajectories}
 \textcolor{red}{discuss trim - investigated by Dawid}
 
 Current simulations of the SPARTAN vehicle have been carried out with the assumption of a 50kpa dynamic pressure trajectory, a likely design point of the vehicle and scramjet engine. 
@@ -277,7 +213,7 @@ This form of trajectory has so far been simulated using proportional integral de
 
 It is possible that a constant dynamic pressure trajectory may not be the most appropriate trajectory for the second stage vehicle, as there is a variety of aerodynamic factors that must be considered in designing optimal payload to orbit flight. It may be optimal for the vehicle to fly at less than maximum dynamic pressure at point throughout the trajectory, most likely at the first to second and second to third stage separation points. For a constant dynamic pressure trajectory the second-third stage transition will occur at a very low trajectory angle. This is suboptimal for the third stage rocket, which needs to perform a large pull up manoeuvre at high dynamic pressure. Launching this system at higher angle or altitude may improve third stage fuel usage greatly, at a small cost to the second stage fuel, allowing a greater payload to be delivered to orbit. 
 
-\subsection{Single-Stage Vehicles}
+\subsubsection{Single-Stage Vehicles}
 
 Optimal trajectories have previously been developed for launch systems integrating airbreathing and rocket propulsion within single-stage-to-orbit (SSTO) vehicles \cite{Powell1991,Lu1993,Trefny1999}. These optimal trajectory studies found unanimously that a pull-up manoeuvre before the end of the airbreathing engine cut-off was the optimal flight path for the SSTO airbreathing-rocket vehicles being investigated. A pull-up was found to be optimal for vehicles where the rocket engines are not ignited until circularization altitude \cite{Powell1991,Lu1993} as well as vehicles where the rocket engine is ignited immediately after airbreathing engine cut-off \cite{Trefny1999}. For SSTO vehicles a pull-up manoeuvre is a simple trade-off between the altitude at airbreathing engine cut-off and the velocity achievable at cut-off. Due to the entire vehicle being lifted into orbit, this becomes a relatively simple problem of engine efficiency. The airbreathing engine is used for its high efficiency, until the dynamic pressure drops below the operable limit of the airbreathing engine, or until the thrust provided by the airbreathing engine is significantly counteracted by the effects of drag and gravity. 
 \begin{figure}[h]
@@ -296,7 +232,7 @@ Optimal trajectories have previously been developed for launch systems integrati
 	
 \end{figure}
  
- \subsection{Multi-Stage Vehicles}
+ \subsubsection{Multi-Stage Vehicles}
 
 For a multi-stage to orbit vehicle, calculating the optimal trajectory for maximum payload flight is significantly more difficult. A multi-stage vehicle has one or more stage transition points, where the vehicle separates a component which is discarded or reused later, and does not continue to orbit. At a stage transition point there is a large change in the mass and aerodynamics of the launch system. 
 This change in flight dynamics makes finding the optimal stage transition point more complicated. To find the optimal separation point there is a trade-off between:
@@ -359,7 +295,7 @@ Mehta \& Bowles \cite{Mehta2001} prescribe a 2g pull-up at flight conditions of 
 
 
 
-\section{Hypersonic Vehicle Flyback Trajectories}
+\subsection{Hypersonic Vehicle Flyback Trajectories}
 
 Past studies of the SPARTAN vehicle have assumed that a fly-back to launch site is possible after third stage separation\cite{Preller2017}. However, this fly-back has not yet been simulated. A simulation of the fly-back of the SPARTAN is necessary in order to assess the viability of the SPARTAN concept.
 The fly-back of the SPARTAN is a crucial component to the viability of the rocket-scramjet-rocket launch system. The SPARTAN must return to the initial launch site to enable refurbishment to begin immediately, and so that there is no significant transportation of the SPARTAN required between launches. 
@@ -415,6 +351,75 @@ These optimised return trajectories show three distinct sections; a turn manoeuv
 
 \textcolor{red}{
 When compared to the vehicles investigated by Tsuchiya and Mori\cite{Tsuchiya2005}, the SPARTAN separates from its third stage rocket at a considerably higher Mach number of Mach 9.1, as well as at a considerably higher dynamic pressure of 33.9kPa. The SPARTAN must also cover a longer fly-back range of 878km. In addition, the C-REST scramjet engines are limited to operating at hypersonic speeds of Mach 5.1 or higher. These design differences create substantially more challenging conditions than those studied by Tsuchiya and Mori. Consequently, it is necessary to investigate the ability of the SPARTAN to return to the launch site following separation. From comparisons of the studies within this section it is evident that an optimisation of the return flight of the SPARTAN is required, and that a simply defined trajectory is not appropriate. TALKIGN ABOUT MY WORK}
+
+
+
+
+\section{The SPARTAN}
+
+
+The three stage, partially reusable, access to space system under development at The University of Queensland utilises the SPARTAN\cite{Jazra2013} scramjet powered vehicle as the reusable second stage, shown in Figure \ref{fig:SPARTAN}. This system is considered in this study as a representative model for three stage, airbreathing access to space system designs. This launch system is designed for small payload deliveries to orbit and will in the future utilise a fly-back rocket booster to accelerate the SPARTAN stage to minimum Mach number required for stable burn, at which point separation occurs and the second stage uses a scramjet engine to accelerate to between approximately Mach 5-9. The first and second stages are to be reusable, the first stage via conversion into a propeller powered drone, and the second stage through either a glide or extra scramjet powered flight to a suitable landing site.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\linewidth]{SPARTAN}
+	\caption{An early design of the socket-scramjet-rocket launch system incorporating the SPARTAN \cite{Jazra2013}.}
+	\label{fig:SPARTAN}
+\end{figure}
+
+The third stage will be a disposable rocket stage, which will then deliver the payload to orbit, exiting the atmosphere and performing a Hohmann transfer. 
+
+This system is in the preliminary design stage, with estimates of  payload mass fraction indicating that 1.26\% PMF is possible when delivering a 257.4kg payload to low earth orbit \cite{Preller2015a}. This compares well with existing space systems of similar size, with the advantage of being designed for reusability. The second stage vehicle has been designed to a detailed level, and optimised for payload delivery to heliosynchronous orbit.
+
+The SPARTAN has been studied in some detail, simulated over a constant dynamic pressure trajectory with variation in the aerodynamic surface properties of the vehicle. 
+
+\subsection{Scramjet Engine Model}
+
+\textcolor{red}{Much more info, how is off design performance calculated, what model is used.}
+
+To deliver a payload to orbit, the SPARTAN uses four Rectangular-to-Elliptical Shape Transition (REST) scramjet engines, with inlets configured to allow installation on a conical forebody. This study uses engines configured to fly between Mach 5 and 10, this type of engine is known as a C-RESTM10 engine\cite{Preller2017}. The REST model has been studied experimentally for flight at off design conditions by Smart \& Ruf \cite{Smart2006}. The REST engine has been used as it has been proven to operate successfully at off-design conditions, an extremely important property for this study as the scramjet stage experiences a range of Mach number flight conditions, and significant variation in dynamic pressure.  
+
+A propulsion database of the C-RESTM10 has been provided for this study by Prof. Michael Smart.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/2_literature-review/C-REST}
+	\caption{The C-RESTM10 propulsion database, specific impulse.}
+	\label{fig:C-REST}
+\end{figure}
+
+
+
+
+
+\section{Exoatmospheric Rocket Engines}
+
+\textcolor{red}{expand this to include control of third stage, identify losses/penalties}
+
+After scramjet stage burnout, the upper stage rocket must exit the atmosphere, and accelerate the payload to orbital velocity. This requires a rocket engine with sufficient thrust to accelerate the third stage rocket out of the atmosphere, and a diameter small enough to allow the rocket to fit within the fuselage of the SPARTAN. Table \ref{tab:Engine} shows a comparison study of upper stage rocket engines. 
+
+\begin{landscape}% Landscape page
+	\begin{table}
+		
+		\begin{tabularx}{\linewidth}{|X|X|X|X|X|X|X|X|X|}
+			
+			\hline Engine & Fuel Supply & Fuel & Thrust & Isp & Mass & Diameter & Length & Thrust Vector Capability \\ 
+			\hline Aestus & Pressure-fed & MMH/NTO & 27.5kN & 320s & 110kg & 1.27m & 2.2m & 4$^\circ$ \& 4$^\circ$ by mechanical adjustment\\ 
+			\hline OMS & Pressure-fed  & MMH/NTO & 26.7kN & 316s & 118kg & 1.168m & 1.956m & 8$^\circ$\\ 
+			\hline Aestus II & Pump-fed & MMH/NTO & 46kN & 337.5s & 148 &  & 2.2m  & 6$^\circ$\\ 
+			\hline RS-72 & Pump-fed & MMH/NTO & 55.4kN & 338s & 154kg &  & 2.286 &  6$^\circ$\\ 
+			\hline ATE & Pump-fed & MMH/NTO & 20kN & 345s & 57.9kg & 0.38m & 1.4m &  15$^\circ$\\ 
+			\hline AJ10-118K & Pressure-fed & A-50/NTO & 43.3kN & 320.5s & 124.5kg & 1.53m & 2.7m & Fixed \\ 
+			\hline Kestrel & Pressure-fed & LOX/Kerosene & 30.7kN & 317 & 52kg & 1.1m & 1.9m  & Yes, Unknown limits\\ 
+			\hline Rl-10-3A &  &  &  &  &  &  &   &\\ 
+			\hline  &  &  &  &  &  &  &  & \\ 
+			\hline 
+		\end{tabularx} 
+		\caption {Comparison of upper stage rocket engines.} 
+		\label{tab:Engine}
+	\end{table}
+\end{landscape}
+
+
 
 \section{Optimal Control}
 
