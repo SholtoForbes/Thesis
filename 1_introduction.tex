@@ -10,19 +10,18 @@
   	The sector has also seen a split between those who produce large satellite launchers and those who produce small satellite launchers.
   	For large payload launchers, reusability is a major focus in the design of new launch systems, with the purpose of making a launch system cost efficient over multiple launches. 
   	For small payload launchers, reusability is more complex than for large launchers, as the additional systems necessary for reusability add a larger fraction of system mass, and require a proportionally larger fuel mass. 
-  	Consequently, the focus of small launch system design is currently on producing expendable launch systems as cheaply and efficiently as possible, using state of the art technologies such as 3D printing to expedite the process and minimise cost.
+  	Consequently, the focus of small launch system design is currently on producing expendable launch systems as cheaply and efficiently as possible, using state of the art technologies such as 3D printing to expedite the process and minimise cost\cite{Niederstrasser2015}.
   	However, if reusability is able to be successfully integrated into small launch system design, it has the potential to increase the cost efficiency and launch flexibility, potentially opening up the small satellite market significantly. 
   	
   	
   	
-  	A potential candidate for integrating reusability into small satellite launch systems is the use of airbreathing engines[CITATIONXX].
-Airbreathing engines produce higher specific impulse than rockets, and require far less propellant to be carried on-board a launch vehicle[CITATIONXX].  
- 	The use of airbreathing engines for reusability has particular applicability to small satellite launchers[CITATIONXX]. 	 
-  	The higher efficiency and reduced propellant mass of airbreathing vehicles allows the additional mass of the systems necessary for reusability to be mitigated. An airbreathing vehicle can be designed in a similar fashion to a conventional aircraft, with wings, stabilisers and ailerons[CITATIONXX]. A vehicle designed in this fashion has a high lift-to-drag ratio, and good manoeuvrability, allowing for a return flight which uses minimal fuel.
+  	A potential candidate for integrating reusability into small satellite launch systems is the use of airbreathing engines\cite{Smart2009a,Ketsdever2010}.
+Airbreathing engines produce higher specific impulse than rockets, and require far less propellant to be carried on-board a launch vehicle\cite{Smart2010}.  	 
+  	The higher efficiency and reduced propellant mass of airbreathing vehicles allows the additional mass of the systems necessary for reusability to be mitigated\cite{Curran2003}. An airbreathing vehicle can be designed in a similar fashion to a conventional aircraft, with wings, stabilisers and ailerons\cite{Shaughnessy1990}. A vehicle designed in this fashion has a high lift-to-drag ratio, and good manoeuvrability, allowing for a return flight which uses minimal fuel.
   	
-  	The primary airbreathing engines in considered for launch vehicles are ramjet and scramjet engines[CITATIONXX]. These engines offer good efficiency and have operational regimes which allow them to effectively accelerate a launch vehicle over a range of Mach numbers. 
+  	The primary airbreathing engines in consideration for launch vehicles are ramjet and scramjet engines\cite{HeiserWilliamPratt1994}. These engines offer good efficiency and have operational regimes which allow them to effectively accelerate a launch vehicle over a range of Mach numbers. 
   	Ramjets and scramjets rely on the high velocity of the aircraft to compress the flow of air entering the engine before combustion.  Ramjets slow the air to subsonic speeds before combustion and are limited to operation at low Mach numbers, whereas scramjets keep the flow supersonic throughout, and operate within the hypersonic regime, above Mach 5. 
-  	The limited operational regimes of these engines, and the necessity for atmospheric flight, means that a launch system cannot be solely powered by airbreathing engines. Rocket power is necessary for at least the exoatmospheric portion of the trajectory. As a result, the designs of airbreathing launch systems are necessarily partially-airbreathing, usually separated into multiple stages to increase weight efficiency[CITATIONXX]. If a scramjet engine is used, rocket power is also desirable for accelerating scramjet accelerator to minimum operational speed, as the alternative is using turbojets and ramjets sequentially, which is weight and cost intensive[CITATIONXX]. 
+  	The limited operational regimes of these engines, and the necessity for atmospheric flight, means that a launch system cannot be solely powered by airbreathing engines. Rocket power is necessary for at least the exoatmospheric portion of the trajectory. As a result, the designs of airbreathing launch systems are necessarily partially-airbreathing, usually separated into multiple stages to increase weight efficiency\cite{Smart2009a}. If a scramjet engine is used, rocket power is also desirable for accelerating scramjet accelerator to minimum operational speed, as the alternative is using turbojets and ramjets sequentially\cite{Smart2009a}, which is weight and cost intensive. 
   	
   	 
   	 The design of the trajectory of a partially-airbreathing launch system is extremely important to its performance. 
@@ -33,9 +32,9 @@ Airbreathing engines produce higher specific impulse than rockets, and require f
   A trajectory must be calculated which allows the launch system to achieve its objectives of placing a payload into orbit, while recovering any reusable stages.
   Ideally, the calculated trajectory will achieve the maximum possible payload-to-orbit, while adhering to the structural, heating and propulsive limitations of the vehicle.  
   Calculating the optimal trajectory profile for a launch system typically requires the use of optimal control theory. 
-    Optimal control theory is a general set of techniques which find a control law to maximise a given metric of a system. For a launch vehicle, optimal control allows the best possible payload-to-orbit to be calculated in simulations during design.
-  Optimal control theory allows a trajectory to be calculated in which the flight path of each individual vehicle is considered simultaneously to produce a maximum-payload trajectory. 
-  Optimal control is able to produce an optimised trajectory which satisfies the specific structural and flight constraints of the vehicle being simulated, allowing the physical limitations of the vehicle, such as heating and structural loading limits, to be imposed. These constraints also allow any necessary mission conditions to be established, such as reaching orbital velocity and achieving fly-back. 
+    Optimal control theory is a general set of techniques which find a control law to maximise a given metric of a system\cite{Rao2009,Betts1998}. For a launch vehicle, optimal control allows the best possible payload-to-orbit to be calculated in simulations during design.
+  Optimal control theory allows a trajectory to be calculated in which the flight path of each individual vehicle is considered simultaneously to produce a maximum-payload trajectory\cite{Betts1998}. 
+  Optimal control is able to produce an optimised trajectory which satisfies the specific structural and flight constraints of the vehicle being simulated, allowing the physical limitations of the vehicle, such as heating and structural loading limits, to be imposed\cite{Betts1998}. These constraints also allow any necessary mission conditions to be established, such as reaching orbital velocity and achieving fly-back. 
   An optimal trajectory calculated for multiple launch vehicle stages simultaneously, without predispositions, can offer valuable insights into the performance of a launch vehicle, and drive future design decisions. 
   This concurrent optimisation of multiple stages is particularly important for launch systems incorporating airbreathing engines, where the performance of each stage is significantly different.  
   
@@ -44,7 +43,7 @@ Airbreathing engines produce higher specific impulse than rockets, and require f
 
   
   
-  	   This study applies optimal control theory to a three stage rocket-scramjet-rocket launch system being developed by The University of Queensland, The second stage of this system is a scramjet-powered accelerator, designated The SPARTAN[CITATIONXX]. This launch system is designed to be partially reusable, with at least the second stage scramjet vehicle flying back to the initial launch site, as well as possibly the first stage booster, although this is beyond the scope of this study. 
+  	   This study applies optimal control theory to a three stage rocket-scramjet-rocket launch system being developed by The University of Queensland, The second stage of this system is a scramjet-powered accelerator, designated The SPARTAN\cite{Preller2017b}. This launch system is designed to be partially reusable, with at least the second stage scramjet vehicle flying back to the initial launch site, as well as possibly the first stage booster, although this is beyond the scope of this study. 
   	   In previous studies it has been assumed that by maximising the performance of the SPARTAN, that the performance of the launch system is also maximised. 
   	   The trajectory of the launch system has been designed around the SPARTAN flying at its
   	   maximum dynamic pressure, and all other trajectory stages have conformed to this assumption. However, these studies did not consider the interaction between stages, or the fly-back of the SPARTAN.
@@ -55,7 +54,7 @@ Airbreathing engines produce higher specific impulse than rockets, and require f
   	  	\begin{figure}[ht]
   	  		\centering
   	  		\includegraphics[width=0.7\linewidth]{figures/1_introduction/project-spartan}
-  	  		\caption{The scramjet-powered second stage of the SPARTAN CITATIONXX.}
+  	  		\caption{The scramjet-powered second stage of the SPARTAN\cite{BBC}.}
   	  		\label{fig:project-spartan}
   	  	\end{figure}
   	  	
@@ -68,24 +67,20 @@ Airbreathing engines produce higher specific impulse than rockets, and require f
 \vspace*{10pt}
     \noindent These aims will be achieved through the following objectives:
     \begin{enumerate}
-    	 \item \emph{Development of a detailed design and simulation for a rocket-scramjet-rocket launch system.}
+    	 \item \emph{Develop a detailed design and aerodynamic simulation for a rocket-scramjet-rocket launch system}
     	 
-    	   For an optimal trajectory to be calculated, a detailed launch system design and robust simulation are required. This design must be representative of a standard rocket-scramjet-rocket launch system for the optimal trajectory results to be generally applicable.\\
+    	   For an optimal trajectory to be calculated, a detailed launch system design and robust aerodynamic simulation are required. This design must be representative of a standard rocket-scramjet-rocket launch system for the optimal trajectory results to be generally applicable.\\
 
-\item \emph{Calculation of a maximum payload-to-orbit trajectory using optimal control for the ascent of the rocket-scramjet-rocket launch system.}
+\item \emph{Determine the maximum payload-to-orbit trajectory for the rocket-scramjet-rocket launch system using optimal control, with and without fly-back.}
 
-The trajectory of a multi-stage rocket-scramjet-rocket system is sensitive to a multitude of factors. Optimal control techniques allow a maximum-payload trajectory to be calculated with few assumptions as to the general shape of the trajectory. \\
+The trajectory of a multi-stage rocket-scramjet-rocket system is sensitive to a multitude of factors. Optimal control techniques allow a maximum-payload trajectory to be calculated with few assumptions as to the general shape of the trajectory. Optimising the ascent of the launch system ensures that the maximum payload-to-orbit is attained. The inclusion of the fly-back of the scramjet stage in the trajectory optimisation allows the impact of the fly-back to be minimised.\\
 
-\item \emph{Calculation of a maximum payload-to-orbit trajectory using optimal control, including the fly-back of the SPARTAN.}
-
-The fly-back of the SPARTAN may have a large impact on the optimal trajectory of the launch system. Optimising the ascent and return trajectories concurrently ensures that the maximum payload-to-orbit is attained while achieving fly-back. \\
-    	
-      \item \emph{Evaluation of the sensitivity of the optimal trajectory solution to variation in key SPARTAN parameters.} 
+      \item \emph{Develop insight into how key design parameters of SPARTAN interact with the optimised trajectory.} 
 
 	The optimal trajectory shape and maximum payload-to-orbit are dependent on the design of the launch system. 
 	Assessing the sensitivity of the optimised trajectory shape and payload-to-orbit to key aerodynamic and propulsive properties allows the relative impacts of various design parameters to be calculated and contrasted. \\
 
-      \item \emph{Investigation into the effects of varied third stage design.}
+      \item \emph{Establish the effect of the 3rd stage design on overall system performance.}
 
 The relative sizing and geometry of the stages in a launch system can have a large effect on the payload cost efficiency of the system. Optimising the trajectory for multiple configurations shows how the maximum payload-to-orbit varies compared to the proportional size of the expendable stages of the launch system. \\
 
@@ -116,6 +111,8 @@ The relative sizing and geometry of the stages in a launch system can have a lar
 
  The ascent of the SPARTAN and third stage rocket are optimised using LODESTAR, for maximum payload-to-orbit. The first stage rocket is optimised to the first-second stage separation point, for minimum fuel usage. The optimal trajectory is analysed. It is found that a pull-up at the end of the scramjet stage trajectory significantly improves payload-to-orbit.  
  The sensitivity of the optimal trajectory to variation of key vehicle design parameters is studied. Optimised trajectories are calculated, and the trends in maximised payload-to-orbit and optimal trajectory shape are analysed to study the relative impact of the design parameters of the SPARTAN. 
+ 
+ 
       
       \subsubsection*{Chapter 6 - Optimised Trajectory Including Fly-Back}
       
@@ -126,8 +123,8 @@ The relative sizing and geometry of the stages in a launch system can have a lar
       
       \subsubsection*{Chapter 7 - Design and Optimisation of the Third Stage Rocket}
       
-      The correlations between key design parameters of the third stage rocket and the optimised trajectory of the launch system are investigated. The design of the third stage rocket is varied, along with corresponding changes to the internal design of the SPARTAN. Optimised trajectories are generated for each design configuration. The trends in optimised payload-to-orbit are analysed, along with the corresponding variations in the optimal trajectory shape, in order to maximise the benefit of the optimised launch trajectory.  
-       \textcolor{red}{Results of this section are currently being determined.} 
+      The correlations between key design parameters of the third stage rocket and the optimised trajectory of the launch system are investigated. The design of the third stage rocket is varied, along with corresponding changes to the internal design of the SPARTAN. Optimised trajectories are generated for each design configuration. The trends in optimised payload-to-orbit are analysed, along with the corresponding variations in the optimal trajectory shape, in order to maximise the benefit of the optimised launch trajectory. An optimal design for the third stage rocket is suggested.  
+      
       
      
       

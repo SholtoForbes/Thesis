@@ -127,7 +127,7 @@ The flow properties at the inlet of the engines is calculated using the Tayor-Ma
 \label{fig:ConicalShock}
 \end{figure}
 
- The engine model used is a CRESTM10 database\cite{Preller2017}, analysed using quasi-1D simulation and provided for this study by Prof. Michael Smart.
+ The engine model used is a CRESTM10 database\cite{Preller2017,Preller2018}, analysed using quasi-1D simulation and provided for this study by Prof. Michael Smart. This database has previously been used in simulations of the SPARTAN, as explained in Section \ref{sec:enginemodel}.
 This database provides data points of engine performance over inlet conditions within the operational range, at 50kPa dynamic pressure equivalent conditions. The specific impulse data set is shown in Figure \ref{fig:ISPinterp}. This data is interpolated using bivariate splines for the given inlet conditions, to calculate specific impulse produced by the engine. During flight the C-REST inlet conditions will stay within the region bounded by the available data. However, for the purposes of the trajectory optimisation, it is necessary for the vehicle model to be able to extrapolate for ISP and equivalence ratio data. This extrapolation is linear, and is used to drive the optimisation, but does not directly affect the final solution. 
 For operation at high Mach numbers, the fuel mass flow rate is assumed to be stoichiometric, so that $\dot{m_f}$ = $0.0291\dot{m}$. This ensures that the scramjet engines are performing at high efficiency throughout the acceleration of the scramjet stage. 
 \begin{figure}[ht]
@@ -149,9 +149,7 @@ $\dot{m} = 0.9 m_c A_{cap} P_0 M_0 \sqrt{\dfrac{\gamma_0}{R_{air} T_0}}$,
 
 $\dot{m}_{fuel} = (\dfrac{m_{fuel}}{m_{ox}} )_{st} \phi \dot{m}$
 
-\textcolor{red}{Explain details of C-REST calculator here, including mass capture rate and capture area modifiers. Need details from Michael. Citation for this?}
-
-The multiplier of 0.9 is an approximate term included to account for losses due to asymmetry within the engine. 
+The multiplier of 0.9 is an approximate term included to account for losses due to asymmetry within the engine\cite{Preller2018}. 
 The thrust for each engine, $T$, is obtained by inclusion of the interpolated specific impulse, ie. 
 
 $T = g_0\dot{m}I_{sp}$. 
@@ -165,6 +163,9 @@ $T = g_0\dot{m}I_{sp}$.
 		
 		
 		\subsection{The Aerodynamics of the SPARTAN}\label{sec:aero}
+		
+		\textit{Note: Viscous correction will be added to the aerodynamic database, calculated by Alexander Ward. The additional thrust obtained by the nozzle exit and boat tail is currently being computed in Cart3d and will be added to the propulsive database.}
+		
 		
 In order for the trajectory of the SPARTAN to be successfully simulated and optimised, the aerodynamics of the SPARTAN must be calculated for the large range of flight conditions experienced during the acceleration and return flights. 
 The aerodynamics of the SPARTAN are calculated at set flight conditions covering the breadth of necessary conditions, and the results are tabulated in databases. During simulation, the aerodynamics of the SPARTAN are determined by interpolation over the aerodynamic databases using bivariate splines. 
@@ -192,7 +193,7 @@ The drag, lift and moment coefficients are determined by interpolating for Mach 
 						The CART3D Meshes are initiated with an outer boundary distance of 40 times the vehicle length. This boundary distance was observed to produce suitable free stream conditions and good mesh convergence. Nine mesh adaption levels are used. Nine levels have been observed to generally produce good convergence, with moderate computation times of 1-3 hours per simulation. The convergence of the residuals and forces are investigated to ascertain if a solution has converged. Figure XX shows an example solution validation for Mach 7, 2$^\circ$ angle of attack, engine-on conditions. Good convergence can be observed in the force functionals, with a corresponding decrease in the residual values indicating solution convergence.  
 						
 						
-						\textcolor{red}{CART3D validation image here, showing decreasing residuals and converging functionals.}
+						\textit{A CART3D validation image will be inserted here, showing decreasing residuals and converging functionals.}
 		
 		
 		\subsubsection{Trim Analysis}\label{sec:trim}
@@ -201,7 +202,7 @@ The drag, lift and moment coefficients are determined by interpolating for Mach 
 		\begin{figure}[ht]
 			\centering
 			\includegraphics[width=0.6\linewidth]{figures/3_vehicle_design/SPARTAN_FLAPS}
-			\caption{SPARTAN model showing control surfaces. \textcolor{red}{Dimensions to be included.}}
+			\caption{SPARTAN model showing control surfaces. \textit{Dimensions will be included.}}
 			\label{fig:SPARTAN_FLAPS}
 		\end{figure}
 		The SPARTAN is trimmed using control surfaces on the wings, shown in figure \ref{fig:SPARTAN_FLAPS}. 
@@ -228,7 +229,7 @@ The drag, lift and moment coefficients are determined by interpolating for Mach 
 		Figure \ref{fig:FlapDeflection} shows the necessary flap deflections to trim the SPARTAN. An Engine-on case is shown at a centre of gravity of  XXm corresponding to full-fuel with third stage, and an Engine-off case is shown for a centre of gravity of XXm, corresponding to a fuel-empty state after third stage release. Additional figures illustrating the variation in moment coefficients are shown in Appendix XX.
 		The flap deflections are designated as negative up. Negative flap deflection necessary for trim indicates that the centre of pressure is aft of the centre of gravity, and that the vehicle has positive static margin, and is generally likely to be stable. 
 		
-		\textcolor{red}{Comment on stability here when final aerodynamics are calculated. Comment on the effect of each trim map, how it impacts lift etc.}
+		\textit{The stability of the SPARTAN will be mentioned here when the final aerodynamics are calculated. The effect of each trim map, how it impacts lift etc. will be detailed.}
 		
 		\begin{figure}
 			\begin{subfigure}{.5\textwidth}
@@ -248,7 +249,7 @@ The drag, lift and moment coefficients are determined by interpolating for Mach 
 				\caption{Empty of fuel, after third stage release}
 				\label{fig:FlapDeflectionEngineOff}
 			\end{subfigure}
-			\caption{Flap deflection required for trim of the SPARTAN. Negative up. \textcolor{red}{Change colourmap to have same range}}
+			\caption{Flap deflection required for trim of the SPARTAN. Negative up. \textit{These images will be modified when the final aerodynamics are calculated. The colourmap will be modified to have the same range across figures.}}
 			\label{fig:FlapDeflection}
 		\end{figure}
 		
@@ -270,7 +271,7 @@ The process for generating the aerodynamic databases is shown in Figure \ref{fig
 				\begin{figure}[ht]
 					\centering
 					\includegraphics[width=0.6\linewidth]{figures/3_vehicle_design/Pointwise}
-					\caption{Surface triangulation of the Baseline SPARTAN. \textcolor{red}{Need to recolour this image.}}
+					\caption{Surface triangulation of the Baseline SPARTAN. \textit{This image will be recoloured.}}
 					\label{fig:Pointwise}
 				\end{figure}
 
@@ -313,7 +314,7 @@ The process for generating the aerodynamic databases is shown in Figure \ref{fig
 		\begin{figure}[ht]
 			\centering
 			\includegraphics[width=0.9\linewidth]{figures/3_vehicle_design/EngineOn-M7AoA024km}
-			\caption{Engine-on CART3D simulation at Mach 7, 6$^\circ$ angle of attack, and 24km altitude. \textcolor{red}{Quality of images will be improved.}}
+			\caption{Engine-on CART3D simulation at Mach 7, 6$^\circ$ angle of attack, and 24km altitude. \textit{The quality of these images will be improved.}}
 			\label{fig:EngineOn-M7AoA624km}
 		\end{figure}
 		
@@ -337,7 +338,7 @@ The process for generating the aerodynamic databases is shown in Figure \ref{fig
 				\caption{L/D.}
 				\label{fig:LD-EngineOn}
 			\end{subfigure}
-			\caption{Trimmed aerodynamic coefficients with the C-REST engines powered on. Coefficients correspond to a reference area of 62.77m$^2$. \textcolor{red}{NOTE: I need to run a new clic case for these plots without nozzle or boat tail}}
+			\caption{Trimmed aerodynamic coefficients with the C-REST engines powered on. Coefficients correspond to a reference area of 62.77m$^2$. }
 			\label{fig:EngineOnAero}
 		\end{figure}
 		
@@ -463,7 +464,7 @@ The thrust and specific impulse of the Merlin 1-C are determined by interpolatio
 	\begin{figure}
 \centering
 \includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/3rdStage}
-\caption{The third stage rocket, showing major internal features. \textcolor{red}{note:labels to be added}}
+\caption{The third stage rocket, showing major internal features. \textit{Labels to be added.}}
 \label{fig:3rdStage}
 \end{figure}
 	
@@ -496,19 +497,17 @@ The kestrel engine used in the third stage is modified to have 50\% increased pr
 The third stage rocket is separated from the SPARTAN at a high dynamic pressure, after which it spends a considerable amount of time accelerating in-atmosphere before reaching exoatmospheric conditions. The time spent within a high dynamic pressure environment creates a large amount of heat loading, which must be mitigated by heat shielding. The heat shielding must be capable of withstanding the extremely high heat and structural loading necessary to protect the third stage rocket internals and payload, as well as being lightweight, as the payload-to-orbit is extremely sensitive to the mass of the third stage, and cost effective, as increasing the cost of the third stage directly increases launch cost due to it being expendable. 
 
 
-The heat shield used to protect the third stage is constructed from a tungsten nose tip, a reinforced carbon-carbon nose cone, and a phenolic cork cylinder, weighing 125.6kg in total. A mass breakdown is shown in Table \ref{tab:heatshield}.
+The heat shield used to protect the third stage is constructed from a tungsten nose tip, a reinforced carbon-carbon nose cone, and a phenolic cork cylinder, weighing 130.9kg in total. This heat shield is designed based on the materials and thicknesses defined in\cite{Preller2017b}. A mass breakdown is shown in Table \ref{tab:heatshield}.
 Tungsten is used at the tip of the nose cone, the area of maximum heat loading. Tungsten has extremely high heat resistivity, and a very low coefficient of thermal expansion[CITATIONXX]. However, tungsten is costly and heavy, and is only used on the very tip of the nose where it is absolutely necessary. 
   Reinforced carbon-carbon is used for the conical section of the heat shield, as this is an area that will be subject to high heat and structural loading. Carbon-carbon is able to withstand high temperatures, as well as being thermal shock resistant and having a low coefficient of thermal expansion\cite{Fitzer}. Carbon-carbon is used in rocket and missile nose cones, as well as on aircraft leading edges due to its good heat resistant properties\cite{Fitzer}. However, carbon-carbon is expensive, and is used only on the conical section of the heat shield to minimise cost. For the cylindrical section of the heat shield protecting the main body of the third stage, phenolic cork is used. Phenolic cork is a composite of ground cork and phenolic binders which is light and relatively cheap, with good heat resistivity. Phenolic cork has lower tensile strength and heat resistivity than carbon-carbon\cite{Composites,Fitzer}, but is cheaper and lighter, making it appropriate for use on section of the heat shield which experiences lower heating and structural loads. 
-
-\textcolor{red}{how were the thicknesses decided?}
 
 		\begin{table}[h]
 			\centering
 \begin{tabular}{|c|c|c|c|}
 	\hline  Part & Density & Geometry & mass \\ 
 	\hline  Tungsten Nose & $\rho_{Tungsten} = 19250$  kg/m$^3$ & 50mm diameter cylinder, spherical tip & 12.6kg \\ 
-		\hline C-C Cone & $\rho_{CC} = 1800$  kg/m$^3$ & 10mm thick, conical & 89.3kg \\ 
-			\hline Phenolic Cork Cylinder & $\rho_{Phenolic Cork} = 320$  kg/m$^3$ & 5mm thick, cylindrical & 23.7kg \\ 
+		\hline C-C Cone & $\rho_{CC} = 1800$  kg/m$^3$ & 10mm thick, conical & 93.4kg \\ 
+			\hline Phenolic Cork Cylinder & $\rho_{Phenolic Cork} = 320$  kg/m$^3$ & 5mm thick, cylindrical & 24.9kg \\ 
 	\hline 
 \end{tabular} 
 \caption{Third stage heat shield breakdown.}
