@@ -591,12 +591,43 @@ The most significant practical difference between the solvers lies in the robust
 \end{table}
 
 
+\subsection{GPOPS-2}
+
+GPOPS-2 is an hp-adaptive pseudospectral method solver designed for general optimal control problems. GPOPS-2 implements a variety of hp-adaptive pseudospectral methods, so that the best method may be chosen for a given problem. GPOPS-2 uses IPOPT (Interior Point OPTimizer) as standard nonlinear programming solver. IPOPT is an open source nonlinear optimisation package which utilises an interior point line search filter method.
+
+GPOPS-2 is well proven in aerospace applications. 
+
+
+
+https://link.springer.com/content/pdf/10.1007%2Fs10107-004-0559-y.pdf
+https://projects.coin-or.org/Ipopt/browser/stable/3.10/Ipopt/doc/documentation.pdf?format=raw
+
+
+
+
+
 
 \section{Aerodynamic Analysis}
 
 \textit{This section will be expanded to contain a general review of solvers.}
 
+
+
+
 Simulating the trajectory of access to space vehicles requires the aerodynamics of each vehicle to be characterised at every flight condition experienced during launch. For this to be possible, it is necessary to create large aerodynamic coefficient databases, which cover the operable region of the vehicle, and include the effects of control surface deflections and propulsion.
+
+There are a variety of tools available to calculate the aerodynamics of aerospace vehicles.
+ These tools are primarily designed towards either accuracy or efficiency, as more accurate methods use more computational power. 
+This trade off means a tool must be selected which best suits the requirements of a given problem. 
+For a preliminary vehicle design, it is often desirable to select a tool which is as computationally efficient as possible, as the design of the vehicle is liable to change often. 
+Whereas for more advanced stages of vehicle design, an accurate tool is desirable, to assess the design of the vehicle in detail.
+
+Low fidelity methods include the use of empirical relations derived from databases of existing vehicles[citeXX missile datcom], as well as panel method codes[cite cbaero, cart, hotsose].
+Medium fidelity methods consist of inviscid Euler solvers [cite cart3d, AIRPLANE], which are able to provide reasonable accuracy, with medium run times. These solvers are often used in the later stages of preliminary design, or when higher fidelity is necessary due to design features. 
+High fidelity methods mostly consist of Navier-Stokes CFD solvers. 
+
+\textcolor{red}{Aerodynamic 	Analysis	of the JAPHAR Vehicle - says that HOTSOSE (similar to HYPAERO), is not suitable for simulating engine through-flow - reasoning for CART3D use}
+
 For preliminary design purposes, inviscid-flow Euler CFD solvers are used extensively across industry and academia\cite{Almosnino2016}. 
 
 
