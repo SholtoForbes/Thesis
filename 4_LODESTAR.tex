@@ -4,7 +4,7 @@
 \chapter{LODESTAR}\label{chapter:LODESTAR}	
 This chapter covers the optimal control program LODESTAR, which has been used to simulate the optimal trajectories of the rocket-scramjet-rocket system. The basics of optimal control and the optimal control methods used are presented, as well as the specific problem formulation used by LODESTAR.
 
-The program LODESTAR (Launch Optimisation and Data Evaluation for Scramjet Trajectory Analysis Research) has been developed to aid with the simulation and trajectory optimisation of space launch systems. LODESTAR is a MATLAB based trajectory optimiser which utilises GPOPS-2, a proprietary pseudospectral method optimisation package. LODESTAR optimises a trajectory towards a user-defined objective function, such as maximum payload-to-orbit, subject to constraints which bound the operational region of a vehicle. LODESTAR accurately models both rocket-powered and scramjet-powered vehicles in 6 degrees of freedom. LODESTAR contains multiple modules configured for the SPARTAN launch system, which are able to optimise trajectories for;
+The program LODESTAR (Launch Optimisation and Data Evaluation for Scramjet Trajectory Analysis Research) has been developed to aid with the simulation and trajectory optimisation of space launch systems.  LODESTAR optimises a trajectory towards a user-defined objective function, such as maximum payload-to-orbit, subject to constraints which bound the operational region of a vehicle. LODESTAR accurately models both rocket-powered and scramjet-powered vehicles in 6 degrees of freedom. LODESTAR contains multiple modules configured for the SPARTAN launch system, which are able to optimise trajectories for;
 
 \begin{enumerate}
  \item The ascent of the first stage rocket.
@@ -14,11 +14,15 @@ The program LODESTAR (Launch Optimisation and Data Evaluation for Scramjet Traje
  \item Combined trajectories of multiple stages in any combination.
 \end{enumerate}
 
-LODESTAR performs optimisation using four classes of variables, states, controls, constraints and costs, which define the optimisation problem being solved. States are the variables which define the physical trajectory and are dependent on other states and the control variable. The control variables are independent in the solution space and can be modified freely by the solver algorithm within the prescribed limits.  Constraints bound the state and control variables to a well defined solution space and events confine the state and control values to a specified value at a specific point in time. The cost variables define the target of the optimisation problem. A solution is found when the cost is minimised to a suitable accuracy. 
+LODESTAR performs optimisation using four classes of variables, states, controls, constraints and costs, which define the optimisation problem being solved. States are the variables which define the physical trajectory and are dependent on other states and the control variable. The control variables are independent in the solution space and can be modified freely by the solver algorithm within the prescribed limits.  Constraints bound the state and control variables to a well defined solution space and impose physical limitations on the vehicle such as structural or aerothermodynamic limits.
+The constraints may also confine the state and control values to a specified value at a specific point in time, defining the flight conditions at the start and end points of a trajectory or phase. The cost function defines the target of the optimisation problem. This cost function may be any function which is defined by the states or controls of the optimisation problem. A solution to the optimisation problem is found when the cost is minimised to a suitable accuracy. 
 
-GPOPS-II requires these variables to be precisely described. LODESTAR contains multiple modules that calculate the vehicle aerodynamic properties and run external simulations which then feed data back data to the pseudospectral solver for evaluation. Modules calculate the vehicle aerodynamic and engine output at each point along the trajectory. The vehicle model module takes this data and calculates the mass of the vehicle as well as the 6 degree of freedom motion derivatives of the vehicle along the trajectory. As this is an iterative process, the calculated system dynamics do not match the approximation exactly until convergence is achieved (This is a fundamental property of the pseudospectral method, see Section \ref{sec:PS}). 
+LODESTAR is MATLAB based and utilises GPOPS-2, a proprietary pseudospectral method optimisation package.
+GPOPS-2 requires that the vehicle model, constraints and cost function be modelled accurately as smooth, continuous functions. LODESTAR contains multiple modules that calculate the vehicle aerodynamic properties and run external simulations which then feed data back data to the pseudospectral solver for evaluation. Modules calculate the vehicle aerodynamic and engine output at each point along the trajectory. The vehicle model module takes this data and calculates the mass of the vehicle as well as the 6 degree of freedom motion derivatives of the vehicle along the trajectory. The cost is calculated using the state variables. The trajectory is evaluated to produce the final cost of the trajectory. The final step of each iteration is updating the state derivatives, which is performed by the dynamics file. The state derivatives and cost are evaluated by GPOPS-2 to determine if the trajectory has produced a suitable result. Figure \ref{fig:FlowChartSmall} illustrates an iteration of the pseudospectral solver.
 
-The cost is calculated using the state variables. The trajectory is evaluated to produce the final cost of the trajectory. The final step of each iteration is updating the state derivatives, which is performed by the dynamics file. The state derivatives and cost are evaluated by GPOPS-2 to determine if the trajectory has produced a suitable result. Figure \ref{fig:FlowChartSmall} illustrates an iteration of the pseudospectral solver.
+ As this is an iterative process, the calculated system dynamics do not match the approximation exactly until convergence is achieved (This is a fundamental property of the pseudospectral method, see Section \ref{sec:PS}). Additionally, it is possible for GPOPS-2 to not be able to converge to an optimal solution. LODESTAR contains a number of verification modules which assess the optimised trajectory solution to ensure that the solution is indeed an optimal trajectory, and that the dynamics of the solution are accurate. 
+
+
 
 \begin{figure}
 	\centering
@@ -28,7 +32,7 @@ The cost is calculated using the state variables. The trajectory is evaluated to
 \end{figure}
 
 
-\section{Practical Optimal Control}
+\section{Optimal Control Problem Requirements}
 The pseudospectral method and direct single shooting techniques used by LODESTAR are described in detail in sections \ref{sec:Optimisation}. Practically, the implementation of these techniques involves the specification of the dynamics of the system to be optimised, as well as the set of constraints and objectives which govern the optimisation problem. These constraints inform the optimiser of the bounds of the optimisation, and perform the functions of limiting the search space to the physically possible (eg. constraining altitude to be greater than ground level) as well as constraining the vehicle within its performance limits (eg. limiting the angle of attack). These constraints also come in the form of initial or terminal constraints, which define the initial conditions of the trajectory as well as any conditions which the trajectory must meet at termination. 
 
 The pseudospectral method requires the specification of a set of 'state variables'. These state variables describe the physical dynamics of the system. In the pseudospectral method, the dynamics of the system are used as constraints on the optimal control problem;
@@ -89,7 +93,7 @@ The GPOPS-2 solution to the Brachistochrone problem is shown in Figure \ref{fig:
 \section{Rocket-Scramjet-Rocket Trajectory Optimisation}
 
 
-
+The primary purpose of LODESTAR is to calculate a full trajectory optimisation of a rocket-scramjet-rocket launch vehicle for maximum payload-to-orbit. 
 
 
 
@@ -98,7 +102,7 @@ The GPOPS-2 solution to the Brachistochrone problem is shown in Figure \ref{fig:
 	\begin{figure}[ht]
 		\centering
 		\includegraphics[width=0.9\linewidth]{"figures/4_LODESTAR/Ascent Flowchart"}
-		\caption{The process of the rocket-scramjet-rocket trajectory optimisation. \textit{This currently only includes the SPARTAN ajnd third stage rocket, and will be expanded to include the first stage optimisation}}
+		\caption{The process of the rocket-scramjet-rocket trajectory optimisation.}
 		\label{fig:AscentFlowchart}
 	\end{figure} 
 \end{landscape}
@@ -147,63 +151,64 @@ The dynamics of all stages are calculated using an geodetic rotational reference
 \end{equation}
 
 \subsection{Trajectory Connection Points}
-
+The optimisation of a large, multi-vehicle problem therefore requires that the optimal control problem be broken down into multiple segments.
 The aerodynamics, mass and propulsion mode of a launch vehicle may change significantly between stages. 
 This creates discontinuities in the vehicle dynamics at the stage separation points. 
 If these model variations are implemented directly into a single phase application of the pseudospectral method, they are likely to cause significant convergence issues, as the discontinuities in the system dynamics will be unable to be approximated by the underlying polynomial of the pseudospectral method. 
-The optimisation of a large, multi-vehicle problem therefore requires that the optimal control problem be broken down into multiple phases, coupled at the stage separation points.
-The subsections of the trajectory are connected through the use of initial and end discontinuity constraints on each phase to be coupled, ie $\textbf{x}_{f1} = \textbf{x}_{02}, t_{f1} = t_{02}$.
 
  The trajectory of the rocket-scramjet-rocket launch system has been broken down into the subsections shown in Figure \ref{fig:Traj}. 
-The trajectory of the rocket-scramjet-rocket vehicle is considered as four separate phases, within an overarching optimisation problem. In addition, there are three phases which are not directly controlled, and are not directly optimised; the pre-pitch segment of the first stage, the unpowered section of the third stage ascent, and the final Hohmann transfer to orbit. 
+ The trajectory of the rocket-scramjet-rocket vehicle is considered as four separate phases, within an overarching optimisation problem. In addition, there are three phases which are not directly controlled; the pre-pitch segment of the first stage, the unpowered section of the third stage ascent, and the final Hohmann transfer to orbit. These segments are not directly optimised, in order to increase computational efficiency and to improve the convergence of the optimal control solver. 
+ Each segment is connected through a set of conditions, which ensure that the trajectory of the vehicle is continuous, and that the trajectory that is being flown is the one that is intended. 
+The stage coupling conditions are described in Table \ref{tab:constraints}. 
+The phases of the trajectory optimisation problem (segments \textcolor{red}{\rom{2}-\rom{5}}) are connected through the use of initial and end discontinuity constraints on each phase to be coupled, ie $\textbf{x}_{f1} = \textbf{x}_{02}, t_{f1} = t_{02}$. 
+More specifics concerning the constraints on the initial and end states of each phase can be found in the following sections. 
 
-These constraints are described in Table \ref{tab:constraints}.
 
-\begin{table}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1.\linewidth]{figures/4_LODESTAR/Traj}
+	\caption{Illustration of the segmented launch profile.}
+	\label{fig:Traj}
+\end{figure}
+
+
+
+\begin{table}[ht]
 
 
 \begin{tabularx}{\linewidth}{|X|X|X|}
-	\hline \textbf{Section} & Initial Constraints & End Constraints  \\ 
-	\hline $1^{st}$ Stage Vertical Ascent (\textcolor{red}{\rom{1}}-\textcolor{red}{\rom{2}}) & Constrained to start at a velocity of 0m/s. & Constrained to fly to 90m altitude and 30m/s velocity. \\ 
-	\hline $1^{st}$ Stage Pitching Ascent (\textcolor{red}{\rom{2}}-\textcolor{red}{\rom{3}}) & Constrained to start at 90m altitude and 30m/s velocity & Unconstrained \\ 
-	\hline $2^{nd}$ Stage Ascent (\textcolor{red}{\rom{3}}-\textcolor{red}{\rom{4}}) & Constrained entirely to first stage end conditions. & Unconstrained\\ 
-	\hline $2^{nd}$ Stage Return (\textcolor{red}{\rom{4}}-\textcolor{red}{\rom{6}}) & Constrained entirely to $2^{nd}$ stage ascent end conditions. & Constrained to conditions approaching landing at the initial launch site. \\ 
-	\hline $3^{rd}$ Stage Powered Ascent (\textcolor{red}{\rom{4}}-\textcolor{red}{\rom{5}}) & Constrained entirely to $2^{nd}$ stage ascent end conditions.  & Angle of attack = 0$^\circ$, minimum 90km altitude at the termination of stage \rom{5}.  \\ 
-	\hline $3^{rd}$ Stage Unpowered Ascent (\textcolor{red}{\rom{5}}-\textcolor{red}{\rom{6}}) & Constrained entirely to $3^{nd}$ stage powered ascent end conditions.  & Flight parallel with Earth's surface.  \\ 
-	\hline $3^{rd}$ Stage Hohmann Transfer (\textcolor{red}{\rom{6}}) & Constrained entirely to $3^{rd}$ stage ascent end conditions. & Constrained to sun synchronous orbit.  \\ 
+	\hline \textbf{Section} & Initial Conditions & End Conditions  \\ 
+	\hline $1^{st}$ Stage Vertical Ascent (\textcolor{red}{\rom{1}}) & Must start at rest, at the predefined launch site. & Fly until pitchover conditions are met. \\ 
+	\hline $1^{st}$ Stage Pitching Ascent (\textcolor{red}{\rom{2}}) & Start at pitchover conditions & - \\ 
+	\hline $2^{nd}$ Stage Ascent (\textcolor{red}{\rom{3}}) & Must begin at first stage end conditions. & - \\ 
+	\hline $2^{nd}$ Stage Return (\textcolor{red}{\rom{4}}) & Must begin at $2^{nd}$ stage ascent end conditions. & Must approach landing conditions at the initial launch site. \\ 
+	\hline $3^{rd}$ Stage Powered Ascent (\textcolor{red}{\rom{5}}) & Must begin at $2^{nd}$ stage ascent end conditions.  & Must produce exoatmospheric flight at the termination of stage \rom{6}.  \\ 
+	\hline $3^{rd}$ Stage Unpowered Ascent (\textcolor{red}{\rom{6}}) & Must begin at $3^{nd}$ stage powered ascent end conditions.  & Terminates when flight is parallel with Earth's surface.  \\ 
+	\hline $3^{rd}$ Stage Hohmann Transfer (\textcolor{red}{\rom{7}}) & Must begin at $3^{rd}$ stage unpowered ascent end conditions. & Must attain prescribed orbit.  \\ 
 	\hline 
 	
 \end{tabularx} 
-\caption{Stage coupling constraints for combined trajectory optimisation.}
+\caption{Stage coupling conditions for combined trajectory optimisation.}
 \label{tab:constraints}
 
 \end{table}
 
-\begin{figure}
-\centering
-\includegraphics[width=1.\linewidth]{figures/4_LODESTAR/Traj}
-\caption{\textit{This figure requires updating to include 3rd stage unpowered ascent.}}
-\label{fig:Traj}
-\end{figure}
 
 
-\subsection{First Stage Trajectory}
+\subsubsection{\textcolor{red}{\rom{1}.} First Stage Vertical Ascent}
+
+LODESTAR optimises the ascent of the first stage rocket in two sections; pre and post-pitchover.
+Initially, the first stage rocket is launched vertically, and continues vertically for a small amount of time, until pitchover is initiated. 
+During the vertical launch the rocket is assumed to need no control, and is held at 0$^\circ$ angle of attack. 
+The pitchover is defined to occur at 90m altitude and 30m/s velocity, rather than at a specific time.
+This allows the pre-pitchover phase to be simulated separately, after the optimisation has been completed. 
+If the initial mass is variable, the initial launch altitude will necessarily be slightly variable. This variation in launch altitude is small, on the order of ten meters or less. 
+
+\subsubsection{\textcolor{red}{\rom{2}.} First Stage Pitching Ascent}
 
 
-
-LODESTAR optimises ascent of the first stage of a launch vehicle in two sections; pre and post-pitchover. The rocket is simulated as launching vertically, and continuing vertically for a small amount of time. At a certain point, pitchover is initiated. The 
-
-The pre-pitchover phase is simulated separately, after the optimisation has been completed. 
-The post-pitchover trajectory is an angle of attack controlled segment, which is optimised until stage separation.
-
-
-LODESTAR is able to optimise the first stage rocket individually, or as a distinct phase in a multi-phase optimisation problem. 
-Optimising the first stage separately is desired when a specific first stage vehicle design is being investigated. 
-
-
-
-When the first stage is being investigated as part of a larger optimisation problem, the fuel mass of the first stage rocket is unconstrained.
- This is the case with the launch system incorporating the SPARTAN, where the SPARTAN is to be released at its minimum operating conditions at close to horizontal flight. 
+The post-pitchover trajectory is an angle of attack controlled phase in the optimisation routine, which is simulated from pitchover until second stage separation. During this phase, the launch system is allowed to fly at negative angles of attack, to assist in pitching. 
+The fuel mass of the first stage rocket is unconstrained.
 This approach is used on account of the selected first stage being able to reach the required range of altitudes and flight angles with only small fuel mass variations. 
 Nevertheless, small variation in fuel mass can have an important effect on the capabilities of the first stage, influencing the velocity achievable at first to second stage separation, as well as the rate at which the rocket is able to pitch, and consequentially, the altitude and flight path angle range of the first stage.
 A variable mass for the first stage launch vehicle is desired as the mass has large effects on the dynamics of the vehicle, effecting the trajectory angle change rate, as well as the acceleration and time of flight of the vehicle.
@@ -212,21 +217,25 @@ In the unconstrained mass case, the launch altitude is slightly variable, as LOD
 
 
 
-
-
-\begin{tabular}{|c|c|}
-	\hline Initial Constraints  & \\ 
-	\hline Terminal Constraints &  \\ 
-	\hline Path Constraints &  \\ 
-	\hline Target Cost &  \\ 
-		\hline Control Variables &  \\ 
-		\hline State Variables &  \\ 
+\begin{table}[ht]
+\centering
+\begin{tabular}{|c|c|c|}
+	\hline Optimisation Parameter  & Associated Variables & Allowable Values\\
+	\hline Initial Constraints  & Velocity & 30m/s\\ & Altitude& 90m \\ & Latitude & $-12.16^\circ$ \\& Longitude & 136.75$^\circ$\\ & Trajectory Angle & 89.9$^\circ$\\ & Angle of Attack& 0$^\circ$\\
+	\hline Terminal Constraints & $\textbf{x}_{f\textrm{\rom{2}}} - \textbf{x}_{0\textrm{\rom{3}}}$ & 0\\ & $t_{f\textrm{\rom{2}}} - t_{0\textrm{\rom{3}}}$ & 0\\
+	\hline Path Constraints & Dynamic Pressure & 0kPa - 50kPa\\ 
+		\hline Control Variables & $\ddot{\alpha}$ &\\ 
+		\hline State Variables & Altitude & \\ & Velocity& \\  & Latitude& \\  & Longitude& \\  & Trajectory Angle& \\  & Heading angle& \\  & Total mass& \\  & Angle of Attack ($\alpha$)&  $-5^\circ$ - 5$^\circ$\\  & $\dot{\alpha}$& \\ 
 	\hline 
 \end{tabular} 
 
+\caption{Optimisation setup of the first stage phase. \textcolor{red}{The other tables in this section will be modified to conform. I am currently unsure whether this table layout is clear.}}
+
+\end{table}
 
 
-\subsection{Second Stage Ascent Trajectory}
+
+\subsection{\textcolor{red}{\rom{3}.} Second Stage Ascent Trajectory}
 
 
 
@@ -234,6 +243,7 @@ In the unconstrained mass case, the launch altitude is slightly variable, as LOD
 LODESTAR is able to optimise the trajectory of airbreathing accelerators in the supersonic or hypersonic regime. LODESTAR is able to optimise for a range of optimisation metrics, including a maximum payload-to-orbit and constant dynamic pressure.  
 The trajectory of the SPARTAN scramjet-powered accelerator has been simulated in LODESTAR. 
 
+\begin{table}[ht]
 \begin{tabular}{|c|c|}
 	\hline Initial Constraints  & Velocity \\ & Fuel Mass  \\ & Latitude \\ & Longitude \\ 
 	\hline Terminal Constraints & Fuel mass \\ & Heading Angle \\ 
@@ -244,9 +254,9 @@ The trajectory of the SPARTAN scramjet-powered accelerator has been simulated in
 	\hline 
 \end{tabular} 
 
+\end{table}
 
-
-\subsection{Second Stage Return Trajectory}
+\subsection{\textcolor{red}{\rom{4}.} Second Stage Return Trajectory}
 After releasing the third stage rocket, the scramjet-powered second stage must return back to an area close to the initial launch site.
 During the fly-back, the SPARTAN cannot exceed its dynamic pressure limit of 50kPa. 
 The SPARTAN must land on the ground with minimum velocity, within close proximity to the launch area. It is assumed that a landing strip is available at the spot where the SPARTAN lands. The SPARTAN is required to land within a set radius of the launch site. This constraint is;
@@ -270,11 +280,9 @@ The SPARTAN must land on the ground with minimum velocity, within close proximit
 
 
 
-\subsection{Third Stage Trajectory}
+\subsection{\textcolor{red}{\rom{5}.} Third Stage Powered Ascent}
 
 The trajectory of the third stage rocket is only directly optimised during the powered section of its trajectory. During powered flight, the engine is used to control the third stage vehicle. After this point, the engine is cut, and the third stage is assumed to not have sufficient aerodynamic control to manoeuvre. 
-
-\subsubsection{Powered Section}
 
 The third stage rocket is constrained to an angle of attack of less than 20$^\circ$. This is assumed to be the maximum controllable angle of attack possible for the third stage rocket.   
 Additionally, a maximum normal force restriction is placed on the third stage. Previous studies flew the third stage rocket at a constant 10$^\circ$ angle of attack, and initially released the rocket at 50kPa. 
@@ -292,18 +300,28 @@ The heat shield is released once the rocket reached a dynamic pressure of 10Pa, 
 \end{tabular} 
 
 
-\subsubsection{Unpowered Section}
+\subsection{\textcolor{red}{\rom{6}.} Third Stage Unpowered Ascent}
 
-The unpowered section of the trajectory is simulated from the end of the controlled section of the trajectory, using a second order Taylor series approximation. This integration ceases when the flight path angle reaches 0$^{\circ}$. After this point, a Hohmann transfer is performed. The third stage is required to deliver the payload into heliosynchronous orbit. The third stage must achieve a heliosynchronous orbit of 567km, with an inclination of of 97.63$^\circ$.  The payload-to-orbit
-is determined by calculating the mass of the vehicle at the end of the Hohmann transfer. The structural mass is removed,
-and the remaining mass is taken to be the payload-to-orbit capability of the vehicle.
+The unpowered section of the trajectory is simulated from the end of the controlled section of the trajectory, using a second order Taylor series approximation. This integration ceases when the flight path angle reaches 0$^{\circ}$. After this point, a circularisation burn is performed. The third stage is required to deliver the payload into heliosynchronous orbit. The third stage must achieve an inclination of of 97.63$^\circ$.
+
+
+
+\subsection{\textcolor{red}{\rom{7}.} Hohmann Transfer}
+
+After the circularisation burn, the rocket will still be in a very low orbit. In order to reach a heliosynchronous orbit of 567km, the orbit of the third stage rocket must be raised. 
+To this end, the final manoeuvre performed by the third stage rocket is a Hohmann transfer. A Hohmann transfer is the most fuel efficient way to raise a spacecraft from one circular orbit to another. 
+
+Following circularisation, the third stag engine is reignited (or remains ignited) and the third stage manoeuvres into an appropriate elliptical orbit. 
+
+
+
+The payload-to-orbit is determined by calculating the mass of the vehicle at the end of the Hohmann transfer. The structural mass is removed, and the remaining mass is taken to be the payload-to-orbit capability of the vehicle.
 
 \textit{The Hohmann transfer will be detailed here. Standard Hohmann transfer.}
 
 
 
-
-\subsubsection{Optimality Conditions}
+\section{Optimality Conditions}
 
 LODESTAR provides the capacity to validate the optimal solution provided by the pseudospectral method solver. This partial validation is used to determine whether the pseudospectral method solver has converged close to an optimal solution of the nonlinear programming problem. It is particularly useful to validate that the optimality and constraint tolerances which have been chosen are sufficiently small, or to check whether the pseudospectral method solver has approached an optimal solution in the case that the defined tolerances are not able to be reached.   
 This partial validation is achieved through the examination of four key metrics; the IPOPT constraint violation and dual infeasibility parameters; the Hamiltonian necessary condition for optimality; the state derivatives; and finally a forward simulation. 

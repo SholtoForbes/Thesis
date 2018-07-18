@@ -564,11 +564,16 @@ These results indicate that the pseudospectral method is robust for complex, non
 
 There are a number of optimal control solvers available, both commercially and open source. A summary of the most prominent available solvers is shown in Table \ref{table:programs}. These programs are mostly general solvers, and must be configured specifically in order to solve a particular optimal control problem. The exception is ASTOS, which is a standalone program designed for aerospace trajectory optimisation.
 
-
 Functionally, most of the available solvers are similar in operation. The states and controls of the optimal control problem are defined to the program by the user, along with any constraints; continuous or endpoint. The cost function of the problem is input, and dynamic model of the system is defined. An initial guess is provided, and once activated, the solver will move toward an optimal solution from this initial guess. 
-The most significant practical difference between the solvers lies in the robustness of the optimal solution, ie. how easily a particular solver is able to converge to the optimal solution. For a simple and continuous optimisation problem all solvers will be able to approach the same solution. However, for a complex and nonlinear optimisation problem, some solvers will converge much more easily than others. Generally, this stems from the underlying discretisation approach used, and the method in which the program has been coded. 
+The most significant practical difference between the solvers lies in the robustness of the optimal solution, ie. how easily a particular solver is able to converge to the optimal solution. For a simple and continuous optimisation problem all solvers will be able to approach the same solution (though with varying efficiency). However, for a complex and nonlinear optimisation problem, some solvers will converge much more easily than others. Generally, this stems from the underlying transcription method used. 
 
- The most common form of discretisation used by these solvers is the pseudospectral method, although other forms of collocation, as well as multiple shooting, are also used. Comparing the benefits of these solvers is difficult, as a particular problem may lend itself to one solver in particular, and all have been used widely. However, it is generally held that the hp-adaptive pseudospectral method is the current state-of-the-art in discretisation methods, and a solver which utilises this technique is likely to have good convergence and accuracy properties. 
+ The most common form of discretisation used by these solvers is the pseudospectral method, although other forms of collocation, as well as multiple shooting, are also used. Comparing the benefits of these solvers is difficult, as a particular problem may lend itself to one solver in particular, and all have been used widely. However, it is generally held that hp-adaptive pseudospectral methods are the current state-of-the-art in discretisation methods, and a solver which utilises one of these techniques is likely to have good convergence and accuracy properties[citeXX]. The readily available packages which utilise hp adaptive pseudospectral methods are GPOPS-2 and ICLOCS2.
+ 
+ ICLOCS2 is a software package in the alpha stages of development, which is based upon ICLOCS, a multiple shooting solver. ICLOCS2 is able to implement a range of transcription methods, including a hp adaptive Legendre-Gauss Pseudospectral method. As ICLOCS2 is relatively new at the time of writing, it has not yet been implemented in any published works and documentation is limited. 
+ 
+GPOPS-2 is a proprietary hp-adaptive pseudospectral method solver, which implements a variety of hp-adaptive pseudospectral methods, so that the best method may be chosen for a given problem.. GPOPS-2 is specifically designed to be as flexible as possible, to accommodate for a wide range of problem formulations. GPOPS-2 is well proven in aerospace applications, and has been used for spacecraft orbit optimisation as well as in-atmosphere trajectory optimisation[CITEXX]. GPOPS-2 is well suited to solving multi-phase optimal control problems, which is necessary for efficient multi-stage launch optimisation. GPOPS-2 represents the state of the art in trajectory optimisation software, and as such is used by a number of institutions around the world. 
+
+ Both ICLOCS2 and GPOPS-2 uses IPOPT (Interior Point OPTimizer) as the standard nonlinear programming solver (with the option of installing others). IPOPT is a widely used open source nonlinear optimisation package which utilises an interior point line search filter method. 
 
 \begin{table}[!ht]
 	
@@ -582,6 +587,8 @@ The most significant practical difference between the solvers lies in the robust
 		\hline OTIS & NASA  & Fortran & Pseudospectral + Various  \\ 
 		\hline TRANSWORHP\cite{Wassel2013} & ESA & Fortran/C++ & Full Discretisation \\ 
 		\hline ASTOS & Astos Solutions & Standalone & Multiple Shooting / Collocation  \\  
+		\hline ACADO &  &  &   \\  
+		\hline JModelica &  &  &   \\  
 		
 		\hline 
 	\end{tabular} 
@@ -591,62 +598,63 @@ The most significant practical difference between the solvers lies in the robust
 \end{table}
 
 
-\subsection{GPOPS-2}
-
-GPOPS-2 is an hp-adaptive pseudospectral method solver designed for general optimal control problems. GPOPS-2 implements a variety of hp-adaptive pseudospectral methods, so that the best method may be chosen for a given problem. GPOPS-2 uses IPOPT (Interior Point OPTimizer) as standard nonlinear programming solver. IPOPT is an open source nonlinear optimisation package which utilises an interior point line search filter method.
-
-GPOPS-2 is well proven in aerospace applications. 
 
 
 
+
+
+
+for ipopt:
 https://link.springer.com/content/pdf/10.1007%2Fs10107-004-0559-y.pdf
 https://projects.coin-or.org/Ipopt/browser/stable/3.10/Ipopt/doc/documentation.pdf?format=raw
 
-
+other citations from gpops website
 
 
 
 
 \section{Aerodynamic Analysis}
 
-\textit{This section will be expanded to contain a general review of solvers.}
 
-
-
-
-Simulating the trajectory of access to space vehicles requires the aerodynamics of each vehicle to be characterised at every flight condition experienced during launch. For this to be possible, it is necessary to create large aerodynamic coefficient databases, which cover the operable region of the vehicle, and include the effects of control surface deflections and propulsion.
+Simulating the trajectory of access to space systems requires the aerodynamics of each stage of the launch system to be characterised at every flight condition experienced during launch. For this to be possible, it is necessary to create large aerodynamic coefficient databases, which cover the operable region of the vehicle, and include the effects of control surface deflections and propulsion.
 
 There are a variety of tools available to calculate the aerodynamics of aerospace vehicles.
- These tools are primarily designed towards either accuracy or efficiency, as more accurate methods use more computational power. 
+ These tools are primarily designed towards either accuracy or efficiency, as more accurate methods require more computational power, longer computational times and, usually, more man-hours to produce a solution. 
 This trade off means a tool must be selected which best suits the requirements of a given problem. 
 For a preliminary vehicle design, it is often desirable to select a tool which is as computationally efficient as possible, as the design of the vehicle is liable to change often. 
-Whereas for more advanced stages of vehicle design, an accurate tool is desirable, to assess the design of the vehicle in detail.
+Whereas for more advanced stages of vehicle design, an accurate tool is desirable, to assess the design of the vehicle in detail. 
 
-Low fidelity methods include the use of empirical relations derived from databases of existing vehicles[citeXX missile datcom], as well as panel method codes[cite cbaero, cart, hotsose].
-Medium fidelity methods consist of inviscid Euler solvers [cite cart3d, AIRPLANE], which are able to provide reasonable accuracy, with medium run times. These solvers are often used in the later stages of preliminary design, or when higher fidelity is necessary due to design features. 
-High fidelity methods mostly consist of Navier-Stokes CFD solvers. 
+The lowest fidelity, and highest efficiency methods include packages which use empirical relations derived from databases of existing vehicles, such as Missile DATCOM[citeXX missile datcom], as well as panel method codes such as HYPAERO, cbaero and HOTSOSE[cite cbaero, HYPAERO, hotsose]. Low fidelity methods offer rapid solutions, with highly variable accuracy. For simple, standard vehicle shapes, low fidelity methods may offer high accuracy, as low fidelity solutions are usually calibrated to higher fidelity simulations or experiments. However, for complex vehicle geometries, for example geometries involving engine through-flow, low fidelity models may be highly inaccurate, and are not acceptable for use. 
 
-\textcolor{red}{Aerodynamic 	Analysis	of the JAPHAR Vehicle - says that HOTSOSE (similar to HYPAERO), is not suitable for simulating engine through-flow - reasoning for CART3D use}
+Medium fidelity methods consist of inviscid Euler solvers such as CART3D, FUN3D and AIRPLANE[cite cart3d, AIRPLANE], which are able to provide reasonable accuracy, with medium run times, by neglecting viscous effects within the solution. These solvers are often used in the later stages of preliminary design, or when higher fidelity is necessary due to design features, but rapid solutions are still desired.  Neglecting the viscous effects in the fluid flow means that the solution obtained from an inviscid solver will only be an approximation of the real flow, and that the accuracy of the solution varies depending on the type problem being solved. For problems such as lift on a thin airfoil, inviscid Euler methods may be quite accurate, however for a problem such as boundary growth on a flat plate these methods will not accurately model the solution. A particular advantage that many inviscid Euler codes provide is automatic adjoint mesh adaptation, the ability for the mesh to be automatically and rapidly generated, and updated sequentially throughout the solution process, refining areas of complex geometry or flow. This enables multiple solutions to be easily computed, without the need to regenerate meshes manually. For preliminary design purposes, inviscid-flow Euler CFD solvers are used extensively across industry and academia\cite{Almosnino2016}. 
 
-For preliminary design purposes, inviscid-flow Euler CFD solvers are used extensively across industry and academia\cite{Almosnino2016}. 
+High fidelity methods consist of Navier-Stokes CFD solvers such as Eilmer3/4, Fluent, CFX, STAR-CD, COMSOL and OpenFOAM [citationsxx]. These solvers will resolve the fluid flow and aerodynamic forces to a high level of accuracy, including viscous effects. However, the mesh for the problem must be generated prior to the calculation of the solution, which increases working time significantly. Additionally, the computation times are much longer, and require more computational resources than lower fidelity methods. These factors make the generation of an aerodynamic database using high fidelity CFD an extremely time consuming process, which is only suited to mature vehicle designs. 
 
+
+
+
+citations:
+
+Aerodynamic 	Analysis	of the JAPHAR Vehicle 
+
+euler accuracy: https://www.grc.nasa.gov/WWW/k-12/airplane/eulereqs.html
 
 \subsection{CART3D}
 
-CART3D is an inviscid CFD package, designed for use during preliminary vehicle design and analysis [ADD MORE CITATIONSXX]\cite{Almosnino2016}. CART3D requires only a surface triangulation of the vehicle being analysed. CART3D features adjoint mesh adaption, and uses cartesian 'cut-cells' which intersect the surface, allowing complex geometries to be analysed. The mesh automatically refines as the simulation progresses, reducing error. The absence of a requirement for a user generated mesh allows CART3D to be easily applied to complex launch vehicle designs, as well as allowing for simple modification of control surface deflections and flight conditions. 
+CART3D is an inviscid CFD package, designed for use during preliminary vehicle design and analysis [ADD MORE CITATIONSXX]\cite{Almosnino2016}. CART3D requires only a surface triangulation of the vehicle being analysed. CART3D features adjoint mesh adaptation, and uses cartesian 'cut-cells' which intersect the surface, allowing complex geometries to be analysed. The mesh automatically refines as the simulation progresses, reducing error. The absence of a requirement for a user generated mesh allows CART3D to be easily applied to complex launch vehicle designs, as well as allowing for simple modification of control surface deflections and flight conditions. 
 CART3D has been used extensively for aerodynamic simulations in preliminary design, including analysis of the plumes of the Skylon spaceplane\cite{Mehta2016}, HIFiRE-5\cite{Kimmel2010}, and in low sonic boom shape optimisations\cite{Aftosmis2011}. 
 \begin{figure}
 \centering
 \includegraphics[width=0.6\linewidth]{figures/2_literature-review/Skylon-CART3D}
-\caption{The Skylon spaceplane, simulated using CART3D at Mach 12.189, $\alpha=7.512^\circ$\cite{Mehta2016}. Cell distribution produced by mesh adaption is shown.}
+\caption{The Skylon spaceplane, simulated using CART3D at Mach 12.189, $\alpha=7.512^\circ$\cite{Mehta2016}. Cell distribution produced by mesh adaptation is shown.}
 \label{fig:Skylon-CART3D}
 \end{figure}
-CART3D has shown fair agreement when compared to experimental results for winged boosters at hypersonic speeds\cite{Sagerman2017}, as well as for supersonic missiles\cite{Abeynayake} and aircraft\cite{Aftosmis2011}, and lifting bodies across wide Mach number ranges\cite{Almosnino2016a}.
+CART3D has shown good agreement when compared to experimental results for winged boosters at hypersonic speeds\cite{Sagerman2017}, as well as for supersonic missiles\cite{Abeynayake} and aircraft\cite{Aftosmis2011}, and lifting bodies across wide Mach number ranges\cite{Almosnino2016a}.
 
-
+add newer citationsxx here as well
 
 \subsection{Missile DATCOM}
-Missile DATCOM is a widely used, semi-empirical, aerodynamic prediction tool for missile configurations. Missile DATCOM is capable of calculating the aerodynamic forces, stability derivatives and moments over a range of angle of attack and Mach number values, allowing an aerodynamic database to be generated simply and rapidly. Missile DATCOM has been shown to produce close agreement with experimental wind tunnel data for normal force and pitching moment coefficients, and reasonable agreement for axial force coefficients \cite{Sooy2005}. 
+Missile DATCOM is a widely used, semi-empirical, aerodynamic prediction tool for missile configurations. Missile DATCOM is capable of calculating the aerodynamic forces, stability derivatives and moments over a range of angle of attack and Mach number values, allowing an aerodynamic database to be generated simply and rapidly. Missile DATCOM has been shown to produce close agreement with experimental wind tunnel data for normal force and pitching moment coefficients, and reasonable agreement for axial force coefficients\cite{Sooy2005}. 
 
 
       
