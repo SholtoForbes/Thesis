@@ -15,7 +15,7 @@
 \BOOKMARK [1][-]{section.2.6}{Hypersonic Vehicle Fly-Back Trajectories}{chapter.2}% 15
 \BOOKMARK [1][-]{section.2.7}{The University of Queensland's Rocket-Scramjet-Rocket Launch System}{chapter.2}% 16
 \BOOKMARK [2][-]{subsection.2.7.1}{Scramjet Engine Model}{section.2.7}% 17
-\BOOKMARK [2][-]{subsection.2.7.2}{The Trajectory of The SPARTAN}{section.2.7}% 18
+\BOOKMARK [2][-]{subsection.2.7.2}{The Trajectory of the SPARTAN}{section.2.7}% 18
 \BOOKMARK [2][-]{subsection.2.7.3}{The Third Stage Rocket}{section.2.7}% 19
 \BOOKMARK [2][-]{subsection.2.7.4}{Exoatmospheric Rocket Engines}{section.2.7}% 20
 \BOOKMARK [1][-]{section.2.8}{Optimal Control}{chapter.2}% 21
@@ -37,7 +37,7 @@
 \BOOKMARK [2][-]{subsection.3.3.2}{Fuel Tank Sizing}{section.3.3}% 37
 \BOOKMARK [2][-]{subsection.3.3.3}{The Aerodynamics of the Third Stage Rocket}{section.3.3}% 38
 \BOOKMARK [0][-]{chapter.4}{LODESTAR}{}% 39
-\BOOKMARK [1][-]{section.4.1}{Optimal Control Problem Requirements}{chapter.4}% 40
+\BOOKMARK [1][-]{section.4.1}{Optimal Control Problem Structure}{chapter.4}% 40
 \BOOKMARK [2][-]{subsection.4.1.1}{GPOPS-2 Example - Brachistochrone Problem}{section.4.1}% 41
 \BOOKMARK [1][-]{section.4.2}{Rocket-Scramjet-Rocket Trajectory Optimisation}{chapter.4}% 42
 \BOOKMARK [2][-]{subsection.4.2.1}{Dynamic Model}{section.4.2}% 43
@@ -63,7 +63,7 @@
 \BOOKMARK [2][-]{subsection.6.2.3}{Conclusion}{section.6.2}% 63
 \BOOKMARK [0][-]{chapter.7}{Conclusions}{}% 64
 \BOOKMARK [1][-]{section.7.1}{Recommendations for future work}{chapter.7}% 65
-\BOOKMARK [0][-]{chapter*.138}{Library}{}% 66
+\BOOKMARK [0][-]{chapter*.140}{Library}{}% 66
 \BOOKMARK [0][-]{appendix.A}{Trajectory results}{}% 67
 \BOOKMARK [0][-]{appendix.B}{CART3D Results}{}% 68
 \BOOKMARK [1][-]{section.B.1}{Engine-On Plume Check}{appendix.B}% 69

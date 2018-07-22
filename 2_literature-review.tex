@@ -372,7 +372,7 @@ Consequently, an equivalence ratio of less than 1 was set at low Mach numbers, i
 
 
 
-\subsection{The Trajectory of The SPARTAN}
+\subsection{The Trajectory of the SPARTAN}
 
 To date, studies of the SPARTAN have assumed a constant dynamic pressure trajectory\cite{Preller2017}.
 Past studies of the SPARTAN vehicle have assumed that a fly-back to launch site is possible after third stage separation\cite{Preller2017}. However, this fly-back has not yet been simulated. 
@@ -631,7 +631,7 @@ Medium fidelity methods consist of inviscid Euler solvers such as CART3D, FUN3D 
 High fidelity methods consist of Navier-Stokes CFD solvers such as Eilmer3/4, Fluent, CFX, STAR-CD, COMSOL and OpenFOAM [citationsxx]. These solvers will resolve the fluid flow and aerodynamic forces to a high level of accuracy, including viscous effects. However, the mesh for the problem must be generated prior to the calculation of the solution, which increases working time significantly. Additionally, the computation times are much longer, and require more computational resources than lower fidelity methods. These factors make the generation of an aerodynamic database using high fidelity CFD an extremely time consuming process, which is only suited to mature vehicle designs. 
 
 
-
+\textcolor{red}{Add paragraph about LES, and why it is not possible to use low fidelity methods to calculate engine database. I need to understand how the C-REST database was made better, ie. inlets calculated by Rowan in high fidelity.}
 
 citations:
 
@@ -641,20 +641,27 @@ euler accuracy: https://www.grc.nasa.gov/WWW/k-12/airplane/eulereqs.html
 
 \subsection{CART3D}
 
-CART3D is an inviscid CFD package, designed for use during preliminary vehicle design and analysis [ADD MORE CITATIONSXX]\cite{Almosnino2016}. CART3D requires only a surface triangulation of the vehicle being analysed. CART3D features adjoint mesh adaptation, and uses cartesian 'cut-cells' which intersect the surface, allowing complex geometries to be analysed. The mesh automatically refines as the simulation progresses, reducing error. The absence of a requirement for a user generated mesh allows CART3D to be easily applied to complex launch vehicle designs, as well as allowing for simple modification of control surface deflections and flight conditions. 
+CART3D is an inviscid CFD package, designed for use during preliminary vehicle design and analysis\cite{Almosnino2016}. CART3D is computationally efficient and requires only a surface triangulation of the vehicle being analysed to initiate a simulation. CART3D features adjoint mesh adaptation, and uses cartesian 'cut-cells' which intersect the surface, allowing complex geometries to be analysed. The mesh automatically refines as the simulation progresses, reducing error. The absence of a requirement for a user generated mesh allows CART3D to be easily applied to complex launch vehicle designs, as well as allowing for simple modification of control surface deflections and flight conditions. 
 CART3D has been used extensively for aerodynamic simulations in preliminary design, including analysis of the plumes of the Skylon spaceplane\cite{Mehta2016}, HIFiRE-5\cite{Kimmel2010}, and in low sonic boom shape optimisations\cite{Aftosmis2011}. 
-\begin{figure}
+\begin{figure}[ht]
 \centering
 \includegraphics[width=0.6\linewidth]{figures/2_literature-review/Skylon-CART3D}
 \caption{The Skylon spaceplane, simulated using CART3D at Mach 12.189, $\alpha=7.512^\circ$\cite{Mehta2016}. Cell distribution produced by mesh adaptation is shown.}
 \label{fig:Skylon-CART3D}
 \end{figure}
-CART3D has shown good agreement when compared to experimental results for winged boosters at hypersonic speeds\cite{Sagerman2017}, as well as for supersonic missiles\cite{Abeynayake} and aircraft\cite{Aftosmis2011}, and lifting bodies across wide Mach number ranges\cite{Almosnino2016a}.
+CART3D has shown good agreement when compared to experimental results for winged boosters at hypersonic speeds\cite{Sagerman2017}, as well as supersonic missiles\cite{Abeynayake} and aircraft\cite{Aftosmis2011}, and lifting bodies across wide Mach number ranges\cite{Almosnino2016a}.
+In addition, good agreement has been shown between CART3D, experimental results, and full Navier-Stokes solutions for the HIFIRE-1 hypersonic test payload\cite{Sagerman2017}. In this case, the exception to close agreement was at an identified area of shock-induced boundary layer separation, which an inviscid solution does not capture\cite{Sagerman2017}. The model of the HIFIRE-1 and pressure coefficient results at each pressure tap are shown in Figure \ref{fig:CART3DComparisons}. 
+Finally, in a comparison between CART3D and the Overflow-D Navier-Stokes solver, it was shown that both codes produce similar pressure distributions for simulations of the space shuttle fuel tanks at low Mach numbers\cite{Gomez2004}. The Overflow-D simulations were stated to require at lease 20 times more CPU time than CART3D\cite{Gomez2004}, an example of the efficiency afforded by CART3D.
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.9\linewidth]{"figures/2_literature-review/CART3D Comparisons"}
+\caption{Comparisons of CART3D with experimental data and the FUN3D Navier-Stokes CFD solver. P1, P2 and P3 indicate pressure tap locations. Modified from Sagerman et al.\cite{Sagerman2017}.}
+\label{fig:CART3DComparisons}
+\end{figure}
 
-add newer citationsxx here as well
 
 \subsection{Missile DATCOM}
-Missile DATCOM is a widely used, semi-empirical, aerodynamic prediction tool for missile configurations. Missile DATCOM is capable of calculating the aerodynamic forces, stability derivatives and moments over a range of angle of attack and Mach number values, allowing an aerodynamic database to be generated simply and rapidly. Missile DATCOM has been shown to produce close agreement with experimental wind tunnel data for normal force and pitching moment coefficients, and reasonable agreement for axial force coefficients\cite{Sooy2005}. 
+Missile DATCOM is a widely used, semi-empirical, aerodynamic prediction tool for missile configurations. Missile DATCOM uses component-buildup methods by which the aerodynamics of each component of the missile or rocket design are estimated and then added together to determine the aerodynamics of the entire vehicle. Missile DATCOM uses a combination of empirical and theoretical methods and is capable of calculating the aerodynamic forces, stability derivatives and moments over a range of angle of attack and Mach number values. The high efficiency of Missile DATCOM allows an aerodynamic database to be generated simply and rapidly. Missile DATCOM has been shown to produce close agreement with experimental wind tunnel data for normal force and pitching moment coefficients, and reasonable agreement for axial force coefficients\cite{Sooy2005}. 
 
 
       

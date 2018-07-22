@@ -284,7 +284,9 @@
     \verb http://www.bbc.com/future/story/20161117-australias-hypersonic-spacep
     \verb lane-for-a-new-space-race
     \endverb
-    \warn{\item Invalid format of field 'urldate'}
+    \field{urlday}{21}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
   \endentry
 
   \entry{Bazaraa2013}{book}{}
@@ -704,7 +706,9 @@
     \verb y-sports-fin-upgrade/
     \endverb
     \field{year}{2018}
-    \warn{\item Invalid format of field 'urldate'}
+    \field{urlday}{21}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
   \endentry
 
   \entry{Composites}{article}{}
@@ -1511,7 +1515,9 @@
     \verb -reusable-launchers/
     \endverb
     \field{year}{2018}
-    \warn{\item Invalid format of field 'urldate'}
+    \field{urlday}{21}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
   \endentry
 
   \entry{Fry2004}{article}{}
@@ -1654,6 +1660,80 @@
     \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Gilmour.pdf:pdf
     \endverb
     \field{year}{2017}
+  \endentry
+
+  \entry{Gomez2004}{article}{}
+    \name{author}{8}{}{%
+      {{hash=GR}{%
+         family={Gomez},
+         familyi={G\bibinitperiod},
+         given={Reynaldo},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=VD}{%
+         family={Vicker},
+         familyi={V\bibinitperiod},
+         given={Darby},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=RS}{%
+         family={Rogers},
+         familyi={R\bibinitperiod},
+         given={Stuart},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=AM}{%
+         family={Aftosmis},
+         familyi={A\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=CW}{%
+         family={Chan},
+         familyi={C\bibinitperiod},
+         given={William},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=MR}{%
+         family={Meakin},
+         familyi={M\bibinitperiod},
+         given={Robert},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=MS}{%
+         family={Murman},
+         familyi={M\bibinitperiod},
+         given={Scott},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=MS}{%
+         family={Murman},
+         familyi={M\bibinitperiod},
+         given={Scott},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GR+1}
+    \strng{fullhash}{GRVDRSAMCWMRMSMS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \verb{doi}
+    \verb 10.2514/6.2004-2226
+    \endverb
+    \field{isbn}{978-1-62410-031-4}
+    \field{pages}{1\bibrangedash 15}
+    \field{title}{{STS-107 Investigation Ascent CFD Support}}
+    \verb{url}
+    \verb http://arc.aiaa.org/doi/10.2514/6.2004-2226
+    \endverb
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Gomez-et-al.-2004-S
+    \verb TS-107-Investigation-Ascent-CFD-Support.pdf:pdf
+    \endverb
+    \field{journaltitle}{34th AIAA Fluid Dynamics Conference and Exhibit}
+    \field{year}{2004}
   \endentry
 
   \entry{Gong2014}{article}{}
@@ -2217,7 +2297,9 @@
     \verb n-and-now-50-years-of-evolution/
     \endverb
     \field{year}{2010}
-    \warn{\item Invalid format of field 'urldate'}
+    \field{urlday}{21}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
   \endentry
 
   \entry{Ketsdever2010}{article}{}
@@ -2608,7 +2690,9 @@
     \verb es-people.html
     \endverb
     \field{year}{2016}
-    \warn{\item Invalid format of field 'urldate'}
+    \field{urlday}{21}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
   \endentry
 
   \entry{Li2012}{article}{}
@@ -2889,7 +2973,9 @@
     \verb nies-rockets-2018-3
     \endverb
     \field{year}{2018}
-    \warn{\item Invalid format of field 'urldate'}
+    \field{urlday}{21}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
   \endentry
 
   \entry{Moshman2014}{article}{}
@@ -3314,7 +3400,9 @@
     \verb s-Starman-travels-space.html
     \endverb
     \field{year}{2018}
-    \warn{\item Invalid format of field 'urldate'}
+    \field{urlday}{21}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
   \endentry
 
   \entry{Powell1991}{article}{}
@@ -4877,7 +4965,9 @@
     \verb et-wings/
     \endverb
     \field{year}{2016}
-    \warn{\item Invalid format of field 'urldate'}
+    \field{urlday}{21}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
   \endentry
 
   \entry{Toso2015}{inproceedings}{}
