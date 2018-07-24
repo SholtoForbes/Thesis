@@ -274,6 +274,27 @@
     \field{urlyear}{2017}
   \endentry
 
+  \entry{astos}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=A}{%
+         family={{Astos Solutions}},
+         familyi={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{A2}
+    \strng{fullhash}{A2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{{Astos Solutions}}
+    \verb{url}
+    \verb https://www.astos.de/
+    \endverb
+    \field{year}{2018}
+    \warn{\item Invalid format of field 'urldate'}
+  \endentry
+
   \entry{BBC}{misc}{}
     \field{labeltitlesource}{title}
     \field{sortinit}{A}
@@ -709,6 +730,29 @@
     \field{urlday}{21}
     \field{urlmonth}{06}
     \field{urlyear}{2018}
+  \endentry
+
+  \entry{WilliamColson}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=CW}{%
+         family={Colson},
+         familyi={C\bibinitperiod},
+         given={William},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CW1}
+    \strng{fullhash}{CW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{{Program to Optimize Simulated Trajectories 2}}
+    \verb{url}
+    \verb https://post2.larc.nasa.gov/
+    \endverb
+    \field{year}{2017}
+    \warn{\item Invalid format of field 'urldate'}
   \endentry
 
   \entry{Composites}{article}{}
@@ -1200,6 +1244,36 @@
     \field{year}{1957}
   \endentry
 
+  \entry{Krause2011}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=ET}{%
+         family={Eggers},
+         familyi={E\bibinitperiod},
+         given={Thino},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ET1}
+    \strng{fullhash}{ET1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \field{booktitle}{Notes on Numerical Fluid Mechanics and Multidisciplinary
+  Design}
+    \field{isbn}{9783642177699}
+    \field{issn}{16122909}
+    \field{pages}{137\bibrangedash 140}
+    \field{title}{{Aerodynamic Analysis of the Dual-Mode Ramjet Vehicle
+  JAPHAR}}
+    \field{volume}{115}
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/2002\_Book\_NewResu
+    \verb ltsInNumericalAndExperi(1).pdf:pdf
+    \endverb
+    \field{year}{2011}
+  \endentry
+
   \entry{Fahroo2000}{inproceedings}{}
     \name{author}{2}{}{%
       {{hash=FF}{%
@@ -1288,6 +1362,29 @@
     - starts with similar analysis to 2000 paper%
     }
     \field{year}{2001}
+  \endentry
+
+  \entry{otis}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=FR}{%
+         family={Falck},
+         familyi={F\bibinitperiod},
+         given={Rob},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FR1}
+    \strng{fullhash}{FR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{{OTIS}}
+    \verb{url}
+    \verb https://otis.grc.nasa.gov/index.html
+    \endverb
+    \field{year}{2016}
+    \warn{\item Invalid format of field 'urldate'}
   \endentry
 
   \entry{Fasano2013}{book}{}
@@ -1967,6 +2064,54 @@
     \field{year}{2005}
   \endentry
 
+  \entry{Hindi2006}{article}{}
+    \name{author}{1}{}{%
+      {{hash=HH}{%
+         family={Hindi},
+         familyi={H\bibinitperiod},
+         given={H.},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HH1}
+    \strng{fullhash}{HH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{abstract}{%
+    In recent years, convex optimization has become a computational tool of
+  central importance in engineering, thanks to its ability to solve very large,
+  practical engineering problems reliably and efficiently. The goal of this
+  tutorial is to continue the overview of modern convex optimization from where
+  our ACC2004 Tutorial on Convex Optimization left off, to cover important
+  topics that were omitted there due to lack of space and time, and highlight
+  the intimate connections between them. The topics of duality and interior
+  point algorithms will be our focus, along with simple examples. The material
+  in this tutorial is excerpted from the recent book on convex optimization, by
+  Boyd and Vandenberghe, who have made available a large amount of free course
+  material and freely available software. These can be downloaded and used
+  immediately by the reader both for self-study and to solve real problems%
+    }
+    \verb{doi}
+    \verb 10.1109/ACC.2006.1655436
+    \endverb
+    \field{isbn}{1-4244-0209-3}
+    \field{issn}{07431619}
+    \field{number}{1}
+    \field{pages}{11 pp.}
+    \field{title}{{A tutorial on convex optimization II: duality and interior
+  point methods}}
+    \verb{url}
+    \verb http://ieeexplore.ieee.org/document/1655436/
+    \endverb
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Hindi2006.pdf:pdf
+    \endverb
+    \field{journaltitle}{2006 American Control Conference}
+    \field{year}{2006}
+  \endentry
+
   \entry{Horizon}{misc}{}
     \name{author}{1}{}{%
       {{hash=H}{%
@@ -1988,6 +2133,42 @@
     \field{urlday}{01}
     \field{urlmonth}{12}
     \field{urlyear}{2017}
+  \endentry
+
+  \entry{Houska2011}{article}{}
+    \name{author}{3}{}{%
+      {{hash=HB}{%
+         family={Houska},
+         familyi={H\bibinitperiod},
+         given={B},
+         giveni={B},
+      }}%
+      {{hash=FH}{%
+         family={Ferrau},
+         familyi={F\bibinitperiod},
+         given={H.J},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=DM}{%
+         family={Diehl},
+         familyi={D\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HBFHDM1}
+    \strng{fullhash}{HBFHDM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{number}{3}
+    \field{pages}{298\bibrangedash 312}
+    \field{title}{{ACADO Toolkit -- An Open Source Framework for Automatic
+  Control and Dynamic Optimization}}
+    \field{volume}{32}
+    \field{journaltitle}{Optimal Control Applications and Methods}
+    \field{year}{2011}
   \endentry
 
   \entry{Huntington2007}{article}{}
@@ -2110,6 +2291,17 @@
     \field{year}{1971}
   \endentry
 
+  \entry{jmodelica}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{J}
+    \field{sortinithash}{J}
+    \field{title}{{JModelica.org}}
+    \verb{url}
+    \verb https://jmodelica.org/
+    \endverb
+    \warn{\item Invalid format of field 'urldate'}
+  \endentry
+
   \entry{Josselyn2002a}{article}{}
     \name{author}{2}{}{%
       {{hash=JS}{%
@@ -2219,6 +2411,58 @@
     \endverb
     \field{journaltitle}{Journal of Propulsion and Power Technical Notes}
     \field{year}{1996}
+  \endentry
+
+  \entry{Kawajir2010}{article}{}
+    \name{author}{3}{}{%
+      {{hash=KY}{%
+         family={Kawajir},
+         familyi={K\bibinitperiod},
+         given={Yoshiaki},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=LCD}{%
+         family={Laird},
+         familyi={L\bibinitperiod},
+         given={Carl\bibnamedelima D},
+         giveni={C\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=WA}{%
+         family={Waechter},
+         familyi={W\bibinitperiod},
+         given={Andreas},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KYLCDWA1}
+    \strng{fullhash}{KYLCDWA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{abstract}{%
+    This document is a guide to using Ipopt 3.9.1. It includes instructions on
+  how to obtain and compile Ipopt, a description of the interface, user
+  options, etc., as well as a tutorial on how to solve a nonlinear optimization
+  problem with Ipopt.%
+    }
+    \verb{doi}
+    \verb http://web.mit.edu/ipopt\_v3.8/doc/documentation.pdf
+    \endverb
+    \verb{eprint}
+    \verb arXiv:1011.1669v3
+    \endverb
+    \field{isbn}{0098-1354}
+    \field{issn}{00981354}
+    \field{pages}{1\bibrangedash 68}
+    \field{title}{{Introduction to IPOPT: A tutorial for downloading,
+  installing, and using IPOPT .}}
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Ipopt.pdf:pdf
+    \endverb
+    \field{journaltitle}{Most}
+    \field{eprinttype}{arXiv}
+    \field{year}{2010}
   \endentry
 
   \entry{Kelly2015}{article}{}
@@ -3044,6 +3288,61 @@
     \verb pdf
     \endverb
     \field{year}{1976}
+  \endentry
+
+  \entry{NASAEuler}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=N}{%
+         family={{NASA Glenn Research Center}},
+         familyi={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{N2}
+    \strng{fullhash}{N2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{title}{{Euler Equations}}
+    \verb{url}
+    \verb https://www.grc.nasa.gov/WWW/k-12/airplane/eulereqs.html
+    \endverb
+    \warn{\item Invalid format of field 'urldate'}
+  \endentry
+
+  \entry{iclocs}{misc}{}
+    \name{author}{3}{}{%
+      {{hash=NY}{%
+         family={Nie},
+         familyi={N\bibinitperiod},
+         given={Yuanbo},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=FO}{%
+         family={Faqir},
+         familyi={F\bibinitperiod},
+         given={Omar},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=KE}{%
+         family={Kerrigan},
+         familyi={K\bibinitperiod},
+         given={Eric},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NYFOKE1}
+    \strng{fullhash}{NYFOKE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{title}{{ICLOCS2}}
+    \verb{url}
+    \verb http://www.ee.ic.ac.uk/ICLOCS/
+    \endverb
+    \field{year}{2018}
+    \warn{\item Invalid format of field 'urldate'}
   \endentry
 
   \entry{Niederstrasser2015}{article}{}
@@ -4157,6 +4456,38 @@
     \field{year}{2004}
   \endentry
 
+  \entry{Rutquist2010}{article}{}
+    \name{author}{2}{}{%
+      {{hash=RPE}{%
+         family={Rutquist},
+         familyi={R\bibinitperiod},
+         given={P\bibnamedelima E},
+         giveni={P\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=EMM}{%
+         family={Edvall},
+         familyi={E\bibinitperiod},
+         given={M\bibnamedelima M},
+         giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RPEEMM1}
+    \strng{fullhash}{RPEEMM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{pages}{\bibrangedash }
+    \field{title}{{PROPT - Matlab Optimal Control Software}}
+    \field{volume}{260}
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/TOMLAB\_PROPT.pdf:p
+    \verb df
+    \endverb
+    \field{journaltitle}{Tomlab Optimization Inc}
+    \field{year}{2010}
+  \endentry
+
   \entry{Ryba2017}{misc}{}
     \name{author}{1}{}{%
       {{hash=RJ}{%
@@ -4264,6 +4595,37 @@
       {Reno, NV}%
     }
     \field{year}{2003}
+  \endentry
+
+  \entry{Segal2009}{book}{}
+    \name{author}{1}{}{%
+      {{hash=SC}{%
+         family={Segal},
+         familyi={S\bibinitperiod},
+         given={Corin},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Cambridge University Press}%
+    }
+    \strng{namehash}{SC1}
+    \strng{fullhash}{SC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{isbn}{9780521838153}
+    \field{pages}{229}
+    \field{title}{{The Scramjet Engine: Processes and Characteristics}}
+    \list{location}{1}{%
+      {Cambridge, UK}%
+    }
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Segal - 2009 - The
+    \verb scramjet engine Processes and characteristics.pdf:pdf
+    \endverb
+    \field{year}{2009}
   \endentry
 
   \entry{Shaughnessy1990}{article}{}
@@ -5185,6 +5547,65 @@
     \field{urlday}{30}
     \field{urlmonth}{11}
     \field{urlyear}{2017}
+  \endentry
+
+  \entry{Wachter2006}{book}{}
+    \name{author}{2}{}{%
+      {{hash=Wa}{%
+         family={W\"{a}chter},
+         familyi={W\bibinitperiod},
+         given={a},
+         giveni={a},
+      }}%
+      {{hash=BLT}{%
+         family={Biegler},
+         familyi={B\bibinitperiod},
+         given={L\bibnamedelima T},
+         giveni={L\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+    }
+    \keyw{barrier method,filter method,interior-point method,line
+  search,nonconvex constrained optimization,nonlinear programming}
+    \strng{namehash}{WaBLT1}
+    \strng{fullhash}{WaBLT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{isbn}{1010700405}
+    \field{number}{1}
+    \field{pages}{25\bibrangedash 57}
+    \field{title}{{On the Implementation of a Primal-Dual Interior Point Filter
+  Line Search Algorithm for Large-Scale Nonlinear Programming}}
+    \field{volume}{106}
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/W\"{a}chter-Biegler
+    \verb 2006\_Article\_OnTheImplementationOfAnInterio.pdf:pdf
+    \endverb
+    \field{year}{2006}
+  \endentry
+
+  \entry{Wade2017}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=WM}{%
+         family={Wade},
+         familyi={W\bibinitperiod},
+         given={Mark},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WM1}
+    \strng{fullhash}{WM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{title}{{Encyclopedia Astronautica}}
+    \verb{url}
+    \verb http://www.astronautix.com/
+    \endverb
+    \field{year}{2017}
+    \warn{\item Invalid format of field 'urldate'}
   \endentry
 
   \entry{Wassel2013}{article}{}

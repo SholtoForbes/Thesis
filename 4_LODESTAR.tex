@@ -17,14 +17,14 @@ LODESTAR is MATLAB based and utilises GPOPS-2, a proprietary pseudospectral meth
 \end{enumerate}
 
 Figure \ref{fig:FlowChartSmall} illustrates a simplified iteration of the pseudospectral solver.
-Modules within LODESTAR calculate the vehicle aerodynamic and engine performance at each point along the trajectory, along with atmospheric conditions. This data is then used to calculate the dynamics of the vehicle along the trajectory. The imposed constraints and cost are used to evaluate the feasibility and optimality of the solution. Based on this evaluation, the trajectory is then updated to a new iteration. This process repeats until the solver reaches a predefined tolerance of optimality.
+Modules within LODESTAR calculate the vehicle aerodynamic and engine performance at each point along the trajectory, along with atmospheric conditions. This data is then to calculate the dynamics of the vehicle along the trajectory. The imposed constraints and cost are then evaluated to compute the feasibility and optimality of the solution. Based on this evaluation, the trajectory is then updated to a new iteration. This process repeats until the solver reaches a predefined tolerance of optimality.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.5\linewidth]{figures/4_LODESTAR/FlowChartSmall}
 	\caption{General work flow of the pseudospectral solver.}
 	\label{fig:FlowChartSmall}
 \end{figure}
-Due to the nature of the pseudospectral method, is possible for GPOPS-2 to not be able to converge to a physically valid or optimal solution. 
+Due to the nature of the pseudospectral method, it is possible for GPOPS-2 to not be able to converge to a physically valid or optimal solution. 
 LODESTAR contains a number of verification modules which assess the optimised trajectory solution to ensure that the solution is indeed an optimal trajectory, and that the dynamics of the solution are accurate. 
 
 
@@ -42,7 +42,7 @@ This cost function may be any function which is defined by the states or control
 \begin{equation} \label{eq:cost}
 J(t,\textbf{x}(t),\textbf{u}(t)) = M[t,\textbf{x}(t_f),\textbf{u}(t_f)] +   \int_{t_0}^{t_f} P[\textbf{x}(t),\textbf{u}(t)] dt, \quad t \in [t_0,t_f],
 \end{equation}
-where $M$ is the terminal cost function and $P$ is the time integrated cost. A solution to the optimisation problem is found when the cost is minimised to a suitable accuracy. 
+where $M$ is the terminal cost function and $P$ is the time integrated cost. 
 
 \noindent \textit{Dynamic Constraints}
 
@@ -51,7 +51,19 @@ The optimisation problem is subject to a set of dynamic constraints, which descr
 \begin{equation} \label{eq:state}
 \dot{\textbf{x}}(t) = f[t,\textbf{x}(t),\textbf{u}(t)].
 \end{equation}
-Implementing the dynamics as constraints allows the optimiser some freedom to explore each state variable independently, greatly increasing the robustness of the optimal control problem. However, the constraints do not have to hold at all times during the process of searching for an optimal solution. A violation of the physical dynamics constraints means that the dynamics of the system may not hold throughout the solution process, causing potential complications for the computational model of the vehicle. Much of the design of the vehicle simulation in this study is driven by the need for smooth, continuous interpolation schemes, and viable extrapolation regions ie. even if the solution is well within the range of all input data sets, the solver must be able to explore all regions within the set bounds. 
+Implementing the dynamics as constraints allows each state variable to be approximated separately, and gives the optimiser some freedom to explore each state variable independently, greatly increasing the robustness of the optimal control problem. However, implementing the dynamics as constraints means that the dynamics do not have to be physically valid at all times during the process of searching for an optimal solution. A violation of the physical dynamics constraints can cause potential complications for the computational model of the vehicle. Much of the design of the vehicle model in this study is driven by the need for smooth, continuous interpolation schemes, which cover the entire possible operational range of the vehicle, ie. even if the solution is well within the range of all input data sets, the solver must be able to explore all regions within the set bounds. 
+
+\noindent \textit{Bounds and Path Constraints}
+
+\noindent Inequality constraints define the bounds of each state, as well as any path constraints.
+The bounds directly confine the state and control variables to prescribed values. This serves the purpose of limiting the search space to the physically possible (eg. constraining altitude to be greater than ground level), constraining the vehicle within its performance limits (eg. limiting the angle of attack), and improving computational efficiency by ensuring that the optimiser is constrained to a reasonable solution space:
+\begin{eqnarray}
+\mathbf{b}_{min} \leq \textbf{x}(t),\textbf{u}(t) \leq \mathbf{b}_{max}.
+\end{eqnarray}
+The path constraints are inequality constraints which consist of functions based on the states and controls of the system. Path constraints are generally used to impose physical limitations on the system such as structural, aerothermodynamic or pathing limitations:
+\begin{eqnarray}
+\mathbf{\lambda}[t,\textbf{x}(t),\textbf{u}(t)] \leq \textbf{0}.
+\end{eqnarray}
 
 \noindent \textit{Event Constraints}
 
@@ -62,16 +74,14 @@ Implementing the dynamics as constraints allows the optimiser some freedom to ex
 \begin{equation} \label{eq:2}
 \mathbf{\psi}_f[\textbf{x}(t_{f}), t_{f}] = \textbf{0}.
 \end{equation}
-These constraints determine the necessary initial and terminal conditions of the optimisation problem. Additionally, if the problem has multiple phases, these constraints are used to couple the states of each phase to the preceding and following stages.
+These constraints determine the initial and terminal conditions of the optimisation problem. Additionally, if the problem has multiple phases, these constraints are used to couple the states and time of each phase to the preceding and following phases as follows:
+\begin{equation}
+\textbf{x}_{f,1} - \textbf{x}_{0,2} = 0,
+\end{equation}
+\begin{equation}
+\textbf{t}_{f,1} - \textbf{t}_{0,2} = 0.
+\end{equation}
 
-\noindent \textit{Bounds and Path Constraints}
-
-\noindent Inequality constraints define the bounds of each state, as well as any path constraints:
-\begin{eqnarray}
-\mathbf{\lambda}[t,\textbf{x}(t),\textbf{u}(t)] \leq \textbf{0}.
-\end{eqnarray}
-These bounds confine the state and control variables to a well defined solution space, informing the optimiser of the bounds of the optimisation, and performing the function of limiting the search space to the physically possible (eg. constraining altitude to be greater than ground level) as well as constraining the vehicle within its performance limits (eg. limiting the angle of attack).
-The path constraints additionally impose physical limitations on the vehicle such as structural or aerothermodynamic limits.
 
 
 
@@ -85,7 +95,7 @@ The path constraints additionally impose physical limitations on the vehicle suc
 
 
 \subsection{GPOPS-2 Example - Brachistochrone Problem}
-This section describes a short example optimal control problem solved in GPOPS-II. The purpose of this example is to demonstrate the effectiveness of the pseudospectral method and GPOPS-II, and to provide a simple example case to establish the terminology of an optimal control problem.  
+This section describes a short example of an optimal control problem solved in GPOPS-II. The purpose of this example is to demonstrate the effectiveness of the pseudospectral method and GPOPS-II, and to provide a simple example case to establish the terminology of an optimal control problem.  
 
 
 The brachistochrone (from the Greek for 'shortest time') problem is a simple optimal control problem, which describes a ball rolling in two dimensions under gravity. The objective is to find the curve of descent which will minimise the time from point \textit{a}, where the ball is at rest, to point \textit{b}. It is assumed that gravity is constant and that there is no forces other than gravity acting on the ball. 
@@ -119,7 +129,7 @@ $\dot{v} = g*sin(u)$.
 \end{table}
 
 
-The GPOPS-2 solution to the Brachistochrone problem is shown in Figure \ref{fig:Brachistochrone}, matching the analytical solution almost exactly. This is expected in this case, as the dynamics of the basic Brachistochrone problem are very simple. As the dynamics become more complex, it is no longer possible to obtain an analytical solution. For more complex problems, more in-depth methods must be used to verify the optimal solution, outlined later in this chapter, in Section XX.  
+The GPOPS-2 solution to the Brachistochrone problem is shown in Figure \ref{fig:Brachistochrone}, matching the analytical solution almost exactly. This is expected in this case, as the dynamics of the basic Brachistochrone problem are very simple. As the dynamics become more complex, it is no longer possible to obtain an analytical solution. For more complex problems, various methods must be used to verify the optimal solution. These methods are outlined later in this chapter, in Section XX.  
 
 \begin{figure}[ht]
 \centering
@@ -136,7 +146,7 @@ The GPOPS-2 solution to the Brachistochrone problem is shown in Figure \ref{fig:
 
 
 LODESTAR contains a variety of modules used to calculate a trajectory optimisation of a rocket-scramjet-rocket launch vehicle for maximum payload-to-orbit. 
-Within LODESTAR are multiple modules that calculate the vehicles aerodynamic properties and run external simulations which then feed data back data to the pseudospectral solver for evaluation. 
+These modules calculate the vehicles aerodynamic properties and run external simulations which then feed data back data to the pseudospectral solver for evaluation. 
 Figure \ref{fig:AscentFlowchart} shows the information flow within LODESTAR. 
 
 \begin{landscape}% Landscape page
@@ -194,7 +204,13 @@ The dynamics of all stages are calculated using an geodetic rotational reference
 \subsection{Trajectory Connection Points}
 The optimisation of a large, multi-vehicle launch trajectory requires that the optimal control problem be broken down into multiple segments. This segmentation is performed in order to assist the convergence of the optimal control solver, by ensuring that the dynamics of the underlying model are as smooth and continuous as possible across each segment. 
 For a launch system, discontinuities in the system dynamics generally arise when the aerodynamics, mass and propulsion mode of a launch vehicle change significantly between stages or flight modes. 
-If a vehicle model with large instantaneous variations is implemented directly into a single phase application of the pseudospectral method, it is likely to cause significant convergence issues, as the discontinuities in the system dynamics will be unable to be approximated by the underlying polynomial of the pseudospectral method. 
+If a vehicle model with large discontinuities is implemented directly into a single phase application of the pseudospectral method, it is likely to cause significant convergence issues, as the system dynamics will be unable to be approximated by the underlying polynomial of the pseudospectral method. 
+ \begin{figure}[ht]
+ 	\centering
+ 	\includegraphics[width=1.\linewidth]{figures/4_LODESTAR/Traj}
+ 	\caption{Illustration of the segmented launch profile.}
+ 	\label{fig:Traj}
+ \end{figure}
  
  To allow the trajectory profile to be formulated as an optimal control problem, the trajectory of the rocket-scramjet-rocket launch system has been broken down into the seven segments shown in Figure \ref{fig:Traj}. 
   The segments have been separated into two groups; controlled segments which form the phases of the optimal control problem, and segments without control which are simulated separately, to increase computational efficiency and improve the convergence of the optimal control solver.  
@@ -206,23 +222,18 @@ If a vehicle model with large instantaneous variations is implemented directly i
  The segment coupling conditions are described in Table \ref{tab:constraints}.
 
 
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=1.\linewidth]{figures/4_LODESTAR/Traj}
-	\caption{Illustration of the segmented launch profile.}
-	\label{fig:Traj}
-\end{figure}
 
 
 
-\begin{table}[ht]
+
+\begin{table}[H]
 
 
 \begin{tabularx}{\linewidth}{|X|X|X|}
 	\hline \textbf{Section} & Initial Conditions & End Conditions  \\ 
 	\hline $1^{st}$ Stage Vertical Ascent (\textcolor{red}{\rom{1}}) & Must start at rest, at the predefined launch site. & Fly until pitchover conditions are met. \\ 
 	\hline $1^{st}$ Stage Pitching Ascent (\textcolor{red}{\rom{2}}) & Start at pitchover conditions & - \\ 
-	\hline $2^{nd}$ Stage Ascent (\textcolor{red}{\rom{3}}) & Must begin at first stage end conditions. & - \\ 
+	\hline $2^{nd}$ Stage Ascent (\textcolor{red}{\rom{3}}) & Must begin at $1^{st}$ stage pitching ascent end conditions. & - \\ 
 	\hline $2^{nd}$ Stage Return (\textcolor{red}{\rom{4}}) & Must begin at $2^{nd}$ stage ascent end conditions. & Must approach landing conditions at the initial launch site. \\ 
 	\hline $3^{rd}$ Stage Powered Ascent (\textcolor{red}{\rom{5}}) & Must begin at $2^{nd}$ stage ascent end conditions.  & Must produce exoatmospheric flight at the termination of stage \rom{6}.  \\ 
 	\hline $3^{rd}$ Stage Unpowered Ascent (\textcolor{red}{\rom{6}}) & Must begin at $3^{nd}$ stage powered ascent end conditions.  & Terminates when flight is parallel with Earth's surface.  \\ 
@@ -244,7 +255,7 @@ Initially, the first stage rocket is launched vertically, and continues vertical
 During the vertical launch the rocket is assumed to need no control, and is held at 0$^\circ$ angle of attack. 
 The pitchover is defined to occur at 90m altitude and 30m/s velocity, rather than at a specific time.
 This allows the pre-pitchover phase to be simulated separately, after the optimisation has been completed. 
-If the initial mass is variable, the initial launch altitude will necessarily be slightly variable. This variation in launch altitude is small, on the order of ten meters or less. 
+If the initial mass is variable, the pre-pitchover trajectory is calculated to match the pitchover mass, and the initial launch altitude will necessarily be slightly variable. This variation in launch altitude is small, on the order of ten meters or less. 
 
 \subsubsection{\textcolor{red}{\rom{2}.} First Stage Pitching Ascent}
 
@@ -253,13 +264,11 @@ The post-pitchover trajectory is an angle of attack controlled phase in the opti
 The fuel mass of the first stage rocket is unconstrained.
 This approach is used on account of the selected first stage being able to reach the required range of altitudes and flight angles with only small fuel mass variations. 
 Nevertheless, small variation in fuel mass can have an important effect on the capabilities of the first stage, influencing the velocity achievable at first to second stage separation, as well as the rate at which the rocket is able to pitch, and consequentially, the altitude and flight path angle range of the first stage.
-A variable fuel mass for the first stage launch vehicle is desired as the mass has large effects on the dynamics of the vehicle, effecting the trajectory angle change rate, as well as the acceleration and time of flight of the vehicle.
-It is useful in the preliminary design stages to be able to optimise the mass of the first stage vehicle, allowing a less trial-and-error approach.
-In the unconstrained mass case, the launch altitude is slightly variable, as LODESTAR starts optimisation from a set pitchover altitude and velocity, and the pre-pitchover trajectory is calculated to match the pitchover mass. 
+It is useful in the preliminary design stages to be able to vary the mass of the first stage vehicle during the optimisation process, allowing a less trial-and-error approach than selecting a starting fuel mass manually.
 
 
 
-\begin{table}[ht]
+\begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|}
 	\hline Optimisation Parameter  & Associated Variables & Allowable Values\\
@@ -279,9 +288,9 @@ In the unconstrained mass case, the launch altitude is slightly variable, as LOD
 
 \subsection{\textcolor{red}{\rom{3}.} Second Stage Ascent Trajectory}
 
-The ascent trajectory of the SPARTAN has been simulated in LODESTAR. This trajectory is constrained to a maximum dynamic pressure of 50kPa, corresponding to the maximum structural limits of the vehicle. 
+The ascent trajectory of the SPARTAN is controlled using angle of attack, and bank angle. This trajectory is constrained to a maximum dynamic pressure of 50kPa, corresponding to the maximum structural limits of the vehicle. During the ascent, the engines are assumed to be operating at an equivalence ratio of 1 at all times. 
 
-\begin{table}[ht]
+\begin{table}[H]
 \begin{tabular}{|c|c|}
 	\hline Initial Constraints  & Velocity \\ & Fuel Mass  \\ & Latitude \\ & Longitude \\ 
 	\hline Terminal Constraints & Fuel mass \\ & Heading Angle \\ 
@@ -295,13 +304,17 @@ The ascent trajectory of the SPARTAN has been simulated in LODESTAR. This trajec
 \end{table}
 
 \subsection{\textcolor{red}{\rom{4}.} Second Stage Return Trajectory}
-After releasing the third stage rocket, the scramjet-powered second stage must return back to an area close to the initial launch site.
+After releasing the third stage rocket, the scramjet-powered second stage must return back to the initial launch site.
 During the fly-back, the SPARTAN cannot exceed its dynamic pressure limit of 50kPa. 
-The SPARTAN must land on the ground with minimum velocity, within close proximity to the launch area.
+ The end state is constrained to a minimum of $-20^\circ$ trajectory angle, which is assumed to be an appropriate trajectory angle for approach to a landing strip. All other state variables are left unconstrained at the end point. It is assumed that for an optimal trajectory, the SPARTAN will end its return at the minimum energy state possible, corresponding to the minimum velocity and altitude attainable while satisfying the end latitude and longitude constraints. 
  
-\textcolor{red}{detail throttling}
+During the return, the C-REST engines are able to be throttled on and off. The throttle is set as a control variable, variable between 0 and 1, where 1 represents the maximum equivalence ratio at that point. The fuel mass flow rate is scaled linearly with the throttle:  
+\begin{equation}
+\dot{m}_{fuel} = \dot{m}_{fuel,max}throttle,
+\end{equation}
+and the thrust of the engine is assumed to scale linearly with the fuel mass flow rate. 
 
-
+\begin{table}[H]
 \begin{tabular}{|c|c|}
 	\hline Initial Constraints  & Altitude \\ & Velocity\\ & Flight Path Angle\\ & Heading Angle\\ & Latitude\\ & Longitude\\ 
 	\hline Terminal Constraints &  Distance From Launch Site \\ 
@@ -311,7 +324,7 @@ The SPARTAN must land on the ground with minimum velocity, within close proximit
 				\hline State Variables &  \\ 
 	\hline 
 \end{tabular} 
-
+\end{table}
 
 
 
@@ -320,10 +333,9 @@ The SPARTAN must land on the ground with minimum velocity, within close proximit
 The trajectory of the third stage rocket is only directly optimised during the powered section of its trajectory. During powered flight, the engine is used to control the third stage vehicle. After this point, the engine is cut, and the third stage is assumed to not have sufficient aerodynamic control to manoeuvre. 
 
 The third stage rocket is constrained to an angle of attack of less than 20$^\circ$. This is assumed to be the maximum controllable angle of attack possible for the third stage rocket.   
-Additionally, a maximum normal force restriction is placed on the third stage. Previous studies flew the third stage rocket at a constant 10$^\circ$ angle of attack, and initially released the rocket at 50kPa. 
+Additionally, a maximum normal force restriction is placed on the third stage. Previous studies flew the third stage rocket at a constant 10$^\circ$ angle of attack, and initially released the rocket at 50kPa[CITEXX]. 
 For this study, it is assumed that 10$^\circ$ angle of attack produces the maximum allowable normal force at 50kPa, to prevent the rocket from being released into an environment which could exceed its structural limitations. The maximum allowable normal force is calculated at the release Mach number, and set as a path constraint. 
-The heat shield is released once the rocket reached a dynamic pressure of 10Pa, where it is assumed that atmospheric effects will have ceased to have a major thermal effect. 
-
+\begin{table}[H]
 \begin{tabular}{|c|c|}
 	\hline Initial Constraints  & \\ 
 	\hline Terminal Constraints & None \\ 
@@ -333,20 +345,20 @@ The heat shield is released once the rocket reached a dynamic pressure of 10Pa, 
 				\hline State Variables &  \\ 
 	\hline 
 \end{tabular} 
-
+\end{table}
 
 \subsection{\textcolor{red}{\rom{6}.} Third Stage Unpowered Ascent}
 
-The unpowered section of the trajectory is simulated from the end of the controlled section of the trajectory, using a second order Taylor series approximation. This integration ceases when the flight path angle reaches 0$^{\circ}$. After this point, a circularisation burn is performed. The third stage is required to deliver the payload into heliosynchronous orbit. The third stage must achieve an inclination of of 97.63$^\circ$.
+The unpowered section of the trajectory is simulated from the end of the controlled section of the trajectory, using a second order Taylor series approximation. This integration ceases when the flight path angle reaches 0$^{\circ}$.
+During this phase, the heat shield is released once the rocket has reached a dynamic pressure of 10Pa, where it is assumed that atmospheric effects will have ceased to have a major thermal effect.  As the third stage is required to deliver the payload into heliosynchronous orbit, the third stage must achieve an inclination of 97.63$^\circ$ at the end of this phase.
 
 
 
 \subsection{\textcolor{red}{\rom{7}.} Hohmann Transfer}
-
-After the circularisation burn, the rocket will still be in a very low orbit. In order to reach a heliosynchronous orbit of 567km, the orbit of the third stage rocket must be raised. 
+After the rocket has attained exoatmospheric flight parallel to the Earth's surface, a circularisation burn is performed. This circularisation burn takes the third stage rocket into low orbit around the Earth. 
+However, in order to reach a heliosynchronous orbit of 567km, the orbit of the third stage rocket must be raised. 
 To this end, the final manoeuvre performed by the third stage rocket is a Hohmann transfer. A Hohmann transfer is the most fuel efficient way to raise a spacecraft from one circular orbit to another. 
-
-Following circularisation, the third stag engine is reignited (or remains ignited) and the third stage manoeuvres into an appropriate elliptical orbit. 
+Following circularisation, the third stage engine is reignited (or remains ignited) and the third stage manoeuvres into an appropriate elliptical orbit. 
 
 \begin{figure}
 \centering
@@ -397,16 +409,15 @@ m_{payload} = m_4 - m_{struct}
 LODESTAR provides the capacity to validate the optimal solution provided by the pseudospectral method solver. This partial validation is used to determine whether the pseudospectral method solver has converged close to an optimal solution of the nonlinear programming problem. It is particularly useful to validate that the optimality and constraint tolerances which have been chosen are sufficiently small, or to check whether the pseudospectral method solver has approached an optimal solution in the case that the defined tolerances are not able to be reached.   
 This partial validation is achieved through the examination of four key metrics; the IPOPT constraint violation and dual infeasibility parameters; the Hamiltonian necessary condition for optimality; the state derivatives; and finally a forward simulation. 
 
-The first metrics to be checked are the IPOPT constraint violation ($inf\textrm{-}pr$) and dual infeasibility parameter ($inf\textrm{-}du$)[CITEXX intro to Ipopt]. The constraint violation parameter is a measure of the infinity-norm ($L_\infty\textrm{-}norm$) of the constraints of the problem. This factor must be suitably small in order to indicate that the constraints of the problem to have been met. While the permissible magnitude of this factor changes with each individual problem, it is always desirable for this factor to be as small as possible. For this study only solutions with $L_\infty\textrm{-}norm(inf\textrm{-}pr) < 10^{-4} $ are accepted as having satisfied the imposed constraints. The dual infeasibility is a Karush-Kuhn-Tucker condition[CITEXX], which is a necessary condition for optimality. A dual feasible solution indicates that the dual problem is at least a lower bound on the optimal solution, $p^\star$, ie. $p^\star \geq g(\lambda,v)$. For more details on duality see [Find good citationXX].
+The first metrics to be checked are the IPOPT constraint violation ($inf\textrm{-}pr$) and dual infeasibility parameter ($inf\textrm{-}du$)\cite{Kawajir2010}. The constraint violation parameter is a measure of the infinity-norm ($L_\infty\textrm{-}norm$) of the constraints of the problem\cite{Kawajir2010}. This factor must be suitably small in order to indicate that the constraints of the problem to have been met. While the permissible magnitude of this factor changes with each individual problem, it is always desirable for this factor to be as small as possible. For this study only solutions with $L_\infty\textrm{-}norm(inf\textrm{-}pr) < 10^{-4} $ are accepted as having satisfied the imposed constraints. The dual infeasibility is a Karush-Kuhn-Tucker condition\cite{Hindi2006}, which is a necessary condition for optimality. A dual feasible solution indicates that the dual problem is at least a lower bound on the optimal solution, $p^\star$, ie. $p^\star \geq g(\lambda,v)$. For more details on duality see \cite{Hindi2006}.
 A low dual infeasibility indicates that the solution has approached an optimal solution. Again, the magnitude of this value is variable with each problem, though as a problem becomes more complex, the ability to converge towards an optimal solution diminishes. For the problem in this study, $L_\infty\textrm{-}norm(inf\textrm{-}du) < 0 $ are accepted due to the highly complex nature of the vehicle model. In this study it is accepted that a given solution may not approach the global optimum, and multiple solutions are calculated to mitigate the error caused by the problem complexity, with the 'most optimal' solution selected. 
 
-citation for optimality conditions, well explained https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=1655436
 
 The Hamiltonian of the optimal control problem is defined as 
 \begin{equation}
-H(x(t),u(t),\lambda(t),t) = \lambda^T(t)f(x(t),u(t)) + L(x(t),u(t))
+H(x(t),u(t),\lambda(t),t) = \lambda^T(t)f(x(t),u(t)) + L(x(t),u(t)).
 \end{equation}
-The Hamiltonian of the optimal control problem is investigated as a partial verification that the first order necessary conditions hold. Due to the unconstrained end time of the trajectory problems, $H\equiv 0 $ \cite{Pucci2007}. The Hamiltonian is defined as: $H(x(t),u(t),\lambda(t),t) = \lambda^T(t)f(x(t),u(t))+L(x(t),u(t))$.
+The Hamiltonian of the optimal control problem is investigated as a partial verification that the first order necessary conditions hold. Due to the unconstrained end time of the trajectory problems, $H\equiv 0 $ \cite{Pucci2007}. 
 This is calculated using LODESTAR and the Hamiltonian condition is able to be verified. The Hamiltonian will likely not be exactly equal to zero along the trajectory. This is due to the heuristic nature of the solver, which will approach close to an optimal solution, but never reach it exactly. A sufficiently small Hamiltonian indicates that the end solution approaches an optimal solution, and may be a candidate as an optimised trajectory case. 
 
 
@@ -416,8 +427,8 @@ The state feasibility of the solution is checked through a comparison of the sta
 
 
 
- However, to be certain that the system is behaving as it should be, a full forward simulation is necessary. This forward simulation starts at the initial conditions prescribed by the pseudospectral method solver, and propagates the dynamics of the system forward in time using numerical approximation. The forward simulation uses only inputs of the control sequence, as solved for by the pseudospectral method. 
-This checks that the flight path will follow the optimised path using the calculated control inputs. This is the most complete test of the optimal solution. However, in some cases calculating a forward solution may be problematic. The pseudospectral method has a limited number of nodes, potentially spread across relatively large time steps. Due to the high accuracy of the polynomial approximation, the pseudospectral method is able to maintain accuracy over large time steps. However, a forward simulation necessarily has less accuracy than the spectral method, and may interpolate differently when applied to the optimal solution, causing minor deviations. This particularly occurs when the states or controls are changing rapidly. These minor deviations may propagate themselves forward, causing significant deviation in the forward simulation. This can in some cases also cause the forward simulation to appear close to the optimial solution, when it should deviate. For this reason, a forward simulation is a good final check of an optimal solution, but knowledge of the system dynamics must be used, along with the other verification methods, to ascertain if a solution has converged sufficiently. 
+ The final verification check is a full forward simulation. This forward simulation starts at the initial conditions prescribed by the pseudospectral method solver, and propagates the dynamics of the system forward in time using numerical approximation. The forward simulation uses the optimised control variables as the only input. 
+This checks that the flight path will follow the optimised path using the calculated control inputs. This is the most complete test of the optimal solution. However, in some cases calculating a forward solution may be problematic. The pseudospectral method has a limited number of nodes, potentially spread across relatively large time steps. Due to the high accuracy of the polynomial approximation, the pseudospectral method is able to maintain accuracy over large time steps. However, a forward simulation necessarily has less accuracy than the spectral method, and may interpolate differently when applied to the optimal solution, causing minor deviations. This particularly occurs when the states or controls are changing rapidly. These minor deviations may propagate themselves forward, causing significant deviation in the forward simulation. In some cases, this can also cause the forward simulation to appear close to the optimial solution, when it should deviate. For this reason, a forward simulation is a good final check of an optimal solution, but knowledge of the system dynamics must be used, along with the other verification methods, to ascertain if a solution has converged sufficiently. 
 
 \textcolor{red}{It may be useful to include example images here}
 
