@@ -1,5 +1,55 @@
 % details-of-test-conditions.tex
 
+
+
+
+\chapter{GPOPS-2 Example - Brachistochrone Problem}
+This section describes a short example of an optimal control problem solved in GPOPS-II. The purpose of this example is to demonstrate the effectiveness of the pseudospectral method and GPOPS-II, and to provide a simple example case to establish the terminology of an optimal control problem.  
+
+
+The brachistochrone (from the Greek for 'shortest time') problem is a simple optimal control problem, which describes a ball rolling in two dimensions under gravity. The objective is to find the curve of descent which will minimise the time from point \textit{a}, where the ball is at rest, to point \textit{b}. It is assumed that gravity is constant and that there is no forces other than gravity acting on the ball. 
+The analytical solution of this problem can be computed using the Euler-Lagrange equation as the equations describing a cycloid:
+
+$x = A(\theta + \sin\theta) $,
+
+$y=A(1 - \cos\theta)$
+
+This problem is included within GPOPS-2 as an example problem, and has been solved to illustrate the GPOPS-2 solution set-up[cite Gpops XX]. Table XX describes the set-up of the optimal control problem in GPOPS-2. The dynamic equations for the Brachistochrone problem are:
+
+$\dot{x} = v*cos(u)$,
+
+$\dot{y} = v*sin(u)$,
+
+$\dot{v} = g*sin(u)$.
+
+\noindent These equations are provided to GPOPS-2 as the time-variant system model in this form. The control variable is set to be the descent angle. The initial constraints are defined to initiate the ball at rest at the origin, and the terminal constraints are defined to terminate the problem at coordinates of XX XX. The cost is set to minimum time, so that the solution will be the descent angle which minimises the time to get from the initial position, to the end position. 
+
+\begin{table}
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline Primal Variables  & x Position\\& y Position\\& Velocity\\ 
+		\hline Control Variables  & Angle of Descent\\ 
+		\hline Initial Constraints  & Velocity\\ & x Position\\ & y Position\\
+		\hline Terminal Constraints &  x Position\\ & y Position\\
+		\hline Path Constraints & None \\ 
+		\hline Target Cost & Minimum Time \\ 
+		\hline 
+	\end{tabular} 
+\end{table}
+
+
+The GPOPS-2 solution to the Brachistochrone problem is shown in Figure \ref{fig:Brachistochrone}, matching the analytical solution almost exactly. This is expected in this case, as the dynamics of the basic Brachistochrone problem are very simple. As the dynamics become more complex, it is no longer possible to obtain an analytical solution. For more complex problems, various methods must be used to verify the optimal solution. These methods are outlined later in this chapter, in Section XX.  
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.9\linewidth]{figures/4_LODESTAR/Brachistochrone}
+	\caption{The solution to the brachistochrone problem, solved in GPOPS-2[CITATIONXX].}
+	\label{fig:Brachistochrone}
+\end{figure}
+
+
+
+
 \chapter{Trajectory results}
 
 -engine data with trajectory paths

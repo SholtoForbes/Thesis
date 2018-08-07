@@ -23,49 +23,44 @@ The sensitivity analysis in this chapter will be expanded, and will be compared 
 
 This section contains a current example of a concurrently optimised SPARTAN ascent/fly-back and third stage ascent. 
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.9\linewidth]{figures/7_Full/Ascent}
-	\caption{The flight path of the SPARTAN ascent.}
-	\label{fig:ascent}
-\end{figure}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{figures/7_Full/Ascent-Aero}
-	\caption{Aerodynamic parameters of the SPARTAN ascent.}
-	\label{fig:ascent-aero}
-\end{figure}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{figures/7_Full/Ascent-Vehicle}
-	\caption{Vehicle parameters of the SPARTAN ascent.}
-	\label{fig:ascent-vehicle}
-\end{figure}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{figures/7_Full/FlyBack1}
-	\caption{The flight path of the SPARTAN fly-back.}
-	\label{fig:flyback1}
-\end{figure}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{figures/7_Full/FlyBack2}
-	\caption{Vehicle parameters of the SPARTAN fly-back.}
-	\label{fig:flyback2}
-\end{figure}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{figures/7_Full/FlyBack3}
-	\caption{Aerodynamic and propulsion parameters of the SPARTAN fly-back.}
-	\label{fig:flyback3}
-\end{figure}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{figures/7_Full/groundtrack}
-	\caption{The ground track of the ascent and fly-back of the SPARTAN.}
-	\label{fig:groundtrack}
+
+\begin{figure}
+\centering
+\includegraphics[width=1\linewidth]{figures/6_FlyBack/mode1/FirstStageStandard}
+\caption{}
+\label{fig:FirstStageStandard}
 \end{figure}
 
+
+
+\begin{figure}
+\centering
+\includegraphics[width=1\linewidth]{figures/6_FlyBack/mode1/SecondStageStandard}
+\caption{}
+\label{fig:SecondStageStandard}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1\linewidth]{figures/6_FlyBack/mode1/ReturnStandard}
+\caption{}
+\label{fig:ReturnStandard}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1\linewidth]{figures/6_FlyBack/mode1/ThirdStageStandard}
+\caption{}
+\label{fig:ThirdStageStandard}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\includegraphics[width=1\linewidth]{figures/6_FlyBack/mode1/GroundTrackStandard}
+\caption{}
+\label{fig:GroundTrackStandard}
+\end{figure}
 
 
 \section{Fly-Back Trajectory Analysis}
@@ -74,61 +69,9 @@ The end of the trajectory is constrained to sub-200m altitude, and a trajectory 
 It is also assumed that the vehicle is able to carry any necessary fuel in addition to the fuel required during the ascent trajectory, allowing the initial conditions to be kept constant. The potential specific impulse is shown along the trajectory, this is the specific impulse obtainable from the C-REST engines should they be powered on.
 
 \subsection{Optimised Trajectory}
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=0.6\linewidth]{Figures/6_flyback/lon-lat}
-	\vspace{-10pt}
-	\caption{ Ground track of the optimised fly-back of the SPARTAN vehicle.}
-	\label{fig:lon-lat}
-\end{figure}  
 
 
-%\begin{figure}[h]
-%	\centering
-%	\includegraphics[width=0.9\linewidth]{Figures/Traj1}
-%	\vspace{-10pt}
-%	\caption{Trajectory data for the fly-back of the SPARTAN vehicle. Optimised for minimum fuel usage using LODESTAR. }
-%	\label{fig:Traj1}
-%\end{figure}
-%\begin{figure}[h]
-%	\centering
-%	\includegraphics[width=0.9\linewidth]{Figures/Traj2}
-%	\vspace{-10pt}
-%	\caption{Aerodynamic and performance data for the optimised fly-back of the SPARTAN vehicle. }
-%	\label{fig:Traj2}
-%\end{figure}
-%\begin{figure}[h]
-%	\centering
-%	\includegraphics[width=0.9\linewidth]{Figures/Traj3}
-%	\vspace{-10pt}
-%	\caption{Control data for the optimised fly-back of the SPARTAN vehicle.}
-%	\label{fig:Traj3}
-%\end{figure}
 
-\begin{figure}
-	\begin{subfigure}[b]{\textwidth}
-		\includegraphics[width=\linewidth]{Figures/6_flyback/Traj1}
-		\vspace{-15pt}
-		\caption{ Flight path.}
-		\label{fig:Traj1}
-	\end{subfigure}
-	
-	\begin{subfigure}[b]{\textwidth}
-		\includegraphics[width=\linewidth]{Figures/6_flyback/Traj2}
-		\vspace{-15pt}
-		\caption{Aerodynamic and performance data. }
-		\label{fig:Traj2}
-	\end{subfigure}
-	
-	\begin{subfigure}[b]{\textwidth}
-		\includegraphics[width=\linewidth]{Figures/6_flyback/Traj3}
-		\vspace{-15pt}
-		\caption{Control time histories.}
-		\label{fig:Traj3}
-	\end{subfigure}
-	\caption{Trajectory data for the fly-back of the SPARTAN vehicle. Optimised for minimum fuel usage using LODESTAR.}
-	\label{fig:AllTraj}
-\end{figure}
 
 The optimised fly-back trajectory is shown in Figures \ref{fig:lon-lat} and \ref{fig:AllTraj}.
 The fly-back is initiated from the optimised second-third stage separation point at 7.7$^\circ$S,145.0$^\circ$E, 34.5km altitude, 2.9$^\circ$ trajectory angle, 2881m/s velocity and 102$^\circ$ heading angle, corresponding to the conditions of optimal third stage release described in Section \ref*{sec:opt}. 
@@ -171,19 +114,7 @@ Increasing the specific impulse causes the fuel necessary for fly-back to decrea
 
 These results indicate that the aerodynamic performance of the SPARTAN has significantly more impact than the efficiency of the scramjet engines on the optimised fly-back trajectory. During the fly-back trajectory, the specific impulse is effecting performance only whilst the scramjet engines are operating, compared with the aerodynamics of the vehicle, which effect performance throughout the trajectory. This suggests that, for maximum fly-back performance, the aerodynamic performance should be given preference over engine efficiency in the design of fly-back hypersonic accelerators. 
 
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=0.9\linewidth]{Figures/6_flyback/CdVariation}
-	\caption{Comparison of optimal trajectories with $\pm10\%$ $C_D$ variance.}
-	\label{fig:CdVariation}
-\end{figure}
 
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=0.9\linewidth]{Figures/6_flyback/IspVariation}
-	\caption{Comparison of optimal trajectories with $\pm10\%$ $I_{SP}$ variance.}
-	\label{fig:IspVariation}
-\end{figure}
 
 
 

@@ -11,70 +11,20 @@ This chapter presents a maximum payload-to-orbit trajectory optimisation for the
 This chapter consists of a modified form of the Journal of Spacecraft and Rockets paper 'Trajectory Design of a Rocket-Scramjet-Rocket Multi-Stage Launch System' (accepted for publication). 
 A constant dynamic pressure case with the minimum pull-up necessary for the third stage to achieve orbit is computed as a reference. The trajectory of the SPARTAN and third stage are optimised for maximum payload-to-orbit, and compared to the minimum pull-up trajectory. A sensitivity study is carried out by varying the maximum allowable dynamic pressure by $\pm$10$^\circ$, followed by increasing the drag by 10$^\circ$, and computing new optimal trajectory results. 
 
-The results of this chapter are currently undergoing modification. 
-The results will be updated to use a combined SPARTAN/Third stage optimisation which has been successfully implemented in LODESTAR, rather than separately optimised trajectories. This improvement results in a more optimal trajectory. Cart3d aerodynamics will be used rather than Hypaero for consistency, with viscous corrections which have been calculated by Alexander Ward. The sensitivity analysis will be refocussed slightly to highlight the potential implications to future vehicle designs. 
-Currently, the ascent optimisation in LODESTAR is complete, however, aerodynamic simulations are being carried out in Cart3D to add additional nozzle and boat-tail thrust to the propulsion database. When these simulations are complete, optimal trajectories will be generated. The general shape of the optimised trajectories is not expected to change significantly. 
+
 
 This chapter will be expanded to include a more thorough sensitivity analysis, including the variation of specific impulse, along with more data points for each parameter variation. The discussion on the sensitivity analysis will be refocussed to highlight the particular design attributes which may lead to performance variations.
 Additionally the validation of each case will be discussed in detail, with forward simulation comparisons and optimality condition validations provided in appendices. 
 
 
 
-\subsection{Optimisation Methodology}
 
-The three stages are considered as separate optimisation problems, which are coupled at the stage separation points.
-The first and second stages are coupled by a separation point which is determined by the optimal altitude and flight path angle for the second stage trajectory, as well as the minimum starting velocity of the scramjet. This separation point is used as an end condition on the first stage optimisation.
-For the minimum pull-up case, the second and third stages are coupled by the end point of the second stage simulation, which is reached when the second stage has expended all of its fuel. The third stage trajectory is optimised for maximum payload from the end of the second stage trajectory.
 
-For the maximum payload cases, the second and third stages are coupled \textit{a priori} by running the third stage optimisation repeatedly for different separation altitudes, velocities, and angles and tabulating the results. The terminal cost of payload-to-orbit, for the second stage optimisation, is generated from this table using interpolation. By setting the objective of the third stage optimisation to maximise payload mass, the coupled optimisation of the second stage in turn maximises payload mass over both stages. 
-The coupling of the stage simulations means that the stage optimisations are performed backwards-in-time to design the complete trajectory; first the third stage is optimised for maximum payload-to-orbit and tabulated over a range of altitudes, velocities and flight path angles, then the second stage is optimised for maximum payload-to-orbit, and lastly the first stage is optimised for fuel mass to reach the optimal second stage start point. 
 
 \section{Current Methodology}
 
 This section presents the current optimisation methodology, used to generate the optimised ascent trajectory results. This section will be updated to show the combined optimisation, and some details will be moved to Chapter 4. 
 
-\subsubsection{Third Stage Optimisation} \label{section:thirdstage}
-
-\begin{figure}[t]
-	\begin{center}
-		\includegraphics[width=0.6\linewidth]{figures/5_Ascent/contours}
-		\caption{Payload mass results with variation in rocket stage release point for $v$ = 2875m/s, heading angle = 1.78 rad and latitude = -0.136 rad.}
-		\label{fig:contours}
-	\end{center}
-\end{figure}
-
-The third stage rocket trajectory is optimised for maximum payload-to-orbit, so that the second stage scramjet and third stage rocket form a Bolza optimisation problem and maximise payload collectively. The cost function is configured to maximise payload at the end of the trajectory:
-\begin{equation} 
-\min\limits_{\textbf{u}_3} \quad C_{3\rightarrow LEO}(\textbf{x}_{3}(t_{3,f})) 
-\end{equation}
-where
-\begin{equation}
-C_{3\rightarrow LEO}(\textbf{x}_{3}(t_{3,f})) = -m_{payload},
-\end{equation}
-and $\textbf{x}_{3}(t_{3,f})$ are the tabulated separation conditions of altitude, velocity, and flight path angle. A direct shooting optimisation is performed with twenty angle of attack node points, interconnected by spline interpolation from separation, $t_{3,0}$, to a variable end time, $t_{AoA,f}$. At this time, the angle of attack is gradually reduced, so that it reaches 0 at the end of burn time, $t_{burn,f}$, also variable.  A constraint is imposed so that the angle of attack must have at least 10 seconds to reduce to 0 at end of burn, ie. $t_{burn,f} - t_{AoA,f} \ge 10$, to allow time for manoeuvring.
-
-
-
-The payload mass is calculated after the Hohmann transfer to the desired orbit, by taking the remaining fuel to be the effective payload capacity. SQP is used to find the optimal solution, utilising MATLAB's \textit{fmincon} solver\cite{MATLAB}.
-As an example, tabulated optimal payload to orbit results for a 2875m/s third stage release velocity are shown in Figure~\ref{fig:contours}. Payload increases with both altitude and release angle, however it is clear that the potential payload increase due to increasing the separation altitude lessens as release angle increases.  
-
-
-\subsubsection{First Stage Optimisation}
-After launch, the first stage flies vertically until 100m altitude, when a pitchover is initiated. 
-From pitchover, the first stage is optimised for the minimum fuel mass necessary to reach the first-second stage separation conditions, $\textbf{x}_1(t_{1,f})$, of 1520m/s velocity, and altitude and flight path angle determined by the second stage trajectory. 
-
-The separation velocity of 1520m/s corresponds to Mach 5.1 at 50kPa, the minimum operating point of the proposed scramjet\cite{Preller2017b}. Release at the minimum operable point is advantageous, as the scramjet specific impulse increases at low velocities\cite{Preller2017b}.
-The altitude and flight path angle at first-second stage separation is defined by the optimised second stage. This approach is used on account of the selected first stage being able to reach the required range of altitudes and flight angles at 1520m/s  with small fuel mass variations. 
-Nevertheless, small variation in fuel mass can have an important effect on the capabilities of the first stage, influencing the velocity achievable at first to second stage separation, as well as the rate at which the rocket is able to pitch, and consequentially, the altitude and flight path angle range of the first stage.
-The optimal (lowest fuel consumption) trajectory for the first stage stack that can reach first-second stage separation condition $\textbf{x}_1(t_{1,f})$ is found by setting a cost function to minimise fuel mass:
-\begin{equation}
-\min\limits_{\textbf{u}_1} \quad  C_{1 \rightarrow 2}(\textbf{x}_1(t_{1,f}))
-\end{equation}
-where
-\begin{equation}
-C_{1 \rightarrow 2}(\textbf{x}_1(t_{1,f})) = m_{fuel}
-\end{equation}
-and the end point is fixed by the optimal second stage start conditions. The first stage is limited to -5$^\circ$ angle of attack to produce a conservative trajectory solution, within the capabilities of the vehicle. The optimal trajectory is determined using the pseudospectral method. Ten results are obtained by varying the number of nodes in DIDO between 90-99, converging to very similar minima. The final result is chosen as the solution which uses the least fuel.
 
 
 \subsubsection{Second Stage Optimisation - Constant Dynamic Pressure, Minimum Pull-Up}

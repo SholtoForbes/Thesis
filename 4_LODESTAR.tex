@@ -2,10 +2,10 @@
 
 \cleardoublepage
 \chapter{LODESTAR}\label{chapter:LODESTAR}	
-This chapter covers the optimal control program LODESTAR (Launch Optimisation and Data Evaluation for Scramjet Trajectory Analysis Research), which has been used to simulate the optimal trajectories of the rocket-scramjet-rocket system. The dynamic model and structure of LODESTAR are presented, as well as the set-up of LODESTAR for the rocket-scramjet-rocket trajectory optimisation, and the validation methods used to determine if a solution has converged correctly.
+This chapter covers the optimal control program LODESTAR (Launch Optimisation and Data Evaluation for Scramjet Trajectory Analysis Research), which has been used to simulate the optimal trajectories of the rocket-scramjet-rocket system. The dynamic model and structure of LODESTAR are presented, as well as the set-up of LODESTAR for the rocket-scramjet-rocket trajectory optimisation, and the verification methods used to determine if a solution has converged correctly.
 
 LODESTAR has been developed to aid with the simulation and trajectory optimisation of space launch systems. 
-LODESTAR is MATLAB based and utilises GPOPS-2, a proprietary pseudospectral method optimisation package.
+LODESTAR is MATLAB based and utilises GPOPS-2[CITEXX], a proprietary pseudospectral method optimisation package.
  LODESTAR optimises a trajectory towards a user-defined objective function, such as maximum payload-to-orbit, subject to constraints which bound the operational region of a vehicle. Both rocket-powered and scramjet-powered vehicles are accurately modelled within LODESTAR in 6 degrees of freedom. LODESTAR contains multiple modes configured for the SPARTAN launch system, which are able to optimise trajectories for;
 
 \begin{enumerate}
@@ -16,24 +16,85 @@ LODESTAR is MATLAB based and utilises GPOPS-2, a proprietary pseudospectral meth
  \item Combined trajectories of multiple stages in any combination.
 \end{enumerate}
 
-Figure \ref{fig:FlowChartSmall} illustrates a simplified iteration of the pseudospectral solver.
-Modules within LODESTAR calculate the vehicle aerodynamic and engine performance at each point along the trajectory, along with atmospheric conditions. This data is then to calculate the dynamics of the vehicle along the trajectory. The imposed constraints and cost are then evaluated to compute the feasibility and optimality of the solution. Based on this evaluation, the trajectory is then updated to a new iteration. This process repeats until the solver reaches a predefined tolerance of optimality.
+Figure \ref{fig:FlowChartSmall} illustrates a simplified iteration of the pseudospectral solver. GPOPS-2 provides an initial guess of the solution to the external modules.
+These modules calculate the vehicle aerodynamic and engine performance at each point along the trajectory, along with atmospheric conditions. This data is then used to calculate the dynamics of the vehicle along the trajectory. The imposed constraints and cost are then passed to IPOPT and evaluated, to compute the feasibility and optimality of the solution. Based on this evaluation, the trajectory guess is then updated to a new iteration, which is processed by GPOPS. This process repeats until the solver reaches a predefined tolerance of optimality.
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.5\linewidth]{figures/4_LODESTAR/FlowChartSmall}
-	\caption{General work flow of the pseudospectral solver.}
+	\includegraphics[width=0.75\linewidth]{figures/4_LODESTAR/FlowChartSmall}
+	\caption{The optimisation process.}
 	\label{fig:FlowChartSmall}
 \end{figure}
 Due to the nature of the pseudospectral method, it is possible for GPOPS-2 to not be able to converge to a physically valid or optimal solution. 
 LODESTAR contains a number of verification modules which assess the optimised trajectory solution to ensure that the solution is indeed an optimal trajectory, and that the dynamics of the solution are accurate. 
 
 
+
+\section{Vehicle Simulation}
+
+
+Each of the vehicles within the rocket-scramjet-rocket launch system are simulated by establishing a set of dynamic equations which fully describe the motion of the vehicle in terms of the time, states ($\mathbf{x}$), and controls ($\mathbf{u}$) of the system;
+\begin{equation}
+\dot{\textbf{x}}(t) = f[t,\textbf{x}(t),\textbf{u}(t)].
+\end{equation}
+ The states and controls are the variables which define the time dependent physical characteristics of the system. The state variables are dependent on the controls and the system dynamics, while the control variables are the variables which drive the behaviour of the system and are independently variable.  
+ 
+These dynamic equations consist of the equations of motion of the vehicle, as well as other important time varying parameters, such as fuel mass flow rate. 
+The dynamic equations are defined by the coordinate system, and the outputs of each vehicle model. These are nonlinear equations which depend on the interpolation of data sets which supply the atmospheric, aerodynamic and propulsion characteristics of each vehicle. 
+
+
+
+
+\subsection{6DOF Equations of Motion}
+
+
+The dynamics of the vehicle are calculated in six degrees of freedom, with yaw constrained to zero. 
+The dynamics of all stages are calculated using an geodetic rotational reference frame, written in terms of the angle of attack $\alpha$, bank angle $\eta$, radius from centre of Earth $r$, longitude $\xi$, latitude $\phi$, flight path angle $\gamma$, velocity $v$ and heading angle $\zeta$. The equations of motion are \cite{Josselyn2002a}:
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/4_LODESTAR/global}
+	\caption{The Earth-fixed components of the geodetic rotational coordinate system.}
+	\label{fig:global}
+\end{figure}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.9\linewidth]{figures/4_LODESTAR/Axes}
+	\caption{The vehicle-based components of the coordinate system.}
+	\label{fig:Axes}
+\end{figure}
+
+
+\begin{equation}
+\dot{r} = v \sin \gamma
+\end{equation}
+
+\begin{equation}
+\dot{\xi} = \frac{v\cos \gamma \cos \zeta}{r \cos \phi}
+\end{equation}
+
+\begin{equation}
+\dot{\phi} = \frac{v\cos\gamma\sin\zeta}{r}
+\end{equation}
+\begin{equation}
+\dot{\gamma} = \frac{T\sin\alpha \cos\eta}{mv} + (\frac{v}{r}-\frac{\mu_E}{r^2 v})\cos\gamma + \frac{L}{mv}
++ \cos\phi[2\omega_E \cos\zeta + \frac{\omega_E^2 r}{v}(\cos\phi\cos\gamma+\sin\phi\sin\gamma\sin\zeta)]
+\end{equation}
+\begin{equation}
+\dot{v} = \frac{T\cos\alpha}{m}-\frac{\mu_E}{r^2}\sin\gamma - \frac{D}{m}
++ \omega_E^2 r\cos\phi(\cos\phi\sin\gamma-\sin\phi\cos\gamma\sin\zeta)
+\end{equation}
+\begin{equation}
+\dot{\zeta} = \frac{T\sin\alpha \sin\eta}{mv \cos \gamma}-\frac{v}{r}\tan\phi\cos\gamma\cos\zeta +2\omega_E\cos\phi\tan\gamma\sin\zeta - \frac{\omega_E^2 r}{v\cos\gamma}\sin\phi\cos\phi\cos\zeta-2\omega_E\sin\phi 
+\end{equation}
+
+
+
+
+
+
 \section{Optimal Control Problem Structure}
 
 The pseudospectral method used by GPOPS-2 is described in detail in section \ref{sec:Optimisation}. Practically, the implementation of optimal controls involves the specification of the dynamics of the system to be optimised, as well as the set of constraints and objectives which govern the optimisation problem. 
- Together, these define the optimisation problem being solved. The states ($\mathbf{x}$) and controls ($\mathbf{u}$) are the variables which define the time dependent physical characteristics of the system. The state variables are dependent on the controls and the system dynamics, while the control variables are the variables which drive the behaviour of the system and are independently variable in the solution space.  
-
-
+ Together, these define the optimisation problem being solved.
 
 \noindent \textit{Cost Function}
 
@@ -49,7 +110,7 @@ where $M$ is the terminal cost function and $P$ is the time integrated cost.
 \noindent The constraints impose various conditions on the optimisation problem.
 The optimisation problem is subject to a set of dynamic constraints, which describe the behaviour of the system over the solution space:
 \begin{equation} \label{eq:state}
-\dot{\textbf{x}}(t) = f[t,\textbf{x}(t),\textbf{u}(t)].
+\dot{\textbf{x}}(t) - f[t,\textbf{x}(t),\textbf{u}(t)] = 0.
 \end{equation}
 Implementing the dynamics as constraints allows each state variable to be approximated separately, and gives the optimiser some freedom to explore each state variable independently, greatly increasing the robustness of the optimal control problem. However, implementing the dynamics as constraints means that the dynamics do not have to be physically valid at all times during the process of searching for an optimal solution. A violation of the physical dynamics constraints can cause potential complications for the computational model of the vehicle. Much of the design of the vehicle model in this study is driven by the need for smooth, continuous interpolation schemes, which cover the entire possible operational range of the vehicle, ie. even if the solution is well within the range of all input data sets, the solver must be able to explore all regions within the set bounds. 
 
@@ -94,112 +155,8 @@ These constraints determine the initial and terminal conditions of the optimisat
 
 
 
-\subsection{GPOPS-2 Example - Brachistochrone Problem}
-This section describes a short example of an optimal control problem solved in GPOPS-II. The purpose of this example is to demonstrate the effectiveness of the pseudospectral method and GPOPS-II, and to provide a simple example case to establish the terminology of an optimal control problem.  
 
 
-The brachistochrone (from the Greek for 'shortest time') problem is a simple optimal control problem, which describes a ball rolling in two dimensions under gravity. The objective is to find the curve of descent which will minimise the time from point \textit{a}, where the ball is at rest, to point \textit{b}. It is assumed that gravity is constant and that there is no forces other than gravity acting on the ball. 
-The analytical solution of this problem can be computed using the Euler-Lagrange equation as the equations describing a cycloid:
-
-$x = A(\theta + \sin\theta) $,
-
-$y=A(1 - \cos\theta)$
-
-This problem is included within GPOPS-2 as an example problem, and has been solved to illustrate the GPOPS-2 solution set-up[cite Gpops XX]. Table XX describes the set-up of the optimal control problem in GPOPS-2. The dynamic equations for the Brachistochrone problem are:
-
-$\dot{x} = v*cos(u)$,
-
-$\dot{y} = v*sin(u)$,
-
-$\dot{v} = g*sin(u)$.
-
-\noindent These equations are provided to GPOPS-2 as the time-variant system model in this form. The control variable is set to be the descent angle. The initial constraints are defined to initiate the ball at rest at the origin, and the terminal constraints are defined to terminate the problem at coordinates of XX XX. The cost is set to minimum time, so that the solution will be the descent angle which minimises the time to get from the initial position, to the end position. 
-
-\begin{table}
-\centering
-\begin{tabular}{|c|c|}
-	\hline Primal Variables  & x Position\\& y Position\\& Velocity\\ 
-	\hline Control Variables  & Angle of Descent\\ 
-	\hline Initial Constraints  & Velocity\\ & x Position\\ & y Position\\
-	\hline Terminal Constraints &  x Position\\ & y Position\\
-	\hline Path Constraints & None \\ 
-	\hline Target Cost & Minimum Time \\ 
-	\hline 
-\end{tabular} 
-\end{table}
-
-
-The GPOPS-2 solution to the Brachistochrone problem is shown in Figure \ref{fig:Brachistochrone}, matching the analytical solution almost exactly. This is expected in this case, as the dynamics of the basic Brachistochrone problem are very simple. As the dynamics become more complex, it is no longer possible to obtain an analytical solution. For more complex problems, various methods must be used to verify the optimal solution. These methods are outlined later in this chapter, in Section XX.  
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=0.9\linewidth]{figures/4_LODESTAR/Brachistochrone}
-\caption{The solution to the brachistochrone problem, solved in GPOPS-2[CITATIONXX].}
-\label{fig:Brachistochrone}
-\end{figure}
-
-
-
-
-
-\section{Rocket-Scramjet-Rocket Trajectory Optimisation}
-
-
-LODESTAR contains a variety of modules used to calculate a trajectory optimisation of a rocket-scramjet-rocket launch vehicle for maximum payload-to-orbit. 
-These modules calculate the vehicles aerodynamic properties and run external simulations which then feed data back data to the pseudospectral solver for evaluation. 
-Figure \ref{fig:AscentFlowchart} shows the information flow within LODESTAR. 
-
-\begin{landscape}% Landscape page
-	\begin{figure}[ht]
-		\centering
-		\includegraphics[width=0.9\linewidth]{"figures/4_LODESTAR/Ascent Flowchart"}
-		\caption{The process of the rocket-scramjet-rocket trajectory optimisation.}
-		\label{fig:AscentFlowchart}
-	\end{figure} 
-\end{landscape}
-
-
-\subsection{Dynamic Model}
-
-
-The dynamics of the vehicle are calculated in six degrees of freedom, with yaw constrained to zero. 
-The dynamics of all stages are calculated using an geodetic rotational reference frame, written in terms of the angle of attack $\alpha$, bank angle $\eta$, radius from centre of Earth $r$, longitude $\xi$, latitude $\phi$, flight path angle $\gamma$, velocity $v$ and heading angle $\zeta$. The equations of motion are \cite{Josselyn2002a}:
-\begin{figure}[ht]
-\centering
-\includegraphics[width=0.7\linewidth]{figures/4_LODESTAR/global}
-\caption{The Earth-fixed components of the geodetic rotational coordinate system.}
-\label{fig:global}
-\end{figure}
-\begin{figure}[ht]
-\centering
-\includegraphics[width=0.9\linewidth]{figures/4_LODESTAR/Axes}
-\caption{The vehicle-based components of the coordinate system.}
-\label{fig:Axes}
-\end{figure}
-
-
-\begin{equation}
-\dot{r} = v \sin \gamma
-\end{equation}
-
-\begin{equation}
-\dot{\xi} = \frac{v\cos \gamma \cos \zeta}{r \cos \phi}
-\end{equation}
-
-\begin{equation}
-\dot{\phi} = \frac{v\cos\gamma\sin\zeta}{r}
-\end{equation}
-\begin{equation}
-\dot{\gamma} = \frac{T\sin\alpha \cos\eta}{mv} + (\frac{v}{r}-\frac{\mu_E}{r^2 v})\cos\gamma + \frac{L}{mv}
-+ \cos\phi[2\omega_E \cos\zeta + \frac{\omega_E^2 r}{v}(\cos\phi\cos\gamma+\sin\phi\sin\gamma\sin\zeta)]
-\end{equation}
-\begin{equation}
-\dot{v} = \frac{T\cos\alpha}{m}-\frac{\mu_E}{r^2}\sin\gamma - \frac{D}{m}
-+ \omega_E^2 r\cos\phi(\cos\phi\sin\gamma-\sin\phi\cos\gamma\sin\zeta)
-\end{equation}
-\begin{equation}
-\dot{\zeta} = \frac{T\sin\alpha \sin\eta}{mv \cos \gamma}-\frac{v}{r}\tan\phi\cos\gamma\cos\zeta +2\omega_E\cos\phi\tan\gamma\sin\zeta - \frac{\omega_E^2 r}{v\cos\gamma}\sin\phi\cos\phi\cos\zeta-2\omega_E\sin\phi 
-\end{equation}
 
 \subsection{Trajectory Connection Points}
 The optimisation of a large, multi-vehicle launch trajectory requires that the optimal control problem be broken down into multiple segments. This segmentation is performed in order to assist the convergence of the optimal control solver, by ensuring that the dynamics of the underlying model are as smooth and continuous as possible across each segment. 
@@ -404,10 +361,32 @@ m_{payload} = m_4 - m_{struct}
 
 
 
+
+
+
+
+\section{The Optimisation Process}
+
+section on how the modules are brough together and evaluated by gpops and ipopt
+
+
+Figure \ref{fig:AscentFlowchart} shows the information flow within LODESTAR. 
+
+\begin{landscape}% Landscape page
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.9\linewidth]{"figures/4_LODESTAR/Ascent Flowchart"}
+		\caption{The process of the rocket-scramjet-rocket trajectory optimisation.}
+		\label{fig:AscentFlowchart}
+	\end{figure} 
+\end{landscape}
+
+
+
 \section{Optimality Conditions}
 
-LODESTAR provides the capacity to validate the optimal solution provided by the pseudospectral method solver. This partial validation is used to determine whether the pseudospectral method solver has converged close to an optimal solution of the nonlinear programming problem. It is particularly useful to validate that the optimality and constraint tolerances which have been chosen are sufficiently small, or to check whether the pseudospectral method solver has approached an optimal solution in the case that the defined tolerances are not able to be reached.   
-This partial validation is achieved through the examination of four key metrics; the IPOPT constraint violation and dual infeasibility parameters; the Hamiltonian necessary condition for optimality; the state derivatives; and finally a forward simulation. 
+LODESTAR provides the capacity to verify the optimal solution provided by the pseudospectral method solver. This partial verification is used to determine whether the pseudospectral method solver has converged close to an optimal solution of the nonlinear programming problem. It is particularly useful to verify that the optimality and constraint tolerances which have been chosen are sufficiently small, or to check whether the pseudospectral method solver has approached an optimal solution in the case that the defined tolerances are not able to be reached.   
+This partial verification is achieved through the examination of four key metrics; the IPOPT constraint violation and dual infeasibility parameters; the Hamiltonian necessary condition for optimality; the state derivatives; and finally a forward simulation. 
 
 The first metrics to be checked are the IPOPT constraint violation ($inf\textrm{-}pr$) and dual infeasibility parameter ($inf\textrm{-}du$)\cite{Kawajir2010}. The constraint violation parameter is a measure of the infinity-norm ($L_\infty\textrm{-}norm$) of the constraints of the problem\cite{Kawajir2010}. This factor must be suitably small in order to indicate that the constraints of the problem to have been met. While the permissible magnitude of this factor changes with each individual problem, it is always desirable for this factor to be as small as possible. For this study only solutions with $L_\infty\textrm{-}norm(inf\textrm{-}pr) < 10^{-4} $ are accepted as having satisfied the imposed constraints. The dual infeasibility is a Karush-Kuhn-Tucker condition\cite{Hindi2006}, which is a necessary condition for optimality. A dual feasible solution indicates that the dual problem is at least a lower bound on the optimal solution, $p^\star$, ie. $p^\star \geq g(\lambda,v)$. For more details on duality see \cite{Hindi2006}.
 A low dual infeasibility indicates that the solution has approached an optimal solution. Again, the magnitude of this value is variable with each problem, though as a problem becomes more complex, the ability to converge towards an optimal solution diminishes. For the problem in this study, $L_\infty\textrm{-}norm(inf\textrm{-}du) < 0 $ are accepted due to the highly complex nature of the vehicle model. In this study it is accepted that a given solution may not approach the global optimum, and multiple solutions are calculated to mitigate the error caused by the problem complexity, with the 'most optimal' solution selected. 

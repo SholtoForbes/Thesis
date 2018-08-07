@@ -37,34 +37,34 @@
 \BOOKMARK [2][-]{subsection.3.3.2}{Fuel Tank Sizing}{section.3.3}% 37
 \BOOKMARK [2][-]{subsection.3.3.3}{The Aerodynamics of the Third Stage Rocket}{section.3.3}% 38
 \BOOKMARK [0][-]{chapter.4}{LODESTAR}{}% 39
-\BOOKMARK [1][-]{section.4.1}{Optimal Control Problem Structure}{chapter.4}% 40
-\BOOKMARK [2][-]{subsection.4.1.1}{GPOPS-2 Example - Brachistochrone Problem}{section.4.1}% 41
-\BOOKMARK [1][-]{section.4.2}{Rocket-Scramjet-Rocket Trajectory Optimisation}{chapter.4}% 42
-\BOOKMARK [2][-]{subsection.4.2.1}{Dynamic Model}{section.4.2}% 43
-\BOOKMARK [2][-]{subsection.4.2.2}{Trajectory Connection Points}{section.4.2}% 44
-\BOOKMARK [2][-]{subsection.4.2.3}{III. Second Stage Ascent Trajectory}{section.4.2}% 45
-\BOOKMARK [2][-]{subsection.4.2.4}{IV. Second Stage Return Trajectory}{section.4.2}% 46
-\BOOKMARK [2][-]{subsection.4.2.5}{V. Third Stage Powered Ascent}{section.4.2}% 47
-\BOOKMARK [2][-]{subsection.4.2.6}{VI. Third Stage Unpowered Ascent}{section.4.2}% 48
-\BOOKMARK [2][-]{subsection.4.2.7}{VII. Hohmann Transfer}{section.4.2}% 49
-\BOOKMARK [1][-]{section.4.3}{Optimality Conditions}{chapter.4}% 50
+\BOOKMARK [1][-]{section.4.1}{Vehicle Simulation}{chapter.4}% 40
+\BOOKMARK [2][-]{subsection.4.1.1}{6DOF Equations of Motion}{section.4.1}% 41
+\BOOKMARK [1][-]{section.4.2}{Optimal Control Problem Structure}{chapter.4}% 42
+\BOOKMARK [2][-]{subsection.4.2.1}{Trajectory Connection Points}{section.4.2}% 43
+\BOOKMARK [2][-]{subsection.4.2.2}{III. Second Stage Ascent Trajectory}{section.4.2}% 44
+\BOOKMARK [2][-]{subsection.4.2.3}{IV. Second Stage Return Trajectory}{section.4.2}% 45
+\BOOKMARK [2][-]{subsection.4.2.4}{V. Third Stage Powered Ascent}{section.4.2}% 46
+\BOOKMARK [2][-]{subsection.4.2.5}{VI. Third Stage Unpowered Ascent}{section.4.2}% 47
+\BOOKMARK [2][-]{subsection.4.2.6}{VII. Hohmann Transfer}{section.4.2}% 48
+\BOOKMARK [1][-]{section.4.3}{The Optimisation Process}{chapter.4}% 49
+\BOOKMARK [1][-]{section.4.4}{Optimality Conditions}{chapter.4}% 50
 \BOOKMARK [0][-]{chapter.5}{Optimised Ascent Trajectory}{}% 51
-\BOOKMARK [1][-]{subsection.5.0.1}{Optimisation Methodology}{chapter.5}% 52
-\BOOKMARK [1][-]{section.5.1}{Current Methodology}{chapter.5}% 53
-\BOOKMARK [1][-]{section.5.2}{Optimised Ascent Trajectory Results}{chapter.5}% 54
-\BOOKMARK [2][-]{subsection.5.2.1}{First Stage Evaluation - q=50kpa Second Stage Separation}{section.5.2}% 55
-\BOOKMARK [2][-]{subsection.5.2.2}{Second Stage Evaluation}{section.5.2}% 56
-\BOOKMARK [2][-]{subsection.5.2.3}{Third Stage Evaluation}{section.5.2}% 57
-\BOOKMARK [0][-]{chapter.6}{Optimised Trajectory Including Fly-Back}{}% 58
-\BOOKMARK [1][-]{section.6.1}{Combined SPARTAN Ascent-Descent \046 Third Stage Example}{chapter.6}% 59
-\BOOKMARK [1][-]{section.6.2}{Fly-Back Trajectory Analysis}{chapter.6}% 60
-\BOOKMARK [2][-]{subsection.6.2.1}{Optimised Trajectory}{section.6.2}% 61
-\BOOKMARK [2][-]{subsection.6.2.2}{Sensitivity Analysis}{section.6.2}% 62
-\BOOKMARK [2][-]{subsection.6.2.3}{Conclusion}{section.6.2}% 63
-\BOOKMARK [0][-]{chapter.7}{Conclusions}{}% 64
-\BOOKMARK [1][-]{section.7.1}{Recommendations for future work}{chapter.7}% 65
-\BOOKMARK [0][-]{chapter*.142}{Library}{}% 66
-\BOOKMARK [0][-]{appendix.A}{Trajectory results}{}% 67
-\BOOKMARK [0][-]{appendix.B}{CART3D Results}{}% 68
-\BOOKMARK [1][-]{section.B.1}{Engine-On Plume Check}{appendix.B}% 69
-\BOOKMARK [1][-]{section.B.2}{CART3D Results}{appendix.B}% 70
+\BOOKMARK [1][-]{section.5.1}{Current Methodology}{chapter.5}% 52
+\BOOKMARK [1][-]{section.5.2}{Optimised Ascent Trajectory Results}{chapter.5}% 53
+\BOOKMARK [2][-]{subsection.5.2.1}{First Stage Evaluation - q=50kpa Second Stage Separation}{section.5.2}% 54
+\BOOKMARK [2][-]{subsection.5.2.2}{Second Stage Evaluation}{section.5.2}% 55
+\BOOKMARK [2][-]{subsection.5.2.3}{Third Stage Evaluation}{section.5.2}% 56
+\BOOKMARK [0][-]{chapter.6}{Optimised Trajectory Including Fly-Back}{}% 57
+\BOOKMARK [1][-]{section.6.1}{Combined SPARTAN Ascent-Descent \046 Third Stage Example}{chapter.6}% 58
+\BOOKMARK [1][-]{section.6.2}{Fly-Back Trajectory Analysis}{chapter.6}% 59
+\BOOKMARK [2][-]{subsection.6.2.1}{Optimised Trajectory}{section.6.2}% 60
+\BOOKMARK [2][-]{subsection.6.2.2}{Sensitivity Analysis}{section.6.2}% 61
+\BOOKMARK [2][-]{subsection.6.2.3}{Conclusion}{section.6.2}% 62
+\BOOKMARK [0][-]{chapter.7}{Conclusions}{}% 63
+\BOOKMARK [1][-]{section.7.1}{Recommendations for future work}{chapter.7}% 64
+\BOOKMARK [0][-]{chapter*.131}{Library}{}% 65
+\BOOKMARK [0][-]{appendix.A}{GPOPS-2 Example - Brachistochrone Problem}{}% 66
+\BOOKMARK [0][-]{appendix.B}{Trajectory results}{}% 67
+\BOOKMARK [0][-]{appendix.C}{CART3D Results}{}% 68
+\BOOKMARK [1][-]{section.C.1}{Engine-On Plume Check}{appendix.C}% 69
+\BOOKMARK [1][-]{section.C.2}{CART3D Results}{appendix.C}% 70

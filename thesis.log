@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.8)  24 JUL 2018 13:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.8)  8 AUG 2018 09:12
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1778,7 +1778,7 @@ Chapter 1.
 Underfull \vbox (badness 3525) has occurred while \output is active []
 
  [2]
-<figures/1_introduction/project-spartan.jpg, id=759, 772.8875pt x 404.51125pt>
+<figures/1_introduction/project-spartan.jpg, id=743, 772.8875pt x 404.51125pt>
 File: figures/1_introduction/project-spartan.jpg Graphic file (type jpg)
 
 <use figures/1_introduction/project-spartan.jpg>
@@ -1809,7 +1809,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
 ]) (2_literature-review.tex [6]
 Chapter 2.
-<figures/2_literature-review/scramjet.png, id=798, 468.62578pt x 228.47859pt>
+<figures/2_literature-review/scramjet.png, id=782, 468.62578pt x 228.47859pt>
 File: figures/2_literature-review/scramjet.png Graphic file (type png)
 
 <use figures/2_literature-review/scramjet.png>
@@ -1820,7 +1820,7 @@ Package pdftex.def Info: figures/2_literature-review/scramjet.png used on input
 
 
 ]
-<figures/2_literature-review/Scramjet-Efficiency.png, id=815, 1010.27437pt x 65
+<figures/2_literature-review/Scramjet-Efficiency.png, id=799, 1010.27437pt x 65
 6.4525pt>
 File: figures/2_literature-review/Scramjet-Efficiency.png Graphic file (type pn
 g)
@@ -1830,14 +1830,14 @@ ed on input line 44.
 (pdftex.def)             Requested size: 338.58632pt x 220.0056pt.
  [8 <./figures/2_literature-review/scramjet.png> <./figures/2_literature-review
 /Scramjet-Efficiency.png>]
-<figures/2_literature-review/LaunchVehicles.jpg, id=844, 216.81pt x 139.6125pt>
+<figures/2_literature-review/LaunchVehicles.jpg, id=828, 216.81pt x 139.6125pt>
 File: figures/2_literature-review/LaunchVehicles.jpg Graphic file (type jpg)
 <use figures/2_literature-review/LaunchVehicles.jpg>
 Package pdftex.def Info: figures/2_literature-review/LaunchVehicles.jpg used on
  input line 75.
 (pdftex.def)             Requested size: 435.32422pt x 280.35759pt.
 
-<"figures/2_literature-review/FalconTrajectory".jpg, id=847, 964.60374pt x 563.
+<"figures/2_literature-review/FalconTrajectory".jpg, id=831, 964.60374pt x 563.
 10374pt>
 File: "figures/2_literature-review/FalconTrajectory".jpg Graphic file (type jpg
 )
@@ -1846,7 +1846,7 @@ Package pdftex.def Info: "figures/2_literature-review/FalconTrajectory".jpg use
 d on input line 82.
 (pdftex.def)             Requested size: 483.69687pt x 282.36745pt.
 
-<figures/2_literature-review/visuel_adeline1.jpg, id=850, 803.0pt x 481.8pt>
+<figures/2_literature-review/visuel_adeline1.jpg, id=834, 803.0pt x 481.8pt>
 File: figures/2_literature-review/visuel_adeline1.jpg Graphic file (type jpg)
 
 <use figures/2_literature-review/visuel_adeline1.jpg>
@@ -1947,7 +1947,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 156--156
  []
 
 [13]
-<./figures/2_literature-review/AirbreathingCorridor.png, id=966, 531.48563pt x 
+<./figures/2_literature-review/AirbreathingCorridor.png, id=950, 531.48563pt x 
 362.85562pt>
 File: ./figures/2_literature-review/AirbreathingCorridor.png Graphic file (type
  png)
@@ -1956,7 +1956,7 @@ Package pdftex.def Info: ./figures/2_literature-review/AirbreathingCorridor.png
  used on input line 179.
 (pdftex.def)             Requested size: 338.58632pt x 231.16376pt.
 
-<./figures/2_literature-review/SKYLON.png, id=980, 562.35094pt x 392.21532pt>
+<./figures/2_literature-review/SKYLON.png, id=964, 562.35094pt x 392.21532pt>
 File: ./figures/2_literature-review/SKYLON.png Graphic file (type png)
 
 <use ./figures/2_literature-review/SKYLON.png>
@@ -1968,7 +1968,7 @@ Package pdftex.def Info: ./figures/2_literature-review/SKYLON.png used on input
 
  <./figures/2_literature-review/AirbreathingCorridor.png>] [15 <./figures/2_lit
 erature-review/SKYLON.png>]
-<./figures/2_literature-review/ConstqExample.png, id=1016, 514.17094pt x 359.09
+<./figures/2_literature-review/ConstqExample.png, id=1000, 514.17094pt x 359.09
 157pt>
 File: ./figures/2_literature-review/ConstqExample.png Graphic file (type png)
  <use ./figures/2_literature-review/ConstqExample.png>
@@ -1976,7 +1976,7 @@ Package pdftex.def Info: ./figures/2_literature-review/ConstqExample.png used o
 n input line 229.
 (pdftex.def)             Requested size: 435.32422pt x 304.0293pt.
  [16]
-<"figures/2_literature-review/Powell Vehicle".png, id=1047, 386.94562pt x 247.6
+<"figures/2_literature-review/Powell Vehicle".png, id=1031, 386.94562pt x 247.6
 7531pt>
 File: "figures/2_literature-review/Powell Vehicle".png Graphic file (type png)
  <use "figures/2_literature-review/Powell Vehicle".png>
@@ -1984,7 +1984,7 @@ Package pdftex.def Info: "figures/2_literature-review/Powell Vehicle".png used
 on input line 245.
 (pdftex.def)             Requested size: 145.11053pt x 92.88179pt.
 
-<"figures/2_literature-review/Powell Trajectory".png, id=1048, 357.58594pt x 22
+<"figures/2_literature-review/Powell Trajectory".png, id=1032, 357.58594pt x 22
 9.60782pt>
 File: "figures/2_literature-review/Powell Trajectory".png Graphic file (type pn
 g)
@@ -1998,7 +1998,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [17 <./figures/2_literature-review/ConstqExample.png>] [18 <./figures/2_litera
 ture-review/Powell Vehicle.png> <./figures/2_literature-review/Powell Trajector
 y.png>]
-<"figures/2_literature-review/Wilhite Booster Vehicle".png, id=1065, 458.46281p
+<"figures/2_literature-review/Wilhite Booster Vehicle".png, id=1049, 458.46281p
 t x 333.49594pt>
 File: "figures/2_literature-review/Wilhite Booster Vehicle".png Graphic file (t
 ype png)
@@ -2008,7 +2008,7 @@ Package pdftex.def Info: "figures/2_literature-review/Wilhite Booster Vehicle".
 png used on input line 276.
 (pdftex.def)             Requested size: 217.66211pt x 158.3308pt.
 
-<"figures/2_literature-review/WilHite Booster Trajectory".png, id=1066, 572.890
+<"figures/2_literature-review/WilHite Booster Trajectory".png, id=1050, 572.890
 32pt x 415.5525pt>
 File: "figures/2_literature-review/WilHite Booster Trajectory".png Graphic file
  (type png)
@@ -2018,7 +2018,7 @@ Package pdftex.def Info: "figures/2_literature-review/WilHite Booster Trajector
 y".png used on input line 281.
 (pdftex.def)             Requested size: 217.66211pt x 157.88622pt.
 
-<"figures/2_literature-review/Tsuchiya Vehicles".png, id=1067, 441.90094pt x 30
+<"figures/2_literature-review/Tsuchiya Vehicles".png, id=1051, 441.90094pt x 30
 1.8778pt>
 File: "figures/2_literature-review/Tsuchiya Vehicles".png Graphic file (type pn
 g)
@@ -2027,14 +2027,14 @@ Package pdftex.def Info: "figures/2_literature-review/Tsuchiya Vehicles".png us
 ed on input line 290.
 (pdftex.def)             Requested size: 217.66211pt x 148.69527pt.
 
-<"figures/2_literature-review/Tsuchiya".png, id=1068, 328.22626pt x 234.8775pt>
+<"figures/2_literature-review/Tsuchiya".png, id=1052, 328.22626pt x 234.8775pt>
 File: "figures/2_literature-review/Tsuchiya".png Graphic file (type png)
 <use "figures/2_literature-review/Tsuchiya".png>
 Package pdftex.def Info: "figures/2_literature-review/Tsuchiya".png used on inp
 ut line 295.
 (pdftex.def)             Requested size: 217.66211pt x 155.75792pt.
 
-<"figures/2_literature-review/Mehta Vehicle".png, id=1073, 153.57375pt x 292.84
+<"figures/2_literature-review/Mehta Vehicle".png, id=1057, 153.57375pt x 292.84
 406pt>
 File: "figures/2_literature-review/Mehta Vehicle".png Graphic file (type png)
  <use "figures/2_literature-review/Mehta Vehicle".png>
@@ -2042,7 +2042,7 @@ Package pdftex.def Info: "figures/2_literature-review/Mehta Vehicle".png used o
 n input line 305.
 (pdftex.def)             Requested size: 145.11053pt x 276.72122pt.
 
-<"figures/2_literature-review/Mehta Trajectory".png, id=1074, 295.1025pt x 261.
+<"figures/2_literature-review/Mehta Trajectory".png, id=1058, 295.1025pt x 261.
 97874pt>
 File: "figures/2_literature-review/Mehta Trajectory".png Graphic file (type png
 )
@@ -2065,7 +2065,7 @@ Missing character: There is no ù in font ptmr7t!
 Underfull \vbox (badness 1043) has occurred while \output is active []
 
  [21]
-<"figures/2_literature-review/chai-boost skip".png, id=1125, 618.05907pt x 191.
+<"figures/2_literature-review/chai-boost skip".png, id=1109, 618.05907pt x 191.
 21437pt>
 File: "figures/2_literature-review/chai-boost skip".png Graphic file (type png)
 
@@ -2080,7 +2080,7 @@ aunch
  []
 
 
-<./figures/2_literature-review/SPARTAN.png, id=1130, 661.72218pt x 335.75438pt>
+<./figures/2_literature-review/SPARTAN.png, id=1114, 661.72218pt x 335.75438pt>
 File: ./figures/2_literature-review/SPARTAN.png Graphic file (type png)
 <use ./figures/2_literature-review/SPARTAN.png>
 Package pdftex.def Info: ./figures/2_literature-review/SPARTAN.png used on inpu
@@ -2094,7 +2094,7 @@ Package Fancyhdr Warning: \headheight is too small (15.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [23 <./figures/2_literature-review/SPARTAN.png>]
-<figures/2_literature-review/C-REST.png, id=1158, 319.94531pt x 284.56313pt>
+<figures/2_literature-review/C-REST.png, id=1142, 319.94531pt x 284.56313pt>
 File: figures/2_literature-review/C-REST.png Graphic file (type png)
 
 <use figures/2_literature-review/C-REST.png>
@@ -2102,7 +2102,7 @@ Package pdftex.def Info: figures/2_literature-review/C-REST.png used on input l
 ine 373.
 (pdftex.def)             Requested size: 338.58632pt x 301.14915pt.
 
-<figures/2_literature-review/SPARTAN_traj1.png, id=1161, 542.025pt x 267.24844p
+<figures/2_literature-review/SPARTAN_traj1.png, id=1145, 542.025pt x 267.24844p
 t>
 File: figures/2_literature-review/SPARTAN_traj1.png Graphic file (type png)
  <use figures/2_literature-review/SPARTAN_traj1.png>
@@ -2110,7 +2110,7 @@ Package pdftex.def Info: figures/2_literature-review/SPARTAN_traj1.png used on
 input line 389.
 (pdftex.def)             Requested size: 383.09149pt x 188.89136pt.
 
-<figures/2_literature-review/SPARTAN_traj2.png, id=1162, 523.20468pt x 265.7428
+<figures/2_literature-review/SPARTAN_traj2.png, id=1146, 523.20468pt x 265.7428
 1pt>
 File: figures/2_literature-review/SPARTAN_traj2.png Graphic file (type png)
  <use figures/2_literature-review/SPARTAN_traj2.png>
@@ -2118,7 +2118,7 @@ Package pdftex.def Info: figures/2_literature-review/SPARTAN_traj2.png used on
 input line 395.
 (pdftex.def)             Requested size: 383.09149pt x 194.58264pt.
 
-<figures/2_literature-review/SPARTAN_traj3.png, id=1163, 509.65407pt x 263.4843
+<figures/2_literature-review/SPARTAN_traj3.png, id=1147, 509.65407pt x 263.4843
 8pt>
 File: figures/2_literature-review/SPARTAN_traj3.png Graphic file (type png)
  <use figures/2_literature-review/SPARTAN_traj3.png>
@@ -2136,7 +2136,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 387--405
  []
 
 [24 <./figures/2_literature-review/C-REST.png>]
-<figures/2_literature-review/SPARTANElevons.png, id=1178, 551.81157pt x 143.787
+<figures/2_literature-review/SPARTANElevons.png, id=1162, 551.81157pt x 143.787
 19pt>
 File: figures/2_literature-review/SPARTANElevons.png Graphic file (type png)
  <use figures/2_literature-review/SPARTANElevons.png>
@@ -2144,7 +2144,7 @@ Package pdftex.def Info: figures/2_literature-review/SPARTANElevons.png used on
  input line 417.
 (pdftex.def)             Requested size: 338.58632pt x 88.23003pt.
 
-<figures/2_literature-review/ThirdStage.png, id=1187, 404.26031pt x 135.50626pt
+<figures/2_literature-review/ThirdStage.png, id=1171, 404.26031pt x 135.50626pt
 >
 File: figures/2_literature-review/ThirdStage.png Graphic file (type png)
  <use figures/2_literature-review/ThirdStage.png>
@@ -2212,7 +2212,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 465--465
 
 
 ]
-<./figures/2_literature-review/SingleMultiple.png, id=1240, 487.06969pt x 239.3
+<./figures/2_literature-review/SingleMultiple.png, id=1224, 487.06969pt x 239.3
 9438pt>
 File: ./figures/2_literature-review/SingleMultiple.png Graphic file (type png)
  <use ./figures/2_literature-review/SingleMultiple.png>
@@ -2220,7 +2220,7 @@ Package pdftex.def Info: ./figures/2_literature-review/SingleMultiple.png used
 on input line 518.
 (pdftex.def)             Requested size: 338.58632pt x 166.4133pt.
  [30]
-<figures/2_literature-review/HPExamples.png, id=1267, 517.935pt x 231.11343pt>
+<figures/2_literature-review/HPExamples.png, id=1251, 517.935pt x 231.11343pt>
 File: figures/2_literature-review/HPExamples.png Graphic file (type png)
 
 <use figures/2_literature-review/HPExamples.png>
@@ -2232,7 +2232,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [31 <./figures/2_literature-review/SingleMultiple.png>] [32 <./figures/2_liter
 ature-review/HPExamples.png>]
-<figures/2_literature-review/OptimisationMethodComparisonChai.png, id=1311, 283
+<figures/2_literature-review/OptimisationMethodComparisonChai.png, id=1295, 283
 .81032pt x 204.765pt>
 File: figures/2_literature-review/OptimisationMethodComparisonChai.png Graphic 
 file (type png)
@@ -2281,7 +2281,7 @@ Overfull \hbox (4.27972pt too wide) in paragraph at lines 585--600
  []
 
 [35]
-<figures/2_literature-review/Skylon-CART3D.png, id=1390, 545.78906pt x 570.6318
+<figures/2_literature-review/Skylon-CART3D.png, id=1374, 545.78906pt x 570.6318
 8pt>
 File: figures/2_literature-review/Skylon-CART3D.png Graphic file (type png)
  <use figures/2_literature-review/Skylon-CART3D.png>
@@ -2289,7 +2289,7 @@ Package pdftex.def Info: figures/2_literature-review/Skylon-CART3D.png used on
 input line 640.
 (pdftex.def)             Requested size: 290.22107pt x 303.42607pt.
 
-<"figures/2_literature-review/CART3D Comparisons".png, id=1402, 584.93532pt x 4
+<"figures/2_literature-review/CART3D Comparisons".png, id=1386, 584.93532pt x 4
 86.31688pt>
 File: "figures/2_literature-review/CART3D Comparisons".png Graphic file (type p
 ng)
@@ -2309,7 +2309,7 @@ Chapter 3.
 [41
 
 ]
-<figures/3_vehicle_design/Trajsimple.png, id=1443, 839.38594pt x 503.63156pt>
+<figures/3_vehicle_design/Trajsimple.png, id=1427, 839.38594pt x 503.63156pt>
 File: figures/3_vehicle_design/Trajsimple.png Graphic file (type png)
 
 <use figures/3_vehicle_design/Trajsimple.png>
@@ -2317,7 +2317,7 @@ Package pdftex.def Info: figures/3_vehicle_design/Trajsimple.png used on input
 line 21.
 (pdftex.def)             Requested size: 435.32422pt x 261.1906pt.
  [42 <./figures/3_vehicle_design/Trajsimple.png>]
-<figures/3_vehicle_design/NoInternal.png, id=1452, 1166.10657pt x 504.38437pt>
+<figures/3_vehicle_design/NoInternal.png, id=1436, 1166.10657pt x 504.38437pt>
 File: figures/3_vehicle_design/NoInternal.png Graphic file (type png)
 
 <use figures/3_vehicle_design/NoInternal.png>
@@ -2325,7 +2325,7 @@ Package pdftex.def Info: figures/3_vehicle_design/NoInternal.png used on input
 line 40.
 (pdftex.def)             Requested size: 338.58632pt x 146.44473pt.
 
-<figures/3_vehicle_design/INTERNALS.jpg, id=1453, 1412.27625pt x 245.41687pt>
+<figures/3_vehicle_design/INTERNALS.jpg, id=1437, 1412.27625pt x 245.41687pt>
 File: figures/3_vehicle_design/INTERNALS.jpg Graphic file (type jpg)
 
 <use figures/3_vehicle_design/INTERNALS.jpg>
@@ -2339,7 +2339,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [44 <./figures/3_vehicle_design/INTERNALS.jpg>]
-<figures/3_vehicle_design/SPARTANEngineshock.png, id=1470, 626.34pt x 187.45032
+<figures/3_vehicle_design/SPARTANEngineshock.png, id=1454, 626.34pt x 187.45032
 pt>
 File: figures/3_vehicle_design/SPARTANEngineshock.png Graphic file (type png)
  <use figures/3_vehicle_design/SPARTANEngineshock.png>
@@ -2347,7 +2347,7 @@ Package pdftex.def Info: figures/3_vehicle_design/SPARTANEngineshock.png used o
 n input line 106.
 (pdftex.def)             Requested size: 338.58632pt x 101.3332pt.
 
-<figures/3_vehicle_design/ConicalM.png, id=1471, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/ConicalM.png, id=1455, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/ConicalM.png Graphic file (type png)
 
 <use figures/3_vehicle_design/ConicalM.png>
@@ -2355,7 +2355,7 @@ Package pdftex.def Info: figures/3_vehicle_design/ConicalM.png used on input li
 ne 115.
 (pdftex.def)             Requested size: 239.43127pt x 179.57387pt.
 
-<figures/3_vehicle_design/ConicalP.png, id=1472, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/ConicalP.png, id=1456, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/ConicalP.png Graphic file (type png)
 
 <use figures/3_vehicle_design/ConicalP.png>
@@ -2363,7 +2363,7 @@ Package pdftex.def Info: figures/3_vehicle_design/ConicalP.png used on input li
 ne 121.
 (pdftex.def)             Requested size: 239.43127pt x 179.57387pt.
 
-<figures/3_vehicle_design/ConicalT.png, id=1473, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/ConicalT.png, id=1457, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/ConicalT.png Graphic file (type png)
 
 <use figures/3_vehicle_design/ConicalT.png>
@@ -2375,7 +2375,7 @@ Overfull \hbox (2.28003pt too wide) in paragraph at lines 113--131
 []$[]$ $[]$
  []
 
-<figures/3_vehicle_design/ISPinterp.png, id=1478, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/ISPinterp.png, id=1462, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/ISPinterp.png Graphic file (type png)
 
 <use figures/3_vehicle_design/ISPinterp.png>
@@ -2383,7 +2383,7 @@ Package pdftex.def Info: figures/3_vehicle_design/ISPinterp.png used on input l
 ine 140.
 (pdftex.def)             Requested size: 290.22107pt x 217.66837pt.
 
-<figures/3_vehicle_design/EquivalenceRatioInterp.png, id=1482, 421.575pt x 316.
+<figures/3_vehicle_design/EquivalenceRatioInterp.png, id=1466, 421.575pt x 316.
 18124pt>
 File: figures/3_vehicle_design/EquivalenceRatioInterp.png Graphic file (type pn
 g)
@@ -2396,7 +2396,7 @@ cle_design/ConicalM.png (PNG copy)> <./figures/3_vehicle_design/ConicalP.png (P
 NG copy)> <./figures/3_vehicle_design/ConicalT.png (PNG copy)>] [47 <./figures/
 3_vehicle_design/ISPinterp.png (PNG copy)>] [48 <./figures/3_vehicle_design/Equ
 ivalenceRatioInterp.png (PNG copy)>]
-<figures/3_vehicle_design/SPARTAN_FLAPS.jpg, id=1505, 1099.85907pt x 545.78906p
+<figures/3_vehicle_design/SPARTAN_FLAPS.jpg, id=1489, 1099.85907pt x 545.78906p
 t>
 File: figures/3_vehicle_design/SPARTAN_FLAPS.jpg Graphic file (type jpg)
  <use figures/3_vehicle_design/SPARTAN_FLAPS.jpg>
@@ -2404,7 +2404,7 @@ Package pdftex.def Info: figures/3_vehicle_design/SPARTAN_FLAPS.jpg used on inp
 ut line 209.
 (pdftex.def)             Requested size: 290.22107pt x 144.01714pt.
 
-<figures/3_vehicle_design/SPARTANForces.png, id=1508, 753.5653pt x 243.15843pt>
+<figures/3_vehicle_design/SPARTANForces.png, id=1492, 753.5653pt x 243.15843pt>
 File: figures/3_vehicle_design/SPARTANForces.png Graphic file (type png)
 <use figures/3_vehicle_design/SPARTANForces.png>
 Package pdftex.def Info: figures/3_vehicle_design/SPARTANForces.png used on inp
@@ -2412,7 +2412,7 @@ ut line 217.
 (pdftex.def)             Requested size: 338.58632pt x 109.25331pt.
  [49] [50 <./figures/3_vehicle_design/SPARTAN_FLAPS.jpg> <./figures/3_vehicle_d
 esign/SPARTANForces.png>]
-<figures/3_vehicle_design/FlapDeflectionENgineOn.png, id=1524, 421.575pt x 316.
+<figures/3_vehicle_design/FlapDeflectionENgineOn.png, id=1508, 421.575pt x 316.
 18124pt>
 File: figures/3_vehicle_design/FlapDeflectionENgineOn.png Graphic file (type pn
 g)
@@ -2421,7 +2421,7 @@ Package pdftex.def Info: figures/3_vehicle_design/FlapDeflectionENgineOn.png us
 ed on input line 242.
 (pdftex.def)             Requested size: 239.43127pt x 179.57387pt.
 
-<figures/3_vehicle_design/FlapDeflectionENgineOn2.png, id=1525, 421.575pt x 316
+<figures/3_vehicle_design/FlapDeflectionENgineOn2.png, id=1509, 421.575pt x 316
 .18124pt>
 File: figures/3_vehicle_design/FlapDeflectionENgineOn2.png Graphic file (type p
 ng)
@@ -2430,7 +2430,7 @@ Package pdftex.def Info: figures/3_vehicle_design/FlapDeflectionENgineOn2.png u
 sed on input line 247.
 (pdftex.def)             Requested size: 239.43127pt x 179.57387pt.
 
-<figures/3_vehicle_design/FlapDeflection.png, id=1526, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/FlapDeflection.png, id=1510, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/FlapDeflection.png Graphic file (type png)
 <use figures/3_vehicle_design/FlapDeflection.png>
 Package pdftex.def Info: figures/3_vehicle_design/FlapDeflection.png used on in
@@ -2441,7 +2441,7 @@ Overfull \hbox (2.28003pt too wide) in paragraph at lines 240--257
 []$[]$ $[]$
  []
 
-<figures/3_vehicle_design/FlowChart.png, id=1528, 472.01344pt x 568.37344pt>
+<figures/3_vehicle_design/FlowChart.png, id=1512, 472.01344pt x 568.37344pt>
 File: figures/3_vehicle_design/FlowChart.png Graphic file (type png)
 
 <use figures/3_vehicle_design/FlowChart.png>
@@ -2449,7 +2449,7 @@ Package pdftex.def Info: figures/3_vehicle_design/FlowChart.png used on input l
 ine 271.
 (pdftex.def)             Requested size: 338.58632pt x 407.71085pt.
 
-<figures/3_vehicle_design/Pointwise.png, id=1530, 521.69907pt x 296.60812pt>
+<figures/3_vehicle_design/Pointwise.png, id=1514, 521.69907pt x 296.60812pt>
 File: figures/3_vehicle_design/Pointwise.png Graphic file (type png)
 
 <use figures/3_vehicle_design/Pointwise.png>
@@ -2457,7 +2457,7 @@ Package pdftex.def Info: figures/3_vehicle_design/Pointwise.png used on input l
 ine 278.
 (pdftex.def)             Requested size: 290.22107pt x 165.00415pt.
 
-<figures/3_vehicle_design/Pointwise-EngineBC.png, id=1534, 418.56375pt x 232.61
+<figures/3_vehicle_design/Pointwise-EngineBC.png, id=1518, 418.56375pt x 232.61
 906pt>
 File: figures/3_vehicle_design/Pointwise-EngineBC.png Graphic file (type png)
  <use figures/3_vehicle_design/Pointwise-EngineBC.png>
@@ -2478,7 +2478,7 @@ Underfull \vbox (badness 2302) has occurred while \output is active []
 
  [54 <./figures/3_vehicle_design/Pointwise.png> <./figures/3_vehicle_design/Poi
 ntwise-EngineBC.png>]
-<figures/3_vehicle_design/EngineOn-M7AoA024km.png, id=1562, 1066.98625pt x 378.
+<figures/3_vehicle_design/EngineOn-M7AoA024km.png, id=1546, 1066.98625pt x 378.
 41376pt>
 File: figures/3_vehicle_design/EngineOn-M7AoA024km.png Graphic file (type png)
  <use figures/3_vehicle_design/EngineOn-M7AoA024km.png>
@@ -2486,7 +2486,7 @@ Package pdftex.def Info: figures/3_vehicle_design/EngineOn-M7AoA024km.png used
 on input line 321.
 (pdftex.def)             Requested size: 435.32422pt x 154.38846pt.
 
-<figures/3_vehicle_design/Cl-EngineOn.png, id=1563, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/Cl-EngineOn.png, id=1547, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/Cl-EngineOn.png Graphic file (type png)
 
 <use figures/3_vehicle_design/Cl-EngineOn.png>
@@ -2494,7 +2494,7 @@ Package pdftex.def Info: figures/3_vehicle_design/Cl-EngineOn.png used on input
  line 330.
 (pdftex.def)             Requested size: 239.43127pt x 179.57387pt.
 
-<figures/3_vehicle_design/Cd-EngineOn.png, id=1564, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/Cd-EngineOn.png, id=1548, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/Cd-EngineOn.png Graphic file (type png)
 
 <use figures/3_vehicle_design/Cd-EngineOn.png>
@@ -2502,7 +2502,7 @@ Package pdftex.def Info: figures/3_vehicle_design/Cd-EngineOn.png used on input
  line 336.
 (pdftex.def)             Requested size: 239.43127pt x 179.57387pt.
 
-<figures/3_vehicle_design/LD-EngineOn.png, id=1565, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/LD-EngineOn.png, id=1549, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/LD-EngineOn.png Graphic file (type png)
 
 <use figures/3_vehicle_design/LD-EngineOn.png>
@@ -2514,7 +2514,7 @@ Overfull \hbox (2.28003pt too wide) in paragraph at lines 328--346
 []$[]$ $[]$
  []
 
-<figures/3_vehicle_design/M7AoA6.png, id=1566, 1066.98625pt x 378.41376pt>
+<figures/3_vehicle_design/M7AoA6.png, id=1550, 1066.98625pt x 378.41376pt>
 File: figures/3_vehicle_design/M7AoA6.png Graphic file (type png)
 
 <use figures/3_vehicle_design/M7AoA6.png>
@@ -2522,7 +2522,7 @@ Package pdftex.def Info: figures/3_vehicle_design/M7AoA6.png used on input line
  356.
 (pdftex.def)             Requested size: 435.32422pt x 154.38846pt.
 
-<figures/3_vehicle_design/Cl.png, id=1567, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/Cl.png, id=1551, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/Cl.png Graphic file (type png)
 
 <use figures/3_vehicle_design/Cl.png>
@@ -2530,7 +2530,7 @@ Package pdftex.def Info: figures/3_vehicle_design/Cl.png used on input line 364
 .
 (pdftex.def)             Requested size: 239.43127pt x 179.57387pt.
 
-<figures/3_vehicle_design/Cd.png, id=1568, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/Cd.png, id=1552, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/Cd.png Graphic file (type png)
 
 <use figures/3_vehicle_design/Cd.png>
@@ -2538,7 +2538,7 @@ Package pdftex.def Info: figures/3_vehicle_design/Cd.png used on input line 370
 .
 (pdftex.def)             Requested size: 239.43127pt x 179.57387pt.
 
-<figures/3_vehicle_design/LD.png, id=1569, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/LD.png, id=1553, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/LD.png Graphic file (type png)
 
 <use figures/3_vehicle_design/LD.png>
@@ -2550,7 +2550,7 @@ Overfull \hbox (2.28003pt too wide) in paragraph at lines 362--380
 []$[]$ $[]$
  []
 
-<figures/3_vehicle_design/Unstart.png, id=1573, 767.11594pt x 485.56406pt>
+<figures/3_vehicle_design/Unstart.png, id=1557, 767.11594pt x 485.56406pt>
 File: figures/3_vehicle_design/Unstart.png Graphic file (type png)
 
 <use figures/3_vehicle_design/Unstart.png>
@@ -2561,7 +2561,7 @@ e 392.
 gures/3_vehicle_design/Cl-EngineOn.png (PNG copy)> <./figures/3_vehicle_design/
 Cd-EngineOn.png (PNG copy)> <./figures/3_vehicle_design/LD-EngineOn.png (PNG co
 py)>] [57 <./figures/3_vehicle_design/M7AoA6.png (PNG copy)>]
-<figures/3_vehicle_design/CARTcontour.png, id=1594, 783.67781pt x 366.61969pt>
+<figures/3_vehicle_design/CARTcontour.png, id=1578, 783.67781pt x 366.61969pt>
 File: figures/3_vehicle_design/CARTcontour.png Graphic file (type png)
 
 <use figures/3_vehicle_design/CARTcontour.png>
@@ -2569,7 +2569,7 @@ Package pdftex.def Info: figures/3_vehicle_design/CARTcontour.png used on input
  line 436.
 (pdftex.def)             Requested size: 338.58632pt x 158.3986pt.
 
-<figures/3_vehicle_design/FirstStageCl.png, id=1595, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/FirstStageCl.png, id=1579, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/FirstStageCl.png Graphic file (type png)
 
 <use figures/3_vehicle_design/FirstStageCl.png>
@@ -2577,7 +2577,7 @@ Package pdftex.def Info: figures/3_vehicle_design/FirstStageCl.png used on inpu
 t line 444.
 (pdftex.def)             Requested size: 239.43127pt x 179.57387pt.
 
-<figures/3_vehicle_design/FirstStageCd.png, id=1596, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/FirstStageCd.png, id=1580, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/FirstStageCd.png Graphic file (type png)
 
 <use figures/3_vehicle_design/FirstStageCd.png>
@@ -2585,7 +2585,7 @@ Package pdftex.def Info: figures/3_vehicle_design/FirstStageCd.png used on inpu
 t line 450.
 (pdftex.def)             Requested size: 239.43127pt x 179.57387pt.
 
-<figures/3_vehicle_design/FirstStageLD.png, id=1597, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/FirstStageLD.png, id=1581, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/FirstStageLD.png Graphic file (type png)
 
 <use figures/3_vehicle_design/FirstStageLD.png>
@@ -2597,7 +2597,7 @@ Overfull \hbox (2.28003pt too wide) in paragraph at lines 442--460
 []$[]$ $[]$
  []
 
-<figures/3_vehicle_design/3rdStage.jpg, id=1598, 811.53188pt x 149.8097pt>
+<figures/3_vehicle_design/3rdStage.jpg, id=1582, 811.53188pt x 149.8097pt>
 File: figures/3_vehicle_design/3rdStage.jpg Graphic file (type jpg)
 
 <use figures/3_vehicle_design/3rdStage.jpg>
@@ -2610,7 +2610,7 @@ res/3_vehicle_design/Unstart.png> <./figures/3_vehicle_design/CARTcontour.png>]
  [60 <./figures/3_vehicle_design/FirstStageCl.png (PNG copy)> <./figures/3_vehi
 cle_design/FirstStageCd.png (PNG copy)> <./figures/3_vehicle_design/FirstStageL
 D.png (PNG copy)> <./figures/3_vehicle_design/3rdStage.jpg>]
-<"figures/3_vehicle_design/Thrust Coefficient - Arat".png, id=1619, 368.87813pt
+<"figures/3_vehicle_design/Thrust Coefficient - Arat".png, id=1603, 368.87813pt
  x 237.88875pt>
 File: "figures/3_vehicle_design/Thrust Coefficient - Arat".png Graphic file (ty
 pe png)
@@ -2628,7 +2628,7 @@ Overfull \hbox (18.59412pt too wide) in paragraph at lines 511--518
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [62]
-<figures/3_vehicle_design/ThirdStageCl.png, id=1643, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/ThirdStageCl.png, id=1627, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/ThirdStageCl.png Graphic file (type png)
 
 <use figures/3_vehicle_design/ThirdStageCl.png>
@@ -2636,7 +2636,7 @@ Package pdftex.def Info: figures/3_vehicle_design/ThirdStageCl.png used on inpu
 t line 550.
 (pdftex.def)             Requested size: 239.43127pt x 179.57387pt.
 
-<figures/3_vehicle_design/ThirdStageCd.png, id=1644, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/ThirdStageCd.png, id=1628, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/ThirdStageCd.png Graphic file (type png)
 
 <use figures/3_vehicle_design/ThirdStageCd.png>
@@ -2644,7 +2644,7 @@ Package pdftex.def Info: figures/3_vehicle_design/ThirdStageCd.png used on inpu
 t line 556.
 (pdftex.def)             Requested size: 239.43127pt x 179.57387pt.
 
-<figures/3_vehicle_design/ThirdStageLD.png, id=1645, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/ThirdStageLD.png, id=1629, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/ThirdStageLD.png Graphic file (type png)
 
 <use figures/3_vehicle_design/ThirdStageLD.png>
@@ -2656,7 +2656,7 @@ Overfull \hbox (2.28003pt too wide) in paragraph at lines 548--566
 []$[]$ $[]$
  []
 
-<figures/3_vehicle_design/ThrustVec.png, id=1647, 625.58719pt x 222.07968pt>
+<figures/3_vehicle_design/ThrustVec.png, id=1631, 625.58719pt x 222.07968pt>
 File: figures/3_vehicle_design/ThrustVec.png Graphic file (type png)
 
 <use figures/3_vehicle_design/ThrustVec.png>
@@ -2668,385 +2668,324 @@ py)> <./figures/3_vehicle_design/ThirdStageCd.png (PNG copy)> <./figures/3_vehi
 cle_design/ThirdStageLD.png (PNG copy)> <./figures/3_vehicle_design/ThrustVec.p
 ng>]
 Chapter 4.
-<figures/4_LODESTAR/FlowChartSmall.png, id=1660, 226.59656pt x 224.33812pt>
+<figures/4_LODESTAR/FlowChartSmall.png, id=1644, 666.99188pt x 326.72063pt>
 File: figures/4_LODESTAR/FlowChartSmall.png Graphic file (type png)
 
 <use figures/4_LODESTAR/FlowChartSmall.png>
 Package pdftex.def Info: figures/4_LODESTAR/FlowChartSmall.png used on input li
 ne 23.
-(pdftex.def)             Requested size: 241.84843pt x 239.43695pt.
-
-Overfull \hbox (10.50299pt too wide) in paragraph at lines 19--29
-[]\OT1/ptm/m/n/12 Figure [][]4.1[][] il-lus-trates a sim-pli-fied it-er-a-tion 
-of the pseu-dospec-tral solver. Mod-ules within LODESTAR
- []
-
-[65
+(pdftex.def)             Requested size: 362.77264pt x 177.70274pt.
+ [65
 
 
 ] [66 <./figures/4_LODESTAR/FlowChartSmall.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [67]
-[68]
-<figures/4_LODESTAR/Brachistochrone.png, id=1694, 727.21687pt x 286.82156pt>
-File: figures/4_LODESTAR/Brachistochrone.png Graphic file (type png)
-
-<use figures/4_LODESTAR/Brachistochrone.png>
-Package pdftex.def Info: figures/4_LODESTAR/Brachistochrone.png used on input l
-ine 136.
-(pdftex.def)             Requested size: 435.32422pt x 171.70036pt.
- [69 <./figures/4_LODESTAR/Brachistochrone.png>]
-<"figures/4_LODESTAR/Ascent Flowchart".png, id=1702, 751.30687pt x 514.92375pt>
-File: "figures/4_LODESTAR/Ascent Flowchart".png Graphic file (type png)
-<use "figures/4_LODESTAR/Ascent Flowchart".png>
-Package pdftex.def Info: "figures/4_LODESTAR/Ascent Flowchart".png used on inpu
-t line 155.
-(pdftex.def)             Requested size: 599.72177pt x 411.05956pt.
- [70 <./figures/4_LODESTAR/Ascent Flowchart.png>]
-<figures/4_LODESTAR/global.png, id=1709, 296.60812pt x 282.30469pt>
+<figures/4_LODESTAR/global.png, id=1661, 296.60812pt x 282.30469pt>
 File: figures/4_LODESTAR/global.png Graphic file (type png)
 
 <use figures/4_LODESTAR/global.png>
-Package pdftex.def Info: figures/4_LODESTAR/global.png used on input line 169.
+Package pdftex.def Info: figures/4_LODESTAR/global.png used on input line 54.
 (pdftex.def)             Requested size: 338.58632pt x 322.27005pt.
 
-<figures/4_LODESTAR/Axes.png, id=1710, 1125.45468pt x 508.14844pt>
+<figures/4_LODESTAR/Axes.png, id=1662, 1125.45468pt x 508.14844pt>
 File: figures/4_LODESTAR/Axes.png Graphic file (type png)
 
 <use figures/4_LODESTAR/Axes.png>
-Package pdftex.def Info: figures/4_LODESTAR/Axes.png used on input line 175.
+Package pdftex.def Info: figures/4_LODESTAR/Axes.png used on input line 60.
 (pdftex.def)             Requested size: 435.32422pt x 196.54881pt.
- [71
+ [67 <./figures/4_LODESTAR/global.png>]
+[68 <./figures/4_LODESTAR/Axes.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
- <./figures/4_LODESTAR/global.png>]
-<figures/4_LODESTAR/Traj.png, id=1721, 801.74532pt x 381.67593pt>
+ [69]
+<figures/4_LODESTAR/Traj.png, id=1691, 801.74532pt x 381.67593pt>
 File: figures/4_LODESTAR/Traj.png Graphic file (type png)
 
 <use figures/4_LODESTAR/Traj.png>
-Package pdftex.def Info: figures/4_LODESTAR/Traj.png used on input line 210.
+Package pdftex.def Info: figures/4_LODESTAR/Traj.png used on input line 167.
 (pdftex.def)             Requested size: 483.69687pt x 230.2711pt.
- [72 <./figures/4_LODESTAR/Axes.png>]
-Underfull \hbox (badness 3128) in paragraph at lines 243--243
+ [70 <./figures/4_LODESTAR/Traj.png>]
+Underfull \hbox (badness 3128) in paragraph at lines 200--200
 \OT1/ptm/m/n/12 flight at the ter-mi-na-tion of
  []
 
-
+[71]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [73 <./figures/4_LODESTAR/Traj.png>] [74]
+ [72]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [73]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [74]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [75]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [76]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [77]
-<figures/4_LODESTAR/Hohmann.png, id=1758, 514.92375pt x 465.99094pt>
+<figures/4_LODESTAR/Hohmann.png, id=1728, 514.92375pt x 465.99094pt>
 File: figures/4_LODESTAR/Hohmann.png Graphic file (type png)
 
 <use figures/4_LODESTAR/Hohmann.png>
-Package pdftex.def Info: figures/4_LODESTAR/Hohmann.png used on input line 365.
+Package pdftex.def Info: figures/4_LODESTAR/Hohmann.png used on input line 322.
 
 (pdftex.def)             Requested size: 338.58632pt x 306.4173pt.
- [78 <./figures/4_LODESTAR/Hohmann.png>]
-[79]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ [76 <./figures/4_LODESTAR/Hohmann.png>]
+[77]
+<"figures/4_LODESTAR/Ascent Flowchart".png, id=1747, 751.30687pt x 514.92375pt>
+File: "figures/4_LODESTAR/Ascent Flowchart".png Graphic file (type png)
+<use "figures/4_LODESTAR/Ascent Flowchart".png>
+Package pdftex.def Info: "figures/4_LODESTAR/Ascent Flowchart".png used on inpu
+t line 378.
+(pdftex.def)             Requested size: 599.72177pt x 411.05956pt.
+ [78 <./figures/4_LODESTAR/Ascent Flowchart.png>] [79
 
- [80])
-(5_Ascent.tex [81] [82
 
-]
+]) (5_Ascent.tex [80]
 Chapter 5.
-[83
+[81
+
 
 ]
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 23.
-
-<figures/5_Ascent/contours.png, id=1802, 421.575pt x 316.18124pt>
-File: figures/5_Ascent/contours.png Graphic file (type png)
-
-<use figures/5_Ascent/contours.png>
-Package pdftex.def Info: figures/5_Ascent/contours.png used on input line 40.
-(pdftex.def)             Requested size: 290.22107pt x 217.66837pt.
- [84] [85 <./figures/5_Ascent/contours.png (PNG copy)>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 90.
- [86] [87]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 131.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 131.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 131.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 40.
 
-Overfull \hbox (34.94699pt too wide) in paragraph at lines 131--155
+
+LaTeX Warning: Reference `section:thirdstage' on page 82 undefined on input lin
+e 47.
+
+
+LaTeX Warning: Reference `fig:contours' on page 82 undefined on input line 47.
+
+[82]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 81.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 81.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 81.
+
+Overfull \hbox (34.94699pt too wide) in paragraph at lines 81--105
  [][] 
  []
 
-<figures/5_Ascent/FirstStage.png, id=1843, 813.79031pt x 316.18124pt>
+<figures/5_Ascent/FirstStage.png, id=1788, 813.79031pt x 316.18124pt>
 File: figures/5_Ascent/FirstStage.png Graphic file (type png)
 
 <use figures/5_Ascent/FirstStage.png>
-Package pdftex.def Info: figures/5_Ascent/FirstStage.png used on input line 165
+Package pdftex.def Info: figures/5_Ascent/FirstStage.png used on input line 115
 .
 (pdftex.def)             Requested size: 435.32422pt x 169.13358pt.
- [88]
-<figures/5_Ascent/Constq.png, id=1853, 637.63219pt x 335.75438pt>
+ [83]
+<figures/5_Ascent/Constq.png, id=1799, 637.63219pt x 335.75438pt>
 File: figures/5_Ascent/Constq.png Graphic file (type png)
 
 <use figures/5_Ascent/Constq.png>
-Package pdftex.def Info: figures/5_Ascent/Constq.png used on input line 186.
+Package pdftex.def Info: figures/5_Ascent/Constq.png used on input line 136.
 (pdftex.def)             Requested size: 338.58632pt x 178.2871pt.
 
-<figures/5_Ascent/Constq-Aero.png, id=1854, 562.35094pt x 355.3275pt>
+<figures/5_Ascent/Constq-Aero.png, id=1800, 562.35094pt x 355.3275pt>
 File: figures/5_Ascent/Constq-Aero.png Graphic file (type png)
 
 <use figures/5_Ascent/Constq-Aero.png>
-Package pdftex.def Info: figures/5_Ascent/Constq-Aero.png used on input line 19
+Package pdftex.def Info: figures/5_Ascent/Constq-Aero.png used on input line 14
 2.
 (pdftex.def)             Requested size: 290.22107pt x 183.37793pt.
 
-<figures/5_Ascent/Constq-Vehicle.png, id=1855, 572.1375pt x 313.17pt>
+<figures/5_Ascent/Constq-Vehicle.png, id=1801, 572.1375pt x 313.17pt>
 File: figures/5_Ascent/Constq-Vehicle.png Graphic file (type png)
 
 <use figures/5_Ascent/Constq-Vehicle.png>
 Package pdftex.def Info: figures/5_Ascent/Constq-Vehicle.png used on input line
- 198.
+ 148.
 (pdftex.def)             Requested size: 290.22107pt x 158.8592pt.
- [89 <./figures/5_Ascent/FirstStage.png (PNG copy)> <./figures/5_Ascent/Constq.
-png>] [90 <./figures/5_Ascent/Constq-Aero.png> <./figures/5_Ascent/Constq-Vehic
-le.png>]
-<figures/5_Ascent/qlimited50kPa.png, id=1874, 612.78937pt x 324.46219pt>
+ [84 <./figures/5_Ascent/FirstStage.png (PNG copy)>] [85 <./figures/5_Ascent/Co
+nstq.png> <./figures/5_Ascent/Constq-Aero.png>]
+<figures/5_Ascent/qlimited50kPa.png, id=1820, 612.78937pt x 324.46219pt>
 File: figures/5_Ascent/qlimited50kPa.png Graphic file (type png)
 
 <use figures/5_Ascent/qlimited50kPa.png>
 Package pdftex.def Info: figures/5_Ascent/qlimited50kPa.png used on input line 
-221.
+171.
 (pdftex.def)             Requested size: 338.58632pt x 179.2766pt.
 
-<figures/5_Ascent/qlimited50kPa-aero.png, id=1875, 566.115pt x 356.83313pt>
+<figures/5_Ascent/qlimited50kPa-aero.png, id=1821, 566.115pt x 356.83313pt>
 File: figures/5_Ascent/qlimited50kPa-aero.png Graphic file (type png)
 
 <use figures/5_Ascent/qlimited50kPa-aero.png>
 Package pdftex.def Info: figures/5_Ascent/qlimited50kPa-aero.png used on input 
-line 227.
+line 177.
 (pdftex.def)             Requested size: 290.22107pt x 182.93532pt.
 
-<figures/5_Ascent/qlimited-Vehicle.png, id=1876, 582.67688pt x 322.95656pt>
+<figures/5_Ascent/qlimited-Vehicle.png, id=1822, 582.67688pt x 322.95656pt>
 File: figures/5_Ascent/qlimited-Vehicle.png Graphic file (type png)
 
 <use figures/5_Ascent/qlimited-Vehicle.png>
 Package pdftex.def Info: figures/5_Ascent/qlimited-Vehicle.png used on input li
-ne 233.
+ne 183.
 (pdftex.def)             Requested size: 290.22107pt x 160.8619pt.
- [91 <./figures/5_Ascent/qlimited50kPa.png> <./figures/5_Ascent/qlimited50kPa-a
-ero.png>] [92 <./figures/5_Ascent/qlimited-Vehicle.png>]
-Overfull \hbox (33.91447pt too wide) in paragraph at lines 253--258
+ [86 <./figures/5_Ascent/Constq-Vehicle.png> <./figures/5_Ascent/qlimited50kPa.
+png>]
+Underfull \vbox (badness 4013) has occurred while \output is active []
+
+ [87 <./figures/5_Ascent/qlimited50kPa-aero.png> <./figures/5_Ascent/qlimited-V
+ehicle.png>]
+Overfull \hbox (33.91447pt too wide) in paragraph at lines 203--208
 []\OT1/ptm/m/n/12 Compared to stud-ies con-sid-er-ing ve-hi-cles with a scramje
 t-rocket tran-si-tion within a sin-gle stage[[][]72[][]][[][]128[][]],
  []
 
-<figures/5_Ascent/Multipleq.png, id=1899, 621.07031pt x 320.69812pt>
+<figures/5_Ascent/Multipleq.png, id=1845, 621.07031pt x 320.69812pt>
 File: figures/5_Ascent/Multipleq.png Graphic file (type png)
 
 <use figures/5_Ascent/Multipleq.png>
-Package pdftex.def Info: figures/5_Ascent/Multipleq.png used on input line 262.
+Package pdftex.def Info: figures/5_Ascent/Multipleq.png used on input line 212.
 
 (pdftex.def)             Requested size: 338.58632pt x 174.83328pt.
 
-<figures/5_Ascent/MultipleqAero.png, id=1900, 559.33969pt x 377.15906pt>
+<figures/5_Ascent/MultipleqAero.png, id=1846, 559.33969pt x 377.15906pt>
 File: figures/5_Ascent/MultipleqAero.png Graphic file (type png)
 
 <use figures/5_Ascent/MultipleqAero.png>
 Package pdftex.def Info: figures/5_Ascent/MultipleqAero.png used on input line 
-269.
+219.
 (pdftex.def)             Requested size: 290.22107pt x 195.69797pt.
 
-<figures/5_Ascent/Multipleq-Vehicle.png, id=1901, 569.87906pt x 306.39468pt>
+<figures/5_Ascent/Multipleq-Vehicle.png, id=1847, 569.87906pt x 306.39468pt>
 File: figures/5_Ascent/Multipleq-Vehicle.png Graphic file (type png)
 
 <use figures/5_Ascent/Multipleq-Vehicle.png>
 Package pdftex.def Info: figures/5_Ascent/Multipleq-Vehicle.png used on input l
-ine 275.
+ine 225.
 (pdftex.def)             Requested size: 290.22107pt x 156.0348pt.
- [93 <./figures/5_Ascent/Multipleq.png>]
-<figures/5_Ascent/DragComparisonTraj.png, id=1912, 608.2725pt x 314.67563pt>
+ [88] [89 <./figures/5_Ascent/Multipleq.png> <./figures/5_Ascent/MultipleqAero.
+png>]
+<figures/5_Ascent/DragComparisonTraj.png, id=1863, 608.2725pt x 314.67563pt>
 File: figures/5_Ascent/DragComparisonTraj.png Graphic file (type png)
 
 <use figures/5_Ascent/DragComparisonTraj.png>
 Package pdftex.def Info: figures/5_Ascent/DragComparisonTraj.png used on input 
-line 292.
+line 242.
 (pdftex.def)             Requested size: 338.58632pt x 175.1656pt.
- [94 <./figures/5_Ascent/MultipleqAero.png> <./figures/5_Ascent/Multipleq-Vehic
-le.png>]
-<figures/5_Ascent/DragComparisonOther.png, id=1919, 566.115pt x 304.88907pt>
+
+<figures/5_Ascent/DragComparisonOther.png, id=1864, 566.115pt x 304.88907pt>
 File: figures/5_Ascent/DragComparisonOther.png Graphic file (type png)
 
 <use figures/5_Ascent/DragComparisonOther.png>
 Package pdftex.def Info: figures/5_Ascent/DragComparisonOther.png used on input
- line 299.
+ line 249.
 (pdftex.def)             Requested size: 290.22107pt x 156.3055pt.
- [95 <./figures/5_Ascent/DragComparisonTraj.png> <./figures/5_Ascent/DragCompar
-isonOther.png>]
-<figures/5_Ascent/ThirdStageConstQ.png, id=1935, 978.65625pt x 526.96875pt>
+ [90 <./figures/5_Ascent/Multipleq-Vehicle.png> <./figures/5_Ascent/DragCompari
+sonTraj.png>]
+<figures/5_Ascent/ThirdStageConstQ.png, id=1880, 978.65625pt x 526.96875pt>
 File: figures/5_Ascent/ThirdStageConstQ.png Graphic file (type png)
 
 <use figures/5_Ascent/ThirdStageConstQ.png>
 Package pdftex.def Info: figures/5_Ascent/ThirdStageConstQ.png used on input li
-ne 323.
+ne 273.
 (pdftex.def)             Requested size: 386.95897pt x 208.36345pt.
 
-<figures/5_Ascent/ThirdStage50kpaConstrained.png, id=1936, 978.65625pt x 526.96
+<figures/5_Ascent/ThirdStage50kpaConstrained.png, id=1881, 978.65625pt x 526.96
 875pt>
 File: figures/5_Ascent/ThirdStage50kpaConstrained.png Graphic file (type png)
  <use figures/5_Ascent/ThirdStage50kpaConstrained.png>
 Package pdftex.def Info: figures/5_Ascent/ThirdStage50kpaConstrained.png used o
-n input line 330.
+n input line 280.
 (pdftex.def)             Requested size: 386.95897pt x 208.36345pt.
 ) (6_Flyback.tex
-[96 <./figures/5_Ascent/ThirdStageConstQ.png (PNG copy)>] [97 <./figures/5_Asce
-nt/ThirdStage50kpaConstrained.png (PNG copy)>] [98
-
-]
+[91 <./figures/5_Ascent/DragComparisonOther.png>] [92 <./figures/5_Ascent/Third
+StageConstQ.png (PNG copy)> <./figures/5_Ascent/ThirdStage50kpaConstrained.png 
+(PNG copy)>]
 Chapter 6.
-<figures/7_Full/Ascent.png, id=1955, 436.63126pt x 271.0125pt>
-File: figures/7_Full/Ascent.png Graphic file (type png)
 
-<use figures/7_Full/Ascent.png>
-Package pdftex.def Info: figures/7_Full/Ascent.png used on input line 28.
-(pdftex.def)             Requested size: 435.32422pt x 270.2013pt.
+LaTeX Warning: Reference `fig:ascent' on page 93 undefined on input line 6.
+
+
+LaTeX Warning: Reference `fig:groundtrack' on page 93 undefined on input line 6
+.
+
+
+<figures/6_FlyBack/mode1/FirstStageStandard.png, id=1895, 578.16pt x 433.62pt>
+File: figures/6_FlyBack/mode1/FirstStageStandard.png Graphic file (type png)
+
+<use figures/6_FlyBack/mode1/FirstStageStandard.png>
+Package pdftex.def Info: figures/6_FlyBack/mode1/FirstStageStandard.png used on
+ input line 29.
+(pdftex.def)             Requested size: 483.69687pt x 362.76945pt.
 
 Underfull \vbox (badness 7722) has occurred while \output is active []
 
- [99
+ [93
+
 
 ]
-<figures/7_Full/Ascent-Aero.png, id=1960, 386.19281pt x 310.91156pt>
-File: figures/7_Full/Ascent-Aero.png Graphic file (type png)
+<figures/6_FlyBack/mode1/SecondStageStandard.png, id=1900, 639.8304pt x 730.408
+8pt>
+File: figures/6_FlyBack/mode1/SecondStageStandard.png Graphic file (type png)
+ <use figures/6_FlyBack/mode1/SecondStageStandard.png>
+Package pdftex.def Info: figures/6_FlyBack/mode1/SecondStageStandard.png used o
+n input line 38.
+(pdftex.def)             Requested size: 483.69687pt x 552.18529pt.
 
-<use figures/7_Full/Ascent-Aero.png>
-Package pdftex.def Info: figures/7_Full/Ascent-Aero.png used on input line 34.
-(pdftex.def)             Requested size: 338.58632pt x 272.58775pt.
+<figures/6_FlyBack/mode1/ReturnStandard.png, id=1901, 639.8304pt x 730.4088pt>
+File: figures/6_FlyBack/mode1/ReturnStandard.png Graphic file (type png)
 
-<figures/7_Full/Ascent-Vehicle.png, id=1961, 389.20406pt x 292.84406pt>
-File: figures/7_Full/Ascent-Vehicle.png Graphic file (type png)
+<use figures/6_FlyBack/mode1/ReturnStandard.png>
+Package pdftex.def Info: figures/6_FlyBack/mode1/ReturnStandard.png used on inp
+ut line 45.
+(pdftex.def)             Requested size: 483.69687pt x 552.18529pt.
 
-<use figures/7_Full/Ascent-Vehicle.png>
-Package pdftex.def Info: figures/7_Full/Ascent-Vehicle.png used on input line 4
-0.
-(pdftex.def)             Requested size: 338.58632pt x 254.76779pt.
+<figures/6_FlyBack/mode1/ThirdStageStandard.png, id=1902, 639.8304pt x 489.5088
+pt>
+File: figures/6_FlyBack/mode1/ThirdStageStandard.png Graphic file (type png)
+ <use figures/6_FlyBack/mode1/ThirdStageStandard.png>
+Package pdftex.def Info: figures/6_FlyBack/mode1/ThirdStageStandard.png used on
+ input line 52.
+(pdftex.def)             Requested size: 483.69687pt x 370.06612pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+<figures/6_FlyBack/mode1/GroundTrackStandard.png, id=1903, 772.3254pt x 554.551
+8pt>
+File: figures/6_FlyBack/mode1/GroundTrackStandard.png Graphic file (type png)
+ <use figures/6_FlyBack/mode1/GroundTrackStandard.png>
+Package pdftex.def Info: figures/6_FlyBack/mode1/GroundTrackStandard.png used o
+n input line 60.
+(pdftex.def)             Requested size: 483.69687pt x 347.30481pt.
+ [94 <./figures/6_FlyBack/mode1/FirstStageStandard.png (PNG copy)>] [95 <./figu
+res/6_FlyBack/mode1/SecondStageStandard.png (PNG copy)>] [96 <./figures/6_FlyBa
+ck/mode1/ReturnStandard.png (PNG copy)>] [97 <./figures/6_FlyBack/mode1/ThirdSt
+ageStandard.png (PNG copy)>] [98 <./figures/6_FlyBack/mode1/GroundTrackStandard
+.png>]
 
- [100 <./figures/7_Full/Ascent.png>]
-<figures/7_Full/FlyBack1.png, id=1966, 975.645pt x 628.59843pt>
-File: figures/7_Full/FlyBack1.png Graphic file (type png)
-
-<use figures/7_Full/FlyBack1.png>
-Package pdftex.def Info: figures/7_Full/FlyBack1.png used on input line 46.
-(pdftex.def)             Requested size: 338.58632pt x 218.14238pt.
-
-<figures/7_Full/FlyBack2.png, id=1967, 975.645pt x 628.59843pt>
-File: figures/7_Full/FlyBack2.png Graphic file (type png)
-
-<use figures/7_Full/FlyBack2.png>
-Package pdftex.def Info: figures/7_Full/FlyBack2.png used on input line 52.
-(pdftex.def)             Requested size: 338.58632pt x 218.14238pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [101 <./figures/7_Full/Ascent-Aero.png> <./figures/7_Full/Ascent-Vehicle.png>]
-
-<figures/7_Full/FlyBack3.png, id=1972, 975.645pt x 628.59843pt>
-File: figures/7_Full/FlyBack3.png Graphic file (type png)
-
-<use figures/7_Full/FlyBack3.png>
-Package pdftex.def Info: figures/7_Full/FlyBack3.png used on input line 58.
-(pdftex.def)             Requested size: 338.58632pt x 218.14238pt.
-
-<figures/7_Full/groundtrack.png, id=1973, 975.645pt x 628.59843pt>
-File: figures/7_Full/groundtrack.png Graphic file (type png)
-
-<use figures/7_Full/groundtrack.png>
-Package pdftex.def Info: figures/7_Full/groundtrack.png used on input line 64.
-(pdftex.def)             Requested size: 338.58632pt x 218.14238pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [102 <./figures/7_Full/FlyBack1.png (PNG copy)> <./figures/7_Full/FlyBack2.png
- (PNG copy)>] [103 <./figures/7_Full/FlyBack3.png (PNG copy)> <./figures/7_Full
-/groundtrack.png (PNG copy)>]
-<Figures/6_flyback/lon-lat.png, id=1985, 421.575pt x 316.18124pt>
-File: Figures/6_flyback/lon-lat.png Graphic file (type png)
-
-<use Figures/6_flyback/lon-lat.png>
-Package pdftex.def Info: Figures/6_flyback/lon-lat.png used on input line 79.
-(pdftex.def)             Requested size: 290.22107pt x 217.66837pt.
-
-<Figures/6_flyback/Traj1.png, id=1986, 999.735pt x 337.26pt>
-File: Figures/6_flyback/Traj1.png Graphic file (type png)
-
-<use Figures/6_flyback/Traj1.png>
-Package pdftex.def Info: Figures/6_flyback/Traj1.png used on input line 110.
-(pdftex.def)             Requested size: 483.69687pt x 163.17464pt.
-
-<Figures/6_flyback/Traj2.png, id=1987, 999.735pt x 337.26pt>
-File: Figures/6_flyback/Traj2.png Graphic file (type png)
-
-<use Figures/6_flyback/Traj2.png>
-Package pdftex.def Info: Figures/6_flyback/Traj2.png used on input line 117.
-(pdftex.def)             Requested size: 483.69687pt x 163.17464pt.
-
-<Figures/6_flyback/Traj3.png, id=1988, 999.735pt x 337.26pt>
-File: Figures/6_flyback/Traj3.png Graphic file (type png)
-
-<use Figures/6_flyback/Traj3.png>
-Package pdftex.def Info: Figures/6_flyback/Traj3.png used on input line 124.
-(pdftex.def)             Requested size: 483.69687pt x 163.17464pt.
+LaTeX Warning: Reference `fig:lon-lat' on page 99 undefined on input line 76.
 
 
-LaTeX Warning: Reference `sec:opt' on page 104 undefined on input line 134.
+LaTeX Warning: Reference `fig:AllTraj' on page 99 undefined on input line 76.
 
 
-Underfull \vbox (badness 2409) has occurred while \output is active []
+LaTeX Warning: Reference `sec:opt' on page 99 undefined on input line 77.
 
- [104 <./Figures/6_flyback/lon-lat.png (PNG copy)>] [105 <./Figures/6_flyback/T
-raj1.png> <./Figures/6_flyback/Traj2.png (PNG copy)> <./Figures/6_flyback/Traj3
-.png (PNG copy)>] [106] <Figures/6_flyback/CdVariation.png, id=2019, 999.735pt 
-x 337.26pt>
-File: Figures/6_flyback/CdVariation.png Graphic file (type png)
 
-<use Figures/6_flyback/CdVariation.png>
-Package pdftex.def Info: Figures/6_flyback/CdVariation.png used on input line 1
-76.
-(pdftex.def)             Requested size: 435.32422pt x 146.85614pt.
+LaTeX Warning: Reference `fig:AllTraj' on page 99 undefined on input line 85.
 
-<Figures/6_flyback/IspVariation.png, id=2020, 999.735pt x 337.26pt>
-File: Figures/6_flyback/IspVariation.png Graphic file (type png)
+[99]
 
-<use Figures/6_flyback/IspVariation.png>
-Package pdftex.def Info: Figures/6_flyback/IspVariation.png used on input line 
-183.
-(pdftex.def)             Requested size: 435.32422pt x 146.85614pt.
+LaTeX Warning: Reference `fig:CdVariation' on page 100 undefined on input line 
+104.
 
-Overfull \hbox (32.11067pt too wide) in paragraph at lines 191--193
+
+LaTeX Warning: Reference `fig:IspVariation' on page 100 undefined on input line
+ 104.
+
+[100]
+Overfull \hbox (32.11067pt too wide) in paragraph at lines 122--124
 \OT1/ptm/m/n/12 The fly-back tra-jec-tory of the SPAR-TAN hy-per-sonic ve-hi-cl
 e is in-ves-ti-gated, from sep-a-ra-tion at 7.7$[]$S,145.0$[]$E
  []
 
-[107]) (9_conclusions.tex [108 <./Figures/6_flyback/CdVariation.png (PNG copy)>
- <./Figures/6_flyback/IspVariation.png (PNG copy)>]
+) (9_conclusions.tex [101] [102]
 Chapter 7.
-) (10_references.tex [109
+) (10_references.tex [103
 
 
-] [110
+] [104
 
 ]
 Overfull \hbox (10.48041pt too wide) in paragraph at lines 5--5
@@ -3064,7 +3003,7 @@ ers\OT1/ptm/m/n/12 . 2017. \OT1/ptm/m/sc/12 url\OT1/ptm/m/n/12 : [][]$\OT1/cmtt
 /m/n/12 https : / / airbusdefenceandspace .
  []
 
-[111
+[105
 
 ]
 Overfull \hbox (6.96846pt too wide) in paragraph at lines 5--5
@@ -3080,7 +3019,7 @@ Overfull \hbox (32.44177pt too wide) in paragraph at lines 5--5
 ages/livraria/TPS%20brochure.pdf''.
  []
 
-[112]
+[106]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no î in font ptmr7t!
@@ -3090,7 +3029,7 @@ Overfull \hbox (3.07755pt too wide) in paragraph at lines 5--5
 pul-sion Con-fer-ence and Ex-hibit \OT1/ptm/m/n/12 July (2003),
  []
 
-[113]
+[107]
 Overfull \hbox (9.13742pt too wide) in paragraph at lines 5--5
 []\OT1/ptm/m/n/12 Fariba Fahroo and I. Michael Ross. ``Costate Es-ti-ma-tion by
  a Leg-en-dre Pseu-dospec-tral Method''.
@@ -3102,13 +3041,13 @@ Overfull \hbox (1.72473pt too wide) in paragraph at lines 5--5
 rce-ments and Car-bon/Carbon Com-pos-ites\OT1/ptm/m/n/12 . Berlin,
  []
 
-[114] [115] [116]
+[108] [109] [110]
 Overfull \hbox (0.82611pt too wide) in paragraph at lines 5--5
 []\OT1/ptm/m/n/12 NASA. \OT1/ptm/m/it/12 U.S. Stan-dard At-mo-sphere, 1976\OT1/
 ptm/m/n/12 . U.S. Gov-ern-ment Print-ing Of-fice, Wash-ing-ton, D.C.,
  []
 
-[117]
+[111]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ì in font ptmr7t!
@@ -3118,7 +3057,7 @@ Overfull \hbox (4.86546pt too wide) in paragraph at lines 5--5
 da-tion of In-let and Ex-haust Bound-
  []
 
-[118] [119]
+[112] [113]
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 5.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
@@ -3133,7 +3072,7 @@ an-ics of Manned Sub-Orbital Reusable
 
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 5.
-[120]
+[114]
 Missing character: There is no ‚ in font ptmri7t!
 Missing character: There is no Ä in font ptmri7t!
 Missing character: There is no ô in font ptmri7t!
@@ -3150,7 +3089,7 @@ Overfull \hbox (1.4307pt too wide) in paragraph at lines 5--5
 . spacesafetymagazine .
  []
 
-[121]
+[115]
 Overfull \hbox (6.73541pt too wide) in paragraph at lines 5--5
 []\OT1/ptm/m/n/12 VirginOrbit. \OT1/ptm/m/it/12 LauncherOne\OT1/ptm/m/n/12 . 20
 17. \OT1/ptm/m/sc/12 url\OT1/ptm/m/n/12 : [][]$\OT1/cmtt/m/n/12 https : / / vir
@@ -3160,55 +3099,67 @@ ginorbit . com/$[][] \OT1/ptm/m/n/12 (vis-ited on 11/30/2017).
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ì in font ptmr7t!
-) (A1_details-of-test-conditions.tex [122]
+) (A1_details-of-test-conditions.tex [116]
 Appendix A.
-[123
-
-] [124
+[117
 
 ]
+<figures/4_LODESTAR/Brachistochrone.png, id=2234, 727.21687pt x 286.82156pt>
+File: figures/4_LODESTAR/Brachistochrone.png Graphic file (type png)
+
+<use figures/4_LODESTAR/Brachistochrone.png>
+Package pdftex.def Info: figures/4_LODESTAR/Brachistochrone.png used on input l
+ine 45.
+(pdftex.def)             Requested size: 435.32422pt x 171.70036pt.
+ [118 <./figures/4_LODESTAR/Brachistochrone.png>]
 Appendix B.
-<figures/3_vehicle_design/M3AoA6GRID.png, id=2309, 624.83438pt x 350.81062pt>
+[119
+
+] [120
+
+]
+Appendix C.
+<figures/3_vehicle_design/M3AoA6GRID.png, id=2249, 624.83438pt x 350.81062pt>
 File: figures/3_vehicle_design/M3AoA6GRID.png Graphic file (type png)
 
 <use figures/3_vehicle_design/M3AoA6GRID.png>
 Package pdftex.def Info: figures/3_vehicle_design/M3AoA6GRID.png used on input 
-line 24.
+line 74.
 (pdftex.def)             Requested size: 338.58632pt x 190.10402pt.
 
-<figures/3_vehicle_design/CARTmesh.png, id=2310, 788.19469pt x 371.88937pt>
+<figures/3_vehicle_design/CARTmesh.png, id=2250, 788.19469pt x 371.88937pt>
 File: figures/3_vehicle_design/CARTmesh.png Graphic file (type png)
 
 <use figures/3_vehicle_design/CARTmesh.png>
 Package pdftex.def Info: figures/3_vehicle_design/CARTmesh.png used on input li
-ne 31.
+ne 81.
 (pdftex.def)             Requested size: 338.58632pt x 159.75041pt.
 
-<figures/3_vehicle_design/M1p1AoA6.png, id=2311, 1066.98625pt x 378.41376pt>
+<figures/3_vehicle_design/M1p1AoA6.png, id=2251, 1066.98625pt x 378.41376pt>
 File: figures/3_vehicle_design/M1p1AoA6.png Graphic file (type png)
 
 <use figures/3_vehicle_design/M1p1AoA6.png>
 Package pdftex.def Info: figures/3_vehicle_design/M1p1AoA6.png used on input li
-ne 40.
+ne 90.
 (pdftex.def)             Requested size: 435.32422pt x 154.38846pt.
 
-<figures/3_vehicle_design/M3AoA6.png, id=2312, 1066.98625pt x 378.41376pt>
+<figures/3_vehicle_design/M3AoA6.png, id=2252, 1066.98625pt x 378.41376pt>
 File: figures/3_vehicle_design/M3AoA6.png Graphic file (type png)
 
 <use figures/3_vehicle_design/M3AoA6.png>
 Package pdftex.def Info: figures/3_vehicle_design/M3AoA6.png used on input line
- 46.
+ 96.
 (pdftex.def)             Requested size: 435.32422pt x 154.38846pt.
-) [125] [126 <./figures/3_vehicle_design/M3AoA6GRID.png> <./figures/3_vehicle_d
+) [121] [122 <./figures/3_vehicle_design/M3AoA6GRID.png> <./figures/3_vehicle_d
 esign/CARTmesh.png> <./figures/3_vehicle_design/M1p1AoA6.png (PNG copy)>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 35.
- [127 <./figures/3_vehicle_design/M3AoA6.png (PNG copy)>]
+ [123 <./figures/3_vehicle_design/M3AoA6.png (PNG copy)>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 35.
  (thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 35.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 35.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: B0E9A6236768637685E329FE37102D5E;5246.
+(rerunfilecheck)             Checksum: 92B83B27268D429E63C6324CFBE0DAAF;5207.
 
 
 LaTeX Warning: There were undefined references.
@@ -3218,10 +3169,10 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40076 strings out of 493323
- 800415 string characters out of 3139058
- 1256276 words of memory out of 3000000
- 42264 multiletter control sequences out of 15000+200000
+ 40007 strings out of 493323
+ 799166 string characters out of 3139058
+ 1255276 words of memory out of 3000000
+ 42221 multiletter control sequences out of 15000+200000
  591747 words of font info for 142 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,18n,77p,10401b,1725s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3235,9 +3186,9 @@ nts/cm/cmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb>
 MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/
 type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/
 utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (145 pages, 7085214 bytes).
+Output written on thesis.pdf (141 pages, 6869496 bytes).
 PDF statistics:
- 2483 PDF objects out of 2487 (max. 8388607)
- 552 named destinations out of 1000 (max. 500000)
- 1103 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2419 PDF objects out of 2487 (max. 8388607)
+ 536 named destinations out of 1000 (max. 500000)
+ 1058 words of extra memory for PDF output out of 10000 (max. 10000000)
 

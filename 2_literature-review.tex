@@ -4,7 +4,8 @@
 \chapter{Literature review}\label{chapter:literature-review}
 
 
-  This chapter examines the relevant literature associated with the different aspects of the work conducted as part of this thesis. A brief overview of the theory behind scramjet engines is presented, followed by surveys of the current state of small satellite and reusable launch systems. Next, various conceptual airbreathing launch systems are presented, along with the trajectories and return flights which have been simulated for these systems, with particular emphasis on whether the trajectories were optimised or not. The SPARTAN scramjet-powered accelerator is detailed, followed by a review of the design of the third stage rocket. Lastly, the theory behind optimal control methods is presented, followed by a survey into the solvers available for aerodynamic modelling. 
+  This chapter examines the relevant literature associated with the different aspects of the work conducted as part of this thesis. A brief overview of the theory behind scramjet engines is presented, followed by surveys of the current state of small satellite and reusable launch systems. Next, various conceptual airbreathing launch systems are presented, along with the trajectories and return flights which have been simulated for these systems, with particular emphasis on whether the trajectories were optimised or not. The SPARTAN scramjet-powered accelerator is detailed, followed by a review of the design of the third stage rocket. The theory behind optimal control methods is presented, followed by a survey into currently available optimal control solvers.
+  Lastly, an overview of various aerodynamic modelling methods with emphasis on applicability to preliminary design is detailed. 
   
   
  
@@ -67,7 +68,30 @@ The Mach number range of a scramjet engine varies by design, but Mach number ran
   The materials, propulsion technology, aerodynamics and guidance algorithms have all improved significantly, enabling  rockets to become more efficient, cheaper to produce, and more reliable. As the demand for satellite launches grows, and the cost of development of launchers becomes cheaper, the potential for profiting from space launches increases. 
   This has driven a large portion of the space flight industry to move towards privatisation, with a heavy focus on reusable technology. 
    
-  Reusable launch technology has been possible for many years, in the form of the space shuttle. However, the space shuttle was weighed down by large launch costs and operational complexity, and was not a commercial success\cite{Launius2006}. Recently, reusable launchers have become the focus of many of the largest private launch companies, as reusability becomes more achievable due to technological advances\cite{Foust2018,Mosher2018}. The SpaceX Falcon 9 and Falcon Heavy have been demonstrated on multiple occasions, landing booster stages successfully, and re-flying reused boosters multiple times\cite{Foust2018}. In the near future the Blue Origin New Glenn is planned\cite{Foust2018}, with potentially the Airbus Adeline to follow (to be used on the Ariane 6)\cite{Adeline}. 
+  Reusable launch technology has been possible for many years, in the form of the space shuttle. However, the space shuttle was weighed down by large launch costs and operational complexity, and was not a commercial success\cite{Launius2006}. Recently, reusable launchers have become the focus of many of the largest private launch companies, as reusability becomes more achievable due to technological advances\cite{Foust2018,Mosher2018}. The SpaceX Falcon 9 and Falcon Heavy have been demonstrated on multiple occasions, landing booster stages successfully, and re-flying reused boosters multiple times\cite{Foust2018}. In the near future the Blue Origin New Glenn is planned\cite{Foust2018}, with potentially the Airbus Adeline to follow (to be used on the Ariane 6)\cite{Adeline}. The Falcon and New Glenn rockets are shown in Figure \ref{fig:LaunchVehicles}, and the trajectories of the Falcon Heavy and Adeline are shown in Figures \ref{fig:FalconTrajectory} and \ref{fig:visuel_adeline1}.  
+  
+    \begin{figure}[ht]
+    	\centering
+    	\includegraphics[width=0.9\linewidth]{figures/2_literature-review/LaunchVehicles}
+    	\caption{Comparison of Blue Origin and SpaceX partially-reusable launch systems with exsisting and historic launch systems\cite{BlueOrigin}.}
+    	\label{fig:LaunchVehicles}
+    \end{figure}
+  
+  \begin{figure}[ht]
+  	\centering
+  	\includegraphics[width=1\linewidth]{"figures/2_literature-review/FalconTrajectory"}
+  	\caption{The trajectory of the Falcon Heavy\cite{FalconHeavy}.}
+  	\label{fig:FalconTrajectory}
+  \end{figure}
+  
+  
+  
+  \begin{figure}[ht]
+  	\centering
+  	\includegraphics[width=0.7\linewidth]{figures/2_literature-review/visuel_adeline1}
+  	\caption{The trajectory of the Ariane featuring Adeline\cite{Adelineb}.}
+  	\label{fig:visuel_adeline1}
+  \end{figure}
   
        The aim of reusing launch vehicles is to reduce the cost-over-time of the reused components drastically, which subsequently allows the cost of individual launches to be reduced\cite{RichardWebb2016}. Reducing costs lowers the barrier of entry for space launches, potentially improving the diversity of space-based enterprises. 
        Reusing launch system components also allows faster turnaround times for launches, as refurbishment of stages is much faster than manufacturing stages from scratch. Reduced turnaround times are key for improving mission scheduling, allowing satellites to be launched sooner, on a more flexible time frame. 
@@ -85,27 +109,9 @@ The Mach number range of a scramjet engine varies by design, but Mach number ran
   
   
   
-  \begin{figure}
-\centering
-\includegraphics[width=0.9\linewidth]{figures/2_literature-review/LaunchVehicles}
-\caption{Comparison of Blue Origin and SpaceX partially-reusable launch systems with exsisting and historic launch systems\cite{BlueOrigin}.}
-\label{fig:LaunchVehicles}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.7\linewidth]{figures/2_literature-review/visuel_adeline1}
-\caption{The trajectory of the Ariane featuring Adeline\cite{Adelineb}.}
-\label{fig:visuel_adeline1}
-\end{figure}
 
 
-  \begin{figure}
-\centering
-\includegraphics[width=1\linewidth]{"figures/2_literature-review/FalconTrajectory"}
-\caption{The trajectory of the Falcon Heavy\cite{FalconHeavy}.}
-\label{fig:FalconTrajectory}
-\end{figure}
+
 
   
  
@@ -165,7 +171,7 @@ The Mach number range of a scramjet engine varies by design, but Mach number ran
     no airbreathing access to space systems have yet been developed. 
     
     The technological challenges present for an airbreathing launch system stem from the inherent limitations of jet engines. Turbojets, ramjets and scramjets all operate across different Mach number regimes, and require atmospheric flight to operate\cite{Smart2009}. 
-    This means that within an airbreathing access-to-space system, a combination of various airbreathing engines and rockets must be used during launch.
+    This means that within an airbreathing access-to-space system, a combination of various airbreathing engines and/or rockets must be used during launch.
     Figure \ref{fig:AirbreathingCorridor} shows the operating corridor for an example launch system using turbojet, scramjet, and rocket engines, indicating the point at which engine transition occurs, as well as the lower dynamic pressure limit on engine operation and the upper dynamic pressure limit on the aircraft structure.
     This operational corridor imposes unique constraints on the design of airbreathing launch systems and their trajectories. An airbreathing access to space system must be capable of resisting high structural and thermal loads, as well as being able to sustain atmospheric flight for long periods, necessitating a high lift-to-drag ratio. 
     \begin{figure}[ht]
@@ -406,32 +412,31 @@ The net specific impulse of the SPARTAN varies from 1694s at the beginning of th
 
 The SPARTAN is trimmed throughout the trajectory by ailerons on the wing, shown in Figure \ref{fig:SPARTANElevons}. These elevons were sized through variation of the width, $b_E$, to have an area equal to 15\% of the area of the wing, and to have a cord length, $c_E$, of 15\% of the cord length of the wing\cite{Preller2017}. Over the flight of the SPARTAN, the flap deflection changes from -0.8$^\circ$ to 3.0$^\circ$\cite{Preller2017}. The drag contribution of the flap varies from 1.2\% to 3.5\%, and the lift contribution from -4.0\% to 4.2\%\cite{Preller2017}. 
 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/2_literature-review/SPARTANElevons}
+	\caption{The elevons of the SPARTAN\cite{Preller2017}.}
+	\label{fig:SPARTANElevons}
+\end{figure}
+
  This trajectory enables delivery of a 307.1kg payload to low earth orbit\cite{Preller2017}. This is a payload mass fraction of 1.17\%, which compares well with existing expendable launch systems of similar size, with the advantage of being designed for reusability\cite{Preller2017}. 
 This trajectory was designed around the SPARTAN flying a constant dynamic pressure trajectory, with the first and third stage trajectories confirming to this constraint. It has been suggested that for the design of this launch system to be improved, a an optimised trajectory is necessary\cite{Preller2017}.
 
 
 
 
-\begin{figure}
-\centering
-\includegraphics[width=0.7\linewidth]{figures/2_literature-review/SPARTANElevons}
-\caption{The elevons of the SPARTAN\cite{Preller2017}.}
-\label{fig:SPARTANElevons}
-\end{figure}
+
 
 
 \subsection{The Third Stage Rocket}
 The third stage rocket of the rocket-scramjet-rocket launch system consists of a rocket motor, fuel tanks, structure, payload and a thermal protection system\cite{Preller2017}, shown in Figure \ref{fig:ThirdStage}. 
 The third stage rocket separates from the SPARTAN at the end of its trajectory, and performs a pull-up manoeuvre to exit the atmosphere. Once the density of the atmosphere is low enough, the thermal protection system separated from the vehicle for mass efficiency, and once exoatmospheric, the third stage performs a Hohmann transfer to reach the desired orbit. 
-
-The thermal protection system consists of a tungsten nose tip, a conical carbon-carbon shell, and a phenolic cork cylindrical section, weighing a total of 139.4kg. 
-
 The third stage has to this point been designed to be powered by the Pratt \& Whitney RL-10-3A\cite{Preller2017}, and has exhibited good performance when powered by this engine. However, the RL-10-3A is a pump-fed engine, and is likely to be prohibitively expensive for a small launch system. 
 
  
 
 
-\begin{figure}
+\begin{figure}[ht]
 \centering
 \includegraphics[width=0.7\linewidth]{figures/2_literature-review/ThirdStage}
 \caption{The third stage rocket of the rocket-scramjet-rocket launch system\cite{Preller2017}.}
@@ -440,7 +445,7 @@ The third stage has to this point been designed to be powered by the Pratt \& Wh
 
 \subsection{Exoatmospheric Rocket Engines}
 
-The third stage requires a rocket engine with sufficient thrust to accelerate out of the atmosphere, and a diameter small enough to allow the rocket to fit within the fuselage of the SPARTAN. Table \ref{tab:Engine} shows a comparison study of upper stage rocket engines. 
+The third stage requires a rocket engine with sufficient thrust to accelerate out of the atmosphere, and a diameter small enough to allow the rocket to fit within the fuselage of the SPARTAN. The major factors when choosing a rocket engine are efficiency and thrust-to-weight ratio, as well as cost. It is desirable to use a rocket engine which has already been developed and flight tested, to reduce the costs and potential complications of engine development. Table \ref{tab:Engine} shows a comparison study of small sized upper stage rocket engines which are currently in use, or have been used, for commercial space flight. The cost of these engines is not generally published, however, pressure fed engines cost significantly less than pump-fed engines, due to the cost of the turbopump and the associated complexity of a pump-fed system.
 
 \begin{landscape}% Landscape page
 	\begin{table}
@@ -448,17 +453,17 @@ The third stage requires a rocket engine with sufficient thrust to accelerate ou
 		\begin{tabularx}{\linewidth}{|X|X|X|X|X|X|X|X|X|}
 			
 			\hline Engine & Fuel Supply & Fuel & Thrust & Isp & Mass & Diameter & Length & Thrust Vector Capability \\ 
-			\hline Aestus & Pressure-fed & MMH/NTO & 27.5kN & 320s & 110kg & 1.27m & 2.2m & 4$^\circ$ \& 4$^\circ$ by mechanical adjustment\\ 
-			\hline OMS & Pressure-fed  & MMH/NTO & 26.7kN & 316s & 118kg & 1.168m & 1.956m & 8$^\circ$\\ 
+\hline Rl-10A-3A & Pump-Fed & LOX/LH2 & 73.4kN & 444s & 141kg & 1.01m & 1.78m &  Yes, Unknown limits\\ 
 			\hline Aestus II & Pump-fed & MMH/NTO & 46kN & 337.5s & 148 &  & 2.2m  & 6$^\circ$\\ 
 			\hline RS-72 & Pump-fed & MMH/NTO & 55.4kN & 338s & 154kg &  & 2.286 &  6$^\circ$\\ 
 			\hline ATE & Pump-fed & MMH/NTO & 20kN & 345s & 57.9kg & 0.38m & 1.4m &  15$^\circ$\\ 
 			\hline AJ10-118K & Pressure-fed & A-50/NTO & 43.3kN & 320.5s & 124.5kg & 1.53m & 2.7m & Fixed \\ 
-			\hline Kestrel & Pressure-fed & LOX/Kerosene & 30.7kN & 317 & 52kg & 1.1m & 1.9m  & Yes, Unknown limits\\ 
-			\hline Rl-10-3A &  &  &  &  &  &  &   &\\ 
+			\hline Kestrel & Pressure-fed & LOX/Kerosene & 30.7kN & 317s & 52kg & 1.1m & 1.9m  & Yes, Unknown limits\\ 
+						\hline Aestus & Pressure-fed & MMH/NTO & 27.5kN & 320s & 110kg & 1.27m & 2.2m & 4$^\circ$ \& 4$^\circ$ by mechanical adjustment\\ 
+						\hline OMS & Pressure-fed  & MMH/NTO & 26.7kN & 316s & 118kg & 1.168m & 1.956m & 8$^\circ$\\ 
 			\hline 
 		\end{tabularx} 
-		\caption {Comparison of upper stage rocket engines.} 
+		\caption {Comparison of upper stage rocket engines, sourced from the Encyclopedia Astronautica reference website\cite{Wade2017}.} 
 		\label{tab:Engine}
 	\end{table}
 \end{landscape}
@@ -562,38 +567,38 @@ These results indicate that the pseudospectral method is robust for complex, non
 
 \section{Available Optimal Control Solvers}
 
-There are a number of optimal control solvers available, both commercially and open source. A summary of the most prominent available solvers is shown in Table \ref{table:programs}. These programs are mostly general solvers, and must be configured specifically in order to solve a particular optimal control problem. The exception is ASTOS, which is a standalone program designed for aerospace trajectory optimisation.
+There are a number of optimal control solvers available, both commercially and open source. A summary of the most prominent available solvers is shown in Table \ref{table:programs}. These programs are mostly general solvers, and must be configured specifically in order to solve a particular optimal control problem. The exception is ASTOS\cite{astos}, which is a standalone program designed for aerospace trajectory optimisation.
 
 Functionally, most of the available solvers are similar in operation. The states and controls of the optimal control problem are defined to the program by the user, along with any constraints; continuous or endpoint. The cost function of the problem is input, and dynamic model of the system is defined. An initial guess is provided, and once activated, the solver will move toward an optimal solution from this initial guess. 
 The most significant practical difference between the solvers lies in the robustness of the optimal solution, ie. how easily a particular solver is able to converge to the optimal solution. For a simple and continuous optimisation problem all solvers will be able to approach the same solution (though with varying efficiency). However, for a complex and nonlinear optimisation problem, some solvers will converge much more easily than others. Generally, this stems from the underlying transcription method used. 
 
- The most common form of discretisation used by these solvers is the pseudospectral method, although other forms of collocation, as well as multiple shooting, are also used. Comparing the benefits of these solvers is difficult, as a particular problem may lend itself to one solver in particular, and all have been used widely. However, it is generally held that hp-adaptive pseudospectral methods are the current state-of-the-art in discretisation methods, and a solver which utilises one of these techniques is likely to have good convergence and accuracy properties[citeXX]. The readily available packages which utilise hp adaptive pseudospectral methods are GPOPS-2 and ICLOCS2.
+ The most common form of discretisation used by these solvers is the pseudospectral method, although other forms of collocation, as well as multiple shooting, are also used. Comparing the benefits of these solvers is difficult, as a particular problem may lend itself to one solver in particular, and all have been used widely. However, it is generally held that hp-adaptive pseudospectral methods are the current state-of-the-art in discretisation methods, and a solver which utilises one of these techniques is likely to have good convergence and accuracy properties[citeXX]. The readily available packages which utilise hp adaptive pseudospectral methods are GPOPS-2\cite{Rao2010} and ICLOCS2\cite{iclocs}.
  
- ICLOCS2 is a software package in the alpha stages of development, which is based upon ICLOCS, a multiple shooting solver. ICLOCS2 is able to implement a range of transcription methods, including a hp adaptive Legendre-Gauss Pseudospectral method. As ICLOCS2 is relatively new at the time of writing, it has not yet been implemented in any published works and documentation is limited. 
+ ICLOCS2 is a software package in the alpha stages of development, which is based upon ICLOCS, a multiple shooting solver\cite{iclocs}. ICLOCS2 is able to implement a range of transcription methods, including a hp adaptive Legendre-Gauss Pseudospectral method\cite{iclocs}. As ICLOCS2 is relatively new at the time of writing, it has not yet been implemented in any published works and documentation is limited. 
  
-GPOPS-2 is a proprietary hp-adaptive pseudospectral method solver, which implements a variety of hp-adaptive pseudospectral methods, so that the best method may be chosen for a given problem.. GPOPS-2 is specifically designed to be as flexible as possible, to accommodate for a wide range of problem formulations. GPOPS-2 is well proven in aerospace applications, and has been used for spacecraft orbit optimisation as well as in-atmosphere trajectory optimisation[CITEXX]. GPOPS-2 is well suited to solving multi-phase optimal control problems, which is necessary for efficient multi-stage launch optimisation. GPOPS-2 represents the state of the art in trajectory optimisation software, and as such is used by a number of institutions around the world. 
+GPOPS-2 is a proprietary hp-adaptive pseudospectral method solver, which implements a variety of hp-adaptive pseudospectral methods, so that the best method may be chosen for a given problem\cite{Rao2010}. GPOPS-2 is specifically designed to be as flexible as possible, to accommodate for a wide range of problem formulations\cite{Rao2010}. GPOPS-2 is well proven in aerospace applications, and has been used for spacecraft orbit optimisation as well as in-atmosphere trajectory optimisation[CITEXX]. GPOPS-2 is well suited to solving multi-phase optimal control problems, which is necessary for efficient multi-stage launch optimisation\cite{Rao2010}. GPOPS-2 represents the state of the art in trajectory optimisation software, and as such is used by a number of institutions around the world. 
 
- Both ICLOCS2 and GPOPS-2 uses IPOPT (Interior Point OPTimizer) as the standard nonlinear programming solver (with the option of installing others). IPOPT is a widely used open source nonlinear optimisation package which utilises an interior point line search filter method. 
+ Both ICLOCS2 and GPOPS-2 uses IPOPT\cite{Wachter2006} (Interior Point OPTimizer) as the standard nonlinear programming solver (with the option of installing others). IPOPT is a widely used open source nonlinear optimisation package which utilises an interior point line search filter method. 
 
 \begin{table}[!ht]
 	
-	\begin{tabular}{|c|c|c| p{7cm}|}
+	\begin{tabular}{|c|c|c| p{4cm}|}
 		\hline \textbf{Software} & \textbf{Publisher} & \textbf{Platform} & \textbf{Optimisation Type} \\ 
 		\hline DIDO\cite{Ross2002} & Elissar Global & MATLAB & Chebychev Pseudospectral \\ 
 		\hline GPOPS II\cite{Rao2010} & RP Optimization Research & MATLAB & hp Adaptive Legendre-Gauss-Radau Pseudospectral \\ 
-		\hline PROPT (IPOPT) & TOMLAB & MATLAB & Legendre-Gauss  Pseudospectral  \\ 
-		\hline ICLOCS2 & Imperial College & MATLAB &  Multiple Shooting / hp Legendre-Gauss Pseudospectral  \\ 
-		\hline POST &  &  &  \\ 
-		\hline OTIS & NASA  & Fortran & Pseudospectral + Various  \\ 
+		\hline PROPT (IPOPT) \cite{Rutquist2010}& TOMLAB & MATLAB & Legendre-Gauss  Pseudospectral  \\ 
+		\hline ICLOCS2\cite{iclocs} & Imperial College & MATLAB &  Multiple Shooting / hp Legendre-Gauss Pseudospectral  \\ 
+		\hline POST2\cite{WilliamColson} & NASA & FORTRAN & Direct Shooting \\ 
+		\hline OTIS\cite{otis} & NASA  & Fortran & Pseudospectral + Various  \\ 
 		\hline TRANSWORHP\cite{Wassel2013} & ESA & Fortran/C++ & Full Discretisation \\ 
-		\hline ASTOS & Astos Solutions & Standalone & Multiple Shooting / Collocation  \\  
-		\hline ACADO &  &  &   \\  
-		\hline JModelica &  &  &   \\  
+		\hline ASTOS\cite{astos} & Astos Solutions & Standalone & Multiple Shooting/Collocation  \\  
+		\hline ACADO\cite{Houska2011} & Open Source & C++ &  Direct \\  
+		\hline JModelica\cite{jmodelica} & Modelon AB, Open Source & Modelica/Python &  Collocation/Pseudospectral \\  
 		
 		\hline 
 	\end{tabular} 
 	
-	\caption{Summary of programs capable of pseudospectral optimisation. \textit{Multiple citationsxx to be added.}}
+	\caption{Summary of programs capable of pseudospectral optimisation.}
 	\label{table:programs}
 \end{table}
 
@@ -601,14 +606,6 @@ GPOPS-2 is a proprietary hp-adaptive pseudospectral method solver, which impleme
 
 
 
-
-
-
-for ipopt:
-https://link.springer.com/content/pdf/10.1007%2Fs10107-004-0559-y.pdf
-https://projects.coin-or.org/Ipopt/browser/stable/3.10/Ipopt/doc/documentation.pdf?format=raw
-
-other citations from gpops website
 
 
 
@@ -624,20 +621,15 @@ This trade off means a tool must be selected which best suits the requirements o
 For a preliminary vehicle design, it is often desirable to select a tool which is as computationally efficient as possible, as the design of the vehicle is liable to change often. 
 Whereas for more advanced stages of vehicle design, an accurate tool is desirable, to assess the design of the vehicle in detail. 
 
-The lowest fidelity, and highest efficiency methods include packages which use empirical relations derived from databases of existing vehicles, such as Missile DATCOM[citeXX missile datcom], as well as panel method codes such as HYPAERO, cbaero and HOTSOSE[cite cbaero, HYPAERO, hotsose]. Low fidelity methods offer rapid solutions, with highly variable accuracy. For simple, standard vehicle shapes, low fidelity methods may offer high accuracy, as low fidelity solutions are usually calibrated to higher fidelity simulations or experiments. However, for complex vehicle geometries, for example geometries involving engine through-flow, low fidelity models may be highly inaccurate, and are not acceptable for use. 
+The lowest fidelity, and highest efficiency methods include packages which use empirical relations derived from databases of existing vehicles, such as Missile DATCOM[citeXX missile datcom], as well as panel method codes such as HYPAERO, cbaero and HOTSOSE[cite cbaero, HYPAERO, hotsose]. Low fidelity methods offer rapid solutions, with highly variable accuracy. For simple, standard vehicle shapes, low fidelity methods may offer high accuracy, as low fidelity solutions are usually calibrated to higher fidelity simulations or experiments. However, for complex vehicle geometries, for example geometries involving engine through-flow, low fidelity models may be highly inaccurate, and are not acceptable for use\cite{Krause2011}. 
 
-Medium fidelity methods consist of inviscid Euler solvers such as CART3D, FUN3D and AIRPLANE[cite cart3d, AIRPLANE], which are able to provide reasonable accuracy, with medium run times, by neglecting viscous effects within the solution. These solvers are often used in the later stages of preliminary design, or when higher fidelity is necessary due to design features, but rapid solutions are still desired.  Neglecting the viscous effects in the fluid flow means that the solution obtained from an inviscid solver will only be an approximation of the real flow, and that the accuracy of the solution varies depending on the type problem being solved. For problems such as lift on a thin airfoil, inviscid Euler methods may be quite accurate, however for a problem such as boundary growth on a flat plate these methods will not accurately model the solution. A particular advantage that many inviscid Euler codes provide is automatic adjoint mesh adaptation, the ability for the mesh to be automatically and rapidly generated, and updated sequentially throughout the solution process, refining areas of complex geometry or flow. This enables multiple solutions to be easily computed, without the need to regenerate meshes manually. For preliminary design purposes, inviscid-flow Euler CFD solvers are used extensively across industry and academia\cite{Almosnino2016}. 
+Medium fidelity methods consist of inviscid Euler solvers such as CART3D, FUN3D and AIRPLANE[cite cart3d, AIRPLANE], which are able to provide reasonable accuracy, with medium run times, by neglecting viscous effects within the solution. These solvers are often used in the later stages of preliminary design, or when higher fidelity is necessary due to design features, but rapid solutions are still desired.  Neglecting the viscous effects in the fluid flow means that the solution obtained from an inviscid solver will only be an approximation of the real flow, and that the accuracy of the solution varies depending on the type problem being solved. For problems such as lift on a thin airfoil, inviscid Euler methods may be quite accurate, however for a problem such as boundary growth on a flat plate these methods will not accurately model the solution\cite{NASAEuler}. A particular advantage that many inviscid Euler codes provide is automatic adjoint mesh adaptation, the ability for the mesh to be automatically and rapidly generated, and updated sequentially throughout the solution process, refining areas of complex geometry or flow. This enables multiple solutions to be easily computed, without the need to regenerate meshes manually. For preliminary design purposes, inviscid-flow Euler CFD solvers are used extensively across industry and academia\cite{Almosnino2016}. 
 
-High fidelity methods consist of Navier-Stokes CFD solvers such as Eilmer3/4, Fluent, CFX, STAR-CD, COMSOL and OpenFOAM [citationsxx]. These solvers will resolve the fluid flow and aerodynamic forces to a high level of accuracy, including viscous effects. However, the mesh for the problem must be generated prior to the calculation of the solution, which increases working time significantly. Additionally, the computation times are much longer, and require more computational resources than lower fidelity methods. These factors make the generation of an aerodynamic database using high fidelity CFD an extremely time consuming process, which is only suited to mature vehicle designs. 
+High fidelity methods consist of Navier-Stokes CFD solvers such as Eilmer3/4, Fluent, CFX, STAR-CD, COMSOL and OpenFOAM [citationsxx]. These solvers will resolve the fluid flow and aerodynamic forces to a high level of accuracy, including viscous effects. However, the mesh for the problem must be generated prior to the calculation of the solution, which increases the working time significantly. Additionally, the computation times are much longer, and require more computational resources than lower fidelity methods. These factors make the generation of an aerodynamic database using high fidelity CFD an extremely time consuming process, which is suited for use on mature vehicle designs, or when accurate flow simulation is absolutely necessary. 
+This is the case for the simulation of scramjet engines, which contain complex flow fields featuring high Reynolds-number flow, complex shock wave structures, and large thermal and composition gradients\cite{Segal2009}. For this reason, scramjet engines must be simulated using high-fidelity methods to produce an accurate solution. 
 
 
-\textcolor{red}{Add paragraph about LES, and why it is not possible to use low fidelity methods to calculate engine database. I need to understand how the C-REST database was made better, ie. inlets calculated by Rowan in high fidelity.}
 
-citations:
-
-Aerodynamic 	Analysis	of the JAPHAR Vehicle 
-
-euler accuracy: https://www.grc.nasa.gov/WWW/k-12/airplane/eulereqs.html
 
 \subsection{CART3D}
 
