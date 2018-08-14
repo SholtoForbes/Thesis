@@ -5,27 +5,33 @@
 This chapter covers the optimal control program LODESTAR (Launch Optimisation and Data Evaluation for Scramjet Trajectory Analysis Research), which has been used to simulate the optimal trajectories of the rocket-scramjet-rocket system. The dynamic model and structure of LODESTAR are presented, as well as the set-up of LODESTAR for the rocket-scramjet-rocket trajectory optimisation, and the verification methods used to determine if a solution has converged correctly.
 
 LODESTAR has been developed to aid with the simulation and trajectory optimisation of space launch systems. 
-LODESTAR is MATLAB based and utilises GPOPS-2[CITEXX], a proprietary pseudospectral method optimisation package.
- LODESTAR optimises a trajectory towards a user-defined objective function, such as maximum payload-to-orbit, subject to constraints which bound the operational region of a vehicle. Both rocket-powered and scramjet-powered vehicles are accurately modelled within LODESTAR in 6 degrees of freedom. LODESTAR contains multiple modes configured for the SPARTAN launch system, which are able to optimise trajectories for;
-
+LODESTAR optimises a trajectory towards a user-defined objective function, such as maximum payload-to-orbit, subject to constraints which bound the operational region of a vehicle.
+LODESTAR is MATLAB based and utilises GPOPS-2[CITEXX], a proprietary pseudospectral method optimisation package which utilises an hp-adaptive version of the Radau pseudospectral method, ie. the pseudospectral method with collocation at Legendre-Gauss-Radau points. At these points, the derivatives of the approximating polynomials are constrained to the vehicle dynamics. Between these points, the Legendre polynomials used for approximation ensure that the dynamics of the launch vehicles are interpolated accurately. The operation of the pseudospectral method is described in further detail in Section \ref{sec:Propulsion}.
+LODESTAR provides setup files to configure GPOPS-2 for multiple vehicle launch optimisation, and processing functions to asses the viability of the optimised solutions and plot the solutions effectively. 
+LODESTAR also provides simulations of the vehicles within the launch system including interpolation schemes specifically designed to provide smooth, continuous aerodynamic and engine properties to ensure that the optimisation converges correctly. 
+ Both rocket-powered and scramjet-powered vehicles are accurately modelled within LODESTAR in 6 degrees of freedom. LODESTAR contains multiple modes configured for the SPARTAN launch system, which are able to optimise trajectories for;
 \begin{enumerate}
- \item The ascent of the first stage rocket.
- \item The ascent of the second stage scramjet-powered accelerator.
- \item The flyback of the second stage scramjet-powered accelerator.
- \item The ascent of the third stage rocket.
- \item Combined trajectories of multiple stages in any combination.
+	\item The ascent of the first stage rocket.
+	\item The ascent of the second stage scramjet-powered accelerator.
+	\item The flyback of the second stage scramjet-powered accelerator.
+	\item The ascent of the third stage rocket.
+	\item Combined trajectories of multiple stages in any combination.
 \end{enumerate}
+ 
+ 
 
-Figure \ref{fig:FlowChartSmall} illustrates a simplified iteration of the pseudospectral solver. GPOPS-2 provides an initial guess of the solution to the external modules.
-These modules calculate the vehicle aerodynamic and engine performance at each point along the trajectory, along with atmospheric conditions. This data is then used to calculate the dynamics of the vehicle along the trajectory. The imposed constraints and cost are then passed to IPOPT and evaluated, to compute the feasibility and optimality of the solution. Based on this evaluation, the trajectory guess is then updated to a new iteration, which is processed by GPOPS. This process repeats until the solver reaches a predefined tolerance of optimality.
+
+Figure \ref{fig:FlowChartSmall} illustrates a simplified iteration of the pseudospectral solver. GPOPS-2 provides an initial guess of the solution to the external modules, over an initial mesh of nodes.
+The external modules calculate the vehicle aerodynamic and engine performance at each point along the trajectory, along with atmospheric conditions. This data is then used to calculate the dynamics of the vehicle along the trajectory. The constraints and cost function are then evaluated by GPOPS-2 and passed through to the IPOPT nonlinear optimisation package\cite{Wachter2006}, which updates the guess of the state and control variables. This process is repeated for a set number of iterations, with the solution evaluated at each iteration to compute the feasibility and optimality of the solution. This process repeats until the solver reaches a predefined tolerance of optimality, or a predefined number of iterations. At this point, GPOPS-2 updates the node mesh, clustering nodes and creating mesh segments around key sections of the trajectory to improve accuracy. The process repeats for a number of mesh iterations defined by the user. 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.75\linewidth]{figures/4_LODESTAR/FlowChartSmall}
 	\caption{The optimisation process.}
 	\label{fig:FlowChartSmall}
 \end{figure}
+
 Due to the nature of the pseudospectral method, it is possible for GPOPS-2 to not be able to converge to a physically valid or optimal solution. 
-LODESTAR contains a number of verification modules which assess the optimised trajectory solution to ensure that the solution is indeed an optimal trajectory, and that the dynamics of the solution are accurate. 
+LODESTAR contains a number of verification modules which assess the optimised trajectory solution to ensure that the solution has converged sufficiently, and that the dynamics of the solution are accurate. 
 
 
 
@@ -40,8 +46,9 @@ Each of the vehicles within the rocket-scramjet-rocket launch system are simulat
  
 These dynamic equations consist of the equations of motion of the vehicle, as well as other important time varying parameters, such as fuel mass flow rate. 
 The dynamic equations are defined by the coordinate system, and the outputs of each vehicle model. These are nonlinear equations which depend on the interpolation of data sets which supply the atmospheric, aerodynamic and propulsion characteristics of each vehicle. 
-
-
+The methods used to interpolate these data sets must be as smooth and continuous as possible, and cover the entire possible operational range of the vehicle. 
+Even if the solution is well within the range of all input data sets, the solver will potentially explore all regions within the user defined bounds. 
+If there are large discontinuities or inaccurate extrapolation effects within the possible solution space, the solver may be unable to converge, or converge to a physically invalid solution. 
 
 
 \subsection{6DOF Equations of Motion}
@@ -112,7 +119,9 @@ The optimisation problem is subject to a set of dynamic constraints, which descr
 \begin{equation} \label{eq:state}
 \dot{\textbf{x}}(t) - f[t,\textbf{x}(t),\textbf{u}(t)] = 0.
 \end{equation}
-Implementing the dynamics as constraints allows each state variable to be approximated separately, and gives the optimiser some freedom to explore each state variable independently, greatly increasing the robustness of the optimal control problem. However, implementing the dynamics as constraints means that the dynamics do not have to be physically valid at all times during the process of searching for an optimal solution. A violation of the physical dynamics constraints can cause potential complications for the computational model of the vehicle. Much of the design of the vehicle model in this study is driven by the need for smooth, continuous interpolation schemes, which cover the entire possible operational range of the vehicle, ie. even if the solution is well within the range of all input data sets, the solver must be able to explore all regions within the set bounds. 
+These dynamic constraints ensure that the polynomial approximations of the state variables match the physical dynamics of the system. Implementing the dynamics as constraints allows each state variable to be approximated separately, and gives the optimiser some freedom to explore each state variable independently, greatly increasing the robustness of the optimal control problem.
+
+
 
 \noindent \textit{Bounds and Path Constraints}
 
@@ -148,7 +157,7 @@ These constraints determine the initial and terminal conditions of the optimisat
 
 
 
-
+Together, these objectives, constraints, and variables describe the optimal control problem being solved, and form the inputs into GPOPS-2. GPOPS-2 uses these inputs, along with a pseudospectral method transcription, to form the constrained optimisation problem that is solved using IPOPT.
 
 
 
@@ -170,7 +179,9 @@ If a vehicle model with large discontinuities is implemented directly into a sin
  \end{figure}
  
  To allow the trajectory profile to be formulated as an optimal control problem, the trajectory of the rocket-scramjet-rocket launch system has been broken down into the seven segments shown in Figure \ref{fig:Traj}. 
-  The segments have been separated into two groups; controlled segments which form the phases of the optimal control problem, and segments without control which are simulated separately, to increase computational efficiency and improve the convergence of the optimal control solver.  
+  The segments have been separated into two groups; controlled segments which take the form of phases within the optimal control problem, and segments without control which are either forward simulated at each iteration of the optimiser, or simulated externally to the optimal control problem. If the unpowered segments are simulated within the optimiser, they may be included in the cost and constraint functions of the optimisation problem.
+  The unpowered segments are implemented in this way in order to increase computational efficiency and improve the convergence of the optimal control solver. 
+  
  Segments \textcolor{red}{\rom{2}-\rom{5}} are controlled by various combinations of angle of attack, bank angle and throttle, and are implemented as the phases of the optimisation problem. These phases are; The 1st stage pitching ascent; the 2nd stage ascent; the 2nd stage return flight; and the 3rd stage powered ascent.
  Segments \textcolor{red}{\rom{1}},\textcolor{red}{\rom{6}} and \textcolor{red}{\rom{7}} are segments without direct control, which are simulated using forward time stepping methods. 
  These phases are; the pre-pitch segment of the first stage; the unpowered section of the third stage ascent; and the final Hohmann transfer to orbit. 
@@ -208,27 +219,22 @@ If a vehicle model with large discontinuities is implemented directly into a sin
 \subsubsection{\textcolor{red}{\rom{1}.} First Stage Vertical Ascent}
 
 LODESTAR optimises the ascent of the first stage rocket in two sections; pre and post-pitchover.
-Initially, the first stage rocket is launched vertically, and continues vertically for a small amount of time, until pitchover is initiated. 
+The pre-pitchover section is not optimised, and is simulated externally to the optimisation to improve computational efficiency. Simulating this segment after the optimisation has been completed makes the starting mass and altitude of the first stage slightly variable, but this variation is negligible. 
+The pitchover is defined to occur at 90m altitude and 15m/s velocity.
 During the vertical launch the rocket is assumed to need no control, and is held at 0$^\circ$ angle of attack. 
-The pitchover is defined to occur at 90m altitude and 30m/s velocity, rather than at a specific time.
-This allows the pre-pitchover phase to be simulated separately, after the optimisation has been completed. 
-If the initial mass is variable, the pre-pitchover trajectory is calculated to match the pitchover mass, and the initial launch altitude will necessarily be slightly variable. This variation in launch altitude is small, on the order of ten meters or less. 
 
 \subsubsection{\textcolor{red}{\rom{2}.} First Stage Pitching Ascent}
 
 
 The post-pitchover trajectory is an angle of attack controlled phase in the optimisation routine, which is simulated from pitchover until second stage separation. During this phase, the launch system is allowed to fly at negative angles of attack, to assist in pitching. 
-The fuel mass of the first stage rocket is unconstrained.
-This approach is used on account of the selected first stage being able to reach the required range of altitudes and flight angles with only small fuel mass variations. 
-Nevertheless, small variation in fuel mass can have an important effect on the capabilities of the first stage, influencing the velocity achievable at first to second stage separation, as well as the rate at which the rocket is able to pitch, and consequentially, the altitude and flight path angle range of the first stage.
-It is useful in the preliminary design stages to be able to vary the mass of the first stage vehicle during the optimisation process, allowing a less trial-and-error approach than selecting a starting fuel mass manually.
-
+The fuel mass of the first stage rocket is unconstrained, as small variations in the initial fuel mass can have an important effect on the capabilities of the first stage. The fuel mass can influence the velocity achievable at first to second stage separation, as well as the rate at which the rocket is able to pitch, and consequentially, the altitude and flight path angle range of the first stage.
+Allowing the initial fuel mass to vary increases the flexibility of the optimal control solver, though it is expected that the maximum allowable fuel mass will be used in most cases. 
 
 
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|}
-	\hline Optimisation Parameter  & Associated Variables & Allowable Values\\
+	\hline \textbf{Variable Group}  & \textbf{Associated Variables} & \textbf{Constraints}\\
 	\hline Initial Constraints  & Velocity & 30m/s\\ & Altitude& 90m \\ & Latitude & $-12.16^\circ$ \\& Longitude & 136.75$^\circ$\\ & Trajectory Angle & 89.9$^\circ$\\ & Angle of Attack& 0$^\circ$\\
 	\hline Terminal Constraints & $\textbf{x}_{f\textrm{\rom{2}}} - \textbf{x}_{0\textrm{\rom{3}}}$ & 0\\ & $t_{f\textrm{\rom{2}}} - t_{0\textrm{\rom{3}}}$ & 0\\
 	\hline Path Constraints & Dynamic Pressure & 0kPa - 50kPa\\ 
@@ -237,7 +243,7 @@ It is useful in the preliminary design stages to be able to vary the mass of the
 	\hline 
 \end{tabular} 
 
-\caption{Optimisation setup of the first stage phase. \textcolor{red}{The other tables in this section will be modified to conform to this one. But I am currently unsure whether this table layout is clear.}}
+\caption{Optimisation setup of the first stage phase. }
 
 \end{table}
 
@@ -245,16 +251,17 @@ It is useful in the preliminary design stages to be able to vary the mass of the
 
 \subsection{\textcolor{red}{\rom{3}.} Second Stage Ascent Trajectory}
 
-The ascent trajectory of the SPARTAN is controlled using angle of attack, and bank angle. This trajectory is constrained to a maximum dynamic pressure of 50kPa, corresponding to the maximum structural limits of the vehicle. During the ascent, the engines are assumed to be operating at an equivalence ratio of 1 at all times. 
+The ascent trajectory of the SPARTAN is controlled using angle of attack and bank angle. This trajectory is constrained to a maximum dynamic pressure of 50kPa, corresponding to the maximum structural limits of the vehicle. During the ascent, the engines are assumed to be operating at the maximum equivalence ratio at all times. This is 1 in most sections of the trajectory, except at low mach numbers where the possibility of unstart and choking necessitates a reduction in equivalence ratio. Aerodynamic and propulsion databases are generated as described in Sections \ref{sec:Propulsion} and \ref{sec:aero}. The lift and drag of the vehicle is interpolated from of the trimmed aerodynamics database and the propulsion is determined from interpolation of the C-REST database. 
 
 \begin{table}[H]
-\begin{tabular}{|c|c|}
-	\hline Initial Constraints  & Velocity \\ & Fuel Mass  \\ & Latitude \\ & Longitude \\ 
-	\hline Terminal Constraints & Fuel mass \\ & Heading Angle \\ 
-	\hline Path Constraints & Dynamic Pressure \\ 
-	\hline Target Cost & Maximum Payload-to-Orbit \\ 
-			\hline Control Variables &  \\ 
-			\hline State Variables &  \\ 
+\begin{tabular}{|c|c|c|}
+	\hline \textbf{Variable Group}  & \textbf{Associated Variables} & \textbf{Constraints}\\
+	\hline Initial Constraints  & Velocity &\\ & Fuel Mass & \\ & Latitude& \\ & Longitude &\\ 
+	\hline Terminal Constraints & Fuel mass &\\ & Heading Angle &\\ 
+	\hline Path Constraints & Dynamic Pressure& \\ 
+	\hline Target Cost & Maximum Payload-to-Orbit &\\ 
+			\hline Control Variables & & \\ 
+			\hline State Variables & & \\ 
 	\hline 
 \end{tabular} 
 
@@ -263,13 +270,15 @@ The ascent trajectory of the SPARTAN is controlled using angle of attack, and ba
 \subsection{\textcolor{red}{\rom{4}.} Second Stage Return Trajectory}
 After releasing the third stage rocket, the scramjet-powered second stage must return back to the initial launch site.
 During the fly-back, the SPARTAN cannot exceed its dynamic pressure limit of 50kPa. 
- The end state is constrained to a minimum of $-20^\circ$ trajectory angle, which is assumed to be an appropriate trajectory angle for approach to a landing strip. All other state variables are left unconstrained at the end point. It is assumed that for an optimal trajectory, the SPARTAN will end its return at the minimum energy state possible, corresponding to the minimum velocity and altitude attainable while satisfying the end latitude and longitude constraints. 
+ The end state is constrained to a minimum of $-20^\circ$ trajectory angle, which is assumed to be an appropriate trajectory angle for approach to a landing strip. The altitude is constrained to less than 1km at the end point to ensure that the SPARTAN is approaching landing altitude.
+ The velocity left unconstrained at the end point. Constraining the end velocity may over constrain the optimisation problem, and it is assumed that for an optimal trajectory the SPARTAN will end its return at a low velocity, so that the energy necessary for return is small. 
  
 During the return, the C-REST engines are able to be throttled on and off. The throttle is set as a control variable, variable between 0 and 1, where 1 represents the maximum equivalence ratio at that point. The fuel mass flow rate is scaled linearly with the throttle:  
 \begin{equation}
 \dot{m}_{fuel} = \dot{m}_{fuel,max}throttle,
 \end{equation}
 and the thrust of the engine is assumed to scale linearly with the fuel mass flow rate. 
+The aerodynamics of the SPARTAN during fly-back are determined by interpolation of the engine-on and engine-off trimmed data sets described in Section \ref{sec:aero}. As the scramjet engines are throttled on, the aerodynamics are assumed to vary linearly between the aerodynamics calculated by the engine-off and engine-on datasets. 
 
 \begin{table}[H]
 \begin{tabular}{|c|c|}
@@ -290,8 +299,9 @@ and the thrust of the engine is assumed to scale linearly with the fuel mass flo
 The trajectory of the third stage rocket is only directly optimised during the powered section of its trajectory. During powered flight, the engine is used to control the third stage vehicle. After this point, the engine is cut, and the third stage is assumed to not have sufficient aerodynamic control to manoeuvre. 
 
 The third stage rocket is constrained to an angle of attack of less than 20$^\circ$. This is assumed to be the maximum controllable angle of attack possible for the third stage rocket.   
-Additionally, a maximum normal force restriction is placed on the third stage. Previous studies flew the third stage rocket at a constant 10$^\circ$ angle of attack, and initially released the rocket at 50kPa[CITEXX]. 
-For this study, it is assumed that 10$^\circ$ angle of attack produces the maximum allowable normal force at 50kPa, to prevent the rocket from being released into an environment which could exceed its structural limitations. The maximum allowable normal force is calculated at the release Mach number, and set as a path constraint. 
+Additionally, a maximum normal force restriction is placed on the third stage, to limit the angle of attack of the third stage by the normal force on the vehicle. However, as a detailed structural study of the third stage has not been conducted, the maximum allowable normal force on the third stage is not known.
+For consistency, the maximum allowable normal force was calculated from the conditions of previous studies. Previous studies flew the third stage rocket at a constant 10$^\circ$ angle of attack, and initially released the rocket at 50kPa[CITEXX]. 
+It is assumed that this condition of 10$^\circ$ angle of attack and 50kpa dynamic pressure produces the maximum allowable normal force to prevent the rocket from being released into an environment which could exceed its structural limitations. The maximum allowable normal force is calculated at the release Mach number, and is set as a path constraint. 
 \begin{table}[H]
 \begin{tabular}{|c|c|}
 	\hline Initial Constraints  & \\ 

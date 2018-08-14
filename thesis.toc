@@ -48,11 +48,11 @@
 \contentsline {subsection}{\numberline {3.3.3}The Aerodynamics of the Third Stage Rocket}{62}{subsection.3.3.3}
 \contentsline {subsubsection}{Thrust Vectoring}{63}{section*.86}
 \contentsline {chapter}{\numberline {4}LODESTAR}{65}{chapter.4}
-\contentsline {section}{\numberline {4.1}Vehicle Simulation}{66}{section.4.1}
+\contentsline {section}{\numberline {4.1}Vehicle Simulation}{67}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}6DOF Equations of Motion}{67}{subsection.4.1.1}
 \contentsline {section}{\numberline {4.2}Optimal Control Problem Structure}{68}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Trajectory Connection Points}{70}{subsection.4.2.1}
-\contentsline {subsubsection}{\leavevmode {\color {red}I.} First Stage Vertical Ascent}{71}{section*.93}
+\contentsline {subsubsection}{\leavevmode {\color {red}I.} First Stage Vertical Ascent}{72}{section*.93}
 \contentsline {subsubsection}{\leavevmode {\color {red}II.} First Stage Pitching Ascent}{72}{section*.94}
 \contentsline {subsection}{\numberline {4.2.2}\leavevmode {\color {red}III.} Second Stage Ascent Trajectory}{73}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}\leavevmode {\color {red}IV.} Second Stage Return Trajectory}{74}{subsection.4.2.3}
@@ -74,7 +74,7 @@
 \contentsline {subsubsection}{Drag Sensitivity Analysis}{90}{section*.117}
 \contentsline {subsection}{\numberline {5.2.3}Third Stage Evaluation}{91}{subsection.5.2.3}
 \contentsline {chapter}{\numberline {6}Optimised Trajectory Including Fly-Back}{93}{chapter.6}
-\contentsline {section}{\numberline {6.1}Combined SPARTAN Ascent-Descent \& Third Stage Example}{94}{section.6.1}
+\contentsline {section}{\numberline {6.1}Combined SPARTAN Ascent-Descent \& Third Stage}{94}{section.6.1}
 \contentsline {section}{\numberline {6.2}Fly-Back Trajectory Analysis}{94}{section.6.2}
 \contentsline {subsection}{\numberline {6.2.1}Optimised Trajectory}{99}{subsection.6.2.1}
 \contentsline {subsubsection}{ Initial Turn}{99}{section*.127}

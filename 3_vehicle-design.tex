@@ -1,7 +1,7 @@
 % 3_methodology.tex
 
 \cleardoublepage
-\chapter{Launch Vehicle Design and Simulation}\label{chapter:methodology}
+\chapter{Launch Vehicle Design and Simulation}\label{chapter:Design}
 
 
 \textcolor{red}{First stage has been changed to 8.5m , with 1m of space for connection, also 70\% thrust. Will include a section describing the launch site (ELA). Will put in pictures defining sun synch orbit, and more detail about sun synchronous orbit}
@@ -188,6 +188,8 @@ The drag, lift and moment coefficients are determined by interpolating for Mach 
 		F_L = \frac{1}{2}\rho c_L v^2 A .
 		\end{equation}
 		
+		
+		
 		\subsubsection{CART3D}
 
 				The aerodynamics of the SPARTAN have been calculated using CART3D, an inviscid CFD package used in the preliminary design of aerospace vehicles. Cart3D utilises adjoint mesh adaption with a Cartesian cut-cells approach to produce an iteratively refined mesh to fit a flow solution. CART3D is
@@ -229,6 +231,11 @@ The drag, lift and moment coefficients are determined by interpolating for Mach 
 		The centre of gravity of the SPARTAN is varied as fuel is depleted throughout the acceleration phase, as well as when the third stage rocket is released. A point mass model is used in conjunction with the aerodynamic database,
 		and atmospheric properties obtained from the U.S Standard Atmosphere 1976[26]. The SPARTAN is assumed to be
 		trimmed at all conditions during flight.
+		
+		\textcolor{red}{PROVIDE DETAILS OF CG SHIFTING}
+		
+		
+		
 		The trimmed aerodynamics of the SPARTAN are determined by modelling the flaps at deflected states of -20$^\circ$, -10$^\circ$, 10$^\circ$, and 20$^\circ$. Each of these deflected states were modelled in CREO and a surface mesh was created in Pointwise. The aerodynamics at each flap deflection were calculated at 0$^\circ$ angle of attack for Mach numbers between 0.2 and 10. For each aerodynamic data point of Mach numbers between 0.2 and 10, and angle of attacks from 0$^\circ$ to 10$^\circ$, the necessary flap deflection are calculated, and the additional lift and drag produced by the flaps are added. The addition of trimmed aerodynamics is calculated for scramjet engines on, and engines off conditions. Due to centre of gravity variation, the trim analysis is calculated three times; at the beginning of SPARTAN acceleration; at the end of SPARTAN acceleration, when fuel has been depleted; and after the third stage has been released. The trimmed aerodynamic databases at the beginning and end of acceleration are interpolated between as the centre of gravity varies due to fuel depletion. After the third stage is released, the centre of gravity is kept constant, and a single trimmed aerodynamic database is used. 
 		
 		Figure \ref{fig:FlapDeflection} shows the necessary flap deflections to trim the SPARTAN. An Engine-on case is shown at a centre of gravity of  XXm corresponding to full-fuel with third stage, and an Engine-off case is shown for a centre of gravity of XXm, corresponding to a fuel-empty state after third stage release. Additional figures illustrating the variation in moment coefficients are shown in Appendix XX.
@@ -263,7 +270,7 @@ The drag, lift and moment coefficients are determined by interpolating for Mach 
 		
 		
 		
-		\subsubsection{Database Generation}
+		\subsubsection{Database Generation}\label{sec:database}
 		The trimmed aerodynamic databases of the SPARTAN are generated in full prior to trajectory simulation to improve the computational efficiency of the simulation. The aerodynamic coefficients of lift, drag and moment are tabulated, and these tables are interpolated between during simulation. 
 The process for generating the aerodynamic databases is shown in Figure \ref{fig:FlowChart}. 
 				\begin{figure}[ht]
