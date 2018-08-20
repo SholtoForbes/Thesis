@@ -53,41 +53,42 @@
 \contentsline {section}{\numberline {4.2}Optimal Control Problem Structure}{68}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Trajectory Connection Points}{70}{subsection.4.2.1}
 \contentsline {subsubsection}{\leavevmode {\color {red}I.} First Stage Vertical Ascent}{72}{section*.93}
-\contentsline {subsubsection}{\leavevmode {\color {red}II.} First Stage Pitching Ascent}{72}{section*.94}
-\contentsline {subsection}{\numberline {4.2.2}\leavevmode {\color {red}III.} Second Stage Ascent Trajectory}{73}{subsection.4.2.2}
+\contentsline {subsubsection}{\leavevmode {\color {red}II.} First Stage Pitching Ascent}{73}{section*.94}
+\contentsline {subsection}{\numberline {4.2.2}\leavevmode {\color {red}III.} Second Stage Ascent Trajectory}{74}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}\leavevmode {\color {red}IV.} Second Stage Return Trajectory}{74}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}\leavevmode {\color {red}V.} Third Stage Powered Ascent}{75}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}\leavevmode {\color {red}VI.} Third Stage Unpowered Ascent}{76}{subsection.4.2.5}
-\contentsline {subsection}{\numberline {4.2.6}\leavevmode {\color {red}VII.} Hohmann Transfer}{76}{subsection.4.2.6}
-\contentsline {section}{\numberline {4.3}The Optimisation Process}{77}{section.4.3}
-\contentsline {section}{\numberline {4.4}Optimality Conditions}{79}{section.4.4}
-\contentsline {chapter}{\numberline {5}Optimised Ascent Trajectory}{81}{chapter.5}
-\contentsline {section}{\numberline {5.1}Current Methodology}{81}{section.5.1}
-\contentsline {subsubsection}{Second Stage Optimisation - Constant Dynamic Pressure, Minimum Pull-Up}{82}{section*.101}
-\contentsline {subsubsection}{Second Stage Optimisation - Maximised Payload}{82}{section*.102}
-\contentsline {section}{\numberline {5.2}Optimised Ascent Trajectory Results}{83}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}First Stage Evaluation - q=50kpa Second Stage Separation}{83}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Second Stage Evaluation}{84}{subsection.5.2.2}
-\contentsline {subsubsection}{Fixed Dynamic Pressure Trajectory, Minimum Pull-Up}{84}{section*.105}
-\contentsline {subsubsection}{Dynamic Pressure Limited Trajectory}{86}{section*.109}
-\contentsline {subsubsection}{Dynamic Pressure Sensitivity}{88}{section*.113}
-\contentsline {subsubsection}{Drag Sensitivity Analysis}{90}{section*.117}
-\contentsline {subsection}{\numberline {5.2.3}Third Stage Evaluation}{91}{subsection.5.2.3}
-\contentsline {chapter}{\numberline {6}Optimised Trajectory Including Fly-Back}{93}{chapter.6}
-\contentsline {section}{\numberline {6.1}Combined SPARTAN Ascent-Descent \& Third Stage}{94}{section.6.1}
-\contentsline {section}{\numberline {6.2}Fly-Back Trajectory Analysis}{94}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Optimised Trajectory}{99}{subsection.6.2.1}
-\contentsline {subsubsection}{ Initial Turn}{99}{section*.127}
-\contentsline {subsubsection}{ Boost Phase}{99}{section*.128}
-\contentsline {subsubsection}{ Skip-Glide}{100}{section*.129}
-\contentsline {subsubsection}{ Approach}{100}{section*.130}
-\contentsline {subsection}{\numberline {6.2.2}Sensitivity Analysis}{100}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Conclusion}{101}{subsection.6.2.3}
-\contentsline {chapter}{\numberline {7}Conclusions}{103}{chapter.7}
-\contentsline {section}{\numberline {7.1}Recommendations for future work}{103}{section.7.1}
-\contentsline {chapter}{Library}{105}{chapter*.131}
-\contentsline {chapter}{\numberline {A}GPOPS-2 Example - Brachistochrone Problem}{117}{appendix.A}
-\contentsline {chapter}{\numberline {B}Trajectory results}{119}{appendix.B}
-\contentsline {chapter}{\numberline {C}CART3D Results}{121}{appendix.C}
-\contentsline {section}{\numberline {C.1}Engine-On Plume Check}{121}{section.C.1}
-\contentsline {section}{\numberline {C.2}CART3D Results}{121}{section.C.2}
+\contentsline {subsection}{\numberline {4.2.4}\leavevmode {\color {red}V.} Third Stage Powered Ascent}{76}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}\leavevmode {\color {red}VI.} Third Stage Unpowered Ascent}{77}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.6}\leavevmode {\color {red}VII.} Hohmann Transfer}{77}{subsection.4.2.6}
+\contentsline {section}{\numberline {4.3}Optimal Solution Analysis}{78}{section.4.3}
+\contentsline {section}{\numberline {4.4}The Optimisation Process}{80}{section.4.4}
+\contentsline {chapter}{\numberline {5}Optimised Ascent Trajectory}{83}{chapter.5}
+\contentsline {section}{\numberline {5.1}Current Methodology}{83}{section.5.1}
+\contentsline {subsubsection}{Second Stage Optimisation - Constant Dynamic Pressure, Minimum Pull-Up}{84}{section*.101}
+\contentsline {subsubsection}{Second Stage Optimisation - Maximised Payload}{84}{section*.102}
+\contentsline {section}{\numberline {5.2}Optimised Ascent Trajectory Results}{85}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}First Stage Evaluation - q=50kpa Second Stage Separation}{85}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Second Stage Evaluation}{86}{subsection.5.2.2}
+\contentsline {subsubsection}{Fixed Dynamic Pressure Trajectory, Minimum Pull-Up}{86}{section*.105}
+\contentsline {subsubsection}{Dynamic Pressure Limited Trajectory}{88}{section*.109}
+\contentsline {subsubsection}{Dynamic Pressure Sensitivity}{90}{section*.113}
+\contentsline {subsubsection}{Drag Sensitivity Analysis}{92}{section*.117}
+\contentsline {subsection}{\numberline {5.2.3}Third Stage Evaluation}{93}{subsection.5.2.3}
+\contentsline {chapter}{\numberline {6}Optimised Trajectory Including Fly-Back}{95}{chapter.6}
+\contentsline {section}{\numberline {6.1}Combined SPARTAN Ascent-Descent \& Third Stage}{96}{section.6.1}
+\contentsline {section}{\numberline {6.2}Fly-Back Trajectory Analysis}{96}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Optimised Trajectory}{101}{subsection.6.2.1}
+\contentsline {subsubsection}{ Initial Turn}{101}{section*.127}
+\contentsline {subsubsection}{ Boost Phase}{101}{section*.128}
+\contentsline {subsubsection}{ Skip-Glide}{102}{section*.129}
+\contentsline {subsubsection}{ Approach}{102}{section*.130}
+\contentsline {subsection}{\numberline {6.2.2}Sensitivity Analysis}{102}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Conclusion}{103}{subsection.6.2.3}
+\contentsline {section}{\numberline {6.3}mode21}{103}{section.6.3}
+\contentsline {chapter}{\numberline {7}Conclusions}{107}{chapter.7}
+\contentsline {section}{\numberline {7.1}Recommendations for future work}{107}{section.7.1}
+\contentsline {chapter}{Library}{109}{chapter*.134}
+\contentsline {chapter}{\numberline {A}GPOPS-2 Example - Brachistochrone Problem}{121}{appendix.A}
+\contentsline {chapter}{\numberline {B}Trajectory results}{123}{appendix.B}
+\contentsline {chapter}{\numberline {C}CART3D Results}{125}{appendix.C}
+\contentsline {section}{\numberline {C.1}Engine-On Plume Check}{125}{section.C.1}
+\contentsline {section}{\numberline {C.2}CART3D Results}{125}{section.C.2}
