@@ -53,31 +53,6 @@
     \field{year}{2013}
   \endentry
 
-  \entry{Lynx}{misc}{}
-    \name{author}{1}{}{%
-      {{hash=AX}{%
-         family={Aerospace},
-         familyi={A\bibinitperiod},
-         given={Xcor},
-         giveni={X\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{AX1}
-    \strng{fullhash}{AX1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{A}
-    \field{sortinithash}{A}
-    \field{title}{{Lynx Sppacecraft}}
-    \verb{url}
-    \verb https://xcor.com/launch/lynx-spacecraft/
-    \endverb
-    \field{year}{2017}
-    \field{urlday}{30}
-    \field{urlmonth}{11}
-    \field{urlyear}{2017}
-  \endentry
-
   \entry{Aftosmis2011}{inproceedings}{}
     \name{author}{3}{}{%
       {{hash=AMJ}{%
@@ -251,10 +226,10 @@
     \field{year}{2016}
   \endentry
 
-  \entry{ARCA}{misc}{}
+  \entry{astos}{misc}{}
     \name{author}{1}{}{%
       {{hash=A}{%
-         family={ARCA},
+         family={{Astos Solutions}},
          familyi={A\bibinitperiod},
       }}%
     }
@@ -264,35 +239,14 @@
     \field{labeltitlesource}{title}
     \field{sortinit}{A}
     \field{sortinithash}{A}
-    \field{title}{{Haas2CA}}
-    \verb{url}
-    \verb http://www.arcaspace.com/en/haas2c.htm
-    \endverb
-    \field{year}{2017}
-    \field{urlday}{01}
-    \field{urlmonth}{12}
-    \field{urlyear}{2017}
-  \endentry
-
-  \entry{astos}{misc}{}
-    \name{author}{1}{}{%
-      {{hash=A}{%
-         family={{Astos Solutions}},
-         familyi={A\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{A2}
-    \strng{fullhash}{A2}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{A}
-    \field{sortinithash}{A}
     \field{title}{{Astos Solutions}}
     \verb{url}
     \verb https://www.astos.de/
     \endverb
     \field{year}{2018}
-    \warn{\item Invalid format of field 'urldate'}
+    \field{urlday}{24}
+    \field{urlmonth}{07}
+    \field{urlyear}{2018}
   \endentry
 
   \entry{BBC}{misc}{}
@@ -473,6 +427,34 @@
     \endverb
     \field{journaltitle}{Journal of Propulsion and Power}
     \field{year}{1993}
+  \endentry
+
+  \entry{Boain2004}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BRJ}{%
+         family={Boain},
+         familyi={B\bibinitperiod},
+         given={Ronald\bibnamedelima J},
+         giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BRJ1}
+    \strng{fullhash}{BRJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{abstract}{%
+    NASA%
+    }
+    \field{pages}{1\bibrangedash 19}
+    \field{title}{{A-B-Cs of Sun-Synchronous Orbit Mission Design 14 AAS / AIAA
+  Space Flight Mechanics Conference}}
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Boain.pdf:pdf
+    \endverb
+    \field{journaltitle}{14th AAS/AIAA Space Flight Mechanics Conference}
+    \field{year}{2004}
   \endentry
 
   \entry{Boggs2000}{article}{}
@@ -752,7 +734,9 @@
     \verb https://post2.larc.nasa.gov/
     \endverb
     \field{year}{2017}
-    \warn{\item Invalid format of field 'urldate'}
+    \field{urlday}{24}
+    \field{urlmonth}{07}
+    \field{urlyear}{2018}
   \endentry
 
   \entry{Composites}{article}{}
@@ -1384,7 +1368,9 @@
     \verb https://otis.grc.nasa.gov/index.html
     \endverb
     \field{year}{2016}
-    \warn{\item Invalid format of field 'urldate'}
+    \field{urlday}{24}
+    \field{urlmonth}{07}
+    \field{urlyear}{2018}
   \endentry
 
   \entry{Fasano2013}{book}{}
@@ -2299,7 +2285,9 @@
     \verb{url}
     \verb https://jmodelica.org/
     \endverb
-    \warn{\item Invalid format of field 'urldate'}
+    \field{urlday}{24}
+    \field{urlmonth}{07}
+    \field{urlyear}{2018}
   \endentry
 
   \entry{Josselyn2002a}{article}{}
@@ -3307,7 +3295,9 @@
     \verb{url}
     \verb https://www.grc.nasa.gov/WWW/k-12/airplane/eulereqs.html
     \endverb
-    \warn{\item Invalid format of field 'urldate'}
+    \field{urlday}{24}
+    \field{urlmonth}{07}
+    \field{urlyear}{2018}
   \endentry
 
   \entry{iclocs}{misc}{}
@@ -3342,7 +3332,9 @@
     \verb http://www.ee.ic.ac.uk/ICLOCS/
     \endverb
     \field{year}{2018}
-    \warn{\item Invalid format of field 'urldate'}
+    \field{urlday}{24}
+    \field{urlmonth}{07}
+    \field{urlyear}{2018}
   \endentry
 
   \entry{Niederstrasser2015}{article}{}
@@ -4663,6 +4655,29 @@
     \field{year}{1990}
   \endentry
 
+  \entry{NASASSO}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=SR}{%
+         family={Simmon},
+         familyi={S\bibinitperiod},
+         given={Robert},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SR1}
+    \strng{fullhash}{SR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{{Three Classes of Orbit}}
+    \verb{url}
+    \verb https://earthobservatory.nasa.gov/Features/OrbitsCatalog/page2.php
+    \endverb
+    \field{year}{2009}
+    \warn{\item Invalid format of field 'urldate'}
+  \endentry
+
   \entry{Smart2007a}{article}{}
     \name{author}{1}{}{%
       {{hash=SM}{%
@@ -5245,32 +5260,6 @@
     \field{year}{1992}
   \endentry
 
-  \entry{MATLAB}{misc}{}
-    \name{author}{1}{}{%
-      {{hash=T}{%
-         family={{The MathWorks Inc.}},
-         familyi={T\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {The MathWorks, Inc.}%
-    }
-    \strng{namehash}{T1}
-    \strng{fullhash}{T1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{T}
-    \field{sortinithash}{T}
-    \field{title}{{MATLAB and Optimization Toolbox Release 2014b}}
-    \verb{url}
-    \verb www.mathworks.com
-    \endverb
-    \list{location}{1}{%
-      {Natick, Massachusetts, United States.}%
-    }
-    \field{year}{2014}
-  \endentry
-
   \entry{Tian2011}{article}{}
     \name{author}{2}{}{%
       {{hash=TB}{%
@@ -5605,7 +5594,9 @@
     \verb http://www.astronautix.com/
     \endverb
     \field{year}{2017}
-    \warn{\item Invalid format of field 'urldate'}
+    \field{urlday}{24}
+    \field{urlmonth}{07}
+    \field{urlyear}{2018}
   \endentry
 
   \entry{Wassel2013}{article}{}

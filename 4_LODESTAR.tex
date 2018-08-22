@@ -95,7 +95,25 @@ The dynamics of all stages are calculated using an geodetic rotational reference
 
 
 
+\section{Mission Definition}
+LODESTAR has been developed to be able to simulate any mission desired of the rocket-scramjet-rocket launch system. However, the configuration of the optimal control routines must be tailored towards the specific mission profile desired.
+The mission chosen for the optimal trajectory calculation is a launch to sun synchronous orbit. 
+A satellite in sun synchronous orbit is close to polar inclination, regressing so that it keeps its orbital alignment to the sun. The sun synchronous is one of the most commonly used types of orbit for space science missions, as it has many useful properties\cite{Boain2004}. A sun synchonous orbit allows for global coverage, passing over each latitude at the same time each day, illustrated in Figure \ref{fig:SSO}. It also allows for a satellite to either have full sun and have consistent power generation, or alternatively, allows for a satellite to have a consistent 'dark side' each day to alleviate thermal issues\cite{Boain2004}. A sun synchronous orbit at 566km has been used in previous studies as the target orbit\cite{Preller2017b}, and this orbit is also used for the current work. 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.8\linewidth]{figures/4_LODESTAR/SSO}
+\caption{Sun synchronous orbit illustration, passing over the equator at the same time each day\cite{NASASSO}.}
+\label{fig:SSO}
+\end{figure}
 
+The launch site selected for the simulation is the proposed Equatorial Launch Australia launch site near Nhulunbuy in the Northern Territory, Australia[CITEXX]. This proposed launch site looks to take advantage of the remoteness of northern Australia, as well as its close proximity to the equator. While the proximity to the equator of this launch site is slightly disadvantageous for launch to sun synchronous orbits, the possibility of launch directions from this location, and its active development, make it an appropriate choice as a practical launch location within Australia. The site is 'about 30km south of Nhulunbuy'[CITEXX news.com.au] which places it within the approximate region indicated in Figure \ref{fig:SiteLocation}.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.7\linewidth]{figures/4_LODESTAR/SiteLocation}
+\caption{Approximate location of ELA launch site. Image from Google maps.}
+\label{fig:SiteLocation}
+\end{figure}
 
 
 \section{Optimal Control Problem Structure}
@@ -229,10 +247,10 @@ During the vertical launch the rocket is assumed to need no control, and is held
 \subsubsection{\textcolor{red}{\rom{2}.} First Stage Pitching Ascent}
 
 At 90m altitude and 15m/s velocity, pitchover occurs. The pitchover is a very minor amount of instantaneous pitching (0.01$^\circ$) which is introduced in order to begin the pitching ascent, allowing the 6DOF dynamics of the vehicle to resolve correctly. 
-The first stage pitching ascent trajectory is an angle of attack controlled phase in the optimisation routine, which is simulated from pitchover until second stage separation. During this phase, the launch system is allowed to fly at negative angles of attack, to assist in pitching. 
-The fuel mass of the first stage rocket is unconstrained, as small variations in the initial fuel mass can have an important effect on the capabilities of the first stage. The fuel mass can influence the velocity achievable at first to second stage separation, as well as the rate at which the rocket is able to pitch, and consequentially, the altitude and flight path angle range of the first stage.
+The first stage pitching ascent trajectory is an angle of attack controlled phase in the optimisation routine, which is simulated from pitchover until second stage separation. Table \ref{tab:1ststagesetup} shows the optimisation setup of this phase. During this phase, the launch system is allowed to fly at negative angles of attack, to assist in pitching. The control of this phase is the second derivative of angle of attack. This is chosen as the control variable to assist in mitigating the first stage's sensitivity to angle of attack, ie. when the trajectory angle is near 90$^\circ$ and at low velocities, the effect of changes in angle of attack is very large. Using the second derivative of angle of attack as the control variable smooths the angle of attack change rate and improves the optimised solution. 
+The initial fuel mass of the first stage rocket is unconstrained, as small variations in the initial fuel mass can have an important effect on the capabilities of the first stage. The fuel mass can influence the velocity achievable at first to second stage separation, as well as the rate at which the rocket is able to pitch, and consequentially, the altitude and flight path angle range of the first stage.
 Allowing the initial fuel mass to vary increases the flexibility of the optimal control solver, though it is expected that the maximum allowable fuel mass will be used in most cases. 
-
+The bounds on the latitude and longitude are chosen to cover the possible solution space, and are kept consistent across each phase to ensure that the position of the vehicle is not being unreasonably constrained between segments. The velocity constraints are chosen to cover the possible solution space, with the lower bound of 10m/s chosen to not allow the velocity to approach 0m/s, which produces singularities within the system dynamics. 
 
 \begin{table}[ht]
 \centering
@@ -247,7 +265,7 @@ Allowing the initial fuel mass to vary increases the flexibility of the optimal 
 \end{tabular} 
 
 \caption{Optimisation setup of the first stage phase. }
-
+\label{tab:1ststagesetup}
 \end{table}
 
 
@@ -256,6 +274,8 @@ Allowing the initial fuel mass to vary increases the flexibility of the optimal 
 The second stage ascent phase consists of the acceleration of the SPARTAN scramjet-powered vehicle. 
 The ascent trajectory of the SPARTAN is controlled using angle of attack and bank angle. The aerodynamics of the SPARTAN are interpolated from the engine on database developed as described in Sections \ref{sec:database} and \ref{sec:engine-on}. The engine properties are determined as described in Section \ref{sec:Propulsion}.
 During the ascent, the engines are assumed to be operating at the maximum equivalence ratio at all times. This is 1 in most sections of the trajectory, except at low mach numbers where the possibility of unstart and choking necessitates a reduction in equivalence ratio. This trajectory is constrained to a maximum dynamic pressure of 50kPa, corresponding to the maximum structural limits of the vehicle. Aerodynamic and propulsion databases are generated as described in Sections \ref{sec:Propulsion} and \ref{sec:aero}. The lift and drag of the vehicle is interpolated from of the trimmed aerodynamics database and the propulsion is determined from interpolation of the C-REST database. 
+The control variables are set as angle of attack and bank angle change rate. Using the derivatives of the angle of attack and bank angle as the control variables serves to smooth the angle of attack and bank angle by constraining the change rates to reasonable values. The angle of attack is constrained to 10$^\circ$, approximated as a reasonable upper bound to the angle of attack, and the limit to which the aerodynamic characteristics of the SPARTAN are modelled. The bank angle is constrained to 90$^\circ$, as it is assumed that the SPARTAN is not able to invert. The bank angle is also constrained to positive values only (ie. that the heading angle may only increase) as the SPARTAN is launched from the ELA launch site at Nhulunbuy, and must be launched to the northeast or east to avoid overflying populated areas. 
+
 
 \begin{table}[ht]
 	\centering
@@ -266,7 +286,7 @@ During the ascent, the engines are assumed to be operating at the maximum equiva
 	\hline Path Constraints & Dynamic Pressure& 0 - 50kPa\\ 
 	\hline Target Cost & Dynamic Pressure$^*$ & $(q-50000)^2/50000$\\ 
 			\hline Control Variables & $\dot{\alpha}$ &  $\pm0.5^\circ$/s\\  & $\dot{\eta}$ &  $\pm1^\circ$/s\\ 
-			\hline State Variables & Altitude & 0 - 50km\\ & Velocity& 10 - 3000m/s\\ & Trajectory Angle& $-28.6^\circ$ - $15^\circ$\\   & Latitude&$\pm28.6^\circ$ \\  & Longitude& $114.6^\circ$ - $171.9^\circ$\\   & Heading Angle& $-240^\circ$ - $360^\circ$ \\  & Fuel Mass& 0 - 1562kg \\  & Angle of Attack ($\alpha$)&  $-5^\circ$ - 0$^\circ$\\  & Bank Angle $\eta$& $-10^\circ$ - $90^\circ$ \\  
+			\hline State Variables & Altitude & 0 - 50km\\ & Velocity& 10 - 3000m/s\\ & Trajectory Angle& $-28.6^\circ$ - $15^\circ$\\   & Latitude&$\pm28.6^\circ$ \\  & Longitude& $114.6^\circ$ - $171.9^\circ$\\   & Heading Angle& $-240^\circ$ - $360^\circ$ \\  & Fuel Mass& 0 - 1562kg \\  & Angle of Attack ($\alpha$)&  0$^\circ$ - $10^\circ$ \\  & Bank Angle $\eta$& $-1^\circ$ - $90^\circ$ \\  
 	\hline 
 \end{tabular} 
 \caption{$^*$ This is only used in the constant dynamic pressure simulation.}
@@ -298,8 +318,6 @@ and the thrust of the engine is assumed to scale linearly with the fuel mass flo
 \end{tabular} 
 
 \end{table}
-
-\textcolor{red}{provide some description as to the differences in the bounds}
 
 \subsection{\textcolor{red}{\rom{5}.} Third Stage Powered Ascent}
 The trajectory of the third stage rocket is separated into the powered and unpowered phases of ascent.

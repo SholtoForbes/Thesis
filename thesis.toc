@@ -32,64 +32,65 @@
 \contentsline {chapter}{\numberline {3}Launch Vehicle Design and Simulation}{41}{chapter.3}
 \contentsline {section}{\numberline {3.1}Second Stage Scramjet}{44}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}The SPARTAN Accelerator}{44}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Propulsion}{45}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.2}Propulsion}{44}{subsection.3.1.2}
 \contentsline {subsubsection}{Propulsion Modelling}{45}{section*.57}
 \contentsline {subsection}{\numberline {3.1.3}The Aerodynamics of the SPARTAN}{48}{subsection.3.1.3}
 \contentsline {subsubsection}{CART3D}{49}{section*.62}
 \contentsline {subsubsection}{Viscous Correction}{49}{section*.63}
-\contentsline {subsubsection}{Trim Analysis}{49}{section*.64}
-\contentsline {subsubsection}{Database Generation}{52}{section*.69}
-\contentsline {subsubsection}{Engine-On Aerodynamics}{53}{section*.72}
-\contentsline {subsubsection}{Engine-Off Aerodynamics}{56}{section*.78}
-\contentsline {section}{\numberline {3.2}First Stage Rocket}{57}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Aerodynamics Including First Stage}{58}{subsection.3.2.1}
+\contentsline {subsubsection}{Trim Analysis}{51}{section*.65}
+\contentsline {subsubsection}{Database Generation}{53}{section*.70}
+\contentsline {subsubsection}{Engine-On Aerodynamics}{55}{section*.73}
+\contentsline {subsubsection}{Engine-Off Aerodynamics}{57}{section*.79}
+\contentsline {section}{\numberline {3.2}First Stage Rocket}{58}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Aerodynamics Including First Stage}{59}{subsection.3.2.1}
 \contentsline {section}{\numberline {3.3}Third Stage Rocket - Baseline}{60}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Heat Shield Sizing}{62}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Fuel Tank Sizing}{63}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}The Aerodynamics of the Third Stage Rocket}{64}{subsection.3.3.3}
-\contentsline {subsubsection}{Thrust Vectoring}{64}{section*.91}
-\contentsline {chapter}{\numberline {4}LODESTAR}{67}{chapter.4}
-\contentsline {section}{\numberline {4.1}Vehicle Simulation}{69}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}6DOF Equations of Motion}{69}{subsection.4.1.1}
-\contentsline {section}{\numberline {4.2}Optimal Control Problem Structure}{70}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Trajectory Connection Points}{72}{subsection.4.2.1}
-\contentsline {subsubsection}{\leavevmode {\color {red}I.} First Stage Vertical Ascent}{74}{section*.98}
-\contentsline {subsubsection}{\leavevmode {\color {red}II.} First Stage Pitching Ascent}{75}{section*.99}
-\contentsline {subsection}{\numberline {4.2.2}\leavevmode {\color {red}III.} Second Stage Ascent Trajectory}{76}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}\leavevmode {\color {red}IV.} Second Stage Return Trajectory}{76}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}\leavevmode {\color {red}V.} Third Stage Powered Ascent}{78}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}\leavevmode {\color {red}VI.} Third Stage Unpowered Ascent}{79}{subsection.4.2.5}
-\contentsline {subsection}{\numberline {4.2.6}\leavevmode {\color {red}VII.} Hohmann Transfer}{79}{subsection.4.2.6}
-\contentsline {section}{\numberline {4.3}Optimal Solution Analysis}{80}{section.4.3}
-\contentsline {section}{\numberline {4.4}The Optimisation Process}{82}{section.4.4}
-\contentsline {chapter}{\numberline {5}Optimised Ascent Trajectory}{85}{chapter.5}
-\contentsline {section}{\numberline {5.1}Current Methodology}{85}{section.5.1}
-\contentsline {subsubsection}{Second Stage Optimisation - Constant Dynamic Pressure, Minimum Pull-Up}{86}{section*.106}
-\contentsline {subsubsection}{Second Stage Optimisation - Maximised Payload}{86}{section*.107}
-\contentsline {section}{\numberline {5.2}Optimised Ascent Trajectory Results}{87}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}First Stage Evaluation - q=50kpa Second Stage Separation}{87}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Second Stage Evaluation}{88}{subsection.5.2.2}
-\contentsline {subsubsection}{Fixed Dynamic Pressure Trajectory, Minimum Pull-Up}{88}{section*.110}
-\contentsline {subsubsection}{Dynamic Pressure Limited Trajectory}{90}{section*.114}
-\contentsline {subsubsection}{Dynamic Pressure Sensitivity}{92}{section*.118}
-\contentsline {subsubsection}{Drag Sensitivity Analysis}{94}{section*.122}
-\contentsline {subsection}{\numberline {5.2.3}Third Stage Evaluation}{95}{subsection.5.2.3}
-\contentsline {chapter}{\numberline {6}Optimised Trajectory Including Fly-Back}{97}{chapter.6}
-\contentsline {section}{\numberline {6.1}Combined SPARTAN Ascent-Descent \& Third Stage}{98}{section.6.1}
-\contentsline {section}{\numberline {6.2}Fly-Back Trajectory Analysis}{98}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Optimised Trajectory}{103}{subsection.6.2.1}
-\contentsline {subsubsection}{ Initial Turn}{103}{section*.132}
-\contentsline {subsubsection}{ Boost Phase}{103}{section*.133}
-\contentsline {subsubsection}{ Skip-Glide}{104}{section*.134}
-\contentsline {subsubsection}{ Approach}{104}{section*.135}
-\contentsline {subsection}{\numberline {6.2.2}Sensitivity Analysis}{104}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Conclusion}{105}{subsection.6.2.3}
-\contentsline {section}{\numberline {6.3}mode21}{105}{section.6.3}
-\contentsline {chapter}{\numberline {7}Conclusions}{109}{chapter.7}
-\contentsline {section}{\numberline {7.1}Recommendations for future work}{109}{section.7.1}
-\contentsline {chapter}{Library}{111}{chapter*.139}
-\contentsline {chapter}{\numberline {A}GPOPS-2 Example - Brachistochrone Problem}{123}{appendix.A}
-\contentsline {chapter}{\numberline {B}Trajectory results}{125}{appendix.B}
-\contentsline {chapter}{\numberline {C}CART3D Results}{127}{appendix.C}
-\contentsline {section}{\numberline {C.1}Engine-On Plume Check}{127}{section.C.1}
-\contentsline {section}{\numberline {C.2}CART3D Results}{127}{section.C.2}
+\contentsline {subsection}{\numberline {3.3.1}Heat Shield Sizing}{63}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Fuel Tank Sizing}{66}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}The Aerodynamics of the Third Stage Rocket}{66}{subsection.3.3.3}
+\contentsline {subsubsection}{Thrust Vectoring}{66}{section*.93}
+\contentsline {chapter}{\numberline {4}LODESTAR}{69}{chapter.4}
+\contentsline {section}{\numberline {4.1}Vehicle Simulation}{71}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}6DOF Equations of Motion}{71}{subsection.4.1.1}
+\contentsline {section}{\numberline {4.2}Mission Definition}{72}{section.4.2}
+\contentsline {section}{\numberline {4.3}Optimal Control Problem Structure}{74}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Trajectory Connection Points}{76}{subsection.4.3.1}
+\contentsline {subsubsection}{\leavevmode {\color {red}I.} First Stage Vertical Ascent}{78}{section*.102}
+\contentsline {subsubsection}{\leavevmode {\color {red}II.} First Stage Pitching Ascent}{78}{section*.103}
+\contentsline {subsection}{\numberline {4.3.2}\leavevmode {\color {red}III.} Second Stage Ascent Trajectory}{79}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}\leavevmode {\color {red}IV.} Second Stage Return Trajectory}{80}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}\leavevmode {\color {red}V.} Third Stage Powered Ascent}{81}{subsection.4.3.4}
+\contentsline {subsection}{\numberline {4.3.5}\leavevmode {\color {red}VI.} Third Stage Unpowered Ascent}{82}{subsection.4.3.5}
+\contentsline {subsection}{\numberline {4.3.6}\leavevmode {\color {red}VII.} Hohmann Transfer}{83}{subsection.4.3.6}
+\contentsline {section}{\numberline {4.4}Optimal Solution Analysis}{84}{section.4.4}
+\contentsline {section}{\numberline {4.5}The Optimisation Process}{86}{section.4.5}
+\contentsline {chapter}{\numberline {5}Optimised Ascent Trajectory}{89}{chapter.5}
+\contentsline {section}{\numberline {5.1}Current Methodology}{89}{section.5.1}
+\contentsline {subsubsection}{Second Stage Optimisation - Constant Dynamic Pressure, Minimum Pull-Up}{90}{section*.110}
+\contentsline {subsubsection}{Second Stage Optimisation - Maximised Payload}{90}{section*.111}
+\contentsline {section}{\numberline {5.2}Optimised Ascent Trajectory Results}{91}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}First Stage Evaluation - q=50kpa Second Stage Separation}{91}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Second Stage Evaluation}{92}{subsection.5.2.2}
+\contentsline {subsubsection}{Fixed Dynamic Pressure Trajectory, Minimum Pull-Up}{92}{section*.114}
+\contentsline {subsubsection}{Dynamic Pressure Limited Trajectory}{94}{section*.118}
+\contentsline {subsubsection}{Dynamic Pressure Sensitivity}{96}{section*.122}
+\contentsline {subsubsection}{Drag Sensitivity Analysis}{98}{section*.126}
+\contentsline {subsection}{\numberline {5.2.3}Third Stage Evaluation}{99}{subsection.5.2.3}
+\contentsline {chapter}{\numberline {6}Optimised Trajectory Including Fly-Back}{101}{chapter.6}
+\contentsline {section}{\numberline {6.1}Combined SPARTAN Ascent-Descent \& Third Stage}{102}{section.6.1}
+\contentsline {section}{\numberline {6.2}Fly-Back Trajectory Analysis}{102}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Optimised Trajectory}{107}{subsection.6.2.1}
+\contentsline {subsubsection}{ Initial Turn}{107}{section*.136}
+\contentsline {subsubsection}{ Boost Phase}{107}{section*.137}
+\contentsline {subsubsection}{ Skip-Glide}{108}{section*.138}
+\contentsline {subsubsection}{ Approach}{108}{section*.139}
+\contentsline {subsection}{\numberline {6.2.2}Sensitivity Analysis}{108}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Conclusion}{109}{subsection.6.2.3}
+\contentsline {section}{\numberline {6.3}mode21}{109}{section.6.3}
+\contentsline {chapter}{\numberline {7}Conclusions}{113}{chapter.7}
+\contentsline {section}{\numberline {7.1}Recommendations for future work}{113}{section.7.1}
+\contentsline {chapter}{Library}{115}{chapter*.143}
+\contentsline {chapter}{\numberline {A}GPOPS-2 Example - Brachistochrone Problem}{129}{appendix.A}
+\contentsline {chapter}{\numberline {B}Trajectory results}{131}{appendix.B}
+\contentsline {chapter}{\numberline {C}CART3D Results}{133}{appendix.C}
+\contentsline {section}{\numberline {C.1}Engine-On Plume Check}{133}{section.C.1}
+\contentsline {section}{\numberline {C.2}CART3D Results}{133}{section.C.2}
