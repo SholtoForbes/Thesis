@@ -1,7 +1,13 @@
 % details-of-test-conditions.tex
 
+\chapter{Propulsion Interpolation Scheme}
 
-
+\begin{figure}
+\centering
+\includegraphics[width=0.8\linewidth]{figures/A1_uncertainty-analysis/interp}
+\caption{}
+\label{fig:interp}
+\end{figure}
 
 \chapter{GPOPS-2 Example - Brachistochrone Problem}
 This section describes a short example of an optimal control problem solved in GPOPS-II. The purpose of this example is to demonstrate the effectiveness of the pseudospectral method and GPOPS-II, and to provide a simple example case to establish the terminology of an optimal control problem.  
@@ -48,6 +54,7 @@ The GPOPS-2 solution to the Brachistochrone problem is shown in Figure \ref{fig:
 \end{figure}
 
 
+\chapter{Initial Guesses}
 
 
 \chapter{Trajectory results}
@@ -97,3 +104,29 @@ The GPOPS-2 solution to the Brachistochrone problem is shown in Figure \ref{fig:
 			\caption{CART3D flow result for the SPARTAN, at Mach 3, 6$^\circ$ angle of attack.}
 			\label{fig:M3AoA6}
 		\end{figure}
+		
+		
+		
+		\section{verification}
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.7\linewidth]{../LODESTAR_FINAL/Results/mode11/HamiltonianStandard}
+			\caption{}
+			\label{fig:HamiltonianStandard}
+		\end{figure}
+		
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.7\linewidth]{../LODESTAR_FINAL/Results/mode11/VerificationStandard}
+			\caption{}
+			\label{fig:VerificationStandard}
+		\end{figure}
+		
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.7\linewidth]{../LODESTAR_FINAL/Results/mode11/ForwardErrorStandard}
+			\caption{}
+			\label{fig:ForwardErrorStandard}
+		\end{figure}
+		
+		

@@ -31,7 +31,7 @@ The external modules calculate the aerodynamic and engine performance of the lau
 
 Due to the nature of the pseudospectral method, it is possible that GPOPS-2 will not be able to converge to a physically valid or optimal solution. 
 LODESTAR contains a number of verification modules which assess the optimised trajectory solution to ensure that the solution has converged sufficiently, and that the dynamics of the solution are accurate. 
-To aid in ensuring that an optimal solution is reached, GPOPS-2 is initiated from four separate initial guesses, with final altitude varied by 1km between each guess. These iterations of GPOPS-2 are run in parallel, using Matlab's Parfor function. After all iterations of GPOPS-2 have completed, the state feasibility is calculated for each solution. The 'best' solution is chosen as the solution with the most accurately modelled dynamics. 
+To aid in ensuring that an optimal solution is reached, GPOPS-2 is initiated from four separate initial guesses, with final altitude guess varied by 1km between each guess. These iterations of GPOPS-2 are run in parallel, using Matlab's Parfor function. After all iterations of GPOPS-2 have completed, the state feasibility is calculated for each solution. The 'best' solution is chosen as the solution with the most accurately modelled dynamics. 
 
 
 
@@ -111,7 +111,7 @@ The launch site selected for the simulation is the proposed Equatorial Launch Au
 \begin{figure}[ht]
 \centering
 \includegraphics[width=0.7\linewidth]{figures/4_LODESTAR/SiteLocation}
-\caption{Approximate location of ELA launch site. Image from Google maps.}
+\caption{Approximate location of the ELA launch site. Image from Google maps.}
 \label{fig:SiteLocation}
 \end{figure}
 
@@ -250,12 +250,13 @@ At 90m altitude and 15m/s velocity, pitchover occurs. The pitchover is a very mi
 The first stage pitching ascent trajectory is an angle of attack controlled phase in the optimisation routine, which is simulated from pitchover until second stage separation. Table \ref{tab:1ststagesetup} shows the optimisation setup of this phase. During this phase, the launch system is allowed to fly at negative angles of attack, to assist in pitching. The control of this phase is the second derivative of angle of attack. This is chosen as the control variable to assist in mitigating the first stage's sensitivity to angle of attack, ie. when the trajectory angle is near 90$^\circ$ and at low velocities, the effect of changes in angle of attack is very large. Using the second derivative of angle of attack as the control variable smooths the angle of attack change rate and improves the optimised solution. 
 The initial fuel mass of the first stage rocket is unconstrained, as small variations in the initial fuel mass can have an important effect on the capabilities of the first stage. The fuel mass can influence the velocity achievable at first to second stage separation, as well as the rate at which the rocket is able to pitch, and consequentially, the altitude and flight path angle range of the first stage.
 Allowing the initial fuel mass to vary increases the flexibility of the optimal control solver, though it is expected that the maximum allowable fuel mass will be used in most cases. 
-The bounds on the latitude and longitude are chosen to cover the possible solution space, and are kept consistent across each phase to ensure that the position of the vehicle is not being unreasonably constrained between segments. The velocity constraints are chosen to cover the possible solution space, with the lower bound of 10m/s chosen to not allow the velocity to approach 0m/s, which produces singularities within the system dynamics. 
+The bounds on the latitude and longitude are chosen to cover the possible solution space, and are kept consistent across each phase to ensure that the position of the vehicle is not being unreasonably constrained between segments. The velocity constraints are chosen to cover the possible solution space, with the lower bound of 10m/s chosen to not allow the velocity to approach 0m/s, which produces singularities within the system dynamics. This velocity limit is true for all phases. 
+The other bounds on the state dynamics are chosen to encompass the solution space, while not being overly expansive, to assist with the convergence and scaling of the optimal control solver, this is true for most of the bounds in all phases. 
 
 \begin{table}[ht]
 \centering
 \begin{tabular}{|c|c|c|}
-	\hline \textbf{Variable Group}  & \textbf{Associated Variables} & \textbf{Constraints}\\
+	\hline \textbf{Variable Group}  & \textbf{Associated Variables} & \textbf{Values}\\
 	\hline Initial Constraints  & Velocity & 30m/s\\ & Altitude& 90m \\ & Latitude & $-12.16^\circ$ \\& Longitude & 136.75$^\circ$\\ & Trajectory Angle & 89.9$^\circ$\\ & Angle of Attack& 0$^\circ$\\
 	\hline Terminal Constraints & $\textbf{x}_{f,\textrm{\rom{2}}} - \textbf{x}_{0,\textrm{\rom{3}}}$ & 0\\ & $t_{f,\textrm{\rom{2}}} - t_{0,\textrm{\rom{3}}}$ & 0\\
 	\hline Path Constraints & Dynamic Pressure & 0kPa - 50kPa\\ 
@@ -274,13 +275,15 @@ The bounds on the latitude and longitude are chosen to cover the possible soluti
 The second stage ascent phase consists of the acceleration of the SPARTAN scramjet-powered vehicle. 
 The ascent trajectory of the SPARTAN is controlled using angle of attack and bank angle. The aerodynamics of the SPARTAN are interpolated from the engine on database developed as described in Sections \ref{sec:database} and \ref{sec:engine-on}. The engine properties are determined as described in Section \ref{sec:Propulsion}.
 During the ascent, the engines are assumed to be operating at the maximum equivalence ratio at all times. This is 1 in most sections of the trajectory, except at low mach numbers where the possibility of unstart and choking necessitates a reduction in equivalence ratio. This trajectory is constrained to a maximum dynamic pressure of 50kPa, corresponding to the maximum structural limits of the vehicle. Aerodynamic and propulsion databases are generated as described in Sections \ref{sec:Propulsion} and \ref{sec:aero}. The lift and drag of the vehicle is interpolated from of the trimmed aerodynamics database and the propulsion is determined from interpolation of the C-REST database. 
-The control variables are set as angle of attack and bank angle change rate. Using the derivatives of the angle of attack and bank angle as the control variables serves to smooth the angle of attack and bank angle by constraining the change rates to reasonable values. The angle of attack is constrained to 10$^\circ$, approximated as a reasonable upper bound to the angle of attack, and the limit to which the aerodynamic characteristics of the SPARTAN are modelled. The bank angle is constrained to 90$^\circ$, as it is assumed that the SPARTAN is not able to invert. The bank angle is also constrained to positive values only (ie. that the heading angle may only increase) as the SPARTAN is launched from the ELA launch site at Nhulunbuy, and must be launched to the northeast or east to avoid overflying populated areas. 
+The control variables are set as angle of attack and bank angle change rate. Using the derivatives of the angle of attack and bank angle as the control variables serves to smooth the angle of attack and bank angle by constraining the change rates to reasonable values. The angle of attack is constrained to 10$^\circ$, approximated as a reasonable upper bound to the angle of attack, and the limit to which the aerodynamic characteristics of the SPARTAN are modelled. The bank angle is constrained to a maximum of 90$^\circ$, as it is assumed that the SPARTAN is not able to invert. The bank angle is also constrained to positive values only (ie. that the heading angle may only increase) as the SPARTAN is launched from the ELA launch site at Nhulunbuy, and must be launched to the northeast or east to avoid overflying populated areas. 
+
+A cost function can be included during this phase, when flying a constant dynamic pressure trajectory is desired. This cost function is configured as a quadratic cost function around 50kPa dynamic pressure, to ensure a smooth cost function, which goes to 0 at the target dynamic pressure. The cost function approaching 0 at the target dynamic pressure allows the cost function of payload mass (which is calculated during the third stage phases) to still be active, while prioritising flying constant dynamic pressure. This cost function is scaled by a constant scalar value, which has been tuned to ensure that the target dynamic pressure is matched closely during the acceleration of the SPARTAN, while still maximising payload-to-orbit during third stage optimisation. 
 
 
 \begin{table}[ht]
 	\centering
 \begin{tabular}{|c|c|c|}
-	\hline \textbf{Variable Group}  & \textbf{Associated Variables} & \textbf{Constraints}\\
+	\hline \textbf{Variable Group}  & \textbf{Associated Variables} & \textbf{Values}\\
 	\hline Initial Constraints  & Fuel Mass & 1562kg\\ 
 	\hline Terminal Constraints & Altitude & 0 - 45km\\ & Trajectory Angle& 0 - 15$^\circ$\\  & Bank Angle $\eta$& 0$^\circ$\\  & $\textbf{x}_{f,\textrm{\rom{3}}} - \textbf{x}_{0,\textrm{\rom{4}}}$ & 0\\ & $t_{f,\textrm{\rom{3}}} - t_{0,\textrm{\rom{4}}}$ & 0\\
 	\hline Path Constraints & Dynamic Pressure& 0 - 50kPa\\ 
@@ -289,33 +292,34 @@ The control variables are set as angle of attack and bank angle change rate. Usi
 			\hline State Variables & Altitude & 0 - 50km\\ & Velocity& 10 - 3000m/s\\ & Trajectory Angle& $-28.6^\circ$ - $15^\circ$\\   & Latitude&$\pm28.6^\circ$ \\  & Longitude& $114.6^\circ$ - $171.9^\circ$\\   & Heading Angle& $-240^\circ$ - $360^\circ$ \\  & Fuel Mass& 0 - 1562kg \\  & Angle of Attack ($\alpha$)&  0$^\circ$ - $10^\circ$ \\  & Bank Angle $\eta$& $-1^\circ$ - $90^\circ$ \\  
 	\hline 
 \end{tabular} 
-\caption{$^*$ This is only used in the constant dynamic pressure simulation.}
+\caption{Optimisation setup of the second stage ascent. $^*$ This is only used in the constant dynamic pressure simulation.}
+\label{tab:SPARTANascentsetup}
 \end{table}
 
 \subsection{\textcolor{red}{\rom{4}.} Second Stage Return Trajectory}
 After releasing the third stage rocket, the scramjet-powered second stage must return back to the initial launch site. During this return flight, the SPARTAN is able to use its engines if necessary to ensure that it is able to return successfully. The aerodynamics of the SPARTAN during fly-back are determined by interpolation of the engine-on and engine-off trimmed data sets described in Section \ref{sec:aero}. As the scramjet engines are throttled on, the aerodynamics are assumed to vary linearly between the aerodynamics calculated by the engine-off and engine-on datasets. 
 During the fly-back, the SPARTAN cannot exceed its dynamic pressure limit of 50kPa. 
- The end state is constrained to a minimum of $-20^\circ$ trajectory angle, which is assumed to be an appropriate trajectory angle for approach to a landing strip. The altitude is constrained to less than 1km at the end point to ensure that the SPARTAN is approaching landing altitude.
+ The end state is constrained to a minimum of $-20^\circ$ trajectory angle, which is assumed to be an appropriate lower bound on the trajectory angle for approach to a landing strip. The altitude is constrained to less than 1km at the end point to ensure that the SPARTAN is approaching landing altitude.
  The velocity left unconstrained at the end point. Constraining the end velocity may over constrain the optimisation problem, and it is assumed that for a payload-to-orbit optimised trajectory the SPARTAN will end its return at a low velocity, so that the energy necessary for return is small. 
  
-During the return, the C-REST engines are able to be throttled on and off. The throttle is set as a control variable, variable between 0 and 1, where 1 represents the maximum equivalence ratio at that point. The fuel mass flow rate is scaled linearly with the throttle:  
+During the return, the C-REST engines are able to be throttled on and off. The throttle is set as a state variable, variable between 0 and 1, where 1 represents the maximum equivalence ratio at that point. The fuel mass flow rate is scaled linearly with the throttle:  
 \begin{equation}
 \dot{m}_{fuel} = \dot{m}_{fuel,max}throttle,
 \end{equation}
-and the thrust of the engine is assumed to scale linearly with the fuel mass flow rate. 
-
+and the thrust of the engine is assumed to scale linearly with the fuel mass flow rate. A control variable of throttle change rate is added, to smooth the throttle in the same was as angle of attack and bank angle. 
 
 \begin{table}[ht]
 	\centering
 \begin{tabular}{|c|c|c|}
-	\hline \textbf{Variable Group}  & \textbf{Associated Variables} & \textbf{Constraints}\\
+	\hline \textbf{Variable Group}  & \textbf{Associated Variables} & \textbf{Values}\\
 	\hline Initial Constraints  & Bank Angle $\eta$& 0$^\circ$ \\ 
 	\hline Terminal Constraints& Latitude & $-12.16^\circ$ \\& Longitude & 136.75$^\circ$\\
 	\hline Path Constraints & Dynamic Pressure& 0 - 50kPa\\ 
 				\hline Control Variables & $\dot{\alpha}$ &  $\pm0.5^\circ$/s\\  & $\dot{\eta}$ &  $\pm1^\circ$/s\\ & $\dot{Throttle}$& $\pm0.2$/s\\
-				\hline State Variables& Altitude & 0 - 70km\\ & Velocity& 10 - 5000m/s\\ & Trajectory Angle& $\pm80^\circ$\\    & Latitude&$\pm28.6^\circ$ \\  & Longitude& $114.6^\circ$ - $171.9^\circ$\\   & Heading Angle& $60^\circ$ - $500^\circ$ \\  & Fuel Mass& 0kg - 500kg\\  & Angle of Attack ($\alpha$)&  $-5^\circ$ - 0$^\circ$\\  & Bank Angle ($\eta$)& $0^\circ$ - 90$^\circ$\\  & Throttle & 0 - 1 \\ 
+				\hline State Variables& Altitude & 0 - 70km\\ & Velocity& 10 - 5000m/s\\ & Trajectory Angle& $\pm80^\circ$\\    & Latitude&$\pm28.6^\circ$ \\  & Longitude& $114.6^\circ$ - $171.9^\circ$\\   & Heading Angle& $60^\circ$ - $500^\circ$ \\  & Fuel Mass& 0kg - 500kg\\  & Angle of Attack ($\alpha$)&  0$^\circ$ - 10$^\circ$\\  & Bank Angle ($\eta$)& $0^\circ$ - 90$^\circ$\\  & Throttle & 0 - 1 \\ 
 	\hline 
 \end{tabular} 
+\caption{Optimisation setup of the second stage return.}
 
 \end{table}
 
@@ -328,23 +332,28 @@ The third stage rocket is constrained to an angle of attack of less than 20$^\ci
 Additionally, a maximum normal force restriction is placed on the third stage, to limit the angle of attack of the third stage by the normal force on the vehicle. However, as a detailed structural study of the third stage has not been conducted, the maximum allowable normal force on the third stage is not known.
 For consistency, the maximum allowable normal force was calculated from the conditions of previous studies. Previous studies flew the third stage rocket at a constant 10$^\circ$ angle of attack, and initially released the rocket at 50kPa[CITEXX]. 
 It is assumed that this condition of 10$^\circ$ angle of attack and 50kpa dynamic pressure produces the maximum allowable normal force to prevent the rocket from being released into an environment which could exceed its structural limitations. The maximum allowable normal force is calculated at the release Mach number, and is set as a path constraint. 
+
+The end angle of attack is constrained to 0$^\circ$, as the angle of attack will not be able to be controlled during the unpowered ascent. 
+The other terminal constraints of this phase correspond to end constraints imposed after the third stage unpowered ascent has been simulated. The altitude at the end of the unpowered ascent (Phase \rom{6}) is constrained to a lower limit of 90km, in order to ensure that the circularisation burn is exoatmospheric. The final heading angle is also constrained at this point, so that the orbit of the third stage is circularised into the correct inclination for sun synchronous orbit. 
+
 \begin{table}[ht]
 	\centering
 \begin{tabular}{|c|c|c|}
-\hline \textbf{Variable Group}  & \textbf{Associated Variables} & \textbf{Constraints}\\	\hline Initial Constraints  & Total Mass & 3300kg\\  & $\textbf{x}_{f,\textrm{\rom{3}}} - \textbf{x}_{0,\textrm{\rom{5}}}$ & 0\\ & $t_{f,\textrm{\rom{3}}} - t_{0,\textrm{\rom{5}}}$ & 0\\
+\hline \textbf{Variable Group}  & \textbf{Associated Variables} & \textbf{Values}\\	\hline Initial Constraints  & Total Mass & 3300kg\\  & $\textbf{x}_{f,\textrm{\rom{3}}} - \textbf{x}_{0,\textrm{\rom{5}}}$ & 0\\ & $t_{f,\textrm{\rom{3}}} - t_{0,\textrm{\rom{5}}}$ & 0\\
 	\hline Terminal Constraints & Alt$_{f,\textrm{\rom{6}}}$ & $\geq$90km\\ & Heading Angle, $\zeta_{f,\textrm{\rom{6}}}$ & 97.64$^\circ$\\  & Angle of Attack ($\alpha$) & 0$^\circ$\\
 	\hline Path Constraints & Angle of Attack ($\alpha$) & Maximum $F_N$\\  & Thrust Vector Angle & $\pm8^\circ$\\ 
-	\hline Target Cost & Payload-to-Orbit & -\\ 
+	\hline Target Cost & Payload-to-Orbit & Payload Calculated in Phase \rom{7}\\ 
 				\hline Control Variables & $\dot{\alpha}$ & $\pm1^\circ$\\ 
 				\hline State Variables & Altitude & 30 - 84km\\ & Velocity& 10 - 8000m/s\\ & Trajectory Angle& $-5^\circ$ - 30$^\circ$ \\   & Latitude&$\pm28.6^\circ$ \\   & Heading Angle& $80^\circ$ - 120$^\circ$\\  & Total Mass& 0kg - 3300kg \\  & Angle of Attack ($\alpha$)&  $-5^\circ$ - 0$^\circ$\\ 
 	\hline 
 \end{tabular} 
+\caption{Optimisation setup of the third stage powered ascent.}
 \end{table}
 
 \subsection{\textcolor{red}{\rom{6}.} Third Stage Unpowered Ascent}
 After the burn of the Kestrel engine is complete, the engine is cut and the third stage coasts to a point where it is able to be circularised into a low orbit. 
 The unpowered phase of the ascent is not controlled. After the engine is cut, the third stage does not have sufficient aerodynamic control to manoeuvre, and the trajectory of the third stage is a coast at 0$^\circ$ angle of attack. The trajectory of the third stage rocket is only directly optimised during the powered section of its trajectory, the unpowered section of the trajectory is simulated from the end of the controlled section of the trajectory, using a second order Taylor series approximation. This integration ceases when the flight path angle reaches 0$^{\circ}$.
-During this phase, the heat shield is released once the rocket has reached a dynamic pressure of 10Pa, where it is assumed that atmospheric effects will have ceased to have a major thermal effect.  As the third stage is required to deliver the payload into heliosynchronous orbit, the third stage must achieve an inclination of 97.63$^\circ$ at the end of this phase[CITEXX].
+During this phase, the heat shield is released once the rocket has reached a dynamic pressure of 10Pa, where it is assumed that atmospheric effects will have ceased to have a major thermal effect.  As the third stage is required to deliver the payload into heliosynchronous orbit, the third stage must achieve an inclination of 97.63$^\circ$ at the end of this phase[CITEXX]. These terminal constraints are implemented in Phase \rom{5}.
 
 
 
@@ -398,7 +407,7 @@ m_{payload} = m_4 - m_{struct}
 LODESTAR provides the capacity to analyse the optimal solution provided by the pseudospectral method solver to assist in determining whether the pseudospectral method solver has converged close to an optimal solution of the nonlinear programming problem. It is particularly useful to verify that the optimality and constraint tolerances that have been chosen are sufficiently small, or to check whether the pseudospectral method solver has approached an optimal solution in the case that the defined tolerances are not able to be reached.   
 Checking the solution is achieved through the examination of five key metrics; the IPOPT constraint violation and dual infeasibility parameters; the Hamiltonian necessary condition for optimality; the state derivatives; and finally a forward simulation. 
 
-The first metrics to be checked are the IPOPT constraint violation ($inf\textrm{-}pr$) and dual infeasibility parameter ($inf\textrm{-}du$)\cite{Kawajir2010}. The constraint violation parameter is a measure of the infinity-norm ($L_\infty\textrm{-}norm$) of the constraints of the problem\cite{Kawajir2010}. This factor must be suitably small in order to indicate that the constraints of the problem have been met. While the permissible magnitude of this factor changes with each individual problem, it is always desirable for this factor to be as small as possible. The dual infeasibility provides an indication of the optimality of the solution. A low dual infeasibility indicates that the solution is dual feasible and is likely to have approached an optimal solution. A dual feasible solution indicates that the dual problem is at least a lower bound on the optimal solution, $p^\star$, ie. $p^\star \geq g(\lambda,v)$. For more details on duality see \cite{Hindi2006}.
+The first metrics to be checked are the IPOPT constraint violation ($inf\textrm{-}pr$) and dual infeasibility parameter ($inf\textrm{-}du$)\cite{Kawajir2010}. The constraint violation parameter is a measure of the infinity-norm ($L_\infty\textrm{-}norm$) of the constraints of the problem\cite{Kawajir2010}. This factor must be suitably small in order to indicate that the constraints of the problem have been met. While the permissible magnitude of this factor changes with each individual problem, it is always desirable for this factor to be as small as possible. The dual infeasibility provides an indication of the optimality of the solution. A low dual infeasibility indicates that the solution is dual feasible and is likely to have approached an optimal solution. A dual feasible solution indicates that the dual problem is at least a lower bound on the optimal solution, $p^\star$, ie. $p^\star \geq g(\lambda,v)$. For more details on duality see Reference \cite{Hindi2006}.
  Again, the magnitude of this value is variable with each problem, though as a problem becomes more complex, the ability to converge towards an optimal solution diminishes. It should generally be observable that the $inf\textrm{-}du$ term is decreasing by multiple orders of magnitude and is stable at the completion of optimisation for a solution to be approaching optimality. In this study it is accepted that a given solution may not approach the global optimum, and multiple solutions are calculated to mitigate the error caused by the problem complexity, with the 'most optimal' solution selected. 
 
 

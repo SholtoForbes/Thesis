@@ -20,30 +20,100 @@ The sensitivity analysis in this chapter will be expanded, and will be compared 
 
 
 \section{Combined SPARTAN Ascent-Descent \& Third Stage}
+\begin{table}
+	\centering
 
+\begin{tabular}{l c } 
+	\hline \textbf{Trajectory Condition}
+	&Standard
+	\\
+	\hline \textbf{Payload to Orbit (kg)}
+	& \PayloadToOrbitStandard
+	\\
+	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+	& \firstsecondSeparationAltStandard
+	\\
+	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+	& \secondthirdSeparationAltStandard
+	\\
+	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+	& \secondthirdSeparationvStandard
+	\\
+	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+	& \secondthirdSeparationgammaStandard
+	\\
+	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+	& \secondthirdSeparationqStandard
+	\\
+	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+	& \secondthirdSeparationLDStandard
+	\\
+	\textbf{2$^{nd}$ Stage Flight Time (s)}
+	& \secondFlightTimeStandard
+	\\
+	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+	& \thirdqOverFiveStandard
+	\\
+	\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
+	& \thirdmaxAoAStandard
+	\\
+	\textbf{3$^{rd}$ Stage final v (m/s)}
+	& \thirdcircvStandard
+	\\
+	\hline 
+\end{tabular} 
+\end{table}
 
+The trajectory of the rocket-scramjet-rocket launch system has been optimised in LODESTAR, including the return of the SPARTAN to its initial launch site. The optimised trajectory is shown in Figure \ref{fig:GroundTrackStandard}. The succesful computation of this optimised trajectory indicates that it is possible to launch a small satellite using the rocket-scramjet-rocket launch system, while returning the SPARTAN to the initial launch site location, and approaching the landing at appropriately low altitude and velocity. 
+This optimised trajectory attains a payload mass to SSO of 173.1kg. 
 
-\begin{figure}
+The maximum payload-to-orbit is reduced by XX\% compared to the optimised trajectory result without flyback. This is a relatively small reduction in payload, and the benefits of flying back the SPARTAN to its initial launch site are likely to far outweigh this associated reduction in payload. This result indicates that flying back the SPARTAN to its initial launch site is possible, and is likely to be desirable as the most cost efficient way to operate the rocket-scramjet-rocket launch vehicle. 
+
+The optimised trajectory shape is significantly different from that of the optimised trajectory without flyback. The initial launch is to the East, with the SPARTAN manoeuvring during its acceleration so that the heading angle is pointed close to North. The SPARTAN releases the third stage, and executes a banking turn, with a sequence of 'skipping' manoeuvres. The scramjet engine is ignited three times during the return flight, using a total of 238.3kg of fuel, 15.2\% of the total fuel mass.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1\linewidth]{../LODESTAR_FINAL/Results/mode11/GroundTrackStandard}
+	\caption{}
+	\label{fig:GroundTrackStandard}
+\end{figure}
+
+\section{First Stage Trajectory}
+\begin{figure}[ht]
 \centering
 \includegraphics[width=1\linewidth]{../LODESTAR_FINAL/Results/mode11/FirstStageStandard}
 \caption{}
 \label{fig:FirstStageStandard}
 \end{figure}
 
-\begin{figure}
+\section{Second Stage Trajectory}
+\begin{figure}[ht]
 \centering
 \includegraphics[width=1\linewidth]{../LODESTAR_FINAL/Results/mode11/SecondStageStandard}
 \caption{}
 \label{fig:SecondStageStandard}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[ht]
 \centering
-\includegraphics[width=1\linewidth]{../LODESTAR_FINAL/Results/mode11/ReturnStandard}
+\includegraphics[width=0.9\linewidth]{../LODESTAR_FINAL/Results/mode11/NetIspStandard}
 \caption{}
-\label{fig:ReturnStandard}
+\label{fig:NetIspStandard}
 \end{figure}
 
+
+
+-higher AoA (maybe pinpoint location on Isp graphs)
+
+with no return case:
+-compare L/D Net Isp and thrust history
+
+-compare end trajectory angle/altitude 
+
+-compare eq ratio (plot of both together? dont use normalised time scale)
+
+
+\section{Third Stage Trajectory}
 \begin{figure}
 \centering
 \includegraphics[width=1\linewidth]{../LODESTAR_FINAL/Results/mode11/ThirdStageStandard}
@@ -51,24 +121,30 @@ The sensitivity analysis in this chapter will be expanded, and will be compared 
 \label{fig:ThirdStageStandard}
 \end{figure}
 
+
+\section{Fly-Back Trajectory}
+
 \begin{figure}
-\centering
-\includegraphics[width=1\linewidth]{../LODESTAR_FINAL/Results/mode11/GroundTrackStandard}
-\caption{}
-\label{fig:GroundTrackStandard}
+	\centering
+	\includegraphics[width=1\linewidth]{../LODESTAR_FINAL/Results/mode11/ReturnStandard}
+	\caption{}
+	\label{fig:ReturnStandard}
 \end{figure}
 
+-as below, explain why the ascent banks
 
 
 
-\section{Fly-Back Trajectory Analysis}
+
+\section{Fly-Back Trajectory Analysis - paper}
 The fly-back of the SPARTAN is optimised using LODESTAR. The fly-back is optimised for minimum fuel usage, with initial conditions constrained to be similar to the intended third stage release point, and end position constrained within 12.7km of the initial launch site, at  15.3$^\circ$S,144.9$^\circ$E\cite{ForbesSpyratos2018}. The margin of 12.7km is allowed so as to not over-constrain the end position within LODESTAR, and it is assumed that the landing strip will not be at the exact location of the launch site. The angle of attack is limited to 10$^\circ$, to ensure vehicle stability. The bank angle is limited to 90$^\circ$ to produce a conservative solution and to limit any possible design complications that may arise from inverted flight. The dynamic pressure is limited to 50kPa, the structural limit of the vehicle. The scramjet engines are limited to only operate above 20kPa dynamic pressure, an estimated lower limit on the operable mass flow rate.
 The end of the trajectory is constrained to sub-200m altitude, and a trajectory angle range between -10$^\circ$ and 0$^\circ$ to ensure that the SPARTAN can perform a landing manoeuvre. These constraints ensure that the vehicle is approaching the landing site at the end of the optimised trajectory. The end velocity is only limited to be greater than 0m/s. It can be assumed that the optimal fly-back trajectory minimises end velocity as shown in the optimised trajectory results. 
 It is also assumed that the vehicle is able to carry any necessary fuel in addition to the fuel required during the ascent trajectory, allowing the initial conditions to be kept constant. The potential specific impulse is shown along the trajectory, this is the specific impulse obtainable from the C-REST engines should they be powered on.
 
-\subsection{Optimised Trajectory}
 
 
+
+\subsection{Return Trajectory}
 
 
 The optimised fly-back trajectory is shown in Figures \ref{fig:lon-lat} and \ref{fig:AllTraj}.
@@ -98,20 +174,763 @@ At the end of the trajectory the SPARTAN levels out, and reaches 1km altitude at
 
 
 
-\subsection{Sensitivity Analysis}
-To investigate the robustness of the fly-back trajectory to vehicle design; the drag coefficient and specific impulse of the SPARTAN are varied by $\pm 10\%$, and the new optimal fly-back trajectories are calculated using LODESTAR. These optimised trajectories, shown in Figures \ref{fig:CdVariation} and \ref{fig:IspVariation}, investigate the effects of potential performance variation caused by changes in the vehicle design.
+\subsection{Design Sensitivity Analysis}
+
+During the preliminary stages of launch vehicle design, it is important to characterise the effects of changes in the design of a vehicle.  
+Quantifying the effects of variations within the vehicle design allows the vehicle performance to be improved. 
+However, the complete assessment of the effects of vehicle design variations requires every critical feature of the design to be modified, and the new vehicle design to be investigated. This method of investigation is prohibitively time consuming and computationally expensive for a complex launch system. Consequently, it is important to first understand the effects of the key performance parameters of the vehicle, so that when the design of the launch system is to be iterated, the design of each vehicle and subsystem may be tailored towards improving the overall performance.
+ The this end, a sensitivity study is performed to investigate the variations in the optimal trajectory when key performance parameters of the vehicle are modified.
+
+The performance parameters modified are:
+
+\begin{itemize}
+	\item Maximum dynamic pressure.
+	\item Specific Impulse of the C-REST engines. 
+	\item SPARTAN aerodynamic drag.
+	\item SPARTAN mass.
+	\item SPARTAN fuel mass.
+	\item Third stage mass.
+	\item Third stage thrust. 
+	\item SPARTAN viscous drag. 
+	
+\end{itemize}
+
+
+
+ These parameters are varied and the new optimal fly-back trajectories are calculated using LODESTAR. These optimised trajectories are detailed in the following sections.
+ 
 The consistency of the trajectory shape indicates that the optimal solution is robust with variation in the aerodynamic parameters and specific impulse of the SPARTAN. The optimised trajectories show clear trends with variation in vehicle parameters.
 
-Increasing the drag coefficient causes the fuel necessary for fly-back to increase by +51.5kg (+31.0\%). Conversely, decreasing the drag coefficient by 10\% causes the fuel necessary for  fly-back to decrease by -58.0kg (-34.9\%). 
+
+
+
+
+
+\section{dynamic pressure}
+\begin{table}[ht]
+\begin{tabular}{l c c c c c c} 
+	\hline \textbf{Trajectory Condition}
+	&qForty
+	&qFortyFive
+	&qStandard
+	&qFiftyFive
+	&qSixty
+	& /\%
+	\\
+	\hline \textbf{Payload to Orbit (kg)}
+	& \PayloadToOrbitqForty
+	& \PayloadToOrbitqFortyFive
+	& \PayloadToOrbitqStandard
+	& \PayloadToOrbitqFiftyFive
+	& \PayloadToOrbitqSixty
+	&0.9
+	\\
+	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+	& \firstsecondSeparationAltqForty
+	& \firstsecondSeparationAltqFortyFive
+	& \firstsecondSeparationAltqStandard
+	& \firstsecondSeparationAltqFiftyFive
+	& \firstsecondSeparationAltqSixty
+	& -
+	\\
+	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+	& \secondthirdSeparationAltqForty
+	& \secondthirdSeparationAltqFortyFive
+	& \secondthirdSeparationAltqStandard
+	& \secondthirdSeparationAltqFiftyFive
+	& \secondthirdSeparationAltqSixty
+	& -
+	\\
+	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+	& \secondthirdSeparationvqForty
+	& \secondthirdSeparationvqFortyFive
+	& \secondthirdSeparationvqStandard
+	& \secondthirdSeparationvqFiftyFive
+	& \secondthirdSeparationvqSixty
+	&4.68
+	\\
+	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+	& \secondthirdSeparationgammaqForty
+	& \secondthirdSeparationgammaqFortyFive
+	& \secondthirdSeparationgammaqStandard
+	& \secondthirdSeparationgammaqFiftyFive
+	& \secondthirdSeparationgammaqSixty
+	& -
+	\\
+	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+	& \secondthirdSeparationqqForty
+	& \secondthirdSeparationqqFortyFive
+	& \secondthirdSeparationqqStandard
+	& \secondthirdSeparationqqFiftyFive
+	& \secondthirdSeparationqqSixty
+	&0.13
+	\\
+	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+	& \secondthirdSeparationLDqForty
+	& \secondthirdSeparationLDqFortyFive
+	& \secondthirdSeparationLDqStandard
+	& \secondthirdSeparationLDqFiftyFive
+	& \secondthirdSeparationLDqSixty
+	& -
+	\\
+	\textbf{2$^{nd}$ Stage Flight Time (s)}
+	& \secondFlightTimeqForty
+	& \secondFlightTimeqFortyFive
+	& \secondFlightTimeqStandard
+	& \secondFlightTimeqFiftyFive
+	& \secondFlightTimeqSixty
+	&-4.81
+	\\
+	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+	& \thirdqOverFiveqForty
+	& \thirdqOverFiveqFortyFive
+	& \thirdqOverFiveqStandard
+	& \thirdqOverFiveqFiftyFive
+	& \thirdqOverFiveqSixty
+	& -
+	\\
+	\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
+	& \thirdmaxAoAqForty
+	& \thirdmaxAoAqFortyFive
+	& \thirdmaxAoAqStandard
+	& \thirdmaxAoAqFiftyFive
+	& \thirdmaxAoAqSixty
+	& -
+	\\
+	\textbf{3$^{rd}$ Stage final v (m/s)}
+	& \thirdcircvqForty
+	& \thirdcircvqFortyFive
+	& \thirdcircvqStandard
+	& \thirdcircvqFiftyFive
+	& \thirdcircvqSixty
+	& -
+	\\
+	\hline 
+\end{tabular} 
+\end{table}
+
+
+\section{Isp}
+
+
+Increasing the specific impulse causes the fuel necessary for fly-back to decrease by -XXkg (-XX\%), while decreasing the specific impulse causes the fuel necessary to rise by +XXkg (+XX\%). The start of scramjet burn is consistent across different specific impulse test cases. Due to the increase in thrust, the SPARTAN accelerates more rapidly for the higher specific impulse case. As a consequence, the initial 'skip' is performed sooner, and subsequent skips are larger. 
+
+-check this
+
+\begin{table}[ht]
+\begin{tabular}{l c c c c c} 
+	\hline \textbf{Trajectory Condition}
+	&Ispn90\%
+	&Isp95\%
+	&Isp100\%
+	&Isp105\%
+	&Isp110\%
+	\\
+	\hline \textbf{Payload to Orbit (kg)}
+	& \PayloadToOrbitIspninetypercent
+	& \PayloadToOrbitIspninetyfivepercent
+	& \PayloadToOrbitIsponehundredpercent
+	& \PayloadToOrbitIsponehundredandfivepercent
+	& \PayloadToOrbitIsponehundredandtenpercent
+	\\
+	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+	& \firstsecondSeparationAltIspninetypercent
+	& \firstsecondSeparationAltIspninetyfivepercent
+	& \firstsecondSeparationAltIsponehundredpercent
+	& \firstsecondSeparationAltIsponehundredandfivepercent
+	& \firstsecondSeparationAltIsponehundredandtenpercent
+	\\
+	\textbf{1$^{st}$ Stage Structural Mass Fraction}
+	& \FirstStageSMFIspninetypercent
+	& \FirstStageSMFIspninetyfivepercent
+	& \FirstStageSMFIsponehundredpercent
+	& \FirstStageSMFIsponehundredandfivepercent
+	& \FirstStageSMFIsponehundredandtenpercent
+	\\
+	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+	& \secondthirdSeparationAltIspninetypercent
+	& \secondthirdSeparationAltIspninetyfivepercent
+	& \secondthirdSeparationAltIsponehundredpercent
+	& \secondthirdSeparationAltIsponehundredandfivepercent
+	& \secondthirdSeparationAltIsponehundredandtenpercent
+	\\
+	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+	& \secondthirdSeparationvIspninetypercent
+	& \secondthirdSeparationvIspninetyfivepercent
+	& \secondthirdSeparationvIsponehundredpercent
+	& \secondthirdSeparationvIsponehundredandfivepercent
+	& \secondthirdSeparationvIsponehundredandtenpercent
+	\\
+	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+	& \secondthirdSeparationgammaIspninetypercent
+	& \secondthirdSeparationgammaIspninetyfivepercent
+	& \secondthirdSeparationgammaIsponehundredpercent
+	& \secondthirdSeparationgammaIsponehundredandfivepercent
+	& \secondthirdSeparationgammaIsponehundredandtenpercent
+	\\
+	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+	& \secondthirdSeparationqIspninetypercent
+	& \secondthirdSeparationqIspninetyfivepercent
+	& \secondthirdSeparationqIsponehundredpercent
+	& \secondthirdSeparationqIsponehundredandfivepercent
+	& \secondthirdSeparationqIsponehundredandtenpercent
+	\\
+	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+	& \secondthirdSeparationLDIspninetypercent
+	& \secondthirdSeparationLDIspninetyfivepercent
+	& \secondthirdSeparationLDIsponehundredpercent
+	& \secondthirdSeparationLDIsponehundredandfivepercent
+	& \secondthirdSeparationLDIsponehundredandtenpercent
+	\\
+	\textbf{2$^{nd}$ Stage Flight Time (s)}
+	& \secondFlightTimeIspninetypercent
+	& \secondFlightTimeIspninetyfivepercent
+	& \secondFlightTimeIsponehundredpercent
+	& \secondFlightTimeIsponehundredandfivepercent
+	& \secondFlightTimeIsponehundredandtenpercent
+	\\
+	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+	& \thirdqOverFiveIspninetypercent
+	& \thirdqOverFiveIspninetyfivepercent
+	& \thirdqOverFiveIsponehundredpercent
+	& \thirdqOverFiveIsponehundredandfivepercent
+	& \thirdqOverFiveIsponehundredandtenpercent
+	\\
+	\textbf{3$^{rd}$ Stage $t$, max $\alpha$ (deg)}
+	& \thirdmaxAoAIspninetypercent
+	& \thirdmaxAoAIspninetyfivepercent
+	& \thirdmaxAoAIsponehundredpercent
+	& \thirdmaxAoAIsponehundredandfivepercent
+	& \thirdmaxAoAIsponehundredandtenpercent
+	\\
+	\hline \textbf{3$^{rd}$ Stage final v (m/s)}
+	& \thirdcircvIspninetypercent
+	& \thirdcircvIspninetyfivepercent
+	& \thirdcircvIsponehundredpercent
+	& \thirdcircvIsponehundredandfivepercent
+	& \thirdcircvIsponehundredandtenpercent
+	\\
+	\hline 
+\end{tabular} 
+\end{table}
+
+\section{Cd}
+
+Increasing the drag coefficient causes the fuel necessary for fly-back to increase by +XXkg (+XX\%). Conversely, decreasing the drag coefficient by 10\% causes the fuel necessary for  fly-back to decrease by -XXkg (-XX\%). 
 When the drag is increased (ie. L/D is decreased), the scramjet engine burn phase begins earlier, and continues for longer. 
 The greater burn time allows the maximum altitude attained during the initial 'skip' to be higher. 
 This additional altitude is necessary as the greater drag causes the velocity, and consequentially altitude, of the SPARTAN to decrease more rapidly.
 
+-check all this
 
-Increasing the specific impulse causes the fuel necessary for fly-back to decrease by -11.5kg (-6.9\%), while decreasing the specific impulse causes the fuel necessary to rise by +22.9kg (+13.8\%). The start of scramjet burn is consistent across different specific impulse test cases. Due to the increase in thrust, the SPARTAN accelerates more rapidly for the higher specific impulse case. As a consequence, the initial 'skip' is performed sooner, and subsequent skips are larger. 
+\begin{table}[ht]
+\begin{tabular}{l c c c c c} 
+	\hline \textbf{Trajectory Condition}
+	&Cd90\%
+	&Cd95
+	&Cd100
+	&Cd105
+	&Cd110
+	\\
+	\hline \textbf{Payload to Orbit (kg)}
+	& \PayloadToOrbitCdninetypercent
+	& \PayloadToOrbitCdninetyfivepercent
+	& \PayloadToOrbitCdonehundredpercent
+	& \PayloadToOrbitCdonehundredandfivepercent
+	& \PayloadToOrbitCdonehundredandtenpercent
+	\\
+	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+	& \firstsecondSeparationAltCdninetypercent
+	& \firstsecondSeparationAltCdninetyfivepercent
+	& \firstsecondSeparationAltCdonehundredpercent
+	& \firstsecondSeparationAltCdonehundredandfivepercent
+	& \firstsecondSeparationAltCdonehundredandtenpercent
+	\\
+	\textbf{1$^{st}$ Stage Structural Mass Fraction}
+	& \FirstStageSMFCdninetypercent
+	& \FirstStageSMFCdninetyfivepercent
+	& \FirstStageSMFCdonehundredpercent
+	& \FirstStageSMFCdonehundredandfivepercent
+	& \FirstStageSMFCdonehundredandtenpercent
+	\\
+	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+	& \secondthirdSeparationAltCdninetypercent
+	& \secondthirdSeparationAltCdninetyfivepercent
+	& \secondthirdSeparationAltCdonehundredpercent
+	& \secondthirdSeparationAltCdonehundredandfivepercent
+	& \secondthirdSeparationAltCdonehundredandtenpercent
+	\\
+	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+	& \secondthirdSeparationvCdninetypercent
+	& \secondthirdSeparationvCdninetyfivepercent
+	& \secondthirdSeparationvCdonehundredpercent
+	& \secondthirdSeparationvCdonehundredandfivepercent
+	& \secondthirdSeparationvCdonehundredandtenpercent
+	\\
+	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+	& \secondthirdSeparationgammaCdninetypercent
+	& \secondthirdSeparationgammaCdninetyfivepercent
+	& \secondthirdSeparationgammaCdonehundredpercent
+	& \secondthirdSeparationgammaCdonehundredandfivepercent
+	& \secondthirdSeparationgammaCdonehundredandtenpercent
+	\\
+	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+	& \secondthirdSeparationqCdninetypercent
+	& \secondthirdSeparationqCdninetyfivepercent
+	& \secondthirdSeparationqCdonehundredpercent
+	& \secondthirdSeparationqCdonehundredandfivepercent
+	& \secondthirdSeparationqCdonehundredandtenpercent
+	\\
+	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+	& \secondthirdSeparationLDCdninetypercent
+	& \secondthirdSeparationLDCdninetyfivepercent
+	& \secondthirdSeparationLDCdonehundredpercent
+	& \secondthirdSeparationLDCdonehundredandfivepercent
+	& \secondthirdSeparationLDCdonehundredandtenpercent
+	\\
+	\textbf{2$^{nd}$ Stage Flight Time (s)}
+	& \secondFlightTimeCdninetypercent
+	& \secondFlightTimeCdninetyfivepercent
+	& \secondFlightTimeCdonehundredpercent
+	& \secondFlightTimeCdonehundredandfivepercent
+	& \secondFlightTimeCdonehundredandtenpercent
+	\\
+	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+	& \thirdqOverFiveCdninetypercent
+	& \thirdqOverFiveCdninetyfivepercent
+	& \thirdqOverFiveCdonehundredpercent
+	& \thirdqOverFiveCdonehundredandfivepercent
+	& \thirdqOverFiveCdonehundredandtenpercent
+	\\
+	\textbf{3$^{rd}$ Stage $t$, max $\alpha$ (deg)}
+	& \thirdmaxAoACdninetypercent
+	& \thirdmaxAoACdninetyfivepercent
+	& \thirdmaxAoACdonehundredpercent
+	& \thirdmaxAoACdonehundredandfivepercent
+	& \thirdmaxAoACdonehundredandtenpercent
+	\\
+	\hline \textbf{3$^{rd}$ Stage final v (m/s)}
+	& \thirdcircvCdninetypercent
+	& \thirdcircvCdninetyfivepercent
+	& \thirdcircvCdonehundredpercent
+	& \thirdcircvCdonehundredandfivepercent
+	& \thirdcircvCdonehundredandtenpercent
+	\\
+	\hline 
+\end{tabular} 
+\end{table}
+\section{}
+\begin{table}[ht]
+\begin{tabular}{l c c c c c} 
+	\hline \textbf{Trajectory Condition}
+	&vCd20
+	&vCd50
+	&vCd100
+	&vCd107
+	&vCd115
+	\\
+	\hline \textbf{Payload to Orbit (kg)}
+	& \PayloadToOrbitvCdtwentypercent
+	& \PayloadToOrbitvCdfiftypercent
+	& \PayloadToOrbitvCdonehundredpercent
+	& \PayloadToOrbitvCdonehundredandsevenpercent
+	& \PayloadToOrbitvCdonehundredandfifteenpercent
+	\\
+	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+	& \firstsecondSeparationAltvCdtwentypercent
+	& \firstsecondSeparationAltvCdfiftypercent
+	& \firstsecondSeparationAltvCdonehundredpercent
+	& \firstsecondSeparationAltvCdonehundredandsevenpercent
+	& \firstsecondSeparationAltvCdonehundredandfifteenpercent
+	\\
+	\textbf{1$^{st}$ Stage Structural Mass Fraction}
+	& \FirstStageSMFvCdtwentypercent
+	& \FirstStageSMFvCdfiftypercent
+	& \FirstStageSMFvCdonehundredpercent
+	& \FirstStageSMFvCdonehundredandsevenpercent
+	& \FirstStageSMFvCdonehundredandfifteenpercent
+	\\
+	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+	& \secondthirdSeparationAltvCdtwentypercent
+	& \secondthirdSeparationAltvCdfiftypercent
+	& \secondthirdSeparationAltvCdonehundredpercent
+	& \secondthirdSeparationAltvCdonehundredandsevenpercent
+	& \secondthirdSeparationAltvCdonehundredandfifteenpercent
+	\\
+	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+	& \secondthirdSeparationvvCdtwentypercent
+	& \secondthirdSeparationvvCdfiftypercent
+	& \secondthirdSeparationvvCdonehundredpercent
+	& \secondthirdSeparationvvCdonehundredandsevenpercent
+	& \secondthirdSeparationvvCdonehundredandfifteenpercent
+	\\
+	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+	& \secondthirdSeparationgammavCdtwentypercent
+	& \secondthirdSeparationgammavCdfiftypercent
+	& \secondthirdSeparationgammavCdonehundredpercent
+	& \secondthirdSeparationgammavCdonehundredandsevenpercent
+	& \secondthirdSeparationgammavCdonehundredandfifteenpercent
+	\\
+	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+	& \secondthirdSeparationqvCdtwentypercent
+	& \secondthirdSeparationqvCdfiftypercent
+	& \secondthirdSeparationqvCdonehundredpercent
+	& \secondthirdSeparationqvCdonehundredandsevenpercent
+	& \secondthirdSeparationqvCdonehundredandfifteenpercent
+	\\
+	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+	& \secondthirdSeparationLDvCdtwentypercent
+	& \secondthirdSeparationLDvCdfiftypercent
+	& \secondthirdSeparationLDvCdonehundredpercent
+	& \secondthirdSeparationLDvCdonehundredandsevenpercent
+	& \secondthirdSeparationLDvCdonehundredandfifteenpercent
+	\\
+	\textbf{2$^{nd}$ Stage Flight Time (s)}
+	& \secondFlightTimevCdtwentypercent
+	& \secondFlightTimevCdfiftypercent
+	& \secondFlightTimevCdonehundredpercent
+	& \secondFlightTimevCdonehundredandsevenpercent
+	& \secondFlightTimevCdonehundredandfifteenpercent
+	\\
+	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+	& \thirdqOverFivevCdtwentypercent
+	& \thirdqOverFivevCdfiftypercent
+	& \thirdqOverFivevCdonehundredpercent
+	& \thirdqOverFivevCdonehundredandsevenpercent
+	& \thirdqOverFivevCdonehundredandfifteenpercent
+	\\
+	\textbf{3$^{rd}$ Stage $t$, max $\alpha$ (deg)}
+	& \thirdmaxAoAvCdtwentypercent
+	& \thirdmaxAoAvCdfiftypercent
+	& \thirdmaxAoAvCdonehundredpercent
+	& \thirdmaxAoAvCdonehundredandsevenpercent
+	& \thirdmaxAoAvCdonehundredandfifteenpercent
+	\\
+	\hline \textbf{3$^{rd}$ Stage final v (m/s)}
+	& \thirdcircvvCdtwentypercent
+	& \thirdcircvvCdfiftypercent
+	& \thirdcircvvCdonehundredpercent
+	& \thirdcircvvCdonehundredandsevenpercent
+	& \thirdcircvvCdonehundredandfifteenpercent
+	\\
+	\hline 
+\end{tabular} 
+\end{table}
+\section{}
+	
+\section{}
+\begin{table}[ht]
+\begin{tabular}{l c c c c c} 
+	\hline \textbf{Trajectory Condition}
+	&mthird90
+	&mthird95
+	&mthird100
+	&mthird105
+	&mthird110
+	\\
+	\hline \textbf{Payload to Orbit (kg)}
+	& \PayloadToOrbitmthirdninetypercent
+	& \PayloadToOrbitmthirdninetyfivepercent
+	& \PayloadToOrbitmthirdonehundredpercent
+	& \PayloadToOrbitmthirdonehundredandfivepercent
+	& \PayloadToOrbitmthirdonehundredandtenpercent
+	\\
+	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+	& \firstsecondSeparationAltmthirdninetypercent
+	& \firstsecondSeparationAltmthirdninetyfivepercent
+	& \firstsecondSeparationAltmthirdonehundredpercent
+	& \firstsecondSeparationAltmthirdonehundredandfivepercent
+	& \firstsecondSeparationAltmthirdonehundredandtenpercent
+	\\
+	\textbf{1$^{st}$ Stage Structural Mass Fraction}
+	& \FirstStageSMFmthirdninetypercent
+	& \FirstStageSMFmthirdninetyfivepercent
+	& \FirstStageSMFmthirdonehundredpercent
+	& \FirstStageSMFmthirdonehundredandfivepercent
+	& \FirstStageSMFmthirdonehundredandtenpercent
+	\\
+	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+	& \secondthirdSeparationAltmthirdninetypercent
+	& \secondthirdSeparationAltmthirdninetyfivepercent
+	& \secondthirdSeparationAltmthirdonehundredpercent
+	& \secondthirdSeparationAltmthirdonehundredandfivepercent
+	& \secondthirdSeparationAltmthirdonehundredandtenpercent
+	\\
+	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+	& \secondthirdSeparationvmthirdninetypercent
+	& \secondthirdSeparationvmthirdninetyfivepercent
+	& \secondthirdSeparationvmthirdonehundredpercent
+	& \secondthirdSeparationvmthirdonehundredandfivepercent
+	& \secondthirdSeparationvmthirdonehundredandtenpercent
+	\\
+	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+	& \secondthirdSeparationgammamthirdninetypercent
+	& \secondthirdSeparationgammamthirdninetyfivepercent
+	& \secondthirdSeparationgammamthirdonehundredpercent
+	& \secondthirdSeparationgammamthirdonehundredandfivepercent
+	& \secondthirdSeparationgammamthirdonehundredandtenpercent
+	\\
+	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+	& \secondthirdSeparationqmthirdninetypercent
+	& \secondthirdSeparationqmthirdninetyfivepercent
+	& \secondthirdSeparationqmthirdonehundredpercent
+	& \secondthirdSeparationqmthirdonehundredandfivepercent
+	& \secondthirdSeparationqmthirdonehundredandtenpercent
+	\\
+	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+	& \secondthirdSeparationLDmthirdninetypercent
+	& \secondthirdSeparationLDmthirdninetyfivepercent
+	& \secondthirdSeparationLDmthirdonehundredpercent
+	& \secondthirdSeparationLDmthirdonehundredandfivepercent
+	& \secondthirdSeparationLDmthirdonehundredandtenpercent
+	\\
+	\textbf{2$^{nd}$ Stage Flight Time (s)}
+	& \secondFlightTimemthirdninetypercent
+	& \secondFlightTimemthirdninetyfivepercent
+	& \secondFlightTimemthirdonehundredpercent
+	& \secondFlightTimemthirdonehundredandfivepercent
+	& \secondFlightTimemthirdonehundredandtenpercent
+	\\
+	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+	& \thirdqOverFivemthirdninetypercent
+	& \thirdqOverFivemthirdninetyfivepercent
+	& \thirdqOverFivemthirdonehundredpercent
+	& \thirdqOverFivemthirdonehundredandfivepercent
+	& \thirdqOverFivemthirdonehundredandtenpercent
+	\\
+	\textbf{3$^{rd}$ Stage $t$, max $\alpha$ (deg)}
+	& \thirdmaxAoAmthirdninetypercent
+	& \thirdmaxAoAmthirdninetyfivepercent
+	& \thirdmaxAoAmthirdonehundredpercent
+	& \thirdmaxAoAmthirdonehundredandfivepercent
+	& \thirdmaxAoAmthirdonehundredandtenpercent
+	\\
+	\hline \textbf{3$^{rd}$ Stage final v (m/s)}
+	& \thirdcircvmthirdninetypercent
+	& \thirdcircvmthirdninetyfivepercent
+	& \thirdcircvmthirdonehundredpercent
+	& \thirdcircvmthirdonehundredandfivepercent
+	& \thirdcircvmthirdonehundredandtenpercent
+	\\
+	\hline 
+\end{tabular} 
+\end{table}
+
+\section{}	
+\begin{table}[ht]
+\begin{tabular}{l c c c c c} 
+	\hline \textbf{Trajectory Condition}
+	&Tthird90
+	&Tthird95
+	&Tthird100
+	&Tthird105
+	&Tthird110
+	\\
+	\hline \textbf{Payload to Orbit (kg)}
+	& \PayloadToOrbitTthirdninetypercent
+	& \PayloadToOrbitTthirdninetyfivepercent
+	& \PayloadToOrbitTthirdonehundredpercent
+	& \PayloadToOrbitTthirdonehundredandfivepercent
+	& \PayloadToOrbitTthirdonehundredandtenpercent
+	\\
+	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+	& \firstsecondSeparationAltTthirdninetypercent
+	& \firstsecondSeparationAltTthirdninetyfivepercent
+	& \firstsecondSeparationAltTthirdonehundredpercent
+	& \firstsecondSeparationAltTthirdonehundredandfivepercent
+	& \firstsecondSeparationAltTthirdonehundredandtenpercent
+	\\
+	\textbf{1$^{st}$ Stage Structural Mass Fraction}
+	& \FirstStageSMFTthirdninetypercent
+	& \FirstStageSMFTthirdninetyfivepercent
+	& \FirstStageSMFTthirdonehundredpercent
+	& \FirstStageSMFTthirdonehundredandfivepercent
+	& \FirstStageSMFTthirdonehundredandtenpercent
+	\\
+	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+	& \secondthirdSeparationAltTthirdninetypercent
+	& \secondthirdSeparationAltTthirdninetyfivepercent
+	& \secondthirdSeparationAltTthirdonehundredpercent
+	& \secondthirdSeparationAltTthirdonehundredandfivepercent
+	& \secondthirdSeparationAltTthirdonehundredandtenpercent
+	\\
+	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+	& \secondthirdSeparationvTthirdninetypercent
+	& \secondthirdSeparationvTthirdninetyfivepercent
+	& \secondthirdSeparationvTthirdonehundredpercent
+	& \secondthirdSeparationvTthirdonehundredandfivepercent
+	& \secondthirdSeparationvTthirdonehundredandtenpercent
+	\\
+	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+	& \secondthirdSeparationgammaTthirdninetypercent
+	& \secondthirdSeparationgammaTthirdninetyfivepercent
+	& \secondthirdSeparationgammaTthirdonehundredpercent
+	& \secondthirdSeparationgammaTthirdonehundredandfivepercent
+	& \secondthirdSeparationgammaTthirdonehundredandtenpercent
+	\\
+	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+	& \secondthirdSeparationqTthirdninetypercent
+	& \secondthirdSeparationqTthirdninetyfivepercent
+	& \secondthirdSeparationqTthirdonehundredpercent
+	& \secondthirdSeparationqTthirdonehundredandfivepercent
+	& \secondthirdSeparationqTthirdonehundredandtenpercent
+	\\
+	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+	& \secondthirdSeparationLDTthirdninetypercent
+	& \secondthirdSeparationLDTthirdninetyfivepercent
+	& \secondthirdSeparationLDTthirdonehundredpercent
+	& \secondthirdSeparationLDTthirdonehundredandfivepercent
+	& \secondthirdSeparationLDTthirdonehundredandtenpercent
+	\\
+	\textbf{2$^{nd}$ Stage Flight Time (s)}
+	& \secondFlightTimeTthirdninetypercent
+	& \secondFlightTimeTthirdninetyfivepercent
+	& \secondFlightTimeTthirdonehundredpercent
+	& \secondFlightTimeTthirdonehundredandfivepercent
+	& \secondFlightTimeTthirdonehundredandtenpercent
+	\\
+	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+	& \thirdqOverFiveTthirdninetypercent
+	& \thirdqOverFiveTthirdninetyfivepercent
+	& \thirdqOverFiveTthirdonehundredpercent
+	& \thirdqOverFiveTthirdonehundredandfivepercent
+	& \thirdqOverFiveTthirdonehundredandtenpercent
+	\\
+	\textbf{3$^{rd}$ Stage $t$, max $\alpha$ (deg)}
+	& \thirdmaxAoATthirdninetypercent
+	& \thirdmaxAoATthirdninetyfivepercent
+	& \thirdmaxAoATthirdonehundredpercent
+	& \thirdmaxAoATthirdonehundredandfivepercent
+	& \thirdmaxAoATthirdonehundredandtenpercent
+	\\
+	\hline \textbf{3$^{rd}$ Stage final v (m/s)}
+	& \thirdcircvTthirdninetypercent
+	& \thirdcircvTthirdninetyfivepercent
+	& \thirdcircvTthirdonehundredpercent
+	& \thirdcircvTthirdonehundredandfivepercent
+	& \thirdcircvTthirdonehundredandtenpercent
+	\\
+	\hline 
+\end{tabular} 
+\end{table}
+
+\section{}
+\begin{table}[ht]
+\begin{tabular}{l c c c c c} 
+	\hline \textbf{Trajectory Condition}
+	&m290\%
+	&m295\%
+	&m2100\%
+	&m2105\%
+	&m2110\%
+	\\
+	\hline \textbf{Payload to Orbit (kg)}
+	& \PayloadToOrbitmSPARTANninetypercent
+	& \PayloadToOrbitmSPARTANninetyfivepercent
+	& \PayloadToOrbitmSPARTANonehundredpercent
+	& \PayloadToOrbitmSPARTANonehundredandfivepercent
+	& \PayloadToOrbitmSPARTANonehundredandtenpercent
+	\\
+	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+	& \firstsecondSeparationAltmSPARTANninetypercent
+	& \firstsecondSeparationAltmSPARTANninetyfivepercent
+	& \firstsecondSeparationAltmSPARTANonehundredpercent
+	& \firstsecondSeparationAltmSPARTANonehundredandfivepercent
+	& \firstsecondSeparationAltmSPARTANonehundredandtenpercent
+	\\
+	\textbf{1$^{st}$ Stage Structural Mass Fraction}
+	& \FirstStageSMFmSPARTANninetypercent
+	& \FirstStageSMFmSPARTANninetyfivepercent
+	& \FirstStageSMFmSPARTANonehundredpercent
+	& \FirstStageSMFmSPARTANonehundredandfivepercent
+	& \FirstStageSMFmSPARTANonehundredandtenpercent
+	\\
+	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+	& \secondthirdSeparationAltmSPARTANninetypercent
+	& \secondthirdSeparationAltmSPARTANninetyfivepercent
+	& \secondthirdSeparationAltmSPARTANonehundredpercent
+	& \secondthirdSeparationAltmSPARTANonehundredandfivepercent
+	& \secondthirdSeparationAltmSPARTANonehundredandtenpercent
+	\\
+	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+	& \secondthirdSeparationvmSPARTANninetypercent
+	& \secondthirdSeparationvmSPARTANninetyfivepercent
+	& \secondthirdSeparationvmSPARTANonehundredpercent
+	& \secondthirdSeparationvmSPARTANonehundredandfivepercent
+	& \secondthirdSeparationvmSPARTANonehundredandtenpercent
+	\\
+	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+	& \secondthirdSeparationgammamSPARTANninetypercent
+	& \secondthirdSeparationgammamSPARTANninetyfivepercent
+	& \secondthirdSeparationgammamSPARTANonehundredpercent
+	& \secondthirdSeparationgammamSPARTANonehundredandfivepercent
+	& \secondthirdSeparationgammamSPARTANonehundredandtenpercent
+	\\
+	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+	& \secondthirdSeparationqmSPARTANninetypercent
+	& \secondthirdSeparationqmSPARTANninetyfivepercent
+	& \secondthirdSeparationqmSPARTANonehundredpercent
+	& \secondthirdSeparationqmSPARTANonehundredandfivepercent
+	& \secondthirdSeparationqmSPARTANonehundredandtenpercent
+	\\
+	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+	& \secondthirdSeparationLDmSPARTANninetypercent
+	& \secondthirdSeparationLDmSPARTANninetyfivepercent
+	& \secondthirdSeparationLDmSPARTANonehundredpercent
+	& \secondthirdSeparationLDmSPARTANonehundredandfivepercent
+	& \secondthirdSeparationLDmSPARTANonehundredandtenpercent
+	\\
+	\textbf{2$^{nd}$ Stage Flight Time (s)}
+	& \secondFlightTimemSPARTANninetypercent
+	& \secondFlightTimemSPARTANninetyfivepercent
+	& \secondFlightTimemSPARTANonehundredpercent
+	& \secondFlightTimemSPARTANonehundredandfivepercent
+	& \secondFlightTimemSPARTANonehundredandtenpercent
+	\\
+	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+	& \thirdqOverFivemSPARTANninetypercent
+	& \thirdqOverFivemSPARTANninetyfivepercent
+	& \thirdqOverFivemSPARTANonehundredpercent
+	& \thirdqOverFivemSPARTANonehundredandfivepercent
+	& \thirdqOverFivemSPARTANonehundredandtenpercent
+	\\
+	\textbf{3$^{rd}$ Stage $t$, max $\alpha$ (deg)}
+	& \thirdmaxAoAmSPARTANninetypercent
+	& \thirdmaxAoAmSPARTANninetyfivepercent
+	& \thirdmaxAoAmSPARTANonehundredpercent
+	& \thirdmaxAoAmSPARTANonehundredandfivepercent
+	& \thirdmaxAoAmSPARTANonehundredandtenpercent
+	\\
+	\hline \textbf{3$^{rd}$ Stage final v (m/s)}
+	& \thirdcircvmSPARTANninetypercent
+	& \thirdcircvmSPARTANninetyfivepercent
+	& \thirdcircvmSPARTANonehundredpercent
+	& \thirdcircvmSPARTANonehundredandfivepercent
+	& \thirdcircvmSPARTANonehundredandtenpercent
+	\\
+	\hline 
+\end{tabular} 
+\end{table}
+
+
+
+\section{Comparison of Sensitivities}
+
+-check this (from paper)
 
 These results indicate that the aerodynamic performance of the SPARTAN has significantly more impact than the efficiency of the scramjet engines on the optimised fly-back trajectory. During the fly-back trajectory, the specific impulse is effecting performance only whilst the scramjet engines are operating, compared with the aerodynamics of the vehicle, which effect performance throughout the trajectory. This suggests that, for maximum fly-back performance, the aerodynamic performance should be given preference over engine efficiency in the design of fly-back hypersonic accelerators. 
 
+
+
+
+
+
+
+\section{Alternate Launch Locations}
+
+Southern Launch
+
+note potential for sonic booms and safety issues
 
 
 
@@ -122,27 +941,3 @@ This result indicates that the fly-back of a hypersonic launch vehicle from high
 
 The coefficient of drag of the SPARTAN and specific impulse of the scramjet engines were independently varied by $\pm10\%$ and the new optimal trajectories calculated to assess the robustness of the fly-back trajectory to uncertainties in vehicle aerodynamics and scramjet performance. It was found that a $\pm10\%$ variation in $C_D$ results in a +31.0\% or -34.9\% variation in fuel mass burned during fly-back, while a $\pm10\%$ variation in $I_{SP}$ results in a much smaller variation of -6.9\% or +13.8\%. These results indicate that the aerodynamics of a fly-back hypersonic accelerator are much more significant to the fly-back fuel usage than the performance of the scramjet engine. 
 
-
-
-
-\section{mode21}
-\begin{figure}
-\centering
-\includegraphics[width=0.9\linewidth]{../LODESTAR_FINAL/Results/mode21/SecondStageComparison}
-\caption{}
-\label{fig:SecondStageComparison}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.9\linewidth]{../LODESTAR_FINAL/Results/mode21/ReturnComparison}
-\caption{}
-\label{fig:ReturnComparison}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.9\linewidth]{../LODESTAR_FINAL/Results/mode21/ThirdStageComparison}
-\caption{}
-\label{fig:ThirdStageComparison}
-\end{figure}
