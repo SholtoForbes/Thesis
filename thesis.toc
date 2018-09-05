@@ -102,24 +102,34 @@
 \contentsline {section}{\numberline {6.16}Sonic Boom Ground Effects}{123}{section.6.16}
 \contentsline {section}{\numberline {6.17}Alternate Launch Locations}{123}{section.6.17}
 \contentsline {section}{\numberline {6.18}Summary}{123}{section.6.18}
-\contentsline {chapter}{\numberline {7}Conclusions}{129}{chapter.7}
-\contentsline {section}{\numberline {7.1}Recommendations for future work}{129}{section.7.1}
-\contentsline {chapter}{Library}{131}{chapter*.151}
-\contentsline {chapter}{\numberline {A}Propulsion Interpolation Scheme}{145}{appendix.A}
-\contentsline {chapter}{\numberline {B}GPOPS-2 Example - Brachistochrone Problem}{147}{appendix.B}
-\contentsline {chapter}{\numberline {C}Initial Guesses}{149}{appendix.C}
-\contentsline {chapter}{\numberline {D}Trajectory results}{151}{appendix.D}
-\contentsline {chapter}{\numberline {E}CART3D Results}{153}{appendix.E}
-\contentsline {section}{\numberline {E.1}Engine-On Plume Check}{153}{section.E.1}
-\contentsline {section}{\numberline {E.2}CART3D Results}{153}{section.E.2}
-\contentsline {section}{\numberline {E.3}verification}{153}{section.E.3}
-\contentsline {chapter}{\numberline {F}Trajectory Plot Comparisons}{157}{appendix.F}
-\contentsline {section}{\numberline {F.1}No Fly-Back}{157}{section.F.1}
-\contentsline {subsection}{\numberline {F.1.1}Dynamic Pressure Variation}{157}{subsection.F.1.1}
-\contentsline {subsection}{\numberline {F.1.2}Specific Impulse}{158}{subsection.F.1.2}
-\contentsline {subsection}{\numberline {F.1.3}Drag}{160}{subsection.F.1.3}
-\contentsline {subsection}{\numberline {F.1.4}SPARTAN Mass}{161}{subsection.F.1.4}
-\contentsline {subsection}{\numberline {F.1.5}Fuel Mass}{163}{subsection.F.1.5}
-\contentsline {subsection}{\numberline {F.1.6}Third Stage Mass}{164}{subsection.F.1.6}
-\contentsline {subsection}{\numberline {F.1.7}Third Stage Thrust}{166}{subsection.F.1.7}
-\contentsline {subsection}{\numberline {F.1.8}Third Stage Drag}{167}{subsection.F.1.8}
+\contentsline {chapter}{\numberline {7}Conclusions}{131}{chapter.7}
+\contentsline {section}{\numberline {7.1}Recommendations for future work}{131}{section.7.1}
+\contentsline {chapter}{Library}{133}{chapter*.153}
+\contentsline {chapter}{\numberline {A}Propulsion Interpolation Scheme}{147}{appendix.A}
+\contentsline {chapter}{\numberline {B}GPOPS-2 Example - Brachistochrone Problem}{149}{appendix.B}
+\contentsline {chapter}{\numberline {C}Initial Guesses}{151}{appendix.C}
+\contentsline {chapter}{\numberline {D}Trajectory results}{153}{appendix.D}
+\contentsline {chapter}{\numberline {E}CART3D Results}{155}{appendix.E}
+\contentsline {section}{\numberline {E.1}Engine-On Plume Check}{155}{section.E.1}
+\contentsline {section}{\numberline {E.2}CART3D Results}{155}{section.E.2}
+\contentsline {section}{\numberline {E.3}verification}{155}{section.E.3}
+\contentsline {chapter}{\numberline {F}title}{159}{appendix.F}
+\contentsline {chapter}{\numberline {G}Trajectory Plot Comparisons}{161}{appendix.G}
+\contentsline {section}{\numberline {G.1}Cases With No Fly-Back}{161}{section.G.1}
+\contentsline {subsection}{\numberline {G.1.1}Dynamic Pressure Variation}{161}{subsection.G.1.1}
+\contentsline {subsection}{\numberline {G.1.2}Specific Impulse}{162}{subsection.G.1.2}
+\contentsline {subsection}{\numberline {G.1.3}Drag}{164}{subsection.G.1.3}
+\contentsline {subsection}{\numberline {G.1.4}SPARTAN Mass}{165}{subsection.G.1.4}
+\contentsline {subsection}{\numberline {G.1.5}Fuel Mass}{167}{subsection.G.1.5}
+\contentsline {subsection}{\numberline {G.1.6}Third Stage Mass}{168}{subsection.G.1.6}
+\contentsline {subsection}{\numberline {G.1.7}Third Stage Thrust}{170}{subsection.G.1.7}
+\contentsline {subsection}{\numberline {G.1.8}Third Stage Drag}{171}{subsection.G.1.8}
+\contentsline {section}{\numberline {G.2}Cases With Fly-Back}{171}{section.G.2}
+\contentsline {subsection}{\numberline {G.2.1}Dynamic Pressure Variation}{171}{subsection.G.2.1}
+\contentsline {subsection}{\numberline {G.2.2}Specific Impulse}{171}{subsection.G.2.2}
+\contentsline {subsection}{\numberline {G.2.3}Drag}{171}{subsection.G.2.3}
+\contentsline {subsection}{\numberline {G.2.4}SPARTAN Mass}{171}{subsection.G.2.4}
+\contentsline {subsection}{\numberline {G.2.5}Fuel Mass}{171}{subsection.G.2.5}
+\contentsline {subsection}{\numberline {G.2.6}SPARTAN Viscous Drag}{171}{subsection.G.2.6}
+\contentsline {subsection}{\numberline {G.2.7}Third Stage Mass}{171}{subsection.G.2.7}
+\contentsline {subsection}{\numberline {G.2.8}Third Stage Thrust}{171}{subsection.G.2.8}

@@ -1034,14 +1034,14 @@ These results indicate that the aerodynamic performance of the SPARTAN has signi
 
 \begin{figure}
 \centering
-\includegraphics[width=0.8\linewidth]{../LODESTAR_FINAL/Results/mode11/OverPressureStandard}
+\includegraphics[width=0.9\linewidth]{../LODESTAR_FINAL/Results/mode11/OverPressureStandard}
 \caption{}
 \label{fig:OverPressureStandard}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[width=0.7\linewidth]{figures/6_FlyBack/OverPressureResponse}
+\includegraphics[width=0.6\linewidth]{figures/6_FlyBack/OverPressureResponse}
 \caption{}
 \label{fig:OverPressureResponse}
 \end{figure}
@@ -1053,8 +1053,64 @@ Southern Launch
 
 note potential for sonic booms and safety issues
 
+\begin{figure}[th]
+\centering
+\includegraphics[width=1\linewidth]{../LODESTAR_FINAL/Results/mode01/GroundTrackAlternate}
+\caption{}
+\label{fig:GroundTrackAlternate}
+\end{figure}
 
-
+\begin{table}
+	\centering
+\begin{tabular}{l c} 
+	\hline \textbf{Trajectory Condition}
+	& Alternate
+	\\
+	\hline \textbf{Payload to Orbit (kg)}
+	& \PayloadToOrbitAlternate
+	\\
+	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+	& \firstsecondSeparationAltAlternate
+	\\
+	\textbf{Separation v, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationvAlternate
+	\\
+	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationgammaAlternate
+	\\
+	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+	& \secondthirdSeparationAltAlternate
+	\\
+	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+	& \secondthirdSeparationvAlternate
+	\\
+	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+	& \secondthirdSeparationgammaAlternate
+	\\
+	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+	& \secondthirdSeparationqAlternate
+	\\
+	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+	& \secondthirdSeparationLDAlternate
+	\\
+	\textbf{2$^{nd}$ Stage Flight Time (s)}
+	& \secondFlightTimeAlternate
+	\\
+	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+	& \thirdqOverFiveAlternate
+	\\
+	\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
+	& \thirdmaxAoAAlternate
+	\\
+	\textbf{3$^{rd}$ Stage final v (m/s)}
+	& \thirdcircvAlternate
+	\\
+	\textbf{3$^{rd}$ Stage final m (kg)}
+	& \thirdcircmAlternate
+	\\
+	\hline 
+\end{tabular} 
+\end{table}
 
 \section{Summary}
 The fly-back trajectory of the SPARTAN hypersonic vehicle is investigated, from separation at 7.7$^\circ$S,145.0$^\circ$E to landing at 15.3$^\circ$S,144.9$^\circ$E, corresponding to a near 180$^\circ$ turn and a fly-back of 878km. The aerodynamics of the SPARTAN are calculated using CART3D, an inviscid CFD package, over the range of Mach numbers and angle of attack values of flight. The optimal trajectory of the SPARTAN is calculated, to fly-back to the initial launch position with minimum fuel. The optimal trajectory is calculated using the launch vehicle optimal control program LODESTAR. It is found that the SPARTAN is capable of returning to its initial launch position, using 166.0kg of fuel. The optimal trajectory terminates when SPARTAN reaches 200m altitude at a velocity of 119.8m/s. After this point, it is assumed that the SPARTAN lands on a traditional runway, at similar conditions to the space shuttle.  
