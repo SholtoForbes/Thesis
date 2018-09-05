@@ -3,27 +3,27 @@
 \cleardoublepage
 \chapter{Optimised Ascent Trajectory}\label{chapter:Ascent}
 
-This chapter presents a maximum payload-to-orbit trajectory optimisation for the rocket-scramjet-rocket launch system incorporating the SPARTAN. 
-The launch system is launched from the Equatorial Launch Australia launch site in East Arnhem Land, and delivers a small satellite into sun synchronous orbit. LODESTAR is used to calculate the trajectory solutions for multiple launch scenarios, and these trajectory solutions are investigated to gain insight into the optimised trajectory.
-
-Firstly, a trajectory is calculated for the case in which the SPARTAN flies a constant dynamic pressure. This trajectory is calculated to serve as a baseline for comparisons to be made, as previous studies have assumed that flying the SPARTAN at its maximum allowable dynamic pressure would produce the best overall system performance[CITEXX]. An optimal payload-to-orbit trajectory is then developed, and the trajectory shape compared and contrasted to the constant dynamic pressure trajectory. Lastly, a sensitivity study is performed, varying key performance parameters of the launch system and investigating the effects of each parameter on the performance of the launch system. 
+This chapter presents a maximum payload-to-orbit trajectory optimisation for the rocket-scramjet-rocket launch system incorporating the SPARTAN scramjet-powered accelerator. 
+This launch system is simulated being launched from the Equatorial Launch Australia launch site in East Arnhem Land (Detailed in Section XX), and delivers a small satellite into sun synchronous orbit. LODESTAR is used to calculate maximum payload-to-orbit trajectory solutions for a variety of mission profiles.
+Firstly, a trajectory is calculated for the case in which the SPARTAN flies a constant dynamic pressure. This trajectory is calculated to serve as a baseline for comparisons to be made, as previous studies have assumed that flying the SPARTAN at its maximum allowable dynamic pressure would produce the best overall system performance[CITEXX]. An optimal payload-to-orbit trajectory is then developed, and the trajectory shape compared and contrasted to the constant dynamic pressure trajectory.
+Lastly, a sensitivity study is performed, varying key performance parameters of the launch system and investigating the effects of each parameter on the performance of the launch system. 
 
 The following trajectories are developed: 
 \begin{enumerate}
 	\item: $q = $ 50kPa fixed SPARTAN trajectory with minimum pull-up. \newline$\rightarrow$ This trajectory provides a baseline trajectory for comparison purposes.
 	\item: Trajectory optimised for payload-to-orbit, $q_{max} = $ 50kPa. \newline$\rightarrow$ This trajectory Demonstrates improved performance through coupled trajectory optimisation.
 	\item: Variation of maximum allowable dynamic pressure between $q_{max} = $ 40kPa \& $q_{max} = $ 50kPa. 
-	\newline$\rightarrow$ Comparison of these simulations allows investigation into the effect of $q$ max on payload-to-orbit, and enables inferences about the effects of variation in the structural strength of the SPARTAN.
+	\newline$\rightarrow$ Comparison of these simulations allows investigation into the effect of $q$ max on payload-to-orbit, and enables inferences about the effects of variation in the structural strength of the SPARTAN on launch system performance.
 	\item: Variation of the coefficient of drag of the SPARTAN between $C_d = 90\%$ \& $C_d = 110\%$. 
-	\newline$\rightarrow$ Comparison of optimal trajectories with drag variation allows investigation of the robustness of the solution with variation in vehicle design, and allows inferences about the effects of vehicle shape on the efficiency of the system. 
+	\newline$\rightarrow$ Comparison of optimal trajectories with drag variation allows investigation of the effects of variations in the SPARTAN's external design on launch system performance.
 	\item: Variation of the specific impulse of the SPARTAN's C-REST engines between $I_{SP} = 90\%$ \& $I_{SP} = 110\%$. 
-	\newline$\rightarrow$ Comparison of optimal trajectories with specific impulse variation allows investigation of the effects of the efficiency of the C-REST engines on the efficiency of the system. 
+	\newline$\rightarrow$ Comparison of optimal trajectories with specific impulse variation allows investigation of the effects of the efficiency of the C-REST engines on the performance of the launch system. 
 	\item: Variation of the mass of the SPARTAN between $m_2 = 90\%$ \& $m_2 = 110\%$. 
-	\newline$\rightarrow$ Comparison of optimal trajectories with SPARTAN mass variation allows investigation of the effects of the SPARTAN design on the launch system efficiency, and allows inferences about the effect of the internal layout of the SPARTAN. 
+	\newline$\rightarrow$ Comparison of optimal trajectories with SPARTAN mass variation allows investigation of the effects of the internal design of the SPARTAN on the launch system performance. 
 	\item: Variation of the fuel mass of the SPARTAN between $m_{fuel} = 90\%$ \& $m_{fuel} = 110\%$. 
 	\newline$\rightarrow$ Comparison of optimal trajectories with SPARTAN fuel mass variation allows investigation of the effects of the amount of fuel which the SPARTAN is able to carry on the launch system efficiency. 
 	\item: Variation of the mass of the third stage rocket between $m_3 = 90\%$ \& $m_3 = 110\%$. 
-	\newline$\rightarrow$ Comparison of optimal trajectories with third stage mass variation allows investigation of the effects of the third stage design on the efficiency of the launch system, and allows inferences about the effects of the third stage internal layout on the efficiency of the system. 
+	\newline$\rightarrow$ Comparison of optimal trajectories with third stage mass variation allows investigation of the effects of the third stage internal layout on the efficiency of the system. 
 	\item: Variation of the thrust of the third stage rocket between $T_3 = 90\%$ \& $T_3 = 110\%$. 
 	\newline$\rightarrow$ Comparison of optimal trajectories with third stage thrust variation allows investigation of the effects of the output of the third stage engine on the efficiency of the launch system. 
 \end{enumerate}
@@ -31,28 +31,24 @@ The following trajectories are developed:
 \section{Constant Dynamic Pressure Trajectory}
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=1\linewidth]{../LODESTAR_FINAL/Results/20180827T120326mode900/GroundTrackConstq}
-	\caption{}
+	\includegraphics[width=1\linewidth]{../LODESTAR_FINAL/Results/mode900/GroundTrackConstq}
+	\caption{Maximum payload-to-orbit trajectory path with the SPARTAN flying at constant dynamic pressure.}
 	\label{fig:GroundTrackConstq}
 \end{figure}
 
-The first trajectory which is produced using LODESTAR is a trajectory in which the SPARTAN flies a constant dynamic pressure path, at its maximum allowable dynamic pressure of 50kPa.
-A constant dynamic pressure trajectory is produced to serve as a baseline for comparison with the maximum payload-to-orbit optimised trajectory, and to verify that LODESTAR is able to calculate a trajectory in which the SPARTAN flies at constant dynamic pressure. It is crucial to verify that the SPARTAN is able to be simulated to fly at constant dynamic pressure, as the aerodynamics and design of the vehicle have been changed from previous studies[CITEXX]. It must be ensured that any deviations from a constant dynamic pressure path in the payload-to-orbit optimised trajectory serve to improve the performance of the system, rather than being a result of the problem setup or design constraints. 
+The first trajectory which is produced using LODESTAR is a maximum payload-to-orbit trajectory in which the SPARTAN flies a constant dynamic pressure path, at its maximum allowable dynamic pressure of 50kPa. In order to drive the SPARTAN towards a constant dynamic pressure path, the cost function described in Table \ref{tab:SPARTANascentsetup} is utilised. In addition to the dynamic pressure cost function, the maximum payload-to-orbit cost function is also active on the third stage phase, so that when the SPARTAN is close to 50kPa, the third stage will fly a maximum payload-to-orbit trajectory from the termination of the SPARTAN's constant dynamic pressure path.
+A constant dynamic pressure trajectory is produced to serve as a baseline for comparison with the maximum payload-to-orbit optimised trajectory, as previous studies have assumed that flying at constant dynamic pressure will produce the best possible system performance [CITEXX]. Producing a constant dynamic pressure trajectory also serves to verify that LODESTAR is able to calculate a trajectory in which the SPARTAN flies at the maximum possible dynamic pressure for the duration of its flight. As the aerodynamics and design of the vehicle have been changed from previous studies[CITEXX], It must be ensured that any deviations from a constant dynamic pressure path in the payload-to-orbit optimised trajectory serve to improve the performance of the system, rather than being a result of the problem setup or design constraints. 
 
- In order to drive the SPARTAN towards a constant dynamic pressure path, the cost function described in Table \ref{tab:SPARTANascentsetup} is utilised. The maximum payload-to-orbit cost function is also active on the third stage phase, so that when the SPARTAN is close to 50kPa, the third stage will fly a maximum payload-to-orbit trajectory from the termination of the SPARTAN's constant dynamic pressure path. 
 
 LODESTAR is able to successfully simulate the trajectory of the rocket-scramjet-rocket system, with the SPARTAN flying at constant dynamic pressure, achieving a payload-to-orbit of \PayloadToOrbitConstq kg.
-Figure \ref{fig:GroundTrackConstq} shows the simulated trajectory path, and Table \ref{tab:constqsummary} provides a summary of the key trajectory parameters of the trajectory. 
-
-
-
+Figure \ref{fig:GroundTrackConstq} shows the simulated trajectory path, and Table \ref{tab:constqsummary} provides a summary of the key parameters of the trajectory.
 \begin{table}[ht]
 	\centering
 	
 
-\begin{tabular}{l c} 
+\begin{tabular}{l c } 
 	\hline \textbf{Trajectory Condition}
-	&
+	& Constq
 	\\
 	\hline \textbf{Payload to Orbit (kg)}
 	& \PayloadToOrbitConstq
@@ -60,8 +56,11 @@ Figure \ref{fig:GroundTrackConstq} shows the simulated trajectory path, and Tabl
 	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 	& \firstsecondSeparationAltConstq
 	\\
-	\textbf{1$^{st}$ Stage Structural Mass Fraction}
-	& \FirstStageSMFConstq
+	\textbf{Separation v, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationvConstq
+	\\
+	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationgammaConstq
 	\\
 	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 	& \secondthirdSeparationAltConstq
@@ -84,63 +83,53 @@ Figure \ref{fig:GroundTrackConstq} shows the simulated trajectory path, and Tabl
 	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 	& \thirdqOverFiveConstq
 	\\
-	\textbf{3$^{rd}$ Stage $t$, max $\alpha$ (deg)}
+	\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
 	& \thirdmaxAoAConstq
 	\\
 	\textbf{3$^{rd}$ Stage final v (m/s)}
 	& \thirdcircvConstq
+	\\
+	\textbf{3$^{rd}$ Stage final m (kg)}
+	& \thirdcircmConstq
 	\\
 	\hline 
 \end{tabular} 
 \caption{}
 \label{tab:constqsummary}
 \end{table}
-
-
-
-
-
-\subsection{First Stage}
-\begin{figure}[ht]
+\begin{figure}[ht!]
 \centering
-\includegraphics[width=1\linewidth]{../LODESTAR_FINAL/Results/20180827T120326mode900/FirstStageConstq}
-\caption{}
+\includegraphics[width=0.9\linewidth]{../LODESTAR_FINAL/Results/mode900/FirstStageConstq}
+\caption{The first stage trajectory of the launch system, with the SPARTAN constrained to flight at constant dynamic pressure.}
 \label{fig:FirstStageConstq}
 \end{figure}
-
-The rocket-scramjet-rocket system launches vertically, flying a fixed vertical trajectory for Xs, after which a pitchover is initiated. Under power of the first stage rocket, the launch system begins pitching, flying north-west, over the Arafura Sea. 
-After pitchover the angle of attack stays constant at 0$^\circ$ for XXs. The angle of attack is reduced at XX s, reaching a minimum of XX, before increasing back up to 0$^\circ$ for stage separation. 
-The SPARTAN is separated at an angle of XX, at an altitude of XXkm, a total flight time of XXs, with a total ground distance of XXkm covered under power of the first stage rocket. 
-
+The rocket-scramjet-rocket system launches vertically, flying a fixed vertical trajectory for XXs, after which a pitchover is initiated. Under power of the first stage rocket, the launch system begins pitching, flying north-west, over the Arafura Sea. 
+After pitchover the angle of attack stays constant at 0$^\circ$ for 56.2s. At this point, the angle of attack is reduced, reaching a minimum of 4.80$^\circ$, before increasing back up to 0$^\circ$ for stage separation. 
+The SPARTAN is separated at a trajectory angle of \firstsecondSeparationgammaConstq$^\circ$ at an altitude of \firstsecondSeparationAltConstq km, a total flight time of XXs, with a total ground distance of XXkm covered under power of the first stage rocket. 
 
 
-\subsection{Second Stage}
 
-\begin{figure}[ht]
+
+\begin{figure}[ht!]
 \centering
-\includegraphics[width=1\linewidth]{../LODESTAR_FINAL/Results/20180827T120326mode900/SecondStageConstq}
-\caption{}
+\includegraphics[width=0.9\linewidth]{../LODESTAR_FINAL/Results/mode900/SecondStageConstq}
+\caption{The constant dynamic pressure flight path of the SPARTAN.}
 \label{fig:SecondStageConstq}
 \end{figure}
 
 
 The constant dynamic pressure trajectory for the SPARTAN stage is shown in Figure \ref{fig:SecondStageConstq} with key results summarised in Table \ref{tab:constqsummary}. After the separation of the first stage rocket, the SPARTAN flies north west over the Arafura Sea, and crosses West Papua before releasing the third stage rocket. Due to the clear objective of a constant dynamic pressure trajectory, any deviations from the target dynamic pressure are readily apparent, allowing the efficacy of the optimiser to be verified. 
-These results show very close adherence to 50kPa dynamic pressure (maximum XX\% deviation). Third stage release occurs at XX s at XX km altitude. 
-Over the trajectory the Mach no. increases from XX to XX and the velocity from XXm/s to XX m/s. The flap deflection shows an overall increase from $XX^\circ$ to $XX^\circ$ over the trajectory.  The net specific impulse ($I_{sp_{net}} = \frac{T-D}{\dot{m}_f g}$) generally decreases over the trajectory, as the efficiency of the scramjet engines decreases. However, at the beginning of the trajectory the equivalence ratio increases as the capture limitations are relaxed with increasing Mach number. This causes the net specific impulse to increase, to a maximum of XX, during the first XXs flight time. 
+These results show very close adherence to 50kPa dynamic pressure (maximum XX\% deviation). Third stage release occurs at \secondFlightTimeConstq s at \secondthirdSeparationAltConstq km altitude. 
+Over the trajectory the Mach no. increases from XX to XX and the velocity from \firstsecondSeparationvConstq m/s to \secondthirdSeparationvConstq m/s. The flap deflection shows an overall increase from $XX^\circ$ to $XX^\circ$ over the trajectory.  The net specific impulse ($I_{sp_{net}} = \frac{T-D}{\dot{m}_f g}$) generally decreases over the trajectory, as the efficiency of the scramjet engines decreases. However, at the beginning of the trajectory the equivalence ratio increases as the capture limitations are relaxed with increasing Mach number. This causes the net specific impulse to increase, to a maximum of XX, during the first XXs flight time. 
 
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=0.8\linewidth]{../LODESTAR_FINAL/Results/20180827T120326mode900/NetIspConstq}
-	\caption{}
-	\label{fig:NetIspConstq}
-\end{figure}
 
-\subsection{Third Stage}
 
-\begin{figure}[ht]
+
+
+\begin{figure}[ht!]
 \centering
-\includegraphics[width=1\linewidth]{../LODESTAR_FINAL/Results/20180827T120326mode900/ThirdStageConstq}
-\caption{}
+\includegraphics[width=0.9\linewidth]{../LODESTAR_FINAL/Results/mode900/ThirdStageConstq}
+\caption{The third stage trajectory of the launch system, with the SPARTAN constrained to flight at constant dynamic pressure.}
 \label{fig:ThirdStageConstq}
 \end{figure}
 
@@ -157,9 +146,10 @@ When this altitude is reached, the trajectory is circularised and performs a Hoh
 \section{Optimised Ascent Trajectory}
 
 This section presents the maximum payload-to-orbit trajectory for the rocket-scramjet-rocket launch system. 
-The maximum payload-to-orbit trajectory shape is shown in Figure \ref{fig:GroundTrackStandardNoReturn}, and involves flying the SPARTAN away from its maximum dynamic pressure at multiple points along the trajectory, with altitude raising manoeuvres. These manoeuvres serve either to increase the net specific impulse of the SPARTAN, or to trade-off the efficiency of the SPARTAN in order to increase the efficiency of the first and third stages. 
+The optimal trajectory shape for a $q=$50kPa limited, maximum payload-to-orbit trajectory is shown in Figure \ref{fig:GroundTrackStandardNoReturn} with key results summarised in Table \ref{tab:summaryStandardNoReturn}. The maximum payload-to-orbit trajectory shape involves flying the SPARTAN away from its maximum dynamic pressure at multiple points along the trajectory, with altitude raising manoeuvres. These manoeuvres serve either to increase the net specific impulse of the SPARTAN, or to trade-off the efficiency of the SPARTAN in order to increase the efficiency of the first and third stages. 
+This payload-to-orbit optimised trajectory is able to deliver \PayloadToOrbitStandardNoReturn kg of payload to heliocentric orbit, an increase of XX over the constant dynamic pressure result.
 
-\begin{figure}[ht]
+\begin{figure}[ht!]
 	
 	
 	
@@ -169,15 +159,23 @@ The maximum payload-to-orbit trajectory shape is shown in Figure \ref{fig:Ground
 	\label{fig:GroundTrackStandardNoReturn}
 \end{figure}
 
-Initially, the SPARTAN is released at a dynamic pressure of 50kpa. However, the trajectory angle at release is 3.13$^\circ$, which causes the altitude of the SPARTAN to immediately increase, and consequently for its dynamic pressure to decrease. This trajectory angle at release is the consequence of a trade-off of the efficiency of the SPARTAN for first stage efficiency. In order to release the SPARTAN at a lower trajectory angle, the first stage must launch with a lower fuel mass, to allow it to pitch in the correct manner. During the maximum payload-to-orbit trajectory, the first stage launches with a fuel mass of 17185kg, in contrast to the first stage segment of the constant dynamic pressure trajectory, which launches with a fuel mass of 17010kg in order to release the SPARTAN at a trajectory angle low enough to sustain constant dynamic pressure flight. Neither first stage utilises the full amount of allowable fuel mass, 17934kg, indicating that using the full fuel mass would reduce the efficiency of the SPARTAN unfavourably. 
-During the maximum payload-to-orbit trajectory, the first stage rocket releases the SPARTAN at a velocity of 1484.3m/s, in contrast to the first stage releasing the SPARTAN onto a constant dynamic pressure trajectory, which separates the SPARTAN at a velocity of 1466.5m/s. 
-These complex interactions indicate that the fuel mass that the first stage utilises has a distinct optimal magnitude, and that the design of the first stage may have substantial influence on the optimal trajectory shape. 
+
+The first stage trajectory, shown in Figure \ref{fig:FirstStageStandardNoReturn}, has a very similar trajectory shape to that of the first stage releasing the SPARTAN onto a constant dynamic pressure trajectory.
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.9\linewidth]{../LODESTAR_FINAL/Results/mode10/FirstStageStandard}
+	\caption{}
+	\label{fig:FirstStageStandardNoReturn}
+\end{figure}
+ However, the trajectory angle at the separation of the SPARTAN is \secondthirdSeparationgammaqStandardNoReturn$^\circ$, rather than the separation angle of \secondthirdSeparationgammaConstq$^\circ$ required for the SPARTAN to fly a constant dynamic pressure trajectory. This higher release angle causes the altitude of the SPARTAN to immediately increase, and consequently for its dynamic pressure to decrease. This trajectory angle at release is the consequence of a trade-off of the efficiency of the SPARTAN for first stage efficiency. In order to release the SPARTAN at a lower trajectory angle, the first stage must launch with a lower fuel mass, to allow it to pitch in the correct manner. During the maximum payload-to-orbit trajectory, the first stage launches with a fuel mass of 17185kg, in contrast to the first stage segment of the constant dynamic pressure trajectory, which launches with a fuel mass of 17010kg. During the maximum payload-to-orbit trajectory, the first stage rocket releases the SPARTAN at a velocity of 1484.3m/s, an increase of XX m/s compared to the first stage releasing the SPARTAN onto a constant dynamic pressure trajectory. Neither first stage utilises the full amount of allowable fuel mass, 17934kg, indicating that using the full fuel mass would necessitate separation conditions which would reduce the efficiency of the SPARTAN unfavourably. 
+These results indicate that the fuel mass utilised by the first stage has a distinct optimal magnitude, and that including additional fuel over a certain amount may not increase the performance of the system. This implies that the size of the first stage is closely linked to the optimal trajectory of the system, and that future first stage designs should be sized so that optimal pitching is achieved. 
 
 \begin{table}[ht]
 	\centering
-	\begin{tabular}{l c c c c c} 
+	\begin{tabular}{l c } 
 		\hline \textbf{Trajectory Condition}
 		&Standard
+
 		\\
 		\hline \textbf{Payload to Orbit (kg)}
 		& \PayloadToOrbitStandardNoReturn
@@ -185,8 +183,11 @@ These complex interactions indicate that the fuel mass that the first stage util
 		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 		& \firstsecondSeparationAltStandardNoReturn
 		\\
-		\textbf{1$^{st}$ Stage Structural Mass Fraction}
-		& \FirstStageSMFStandardNoReturn
+		\textbf{Separation v, 1$\rightarrow$2 (m/s)}
+		& \firstsecondSeparationvStandardNoReturn
+		\\
+		\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+		& \firstsecondSeparationgammaStandardNoReturn
 		\\
 		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 		& \secondthirdSeparationAltStandardNoReturn
@@ -209,62 +210,71 @@ These complex interactions indicate that the fuel mass that the first stage util
 		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 		& \thirdqOverFiveStandardNoReturn
 		\\
-		\textbf{3$^{rd}$ Stage $t$, max $\alpha$ (deg)}
+		\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
 		& \thirdmaxAoAStandardNoReturn
 		\\
-		\hline \textbf{3$^{rd}$ Stage final v (m/s)}
+		\textbf{3$^{rd}$ Stage final v (m/s)}
 		& \thirdcircvStandardNoReturn
+		\\
+		\textbf{3$^{rd}$ Stage final m (kg)}
+		& \thirdcircmStandardNoReturn
 		\\
 		\hline 
 	\end{tabular} 
+	\caption{Summary of key results from the maximum payload-to-orbit trajectory.}
 	\label{tab:summaryStandardNoReturn}
 \end{table}
 
 
 
-\subsection{First Stage}
-\begin{figure}[ht]
-\centering
-\includegraphics[width=1\linewidth]{../LODESTAR_FINAL/Results/mode10/FirstStageStandard}
-\caption{}
-\label{fig:FirstStageStandardNoReturn}
-\end{figure}
 
-\subsection{Second Stage}
-\begin{figure}[ht]
+
+
+
+\begin{figure}[ht!]
 \centering
-\includegraphics[width=1\linewidth]{../LODESTAR_FINAL/Results/mode10/SecondStageStandard}
-\caption{\textcolor{red}{maybe plot equivalence ratio to compare}}
+\includegraphics[width=0.9\linewidth]{../LODESTAR_FINAL/Results/mode10/SecondStageStandard}
+\caption{}
 \label{fig:SecondStageStandardNoReturn}
 \end{figure}
 
 
 
-
-At 122.5 seconds, the altitude of the trajectory is raised, and the dynamic pressure decreased, to a minimum of 35.6kPa. In this region the net specific impulse of the SPARTAN is fairly homogeneous, which can be observed in Figure \ref{fig:NetIspStandardNoReturn}. This is caused by the homogeneity which can be observed in the specific impulse of the C-REST engines in Figure \ref{fig:IspStandard}, between M1 values of 6 and 7. This homogeneity means that flying at the maximum dynamic pressure in this region does not necessarily produce the maximum specific impulse from the C-REST engines. As a result, this manoeuvre results in a slight increase the in the net specific impulse of the SPARTAN
-
-
+After the initial deviation from the maximum dynamic pressure, the SPARTAN returns to 50kPa dynamic pressure for a time. 
+At 122.5 seconds, the altitude of the trajectory is again raised, and the dynamic pressure decreased, to a minimum of 35.6kPa. In this region the net specific impulse of the SPARTAN is relatively homogeneous. This homogeneous region can be observed in Figure \ref{fig:NetIspStandardNoReturn}, in the Mach 7 and 8 contour plots. This is caused by the homogeneity which can be observed in the specific impulse of the C-REST engines in Figure \ref{fig:IspStandard}, between M1 values of 6 and 7. This homogeneity means that flying at the maximum dynamic pressure in this region does not necessarily produce the maximum specific impulse from the C-REST engines. Figure \ref{fig:NetIspStandardNoReturn} shows the altitude and angle of attack of the optimised and constant dynamic pressure trajectories at each Mach number. The optimised trajectory is flying in similar or higher net specific impulse regions, with the exception of the initial trajectory conditions at Mach 5. This is when the optimised trajectory shape requires a lower than optimal angle of attack, as the SPARTAN trades off efficiency with the first stage rocket. As a result, this manoeuvre results in a slight increase the in the net specific impulse of the SPARTAN.
 
 
 
-LODESTAR is configured to optimise the total payload mass to orbit.
-A maximum dynamic pressure limit of 50kPa is applied to the optimisation process to allow direct comparison with the constant $q$ trajectory and so that an equivalent vehicle can be used.   
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.8\linewidth]{../LODESTAR_FINAL/Results/mode10/NetIspStandard}
+	\caption{Net Isp contours for the SPARTAN at Mach numbers from 5-9, showing optimised trajectory and constant dynamic pressure trajectory.}
+	\label{fig:NetIspStandardNoReturn}
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.8\linewidth]{../LODESTAR_FINAL/Results/mode10/IspStandard}
+	\caption{}
+	\label{fig:IspStandard}
+\end{figure}
 
 
-The optimal trajectory shape for a $q=$50kPa limited, maximum payload to orbit trajectory is shown in Figure \ref{fig:SecondStageStandardNoReturn} with key results summarised in Table \ref{tab:summaryStandardNoReturn}. 
-The equivalence ratio of the engine is less than 1 until XX,
+At 314.3s, the SPARTAN returns to flight at close to 50kPa dynamic pressure until 494.1s at which point a pull-up manoeuvre is performed, gaining altitude until the third stage rocket is released at 528.4s SPARTAN flight time. 
+ The point at which the pull-up manoeuvre begins is the optimisation result that takes into account the best combination of velocity, altitude and release angle for scramjet stage performance and the release of the rocket stage. This pull-up indicates the region at which increasing altitude and release angle becomes more important than extracting maximum thrust from the scramjet (which is generally attained at high $q$ and low flight angle at an equivalence ratio of 1).
+Flight in a lower dynamic pressure environment results in less thrust output from the scramjet engines, as well as an increase in angle of attack and flap deflection angle to compensate for the additional lift required. Due to this, less overall acceleration is obtained compared to the constant dynamic pressure result with minimum pull-up. Separation occurs at a velocity of \secondthirdSeparationvStandardNoReturn m/s, a decrease of XXm/s. However, at the same time separation altitude increases by XXkm to \secondthirdSeparationAltqStandardNoReturn km, resulting in a decrease in separation dynamic pressure to \secondthirdSeparationqStandardNoReturn kPa. 
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.9\linewidth]{../LODESTAR_FINAL/Results/mode10/ThirdStageStandard}
+	\caption{}
+	\label{fig:ThirdStageStandardNoReturn}
+\end{figure}
 
- causing the SPARTAN to fly under 50kPa in this region (to a minimum of XXkPa) in order to raise equivalence ratio by flying in a higher temperature region. 
-
-This increase in equivalence ratio results in a corresponding increase in net specific impulse.
-After the equivalence ratio increases to 1, the trajectory follows a constant dynamic pressure path at 50kPa until XXs at which point a pull-up manoeuvre is performed, gaining altitude until rocket stage release at XXs flight time. 
-This trajectory is able to deliver XXkg of payload to heliocentric orbit, an increase of XX over the constant dynamic pressure result with minimum pull-up. The point at which the pull-up manoeuvre begins is the optimisation result that takes into account the best combination of velocity, altitude and release angle for scramjet stage performance and the release of the rocket stage. This pull-up indicates the region at which increasing altitude and release angle becomes more important than extracting maximum thrust from the scramjet (which is generally attained at high $q$ and low flight angle at an equivalence ratio of 1).
-Flight in a lower dynamic pressure environment results in less thrust output from the scramjet engines, as well as an increase in angle of attack and flap deflection angle to compensate for the additional lift required. Due to this, less overall acceleration is obtained compared to the constant dynamic pressure result with minimum pull-up. Separation occurs at a velocity of XXm/s, a decrease of XXm/s. However, at the same time separation altitude increases by XXkm to XXkm, resulting in a decrease in separation dynamic pressure to XXkPa. 
-
-The larger scramjet stage pull-up assists the rocket in manoeuvring to exoatmospheric altitude by increasing the altitude and angle at separation by virtue of the increased L/D ratio and manoeuvrability of the scramjet vehicle. Even a small increase in release angle, to the optimal angle of XX$^\circ$, significantly reduces the turning that is required by the rocket as evident from comparing Fig \ref{fig:ThirdStageConstq} and \ref{fig:ThirdStageStandardNoReturn}. Further benefits are the reduced time that the rocket must spend in a high dynamic pressure environment, and a decrease in the maximum dynamic pressure that the rocket stage experiences by XX. This allows the structural mass and heat shielding, necessary to achieve exoatmospheric flight, to be decreased, enabling higher payload to orbit. 
+The larger scramjet stage pull-up assists the rocket in manoeuvring to exoatmospheric altitude by increasing the altitude and angle at separation by virtue of the increased L/D ratio and manoeuvrability of the scramjet vehicle. Even a small increase in release angle, to the optimal angle of XX$^\circ$, significantly reduces the turning that is required by the rocket as evident from comparing Fig \ref{fig:ThirdStageConstq} and \ref{fig:ThirdStageStandardNoReturn}. 
 
 
-Compared to studies considering vehicles with a scramjet-rocket transition within a single stage\cite{Lu1993}\cite{Trefny1999}, the maximum payload to orbit trajectory of the multi-stage system shows a scramjet-rocket transition point at much lower altitudes.
+Compared to studies considering vehicles with a scramjet-rocket transition within a single stage\cite{Lu1993,Trefny1999}[CITEXX], the maximum payload to orbit trajectory of the multi-stage system shows a scramjet-rocket transition point at much lower altitudes.
 This lower transition point is a consequence of the stage separation creating an energy trade-off, which does not occur in a single stage vehicle. Single-stage vehicles must necessarily transport all components to exoatmosphere, and so utilise the scramjet engines until higher altitude to take advantage of their high efficiency. A multi-stage vehicle is able to separate the scramjet stage. 
 This separation occurs when the performance benefits provided by the superior aerodynamics and engine efficiency of the scramjet stage are offset by the energy required to lift the extra mass to higher altitude. The beneficial ability
 to separate the scramjet stage results in a lower altitude scramjet-rocket transition point, when compared to single
@@ -273,57 +283,168 @@ stage vehicle designs.
 
 
 
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=0.8\linewidth]{../LODESTAR_FINAL/Results/mode10/NetIspStandard}
-	\caption{}
-	\label{fig:NetIspStandardNoReturn}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.7\linewidth]{../LODESTAR_FINAL/Results/mode10/IspStandard}
-\caption{}
-\label{fig:IspStandard}
-\end{figure}
-
-\subsection{Third Stage}
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=1\linewidth]{../LODESTAR_FINAL/Results/mode10/ThirdStageStandard}
-\caption{}
-\label{fig:ThirdStageStandardNoReturn}
-\end{figure}
-
--third stage spends much less time at high q, has much lower max q. mention heating relationship to q?
 
 
-The release of the third stage rocket from an optimised scramjet trajectory is shown in Figure XX. Release at a higher, more optimal angle, mitigates the effects of the thrust vector angle limitation, so that the thrust vector limit is only reached during the first XXs flight time. After this, the angle of attack is limited by the maximum allowable normal force rather than the thrust vector limit, resulting in a higher maximum angle of attack. The rocket increases flight path angle and gains altitude rapidly, resulting in less time spent in a high drag environment, and a larger payload to orbit.  The angle of attack is increased gradually to XX$^\circ$ at XXs, before decreasing until burnout at XXs.
-
+The trajectory of the third stage rocket after release from an optimised scramjet trajectory is shown in Figure \ref{fig:ThirdStageStandardNoReturn}. Release at a higher, more optimal angle mitigates the effects of the aerodynamic moment, and the thrust vector limit is not reached. The rocket increases flight path angle and gains altitude rapidly.
+Due to the higher altitude and release angle, the third stage rocket is released at a lower dynamic pressure, \secondthirdSeparationqCdStandardNoReturn kPa compared to \secondthirdSeparationqConstq kPa, and spends much less time flying in a high dynamic pressure environment, \thirdqOverFiveStandard s at over 5kPa dynamic pressure rather than \thirdqOverFiveConstq s. 
+The reduced time that the rocket must spend in a high dynamic pressure environment and decrease in the maximum dynamic pressure that the rocket stage experiences may allow the structural mass and heat shielding necessary to achieve exoatmospheric flight to be decreased. This may enable higher payload to orbit, though it is beyond the scope of this study to investigate these design changes. 
 
 \section{Sensitivity Analysis}
 
+A sensitivity analysis is conducted, in which selected design parameters of the launch system are varied, and the effects on the optimised maximum payload-to-orbit trajectory of the launch system are investigated. 
+This study is performed in order to determine the relative impact of the design parameters on the efficiency of the system, as well as investigating how the maximum payload-to-orbit trajectory changes as the performance of the launch system is varied. The investigation of the key design parameters of the launch system provides a metric which can be used to quantify the relative impact of vehicle design parameters. Likewise, the optimal trajectory variation can be used to investigate the performance trade-offs between the stages. 
+The information obtained from this study can be used to inform future launch system designs.
 
 \subsection{Dynamic Pressure Sensitivity}\label{sec:qvariation}
 
-To investigate the sensitivity of the vehicle to changes in $q_{max}$, the maximum dynamic pressure is varied to XXkPa and the flight trajectory optimised, with results shown in XX.
-The $XX\%$ variation in maximum dynamic pressure has XX effect on the payload mass delivered to heliocentric orbit.  Varying the maximum dynamic pressure by $\pm$XXkPa from 50kPa causes a variation of only  XX (XX) or XX (XX) in payload to orbit.  
-Separation altitudes of XX km and XX km are reached for XXkPa and XXkPa limited cases respectively, with separation velocities of XX m/s and XX m/s. The XXkPa limited case flies for XXs, significantly longer than the XXkPa case which flies for XXs.
-Both trajectories pull-up to similar altitudes, with relatively small variation in separation velocity XXm/s or XXm/s).
-This small variation in velocity is despite the increase in air density and decrease in angle of attack required for flight at XXkPa dynamic pressure, both of which increase the mass flow into the engine. Although the thrust output of the REST engines increases with dynamic pressure, so does the drag on the vehicle, and the net increase in performance is small. 
+To investigate the sensitivity of the vehicle to changes in $q_{max}$, the maximum dynamic pressure is varied by $\pm$10kPa and the flight trajectory optimised, with results shown in Table \ref{tab:qvarnoreturn}.
+The variation in maximum dynamic pressure has only a small effect on the payload mass delivered to heliocentric orbit.  Varying the maximum dynamic pressure by $\pm20\%$ from causes a variation of only  +7.2kg (+3.8\%) or -7.8kg (-4.1\%) in payload to orbit.  
+Separation altitudes of \secondthirdSeparationAltqFortyNoReturn km and \secondthirdSeparationAltqSixtyNoReturn km are reached for 40kPa and 60kPa limited cases respectively, with separation velocities of \secondthirdSeparationvqFortyNoReturn m/s and \secondthirdSeparationvqSixtyNoReturn m/s. The 40kPa limited case flies for \secondFlightTimeqFortyNoReturn s, significantly longer than the 60kPa case which flies for \secondFlightTimeqSixtyNoReturn s.
+Both trajectories pull-up to similar altitudes, with relatively small variation in separation velocity.
+This small variation in velocity is despite the increase in air density and decrease in angle of attack required for flight at higher dynamic pressures, both of which increase the mass flow into the engine. Although the thrust output of the REST engines increases with dynamic pressure, so does the drag on the vehicle, and the net increase in performance is small. 
 
 
-Only a small variation in optimal payload mass is observed, without modification of vehicle design to account for the dynamic pressure limit. This indicates that designing and operating a vehicle at lower dynamic pressures may be preferable. Flying at a lower maximum dynamic pressure allows reduction of the structural weight and heat shielding of the vehicle. However, as the XXkPa limited case has a higher first-second stage separation altitude, a larger first stage fuel mass is required, though this increase in fuel mass is small. Between XXkm  and XXkm (XXkPa and XXkPa optimal start points) there is only a XX\% variation in the fuel mass required. This small variation in first stage fuel consumption would easily be offset by a decrease in second stage structural mass. 
+\begin{table}[ht]
+	\centering
+ \begin{tabular}{l c c c c c c} 
+ 	\hline \textbf{Trajectory Condition}
+ 	&q40
+ 	&q45
+ 	&q50
+ 	&q55
+ 	&q60
+ 	& /\%
+ 	\\
+ 	\hline \textbf{Payload to Orbit (kg)}
+ 	& \PayloadToOrbitqFortyNoReturn
+ 	& \PayloadToOrbitqFortyFiveNoReturn
+ 	& \PayloadToOrbitqStandardNoReturn
+ 	& \PayloadToOrbitqFiftyFiveNoReturn
+ 	& \PayloadToOrbitqSixtyNoReturn
+ 	&0.36
+ 	\\
+ 	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+ 	& \firstsecondSeparationAltqFortyNoReturn
+ 	& \firstsecondSeparationAltqFortyFiveNoReturn
+ 	& \firstsecondSeparationAltqStandardNoReturn
+ 	& \firstsecondSeparationAltqFiftyFiveNoReturn
+ 	& \firstsecondSeparationAltqSixtyNoReturn
+ 	&-0.12
+ 	\\
+ 	\textbf{Separation v, 1$\rightarrow$2 (m/s)}
+ 	& \firstsecondSeparationvqFortyNoReturn
+ 	& \firstsecondSeparationvqFortyFiveNoReturn
+ 	& \firstsecondSeparationvqStandardNoReturn
+ 	& \firstsecondSeparationvqFiftyFiveNoReturn
+ 	& \firstsecondSeparationvqSixtyNoReturn
+ 	& -
+ 	\\
+ 	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+ 	& \firstsecondSeparationgammaqFortyNoReturn
+ 	& \firstsecondSeparationgammaqFortyFiveNoReturn
+ 	& \firstsecondSeparationgammaqStandardNoReturn
+ 	& \firstsecondSeparationgammaqFiftyFiveNoReturn
+ 	& \firstsecondSeparationgammaqSixtyNoReturn
+ 	&-0.25
+ 	\\
+ 	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+ 	& \secondthirdSeparationAltqFortyNoReturn
+ 	& \secondthirdSeparationAltqFortyFiveNoReturn
+ 	& \secondthirdSeparationAltqStandardNoReturn
+ 	& \secondthirdSeparationAltqFiftyFiveNoReturn
+ 	& \secondthirdSeparationAltqSixtyNoReturn
+ 	&-0.03
+ 	\\
+ 	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+ 	& \secondthirdSeparationvqFortyNoReturn
+ 	& \secondthirdSeparationvqFortyFiveNoReturn
+ 	& \secondthirdSeparationvqStandardNoReturn
+ 	& \secondthirdSeparationvqFiftyFiveNoReturn
+ 	& \secondthirdSeparationvqSixtyNoReturn
+ 	&3.12
+ 	\\
+ 	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+ 	& \secondthirdSeparationgammaqFortyNoReturn
+ 	& \secondthirdSeparationgammaqFortyFiveNoReturn
+ 	& \secondthirdSeparationgammaqStandardNoReturn
+ 	& \secondthirdSeparationgammaqFiftyFiveNoReturn
+ 	& \secondthirdSeparationgammaqSixtyNoReturn
+ 	&0.06
+ 	\\
+ 	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+ 	& \secondthirdSeparationqqFortyNoReturn
+ 	& \secondthirdSeparationqqFortyFiveNoReturn
+ 	& \secondthirdSeparationqqStandardNoReturn
+ 	& \secondthirdSeparationqqFiftyFiveNoReturn
+ 	& \secondthirdSeparationqqSixtyNoReturn
+ 	&0.07
+ 	\\
+ 	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+ 	& \secondthirdSeparationLDqFortyNoReturn
+ 	& \secondthirdSeparationLDqFortyFiveNoReturn
+ 	& \secondthirdSeparationLDqStandardNoReturn
+ 	& \secondthirdSeparationLDqFiftyFiveNoReturn
+ 	& \secondthirdSeparationLDqSixtyNoReturn
+ 	& -
+ 	\\
+ 	\textbf{2$^{nd}$ Stage Flight Time (s)}
+ 	& \secondFlightTimeqFortyNoReturn
+ 	& \secondFlightTimeqFortyFiveNoReturn
+ 	& \secondFlightTimeqStandardNoReturn
+ 	& \secondFlightTimeqFiftyFiveNoReturn
+ 	& \secondFlightTimeqSixtyNoReturn
+ 	&-7.25
+ 	\\
+ 	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+ 	& \thirdqOverFiveqFortyNoReturn
+ 	& \thirdqOverFiveqFortyFiveNoReturn
+ 	& \thirdqOverFiveqStandardNoReturn
+ 	& \thirdqOverFiveqFiftyFiveNoReturn
+ 	& \thirdqOverFiveqSixtyNoReturn
+ 	& -
+ 	\\
+ 	\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
+ 	& \thirdmaxAoAqFortyNoReturn
+ 	& \thirdmaxAoAqFortyFiveNoReturn
+ 	& \thirdmaxAoAqStandardNoReturn
+ 	& \thirdmaxAoAqFiftyFiveNoReturn
+ 	& \thirdmaxAoAqSixtyNoReturn
+ 	&0
+ 	\\
+ 	\textbf{3$^{rd}$ Stage final v (m/s)}
+ 	& \thirdcircvqFortyNoReturn
+ 	& \thirdcircvqFortyFiveNoReturn
+ 	& \thirdcircvqStandardNoReturn
+ 	& \thirdcircvqFiftyFiveNoReturn
+ 	& \thirdcircvqSixtyNoReturn
+ 	& -
+ 	\\
+ 	\textbf{3$^{rd}$ Stage final m (kg)}
+ 	& \thirdcircmqFortyNoReturn
+ 	& \thirdcircmqFortyFiveNoReturn
+ 	& \thirdcircmqStandardNoReturn
+ 	& \thirdcircmqFiftyFiveNoReturn
+ 	& \thirdcircmqSixtyNoReturn
+ 	&5.28
+ 	\\
+ 	\hline 
+ \end{tabular} 
+ \caption{}
+ \label{tab:qvarnoreturn}
+\end{table}
+
+Only a small variation in optimal payload mass is observed, without modification of vehicle design to account for the dynamic pressure limit. This indicates that designing and operating a vehicle at lower dynamic pressures may be preferable. Flying at a lower maximum dynamic pressure allows reduction of the structural weight and heat shielding of the vehicle. 
+While it is outside the scope of this study to directly estimate the thermal shielding mass increase necessary when increasing the maximum allowable dynamic pressure, it can be observed from Section \ref{sec:SpartanMassnoreturn} that the influence of the SPARTAN's mass on the performance of the system is large. It can be inferred that the decrease in thermal protection system mass due to the decrease in maximum allowable dynamic pressure, which is likely to be significant, will serve to partially offset the negative effects on performance. 
 
 
 \subsection{Drag Sensitivity Analysis}\label{sec:dragvariation}
 
 
-To investigate the effect of vehicle design and uncertainty in aerodynamic performance on the optimal trajectory the drag on the vehicle is varied by XX\%, and an optimised trajectory calculated with dynamic pressure limited to 50kpa. Selected results are compared to the 100\% drag result in XX. 
-These results show that when drag is increased (ie. L/D is decreased) the optimal trajectory shape is similar to the base-line case, though the high drag second stage follows a slightly slower and hence lower flight path, with a lower stage transition point. The similar flight path shape of the high drag case suggests that sacrificing velocity to increase separation altitude in a pull-up manoeuvre is optimal for multiple vehicle designs. Although the lower transition point indicates that the rocket is favoured at an earlier point in the climb manoeuvre, due to the decreased aerodynamic efficiency of the scramjet vehicle. 
-The net result is  a lower payload-to-orbit of XXkg (a decrease of XX\%). 
+To investigate the effect of vehicle design and uncertainty in aerodynamic performance on the optimal trajectory the drag on the vehicle is varied by $\pm10$\%, and an optimised trajectory calculated with dynamic pressure limited to 50kpa. Results are compared to the 100\% drag result in \ref{tab:DragVariationNoReturn} with the trajectory comparison shown in Appendix XX. 
+These results show that when drag is varied the optimal trajectories are similar to the base-line case, with a similarly sized pull-up, though as the drag is increased (ie. L/D is decreased), the second stage follows a slightly slower and hence lower flight path. The similar flight path shape of the high drag case suggests that sacrificing velocity to increase separation altitude in a pull-up manoeuvre is optimal for multiple vehicle designs.
 
+\begin{table}[ht!]
+	\centering
 \begin{tabular}{l c c c c c c} 
 	\hline \textbf{Trajectory Condition}
 	&Cd90
@@ -348,6 +469,22 @@ The net result is  a lower payload-to-orbit of XXkg (a decrease of XX\%).
 	& \firstsecondSeparationAltCdOneHundredFiveNoReturn
 	& \firstsecondSeparationAltCdOneHundredTenNoReturn
 	&-0.09
+	\\
+	\textbf{Separation v, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationvCdNinetyNoReturn
+	& \firstsecondSeparationvCdNinetyFiveNoReturn
+	& \firstsecondSeparationvCdStandardNoReturn
+	& \firstsecondSeparationvCdOneHundredFiveNoReturn
+	& \firstsecondSeparationvCdOneHundredTenNoReturn
+	&-4.87
+	\\
+	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationgammaCdNinetyNoReturn
+	& \firstsecondSeparationgammaCdNinetyFiveNoReturn
+	& \firstsecondSeparationgammaCdStandardNoReturn
+	& \firstsecondSeparationgammaCdOneHundredFiveNoReturn
+	& \firstsecondSeparationgammaCdOneHundredTenNoReturn
+	&-0.22
 	\\
 	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 	& \secondthirdSeparationAltCdNinetyNoReturn
@@ -387,7 +524,7 @@ The net result is  a lower payload-to-orbit of XXkg (a decrease of XX\%).
 	& \secondthirdSeparationLDCdStandardNoReturn
 	& \secondthirdSeparationLDCdOneHundredFiveNoReturn
 	& \secondthirdSeparationLDCdOneHundredTenNoReturn
-	&-0.02
+	&0.02
 	\\
 	\textbf{2$^{nd}$ Stage Flight Time (s)}
 	& \secondFlightTimeCdNinetyNoReturn
@@ -421,21 +558,444 @@ The net result is  a lower payload-to-orbit of XXkg (a decrease of XX\%).
 	& \thirdcircvCdOneHundredTenNoReturn
 	&-8.24
 	\\
+	\textbf{3$^{rd}$ Stage final m (kg)}
+	& \thirdcircmCdNinetyNoReturn
+	& \thirdcircmCdNinetyFiveNoReturn
+	& \thirdcircmCdStandardNoReturn
+	& \thirdcircmCdOneHundredFiveNoReturn
+	& \thirdcircmCdOneHundredTenNoReturn
+	&-2.46
+	\\
 	\hline 
 \end{tabular} 
+\caption{}
+\label{tab:DragVariationNoReturn}
+\end{table}
 
 \subsection{ISP}
 
+The specific impulse of the C-REST scramjet engines is varied by $\pm10\%$ to directly investigate the effects of the efficiency of the scramjet engines on the performance of the launch vehicle. 
+The additional efficiency allows the SPARTAN to accelerate more over the flight time, increasing the velocity at SPARTAN-third stage separation significantly. The velocity added to the end of the SPARTAN's trajectory directly contributes to the final velocity of the third stage at circularisation. Varying the specific impulse does not change the optimal SPARTAN-third stage separation altitude significantly, however the increased velocity allows this altitude to be reached by the SPARTAN with less trajectory angle variation during the pull-up, and allows the third stage to reach orbit from this release point release at a lower trajectory angle.
 
-\subsection{m3}
+\begin{table}[ht!]
+	\centering
+\begin{tabular}{l c c c c c c} 
+	\hline \textbf{Trajectory Condition}
+	&Is90
+	&Isp95
+	&Isp100
+	&Isp105
+	&Isp110
+	& /\%
+	\\
+	\hline \textbf{Payload to Orbit (kg)}
+	& \PayloadToOrbitIspNinetyNoReturn
+	& \PayloadToOrbitIspNinetyFiveNoReturn
+	& \PayloadToOrbitIspStandardNoReturn
+	& \PayloadToOrbitIspOneHundredFiveNoReturn
+	& \PayloadToOrbitIspOneHundredTenNoReturn
+	&2.2
+	\\
+	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+	& \firstsecondSeparationAltIspNinetyNoReturn
+	& \firstsecondSeparationAltIspNinetyFiveNoReturn
+	& \firstsecondSeparationAltIspStandardNoReturn
+	& \firstsecondSeparationAltIspOneHundredFiveNoReturn
+	& \firstsecondSeparationAltIspOneHundredTenNoReturn
+	& -
+	\\
+	\textbf{Separation v, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationvIspNinetyNoReturn
+	& \firstsecondSeparationvIspNinetyFiveNoReturn
+	& \firstsecondSeparationvIspStandardNoReturn
+	& \firstsecondSeparationvIspOneHundredFiveNoReturn
+	& \firstsecondSeparationvIspOneHundredTenNoReturn
+	& -
+	\\
+	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationgammaIspNinetyNoReturn
+	& \firstsecondSeparationgammaIspNinetyFiveNoReturn
+	& \firstsecondSeparationgammaIspStandardNoReturn
+	& \firstsecondSeparationgammaIspOneHundredFiveNoReturn
+	& \firstsecondSeparationgammaIspOneHundredTenNoReturn
+	& -
+	\\
+	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+	& \secondthirdSeparationAltIspNinetyNoReturn
+	& \secondthirdSeparationAltIspNinetyFiveNoReturn
+	& \secondthirdSeparationAltIspStandardNoReturn
+	& \secondthirdSeparationAltIspOneHundredFiveNoReturn
+	& \secondthirdSeparationAltIspOneHundredTenNoReturn
+	& -
+	\\
+	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+	& \secondthirdSeparationvIspNinetyNoReturn
+	& \secondthirdSeparationvIspNinetyFiveNoReturn
+	& \secondthirdSeparationvIspStandardNoReturn
+	& \secondthirdSeparationvIspOneHundredFiveNoReturn
+	& \secondthirdSeparationvIspOneHundredTenNoReturn
+	&13.74
+	\\
+	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+	& \secondthirdSeparationgammaIspNinetyNoReturn
+	& \secondthirdSeparationgammaIspNinetyFiveNoReturn
+	& \secondthirdSeparationgammaIspStandardNoReturn
+	& \secondthirdSeparationgammaIspOneHundredFiveNoReturn
+	& \secondthirdSeparationgammaIspOneHundredTenNoReturn
+	&-0.08
+	\\
+	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+	& \secondthirdSeparationqIspNinetyNoReturn
+	& \secondthirdSeparationqIspNinetyFiveNoReturn
+	& \secondthirdSeparationqIspStandardNoReturn
+	& \secondthirdSeparationqIspOneHundredFiveNoReturn
+	& \secondthirdSeparationqIspOneHundredTenNoReturn
+	& -
+	\\
+	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+	& \secondthirdSeparationLDIspNinetyNoReturn
+	& \secondthirdSeparationLDIspNinetyFiveNoReturn
+	& \secondthirdSeparationLDIspStandardNoReturn
+	& \secondthirdSeparationLDIspOneHundredFiveNoReturn
+	& \secondthirdSeparationLDIspOneHundredTenNoReturn
+	& -
+	\\
+	\textbf{2$^{nd}$ Stage Flight Time (s)}
+	& \secondFlightTimeIspNinetyNoReturn
+	& \secondFlightTimeIspNinetyFiveNoReturn
+	& \secondFlightTimeIspStandardNoReturn
+	& \secondFlightTimeIspOneHundredFiveNoReturn
+	& \secondFlightTimeIspOneHundredTenNoReturn
+	& -
+	\\
+	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+	& \thirdqOverFiveIspNinetyNoReturn
+	& \thirdqOverFiveIspNinetyFiveNoReturn
+	& \thirdqOverFiveIspStandardNoReturn
+	& \thirdqOverFiveIspOneHundredFiveNoReturn
+	& \thirdqOverFiveIspOneHundredTenNoReturn
+	& -
+	\\
+	\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
+	& \thirdmaxAoAIspNinetyNoReturn
+	& \thirdmaxAoAIspNinetyFiveNoReturn
+	& \thirdmaxAoAIspStandardNoReturn
+	& \thirdmaxAoAIspOneHundredFiveNoReturn
+	& \thirdmaxAoAIspOneHundredTenNoReturn
+	& -
+	\\
+	\textbf{3$^{rd}$ Stage final v (m/s)}
+	& \thirdcircvIspNinetyNoReturn
+	& \thirdcircvIspNinetyFiveNoReturn
+	& \thirdcircvIspStandardNoReturn
+	& \thirdcircvIspOneHundredFiveNoReturn
+	& \thirdcircvIspOneHundredTenNoReturn
+	&14.32
+	\\
+	\textbf{3$^{rd}$ Stage final m (kg)}
+	& \thirdcircmIspNinetyNoReturn
+	& \thirdcircmIspNinetyFiveNoReturn
+	& \thirdcircmIspStandardNoReturn
+	& \thirdcircmIspOneHundredFiveNoReturn
+	& \thirdcircmIspOneHundredTenNoReturn
+	& -
+	\\
+	\hline 
+\end{tabular} 
+\end{table}
+
+
+
+\subsection{mSPARTAN}\label{sec:SpartanMassnoreturn}
+
+The mass of the SPARTAN is varied by $\pm$5\%, to investigate the effects of the structural, thermal shielding, and system mass of the SPARTAN on the performance of the launch system. For this mass variation, it is assumed that the scramjet engines are operable at velocities slightly under Mach 5, in order to allow assessment of the effect of higher mass values without modification of the first stage rocket. Only a total mass variation of 5\% is used, in order to prevent the first stage-SPARTAN separation velocity from dropping unacceptably low. Increasing the structural mass of the SPARTAN has a significant effect on both the first stage-SPARTAN and SPARTAN-third stage separation velocities, which in turn lessen the final velocity of the third stage rocket. However, most other trajectory conditions are relatively unaffected, with a pull-up of similar magnitude being performed at the end of each trajectory. 
+A higher SPARTAN mass affects the first stage-SPARTAN separation velocity significantly, which would potentially affect the necessary sizing of the first stage rocket significantly. 
+
+
+
+
+\begin{table}[ht]
+\centering
+
 
 \begin{tabular}{l c c c c c c} 
 	\hline \textbf{Trajectory Condition}
-	&m3 90
-	&m3 95
-	&m3 100
-	&m3 105
-	&m3 110
+	&m295
+	&m297.5
+	&m2100
+	&m2102.5
+	&m2105
+	& /\%
+	\\
+	\hline \textbf{Payload to Orbit (kg)}
+	& \PayloadToOrbitmSPARTANNinetyFiveNoReturn
+	& \PayloadToOrbitmSPARTANNinetySevenFiveNoReturn
+	& \PayloadToOrbitmSPARTANStandardNoReturn
+	& \PayloadToOrbitmSPARTANOneHundredTwoFiveNoReturn
+	& \PayloadToOrbitmSPARTANOneHundredFiveNoReturn
+	&-1.5
+	\\
+	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+	& \firstsecondSeparationAltmSPARTANNinetyFiveNoReturn
+	& \firstsecondSeparationAltmSPARTANNinetySevenFiveNoReturn
+	& \firstsecondSeparationAltmSPARTANStandardNoReturn
+	& \firstsecondSeparationAltmSPARTANOneHundredTwoFiveNoReturn
+	& \firstsecondSeparationAltmSPARTANOneHundredFiveNoReturn
+	&-0.22
+	\\
+	\textbf{Separation v, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationvmSPARTANNinetyFiveNoReturn
+	& \firstsecondSeparationvmSPARTANNinetySevenFiveNoReturn
+	& \firstsecondSeparationvmSPARTANStandardNoReturn
+	& \firstsecondSeparationvmSPARTANOneHundredTwoFiveNoReturn
+	& \firstsecondSeparationvmSPARTANOneHundredFiveNoReturn
+	&-11.97
+	\\
+	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationgammamSPARTANNinetyFiveNoReturn
+	& \firstsecondSeparationgammamSPARTANNinetySevenFiveNoReturn
+	& \firstsecondSeparationgammamSPARTANStandardNoReturn
+	& \firstsecondSeparationgammamSPARTANOneHundredTwoFiveNoReturn
+	& \firstsecondSeparationgammamSPARTANOneHundredFiveNoReturn
+	&-0.34
+	\\
+	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+	& \secondthirdSeparationAltmSPARTANNinetyFiveNoReturn
+	& \secondthirdSeparationAltmSPARTANNinetySevenFiveNoReturn
+	& \secondthirdSeparationAltmSPARTANStandardNoReturn
+	& \secondthirdSeparationAltmSPARTANOneHundredTwoFiveNoReturn
+	& \secondthirdSeparationAltmSPARTANOneHundredFiveNoReturn
+	& -
+	\\
+	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+	& \secondthirdSeparationvmSPARTANNinetyFiveNoReturn
+	& \secondthirdSeparationvmSPARTANNinetySevenFiveNoReturn
+	& \secondthirdSeparationvmSPARTANStandardNoReturn
+	& \secondthirdSeparationvmSPARTANOneHundredTwoFiveNoReturn
+	& \secondthirdSeparationvmSPARTANOneHundredFiveNoReturn
+	&-9.54
+	\\
+	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+	& \secondthirdSeparationgammamSPARTANNinetyFiveNoReturn
+	& \secondthirdSeparationgammamSPARTANNinetySevenFiveNoReturn
+	& \secondthirdSeparationgammamSPARTANStandardNoReturn
+	& \secondthirdSeparationgammamSPARTANOneHundredTwoFiveNoReturn
+	& \secondthirdSeparationgammamSPARTANOneHundredFiveNoReturn
+	&0.06
+	\\
+	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+	& \secondthirdSeparationqmSPARTANNinetyFiveNoReturn
+	& \secondthirdSeparationqmSPARTANNinetySevenFiveNoReturn
+	& \secondthirdSeparationqmSPARTANStandardNoReturn
+	& \secondthirdSeparationqmSPARTANOneHundredTwoFiveNoReturn
+	& \secondthirdSeparationqmSPARTANOneHundredFiveNoReturn
+	&-0.1
+	\\
+	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+	& \secondthirdSeparationNetIspmSPARTANNinetyFiveNoReturn
+	& \secondthirdSeparationNetIspmSPARTANNinetySevenFiveNoReturn
+	& \secondthirdSeparationNetIspmSPARTANStandardNoReturn
+	& \secondthirdSeparationNetIspmSPARTANOneHundredTwoFiveNoReturn
+	& \secondthirdSeparationNetIspmSPARTANOneHundredFiveNoReturn
+	& -
+	\\
+	\textbf{2$^{nd}$ Stage Flight Time (s)}
+	& \secondFlightTimemSPARTANNinetyFiveNoReturn
+	& \secondFlightTimemSPARTANNinetySevenFiveNoReturn
+	& \secondFlightTimemSPARTANStandardNoReturn
+	& \secondFlightTimemSPARTANOneHundredTwoFiveNoReturn
+	& \secondFlightTimemSPARTANOneHundredFiveNoReturn
+	& -
+	\\
+	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+	& \thirdqOverFivemSPARTANNinetyFiveNoReturn
+	& \thirdqOverFivemSPARTANNinetySevenFiveNoReturn
+	& \thirdqOverFivemSPARTANStandardNoReturn
+	& \thirdqOverFivemSPARTANOneHundredTwoFiveNoReturn
+	& \thirdqOverFivemSPARTANOneHundredFiveNoReturn
+	&-0.24
+	\\
+	\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
+	& \thirdmaxAoAmSPARTANNinetyFiveNoReturn
+	& \thirdmaxAoAmSPARTANNinetySevenFiveNoReturn
+	& \thirdmaxAoAmSPARTANStandardNoReturn
+	& \thirdmaxAoAmSPARTANOneHundredTwoFiveNoReturn
+	& \thirdmaxAoAmSPARTANOneHundredFiveNoReturn
+	& -
+	\\
+	\textbf{3$^{rd}$ Stage final v (m/s)}
+	& \thirdcircvmSPARTANNinetyFiveNoReturn
+	& \thirdcircvmSPARTANNinetySevenFiveNoReturn
+	& \thirdcircvmSPARTANStandardNoReturn
+	& \thirdcircvmSPARTANOneHundredTwoFiveNoReturn
+	& \thirdcircvmSPARTANOneHundredFiveNoReturn
+	&-9.67
+	\\
+	\textbf{3$^{rd}$ Stage final m (kg)}
+	& \thirdcircmmSPARTANNinetyFiveNoReturn
+	& \thirdcircmmSPARTANNinetySevenFiveNoReturn
+	& \thirdcircmmSPARTANStandardNoReturn
+	& \thirdcircmmSPARTANOneHundredTwoFiveNoReturn
+	& \thirdcircmmSPARTANOneHundredFiveNoReturn
+	& -
+	\\
+	\hline 
+\end{tabular} 
+
+\end{table}
+
+\subsection{mFuel SPARTAN}
+
+The available fuel mass of the SPARTAN is varied by $\pm 10\%$, to investigate the effects of variation in the available fuel tank size within the SPARTAN. As previously, it is assumed that the SPARTAN is operable at velocities slightly under Mach 5. 
+ The addition of extra fuel mass allows the SPARTAN to accelerate for longer, directly increasing the velocity at SPARTAN-third stage separation, and requiring slightly less pull-up angle. 
+As the increased fuel mass directly increases the velocity at the end of the SPARTAN's trajectory, the beneficial effects of additional fuel are likely to exhibit diminishing returns as the velocity at the end of the SPARTAN's trajectory increases, and Isp decreases.
+The significant effects of the variation in fuel mass indicates that it is beneficial to maximise the available volume of fuel tanks within the SPARTAN. 
+
+
+\begin{table}[ht]
+	\centering
+\begin{tabular}{l c c c c c c} 
+	\hline \textbf{Trajectory Condition}
+	&mF90
+	&mF95
+	&mF100
+	&mF105
+	&mF110
+	& /\%
+	\\
+	\hline \textbf{Payload to Orbit (kg)}
+	& \PayloadToOrbitmFuelNinetyNoReturn
+	& \PayloadToOrbitmFuelNinetyFiveNoReturn
+	& \PayloadToOrbitmFuelStandardNoReturn
+	& \PayloadToOrbitmFuelOneHundredFiveNoReturn
+	& \PayloadToOrbitmFuelOneHundredTenNoReturn
+	&0.7
+	\\
+	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+	& \firstsecondSeparationAltmFuelNinetyNoReturn
+	& \firstsecondSeparationAltmFuelNinetyFiveNoReturn
+	& \firstsecondSeparationAltmFuelStandardNoReturn
+	& \firstsecondSeparationAltmFuelOneHundredFiveNoReturn
+	& \firstsecondSeparationAltmFuelOneHundredTenNoReturn
+	&-0.08
+	\\
+	\textbf{Separation v, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationvmFuelNinetyNoReturn
+	& \firstsecondSeparationvmFuelNinetyFiveNoReturn
+	& \firstsecondSeparationvmFuelStandardNoReturn
+	& \firstsecondSeparationvmFuelOneHundredFiveNoReturn
+	& \firstsecondSeparationvmFuelOneHundredTenNoReturn
+	&-3.65
+	\\
+	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationgammamFuelNinetyNoReturn
+	& \firstsecondSeparationgammamFuelNinetyFiveNoReturn
+	& \firstsecondSeparationgammamFuelStandardNoReturn
+	& \firstsecondSeparationgammamFuelOneHundredFiveNoReturn
+	& \firstsecondSeparationgammamFuelOneHundredTenNoReturn
+	& -
+	\\
+	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+	& \secondthirdSeparationAltmFuelNinetyNoReturn
+	& \secondthirdSeparationAltmFuelNinetyFiveNoReturn
+	& \secondthirdSeparationAltmFuelStandardNoReturn
+	& \secondthirdSeparationAltmFuelOneHundredFiveNoReturn
+	& \secondthirdSeparationAltmFuelOneHundredTenNoReturn
+	& -
+	\\
+	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+	& \secondthirdSeparationvmFuelNinetyNoReturn
+	& \secondthirdSeparationvmFuelNinetyFiveNoReturn
+	& \secondthirdSeparationvmFuelStandardNoReturn
+	& \secondthirdSeparationvmFuelOneHundredFiveNoReturn
+	& \secondthirdSeparationvmFuelOneHundredTenNoReturn
+	&4.78
+	\\
+	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+	& \secondthirdSeparationgammamFuelNinetyNoReturn
+	& \secondthirdSeparationgammamFuelNinetyFiveNoReturn
+	& \secondthirdSeparationgammamFuelStandardNoReturn
+	& \secondthirdSeparationgammamFuelOneHundredFiveNoReturn
+	& \secondthirdSeparationgammamFuelOneHundredTenNoReturn
+	&-0.04
+	\\
+	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+	& \secondthirdSeparationqmFuelNinetyNoReturn
+	& \secondthirdSeparationqmFuelNinetyFiveNoReturn
+	& \secondthirdSeparationqmFuelStandardNoReturn
+	& \secondthirdSeparationqmFuelOneHundredFiveNoReturn
+	& \secondthirdSeparationqmFuelOneHundredTenNoReturn
+	& -
+	\\
+	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+	& \secondthirdSeparationLDmFuelNinetyNoReturn
+	& \secondthirdSeparationLDmFuelNinetyFiveNoReturn
+	& \secondthirdSeparationLDmFuelStandardNoReturn
+	& \secondthirdSeparationLDmFuelOneHundredFiveNoReturn
+	& \secondthirdSeparationLDmFuelOneHundredTenNoReturn
+	& -
+	\\
+	\textbf{2$^{nd}$ Stage Flight Time (s)}
+	& \secondFlightTimemFuelNinetyNoReturn
+	& \secondFlightTimemFuelNinetyFiveNoReturn
+	& \secondFlightTimemFuelStandardNoReturn
+	& \secondFlightTimemFuelOneHundredFiveNoReturn
+	& \secondFlightTimemFuelOneHundredTenNoReturn
+	&4.41
+	\\
+	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+	& \thirdqOverFivemFuelNinetyNoReturn
+	& \thirdqOverFivemFuelNinetyFiveNoReturn
+	& \thirdqOverFivemFuelStandardNoReturn
+	& \thirdqOverFivemFuelOneHundredFiveNoReturn
+	& \thirdqOverFivemFuelOneHundredTenNoReturn
+	&0.11
+	\\
+	\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
+	& \thirdmaxAoAmFuelNinetyNoReturn
+	& \thirdmaxAoAmFuelNinetyFiveNoReturn
+	& \thirdmaxAoAmFuelStandardNoReturn
+	& \thirdmaxAoAmFuelOneHundredFiveNoReturn
+	& \thirdmaxAoAmFuelOneHundredTenNoReturn
+	& -
+	\\
+	\textbf{3$^{rd}$ Stage final v (m/s)}
+	& \thirdcircvmFuelNinetyNoReturn
+	& \thirdcircvmFuelNinetyFiveNoReturn
+	& \thirdcircvmFuelStandardNoReturn
+	& \thirdcircvmFuelOneHundredFiveNoReturn
+	& \thirdcircvmFuelOneHundredTenNoReturn
+	&5.87
+	\\
+	\textbf{3$^{rd}$ Stage final m (kg)}
+	& \thirdcircmmFuelNinetyNoReturn
+	& \thirdcircmmFuelNinetyFiveNoReturn
+	& \thirdcircmmFuelStandardNoReturn
+	& \thirdcircmmFuelOneHundredFiveNoReturn
+	& \thirdcircmmFuelOneHundredTenNoReturn
+	& -
+	\\
+	\hline 
+\end{tabular} 
+\end{table}
+
+\subsection{m3}
+
+The mass of the third stage rocket is varied by $\pm10\%$ to investigate the effect of having greater combined  payload, fuel and structural mass within the third stage rocket. The structural mass fraction is kept constant at 9\% of total mass (without heat shield) and the heat shield mass is unchanged. This mass variation primarily investigates the effects of the third stage internal layout on the trajectory of the launch system, quantifying the consequences of fitting additional fuel, payload and structure within the available space.
+  
+ As the mass of the third stage increases, acceleration of the first stage and SPARTAN are decreased, and a larger trajectory angle is required during SPARTAN pull-up. Nevertheless, as the third stage mass increases, the payload to orbit increases significantly.
+The majority of the additional mass is used for fuel and additional structural mass, with 11.5\% of the added mass utilised for payload. This mass fraction change rate is greater than the payload mass fraction of the standard third stage without heat shield, 6.0\%, indicating that as more payload, fuel and structural mass is added to the internals of the third stage, the efficiency of the third stage increased.
+
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{l c c c c c c} 
+	\hline \textbf{Trajectory Condition}
+	&m390
+	&m395
+	&m3100
+	&m3105
+	&m3110
 	& /\%
 	\\
 	\hline \textbf{Payload to Orbit (kg)}
@@ -444,7 +1004,7 @@ The net result is  a lower payload-to-orbit of XXkg (a decrease of XX\%).
 	& \PayloadToOrbitmThreeStandardNoReturn
 	& \PayloadToOrbitmThreeOneHundredFiveNoReturn
 	& \PayloadToOrbitmThreeOneHundredTenNoReturn
-	&4.9
+	&3.8
 	\\
 	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 	& \firstsecondSeparationAltmThreeNinetyNoReturn
@@ -452,7 +1012,23 @@ The net result is  a lower payload-to-orbit of XXkg (a decrease of XX\%).
 	& \firstsecondSeparationAltmThreeStandardNoReturn
 	& \firstsecondSeparationAltmThreeOneHundredFiveNoReturn
 	& \firstsecondSeparationAltmThreeOneHundredTenNoReturn
-	& -
+	&-0.17
+	\\
+	\textbf{Separation v, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationvmThreeNinetyNoReturn
+	& \firstsecondSeparationvmThreeNinetyFiveNoReturn
+	& \firstsecondSeparationvmThreeStandardNoReturn
+	& \firstsecondSeparationvmThreeOneHundredFiveNoReturn
+	& \firstsecondSeparationvmThreeOneHundredTenNoReturn
+	&-7.79
+	\\
+	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationgammamThreeNinetyNoReturn
+	& \firstsecondSeparationgammamThreeNinetyFiveNoReturn
+	& \firstsecondSeparationgammamThreeStandardNoReturn
+	& \firstsecondSeparationgammamThreeOneHundredFiveNoReturn
+	& \firstsecondSeparationgammamThreeOneHundredTenNoReturn
+	&-0.24
 	\\
 	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 	& \secondthirdSeparationAltmThreeNinetyNoReturn
@@ -468,7 +1044,7 @@ The net result is  a lower payload-to-orbit of XXkg (a decrease of XX\%).
 	& \secondthirdSeparationvmThreeStandardNoReturn
 	& \secondthirdSeparationvmThreeOneHundredFiveNoReturn
 	& \secondthirdSeparationvmThreeOneHundredTenNoReturn
-	&-1.67
+	&-7.05
 	\\
 	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
 	& \secondthirdSeparationgammamThreeNinetyNoReturn
@@ -476,7 +1052,7 @@ The net result is  a lower payload-to-orbit of XXkg (a decrease of XX\%).
 	& \secondthirdSeparationgammamThreeStandardNoReturn
 	& \secondthirdSeparationgammamThreeOneHundredFiveNoReturn
 	& \secondthirdSeparationgammamThreeOneHundredTenNoReturn
-	&0.08
+	&0.06
 	\\
 	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
 	& \secondthirdSeparationqmThreeNinetyNoReturn
@@ -492,7 +1068,7 @@ The net result is  a lower payload-to-orbit of XXkg (a decrease of XX\%).
 	& \secondthirdSeparationLDmThreeStandardNoReturn
 	& \secondthirdSeparationLDmThreeOneHundredFiveNoReturn
 	& \secondthirdSeparationLDmThreeOneHundredTenNoReturn
-	&-0.05
+	& -
 	\\
 	\textbf{2$^{nd}$ Stage Flight Time (s)}
 	& \secondFlightTimemThreeNinetyNoReturn
@@ -508,7 +1084,7 @@ The net result is  a lower payload-to-orbit of XXkg (a decrease of XX\%).
 	& \thirdqOverFivemThreeStandardNoReturn
 	& \thirdqOverFivemThreeOneHundredFiveNoReturn
 	& \thirdqOverFivemThreeOneHundredTenNoReturn
-	& -
+	&-0.2
 	\\
 	\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
 	& \thirdmaxAoAmThreeNinetyNoReturn
@@ -516,7 +1092,7 @@ The net result is  a lower payload-to-orbit of XXkg (a decrease of XX\%).
 	& \thirdmaxAoAmThreeStandardNoReturn
 	& \thirdmaxAoAmThreeOneHundredFiveNoReturn
 	& \thirdmaxAoAmThreeOneHundredTenNoReturn
-	& -
+	&0
 	\\
 	\textbf{3$^{rd}$ Stage final v (m/s)}
 	& \thirdcircvmThreeNinetyNoReturn
@@ -524,20 +1100,38 @@ The net result is  a lower payload-to-orbit of XXkg (a decrease of XX\%).
 	& \thirdcircvmThreeStandardNoReturn
 	& \thirdcircvmThreeOneHundredFiveNoReturn
 	& \thirdcircvmThreeOneHundredTenNoReturn
-	& -
+	&-7.5
+	\\
+	\textbf{3$^{rd}$ Stage final m (kg)}
+	& \thirdcircmmThreeNinetyNoReturn
+	& \thirdcircmmThreeNinetyFiveNoReturn
+	& \thirdcircmmThreeStandardNoReturn
+	& \thirdcircmmThreeOneHundredFiveNoReturn
+	& \thirdcircmmThreeOneHundredTenNoReturn
+	&21.98
 	\\
 	\hline 
 \end{tabular} 
+\end{table}
 
 \subsection{T3}
 
-\begin{tabular}{l c c c c c c} 
+The thrust of the third stage rocket is varied between 90-110\% in order to investigate the effect of the tank pressure on the payload to orbit. The specific impulse is not altered, so that the fuel mass rate is effectively the parameter being modified. This allows an indirect assessment of the effects of the third stage tank pressure on the performance of launch system. The constant Isp means that only the in-atmosphere portion of the trajectory is directly affected, with the circularisation burn and Hohmann transfer not being directly influenced. 
+
+The thrust variation has a significant effect on the trajectory of the system, and the payload-to-orbit. As the thrust increases, the SPARTAN-third stage separation altitude and separation angle decrease significantly, and the SPARTAN-third stage velocity increases. 
+The third stage thrust variation is the only design parameter which has a significant effect on the altitude of the pull-up manoeuvre. This significant variance is caused by the third stage rocket requiring higher initial angle of attack with lower thrust values. As the maximum allowable angle of attack of the third stage increases as the SPARTAN-third stage release altitude increases, the altitude of release significantly affects the performance of the third stage rocket. The lower the third stage is able to be released, the more efficient the trajectory path, however, the third stage can reach the required circularisation altitude more easily from a higher release point. 
+
+The lower, faster release point also indicates that increasing the thrust of the third stage rocket engine allows the SPARTAN to have a smaller pull-up, resulting in a more efficient SPARTAN trajectory. The L/D of the SPARTAN at SPARTAN-third stage separation generally increases as the third stage thrust increases. At lower values of third stage thrust, the L/D is constant due to the SPARTAN hitting the angle of attack limit of 10$^\circ$ during pull-up. 
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{l c c c c c c}
 	\hline \textbf{Trajectory Condition}
-	&T3 90
-	&T3 95
-	&T3 100
-	&T3 105
-	&T3 110
+	&T390
+	&T395
+	&T3100
+	&T3105
+	&T3110
 	& /\%
 	\\
 	\hline \textbf{Payload to Orbit (kg)}
@@ -554,6 +1148,22 @@ The net result is  a lower payload-to-orbit of XXkg (a decrease of XX\%).
 	& \firstsecondSeparationAltTThreeStandardNoReturn
 	& \firstsecondSeparationAltTThreeOneHundredFiveNoReturn
 	& \firstsecondSeparationAltTThreeOneHundredTenNoReturn
+	& -
+	\\
+	\textbf{Separation v, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationvTThreeNinetyNoReturn
+	& \firstsecondSeparationvTThreeNinetyFiveNoReturn
+	& \firstsecondSeparationvTThreeStandardNoReturn
+	& \firstsecondSeparationvTThreeOneHundredFiveNoReturn
+	& \firstsecondSeparationvTThreeOneHundredTenNoReturn
+	& -
+	\\
+	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationgammaTThreeNinetyNoReturn
+	& \firstsecondSeparationgammaTThreeNinetyFiveNoReturn
+	& \firstsecondSeparationgammaTThreeStandardNoReturn
+	& \firstsecondSeparationgammaTThreeOneHundredFiveNoReturn
+	& \firstsecondSeparationgammaTThreeOneHundredTenNoReturn
 	& -
 	\\
 	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
@@ -628,5 +1238,184 @@ The net result is  a lower payload-to-orbit of XXkg (a decrease of XX\%).
 	& \thirdcircvTThreeOneHundredTenNoReturn
 	&132.76
 	\\
+	\textbf{3$^{rd}$ Stage final m (kg)}
+	& \thirdcircmTThreeNinetyNoReturn
+	& \thirdcircmTThreeNinetyFiveNoReturn
+	& \thirdcircmTThreeStandardNoReturn
+	& \thirdcircmTThreeOneHundredFiveNoReturn
+	& \thirdcircmTThreeOneHundredTenNoReturn
+	&-65.97
+	\\
 	\hline 
 \end{tabular} 
+\end{table}
+
+
+\section{Cd3}
+
+The coefficient of drag of the third stage rocket is varied by $\pm20\%$ to investigate the effects of the third stage design and sizing on the performance of the launch system. The third stage drag is found to have only a very small effect on the performance of the launch system. This indicates that the aerodynamic properties of the third stage rocket do not contribute significantly to the performance of the system. 
+
+\begin{table}[ht]
+	\centering
+\begin{tabular}{l c c c c c c} 
+	\hline \textbf{Trajectory Condition}
+	&Cd380
+	&Cd390
+	&Cd3100
+	&Cd3110
+	&Cd3120
+	& /\%
+	\\
+	\hline \textbf{Payload to Orbit (kg)}
+	& \PayloadToOrbitCdThreeEightyNoReturn
+	& \PayloadToOrbitCdThreeNinetyNoReturn
+	& \PayloadToOrbitCdThreeStandardNoReturn
+	& \PayloadToOrbitCdThreeOneHundredTenNoReturn
+	& \PayloadToOrbitCdThreeOneHundredTwentyNoReturn
+	&0
+	\\
+	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+	& \firstsecondSeparationAltCdThreeEightyNoReturn
+	& \firstsecondSeparationAltCdThreeNinetyNoReturn
+	& \firstsecondSeparationAltCdThreeStandardNoReturn
+	& \firstsecondSeparationAltCdThreeOneHundredTenNoReturn
+	& \firstsecondSeparationAltCdThreeOneHundredTwentyNoReturn
+	& -
+	\\
+	\textbf{Separation v, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationvCdThreeEightyNoReturn
+	& \firstsecondSeparationvCdThreeNinetyNoReturn
+	& \firstsecondSeparationvCdThreeStandardNoReturn
+	& \firstsecondSeparationvCdThreeOneHundredTenNoReturn
+	& \firstsecondSeparationvCdThreeOneHundredTwentyNoReturn
+	& -
+	\\
+	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationgammaCdThreeEightyNoReturn
+	& \firstsecondSeparationgammaCdThreeNinetyNoReturn
+	& \firstsecondSeparationgammaCdThreeStandardNoReturn
+	& \firstsecondSeparationgammaCdThreeOneHundredTenNoReturn
+	& \firstsecondSeparationgammaCdThreeOneHundredTwentyNoReturn
+	& -
+	\\
+	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+	& \secondthirdSeparationAltCdThreeEightyNoReturn
+	& \secondthirdSeparationAltCdThreeNinetyNoReturn
+	& \secondthirdSeparationAltCdThreeStandardNoReturn
+	& \secondthirdSeparationAltCdThreeOneHundredTenNoReturn
+	& \secondthirdSeparationAltCdThreeOneHundredTwentyNoReturn
+	&0.04
+	\\
+	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+	& \secondthirdSeparationvCdThreeEightyNoReturn
+	& \secondthirdSeparationvCdThreeNinetyNoReturn
+	& \secondthirdSeparationvCdThreeStandardNoReturn
+	& \secondthirdSeparationvCdThreeOneHundredTenNoReturn
+	& \secondthirdSeparationvCdThreeOneHundredTwentyNoReturn
+	&-0.64
+	\\
+	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+	& \secondthirdSeparationgammaCdThreeEightyNoReturn
+	& \secondthirdSeparationgammaCdThreeNinetyNoReturn
+	& \secondthirdSeparationgammaCdThreeStandardNoReturn
+	& \secondthirdSeparationgammaCdThreeOneHundredTenNoReturn
+	& \secondthirdSeparationgammaCdThreeOneHundredTwentyNoReturn
+	&0.02
+	\\
+	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+	& \secondthirdSeparationqCdThreeEightyNoReturn
+	& \secondthirdSeparationqCdThreeNinetyNoReturn
+	& \secondthirdSeparationqCdThreeStandardNoReturn
+	& \secondthirdSeparationqCdThreeOneHundredTenNoReturn
+	& \secondthirdSeparationqCdThreeOneHundredTwentyNoReturn
+	&-0.07
+	\\
+	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+	& \secondthirdSeparationLDCdThreeEightyNoReturn
+	& \secondthirdSeparationLDCdThreeNinetyNoReturn
+	& \secondthirdSeparationLDCdThreeStandardNoReturn
+	& \secondthirdSeparationLDCdThreeOneHundredTenNoReturn
+	& \secondthirdSeparationLDCdThreeOneHundredTwentyNoReturn
+	& -
+	\\
+	\textbf{2$^{nd}$ Stage Flight Time (s)}
+	& \secondFlightTimeCdThreeEightyNoReturn
+	& \secondFlightTimeCdThreeNinetyNoReturn
+	& \secondFlightTimeCdThreeStandardNoReturn
+	& \secondFlightTimeCdThreeOneHundredTenNoReturn
+	& \secondFlightTimeCdThreeOneHundredTwentyNoReturn
+	& -
+	\\
+	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+	& \thirdqOverFiveCdThreeEightyNoReturn
+	& \thirdqOverFiveCdThreeNinetyNoReturn
+	& \thirdqOverFiveCdThreeStandardNoReturn
+	& \thirdqOverFiveCdThreeOneHundredTenNoReturn
+	& \thirdqOverFiveCdThreeOneHundredTwentyNoReturn
+	&-0.13
+	\\
+	\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
+	& \thirdmaxAoACdThreeEightyNoReturn
+	& \thirdmaxAoACdThreeNinetyNoReturn
+	& \thirdmaxAoACdThreeStandardNoReturn
+	& \thirdmaxAoACdThreeOneHundredTenNoReturn
+	& \thirdmaxAoACdThreeOneHundredTwentyNoReturn
+	&0
+	\\
+	\textbf{3$^{rd}$ Stage final v (m/s)}
+	& \thirdcircvCdThreeEightyNoReturn
+	& \thirdcircvCdThreeNinetyNoReturn
+	& \thirdcircvCdThreeStandardNoReturn
+	& \thirdcircvCdThreeOneHundredTenNoReturn
+	& \thirdcircvCdThreeOneHundredTwentyNoReturn
+	& -
+	\\
+	\textbf{3$^{rd}$ Stage final m (kg)}
+	& \thirdcircmCdThreeEightyNoReturn
+	& \thirdcircmCdThreeNinetyNoReturn
+	& \thirdcircmCdThreeStandardNoReturn
+	& \thirdcircmCdThreeOneHundredTenNoReturn
+	& \thirdcircmCdThreeOneHundredTwentyNoReturn
+	& -
+	\\
+	\hline 
+\end{tabular} 
+
+\end{table}
+
+\section{Comparison of Design Parameters}
+
+Figure \ref{fig:BarChartRelativePayloadChange} shows the payload change per percent for each design parameter of the launch system. 
+The influence of the third stage on the payload-to-orbit performance of the launch system is large, with the third stage mass and thrust having the largest percentile sensitivities of any of the design parameters tested. This indicates that the performance of the system is particularly sensitive to the third stage design. However, the aerodynamic performance of the third stage is shown to have negligible impact on the performance of the launch system. This implies that designing the shape of the third stage rocket to maximise the fuel mass, payload mass, and tank strength may be beneficial. However, a detailed thermal analysis would be required to assess the impact of changing the third stage design on the heat shielding, which is outside the scope of this study.  
+
+
+The influence of maximum dynamic pressure on the performance of the launch system is very low, particularly when compared to the influence of closely linked the SPARTAN mass parameter. The SPARTAN's thermal protective properties and structural strength define the maximum dynamic pressure, so the low variance in performance with maximum dynamic pressure will likely be offset by the variation in the mass of the SPARTAN, ie. a lower maximum dynamic pressure requires less structural and thermal protection system mass. This indicates that in the future it may be beneficial to design the SPARTAN towards a lower maximum dynamic pressure.
+
+The influence of the fuel mass of the SPARTAN is also low, however, the fuel mass is only a fraction of the total mass of the SPARTAN (24.0\%). This means that relatively small mass changes in fuel mass are still significant. Comparing the impact of the fuel mass and structural mass of the SPARTAN along with their relative magnitudes (1562kg of fuel mass and 4957kg of structural mass), the absolute impact of each is 0.044 and 0.030kg$_{payload}/$kg respectively. This implies that so long as fuel mass can be added to the SPARTAN with less than 1.47kg of structural mass incorporated for each kg of fuel mass, adding additional fuel mass will be beneficial. However, the fuel mass is constrained considerably by the available internal space within the SPARTAN, which is likely to be the main limiting factor.
+
+
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.7\linewidth]{figures/5_Ascent/BarChartRelativePayloadChange}
+\caption{}
+\label{fig:BarChartRelativePayloadChange}
+\end{figure}
+
+
+
+The design parameters which increase the velocity at SPARTAN-third stage separation do not cause the SPARTAN to pull-up to higher altitude before third stage release, rather the higher velocity is utilised to allow for a lower release angle at the end of the pull-up manoeuvre. The third stage thrust and drag coefficient are the only parameters which has a significant effect on the release altitude, indicating that it is the third stage performance which is primarily driving the pull-up. 
+
+When the velocity at SPARTAN-third stage separation is varied, the magnitude of the velocity variation carries through in similar magnitude to the third stage velocity at circularisation. This indicates that the $\Delta$v of the third stage before circularisation is relatively consistent. However, the benefits of increased velocity at SPARTAN-third stage separation may potentially be offset slightly by an increase in necessary thermal protection mass, though this is beyond the scope of this study.
+
+
+
+
+\section{Summary}
+
+
+In this chapter, LODESTAR was used to design the trajectory of the rocket-scramjet-rocket multi-stage system. 
+A trajectory was simulated in which the SPARTAN stage flies at a constant dynamic pressure, producing \PayloadToOrbitConstq kg of payload-to-orbit. Trajectory optimisation for maximum payload indicates that the optimal scramjet flight path for a system transitioning between separate airbreathing and rocket-powered stages is for the first stage-SPARTAN separation to occur at a higher trajectory angle that in the constant dynamic pressure trajectory, causing the SPARTAN to fly at lower dynamic pressure initially. The SPARTAN exhibits two more altitude raising manoeuvres, one to improve the specific impulse of the C-REST engines, and finally a pull-up manoeuvre. The optimal pull-up manoeuvre trades off velocity (a decrease of 24m/s) for altitude (an increase of 1.32km) and improved flight path angle (an increase of 1.41$^\circ$), when compared to the constant dynamic pressure case. The optimal flight path increases payload mass to heliocentric orbit by XXkg (XX\%) compared to a constant dynamic pressure trajectory. The pull up manoeuvre in the payload-optimised trajectory also reduces third stage dynamic pressure to XX kPa, a decrease of XX compared to a trajectory with minimum pull-up. 
+
+A sensitivity study was conducted, to determine the relative effects of key vehicle design parameters on the optimised trajectory. It was found that the maximum dynamic pressure has a relatively small effect on the payload-to-orbit performance of the launch system, and the negative efficiency effects which are present are likely to be offset by the benefits of lower dynamic pressure flight. 
+It was found that the third stage contributes significantly, and that the efficiency of the third stage is the major driving factor of the pull-up manoeuvre. 

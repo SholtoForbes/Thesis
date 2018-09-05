@@ -51,42 +51,42 @@
 \BOOKMARK [1][-]{section.4.5}{The Optimisation Process}{chapter.4}% 51
 \BOOKMARK [0][-]{chapter.5}{Optimised Ascent Trajectory}{}% 52
 \BOOKMARK [1][-]{section.5.1}{Constant Dynamic Pressure Trajectory}{chapter.5}% 53
-\BOOKMARK [2][-]{subsection.5.1.1}{First Stage}{section.5.1}% 54
-\BOOKMARK [2][-]{subsection.5.1.2}{Second Stage}{section.5.1}% 55
-\BOOKMARK [2][-]{subsection.5.1.3}{Third Stage}{section.5.1}% 56
-\BOOKMARK [1][-]{section.5.2}{Optimised Ascent Trajectory}{chapter.5}% 57
-\BOOKMARK [2][-]{subsection.5.2.1}{First Stage}{section.5.2}% 58
-\BOOKMARK [2][-]{subsection.5.2.2}{Second Stage}{section.5.2}% 59
-\BOOKMARK [2][-]{subsection.5.2.3}{Third Stage}{section.5.2}% 60
-\BOOKMARK [1][-]{section.5.3}{Sensitivity Analysis}{chapter.5}% 61
-\BOOKMARK [2][-]{subsection.5.3.1}{Dynamic Pressure Sensitivity}{section.5.3}% 62
-\BOOKMARK [2][-]{subsection.5.3.2}{Drag Sensitivity Analysis}{section.5.3}% 63
-\BOOKMARK [2][-]{subsection.5.3.3}{ISP}{section.5.3}% 64
-\BOOKMARK [2][-]{subsection.5.3.4}{m3}{section.5.3}% 65
-\BOOKMARK [2][-]{subsection.5.3.5}{T3}{section.5.3}% 66
-\BOOKMARK [0][-]{chapter.6}{Optimised Trajectory Including Fly-Back}{}% 67
-\BOOKMARK [1][-]{section.6.1}{Combined SPARTAN Ascent-Descent \046 Third Stage}{chapter.6}% 68
-\BOOKMARK [1][-]{section.6.2}{First Stage Trajectory}{chapter.6}% 69
-\BOOKMARK [1][-]{section.6.3}{Second Stage Trajectory}{chapter.6}% 70
-\BOOKMARK [1][-]{section.6.4}{Third Stage Trajectory}{chapter.6}% 71
-\BOOKMARK [1][-]{section.6.5}{Fly-Back Trajectory}{chapter.6}% 72
-\BOOKMARK [1][-]{section.6.6}{Fly-Back Trajectory Analysis - paper}{chapter.6}% 73
-\BOOKMARK [2][-]{subsection.6.6.1}{Return Trajectory}{section.6.6}% 74
-\BOOKMARK [2][-]{subsection.6.6.2}{Design Sensitivity Analysis}{section.6.6}% 75
-\BOOKMARK [1][-]{section.6.7}{dynamic pressure}{chapter.6}% 76
-\BOOKMARK [1][-]{section.6.8}{Isp}{chapter.6}% 77
-\BOOKMARK [1][-]{section.6.9}{Cd}{chapter.6}% 78
-\BOOKMARK [1][-]{section.6.10}{}{chapter.6}% 79
-\BOOKMARK [1][-]{section.6.11}{}{chapter.6}% 80
-\BOOKMARK [1][-]{section.6.12}{}{chapter.6}% 81
-\BOOKMARK [1][-]{section.6.13}{}{chapter.6}% 82
-\BOOKMARK [1][-]{section.6.14}{}{chapter.6}% 83
-\BOOKMARK [1][-]{section.6.15}{Comparison of Sensitivities}{chapter.6}% 84
-\BOOKMARK [1][-]{section.6.16}{Alternate Launch Locations}{chapter.6}% 85
-\BOOKMARK [2][-]{subsection.6.16.1}{Conclusion}{section.6.16}% 86
+\BOOKMARK [1][-]{section.5.2}{Optimised Ascent Trajectory}{chapter.5}% 54
+\BOOKMARK [1][-]{section.5.3}{Sensitivity Analysis}{chapter.5}% 55
+\BOOKMARK [2][-]{subsection.5.3.1}{Dynamic Pressure Sensitivity}{section.5.3}% 56
+\BOOKMARK [2][-]{subsection.5.3.2}{Drag Sensitivity Analysis}{section.5.3}% 57
+\BOOKMARK [2][-]{subsection.5.3.3}{ISP}{section.5.3}% 58
+\BOOKMARK [2][-]{subsection.5.3.4}{mSPARTAN}{section.5.3}% 59
+\BOOKMARK [2][-]{subsection.5.3.5}{mFuel SPARTAN}{section.5.3}% 60
+\BOOKMARK [2][-]{subsection.5.3.6}{m3}{section.5.3}% 61
+\BOOKMARK [2][-]{subsection.5.3.7}{T3}{section.5.3}% 62
+\BOOKMARK [1][-]{section.5.4}{Cd3}{chapter.5}% 63
+\BOOKMARK [1][-]{section.5.5}{Comparison of Design Parameters}{chapter.5}% 64
+\BOOKMARK [1][-]{section.5.6}{Summary}{chapter.5}% 65
+\BOOKMARK [0][-]{chapter.6}{Optimised Trajectory Including Fly-Back}{}% 66
+\BOOKMARK [1][-]{section.6.1}{Combined SPARTAN Ascent-Descent \046 Third Stage}{chapter.6}% 67
+\BOOKMARK [1][-]{section.6.2}{First Stage Trajectory}{chapter.6}% 68
+\BOOKMARK [1][-]{section.6.3}{Second Stage Trajectory}{chapter.6}% 69
+\BOOKMARK [1][-]{section.6.4}{Third Stage Trajectory}{chapter.6}% 70
+\BOOKMARK [1][-]{section.6.5}{Fly-Back Trajectory}{chapter.6}% 71
+\BOOKMARK [1][-]{section.6.6}{Fly-Back Trajectory Analysis - paper}{chapter.6}% 72
+\BOOKMARK [2][-]{subsection.6.6.1}{Return Trajectory}{section.6.6}% 73
+\BOOKMARK [2][-]{subsection.6.6.2}{Design Sensitivity Analysis}{section.6.6}% 74
+\BOOKMARK [1][-]{section.6.7}{dynamic pressure}{chapter.6}% 75
+\BOOKMARK [1][-]{section.6.8}{Isp}{chapter.6}% 76
+\BOOKMARK [1][-]{section.6.9}{Cd}{chapter.6}% 77
+\BOOKMARK [1][-]{section.6.10}{m SPARTAN}{chapter.6}% 78
+\BOOKMARK [1][-]{section.6.11}{m Fuel}{chapter.6}% 79
+\BOOKMARK [1][-]{section.6.12}{m3}{chapter.6}% 80
+\BOOKMARK [1][-]{section.6.13}{T3}{chapter.6}% 81
+\BOOKMARK [1][-]{section.6.14}{Viscous Drag}{chapter.6}% 82
+\BOOKMARK [1][-]{section.6.15}{Comparison of Sensitivities}{chapter.6}% 83
+\BOOKMARK [1][-]{section.6.16}{Sonic Boom Ground Effects}{chapter.6}% 84
+\BOOKMARK [1][-]{section.6.17}{Alternate Launch Locations}{chapter.6}% 85
+\BOOKMARK [1][-]{section.6.18}{Summary}{chapter.6}% 86
 \BOOKMARK [0][-]{chapter.7}{Conclusions}{}% 87
 \BOOKMARK [1][-]{section.7.1}{Recommendations for future work}{chapter.7}% 88
-\BOOKMARK [0][-]{chapter*.142}{Library}{}% 89
+\BOOKMARK [0][-]{chapter*.151}{Library}{}% 89
 \BOOKMARK [0][-]{appendix.A}{Propulsion Interpolation Scheme}{}% 90
 \BOOKMARK [0][-]{appendix.B}{GPOPS-2 Example - Brachistochrone Problem}{}% 91
 \BOOKMARK [0][-]{appendix.C}{Initial Guesses}{}% 92
@@ -95,3 +95,13 @@
 \BOOKMARK [1][-]{section.E.1}{Engine-On Plume Check}{appendix.E}% 95
 \BOOKMARK [1][-]{section.E.2}{CART3D Results}{appendix.E}% 96
 \BOOKMARK [1][-]{section.E.3}{verification}{appendix.E}% 97
+\BOOKMARK [0][-]{appendix.F}{Trajectory Plot Comparisons}{}% 98
+\BOOKMARK [1][-]{section.F.1}{No Fly-Back}{appendix.F}% 99
+\BOOKMARK [2][-]{subsection.F.1.1}{Dynamic Pressure Variation}{section.F.1}% 100
+\BOOKMARK [2][-]{subsection.F.1.2}{Specific Impulse}{section.F.1}% 101
+\BOOKMARK [2][-]{subsection.F.1.3}{Drag}{section.F.1}% 102
+\BOOKMARK [2][-]{subsection.F.1.4}{SPARTAN Mass}{section.F.1}% 103
+\BOOKMARK [2][-]{subsection.F.1.5}{Fuel Mass}{section.F.1}% 104
+\BOOKMARK [2][-]{subsection.F.1.6}{Third Stage Mass}{section.F.1}% 105
+\BOOKMARK [2][-]{subsection.F.1.7}{Third Stage Thrust}{section.F.1}% 106
+\BOOKMARK [2][-]{subsection.F.1.8}{Third Stage Drag}{section.F.1}% 107

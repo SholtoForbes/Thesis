@@ -20,18 +20,24 @@ The sensitivity analysis in this chapter will be expanded, and will be compared 
 
 
 \section{Combined SPARTAN Ascent-Descent \& Third Stage}
-\begin{table}
+\begin{table}[ht]
 	\centering
-
 \begin{tabular}{l c } 
 	\hline \textbf{Trajectory Condition}
 	&Standard
+
 	\\
 	\hline \textbf{Payload to Orbit (kg)}
 	& \PayloadToOrbitStandard
 	\\
 	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 	& \firstsecondSeparationAltStandard
+	\\
+	\textbf{Separation v, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationvStandard
+	\\
+	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationgammaStandard
 	\\
 	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 	& \secondthirdSeparationAltStandard
@@ -60,8 +66,11 @@ The sensitivity analysis in this chapter will be expanded, and will be compared 
 	\textbf{3$^{rd}$ Stage final v (m/s)}
 	& \thirdcircvStandard
 	\\
+	\textbf{3$^{rd}$ Stage final m (kg)}
+	& \thirdcircmStandard
+	\\
 	\hline 
-\end{tabular} 
+\end{tabular}
 \end{table}
 
 The trajectory of the rocket-scramjet-rocket launch system has been optimised in LODESTAR, including the return of the SPARTAN to its initial launch site. The optimised trajectory is shown in Figure \ref{fig:GroundTrackStandard}. The succesful computation of this optimised trajectory indicates that it is possible to launch a small satellite using the rocket-scramjet-rocket launch system, while returning the SPARTAN to the initial launch site location, and approaching the landing at appropriately low altitude and velocity. 
@@ -207,106 +216,12 @@ The consistency of the trajectory shape indicates that the optimal solution is r
 
 
 \section{dynamic pressure}
+
+
+
 \begin{table}[ht]
-\begin{tabular}{l c c c c c c} 
-	\hline \textbf{Trajectory Condition}
-	&qForty
-	&qFortyFive
-	&qStandard
-	&qFiftyFive
-	&qSixty
-	& /\%
-	\\
-	\hline \textbf{Payload to Orbit (kg)}
-	& \PayloadToOrbitqForty
-	& \PayloadToOrbitqFortyFive
-	& \PayloadToOrbitqStandard
-	& \PayloadToOrbitqFiftyFive
-	& \PayloadToOrbitqSixty
-	&0.9
-	\\
-	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
-	& \firstsecondSeparationAltqForty
-	& \firstsecondSeparationAltqFortyFive
-	& \firstsecondSeparationAltqStandard
-	& \firstsecondSeparationAltqFiftyFive
-	& \firstsecondSeparationAltqSixty
-	& -
-	\\
-	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
-	& \secondthirdSeparationAltqForty
-	& \secondthirdSeparationAltqFortyFive
-	& \secondthirdSeparationAltqStandard
-	& \secondthirdSeparationAltqFiftyFive
-	& \secondthirdSeparationAltqSixty
-	& -
-	\\
-	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
-	& \secondthirdSeparationvqForty
-	& \secondthirdSeparationvqFortyFive
-	& \secondthirdSeparationvqStandard
-	& \secondthirdSeparationvqFiftyFive
-	& \secondthirdSeparationvqSixty
-	&4.68
-	\\
-	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
-	& \secondthirdSeparationgammaqForty
-	& \secondthirdSeparationgammaqFortyFive
-	& \secondthirdSeparationgammaqStandard
-	& \secondthirdSeparationgammaqFiftyFive
-	& \secondthirdSeparationgammaqSixty
-	& -
-	\\
-	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
-	& \secondthirdSeparationqqForty
-	& \secondthirdSeparationqqFortyFive
-	& \secondthirdSeparationqqStandard
-	& \secondthirdSeparationqqFiftyFive
-	& \secondthirdSeparationqqSixty
-	&0.13
-	\\
-	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
-	& \secondthirdSeparationLDqForty
-	& \secondthirdSeparationLDqFortyFive
-	& \secondthirdSeparationLDqStandard
-	& \secondthirdSeparationLDqFiftyFive
-	& \secondthirdSeparationLDqSixty
-	& -
-	\\
-	\textbf{2$^{nd}$ Stage Flight Time (s)}
-	& \secondFlightTimeqForty
-	& \secondFlightTimeqFortyFive
-	& \secondFlightTimeqStandard
-	& \secondFlightTimeqFiftyFive
-	& \secondFlightTimeqSixty
-	&-4.81
-	\\
-	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
-	& \thirdqOverFiveqForty
-	& \thirdqOverFiveqFortyFive
-	& \thirdqOverFiveqStandard
-	& \thirdqOverFiveqFiftyFive
-	& \thirdqOverFiveqSixty
-	& -
-	\\
-	\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
-	& \thirdmaxAoAqForty
-	& \thirdmaxAoAqFortyFive
-	& \thirdmaxAoAqStandard
-	& \thirdmaxAoAqFiftyFive
-	& \thirdmaxAoAqSixty
-	& -
-	\\
-	\textbf{3$^{rd}$ Stage final v (m/s)}
-	& \thirdcircvqForty
-	& \thirdcircvqFortyFive
-	& \thirdcircvqStandard
-	& \thirdcircvqFiftyFive
-	& \thirdcircvqSixty
-	& -
-	\\
-	\hline 
-\end{tabular} 
+\centering
+
 \end{table}
 
 
@@ -318,100 +233,131 @@ Increasing the specific impulse causes the fuel necessary for fly-back to decrea
 -check this
 
 \begin{table}[ht]
-\begin{tabular}{l c c c c c} 
-	\hline \textbf{Trajectory Condition}
-	&Ispn90\%
-	&Isp95\%
-	&Isp100\%
-	&Isp105\%
-	&Isp110\%
-	\\
-	\hline \textbf{Payload to Orbit (kg)}
-	& \PayloadToOrbitIspninetypercent
-	& \PayloadToOrbitIspninetyfivepercent
-	& \PayloadToOrbitIsponehundredpercent
-	& \PayloadToOrbitIsponehundredandfivepercent
-	& \PayloadToOrbitIsponehundredandtenpercent
-	\\
-	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
-	& \firstsecondSeparationAltIspninetypercent
-	& \firstsecondSeparationAltIspninetyfivepercent
-	& \firstsecondSeparationAltIsponehundredpercent
-	& \firstsecondSeparationAltIsponehundredandfivepercent
-	& \firstsecondSeparationAltIsponehundredandtenpercent
-	\\
-	\textbf{1$^{st}$ Stage Structural Mass Fraction}
-	& \FirstStageSMFIspninetypercent
-	& \FirstStageSMFIspninetyfivepercent
-	& \FirstStageSMFIsponehundredpercent
-	& \FirstStageSMFIsponehundredandfivepercent
-	& \FirstStageSMFIsponehundredandtenpercent
-	\\
-	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
-	& \secondthirdSeparationAltIspninetypercent
-	& \secondthirdSeparationAltIspninetyfivepercent
-	& \secondthirdSeparationAltIsponehundredpercent
-	& \secondthirdSeparationAltIsponehundredandfivepercent
-	& \secondthirdSeparationAltIsponehundredandtenpercent
-	\\
-	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
-	& \secondthirdSeparationvIspninetypercent
-	& \secondthirdSeparationvIspninetyfivepercent
-	& \secondthirdSeparationvIsponehundredpercent
-	& \secondthirdSeparationvIsponehundredandfivepercent
-	& \secondthirdSeparationvIsponehundredandtenpercent
-	\\
-	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
-	& \secondthirdSeparationgammaIspninetypercent
-	& \secondthirdSeparationgammaIspninetyfivepercent
-	& \secondthirdSeparationgammaIsponehundredpercent
-	& \secondthirdSeparationgammaIsponehundredandfivepercent
-	& \secondthirdSeparationgammaIsponehundredandtenpercent
-	\\
-	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
-	& \secondthirdSeparationqIspninetypercent
-	& \secondthirdSeparationqIspninetyfivepercent
-	& \secondthirdSeparationqIsponehundredpercent
-	& \secondthirdSeparationqIsponehundredandfivepercent
-	& \secondthirdSeparationqIsponehundredandtenpercent
-	\\
-	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
-	& \secondthirdSeparationLDIspninetypercent
-	& \secondthirdSeparationLDIspninetyfivepercent
-	& \secondthirdSeparationLDIsponehundredpercent
-	& \secondthirdSeparationLDIsponehundredandfivepercent
-	& \secondthirdSeparationLDIsponehundredandtenpercent
-	\\
-	\textbf{2$^{nd}$ Stage Flight Time (s)}
-	& \secondFlightTimeIspninetypercent
-	& \secondFlightTimeIspninetyfivepercent
-	& \secondFlightTimeIsponehundredpercent
-	& \secondFlightTimeIsponehundredandfivepercent
-	& \secondFlightTimeIsponehundredandtenpercent
-	\\
-	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
-	& \thirdqOverFiveIspninetypercent
-	& \thirdqOverFiveIspninetyfivepercent
-	& \thirdqOverFiveIsponehundredpercent
-	& \thirdqOverFiveIsponehundredandfivepercent
-	& \thirdqOverFiveIsponehundredandtenpercent
-	\\
-	\textbf{3$^{rd}$ Stage $t$, max $\alpha$ (deg)}
-	& \thirdmaxAoAIspninetypercent
-	& \thirdmaxAoAIspninetyfivepercent
-	& \thirdmaxAoAIsponehundredpercent
-	& \thirdmaxAoAIsponehundredandfivepercent
-	& \thirdmaxAoAIsponehundredandtenpercent
-	\\
-	\hline \textbf{3$^{rd}$ Stage final v (m/s)}
-	& \thirdcircvIspninetypercent
-	& \thirdcircvIspninetyfivepercent
-	& \thirdcircvIsponehundredpercent
-	& \thirdcircvIsponehundredandfivepercent
-	& \thirdcircvIsponehundredandtenpercent
-	\\
-	\hline 
-\end{tabular} 
+	\centering
+	\begin{tabular}{l c c c c c c} 
+		\hline \textbf{Trajectory Condition}
+		&Isp90
+		&Isp95
+		&Isp100
+		&Isp105
+		&Isp110
+		& /\%
+		\\
+		\hline \textbf{Payload to Orbit (kg)}
+		& \PayloadToOrbitIspNinety
+		& \PayloadToOrbitIspNinetyFive
+		& \PayloadToOrbitIspStandard
+		& \PayloadToOrbitIspOneHundredFive
+		& \PayloadToOrbitIspOneHundredTen
+		&1.7
+		\\
+		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+		& \firstsecondSeparationAltIspNinety
+		& \firstsecondSeparationAltIspNinetyFive
+		& \firstsecondSeparationAltIspStandard
+		& \firstsecondSeparationAltIspOneHundredFive
+		& \firstsecondSeparationAltIspOneHundredTen
+		& -
+		\\
+		\textbf{Separation v, 1$\rightarrow$2 (m/s)}
+		& \firstsecondSeparationvIspNinety
+		& \firstsecondSeparationvIspNinetyFive
+		& \firstsecondSeparationvIspStandard
+		& \firstsecondSeparationvIspOneHundredFive
+		& \firstsecondSeparationvIspOneHundredTen
+		& -
+		\\
+		\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+		& \firstsecondSeparationgammaIspNinety
+		& \firstsecondSeparationgammaIspNinetyFive
+		& \firstsecondSeparationgammaIspStandard
+		& \firstsecondSeparationgammaIspOneHundredFive
+		& \firstsecondSeparationgammaIspOneHundredTen
+		& -
+		\\
+		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+		& \secondthirdSeparationAltIspNinety
+		& \secondthirdSeparationAltIspNinetyFive
+		& \secondthirdSeparationAltIspStandard
+		& \secondthirdSeparationAltIspOneHundredFive
+		& \secondthirdSeparationAltIspOneHundredTen
+		& -
+		\\
+		\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+		& \secondthirdSeparationvIspNinety
+		& \secondthirdSeparationvIspNinetyFive
+		& \secondthirdSeparationvIspStandard
+		& \secondthirdSeparationvIspOneHundredFive
+		& \secondthirdSeparationvIspOneHundredTen
+		&11.1
+		\\
+		\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+		& \secondthirdSeparationgammaIspNinety
+		& \secondthirdSeparationgammaIspNinetyFive
+		& \secondthirdSeparationgammaIspStandard
+		& \secondthirdSeparationgammaIspOneHundredFive
+		& \secondthirdSeparationgammaIspOneHundredTen
+		&-0.09
+		\\
+		\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+		& \secondthirdSeparationqIspNinety
+		& \secondthirdSeparationqIspNinetyFive
+		& \secondthirdSeparationqIspStandard
+		& \secondthirdSeparationqIspOneHundredFive
+		& \secondthirdSeparationqIspOneHundredTen
+		&0.06
+		\\
+		\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+		& \secondthirdSeparationLDIspNinety
+		& \secondthirdSeparationLDIspNinetyFive
+		& \secondthirdSeparationLDIspStandard
+		& \secondthirdSeparationLDIspOneHundredFive
+		& \secondthirdSeparationLDIspOneHundredTen
+		& -
+		\\
+		\textbf{2$^{nd}$ Stage Flight Time (s)}
+		& \secondFlightTimeIspNinety
+		& \secondFlightTimeIspNinetyFive
+		& \secondFlightTimeIspStandard
+		& \secondFlightTimeIspOneHundredFive
+		& \secondFlightTimeIspOneHundredTen
+		& -
+		\\
+		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+		& \thirdqOverFiveIspNinety
+		& \thirdqOverFiveIspNinetyFive
+		& \thirdqOverFiveIspStandard
+		& \thirdqOverFiveIspOneHundredFive
+		& \thirdqOverFiveIspOneHundredTen
+		& -
+		\\
+		\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
+		& \thirdmaxAoAIspNinety
+		& \thirdmaxAoAIspNinetyFive
+		& \thirdmaxAoAIspStandard
+		& \thirdmaxAoAIspOneHundredFive
+		& \thirdmaxAoAIspOneHundredTen
+		& -
+		\\
+		\textbf{3$^{rd}$ Stage final v (m/s)}
+		& \thirdcircvIspNinety
+		& \thirdcircvIspNinetyFive
+		& \thirdcircvIspStandard
+		& \thirdcircvIspOneHundredFive
+		& \thirdcircvIspOneHundredTen
+		&12.46
+		\\
+		\textbf{3$^{rd}$ Stage final m (kg)}
+		& \thirdcircmIspNinety
+		& \thirdcircmIspNinetyFive
+		& \thirdcircmIspStandard
+		& \thirdcircmIspOneHundredFive
+		& \thirdcircmIspOneHundredTen
+		& -
+		\\
+		\hline 
+	\end{tabular} 
+	
 \end{table}
 
 \section{Cd}
@@ -424,493 +370,653 @@ This additional altitude is necessary as the greater drag causes the velocity, a
 -check all this
 
 \begin{table}[ht]
-\begin{tabular}{l c c c c c} 
-	\hline \textbf{Trajectory Condition}
-	&Cd90\%
-	&Cd95
-	&Cd100
-	&Cd105
-	&Cd110
-	\\
-	\hline \textbf{Payload to Orbit (kg)}
-	& \PayloadToOrbitCdninetypercent
-	& \PayloadToOrbitCdninetyfivepercent
-	& \PayloadToOrbitCdonehundredpercent
-	& \PayloadToOrbitCdonehundredandfivepercent
-	& \PayloadToOrbitCdonehundredandtenpercent
-	\\
-	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
-	& \firstsecondSeparationAltCdninetypercent
-	& \firstsecondSeparationAltCdninetyfivepercent
-	& \firstsecondSeparationAltCdonehundredpercent
-	& \firstsecondSeparationAltCdonehundredandfivepercent
-	& \firstsecondSeparationAltCdonehundredandtenpercent
-	\\
-	\textbf{1$^{st}$ Stage Structural Mass Fraction}
-	& \FirstStageSMFCdninetypercent
-	& \FirstStageSMFCdninetyfivepercent
-	& \FirstStageSMFCdonehundredpercent
-	& \FirstStageSMFCdonehundredandfivepercent
-	& \FirstStageSMFCdonehundredandtenpercent
-	\\
-	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
-	& \secondthirdSeparationAltCdninetypercent
-	& \secondthirdSeparationAltCdninetyfivepercent
-	& \secondthirdSeparationAltCdonehundredpercent
-	& \secondthirdSeparationAltCdonehundredandfivepercent
-	& \secondthirdSeparationAltCdonehundredandtenpercent
-	\\
-	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
-	& \secondthirdSeparationvCdninetypercent
-	& \secondthirdSeparationvCdninetyfivepercent
-	& \secondthirdSeparationvCdonehundredpercent
-	& \secondthirdSeparationvCdonehundredandfivepercent
-	& \secondthirdSeparationvCdonehundredandtenpercent
-	\\
-	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
-	& \secondthirdSeparationgammaCdninetypercent
-	& \secondthirdSeparationgammaCdninetyfivepercent
-	& \secondthirdSeparationgammaCdonehundredpercent
-	& \secondthirdSeparationgammaCdonehundredandfivepercent
-	& \secondthirdSeparationgammaCdonehundredandtenpercent
-	\\
-	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
-	& \secondthirdSeparationqCdninetypercent
-	& \secondthirdSeparationqCdninetyfivepercent
-	& \secondthirdSeparationqCdonehundredpercent
-	& \secondthirdSeparationqCdonehundredandfivepercent
-	& \secondthirdSeparationqCdonehundredandtenpercent
-	\\
-	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
-	& \secondthirdSeparationLDCdninetypercent
-	& \secondthirdSeparationLDCdninetyfivepercent
-	& \secondthirdSeparationLDCdonehundredpercent
-	& \secondthirdSeparationLDCdonehundredandfivepercent
-	& \secondthirdSeparationLDCdonehundredandtenpercent
-	\\
-	\textbf{2$^{nd}$ Stage Flight Time (s)}
-	& \secondFlightTimeCdninetypercent
-	& \secondFlightTimeCdninetyfivepercent
-	& \secondFlightTimeCdonehundredpercent
-	& \secondFlightTimeCdonehundredandfivepercent
-	& \secondFlightTimeCdonehundredandtenpercent
-	\\
-	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
-	& \thirdqOverFiveCdninetypercent
-	& \thirdqOverFiveCdninetyfivepercent
-	& \thirdqOverFiveCdonehundredpercent
-	& \thirdqOverFiveCdonehundredandfivepercent
-	& \thirdqOverFiveCdonehundredandtenpercent
-	\\
-	\textbf{3$^{rd}$ Stage $t$, max $\alpha$ (deg)}
-	& \thirdmaxAoACdninetypercent
-	& \thirdmaxAoACdninetyfivepercent
-	& \thirdmaxAoACdonehundredpercent
-	& \thirdmaxAoACdonehundredandfivepercent
-	& \thirdmaxAoACdonehundredandtenpercent
-	\\
-	\hline \textbf{3$^{rd}$ Stage final v (m/s)}
-	& \thirdcircvCdninetypercent
-	& \thirdcircvCdninetyfivepercent
-	& \thirdcircvCdonehundredpercent
-	& \thirdcircvCdonehundredandfivepercent
-	& \thirdcircvCdonehundredandtenpercent
-	\\
-	\hline 
-\end{tabular} 
+	\centering
+	\begin{tabular}{l c c c c c c} 
+		\hline \textbf{Trajectory Condition}
+		&Cd90
+		&Cd95
+		&Cd100
+		&Cd105
+		&Cd110
+		& /\%
+		\\
+		\hline \textbf{Payload to Orbit (kg)}
+		& \PayloadToOrbitCdNinety
+		& \PayloadToOrbitCdNinetyFive
+		& \PayloadToOrbitCdStandard
+		& \PayloadToOrbitCdOneHundredFive
+		& \PayloadToOrbitCdOneHundredTen
+		&-1.6
+		\\
+		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+		& \firstsecondSeparationAltCdNinety
+		& \firstsecondSeparationAltCdNinetyFive
+		& \firstsecondSeparationAltCdStandard
+		& \firstsecondSeparationAltCdOneHundredFive
+		& \firstsecondSeparationAltCdOneHundredTen
+		& -
+		\\
+		\textbf{Separation v, 1$\rightarrow$2 (m/s)}
+		& \firstsecondSeparationvCdNinety
+		& \firstsecondSeparationvCdNinetyFive
+		& \firstsecondSeparationvCdStandard
+		& \firstsecondSeparationvCdOneHundredFive
+		& \firstsecondSeparationvCdOneHundredTen
+		&-3.67
+		\\
+		\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+		& \firstsecondSeparationgammaCdNinety
+		& \firstsecondSeparationgammaCdNinetyFive
+		& \firstsecondSeparationgammaCdStandard
+		& \firstsecondSeparationgammaCdOneHundredFive
+		& \firstsecondSeparationgammaCdOneHundredTen
+		& -
+		\\
+		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+		& \secondthirdSeparationAltCdNinety
+		& \secondthirdSeparationAltCdNinetyFive
+		& \secondthirdSeparationAltCdStandard
+		& \secondthirdSeparationAltCdOneHundredFive
+		& \secondthirdSeparationAltCdOneHundredTen
+		&-0.07
+		\\
+		\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+		& \secondthirdSeparationvCdNinety
+		& \secondthirdSeparationvCdNinetyFive
+		& \secondthirdSeparationvCdStandard
+		& \secondthirdSeparationvCdOneHundredFive
+		& \secondthirdSeparationvCdOneHundredTen
+		&-9.75
+		\\
+		\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+		& \secondthirdSeparationgammaCdNinety
+		& \secondthirdSeparationgammaCdNinetyFive
+		& \secondthirdSeparationgammaCdStandard
+		& \secondthirdSeparationgammaCdOneHundredFive
+		& \secondthirdSeparationgammaCdOneHundredTen
+		&0.05
+		\\
+		\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+		& \secondthirdSeparationqCdNinety
+		& \secondthirdSeparationqCdNinetyFive
+		& \secondthirdSeparationqCdStandard
+		& \secondthirdSeparationqCdOneHundredFive
+		& \secondthirdSeparationqCdOneHundredTen
+		& -
+		\\
+		\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+		& \secondthirdSeparationLDCdNinety
+		& \secondthirdSeparationLDCdNinetyFive
+		& \secondthirdSeparationLDCdStandard
+		& \secondthirdSeparationLDCdOneHundredFive
+		& \secondthirdSeparationLDCdOneHundredTen
+		& -
+		\\
+		\textbf{2$^{nd}$ Stage Flight Time (s)}
+		& \secondFlightTimeCdNinety
+		& \secondFlightTimeCdNinetyFive
+		& \secondFlightTimeCdStandard
+		& \secondFlightTimeCdOneHundredFive
+		& \secondFlightTimeCdOneHundredTen
+		& -
+		\\
+		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+		& \thirdqOverFiveCdNinety
+		& \thirdqOverFiveCdNinetyFive
+		& \thirdqOverFiveCdStandard
+		& \thirdqOverFiveCdOneHundredFive
+		& \thirdqOverFiveCdOneHundredTen
+		& -
+		\\
+		\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
+		& \thirdmaxAoACdNinety
+		& \thirdmaxAoACdNinetyFive
+		& \thirdmaxAoACdStandard
+		& \thirdmaxAoACdOneHundredFive
+		& \thirdmaxAoACdOneHundredTen
+		& -
+		\\
+		\textbf{3$^{rd}$ Stage final v (m/s)}
+		& \thirdcircvCdNinety
+		& \thirdcircvCdNinetyFive
+		& \thirdcircvCdStandard
+		& \thirdcircvCdOneHundredFive
+		& \thirdcircvCdOneHundredTen
+		&-7.99
+		\\
+		\textbf{3$^{rd}$ Stage final m (kg)}
+		& \thirdcircmCdNinety
+		& \thirdcircmCdNinetyFive
+		& \thirdcircmCdStandard
+		& \thirdcircmCdOneHundredFive
+		& \thirdcircmCdOneHundredTen
+		& -
+		\\
+		\hline 
+	\end{tabular} 
 \end{table}
-\section{}
+
+
+\section{m SPARTAN}
+
+
 \begin{table}[ht]
-\begin{tabular}{l c c c c c} 
+\centering
+\begin{tabular}{l c c c c c c} 
 	\hline \textbf{Trajectory Condition}
-	&vCd20
-	&vCd50
-	&vCd100
-	&vCd107
-	&vCd115
+	&m295
+	&m297.5
+	&m2100
+	&m2102.5
+	&m2105
+	& /\%
 	\\
 	\hline \textbf{Payload to Orbit (kg)}
-	& \PayloadToOrbitvCdtwentypercent
-	& \PayloadToOrbitvCdfiftypercent
-	& \PayloadToOrbitvCdonehundredpercent
-	& \PayloadToOrbitvCdonehundredandsevenpercent
-	& \PayloadToOrbitvCdonehundredandfifteenpercent
+	& \PayloadToOrbitmSPARTANNinetyFive
+	& \PayloadToOrbitmSPARTANNinetySevenFive
+	& \PayloadToOrbitmSPARTANStandard
+	& \PayloadToOrbitmSPARTANOneHundredTwoFive
+	& \PayloadToOrbitmSPARTANOneHundredFive
+	&-1.2
 	\\
 	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
-	& \firstsecondSeparationAltvCdtwentypercent
-	& \firstsecondSeparationAltvCdfiftypercent
-	& \firstsecondSeparationAltvCdonehundredpercent
-	& \firstsecondSeparationAltvCdonehundredandsevenpercent
-	& \firstsecondSeparationAltvCdonehundredandfifteenpercent
+	& \firstsecondSeparationAltmSPARTANNinetyFive
+	& \firstsecondSeparationAltmSPARTANNinetySevenFive
+	& \firstsecondSeparationAltmSPARTANStandard
+	& \firstsecondSeparationAltmSPARTANOneHundredTwoFive
+	& \firstsecondSeparationAltmSPARTANOneHundredFive
+	& -
 	\\
-	\textbf{1$^{st}$ Stage Structural Mass Fraction}
-	& \FirstStageSMFvCdtwentypercent
-	& \FirstStageSMFvCdfiftypercent
-	& \FirstStageSMFvCdonehundredpercent
-	& \FirstStageSMFvCdonehundredandsevenpercent
-	& \FirstStageSMFvCdonehundredandfifteenpercent
+	\textbf{Separation v, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationvmSPARTANNinetyFive
+	& \firstsecondSeparationvmSPARTANNinetySevenFive
+	& \firstsecondSeparationvmSPARTANStandard
+	& \firstsecondSeparationvmSPARTANOneHundredTwoFive
+	& \firstsecondSeparationvmSPARTANOneHundredFive
+	&-8.09
+	\\
+	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationgammamSPARTANNinetyFive
+	& \firstsecondSeparationgammamSPARTANNinetySevenFive
+	& \firstsecondSeparationgammamSPARTANStandard
+	& \firstsecondSeparationgammamSPARTANOneHundredTwoFive
+	& \firstsecondSeparationgammamSPARTANOneHundredFive
+	& -
 	\\
 	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
-	& \secondthirdSeparationAltvCdtwentypercent
-	& \secondthirdSeparationAltvCdfiftypercent
-	& \secondthirdSeparationAltvCdonehundredpercent
-	& \secondthirdSeparationAltvCdonehundredandsevenpercent
-	& \secondthirdSeparationAltvCdonehundredandfifteenpercent
+	& \secondthirdSeparationAltmSPARTANNinetyFive
+	& \secondthirdSeparationAltmSPARTANNinetySevenFive
+	& \secondthirdSeparationAltmSPARTANStandard
+	& \secondthirdSeparationAltmSPARTANOneHundredTwoFive
+	& \secondthirdSeparationAltmSPARTANOneHundredFive
+	& -
 	\\
 	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
-	& \secondthirdSeparationvvCdtwentypercent
-	& \secondthirdSeparationvvCdfiftypercent
-	& \secondthirdSeparationvvCdonehundredpercent
-	& \secondthirdSeparationvvCdonehundredandsevenpercent
-	& \secondthirdSeparationvvCdonehundredandfifteenpercent
+	& \secondthirdSeparationvmSPARTANNinetyFive
+	& \secondthirdSeparationvmSPARTANNinetySevenFive
+	& \secondthirdSeparationvmSPARTANStandard
+	& \secondthirdSeparationvmSPARTANOneHundredTwoFive
+	& \secondthirdSeparationvmSPARTANOneHundredFive
+	&-7.47
 	\\
 	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
-	& \secondthirdSeparationgammavCdtwentypercent
-	& \secondthirdSeparationgammavCdfiftypercent
-	& \secondthirdSeparationgammavCdonehundredpercent
-	& \secondthirdSeparationgammavCdonehundredandsevenpercent
-	& \secondthirdSeparationgammavCdonehundredandfifteenpercent
+	& \secondthirdSeparationgammamSPARTANNinetyFive
+	& \secondthirdSeparationgammamSPARTANNinetySevenFive
+	& \secondthirdSeparationgammamSPARTANStandard
+	& \secondthirdSeparationgammamSPARTANOneHundredTwoFive
+	& \secondthirdSeparationgammamSPARTANOneHundredFive
+	& -
 	\\
 	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
-	& \secondthirdSeparationqvCdtwentypercent
-	& \secondthirdSeparationqvCdfiftypercent
-	& \secondthirdSeparationqvCdonehundredpercent
-	& \secondthirdSeparationqvCdonehundredandsevenpercent
-	& \secondthirdSeparationqvCdonehundredandfifteenpercent
+	& \secondthirdSeparationqmSPARTANNinetyFive
+	& \secondthirdSeparationqmSPARTANNinetySevenFive
+	& \secondthirdSeparationqmSPARTANStandard
+	& \secondthirdSeparationqmSPARTANOneHundredTwoFive
+	& \secondthirdSeparationqmSPARTANOneHundredFive
+	& -
 	\\
 	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
-	& \secondthirdSeparationLDvCdtwentypercent
-	& \secondthirdSeparationLDvCdfiftypercent
-	& \secondthirdSeparationLDvCdonehundredpercent
-	& \secondthirdSeparationLDvCdonehundredandsevenpercent
-	& \secondthirdSeparationLDvCdonehundredandfifteenpercent
+	& \secondthirdSeparationLDmSPARTANNinetyFive
+	& \secondthirdSeparationLDmSPARTANNinetySevenFive
+	& \secondthirdSeparationLDmSPARTANStandard
+	& \secondthirdSeparationLDmSPARTANOneHundredTwoFive
+	& \secondthirdSeparationLDmSPARTANOneHundredFive
+	& -
 	\\
 	\textbf{2$^{nd}$ Stage Flight Time (s)}
-	& \secondFlightTimevCdtwentypercent
-	& \secondFlightTimevCdfiftypercent
-	& \secondFlightTimevCdonehundredpercent
-	& \secondFlightTimevCdonehundredandsevenpercent
-	& \secondFlightTimevCdonehundredandfifteenpercent
+	& \secondFlightTimemSPARTANNinetyFive
+	& \secondFlightTimemSPARTANNinetySevenFive
+	& \secondFlightTimemSPARTANStandard
+	& \secondFlightTimemSPARTANOneHundredTwoFive
+	& \secondFlightTimemSPARTANOneHundredFive
+	& -
 	\\
 	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
-	& \thirdqOverFivevCdtwentypercent
-	& \thirdqOverFivevCdfiftypercent
-	& \thirdqOverFivevCdonehundredpercent
-	& \thirdqOverFivevCdonehundredandsevenpercent
-	& \thirdqOverFivevCdonehundredandfifteenpercent
+	& \thirdqOverFivemSPARTANNinetyFive
+	& \thirdqOverFivemSPARTANNinetySevenFive
+	& \thirdqOverFivemSPARTANStandard
+	& \thirdqOverFivemSPARTANOneHundredTwoFive
+	& \thirdqOverFivemSPARTANOneHundredFive
+	& -
 	\\
-	\textbf{3$^{rd}$ Stage $t$, max $\alpha$ (deg)}
-	& \thirdmaxAoAvCdtwentypercent
-	& \thirdmaxAoAvCdfiftypercent
-	& \thirdmaxAoAvCdonehundredpercent
-	& \thirdmaxAoAvCdonehundredandsevenpercent
-	& \thirdmaxAoAvCdonehundredandfifteenpercent
+	\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
+	& \thirdmaxAoAmSPARTANNinetyFive
+	& \thirdmaxAoAmSPARTANNinetySevenFive
+	& \thirdmaxAoAmSPARTANStandard
+	& \thirdmaxAoAmSPARTANOneHundredTwoFive
+	& \thirdmaxAoAmSPARTANOneHundredFive
+	& -
 	\\
-	\hline \textbf{3$^{rd}$ Stage final v (m/s)}
-	& \thirdcircvvCdtwentypercent
-	& \thirdcircvvCdfiftypercent
-	& \thirdcircvvCdonehundredpercent
-	& \thirdcircvvCdonehundredandsevenpercent
-	& \thirdcircvvCdonehundredandfifteenpercent
+	\textbf{3$^{rd}$ Stage final v (m/s)}
+	& \thirdcircvmSPARTANNinetyFive
+	& \thirdcircvmSPARTANNinetySevenFive
+	& \thirdcircvmSPARTANStandard
+	& \thirdcircvmSPARTANOneHundredTwoFive
+	& \thirdcircvmSPARTANOneHundredFive
+	& -
+	\\
+	\textbf{3$^{rd}$ Stage final m (kg)}
+	& \thirdcircmmSPARTANNinetyFive
+	& \thirdcircmmSPARTANNinetySevenFive
+	& \thirdcircmmSPARTANStandard
+	& \thirdcircmmSPARTANOneHundredTwoFive
+	& \thirdcircmmSPARTANOneHundredFive
+	& -
 	\\
 	\hline 
 \end{tabular} 
 \end{table}
-\section{}
+
+\section{m Fuel}
+
+\begin{table}[ht]
+	\centering
+\begin{tabular}{l c c c c c c} 
+	\hline \textbf{Trajectory Condition}
+	&mF90
+	&mF95
+	&mF100
+	&mF105
+	&mF110
+	& /\%
+	\\
+	\hline \textbf{Payload to Orbit (kg)}
+	& \PayloadToOrbitmFuelNinety
+	& \PayloadToOrbitmFuelNinetyFive
+	& \PayloadToOrbitmFuelStandard
+	& \PayloadToOrbitmFuelOneHundredFive
+	& \PayloadToOrbitmFuelOneHundredTen
+	&0.8
+	\\
+	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+	& \firstsecondSeparationAltmFuelNinety
+	& \firstsecondSeparationAltmFuelNinetyFive
+	& \firstsecondSeparationAltmFuelStandard
+	& \firstsecondSeparationAltmFuelOneHundredFive
+	& \firstsecondSeparationAltmFuelOneHundredTen
+	& -
+	\\
+	\textbf{Separation v, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationvmFuelNinety
+	& \firstsecondSeparationvmFuelNinetyFive
+	& \firstsecondSeparationvmFuelStandard
+	& \firstsecondSeparationvmFuelOneHundredFive
+	& \firstsecondSeparationvmFuelOneHundredTen
+	&-2.58
+	\\
+	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationgammamFuelNinety
+	& \firstsecondSeparationgammamFuelNinetyFive
+	& \firstsecondSeparationgammamFuelStandard
+	& \firstsecondSeparationgammamFuelOneHundredFive
+	& \firstsecondSeparationgammamFuelOneHundredTen
+	& -
+	\\
+	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+	& \secondthirdSeparationAltmFuelNinety
+	& \secondthirdSeparationAltmFuelNinetyFive
+	& \secondthirdSeparationAltmFuelStandard
+	& \secondthirdSeparationAltmFuelOneHundredFive
+	& \secondthirdSeparationAltmFuelOneHundredTen
+	& -
+	\\
+	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+	& \secondthirdSeparationvmFuelNinety
+	& \secondthirdSeparationvmFuelNinetyFive
+	& \secondthirdSeparationvmFuelStandard
+	& \secondthirdSeparationvmFuelOneHundredFive
+	& \secondthirdSeparationvmFuelOneHundredTen
+	&5.3
+	\\
+	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+	& \secondthirdSeparationgammamFuelNinety
+	& \secondthirdSeparationgammamFuelNinetyFive
+	& \secondthirdSeparationgammamFuelStandard
+	& \secondthirdSeparationgammamFuelOneHundredFive
+	& \secondthirdSeparationgammamFuelOneHundredTen
+	&-0.05
+	\\
+	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+	& \secondthirdSeparationqmFuelNinety
+	& \secondthirdSeparationqmFuelNinetyFive
+	& \secondthirdSeparationqmFuelStandard
+	& \secondthirdSeparationqmFuelOneHundredFive
+	& \secondthirdSeparationqmFuelOneHundredTen
+	& -
+	\\
+	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+	& \secondthirdSeparationLDmFuelNinety
+	& \secondthirdSeparationLDmFuelNinetyFive
+	& \secondthirdSeparationLDmFuelStandard
+	& \secondthirdSeparationLDmFuelOneHundredFive
+	& \secondthirdSeparationLDmFuelOneHundredTen
+	& -
+	\\
+	\textbf{2$^{nd}$ Stage Flight Time (s)}
+	& \secondFlightTimemFuelNinety
+	& \secondFlightTimemFuelNinetyFive
+	& \secondFlightTimemFuelStandard
+	& \secondFlightTimemFuelOneHundredFive
+	& \secondFlightTimemFuelOneHundredTen
+	&4.82
+	\\
+	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+	& \thirdqOverFivemFuelNinety
+	& \thirdqOverFivemFuelNinetyFive
+	& \thirdqOverFivemFuelStandard
+	& \thirdqOverFivemFuelOneHundredFive
+	& \thirdqOverFivemFuelOneHundredTen
+	& -
+	\\
+	\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
+	& \thirdmaxAoAmFuelNinety
+	& \thirdmaxAoAmFuelNinetyFive
+	& \thirdmaxAoAmFuelStandard
+	& \thirdmaxAoAmFuelOneHundredFive
+	& \thirdmaxAoAmFuelOneHundredTen
+	& -
+	\\
+	\textbf{3$^{rd}$ Stage final v (m/s)}
+	& \thirdcircvmFuelNinety
+	& \thirdcircvmFuelNinetyFive
+	& \thirdcircvmFuelStandard
+	& \thirdcircvmFuelOneHundredFive
+	& \thirdcircvmFuelOneHundredTen
+	&7.54
+	\\
+	\textbf{3$^{rd}$ Stage final m (kg)}
+	& \thirdcircmmFuelNinety
+	& \thirdcircmmFuelNinetyFive
+	& \thirdcircmmFuelStandard
+	& \thirdcircmmFuelOneHundredFive
+	& \thirdcircmmFuelOneHundredTen
+	& -
+	\\
+	\hline 
+\end{tabular} 
+\end{table}
 	
-\section{}
+
+\section{m3}
+
 \begin{table}[ht]
-\begin{tabular}{l c c c c c} 
-	\hline \textbf{Trajectory Condition}
-	&mthird90
-	&mthird95
-	&mthird100
-	&mthird105
-	&mthird110
-	\\
-	\hline \textbf{Payload to Orbit (kg)}
-	& \PayloadToOrbitmthirdninetypercent
-	& \PayloadToOrbitmthirdninetyfivepercent
-	& \PayloadToOrbitmthirdonehundredpercent
-	& \PayloadToOrbitmthirdonehundredandfivepercent
-	& \PayloadToOrbitmthirdonehundredandtenpercent
-	\\
-	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
-	& \firstsecondSeparationAltmthirdninetypercent
-	& \firstsecondSeparationAltmthirdninetyfivepercent
-	& \firstsecondSeparationAltmthirdonehundredpercent
-	& \firstsecondSeparationAltmthirdonehundredandfivepercent
-	& \firstsecondSeparationAltmthirdonehundredandtenpercent
-	\\
-	\textbf{1$^{st}$ Stage Structural Mass Fraction}
-	& \FirstStageSMFmthirdninetypercent
-	& \FirstStageSMFmthirdninetyfivepercent
-	& \FirstStageSMFmthirdonehundredpercent
-	& \FirstStageSMFmthirdonehundredandfivepercent
-	& \FirstStageSMFmthirdonehundredandtenpercent
-	\\
-	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
-	& \secondthirdSeparationAltmthirdninetypercent
-	& \secondthirdSeparationAltmthirdninetyfivepercent
-	& \secondthirdSeparationAltmthirdonehundredpercent
-	& \secondthirdSeparationAltmthirdonehundredandfivepercent
-	& \secondthirdSeparationAltmthirdonehundredandtenpercent
-	\\
-	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
-	& \secondthirdSeparationvmthirdninetypercent
-	& \secondthirdSeparationvmthirdninetyfivepercent
-	& \secondthirdSeparationvmthirdonehundredpercent
-	& \secondthirdSeparationvmthirdonehundredandfivepercent
-	& \secondthirdSeparationvmthirdonehundredandtenpercent
-	\\
-	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
-	& \secondthirdSeparationgammamthirdninetypercent
-	& \secondthirdSeparationgammamthirdninetyfivepercent
-	& \secondthirdSeparationgammamthirdonehundredpercent
-	& \secondthirdSeparationgammamthirdonehundredandfivepercent
-	& \secondthirdSeparationgammamthirdonehundredandtenpercent
-	\\
-	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
-	& \secondthirdSeparationqmthirdninetypercent
-	& \secondthirdSeparationqmthirdninetyfivepercent
-	& \secondthirdSeparationqmthirdonehundredpercent
-	& \secondthirdSeparationqmthirdonehundredandfivepercent
-	& \secondthirdSeparationqmthirdonehundredandtenpercent
-	\\
-	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
-	& \secondthirdSeparationLDmthirdninetypercent
-	& \secondthirdSeparationLDmthirdninetyfivepercent
-	& \secondthirdSeparationLDmthirdonehundredpercent
-	& \secondthirdSeparationLDmthirdonehundredandfivepercent
-	& \secondthirdSeparationLDmthirdonehundredandtenpercent
-	\\
-	\textbf{2$^{nd}$ Stage Flight Time (s)}
-	& \secondFlightTimemthirdninetypercent
-	& \secondFlightTimemthirdninetyfivepercent
-	& \secondFlightTimemthirdonehundredpercent
-	& \secondFlightTimemthirdonehundredandfivepercent
-	& \secondFlightTimemthirdonehundredandtenpercent
-	\\
-	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
-	& \thirdqOverFivemthirdninetypercent
-	& \thirdqOverFivemthirdninetyfivepercent
-	& \thirdqOverFivemthirdonehundredpercent
-	& \thirdqOverFivemthirdonehundredandfivepercent
-	& \thirdqOverFivemthirdonehundredandtenpercent
-	\\
-	\textbf{3$^{rd}$ Stage $t$, max $\alpha$ (deg)}
-	& \thirdmaxAoAmthirdninetypercent
-	& \thirdmaxAoAmthirdninetyfivepercent
-	& \thirdmaxAoAmthirdonehundredpercent
-	& \thirdmaxAoAmthirdonehundredandfivepercent
-	& \thirdmaxAoAmthirdonehundredandtenpercent
-	\\
-	\hline \textbf{3$^{rd}$ Stage final v (m/s)}
-	& \thirdcircvmthirdninetypercent
-	& \thirdcircvmthirdninetyfivepercent
-	& \thirdcircvmthirdonehundredpercent
-	& \thirdcircvmthirdonehundredandfivepercent
-	& \thirdcircvmthirdonehundredandtenpercent
-	\\
-	\hline 
-\end{tabular} 
+	\centering
+	\begin{tabular}{l c c c c c c} 
+		\hline \textbf{Trajectory Condition}
+		&m390
+		&m395
+		&m3100
+		&m3105
+		&m3110
+		& /\%
+		\\
+		\hline \textbf{Payload to Orbit (kg)}
+		& \PayloadToOrbitmThreeNinety
+		& \PayloadToOrbitmThreeNinetyFive
+		& \PayloadToOrbitmThreeStandard
+		& \PayloadToOrbitmThreeOneHundredFive
+		& \PayloadToOrbitmThreeOneHundredTen
+		&1
+		\\
+		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+		& \firstsecondSeparationAltmThreeNinety
+		& \firstsecondSeparationAltmThreeNinetyFive
+		& \firstsecondSeparationAltmThreeStandard
+		& \firstsecondSeparationAltmThreeOneHundredFive
+		& \firstsecondSeparationAltmThreeOneHundredTen
+		&-0.05
+		\\
+		\textbf{Separation v, 1$\rightarrow$2 (m/s)}
+		& \firstsecondSeparationvmThreeNinety
+		& \firstsecondSeparationvmThreeNinetyFive
+		& \firstsecondSeparationvmThreeStandard
+		& \firstsecondSeparationvmThreeOneHundredFive
+		& \firstsecondSeparationvmThreeOneHundredTen
+		&-5.27
+		\\
+		\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+		& \firstsecondSeparationgammamThreeNinety
+		& \firstsecondSeparationgammamThreeNinetyFive
+		& \firstsecondSeparationgammamThreeStandard
+		& \firstsecondSeparationgammamThreeOneHundredFive
+		& \firstsecondSeparationgammamThreeOneHundredTen
+		& -
+		\\
+		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+		& \secondthirdSeparationAltmThreeNinety
+		& \secondthirdSeparationAltmThreeNinetyFive
+		& \secondthirdSeparationAltmThreeStandard
+		& \secondthirdSeparationAltmThreeOneHundredFive
+		& \secondthirdSeparationAltmThreeOneHundredTen
+		& -
+		\\
+		\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+		& \secondthirdSeparationvmThreeNinety
+		& \secondthirdSeparationvmThreeNinetyFive
+		& \secondthirdSeparationvmThreeStandard
+		& \secondthirdSeparationvmThreeOneHundredFive
+		& \secondthirdSeparationvmThreeOneHundredTen
+		&-5.71
+		\\
+		\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+		& \secondthirdSeparationgammamThreeNinety
+		& \secondthirdSeparationgammamThreeNinetyFive
+		& \secondthirdSeparationgammamThreeStandard
+		& \secondthirdSeparationgammamThreeOneHundredFive
+		& \secondthirdSeparationgammamThreeOneHundredTen
+		&0.08
+		\\
+		\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+		& \secondthirdSeparationqmThreeNinety
+		& \secondthirdSeparationqmThreeNinetyFive
+		& \secondthirdSeparationqmThreeStandard
+		& \secondthirdSeparationqmThreeOneHundredFive
+		& \secondthirdSeparationqmThreeOneHundredTen
+		&-0.07
+		\\
+		\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+		& \secondthirdSeparationLDmThreeNinety
+		& \secondthirdSeparationLDmThreeNinetyFive
+		& \secondthirdSeparationLDmThreeStandard
+		& \secondthirdSeparationLDmThreeOneHundredFive
+		& \secondthirdSeparationLDmThreeOneHundredTen
+		&-0.02
+		\\
+		\textbf{2$^{nd}$ Stage Flight Time (s)}
+		& \secondFlightTimemThreeNinety
+		& \secondFlightTimemThreeNinetyFive
+		& \secondFlightTimemThreeStandard
+		& \secondFlightTimemThreeOneHundredFive
+		& \secondFlightTimemThreeOneHundredTen
+		& -
+		\\
+		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+		& \thirdqOverFivemThreeNinety
+		& \thirdqOverFivemThreeNinetyFive
+		& \thirdqOverFivemThreeStandard
+		& \thirdqOverFivemThreeOneHundredFive
+		& \thirdqOverFivemThreeOneHundredTen
+		& -
+		\\
+		\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
+		& \thirdmaxAoAmThreeNinety
+		& \thirdmaxAoAmThreeNinetyFive
+		& \thirdmaxAoAmThreeStandard
+		& \thirdmaxAoAmThreeOneHundredFive
+		& \thirdmaxAoAmThreeOneHundredTen
+		& -
+		\\
+		\textbf{3$^{rd}$ Stage final v (m/s)}
+		& \thirdcircvmThreeNinety
+		& \thirdcircvmThreeNinetyFive
+		& \thirdcircvmThreeStandard
+		& \thirdcircvmThreeOneHundredFive
+		& \thirdcircvmThreeOneHundredTen
+		& -
+		\\
+		\textbf{3$^{rd}$ Stage final m (kg)}
+		& \thirdcircmmThreeNinety
+		& \thirdcircmmThreeNinetyFive
+		& \thirdcircmmThreeStandard
+		& \thirdcircmmThreeOneHundredFive
+		& \thirdcircmmThreeOneHundredTen
+		&22.12
+		\\
+		\hline 
+	\end{tabular} 
 \end{table}
 
-\section{}	
+
+\section{T3}
 \begin{table}[ht]
-\begin{tabular}{l c c c c c} 
-	\hline \textbf{Trajectory Condition}
-	&Tthird90
-	&Tthird95
-	&Tthird100
-	&Tthird105
-	&Tthird110
-	\\
-	\hline \textbf{Payload to Orbit (kg)}
-	& \PayloadToOrbitTthirdninetypercent
-	& \PayloadToOrbitTthirdninetyfivepercent
-	& \PayloadToOrbitTthirdonehundredpercent
-	& \PayloadToOrbitTthirdonehundredandfivepercent
-	& \PayloadToOrbitTthirdonehundredandtenpercent
-	\\
-	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
-	& \firstsecondSeparationAltTthirdninetypercent
-	& \firstsecondSeparationAltTthirdninetyfivepercent
-	& \firstsecondSeparationAltTthirdonehundredpercent
-	& \firstsecondSeparationAltTthirdonehundredandfivepercent
-	& \firstsecondSeparationAltTthirdonehundredandtenpercent
-	\\
-	\textbf{1$^{st}$ Stage Structural Mass Fraction}
-	& \FirstStageSMFTthirdninetypercent
-	& \FirstStageSMFTthirdninetyfivepercent
-	& \FirstStageSMFTthirdonehundredpercent
-	& \FirstStageSMFTthirdonehundredandfivepercent
-	& \FirstStageSMFTthirdonehundredandtenpercent
-	\\
-	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
-	& \secondthirdSeparationAltTthirdninetypercent
-	& \secondthirdSeparationAltTthirdninetyfivepercent
-	& \secondthirdSeparationAltTthirdonehundredpercent
-	& \secondthirdSeparationAltTthirdonehundredandfivepercent
-	& \secondthirdSeparationAltTthirdonehundredandtenpercent
-	\\
-	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
-	& \secondthirdSeparationvTthirdninetypercent
-	& \secondthirdSeparationvTthirdninetyfivepercent
-	& \secondthirdSeparationvTthirdonehundredpercent
-	& \secondthirdSeparationvTthirdonehundredandfivepercent
-	& \secondthirdSeparationvTthirdonehundredandtenpercent
-	\\
-	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
-	& \secondthirdSeparationgammaTthirdninetypercent
-	& \secondthirdSeparationgammaTthirdninetyfivepercent
-	& \secondthirdSeparationgammaTthirdonehundredpercent
-	& \secondthirdSeparationgammaTthirdonehundredandfivepercent
-	& \secondthirdSeparationgammaTthirdonehundredandtenpercent
-	\\
-	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
-	& \secondthirdSeparationqTthirdninetypercent
-	& \secondthirdSeparationqTthirdninetyfivepercent
-	& \secondthirdSeparationqTthirdonehundredpercent
-	& \secondthirdSeparationqTthirdonehundredandfivepercent
-	& \secondthirdSeparationqTthirdonehundredandtenpercent
-	\\
-	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
-	& \secondthirdSeparationLDTthirdninetypercent
-	& \secondthirdSeparationLDTthirdninetyfivepercent
-	& \secondthirdSeparationLDTthirdonehundredpercent
-	& \secondthirdSeparationLDTthirdonehundredandfivepercent
-	& \secondthirdSeparationLDTthirdonehundredandtenpercent
-	\\
-	\textbf{2$^{nd}$ Stage Flight Time (s)}
-	& \secondFlightTimeTthirdninetypercent
-	& \secondFlightTimeTthirdninetyfivepercent
-	& \secondFlightTimeTthirdonehundredpercent
-	& \secondFlightTimeTthirdonehundredandfivepercent
-	& \secondFlightTimeTthirdonehundredandtenpercent
-	\\
-	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
-	& \thirdqOverFiveTthirdninetypercent
-	& \thirdqOverFiveTthirdninetyfivepercent
-	& \thirdqOverFiveTthirdonehundredpercent
-	& \thirdqOverFiveTthirdonehundredandfivepercent
-	& \thirdqOverFiveTthirdonehundredandtenpercent
-	\\
-	\textbf{3$^{rd}$ Stage $t$, max $\alpha$ (deg)}
-	& \thirdmaxAoATthirdninetypercent
-	& \thirdmaxAoATthirdninetyfivepercent
-	& \thirdmaxAoATthirdonehundredpercent
-	& \thirdmaxAoATthirdonehundredandfivepercent
-	& \thirdmaxAoATthirdonehundredandtenpercent
-	\\
-	\hline \textbf{3$^{rd}$ Stage final v (m/s)}
-	& \thirdcircvTthirdninetypercent
-	& \thirdcircvTthirdninetyfivepercent
-	& \thirdcircvTthirdonehundredpercent
-	& \thirdcircvTthirdonehundredandfivepercent
-	& \thirdcircvTthirdonehundredandtenpercent
-	\\
-	\hline 
-\end{tabular} 
+	\centering
+	\begin{tabular}{l c c c c c c} 
+		\hline \textbf{Trajectory Condition}
+		&T390
+		&T395
+		&T3100
+		&T3105
+		&T3110
+		& /\%
+		\\
+		\hline \textbf{Payload to Orbit (kg)}
+		& \PayloadToOrbitTThreeNinety
+		& \PayloadToOrbitTThreeNinetyFive
+		& \PayloadToOrbitTThreeStandard
+		& \PayloadToOrbitTThreeOneHundredFive
+		& \PayloadToOrbitTThreeOneHundredTen
+		&2.7
+		\\
+		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+		& \firstsecondSeparationAltTThreeNinety
+		& \firstsecondSeparationAltTThreeNinetyFive
+		& \firstsecondSeparationAltTThreeStandard
+		& \firstsecondSeparationAltTThreeOneHundredFive
+		& \firstsecondSeparationAltTThreeOneHundredTen
+		& -
+		\\
+		\textbf{Separation v, 1$\rightarrow$2 (m/s)}
+		& \firstsecondSeparationvTThreeNinety
+		& \firstsecondSeparationvTThreeNinetyFive
+		& \firstsecondSeparationvTThreeStandard
+		& \firstsecondSeparationvTThreeOneHundredFive
+		& \firstsecondSeparationvTThreeOneHundredTen
+		& -
+		\\
+		\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+		& \firstsecondSeparationgammaTThreeNinety
+		& \firstsecondSeparationgammaTThreeNinetyFive
+		& \firstsecondSeparationgammaTThreeStandard
+		& \firstsecondSeparationgammaTThreeOneHundredFive
+		& \firstsecondSeparationgammaTThreeOneHundredTen
+		& -
+		\\
+		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+		& \secondthirdSeparationAltTThreeNinety
+		& \secondthirdSeparationAltTThreeNinetyFive
+		& \secondthirdSeparationAltTThreeStandard
+		& \secondthirdSeparationAltTThreeOneHundredFive
+		& \secondthirdSeparationAltTThreeOneHundredTen
+		&-0.26
+		\\
+		\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+		& \secondthirdSeparationvTThreeNinety
+		& \secondthirdSeparationvTThreeNinetyFive
+		& \secondthirdSeparationvTThreeStandard
+		& \secondthirdSeparationvTThreeOneHundredFive
+		& \secondthirdSeparationvTThreeOneHundredTen
+		&6.41
+		\\
+		\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+		& \secondthirdSeparationgammaTThreeNinety
+		& \secondthirdSeparationgammaTThreeNinetyFive
+		& \secondthirdSeparationgammaTThreeStandard
+		& \secondthirdSeparationgammaTThreeOneHundredFive
+		& \secondthirdSeparationgammaTThreeOneHundredTen
+		&-0.25
+		\\
+		\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+		& \secondthirdSeparationqTThreeNinety
+		& \secondthirdSeparationqTThreeNinetyFive
+		& \secondthirdSeparationqTThreeStandard
+		& \secondthirdSeparationqTThreeOneHundredFive
+		& \secondthirdSeparationqTThreeOneHundredTen
+		&0.54
+		\\
+		\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+		& \secondthirdSeparationLDTThreeNinety
+		& \secondthirdSeparationLDTThreeNinetyFive
+		& \secondthirdSeparationLDTThreeStandard
+		& \secondthirdSeparationLDTThreeOneHundredFive
+		& \secondthirdSeparationLDTThreeOneHundredTen
+		&0.06
+		\\
+		\textbf{2$^{nd}$ Stage Flight Time (s)}
+		& \secondFlightTimeTThreeNinety
+		& \secondFlightTimeTThreeNinetyFive
+		& \secondFlightTimeTThreeStandard
+		& \secondFlightTimeTThreeOneHundredFive
+		& \secondFlightTimeTThreeOneHundredTen
+		& -
+		\\
+		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+		& \thirdqOverFiveTThreeNinety
+		& \thirdqOverFiveTThreeNinetyFive
+		& \thirdqOverFiveTThreeStandard
+		& \thirdqOverFiveTThreeOneHundredFive
+		& \thirdqOverFiveTThreeOneHundredTen
+		&1.34
+		\\
+		\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
+		& \thirdmaxAoATThreeNinety
+		& \thirdmaxAoATThreeNinetyFive
+		& \thirdmaxAoATThreeStandard
+		& \thirdmaxAoATThreeOneHundredFive
+		& \thirdmaxAoATThreeOneHundredTen
+		&-0.01
+		\\
+		\textbf{3$^{rd}$ Stage final v (m/s)}
+		& \thirdcircvTThreeNinety
+		& \thirdcircvTThreeNinetyFive
+		& \thirdcircvTThreeStandard
+		& \thirdcircvTThreeOneHundredFive
+		& \thirdcircvTThreeOneHundredTen
+		&134.59
+		\\
+		\textbf{3$^{rd}$ Stage final m (kg)}
+		& \thirdcircmTThreeNinety
+		& \thirdcircmTThreeNinetyFive
+		& \thirdcircmTThreeStandard
+		& \thirdcircmTThreeOneHundredFive
+		& \thirdcircmTThreeOneHundredTen
+		&-64.26
+		\\
+		\hline 
+	\end{tabular} 
 \end{table}
 
-\section{}
-\begin{table}[ht]
-\begin{tabular}{l c c c c c} 
-	\hline \textbf{Trajectory Condition}
-	&m290\%
-	&m295\%
-	&m2100\%
-	&m2105\%
-	&m2110\%
-	\\
-	\hline \textbf{Payload to Orbit (kg)}
-	& \PayloadToOrbitmSPARTANninetypercent
-	& \PayloadToOrbitmSPARTANninetyfivepercent
-	& \PayloadToOrbitmSPARTANonehundredpercent
-	& \PayloadToOrbitmSPARTANonehundredandfivepercent
-	& \PayloadToOrbitmSPARTANonehundredandtenpercent
-	\\
-	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
-	& \firstsecondSeparationAltmSPARTANninetypercent
-	& \firstsecondSeparationAltmSPARTANninetyfivepercent
-	& \firstsecondSeparationAltmSPARTANonehundredpercent
-	& \firstsecondSeparationAltmSPARTANonehundredandfivepercent
-	& \firstsecondSeparationAltmSPARTANonehundredandtenpercent
-	\\
-	\textbf{1$^{st}$ Stage Structural Mass Fraction}
-	& \FirstStageSMFmSPARTANninetypercent
-	& \FirstStageSMFmSPARTANninetyfivepercent
-	& \FirstStageSMFmSPARTANonehundredpercent
-	& \FirstStageSMFmSPARTANonehundredandfivepercent
-	& \FirstStageSMFmSPARTANonehundredandtenpercent
-	\\
-	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
-	& \secondthirdSeparationAltmSPARTANninetypercent
-	& \secondthirdSeparationAltmSPARTANninetyfivepercent
-	& \secondthirdSeparationAltmSPARTANonehundredpercent
-	& \secondthirdSeparationAltmSPARTANonehundredandfivepercent
-	& \secondthirdSeparationAltmSPARTANonehundredandtenpercent
-	\\
-	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
-	& \secondthirdSeparationvmSPARTANninetypercent
-	& \secondthirdSeparationvmSPARTANninetyfivepercent
-	& \secondthirdSeparationvmSPARTANonehundredpercent
-	& \secondthirdSeparationvmSPARTANonehundredandfivepercent
-	& \secondthirdSeparationvmSPARTANonehundredandtenpercent
-	\\
-	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
-	& \secondthirdSeparationgammamSPARTANninetypercent
-	& \secondthirdSeparationgammamSPARTANninetyfivepercent
-	& \secondthirdSeparationgammamSPARTANonehundredpercent
-	& \secondthirdSeparationgammamSPARTANonehundredandfivepercent
-	& \secondthirdSeparationgammamSPARTANonehundredandtenpercent
-	\\
-	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
-	& \secondthirdSeparationqmSPARTANninetypercent
-	& \secondthirdSeparationqmSPARTANninetyfivepercent
-	& \secondthirdSeparationqmSPARTANonehundredpercent
-	& \secondthirdSeparationqmSPARTANonehundredandfivepercent
-	& \secondthirdSeparationqmSPARTANonehundredandtenpercent
-	\\
-	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
-	& \secondthirdSeparationLDmSPARTANninetypercent
-	& \secondthirdSeparationLDmSPARTANninetyfivepercent
-	& \secondthirdSeparationLDmSPARTANonehundredpercent
-	& \secondthirdSeparationLDmSPARTANonehundredandfivepercent
-	& \secondthirdSeparationLDmSPARTANonehundredandtenpercent
-	\\
-	\textbf{2$^{nd}$ Stage Flight Time (s)}
-	& \secondFlightTimemSPARTANninetypercent
-	& \secondFlightTimemSPARTANninetyfivepercent
-	& \secondFlightTimemSPARTANonehundredpercent
-	& \secondFlightTimemSPARTANonehundredandfivepercent
-	& \secondFlightTimemSPARTANonehundredandtenpercent
-	\\
-	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
-	& \thirdqOverFivemSPARTANninetypercent
-	& \thirdqOverFivemSPARTANninetyfivepercent
-	& \thirdqOverFivemSPARTANonehundredpercent
-	& \thirdqOverFivemSPARTANonehundredandfivepercent
-	& \thirdqOverFivemSPARTANonehundredandtenpercent
-	\\
-	\textbf{3$^{rd}$ Stage $t$, max $\alpha$ (deg)}
-	& \thirdmaxAoAmSPARTANninetypercent
-	& \thirdmaxAoAmSPARTANninetyfivepercent
-	& \thirdmaxAoAmSPARTANonehundredpercent
-	& \thirdmaxAoAmSPARTANonehundredandfivepercent
-	& \thirdmaxAoAmSPARTANonehundredandtenpercent
-	\\
-	\hline \textbf{3$^{rd}$ Stage final v (m/s)}
-	& \thirdcircvmSPARTANninetypercent
-	& \thirdcircvmSPARTANninetyfivepercent
-	& \thirdcircvmSPARTANonehundredpercent
-	& \thirdcircvmSPARTANonehundredandfivepercent
-	& \thirdcircvmSPARTANonehundredandtenpercent
-	\\
-	\hline 
-\end{tabular} 
-\end{table}
+
+\section{Viscous Drag}
 
 
 
@@ -924,6 +1030,21 @@ These results indicate that the aerodynamic performance of the SPARTAN has signi
 
 
 
+\section{Sonic Boom Ground Effects}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\linewidth]{../LODESTAR_FINAL/Results/mode11/OverPressureStandard}
+\caption{}
+\label{fig:OverPressureStandard}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/6_FlyBack/OverPressureResponse}
+\caption{}
+\label{fig:OverPressureResponse}
+\end{figure}
 
 
 \section{Alternate Launch Locations}
@@ -935,7 +1056,7 @@ note potential for sonic booms and safety issues
 
 
 
-\subsection{Conclusion}
+\section{Summary}
 The fly-back trajectory of the SPARTAN hypersonic vehicle is investigated, from separation at 7.7$^\circ$S,145.0$^\circ$E to landing at 15.3$^\circ$S,144.9$^\circ$E, corresponding to a near 180$^\circ$ turn and a fly-back of 878km. The aerodynamics of the SPARTAN are calculated using CART3D, an inviscid CFD package, over the range of Mach numbers and angle of attack values of flight. The optimal trajectory of the SPARTAN is calculated, to fly-back to the initial launch position with minimum fuel. The optimal trajectory is calculated using the launch vehicle optimal control program LODESTAR. It is found that the SPARTAN is capable of returning to its initial launch position, using 166.0kg of fuel. The optimal trajectory terminates when SPARTAN reaches 200m altitude at a velocity of 119.8m/s. After this point, it is assumed that the SPARTAN lands on a traditional runway, at similar conditions to the space shuttle.  
 This result indicates that the fly-back of a hypersonic launch vehicle from high velocity separation at a Mach number greater than nine, returning to its initial launch site using scramjet hypersonic airbreathing engines, is feasible. This fly-back to the the original launch site is a crucial component for low cost access-to-space using scramjets. 
 
