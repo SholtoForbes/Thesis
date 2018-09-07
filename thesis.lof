@@ -72,14 +72,14 @@
 \contentsline {figure}{\numberline {4.8}{\ignorespaces The process of the rocket-scramjet-rocket trajectory optimisation. Relevant sections are indicated in square brackets at each process step.\relax }}{90}{figure.caption.109}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Maximum payload-to-orbit trajectory path with the SPARTAN flying at constant dynamic pressure.\relax }}{93}{figure.caption.110}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces The first stage trajectory of the launch system, with the SPARTAN constrained to flight at constant dynamic pressure.\relax }}{95}{figure.caption.112}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces The constant dynamic pressure flight path of the SPARTAN.\relax }}{96}{figure.caption.113}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces The third stage trajectory of the launch system, with the SPARTAN constrained to flight at constant dynamic pressure.\relax }}{97}{figure.caption.114}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces The first stage trajectory of the launch system, with the SPARTAN constrained to flight at constant dynamic pressure.\relax }}{94}{figure.caption.112}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces The constant dynamic pressure flight path of the SPARTAN.\relax }}{95}{figure.caption.113}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces The third stage trajectory of the launch system, with the SPARTAN constrained to flight at constant dynamic pressure.\relax }}{96}{figure.caption.114}
 \contentsline {figure}{\numberline {5.5}{\ignorespaces \relax }}{98}{figure.caption.115}
 \contentsline {figure}{\numberline {5.6}{\ignorespaces \relax }}{99}{figure.caption.116}
 \contentsline {figure}{\numberline {5.7}{\ignorespaces \relax }}{101}{figure.caption.118}
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Net Isp contours for the SPARTAN at Mach numbers from 5-9, showing optimised trajectory and constant dynamic pressure trajectory.\relax }}{102}{figure.caption.119}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces \relax }}{102}{figure.caption.120}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces The specific impulse of the C-REST engines, plotted for inlet temperature (T1) and inlet Mach number (M1). Data points are shown in black.\relax }}{102}{figure.caption.120}
 \contentsline {figure}{\numberline {5.10}{\ignorespaces \relax }}{103}{figure.caption.121}
 \contentsline {figure}{\numberline {5.11}{\ignorespaces \relax }}{111}{figure.caption.130}
 \addvspace {10\p@ }
@@ -110,33 +110,37 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {F.1}{\ignorespaces \relax }}{159}{figure.caption.164}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {G.1}{\ignorespaces \relax }}{161}{figure.caption.165}
-\contentsline {figure}{\numberline {G.2}{\ignorespaces \relax }}{162}{figure.caption.166}
-\contentsline {figure}{\numberline {G.3}{\ignorespaces \relax }}{163}{figure.caption.167}
-\contentsline {figure}{\numberline {G.4}{\ignorespaces \relax }}{163}{figure.caption.168}
-\contentsline {figure}{\numberline {G.5}{\ignorespaces \relax }}{164}{figure.caption.169}
-\contentsline {figure}{\numberline {G.6}{\ignorespaces \relax }}{165}{figure.caption.170}
-\contentsline {figure}{\numberline {G.7}{\ignorespaces \relax }}{166}{figure.caption.171}
-\contentsline {figure}{\numberline {G.8}{\ignorespaces \relax }}{166}{figure.caption.172}
-\contentsline {figure}{\numberline {G.9}{\ignorespaces \relax }}{167}{figure.caption.173}
-\contentsline {figure}{\numberline {G.10}{\ignorespaces \relax }}{168}{figure.caption.174}
-\contentsline {figure}{\numberline {G.11}{\ignorespaces \relax }}{169}{figure.caption.175}
-\contentsline {figure}{\numberline {G.12}{\ignorespaces \relax }}{169}{figure.caption.176}
-\contentsline {figure}{\numberline {G.13}{\ignorespaces \relax }}{170}{figure.caption.177}
-\contentsline {figure}{\numberline {G.14}{\ignorespaces \relax }}{171}{figure.caption.178}
-\contentsline {figure}{\numberline {G.15}{\ignorespaces \relax }}{172}{figure.caption.179}
-\contentsline {figure}{\numberline {G.16}{\ignorespaces \relax }}{172}{figure.caption.180}
-\contentsline {figure}{\numberline {G.17}{\ignorespaces \relax }}{173}{figure.caption.181}
-\contentsline {figure}{\numberline {G.18}{\ignorespaces \relax }}{173}{figure.caption.182}
-\contentsline {figure}{\numberline {G.19}{\ignorespaces \relax }}{174}{figure.caption.183}
-\contentsline {figure}{\numberline {G.20}{\ignorespaces \relax }}{174}{figure.caption.184}
-\contentsline {figure}{\numberline {G.21}{\ignorespaces \relax }}{175}{figure.caption.185}
-\contentsline {figure}{\numberline {G.22}{\ignorespaces \relax }}{175}{figure.caption.186}
-\contentsline {figure}{\numberline {G.23}{\ignorespaces \relax }}{176}{figure.caption.187}
-\contentsline {figure}{\numberline {G.24}{\ignorespaces \relax }}{176}{figure.caption.188}
-\contentsline {figure}{\numberline {G.25}{\ignorespaces \relax }}{177}{figure.caption.189}
-\contentsline {figure}{\numberline {G.26}{\ignorespaces \relax }}{177}{figure.caption.190}
-\contentsline {figure}{\numberline {G.27}{\ignorespaces \relax }}{178}{figure.caption.191}
-\contentsline {figure}{\numberline {G.28}{\ignorespaces \relax }}{178}{figure.caption.192}
-\contentsline {figure}{\numberline {G.29}{\ignorespaces \relax }}{179}{figure.caption.193}
-\contentsline {figure}{\numberline {G.30}{\ignorespaces \relax }}{179}{figure.caption.194}
+\contentsline {figure}{\numberline {G.1}{\ignorespaces \relax }}{162}{figure.caption.166}
+\contentsline {figure}{\numberline {G.2}{\ignorespaces \relax }}{163}{figure.caption.167}
+\contentsline {figure}{\numberline {G.3}{\ignorespaces \relax }}{164}{figure.caption.168}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {H.1}{\ignorespaces \relax }}{165}{figure.caption.169}
+\contentsline {figure}{\numberline {H.2}{\ignorespaces \relax }}{166}{figure.caption.170}
+\contentsline {figure}{\numberline {H.3}{\ignorespaces \relax }}{167}{figure.caption.171}
+\contentsline {figure}{\numberline {H.4}{\ignorespaces \relax }}{167}{figure.caption.172}
+\contentsline {figure}{\numberline {H.5}{\ignorespaces \relax }}{168}{figure.caption.173}
+\contentsline {figure}{\numberline {H.6}{\ignorespaces \relax }}{169}{figure.caption.174}
+\contentsline {figure}{\numberline {H.7}{\ignorespaces \relax }}{170}{figure.caption.175}
+\contentsline {figure}{\numberline {H.8}{\ignorespaces \relax }}{170}{figure.caption.176}
+\contentsline {figure}{\numberline {H.9}{\ignorespaces \relax }}{171}{figure.caption.177}
+\contentsline {figure}{\numberline {H.10}{\ignorespaces \relax }}{172}{figure.caption.178}
+\contentsline {figure}{\numberline {H.11}{\ignorespaces \relax }}{173}{figure.caption.179}
+\contentsline {figure}{\numberline {H.12}{\ignorespaces \relax }}{173}{figure.caption.180}
+\contentsline {figure}{\numberline {H.13}{\ignorespaces \relax }}{174}{figure.caption.181}
+\contentsline {figure}{\numberline {H.14}{\ignorespaces \relax }}{175}{figure.caption.182}
+\contentsline {figure}{\numberline {H.15}{\ignorespaces \relax }}{176}{figure.caption.183}
+\contentsline {figure}{\numberline {H.16}{\ignorespaces \relax }}{176}{figure.caption.184}
+\contentsline {figure}{\numberline {H.17}{\ignorespaces \relax }}{177}{figure.caption.185}
+\contentsline {figure}{\numberline {H.18}{\ignorespaces \relax }}{177}{figure.caption.186}
+\contentsline {figure}{\numberline {H.19}{\ignorespaces \relax }}{178}{figure.caption.187}
+\contentsline {figure}{\numberline {H.20}{\ignorespaces \relax }}{178}{figure.caption.188}
+\contentsline {figure}{\numberline {H.21}{\ignorespaces \relax }}{179}{figure.caption.189}
+\contentsline {figure}{\numberline {H.22}{\ignorespaces \relax }}{179}{figure.caption.190}
+\contentsline {figure}{\numberline {H.23}{\ignorespaces \relax }}{180}{figure.caption.191}
+\contentsline {figure}{\numberline {H.24}{\ignorespaces \relax }}{180}{figure.caption.192}
+\contentsline {figure}{\numberline {H.25}{\ignorespaces \relax }}{181}{figure.caption.193}
+\contentsline {figure}{\numberline {H.26}{\ignorespaces \relax }}{181}{figure.caption.194}
+\contentsline {figure}{\numberline {H.27}{\ignorespaces \relax }}{182}{figure.caption.195}
+\contentsline {figure}{\numberline {H.28}{\ignorespaces \relax }}{182}{figure.caption.196}
+\contentsline {figure}{\numberline {H.29}{\ignorespaces \relax }}{183}{figure.caption.197}
+\contentsline {figure}{\numberline {H.30}{\ignorespaces \relax }}{183}{figure.caption.198}

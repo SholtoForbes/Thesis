@@ -139,6 +139,84 @@ The GPOPS-2 solution to the Brachistochrone problem is shown in Figure \ref{fig:
 \label{fig:MeshHistory}
 \end{figure}
 		
+		\chapter{Maximum Payload-To-Orbit Trajectory With Dynamic Pressure Constraint}\label{sec:Appendix_qconst}
+	\begin{table}[ht]
+	\centering
+	\begin{tabular}{l c } 
+		\hline \textbf{Trajectory Condition}
+		& Constq
+
+		\\
+		\hline \textbf{Payload to Orbit (kg)}
+		& \PayloadToOrbitqConstrained
+		\\
+		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+		& \firstsecondSeparationAltqConstrained
+		\\
+		\textbf{Separation v, 1$\rightarrow$2 (m/s)}
+		& \firstsecondSeparationvqConstrained
+		\\
+		\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+		& \firstsecondSeparationgammaqConstrained
+		\\
+		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+		& \secondthirdSeparationAltqConstrained
+		\\
+		\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+		& \secondthirdSeparationvqConstrained
+		\\
+		\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+		& \secondthirdSeparationgammaqConstrained
+		\\
+		\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+		& \secondthirdSeparationqqConstrained
+		\\
+		\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+		& \secondthirdSeparationLDqConstrained
+		\\
+		\textbf{2$^{nd}$ Stage Flight Time (s)}
+		& \secondFlightTimeqConstrained
+		\\
+		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+		& \thirdqOverFiveqConstrained
+		\\
+		\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
+		& \thirdmaxAoAqConstrained
+		\\
+		\textbf{3$^{rd}$ Stage final v (m/s)}
+		& \thirdcircvqConstrained
+		\\
+		\textbf{3$^{rd}$ Stage final m (kg)}
+		& \thirdcircmqConstrained
+		\\
+		\hline 
+	\end{tabular} 
+	\end{table}
+		
+\begin{figure}[th]
+\centering
+\includegraphics[width=0.8\linewidth]{../LODESTAR_FINAL/Results/10-qconstrained/FirstStageConstq}
+\caption{}
+\label{fig:FirstStageqConstrained68}
+\end{figure}
+		
+\begin{figure}[th]
+\centering
+\includegraphics[width=0.8\linewidth]{../LODESTAR_FINAL/Results/10-qconstrained/SecondStageConstq}
+\caption{}
+\label{fig:SecondStageqConstrained68}
+\end{figure}
+
+\begin{figure}[th]
+\centering
+\includegraphics[width=0.8\linewidth]{../LODESTAR_FINAL/Results/10-qconstrained/ThirdStageConstq}
+\caption{}
+\label{fig:ThirdStageqConstrained68}
+\end{figure}
+
+
+
+		
 		\chapter{Trajectory Plot Comparisons}\label{sec:Appendix_trajectorycomparisons}
 		
 		
