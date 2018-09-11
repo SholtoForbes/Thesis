@@ -3,20 +3,11 @@
 \cleardoublepage
 \chapter{Optimised Trajectory Including Fly-Back}\label{chapter:Flyback}
 
-This chapter presents the optimised trajectory of the launch system, including the fly-back of the SPARTAN. The combined optimisation for the ascent/fly-back and third stage trajectory is currently operational in LODESTAR. Figures \ref{fig:ascent}-\ref{fig:groundtrack} show an example of a combined optimised trajectory for the ascent/return of the SPARTAN and the ascent of the third stage, for maximum payload-to-orbit. However, the aerodynamic and propulsive databases are currently being updated, and will change the optimised results slightly. It is not expected that the major points of interest in the trajectory will change.
-
-
-
- The ascent trajectory will be compared to the optimised ascent without fly-back calculated in Section \ref{chapter:Ascent}. The SPARTAN compensates for the fly-back by banking during ascent. This requires additional angle of attack, and results in less velocity and a smaller pull-up. A small deviation from 50kPa dynamic pressure is observed directly before pull-up, accompanied by a rise in bank angle. This manoeuvre reduces the total range during ascent for minimal velocity losses, decreasing the fuel necessary for the return flight. 
- 
-
-The return flight analysis consists of a modified form of the paper 'Fly-Back of a Scramjet-Powered Accelerator', presented at Scitech 2018. Currently, this analysis is for a standalone optimised fly-back from a fixed point.  The results will modified to be for the fly-back portion of the combined optimisation. The analysis in this section is expected to change little. 
-
-
-
-The sensitivity analysis in this chapter will be expanded, and will be compared against the sensitivity analysis without fly-back, presented in Chapter \ref{chapter:Ascent}, to determine how the fly-back changes the sensitivity of the trajectory to the design parameters of the SPARTAN. As in Chapter \ref{chapter:Ascent}, the validation of each case will be discussed, with forward simulation comparisons and optimality condition validations provided in appendices. 
-
-
+This chapter presents the maximum payload-to-orbit optimised trajectory of the rocket-scramjet-rocket launch system, including the fly-back of the SPARTAN. 
+ Returning the SPARTAN for landing at the initial launch site allows for rapid refurbishment and re-use, and is one of the primary enabling factors in the cost efficient operation of the launch system. 
+The fly-back of the SPARTAN requires a full turn-around of the SPARTAN, a glide which covers the necessary ground distance for return, and a deceleration which reduces the speed of the SPARTAN to landing approach velocity, while maintaining suitable high trajectory angle to allow for a controlled approach. 
+The return of the SPARTAN to the initial launch site is included in the optimisation process, to maximise the overall efficiency of the launch system. 
+This chapter includes a sensitivity analysis, with the same design parameters varied as in the preceding chapter. This sensitivity analysis allows the influence of the fly-back of the SPARTAN on the design sensitivities of the launch system to be assessed.
 
 
 \section{Combined SPARTAN Ascent-Descent \& Third Stage}
@@ -24,7 +15,7 @@ The sensitivity analysis in this chapter will be expanded, and will be compared 
 	\centering
 \begin{tabular}{l c } 
 	\hline \textbf{Trajectory Condition}
-	&Standard
+	& Standard
 
 	\\
 	\hline \textbf{Payload to Orbit (kg)}
@@ -57,6 +48,9 @@ The sensitivity analysis in this chapter will be expanded, and will be compared 
 	\textbf{2$^{nd}$ Stage Flight Time (s)}
 	& \secondFlightTimeStandard
 	\\
+	\textbf{2$^{nd}$ Stage Return Fuel (kg)}
+	& \returnFuelStandard
+	\\
 	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 	& \thirdqOverFiveStandard
 	\\
@@ -70,60 +64,51 @@ The sensitivity analysis in this chapter will be expanded, and will be compared 
 	& \thirdcircmStandard
 	\\
 	\hline 
-\end{tabular}
+\end{tabular} 
 \end{table}
 
-The trajectory of the rocket-scramjet-rocket launch system has been optimised in LODESTAR, including the return of the SPARTAN to its initial launch site. The optimised trajectory is shown in Figure \ref{fig:GroundTrackStandard}. The succesful computation of this optimised trajectory indicates that it is possible to launch a small satellite using the rocket-scramjet-rocket launch system, while returning the SPARTAN to the initial launch site location, and approaching the landing at appropriately low altitude and velocity. 
-This optimised trajectory attains a payload mass to SSO of 173.1kg. 
-
-The maximum payload-to-orbit is reduced by XX\% compared to the optimised trajectory result without flyback. This is a relatively small reduction in payload, and the benefits of flying back the SPARTAN to its initial launch site are likely to far outweigh this associated reduction in payload. This result indicates that flying back the SPARTAN to its initial launch site is possible, and is likely to be desirable as the most cost efficient way to operate the rocket-scramjet-rocket launch vehicle. 
-
-The optimised trajectory shape is significantly different from that of the optimised trajectory without flyback. The initial launch is to the East, with the SPARTAN manoeuvring during its acceleration so that the heading angle is pointed close to North. The SPARTAN releases the third stage, and executes a banking turn, with a sequence of 'skipping' manoeuvres. The scramjet engine is ignited three times during the return flight, using a total of 238.3kg of fuel, 15.2\% of the total fuel mass.
-
-\begin{figure}[ht]
+The trajectory of the rocket-scramjet-rocket launch system has been optimised in LODESTAR, including the return of the SPARTAN to its initial launch site. The optimised trajectory is shown in Figure \ref{fig:GroundTrackStandard}. 
+The rocket-scramjet-rocket launch system is shown to be able to launch a small satellite 
+while flying-back the SPARTAN to the initial launch site location, and approaching the landing site at appropriately low altitude and velocity to allow for landing on a traditional runway. 
+The optimised trajectory attains a payload mass to SSO of \PayloadToOrbitStandard kg. 
+This indicates that the launch system utilising the SPARTAN is capable of successfully completing a small satellite launch mission which allows for rapid reusability of the SPARTAN. 
+\begin{figure}[ht!]
 	\centering
 	\includegraphics[width=1\linewidth]{../LODESTAR_FINAL/Results/mode11/GroundTrackStandard}
 	\caption{}
 	\label{fig:GroundTrackStandard}
 \end{figure}
+The maximum payload-to-orbit is reduced by XX\% compared to the optimised trajectory result without fly-back. The benefits of flying back the SPARTAN to its initial launch site, compared to the alternative of transporting the SPARTAN back to the launch site from a remote landing, are likely to far outweigh this associated reduction in payload. 
 
-\section{First Stage Trajectory}
-\begin{figure}[ht]
-\centering
-\includegraphics[width=1\linewidth]{../LODESTAR_FINAL/Results/mode11/FirstStageStandard}
-\caption{}
-\label{fig:FirstStageStandard}
-\end{figure}
 
-\section{Second Stage Trajectory}
-\begin{figure}[ht]
+\section{Ascent Trajectory}
+
+ The initial launch for a maximum payload-to-orbit trajectory with SPARTAN fly-back is to the east.
+ The first stage trajectory is very similar to that of the first stage launching the SPARTAN with no return flight, detailed in Section \ref{sec:optimisednoreturn}, and is shown in Appendix \ref{sec:appendix_firststage}. 
+ After the easterly launch, and first stage pitchover, the SPARTAN is released in an easterly direction, and performs a banking manoeuvre throughout its acceleration so that the heading angle is pointed appropriately close to north-northwest at the release of the third stage rocket. 
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=1\linewidth]{../LODESTAR_FINAL/Results/mode11/SecondStageStandard}
 \caption{}
 \label{fig:SecondStageStandard}
 \end{figure}
-
-\begin{figure}[ht]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=0.9\linewidth]{../LODESTAR_FINAL/Results/mode11/NetIspStandard}
 \caption{}
 \label{fig:NetIspStandard}
 \end{figure}
+During the ascent, the bank angle of the SPARTAN is significantly large and the angle of attack of the SPARTAN is significantly higher than during the maximum payload-to-orbit trajectory with no fly-back, detailed in Section XX.
+As a consequence, the net specific impulse of the SPARTAN is decreased during its acceleration, which can be observed in Figure \ref{fig:NetIspStandard}. This higher angle of attack results in no altitude raising manoeuvre in the middle of the acceleration trajectory of the SPARTAN. The SPARTAN no longer flies within the homogeneous region of the specific impulse of the C-REST engines, instead the flight conditions are close to a region where an increase in angle of attack causes a sharp decrease in specific impulse. 
+This indicates that at Mach 7 and 8 the angle of attack, and consequently, the allowable bank angle, of the SPARTAN may be being limited by the performance of the C-REST engines. 
+
+ The bank angle is initially 75.4 $^\circ$ at the first stage-SPARTAN separation, which aids the SPARTAN in decreasing its altitude to close to maximum dynamic pressure at 64.9s. The bank angle decreases as the SPARTAN reaches its maximum dynamic pressure, then adjusts and stays between 52.4$^\circ$ - 58.7$^\circ$ for the duration of the acceleration, until a pull-up is performed at 341.2s. During the pull-up, the bank angle is steadily reduced at its maximum change rate, until the release of the third stage rocket at 0$^\circ$ bank angle. 
+
+A total fuel mass of 1307.5kg is used during the SPARTAN's acceleration. This reduction in fuel mass used, along with the reduction in net specific impulse due to the higher angle of attack values, reduces the velocity at SPARTAN-third stage separation by XXm/s compared to the maximum payload-to-orbit case with no SPARTAN fly-back. The SPARTAN pulls up to \secondthirdSeparationAltStandard km altitude and \secondthirdSeparationgammaStandard $^\circ$ before SPARTAN-third stage separation, a difference of only XXkm and XX$^\circ$ compared to the maximum payload-to-orbit trajectory without fly-back. 
 
 
 
--higher AoA (maybe pinpoint location on Isp graphs)
-
-with no return case:
--compare L/D Net Isp and thrust history
-
--compare end trajectory angle/altitude 
-
--compare eq ratio (plot of both together? dont use normalised time scale)
-
-
-\section{Third Stage Trajectory}
-\begin{figure}
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=1\linewidth]{../LODESTAR_FINAL/Results/mode11/ThirdStageStandard}
 \caption{}
@@ -133,48 +118,38 @@ with no return case:
 
 \section{Fly-Back Trajectory}
 
-\begin{figure}
+\begin{figure}[ht!]
 	\centering
 	\includegraphics[width=1\linewidth]{../LODESTAR_FINAL/Results/mode11/ReturnStandard}
 	\caption{}
 	\label{fig:ReturnStandard}
 \end{figure}
 
--as below, explain why the ascent banks
-
-
-
-
-\section{Fly-Back Trajectory Analysis - paper}
-The fly-back of the SPARTAN is optimised using LODESTAR. The fly-back is optimised for minimum fuel usage, with initial conditions constrained to be similar to the intended third stage release point, and end position constrained within 12.7km of the initial launch site, at  15.3$^\circ$S,144.9$^\circ$E\cite{ForbesSpyratos2018}. The margin of 12.7km is allowed so as to not over-constrain the end position within LODESTAR, and it is assumed that the landing strip will not be at the exact location of the launch site. The angle of attack is limited to 10$^\circ$, to ensure vehicle stability. The bank angle is limited to 90$^\circ$ to produce a conservative solution and to limit any possible design complications that may arise from inverted flight. The dynamic pressure is limited to 50kPa, the structural limit of the vehicle. The scramjet engines are limited to only operate above 20kPa dynamic pressure, an estimated lower limit on the operable mass flow rate.
-The end of the trajectory is constrained to sub-200m altitude, and a trajectory angle range between -10$^\circ$ and 0$^\circ$ to ensure that the SPARTAN can perform a landing manoeuvre. These constraints ensure that the vehicle is approaching the landing site at the end of the optimised trajectory. The end velocity is only limited to be greater than 0m/s. It can be assumed that the optimal fly-back trajectory minimises end velocity as shown in the optimised trajectory results. 
-It is also assumed that the vehicle is able to carry any necessary fuel in addition to the fuel required during the ascent trajectory, allowing the initial conditions to be kept constant. The potential specific impulse is shown along the trajectory, this is the specific impulse obtainable from the C-REST engines should they be powered on.
-
-
-
-
-\subsection{Return Trajectory}
-
-
-The optimised fly-back trajectory is shown in Figures \ref{fig:lon-lat} and \ref{fig:AllTraj}.
-The fly-back is initiated from the optimised second-third stage separation point at 7.7$^\circ$S,145.0$^\circ$E, 34.5km altitude, 2.9$^\circ$ trajectory angle, 2881m/s velocity and 102$^\circ$ heading angle, corresponding to the conditions of optimal third stage release described in Section \ref*{sec:opt}. 
-The SPARTAN is shown to be capable of fly-back, using 166.0kg of fuel, a total increase in the fuel usage of the SPARTAN of 10.6\%.
+The optimised fly-back trajectory is shown in Figure \ref{fig:ReturnStandard}.
+The SPARTAN is shown to be capable of fly-back, using 254.5kg of fuel, 16.3\% of the total fuel.
 The optimised trajectory has four distinct parts; 1. initial turn, 2. boost phase, 3. hop-glide, and 4. approach. 
 
 \subsubsection{ Initial Turn}
-The SPARTAN starts at the maximum bank angle of 90$^\circ$, and sustains this bank angle for 34.4s. At this point, the altitude of the SPARTAN decreases, and the vehicle is close to hitting the dynamic pressure of 50kPa. To avoid exceeding this limit, the bank angle is reduced to 71.2$^\circ$, allowing the vehicle to generate sufficient lift to slow its descent. The bank angle in then increased again, to 80.7$^\circ$ at 70.8s. After this time, the bank angle is gradually reduced. 
+The SPARTAN separates from the third stage rocket at a bank angle of 0$^\circ$, and then increases the bank angle at its maximum change rate until 98.5s and 89.5$^\circ$ bank angle. At this point, the altitude of the SPARTAN is decreasing, and the SPARTAN rapidly becomes close to hitting the dynamic pressure of 50kPa. To avoid exceeding this limit, the bank angle is reduced to 67.5$^\circ$ at 164.3s, allowing the vehicle to generate sufficient lift to slow its descent. 
 
 \subsubsection{ Boost Phase}
-Soon after the bank angle begins to reduce, at 118.7s flight time and Mach 5.71, the scramjet engines are ignited. The C-REST engines are powered-on at a point of high potential specific impulse, at a low Mach number, and burn for 119.8s. The altitude of the SPARTAN is raised during the majority of the burn, ensuring that the Mach number is kept low for maximum efficiency\cite{Preller2017}, as shown in Figure \ref{fig:AllTraj}. The maximum altitude is limited by the lower dynamic pressure limit of the C-REST engines of 20kPa. The bank angle of the vehicle is reduced to produce increased lift, so as to increase the altitude of the SPARTAN, while also maximising the specific impulse of the scramjet engines by keeping the angle of attack low. Low angle of attack decreases the temperature and raises the Mach number, at the inlet of the C-REST engines. While these effects partially offset each other\cite{Preller2017}, the temperature increase is more significant, and decreasing angle of attack has the net effect of increasing the specific impulse of the C-REST engines. This increase in specific impulse is balanced by a decrease in the L/D of the SPARTAN at angle of attack values lower than 4$^\circ$, as illustrated in Figure \ref{fig:LD}. However, the specific impulse has a more significant impact than L/D during this phase, resulting in the optimised angle of attack being kept low. At 204s the angle of attack is increased, bringing the L/D of the vehicle towards maximum and initiating the first 'skip' of the skip-glide phase.  
+Soon after the bank angle has reduced to 67.5$^\circ$, the scramjet engines are ignited. The C-REST engines are powered-on at a point of high potential specific impulse, at a low Mach number, and burn for 46.5s. The altitude of the SPARTAN is raised during the initial burn, ensuring that the Mach number is kept low for maximum efficiency. The maximum altitude during the burn is limited by the lower dynamic pressure limit of the C-REST engines of 20kPa. At 227.9s, the initial burn ends, the angle of attack of the SPARTAN is decreased to 1.27$^\circ$, and the altitude decreases. As soon as the dynamic pressure is high enough for C-REST engine operation at 259.5s, the scramjet engines are once again ignited. During the second burn, the bank angle of the vehicle is reduced to produce increased lift, so as to increase the altitude of the SPARTAN, while also maximising the specific impulse of the scramjet engines by keeping the angle of attack low. The low angle of attack values decrease the temperature and raise the Mach number at the inlet of the C-REST engines. While these effects partially offset each other\cite{Preller2017}, the temperature increase is more significant, and decreasing the angle of attack has the net effect of increasing the specific impulse of the C-REST engines. This increase in specific impulse is balanced by a decrease in the L/D of the SPARTAN at angle of attack values lower than 4$^\circ$, as illustrated in Figure \ref{fig:LD}. However, the specific impulse has a more significant impact than the L/D during this phase, resulting in the optimised angle of attack being kept low. The angle of attack is increased gradually during the burn, increasing the L/D of the vehicle and initiating a large 'skip'. 
+This skip raises the altitude of the SPARTAN to 49.0km, before it decreases once again. 
+The third and last burn is initiated as the altitude of the SPARTAN is still decreasing, at 458.1s and lasts until 513.1s, when the remaining fuel has been depleted. 
+
 
 
 \subsubsection{ Skip-Glide}
-During the unpowered trajectory after the burn phase, the angle of attack is controlled so that the L/D of the SPARTAN is close to the maximum. Initially, the SPARTAN performs several 'skips' after the scramjet burn. These are due to the high L/D of the SPARTAN above Mach 4, and are aided by the angle of attack, which is controlled to emphasize the size of the skips. These skips are consistent with research which has shown that a periodic skipping trajectory increases the downrange distance achievable by hypersonic vehicles\cite{Eggers1957,Kanda2007}. 
+
+ The skips which the SPARTAN exhibits during its return flight are aided by the angle of attack of the SPARTAN, and are consistent with research which has shown that a periodic skipping trajectory increases the downrange distance achievable by hypersonic vehicles both during powered and unpowered flight\cite{Eggers1957,Kanda2007}. 
+During the unpowered trajectory after the burn phase, the angle of attack is initially controlled so that the L/D of the SPARTAN is close to the maximum, and the lift of the SPARTAN is high. This high angle of attack is sustained until 694.2s, when the Mach number has fallen below 4, so that the SPARTAN is in a region of low L/D, and the fifth skip has begun. At this point, the angle of attack is reduced significantly, to 2.6$^\circ$, reducing the size of the fifth skip. At 803.0s, the angle of attack is again raised to 4.9$^\circ$, initiating the sixth and last skip. After this increase, the angle of attack is adjusted, so that as the SPARTAN completes the final skip, a gradual, controlled descent is initiated. 
+
+
 
 
 \subsubsection{ Approach}
-After the skip phase, as the vehicle is approaching Mach 1, the angle of attack is reduced gradually to bring the SPARTAN down to 1km altitude, in a controlled manner. 
-At the end of the trajectory the SPARTAN levels out, and reaches 1km altitude at -XX$^\circ$ trajectory angle and XXm/s velocity. These conditions are similar to those of the space shuttle at landing\cite{Ryba2017}, and it is assumed that the SPARTAN is able to perform a landing manoeuvre after this point. 
+After the skip phase, as the vehicle is approaching Mach 1, the angle of attack is reduced gradually to bring the SPARTAN down to 1km altitude, in a controlled manner. At 1130.0s, the bank angle is increased, in order to perform a final adjustment of the heading angle, to bring the SPARTAN to the desired end location. 
+The SPARTAN reaches 1km altitude at -32.5$^\circ$ trajectory angle and 124.9m/s velocity, and it is assumed that the SPARTAN is able to perform a landing manoeuvre after this point. 
 
 
 
@@ -217,146 +192,282 @@ The consistency of the trajectory shape indicates that the optimal solution is r
 
 \section{dynamic pressure}
 
-
+The maximum dynamic pressure  of the SPARTAN has a significantly increased effect on the maximum payload-to-orbit optimised trajectory which includes the SPARTAN flying-back to the launch site. This is primarily due to the increased maximum dynamic pressure improving the manoeuvring capabilities of the SPARTAN and increasing the acceleration rate during ascent, which leads to a smaller flight time, and less ground coverage. 
 
 \begin{table}[ht]
 \centering
-
+\begin{tabular}{l c c c c c c} 
+	\hline \textbf{Trajectory Condition}
+	& q40
+	& q45
+	& q100
+	& q55
+	& q60
+	& /\%
+	\\
+	\hline \textbf{Payload to Orbit (kg)}
+	& \PayloadToOrbitqForty
+	& \PayloadToOrbitqFortyFive
+	& \PayloadToOrbitqStandard
+	& \PayloadToOrbitqFiftyFive
+	& \PayloadToOrbitqSixty
+	&0.4
+	\\
+	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+	& \firstsecondSeparationAltqForty
+	& \firstsecondSeparationAltqFortyFive
+	& \firstsecondSeparationAltqStandard
+	& \firstsecondSeparationAltqFiftyFive
+	& \firstsecondSeparationAltqSixty
+	& -
+	\\
+	\textbf{Separation v, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationvqForty
+	& \firstsecondSeparationvqFortyFive
+	& \firstsecondSeparationvqStandard
+	& \firstsecondSeparationvqFiftyFive
+	& \firstsecondSeparationvqSixty
+	& -
+	\\
+	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationgammaqForty
+	& \firstsecondSeparationgammaqFortyFive
+	& \firstsecondSeparationgammaqStandard
+	& \firstsecondSeparationgammaqFiftyFive
+	& \firstsecondSeparationgammaqSixty
+	& -
+	\\
+	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+	& \secondthirdSeparationAltqForty
+	& \secondthirdSeparationAltqFortyFive
+	& \secondthirdSeparationAltqStandard
+	& \secondthirdSeparationAltqFiftyFive
+	& \secondthirdSeparationAltqSixty
+	& -
+	\\
+	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+	& \secondthirdSeparationvqForty
+	& \secondthirdSeparationvqFortyFive
+	& \secondthirdSeparationvqStandard
+	& \secondthirdSeparationvqFiftyFive
+	& \secondthirdSeparationvqSixty
+	&2.02
+	\\
+	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+	& \secondthirdSeparationgammaqForty
+	& \secondthirdSeparationgammaqFortyFive
+	& \secondthirdSeparationgammaqStandard
+	& \secondthirdSeparationgammaqFiftyFive
+	& \secondthirdSeparationgammaqSixty
+	& -
+	\\
+	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+	& \secondthirdSeparationqqForty
+	& \secondthirdSeparationqqFortyFive
+	& \secondthirdSeparationqqStandard
+	& \secondthirdSeparationqqFiftyFive
+	& \secondthirdSeparationqqSixty
+	&0.04
+	\\
+	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+	& \secondthirdSeparationLDqForty
+	& \secondthirdSeparationLDqFortyFive
+	& \secondthirdSeparationLDqStandard
+	& \secondthirdSeparationLDqFiftyFive
+	& \secondthirdSeparationLDqSixty
+	&0.02
+	\\
+	\textbf{2$^{nd}$ Stage Flight Time (s)}
+	& \secondFlightTimeqForty
+	& \secondFlightTimeqFortyFive
+	& \secondFlightTimeqStandard
+	& \secondFlightTimeqFiftyFive
+	& \secondFlightTimeqSixty
+	&-2.49
+	\\
+	\textbf{2$^{nd}$ Stage Return Fuel (kg)}
+	& \returnFuelqForty
+	& \returnFuelqFortyFive
+	& \returnFuelqStandard
+	& \returnFuelqFiftyFive
+	& \returnFuelqSixty
+	&-1.54
+	\\
+	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+	& \thirdqOverFiveqForty
+	& \thirdqOverFiveqFortyFive
+	& \thirdqOverFiveqStandard
+	& \thirdqOverFiveqFiftyFive
+	& \thirdqOverFiveqSixty
+	& -
+	\\
+	\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
+	& \thirdmaxAoAqForty
+	& \thirdmaxAoAqFortyFive
+	& \thirdmaxAoAqStandard
+	& \thirdmaxAoAqFiftyFive
+	& \thirdmaxAoAqSixty
+	& 0
+	\\
+	\textbf{3$^{rd}$ Stage final v (m/s)}
+	& \thirdcircvqForty
+	& \thirdcircvqFortyFive
+	& \thirdcircvqStandard
+	& \thirdcircvqFiftyFive
+	& \thirdcircvqSixty
+	& -
+	\\
+	\textbf{3$^{rd}$ Stage final m (kg)}
+	& \thirdcircmqForty
+	& \thirdcircmqFortyFive
+	& \thirdcircmqStandard
+	& \thirdcircmqFiftyFive
+	& \thirdcircmqSixty
+	& -
+	\\
+	\hline 
+\end{tabular} 
 \end{table}
 
 
 \section{Isp}
 
 
-Increasing the specific impulse causes the fuel necessary for fly-back to decrease by -XXkg (-XX\%), while decreasing the specific impulse causes the fuel necessary to rise by +XXkg (+XX\%). The start of scramjet burn is consistent across different specific impulse test cases. Due to the increase in thrust, the SPARTAN accelerates more rapidly for the higher specific impulse case. As a consequence, the initial 'skip' is performed sooner, and subsequent skips are larger. 
-
--check this
+Increasing the specific impulse causes the fuel necessary for fly-back to decrease by -XXkg (-XX\%), while decreasing the specific impulse causes the fuel necessary to rise by +XXkg (+XX\%). The start of scramjet burn is consistent across different specific impulse test cases. Due to the increase in thrust, the SPARTAN accelerates more rapidly for the higher specific impulse case. As a consequence, the initial 'skip' is performed sooner.
 
 \begin{table}[ht]
 	\centering
-	\begin{tabular}{l c c c c c c} 
-		\hline \textbf{Trajectory Condition}
-		&Isp90
-		&Isp95
-		&Isp100
-		&Isp105
-		&Isp110
-		& /\%
-		\\
-		\hline \textbf{Payload to Orbit (kg)}
-		& \PayloadToOrbitIspNinety
-		& \PayloadToOrbitIspNinetyFive
-		& \PayloadToOrbitIspStandard
-		& \PayloadToOrbitIspOneHundredFive
-		& \PayloadToOrbitIspOneHundredTen
-		&1.7
-		\\
-		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
-		& \firstsecondSeparationAltIspNinety
-		& \firstsecondSeparationAltIspNinetyFive
-		& \firstsecondSeparationAltIspStandard
-		& \firstsecondSeparationAltIspOneHundredFive
-		& \firstsecondSeparationAltIspOneHundredTen
-		& -
-		\\
-		\textbf{Separation v, 1$\rightarrow$2 (m/s)}
-		& \firstsecondSeparationvIspNinety
-		& \firstsecondSeparationvIspNinetyFive
-		& \firstsecondSeparationvIspStandard
-		& \firstsecondSeparationvIspOneHundredFive
-		& \firstsecondSeparationvIspOneHundredTen
-		& -
-		\\
-		\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
-		& \firstsecondSeparationgammaIspNinety
-		& \firstsecondSeparationgammaIspNinetyFive
-		& \firstsecondSeparationgammaIspStandard
-		& \firstsecondSeparationgammaIspOneHundredFive
-		& \firstsecondSeparationgammaIspOneHundredTen
-		& -
-		\\
-		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
-		& \secondthirdSeparationAltIspNinety
-		& \secondthirdSeparationAltIspNinetyFive
-		& \secondthirdSeparationAltIspStandard
-		& \secondthirdSeparationAltIspOneHundredFive
-		& \secondthirdSeparationAltIspOneHundredTen
-		& -
-		\\
-		\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
-		& \secondthirdSeparationvIspNinety
-		& \secondthirdSeparationvIspNinetyFive
-		& \secondthirdSeparationvIspStandard
-		& \secondthirdSeparationvIspOneHundredFive
-		& \secondthirdSeparationvIspOneHundredTen
-		&11.1
-		\\
-		\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
-		& \secondthirdSeparationgammaIspNinety
-		& \secondthirdSeparationgammaIspNinetyFive
-		& \secondthirdSeparationgammaIspStandard
-		& \secondthirdSeparationgammaIspOneHundredFive
-		& \secondthirdSeparationgammaIspOneHundredTen
-		&-0.09
-		\\
-		\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
-		& \secondthirdSeparationqIspNinety
-		& \secondthirdSeparationqIspNinetyFive
-		& \secondthirdSeparationqIspStandard
-		& \secondthirdSeparationqIspOneHundredFive
-		& \secondthirdSeparationqIspOneHundredTen
-		&0.06
-		\\
-		\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
-		& \secondthirdSeparationLDIspNinety
-		& \secondthirdSeparationLDIspNinetyFive
-		& \secondthirdSeparationLDIspStandard
-		& \secondthirdSeparationLDIspOneHundredFive
-		& \secondthirdSeparationLDIspOneHundredTen
-		& -
-		\\
-		\textbf{2$^{nd}$ Stage Flight Time (s)}
-		& \secondFlightTimeIspNinety
-		& \secondFlightTimeIspNinetyFive
-		& \secondFlightTimeIspStandard
-		& \secondFlightTimeIspOneHundredFive
-		& \secondFlightTimeIspOneHundredTen
-		& -
-		\\
-		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
-		& \thirdqOverFiveIspNinety
-		& \thirdqOverFiveIspNinetyFive
-		& \thirdqOverFiveIspStandard
-		& \thirdqOverFiveIspOneHundredFive
-		& \thirdqOverFiveIspOneHundredTen
-		& -
-		\\
-		\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
-		& \thirdmaxAoAIspNinety
-		& \thirdmaxAoAIspNinetyFive
-		& \thirdmaxAoAIspStandard
-		& \thirdmaxAoAIspOneHundredFive
-		& \thirdmaxAoAIspOneHundredTen
-		& -
-		\\
-		\textbf{3$^{rd}$ Stage final v (m/s)}
-		& \thirdcircvIspNinety
-		& \thirdcircvIspNinetyFive
-		& \thirdcircvIspStandard
-		& \thirdcircvIspOneHundredFive
-		& \thirdcircvIspOneHundredTen
-		&12.46
-		\\
-		\textbf{3$^{rd}$ Stage final m (kg)}
-		& \thirdcircmIspNinety
-		& \thirdcircmIspNinetyFive
-		& \thirdcircmIspStandard
-		& \thirdcircmIspOneHundredFive
-		& \thirdcircmIspOneHundredTen
-		& -
-		\\
-		\hline 
-	\end{tabular} 
+\begin{tabular}{l c c c c c c} 
+	\hline \textbf{Trajectory Condition}
+	&Isp90
+	&Isp95
+	&Isp100
+	&Isp105
+	&Isp110
+	& /\%
+	\\
+	\hline \textbf{Payload to Orbit (kg)}
+	& \PayloadToOrbitIspNinety
+	& \PayloadToOrbitIspNinetyFive
+	& \PayloadToOrbitIspStandard
+	& \PayloadToOrbitIspOneHundredFive
+	& \PayloadToOrbitIspOneHundredTen
+	&1.7
+	\\
+	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+	& \firstsecondSeparationAltIspNinety
+	& \firstsecondSeparationAltIspNinetyFive
+	& \firstsecondSeparationAltIspStandard
+	& \firstsecondSeparationAltIspOneHundredFive
+	& \firstsecondSeparationAltIspOneHundredTen
+	& -
+	\\
+	\textbf{Separation v, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationvIspNinety
+	& \firstsecondSeparationvIspNinetyFive
+	& \firstsecondSeparationvIspStandard
+	& \firstsecondSeparationvIspOneHundredFive
+	& \firstsecondSeparationvIspOneHundredTen
+	& -
+	\\
+	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationgammaIspNinety
+	& \firstsecondSeparationgammaIspNinetyFive
+	& \firstsecondSeparationgammaIspStandard
+	& \firstsecondSeparationgammaIspOneHundredFive
+	& \firstsecondSeparationgammaIspOneHundredTen
+	& -
+	\\
+	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+	& \secondthirdSeparationAltIspNinety
+	& \secondthirdSeparationAltIspNinetyFive
+	& \secondthirdSeparationAltIspStandard
+	& \secondthirdSeparationAltIspOneHundredFive
+	& \secondthirdSeparationAltIspOneHundredTen
+	& -
+	\\
+	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+	& \secondthirdSeparationvIspNinety
+	& \secondthirdSeparationvIspNinetyFive
+	& \secondthirdSeparationvIspStandard
+	& \secondthirdSeparationvIspOneHundredFive
+	& \secondthirdSeparationvIspOneHundredTen
+	&11.13
+	\\
+	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+	& \secondthirdSeparationgammaIspNinety
+	& \secondthirdSeparationgammaIspNinetyFive
+	& \secondthirdSeparationgammaIspStandard
+	& \secondthirdSeparationgammaIspOneHundredFive
+	& \secondthirdSeparationgammaIspOneHundredTen
+	&-0.09
+	\\
+	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+	& \secondthirdSeparationqIspNinety
+	& \secondthirdSeparationqIspNinetyFive
+	& \secondthirdSeparationqIspStandard
+	& \secondthirdSeparationqIspOneHundredFive
+	& \secondthirdSeparationqIspOneHundredTen
+	&0.07
+	\\
+	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+	& \secondthirdSeparationLDIspNinety
+	& \secondthirdSeparationLDIspNinetyFive
+	& \secondthirdSeparationLDIspStandard
+	& \secondthirdSeparationLDIspOneHundredFive
+	& \secondthirdSeparationLDIspOneHundredTen
+	& -
+	\\
+	\textbf{2$^{nd}$ Stage Flight Time (s)}
+	& \secondFlightTimeIspNinety
+	& \secondFlightTimeIspNinetyFive
+	& \secondFlightTimeIspStandard
+	& \secondFlightTimeIspOneHundredFive
+	& \secondFlightTimeIspOneHundredTen
+	& -
+	\\
+	\textbf{2$^{nd}$ Stage Return Fuel (kg)}
+	& \returnFuelIspNinety
+	& \returnFuelIspNinetyFive
+	& \returnFuelIspStandard
+	& \returnFuelIspOneHundredFive
+	& \returnFuelIspOneHundredTen
+	& -
+	\\
+	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+	& \thirdqOverFiveIspNinety
+	& \thirdqOverFiveIspNinetyFive
+	& \thirdqOverFiveIspStandard
+	& \thirdqOverFiveIspOneHundredFive
+	& \thirdqOverFiveIspOneHundredTen
+	& -
+	\\
+	\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
+	& \thirdmaxAoAIspNinety
+	& \thirdmaxAoAIspNinetyFive
+	& \thirdmaxAoAIspStandard
+	& \thirdmaxAoAIspOneHundredFive
+	& \thirdmaxAoAIspOneHundredTen
+	& -
+	\\
+	\textbf{3$^{rd}$ Stage final v (m/s)}
+	& \thirdcircvIspNinety
+	& \thirdcircvIspNinetyFive
+	& \thirdcircvIspStandard
+	& \thirdcircvIspOneHundredFive
+	& \thirdcircvIspOneHundredTen
+	&15.17
+	\\
+	\textbf{3$^{rd}$ Stage final m (kg)}
+	& \thirdcircmIspNinety
+	& \thirdcircmIspNinetyFive
+	& \thirdcircmIspStandard
+	& \thirdcircmIspOneHundredFive
+	& \thirdcircmIspOneHundredTen
+	& -
+	\\
+	\hline 
+\end{tabular} 
 	
 \end{table}
 
@@ -367,7 +478,13 @@ When the drag is increased (ie. L/D is decreased), the scramjet engine burn phas
 The greater burn time allows the maximum altitude attained during the initial 'skip' to be higher. 
 This additional altitude is necessary as the greater drag causes the velocity, and consequentially altitude, of the SPARTAN to decrease more rapidly.
 
--check all this
+-above currently not correct (potentially, awaiting new results)
+
+
+-the effect of Cd is reduced compared to the no fly-back case
+
+-some of the negative effects of Cd are offset by the tighter trajectory being flown, and the lower ground distance covered
+
 
 \begin{table}[ht]
 	\centering
@@ -386,7 +503,7 @@ This additional altitude is necessary as the greater drag causes the velocity, a
 		& \PayloadToOrbitCdStandard
 		& \PayloadToOrbitCdOneHundredFive
 		& \PayloadToOrbitCdOneHundredTen
-		&-1.6
+		&-1.5
 		\\
 		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 		& \firstsecondSeparationAltCdNinety
@@ -402,7 +519,7 @@ This additional altitude is necessary as the greater drag causes the velocity, a
 		& \firstsecondSeparationvCdStandard
 		& \firstsecondSeparationvCdOneHundredFive
 		& \firstsecondSeparationvCdOneHundredTen
-		&-3.67
+		&-3.66
 		\\
 		\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
 		& \firstsecondSeparationgammaCdNinety
@@ -426,7 +543,7 @@ This additional altitude is necessary as the greater drag causes the velocity, a
 		& \secondthirdSeparationvCdStandard
 		& \secondthirdSeparationvCdOneHundredFive
 		& \secondthirdSeparationvCdOneHundredTen
-		&-9.75
+		&-9.27
 		\\
 		\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
 		& \secondthirdSeparationgammaCdNinety
@@ -434,7 +551,7 @@ This additional altitude is necessary as the greater drag causes the velocity, a
 		& \secondthirdSeparationgammaCdStandard
 		& \secondthirdSeparationgammaCdOneHundredFive
 		& \secondthirdSeparationgammaCdOneHundredTen
-		&0.05
+		&0.04
 		\\
 		\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
 		& \secondthirdSeparationqCdNinety
@@ -450,7 +567,7 @@ This additional altitude is necessary as the greater drag causes the velocity, a
 		& \secondthirdSeparationLDCdStandard
 		& \secondthirdSeparationLDCdOneHundredFive
 		& \secondthirdSeparationLDCdOneHundredTen
-		& -
+		&-0.05
 		\\
 		\textbf{2$^{nd}$ Stage Flight Time (s)}
 		& \secondFlightTimeCdNinety
@@ -458,6 +575,14 @@ This additional altitude is necessary as the greater drag causes the velocity, a
 		& \secondFlightTimeCdStandard
 		& \secondFlightTimeCdOneHundredFive
 		& \secondFlightTimeCdOneHundredTen
+		& -
+		\\
+		\textbf{2$^{nd}$ Stage Return Fuel (kg)}
+		& \returnFuelCdNinety
+		& \returnFuelCdNinetyFive
+		& \returnFuelCdStandard
+		& \returnFuelCdOneHundredFive
+		& \returnFuelCdOneHundredTen
 		& -
 		\\
 		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
@@ -482,7 +607,7 @@ This additional altitude is necessary as the greater drag causes the velocity, a
 		& \thirdcircvCdStandard
 		& \thirdcircvCdOneHundredFive
 		& \thirdcircvCdOneHundredTen
-		&-7.99
+		& -
 		\\
 		\textbf{3$^{rd}$ Stage final m (kg)}
 		& \thirdcircmCdNinety
@@ -886,8 +1011,23 @@ This additional altitude is necessary as the greater drag causes the velocity, a
 	\end{tabular} 
 \end{table}
 
+-release of third stage with fly-back is at significantly lower velocity
+-at lower velocity, higher angle of attack is required 
+
+-the exponential nature of the circularisation mass change (exp(delta v)) means that the larger velocity difference cause by increasing the third stage mass makes more difference the lower the velocity is in the first place
+
+
 
 \section{T3}
+
+-similar magnitude of effect to no-return case
+
+-larger pull-ups effect the first 'skip' significantly
+
+-need to check whether this affects the turning rate of the initial skip (most important one for heading angle change)
+
+
+
 \begin{table}[ht]
 	\centering
 	\begin{tabular}{l c c c c c c} 
@@ -1016,24 +1156,26 @@ This additional altitude is necessary as the greater drag causes the velocity, a
 \end{table}
 
 
-\section{Viscous Drag}
-
-
 
 \section{Comparison of Sensitivities}
 
 -check this (from paper)
-
 These results indicate that the aerodynamic performance of the SPARTAN has significantly more impact than the efficiency of the scramjet engines on the optimised fly-back trajectory. During the fly-back trajectory, the specific impulse is effecting performance only whilst the scramjet engines are operating, compared with the aerodynamics of the vehicle, which effect performance throughout the trajectory. This suggests that, for maximum fly-back performance, the aerodynamic performance should be given preference over engine efficiency in the design of fly-back hypersonic accelerators. 
 
+\begin{figure}[th]
+\centering
+\includegraphics[width=0.8\linewidth]{figures/6_FlyBack/BarChart}
+\caption{Sensitivity of design parameters. \textcolor{red}{include lines showing sensitivities without flyback}}
+\label{fig:BarChart}
+\end{figure}
 
 
 
 
 \section{Sonic Boom Ground Effects}
 
-The flight of a hypersonic vehicle has the potential to create significant overpressures on the ground due to sonic booms[CITEXX]. Even when the vehicle is flying at high altitudes, the overpressures on the ground may still be large enough to have detrimental effects on any populated areas being overflown. The overpressure from sonic booms can cause significant annoyance to the populace, or in more extreme cases, long term damage to building structures or health. 
-When the SPARTAN is launched to a sun synchronous orbit from the Equatorial Launch Australia launch site, it flies over a significant portion of Papua, passing nearby multiple population centres. While it is flying at high altitude, it is flying at hypersonic speeds, and creates significant sonic boom effects. In order to assess the impact of the SPARTAN's flight, the magnitude of the overpressure from its sonic booms must be calculated. 
+The flight of a hypersonic vehicle has the potential to create significant overpressures on the ground due to sonic booms[CITEXX]. Even when the vehicle is flying at high altitudes, the overpressures on the ground may still be large enough to have detrimental effects on any populated areas being overflown. The overpressure from sonic booms can cause significant annoyance to the populace, or in more extreme cases, long term damage to building structures or peoples health. 
+When the SPARTAN is launched to a sun synchronous orbit from the Equatorial Launch Australia launch site, it flies over a significant portion of Papua. Fortunately, Papua is sparsely populated, and the number of towns flown over by the SPARTAN will be low, however the effects on these population centres may still be significant. Although it is flying at high altitude, the SPARTAN is flying at hypersonic speeds, and creates significant sonic boom effects. In order to assess the impact of the SPARTAN's flight, the magnitude of the overpressure from its sonic booms must be calculated. 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.9\linewidth]{../LODESTAR_FINAL/Results/mode11/OverPressureStandard}
@@ -1041,28 +1183,20 @@ When the SPARTAN is launched to a sun synchronous orbit from the Equatorial Laun
 	\label{fig:OverPressureStandard}
 \end{figure}
 
-The sonic boom overpressures are estimated using the 'first cut' estimation technique [CITEXX]. This estimation technique can approximate sonic boom overpressures moderately well, and is useful as a first approximation to the sonic boom overpressures generated by an aerospace vehicle. The overpressures generated by the SPARTAN were calculated over its trajectory, shown in Figure \ref{fig:OverPressureStandard}. 
-
--sonic booms wont hurt anyone (or cause building damage?)
-
--they are going to be unacceptably annoying
-
--papua is pretty sparsely populated, check if any towns are overflown
+The sonic boom overpressures are estimated using the 'first cut' estimation technique [CITEXX]. This estimation technique can approximate sonic boom overpressures moderately well, and is useful as a first approximation to the sonic boom overpressures generated by an aerospace vehicle. The overpressures generated by the SPARTAN are calculated over its trajectory, shown in Figure \ref{fig:OverPressureStandard}. It is found that overpressures of up to 375.3Pa occur during flight over land during the maximum payload-to-orbit trajectory of the SPARTAN. These overpressures have a low but significant probability of causing cosmetic damage to structures (~1.5\% for plaster and ~0.4\% for glass)[CITEXX-below]. In addition, overpressures of these magnitudes have been rated as unacceptably annoying to the majority populace being overflown, as shown in Figure \ref{fig:OverPressureResponse}. 
+These overpressures indicate that overflight of populated areas may not be reasonable for the SPARTAN flying its maximum payload-to-orbit trajectory. 
 
 
-\begin{figure}[ht]
-\centering
-\includegraphics[width=0.6\linewidth]{figures/6_FlyBack/OverPressureResponse}
-\caption{}
-\label{fig:OverPressureResponse}
-\end{figure}
+%http://www.dtic.mil/dtic/tr/fulltext/u2/a028512.pdf
+
+
+
 
 
 \section{Alternate Launch Locations}
 
-Southern Launch
+A sun synchronous orbit may be attained in both northerly, and southerly directions. An alternate southerly launch is investigated for the rocket-scramjet-rocket launch system, in the case that flight over Papua is not possible. 
 
-note potential for sonic booms and safety issues (possible abort trajectory issues?)
 
 \begin{figure}[th]
 \centering

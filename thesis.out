@@ -65,54 +65,53 @@
 \BOOKMARK [1][-]{section.5.6}{Summary}{chapter.5}% 65
 \BOOKMARK [0][-]{chapter.6}{Optimised Trajectory Including Fly-Back}{}% 66
 \BOOKMARK [1][-]{section.6.1}{Combined SPARTAN Ascent-Descent \046 Third Stage}{chapter.6}% 67
-\BOOKMARK [1][-]{section.6.2}{First Stage Trajectory}{chapter.6}% 68
-\BOOKMARK [1][-]{section.6.3}{Second Stage Trajectory}{chapter.6}% 69
-\BOOKMARK [1][-]{section.6.4}{Third Stage Trajectory}{chapter.6}% 70
-\BOOKMARK [1][-]{section.6.5}{Fly-Back Trajectory}{chapter.6}% 71
-\BOOKMARK [1][-]{section.6.6}{Fly-Back Trajectory Analysis - paper}{chapter.6}% 72
-\BOOKMARK [2][-]{subsection.6.6.1}{Return Trajectory}{section.6.6}% 73
-\BOOKMARK [2][-]{subsection.6.6.2}{Design Sensitivity Analysis}{section.6.6}% 74
-\BOOKMARK [1][-]{section.6.7}{dynamic pressure}{chapter.6}% 75
-\BOOKMARK [1][-]{section.6.8}{Isp}{chapter.6}% 76
-\BOOKMARK [1][-]{section.6.9}{Cd}{chapter.6}% 77
-\BOOKMARK [1][-]{section.6.10}{m SPARTAN}{chapter.6}% 78
-\BOOKMARK [1][-]{section.6.11}{m Fuel}{chapter.6}% 79
-\BOOKMARK [1][-]{section.6.12}{m3}{chapter.6}% 80
-\BOOKMARK [1][-]{section.6.13}{T3}{chapter.6}% 81
-\BOOKMARK [1][-]{section.6.14}{Viscous Drag}{chapter.6}% 82
-\BOOKMARK [1][-]{section.6.15}{Comparison of Sensitivities}{chapter.6}% 83
-\BOOKMARK [1][-]{section.6.16}{Sonic Boom Ground Effects}{chapter.6}% 84
-\BOOKMARK [1][-]{section.6.17}{Alternate Launch Locations}{chapter.6}% 85
-\BOOKMARK [1][-]{section.6.18}{Summary}{chapter.6}% 86
-\BOOKMARK [0][-]{chapter.7}{Conclusions}{}% 87
-\BOOKMARK [1][-]{section.7.1}{Recommendations for future work}{chapter.7}% 88
-\BOOKMARK [0][-]{chapter*.153}{Library}{}% 89
-\BOOKMARK [0][-]{appendix.A}{Propulsion Interpolation Scheme}{}% 90
-\BOOKMARK [0][-]{appendix.B}{GPOPS-2 Example - Brachistochrone Problem}{}% 91
-\BOOKMARK [0][-]{appendix.C}{Initial Guesses}{}% 92
-\BOOKMARK [0][-]{appendix.D}{Trajectory results}{}% 93
-\BOOKMARK [0][-]{appendix.E}{CART3D Results}{}% 94
-\BOOKMARK [1][-]{section.E.1}{Engine-On Plume Check}{appendix.E}% 95
-\BOOKMARK [1][-]{section.E.2}{CART3D Results}{appendix.E}% 96
-\BOOKMARK [1][-]{section.E.3}{verification}{appendix.E}% 97
-\BOOKMARK [0][-]{appendix.F}{title}{}% 98
-\BOOKMARK [0][-]{appendix.G}{Maximum Payload-To-Orbit Trajectory With Dynamic Pressure Constraint}{}% 99
-\BOOKMARK [0][-]{appendix.H}{Trajectory Plot Comparisons}{}% 100
-\BOOKMARK [1][-]{section.H.1}{Cases With No Fly-Back}{appendix.H}% 101
-\BOOKMARK [2][-]{subsection.H.1.1}{Dynamic Pressure Variation}{section.H.1}% 102
-\BOOKMARK [2][-]{subsection.H.1.2}{Specific Impulse}{section.H.1}% 103
-\BOOKMARK [2][-]{subsection.H.1.3}{Drag}{section.H.1}% 104
-\BOOKMARK [2][-]{subsection.H.1.4}{SPARTAN Mass}{section.H.1}% 105
-\BOOKMARK [2][-]{subsection.H.1.5}{Fuel Mass}{section.H.1}% 106
-\BOOKMARK [2][-]{subsection.H.1.6}{Third Stage Mass}{section.H.1}% 107
-\BOOKMARK [2][-]{subsection.H.1.7}{Third Stage Thrust}{section.H.1}% 108
-\BOOKMARK [2][-]{subsection.H.1.8}{Third Stage Drag}{section.H.1}% 109
-\BOOKMARK [1][-]{section.H.2}{Cases With Fly-Back}{appendix.H}% 110
-\BOOKMARK [2][-]{subsection.H.2.1}{Dynamic Pressure Variation}{section.H.2}% 111
-\BOOKMARK [2][-]{subsection.H.2.2}{Specific Impulse}{section.H.2}% 112
-\BOOKMARK [2][-]{subsection.H.2.3}{Drag}{section.H.2}% 113
-\BOOKMARK [2][-]{subsection.H.2.4}{SPARTAN Mass}{section.H.2}% 114
-\BOOKMARK [2][-]{subsection.H.2.5}{Fuel Mass}{section.H.2}% 115
-\BOOKMARK [2][-]{subsection.H.2.6}{SPARTAN Viscous Drag}{section.H.2}% 116
-\BOOKMARK [2][-]{subsection.H.2.7}{Third Stage Mass}{section.H.2}% 117
-\BOOKMARK [2][-]{subsection.H.2.8}{Third Stage Thrust}{section.H.2}% 118
+\BOOKMARK [1][-]{section.6.2}{Ascent Trajectory}{chapter.6}% 68
+\BOOKMARK [1][-]{section.6.3}{Fly-Back Trajectory}{chapter.6}% 69
+\BOOKMARK [2][-]{subsection.6.3.1}{Design Sensitivity Analysis}{section.6.3}% 70
+\BOOKMARK [1][-]{section.6.4}{dynamic pressure}{chapter.6}% 71
+\BOOKMARK [1][-]{section.6.5}{Isp}{chapter.6}% 72
+\BOOKMARK [1][-]{section.6.6}{Cd}{chapter.6}% 73
+\BOOKMARK [1][-]{section.6.7}{m SPARTAN}{chapter.6}% 74
+\BOOKMARK [1][-]{section.6.8}{m Fuel}{chapter.6}% 75
+\BOOKMARK [1][-]{section.6.9}{m3}{chapter.6}% 76
+\BOOKMARK [1][-]{section.6.10}{T3}{chapter.6}% 77
+\BOOKMARK [1][-]{section.6.11}{Comparison of Sensitivities}{chapter.6}% 78
+\BOOKMARK [1][-]{section.6.12}{Sonic Boom Ground Effects}{chapter.6}% 79
+\BOOKMARK [1][-]{section.6.13}{Alternate Launch Locations}{chapter.6}% 80
+\BOOKMARK [1][-]{section.6.14}{Summary}{chapter.6}% 81
+\BOOKMARK [0][-]{chapter.7}{Conclusions}{}% 82
+\BOOKMARK [1][-]{section.7.1}{Recommendations for future work}{chapter.7}% 83
+\BOOKMARK [0][-]{chapter*.152}{Library}{}% 84
+\BOOKMARK [0][-]{appendix.A}{Propulsion Interpolation Scheme}{}% 85
+\BOOKMARK [0][-]{appendix.B}{GPOPS-2 Example - Brachistochrone Problem}{}% 86
+\BOOKMARK [0][-]{appendix.C}{CART3D Results}{}% 87
+\BOOKMARK [1][-]{section.C.1}{Engine-On Plume Check}{appendix.C}% 88
+\BOOKMARK [1][-]{section.C.2}{CART3D Results}{appendix.C}% 89
+\BOOKMARK [0][-]{appendix.D}{Initial Guesses}{}% 90
+\BOOKMARK [0][-]{appendix.E}{Optimised Trajectory Analysis}{}% 91
+\BOOKMARK [1][-]{section.E.1}{First Stage}{appendix.E}% 92
+\BOOKMARK [1][-]{section.E.2}{Performance History}{appendix.E}% 93
+\BOOKMARK [1][-]{section.E.3}{Verification}{appendix.E}% 94
+\BOOKMARK [1][-]{section.E.4}{Mesh History}{appendix.E}% 95
+\BOOKMARK [0][-]{appendix.F}{Maximum Payload-To-Orbit Trajectory With Dynamic Pressure Constraint}{}% 96
+\BOOKMARK [0][-]{appendix.G}{Trajectory Plot Comparisons}{}% 97
+\BOOKMARK [1][-]{section.G.1}{Cases With No Fly-Back}{appendix.G}% 98
+\BOOKMARK [2][-]{subsection.G.1.1}{Dynamic Pressure Variation}{section.G.1}% 99
+\BOOKMARK [2][-]{subsection.G.1.2}{Specific Impulse}{section.G.1}% 100
+\BOOKMARK [2][-]{subsection.G.1.3}{Drag}{section.G.1}% 101
+\BOOKMARK [2][-]{subsection.G.1.4}{SPARTAN Mass}{section.G.1}% 102
+\BOOKMARK [2][-]{subsection.G.1.5}{Fuel Mass}{section.G.1}% 103
+\BOOKMARK [2][-]{subsection.G.1.6}{Third Stage Mass}{section.G.1}% 104
+\BOOKMARK [2][-]{subsection.G.1.7}{Third Stage Thrust}{section.G.1}% 105
+\BOOKMARK [2][-]{subsection.G.1.8}{Third Stage Drag}{section.G.1}% 106
+\BOOKMARK [1][-]{section.G.2}{Cases With Fly-Back}{appendix.G}% 107
+\BOOKMARK [2][-]{subsection.G.2.1}{Dynamic Pressure Variation}{section.G.2}% 108
+\BOOKMARK [2][-]{subsection.G.2.2}{Specific Impulse}{section.G.2}% 109
+\BOOKMARK [2][-]{subsection.G.2.3}{Drag}{section.G.2}% 110
+\BOOKMARK [2][-]{subsection.G.2.4}{SPARTAN Mass}{section.G.2}% 111
+\BOOKMARK [2][-]{subsection.G.2.5}{Fuel Mass}{section.G.2}% 112
+\BOOKMARK [2][-]{subsection.G.2.6}{SPARTAN Viscous Drag}{section.G.2}% 113
+\BOOKMARK [2][-]{subsection.G.2.7}{Third Stage Mass}{section.G.2}% 114
+\BOOKMARK [2][-]{subsection.G.2.8}{Third Stage Thrust}{section.G.2}% 115
+\BOOKMARK [0][-]{appendix.H}{Viscous Drag Variation}{}% 116
+\BOOKMARK [0][-]{appendix.I}{Overpressure Response Studies}{}% 117

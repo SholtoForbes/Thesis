@@ -54,14 +54,10 @@ The GPOPS-2 solution to the Brachistochrone problem is shown in Figure \ref{fig:
 \end{figure}
 
 
-\chapter{Initial Guesses}
 
 
-\chapter{Trajectory results}
 
--engine data with trajectory paths
 
--mesh histories
 
 
 
@@ -107,7 +103,24 @@ The GPOPS-2 solution to the Brachistochrone problem is shown in Figure \ref{fig:
 		
 		
 		
-		\section{verification}
+		
+		\chapter{Initial Guesses}
+		
+		\chapter{Optimised Trajectory Analysis}
+		
+		
+		\section{First Stage}\label{sec:appendix_firststage}
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=1\linewidth]{../LODESTAR_FINAL/Results/mode11/FirstStageStandard}
+	\caption{}
+	\label{fig:FirstStageStandard}
+\end{figure}
+		
+		\section{Performance History}
+		
+		
+		\section{Verification}
 		\begin{figure}
 			\centering
 			\includegraphics[width=0.7\linewidth]{../LODESTAR_FINAL/Results/mode11/HamiltonianStandard}
@@ -129,12 +142,12 @@ The GPOPS-2 solution to the Brachistochrone problem is shown in Figure \ref{fig:
 			\label{fig:ForwardErrorStandard}
 		\end{figure}
 		
-		\chapter{title}
+		\section{Mesh History}
 		
 		
 \begin{figure}[th]
 \centering
-\includegraphics[width=0.8\linewidth]{../LODESTAR_FINAL/Results/mode10/MeshHistory}
+\includegraphics[width=0.8\linewidth]{../LODESTAR_FINAL/Results/mode11/MeshHistory}
 \caption{}
 \label{fig:MeshHistory}
 \end{figure}
@@ -482,3 +495,153 @@ The GPOPS-2 solution to the Brachistochrone problem is shown in Figure \ref{fig:
 
 
 
+\chapter{Viscous Drag Variation}
+
+
+The viscous drag component of the SPARTAN's aerodynamics is calculated using flat plate correlations, which require an estimation of the laminar to turbulent transition point on the body of the SPARTAN[CITEXX]. This transition point is difficult to estimate to a high degree of accuracy without prohibitively time consuming CFD, and can have a significant effect on the viscous drag of an aircraft[CITEXX].
+The viscous drag component of the SPARTAN's aerodynamics is varied, in order to assess the impact of the viscous drag model used. Optimal trajectories are calculated with the viscous drag set at levels of 20\%, 50\%, 107\% and 115\% of the baseline, which correspond to the possible viscous drag range due to transition point variation.
+
+\textcolor{red}{note: regression doesnt work for this} 
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{l c c c c c c} 
+		\hline \textbf{Trajectory Condition}
+		&vCdTwenty
+		&vCdFifty
+		&vCdStandard
+		&vCdOneHundredSeven
+		&vCdOneHundredFifteen
+		& /\%
+		\\
+		\hline \textbf{Payload to Orbit (kg)}
+		& \PayloadToOrbitvCdTwenty
+		& \PayloadToOrbitvCdFifty
+		& \PayloadToOrbitvCdStandard
+		& \PayloadToOrbitvCdOneHundredSeven
+		& \PayloadToOrbitvCdOneHundredFifteen
+		&-2.5
+		\\
+		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+		& \firstsecondSeparationAltvCdTwenty
+		& \firstsecondSeparationAltvCdFifty
+		& \firstsecondSeparationAltvCdStandard
+		& \firstsecondSeparationAltvCdOneHundredSeven
+		& \firstsecondSeparationAltvCdOneHundredFifteen
+		& -
+		\\
+		\textbf{Separation v, 1$\rightarrow$2 (m/s)}
+		& \firstsecondSeparationvvCdTwenty
+		& \firstsecondSeparationvvCdFifty
+		& \firstsecondSeparationvvCdStandard
+		& \firstsecondSeparationvvCdOneHundredSeven
+		& \firstsecondSeparationvvCdOneHundredFifteen
+		& -
+		\\
+		\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+		& \firstsecondSeparationgammavCdTwenty
+		& \firstsecondSeparationgammavCdFifty
+		& \firstsecondSeparationgammavCdStandard
+		& \firstsecondSeparationgammavCdOneHundredSeven
+		& \firstsecondSeparationgammavCdOneHundredFifteen
+		& -
+		\\
+		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+		& \secondthirdSeparationAltvCdTwenty
+		& \secondthirdSeparationAltvCdFifty
+		& \secondthirdSeparationAltvCdStandard
+		& \secondthirdSeparationAltvCdOneHundredSeven
+		& \secondthirdSeparationAltvCdOneHundredFifteen
+		& -
+		\\
+		\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+		& \secondthirdSeparationvvCdTwenty
+		& \secondthirdSeparationvvCdFifty
+		& \secondthirdSeparationvvCdStandard
+		& \secondthirdSeparationvvCdOneHundredSeven
+		& \secondthirdSeparationvvCdOneHundredFifteen
+		&-33.89
+		\\
+		\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+		& \secondthirdSeparationgammavCdTwenty
+		& \secondthirdSeparationgammavCdFifty
+		& \secondthirdSeparationgammavCdStandard
+		& \secondthirdSeparationgammavCdOneHundredSeven
+		& \secondthirdSeparationgammavCdOneHundredFifteen
+		&-0.1
+		\\
+		\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+		& \secondthirdSeparationqvCdTwenty
+		& \secondthirdSeparationqvCdFifty
+		& \secondthirdSeparationqvCdStandard
+		& \secondthirdSeparationqvCdOneHundredSeven
+		& \secondthirdSeparationqvCdOneHundredFifteen
+		&-0.16
+		\\
+		\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+		& \secondthirdSeparationLDvCdTwenty
+		& \secondthirdSeparationLDvCdFifty
+		& \secondthirdSeparationLDvCdStandard
+		& \secondthirdSeparationLDvCdOneHundredSeven
+		& \secondthirdSeparationLDvCdOneHundredFifteen
+		& -
+		\\
+		\textbf{2$^{nd}$ Stage Flight Time (s)}
+		& \secondFlightTimevCdTwenty
+		& \secondFlightTimevCdFifty
+		& \secondFlightTimevCdStandard
+		& \secondFlightTimevCdOneHundredSeven
+		& \secondFlightTimevCdOneHundredFifteen
+		& -
+		\\
+		\textbf{2$^{nd}$ Stage Return Fuel (kg)}
+		& \returnFuelvCdTwenty
+		& \returnFuelvCdFifty
+		& \returnFuelvCdStandard
+		& \returnFuelvCdOneHundredSeven
+		& \returnFuelvCdOneHundredFifteen
+		& -
+		\\
+		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+		& \thirdqOverFivevCdTwenty
+		& \thirdqOverFivevCdFifty
+		& \thirdqOverFivevCdStandard
+		& \thirdqOverFivevCdOneHundredSeven
+		& \thirdqOverFivevCdOneHundredFifteen
+		&-0.22
+		\\
+		\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
+		& \thirdmaxAoAvCdTwenty
+		& \thirdmaxAoAvCdFifty
+		& \thirdmaxAoAvCdStandard
+		& \thirdmaxAoAvCdOneHundredSeven
+		& \thirdmaxAoAvCdOneHundredFifteen
+		& -
+		\\
+		\textbf{3$^{rd}$ Stage final v (m/s)}
+		& \thirdcircvvCdTwenty
+		& \thirdcircvvCdFifty
+		& \thirdcircvvCdStandard
+		& \thirdcircvvCdOneHundredSeven
+		& \thirdcircvvCdOneHundredFifteen
+		&-47.52
+		\\
+		\textbf{3$^{rd}$ Stage final m (kg)}
+		& \thirdcircmvCdTwenty
+		& \thirdcircmvCdFifty
+		& \thirdcircmvCdStandard
+		& \thirdcircmvCdOneHundredSeven
+		& \thirdcircmvCdOneHundredFifteen
+		& -
+		\\
+		\hline 
+	\end{tabular} 
+\end{table} 
+
+\chapter{Overpressure Response Studies}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.6\linewidth]{figures/6_FlyBack/OverPressureResponse}
+	\caption{\textcolor{red}{It will be make clear on this figure which areas are flying over land. }}
+	\label{fig:OverPressureResponse}
+\end{figure}
