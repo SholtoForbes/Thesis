@@ -67,21 +67,21 @@
 \BOOKMARK [1][-]{section.6.1}{Combined SPARTAN Ascent-Descent \046 Third Stage}{chapter.6}% 67
 \BOOKMARK [1][-]{section.6.2}{Ascent Trajectory}{chapter.6}% 68
 \BOOKMARK [1][-]{section.6.3}{Fly-Back Trajectory}{chapter.6}% 69
-\BOOKMARK [2][-]{subsection.6.3.1}{Design Sensitivity Analysis}{section.6.3}% 70
-\BOOKMARK [1][-]{section.6.4}{dynamic pressure}{chapter.6}% 71
-\BOOKMARK [1][-]{section.6.5}{Isp}{chapter.6}% 72
-\BOOKMARK [1][-]{section.6.6}{Cd}{chapter.6}% 73
-\BOOKMARK [1][-]{section.6.7}{m SPARTAN}{chapter.6}% 74
-\BOOKMARK [1][-]{section.6.8}{m Fuel}{chapter.6}% 75
-\BOOKMARK [1][-]{section.6.9}{m3}{chapter.6}% 76
-\BOOKMARK [1][-]{section.6.10}{T3}{chapter.6}% 77
-\BOOKMARK [1][-]{section.6.11}{Comparison of Sensitivities}{chapter.6}% 78
-\BOOKMARK [1][-]{section.6.12}{Sonic Boom Ground Effects}{chapter.6}% 79
-\BOOKMARK [1][-]{section.6.13}{Alternate Launch Locations}{chapter.6}% 80
-\BOOKMARK [1][-]{section.6.14}{Summary}{chapter.6}% 81
+\BOOKMARK [1][-]{section.6.4}{Design Sensitivity Analysis}{chapter.6}% 70
+\BOOKMARK [2][-]{subsection.6.4.1}{dynamic pressure}{section.6.4}% 71
+\BOOKMARK [2][-]{subsection.6.4.2}{Isp}{section.6.4}% 72
+\BOOKMARK [2][-]{subsection.6.4.3}{Cd}{section.6.4}% 73
+\BOOKMARK [2][-]{subsection.6.4.4}{m SPARTAN}{section.6.4}% 74
+\BOOKMARK [2][-]{subsection.6.4.5}{m Fuel}{section.6.4}% 75
+\BOOKMARK [2][-]{subsection.6.4.6}{m3}{section.6.4}% 76
+\BOOKMARK [2][-]{subsection.6.4.7}{T3}{section.6.4}% 77
+\BOOKMARK [2][-]{subsection.6.4.8}{Comparison of Sensitivities}{section.6.4}% 78
+\BOOKMARK [1][-]{section.6.5}{Sonic Boom Ground Effects}{chapter.6}% 79
+\BOOKMARK [1][-]{section.6.6}{Alternate Launch Locations}{chapter.6}% 80
+\BOOKMARK [1][-]{section.6.7}{Summary}{chapter.6}% 81
 \BOOKMARK [0][-]{chapter.7}{Conclusions}{}% 82
 \BOOKMARK [1][-]{section.7.1}{Recommendations for future work}{chapter.7}% 83
-\BOOKMARK [0][-]{chapter*.152}{Library}{}% 84
+\BOOKMARK [0][-]{chapter*.151}{Library}{}% 84
 \BOOKMARK [0][-]{appendix.A}{Propulsion Interpolation Scheme}{}% 85
 \BOOKMARK [0][-]{appendix.B}{GPOPS-2 Example - Brachistochrone Problem}{}% 86
 \BOOKMARK [0][-]{appendix.C}{CART3D Results}{}% 87
@@ -110,8 +110,7 @@
 \BOOKMARK [2][-]{subsection.G.2.3}{Drag}{section.G.2}% 110
 \BOOKMARK [2][-]{subsection.G.2.4}{SPARTAN Mass}{section.G.2}% 111
 \BOOKMARK [2][-]{subsection.G.2.5}{Fuel Mass}{section.G.2}% 112
-\BOOKMARK [2][-]{subsection.G.2.6}{SPARTAN Viscous Drag}{section.G.2}% 113
-\BOOKMARK [2][-]{subsection.G.2.7}{Third Stage Mass}{section.G.2}% 114
-\BOOKMARK [2][-]{subsection.G.2.8}{Third Stage Thrust}{section.G.2}% 115
-\BOOKMARK [0][-]{appendix.H}{Viscous Drag Variation}{}% 116
-\BOOKMARK [0][-]{appendix.I}{Overpressure Response Studies}{}% 117
+\BOOKMARK [2][-]{subsection.G.2.6}{Third Stage Mass}{section.G.2}% 113
+\BOOKMARK [2][-]{subsection.G.2.7}{Third Stage Thrust}{section.G.2}% 114
+\BOOKMARK [0][-]{appendix.H}{Viscous Drag Variation}{}% 115
+\BOOKMARK [0][-]{appendix.I}{Overpressure Response Studies}{}% 116
