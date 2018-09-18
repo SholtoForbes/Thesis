@@ -2,6 +2,8 @@
 
 \cleardoublepage
 \chapter{Optimised Trajectory Including Fly-Back}\label{chapter:Flyback}
+\textcolor{red}{exergy can be affected by the amount of fuel (as its variable), and keep this is mind during discussion. -i dont think using specific exergy is  useful though}
+
 
 This chapter presents the maximum payload-to-orbit optimised trajectory of the rocket-scramjet-rocket launch system, including the fly-back of the SPARTAN. 
  Returning the SPARTAN for landing at the initial launch site allows for rapid refurbishment and re-use, and is one of the primary enabling factors in the cost efficient operation of the launch system. 
@@ -15,11 +17,18 @@ This chapter includes a sensitivity analysis, with the same design parameters va
 	\centering
 \begin{tabular}{l c } 
 	\hline \textbf{Trajectory Condition}
-	& Standard
+	&Standard
 
 	\\
 	\hline \textbf{Payload to Orbit (kg)}
-	& \PayloadToOrbitStandard
+	& \textbf{\PayloadToOrbitStandard}
+	\\
+	\textbf{Total $\eta_{exergy}$ (\%)}
+	& \textbf{\totalExergyEffStandard}
+	\\
+	\hline 
+	\textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
+	& \textbf{\firstExergyEffStandard}
 	\\
 	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 	& \firstsecondSeparationAltStandard
@@ -29,6 +38,10 @@ This chapter includes a sensitivity analysis, with the same design parameters va
 	\\
 	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
 	& \firstsecondSeparationgammaStandard
+	\\
+	\hline 
+	\textbf{2$^{nd}$ Stage $\eta_{exergy}$ (\%)}
+	& \textbf{\secondExergyEffStandard}
 	\\
 	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 	& \secondthirdSeparationAltStandard
@@ -48,6 +61,10 @@ This chapter includes a sensitivity analysis, with the same design parameters va
 	\textbf{2$^{nd}$ Stage Flight Time (s)}
 	& \secondFlightTimeStandard
 	\\
+	\hline 
+	\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
+	& \textbf{\thirddExergyEffStandard}
+	\\
 	\textbf{2$^{nd}$ Stage Return Fuel (kg)}
 	& \returnFuelStandard
 	\\
@@ -57,11 +74,8 @@ This chapter includes a sensitivity analysis, with the same design parameters va
 	\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
 	& \thirdmaxAoAStandard
 	\\
-	\textbf{3$^{rd}$ Stage final v (m/s)}
-	& \thirdcircvStandard
-	\\
-	\textbf{3$^{rd}$ Stage final m (kg)}
-	& \thirdcircmStandard
+	\textbf{3$^{rd}$ Stage Fuel Mass (kg)}
+	& \thirdmFuelStandard
 	\\
 	\hline 
 \end{tabular} 

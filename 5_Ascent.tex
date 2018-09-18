@@ -32,12 +32,19 @@ The following trajectories are developed:
 These case studies allow the benefits of flying an optimised trajectory to be quantified, and enable the key design parameters of the SPARTAN and third stage rocket to be characterised. Comparisons between the cases allows for the relative impact of each design parameter on the payload-to-orbit, as well as on the performance of each individual stage, to be assessed. 
 In order to effectively compare the performance of the stages of the launch system, exergy analysis is utilised. Exergy expresses how much useful work is available to a system, and exergy efficiency quantifies how well a system utilises the available work. Exergy is lost due to inefficiencies within a launch system. These inefficiencies arise from many sources, including the energy being lost due to the inability of the propulsion system to convert all of the combustion energy to thrust, the energy which must be used to overcome drag, and energy being lost due to manoeuvring. Exergy efficiency is an important parameter for analysing launch vehicles, allowing the relative efficiencies of each stage to be compared when the design or trajectory of a launch system is varied[CITEXX]. The exergy efficiency of a stage of a launch system is expressed as the fraction of the fuel combustion energy which is turned into kinetic and potential energy during flight:
 \begin{equation}
-\eta_{exergy} = 1 - \frac{\Delta m_{fuel}H_{fuel} - \Delta KE - \int mg dz}{\Delta m_{fuel}H_{fuel}},
+\eta_{exergy,stage} = 1 - \frac{\Delta m_{fuel}H_{fuel} - \Delta KE - \int mg dz}{\Delta m_{fuel}H_{fuel}},
 \end{equation}
 where $H_{fuel}$ is the heating value of the fuel, $KE$ is the change in the kinetic energy of the stage, and $\int mg dz$ is the change in potential energy of the stage over its trajectory.
 \nomenclature{$H$}{Heating Value (J/kg)}
 \nomenclature{$KE$}{Kinetic Energy (J)}
 \nomenclature{$PE$}{Potential Energy (J)}
+This exergy efficiency expresses how efficiently each stage utilises its available fuel over each individual trajectory, but does not account for the effects of the unused mass of each stage on the performance of the launch system. The total exergy efficiency of the launch system is calculated as the fraction of the total available energy which goes directly into placing the payload into orbit:
+\begin{equation}
+\eta_{exergy} = \frac{\Delta KE_{payload} + \Delta PE_{payload}}{\sum_{stage} \Delta m_{fuel}H_{fuel}}.
+\end{equation}
+This total exergy efficiency expresses how efficiently the launch system as a whole is able to accelerate the payload to orbit. 
+
+\textcolor{red}{need to mention that the exergy can be affected by the amount of fuel (as its variable), and kee this is mind during discussion. -i dont think using specific exergy is  useful though}
 
 \section{Case 1: Constant Dynamic Pressure Trajectory}
 \begin{figure}[ht]
@@ -54,15 +61,19 @@ The aerodynamics and design of the launch system have been updated in this study
 \begin{table}[ht]
 	\centering
 	
-	
 	\begin{tabular}{l c } 
 		\hline \textbf{Trajectory Condition}
-		&Constq
+		& Constq
+
 		\\
 		\hline \textbf{Payload to Orbit (kg)}
 		& \textbf{\PayloadToOrbitConstq}
 		\\
-		\hline \textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
+		\textbf{Total $\eta_{exergy}$ (\%)}
+		& \textbf{\totalExergyEffConstq}
+		\\
+		\hline 
+		\textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
 		& \textbf{\firstExergyEffConstq}
 		\\
 		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
@@ -111,6 +122,7 @@ The aerodynamics and design of the launch system have been updated in this study
 		\\
 		\hline 
 	\end{tabular} 
+	
 	\caption{}
 	\label{tab:constqsummary}
 \end{table}
@@ -165,7 +177,6 @@ The exergy efficiency of the third stage rocket over its trajectory is significa
 
 \section{Case 2: Optimised Ascent Trajectory}\label{sec:optimisednoreturn}
 
-\textcolor{red}{compare exergy efficiency of stage with altitude raising manoeuvre vs without for both second and third stages (second should be higher but third lower?)}
 
 This section presents the maximum payload-to-orbit trajectory for the rocket-scramjet-rocket launch system. 
 The optimal trajectory shape for a $q=$50kPa limited, maximum payload-to-orbit trajectory is shown in Figure \ref{fig:GroundTrackStandardNoReturn} with key results summarised in Table \ref{tab:summaryStandardNoReturn}. The maximum payload-to-orbit trajectory shape involves flying the SPARTAN away from its maximum dynamic pressure at multiple points along the trajectory, to accommodate altitude raising manoeuvres. These manoeuvres serve either to increase the net specific impulse of the SPARTAN, or to trade-off the efficiency of the SPARTAN in order to increase the efficiency of the first and third stages. 
@@ -196,63 +207,67 @@ These results indicate that the fuel mass utilised by the first stage has a dist
 
 \begin{table}[ht]
 	\centering
-	\begin{tabular}{l c } 
-		\hline \textbf{Trajectory Condition}
-		&Standard
-	
-		\\
-		\hline \textbf{Payload to Orbit (kg)}
-		& \textbf{\PayloadToOrbitStandardNoReturn}
-		\\
-		\hline \textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
-		& \textbf{\firstExergyEffStandardNoReturn}
-		\\
-		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
-		& \firstsecondSeparationAltStandardNoReturn
-		\\
-		\textbf{Separation v, 1$\rightarrow$2 (m/s)}
-		& \firstsecondSeparationvStandardNoReturn
-		\\
-		\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
-		& \firstsecondSeparationgammaStandardNoReturn
-		\\
-		\hline 
-		\textbf{2$^{nd}$ Stage $\eta_{exergy}$ (\%)}
-		& \textbf{\secondExergyEffStandardNoReturn}
-		\\
-		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
-		& \secondthirdSeparationAltStandardNoReturn
-		\\
-		\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
-		& \secondthirdSeparationvStandardNoReturn
-		\\
-		\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
-		& \secondthirdSeparationgammaStandardNoReturn
-		\\
-		\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
-		& \secondthirdSeparationqStandardNoReturn
-		\\
-		\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
-		& \secondthirdSeparationLDStandardNoReturn
-		\\
-		\textbf{2$^{nd}$ Stage Flight Time (s)}
-		& \secondFlightTimeStandardNoReturn
-		\\
-		\hline 
-		\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
-		& \textbf{\thirddExergyEffStandardNoReturn}
-		\\
-		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
-		& \thirdqOverFiveStandardNoReturn
-		\\
-		\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
-		& \thirdmaxAoAStandardNoReturn
-		\\
-		\textbf{3$^{rd}$ Stage Fuel Mass (kg)}
-		& \thirdmFuelStandardNoReturn
-		\\
-		\hline 
-	\end{tabular} 
+\begin{tabular}{l c } 
+	\hline \textbf{Trajectory Condition}
+	& StandardNoReturn
+
+	\\
+	\hline \textbf{Payload to Orbit (kg)}
+	& \textbf{\PayloadToOrbitStandardNoReturn}
+	\\
+	\textbf{Total $\eta_{exergy}$ (\%)}
+	& \textbf{\totalExergyEffStandardNoReturn}
+	\\
+	\hline 
+	\textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
+	& \textbf{\firstExergyEffStandardNoReturn}
+	\\
+	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+	& \firstsecondSeparationAltStandardNoReturn
+	\\
+	\textbf{Separation v, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationvStandardNoReturn
+	\\
+	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationgammaStandardNoReturn
+	\\
+	\hline 
+	\textbf{2$^{nd}$ Stage $\eta_{exergy}$ (\%)}
+	& \textbf{\secondExergyEffStandardNoReturn}
+	\\
+	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+	& \secondthirdSeparationAltStandardNoReturn
+	\\
+	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+	& \secondthirdSeparationvStandardNoReturn
+	\\
+	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+	& \secondthirdSeparationgammaStandardNoReturn
+	\\
+	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+	& \secondthirdSeparationqStandardNoReturn
+	\\
+	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+	& \secondthirdSeparationLDStandardNoReturn
+	\\
+	\textbf{2$^{nd}$ Stage Flight Time (s)}
+	& \secondFlightTimeStandardNoReturn
+	\\
+	\hline 
+	\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
+	& \textbf{\thirddExergyEffStandardNoReturn}
+	\\
+	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+	& \thirdqOverFiveStandardNoReturn
+	\\
+	\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
+	& \thirdmaxAoAStandardNoReturn
+	\\
+	\textbf{3$^{rd}$ Stage Fuel Mass (kg)}
+	& \thirdmFuelStandardNoReturn
+	\\
+	\hline 
+\end{tabular} 
 	\caption{A summary of key results from the maximum payload-to-orbit trajectory (Case 2).}
 	\label{tab:summaryStandardNoReturn}
 \end{table}
@@ -276,9 +291,9 @@ After the initial deviation from the maximum dynamic pressure, the SPARTAN retur
 At 122.5 seconds, the altitude of the trajectory is again raised, and the dynamic pressure decreased, to a minimum of 35.6kPa. In this region the net specific impulse of the SPARTAN is relatively homogeneous with respect to changes in dynamic pressure. This homogeneous region can be observed in the specific impulse of the C-REST engines in Figure \ref{fig:IspStandard}, between inlet Mach number (M1) values of 6 and 7, and in Figure \ref{fig:NetIspStandardNoReturn}, in the Mach 7 and 8 plots of net specific impulse. This homogeneity means that the variation in engine performance with flight conditions is small and that flying at the maximum dynamic pressure in this region does not maximise the specific impulse from the C-REST engines. Figure \ref{fig:NetIspStandardNoReturn} shows that while the optimised trajectory differs significantly from a constant dynamic pressure trajectory, both achieve similar net specific impulses, with the exception of the initial trajectory conditions at Mach 5, where the efficiency of the SPARTAN is traded for first stage rocket performance. 
 
 
-\ref{sec:Appendix_qconst} details a maximum payload-to-orbit trajectory in which the trajectory is constrained to 50kPa between Mach 6-8, to prevent the altitude raising manoeuvre from taking place. 
-Slight variations in the stage trade-offs are observed in the optimised trajectory, compared to the constrained trajectory, with a slightly lower SPARTAN-third stage separation point. However these trade-offs
-only increase the total efficiency of the launch system from XX to XX and the payload-to-orbit benefits of this altitude raising manoeuvre are small. 
+Appendix \ref{sec:Appendix_qconst} details a maximum payload-to-orbit trajectory in which the trajectory is constrained to 50kPa between Mach 6-8, to prevent the altitude raising manoeuvre from taking place, for comparison. 
+The altitude raising manoeuvre
+increases the combined total efficiency launch system from \totalExergyEffqconstrained \% to \totalExergyEffStandardNoReturn \% (calculated including stage separations). This is a relatively minor variation, and the payload-to-orbit benefits of this altitude raising manoeuvre are correspondingly small. 
 The optimised trajectory exhibits a payload-to-orbit increase of 0.4kg compared to the trajectory constrained to 50kPa between Mach 6-8, a difference of only 0.2\%.
 However, it is important to note that, while its benefits are small, the altitude raising manoeuvre is consistently observed in every maximum payload-to-orbit optimised trajectory. 
 Also, though its benefits to payload-to-orbit are small, this altitude raising manoeuvre is significant as it reduces the heating and structural loading on the SPARTAN, though it is beyond the scope of this study to quantify these benefits. 
@@ -311,8 +326,8 @@ At high Mach numbers, flight in a lower dynamic pressure environment results in 
 	\label{fig:ThirdStageStandardNoReturn}
 \end{figure}
 The larger scramjet stage pull-up assists the rocket in manoeuvring to exoatmospheric altitude by increasing the altitude and angle at separation by utilising the increased L/D ratio and manoeuvrability of the scramjet vehicle. The increase in release angle, to the optimal angle of \secondthirdSeparationgammaStandardNoReturn$^\circ$, significantly reduces the turning that is required by the rocket as evident from comparing Fig \ref{fig:ThirdStageConstq} and \ref{fig:ThirdStageStandardNoReturn}. 
-Overall, the altitude raising manoeuvres which the SPARTAN performs result in a decrease in the exergy efficiency of the SPARTAN to \secondExergyEffStandardNoReturn \%, a total decrease of 1.318\% compared to the SPARTAN flying at a constant dynamic pressure. However, the optimised trajectory drastically increases the exergy efficiency of the third stage, to \thirddExergyEffStandardNoReturn \%, an overall increase of 8.594 \% compared to the third stage released from the SPARTAN flying a constant dynamic pressure trajectory, so that the third stage is utilising ts available energy 2.96 times as efficiently.  
-
+Overall, the altitude raising manoeuvres which the SPARTAN performs result in a decrease in the exergy efficiency of the SPARTAN to \secondExergyEffStandardNoReturn \%, a total decrease of 1.318\% compared to the SPARTAN flying at a constant dynamic pressure. However, the optimised trajectory drastically increases the exergy efficiency of the third stage, to \thirddExergyEffStandardNoReturn \%, an overall increase of 6.72 \% compared to the third stage released from the SPARTAN flying a constant dynamic pressure trajectory, so that the third stage is utilising its available energy 1.61 times as efficiently.  
+This leads to the total exergy efficiency of the launch system increasing from \totalExergyEffConstq \% to \totalExergyEffStandardNoReturn \%. 
 
 The trajectory of the third stage rocket after release from an optimised scramjet trajectory is shown in Figure \ref{fig:ThirdStageStandardNoReturn}. Release at a higher, more optimal angle reduces the aerodynamic moment, in turn reducing the necessary thrust vector angle so that the thrust vector limit is not reached. The third stage rocket is released at a high trajectory angle, and continuously gains altitude, avoiding the close-to-horizontal flight required by the fixed dynamic pressure release (Case 1).
 Due to the higher altitude and release angle, the third stage rocket is released at a lower dynamic pressure, \secondthirdSeparationqCdStandardNoReturn kPa compared to \secondthirdSeparationqConstq kPa, and spends much less time flying in a high dynamic pressure environment, \thirdqOverFiveStandard s at over 5kPa dynamic pressure rather than \thirdqOverFiveConstq s. 
@@ -329,8 +344,6 @@ stage vehicle designs.
 
 \section{Sensitivity Analysis}\label{sec:sensitivityNoReturn}
 
-\textcolor{red}{
-	-i need to be careful how i analyse the exergy efficiency }
 
 A sensitivity analysis is conducted, in which selected design parameters of the launch system are varied, and the effects on the optimised maximum payload-to-orbit trajectory of the launch system are investigated. Appendix \ref{sec:Appendix_trajectorycomparisons} shows comparison plots of the second and third stage trajectories for each parameter variation study, however, the first stage rocket trajectories are very similar and are not shown graphically. Key results including performance factors of each stage and separation conditions are summarised within this section.
 This study is performed in order to determine the relative importance of the design parameters on the efficiency of the system, as well as investigating how the maximum payload-to-orbit trajectory changes as the performance of the launch system is varied. The investigation of the key design parameters of the launch system provides a metric which can be used to quantify the relative impact of vehicle design parameters. Likewise, the optimal trajectory variation can be used to investigate the performance trade-offs between the stages. 
@@ -357,156 +370,164 @@ This small variation in velocity is despite the increase in air density and decr
 
 \begin{table}[ht]
 	\centering
- \begin{tabular}{l c c c c c c} 
- 	\hline \textbf{Trajectory Condition}
- 	&q40
- 	&q45
- 	&q50
- 	&q55
- 	&q60
- 	& /\%
- 	\\
- 	\hline \textbf{Payload to Orbit (kg)}
- 	& \textbf{\PayloadToOrbitqFortyNoReturn}
- 	& \textbf{\PayloadToOrbitqFortyFiveNoReturn}
- 	& \textbf{\PayloadToOrbitqStandardNoReturn}
- 	& \textbf{\PayloadToOrbitqFiftyFiveNoReturn}
- 	& \textbf{\PayloadToOrbitqSixtyNoReturn}
- 	&\textbf{0.4}
- 	\\
- 	\textbf{Payload Variation (\%)}
- 	& \PayloadToOrbitqFortyNoReturn
- 	& \PayloadToOrbitqFortyFiveNoReturn
- 	& \PayloadToOrbitqStandardNoReturn
- 	& \PayloadToOrbitqFiftyFiveNoReturn
- 	& \PayloadToOrbitqSixtyNoReturn
- 	&-0.2
- 	\\
- 	\hline 
- 	\textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
- 	& \textbf{\firstExergyEffqFortyNoReturn}
- 	& \textbf{\firstExergyEffqFortyFiveNoReturn}
- 	& \textbf{\firstExergyEffqStandardNoReturn}
- 	& \textbf{\firstExergyEffqFiftyFiveNoReturn}
- 	& \textbf{\firstExergyEffqSixtyNoReturn}
- 	& \textbf{-0.003}
- 	\\
- 	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
- 	& \firstsecondSeparationAltqFortyNoReturn
- 	& \firstsecondSeparationAltqFortyFiveNoReturn
- 	& \firstsecondSeparationAltqStandardNoReturn
- 	& \firstsecondSeparationAltqFiftyFiveNoReturn
- 	& \firstsecondSeparationAltqSixtyNoReturn
- 	&-0.06
- 	\\
- 	\textbf{Separation v, 1$\rightarrow$2 (m/s)}
- 	& \firstsecondSeparationvqFortyNoReturn
- 	& \firstsecondSeparationvqFortyFiveNoReturn
- 	& \firstsecondSeparationvqStandardNoReturn
- 	& \firstsecondSeparationvqFiftyFiveNoReturn
- 	& \firstsecondSeparationvqSixtyNoReturn
- 	& -
- 	\\
- 	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
- 	& \firstsecondSeparationgammaqFortyNoReturn
- 	& \firstsecondSeparationgammaqFortyFiveNoReturn
- 	& \firstsecondSeparationgammaqStandardNoReturn
- 	& \firstsecondSeparationgammaqFiftyFiveNoReturn
- 	& \firstsecondSeparationgammaqSixtyNoReturn
- 	&-0.13
- 	\\
- 	\hline 
- 	\textbf{2$^{nd}$ Stage $\eta_{exergy}$ (\%)}
- 	& \textbf{\secondExergyEffqFortyNoReturn}
- 	& \textbf{\secondExergyEffqFortyFiveNoReturn}
- 	& \textbf{\secondExergyEffqStandardNoReturn}
- 	& \textbf{\secondExergyEffqFiftyFiveNoReturn}
- 	& \textbf{\secondExergyEffqSixtyNoReturn}
- 	& \textbf{0.02}
- 	\\
- 	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
- 	& \secondthirdSeparationAltqFortyNoReturn
- 	& \secondthirdSeparationAltqFortyFiveNoReturn
- 	& \secondthirdSeparationAltqStandardNoReturn
- 	& \secondthirdSeparationAltqFiftyFiveNoReturn
- 	& \secondthirdSeparationAltqSixtyNoReturn
- 	&-0.02
- 	\\
- 	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
- 	& \secondthirdSeparationvqFortyNoReturn
- 	& \secondthirdSeparationvqFortyFiveNoReturn
- 	& \secondthirdSeparationvqStandardNoReturn
- 	& \secondthirdSeparationvqFiftyFiveNoReturn
- 	& \secondthirdSeparationvqSixtyNoReturn
- 	&1.56
- 	\\
- 	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
- 	& \secondthirdSeparationgammaqFortyNoReturn
- 	& \secondthirdSeparationgammaqFortyFiveNoReturn
- 	& \secondthirdSeparationgammaqStandardNoReturn
- 	& \secondthirdSeparationgammaqFiftyFiveNoReturn
- 	& \secondthirdSeparationgammaqSixtyNoReturn
- 	&0.03
- 	\\
- 	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
- 	& \secondthirdSeparationqqFortyNoReturn
- 	& \secondthirdSeparationqqFortyFiveNoReturn
- 	& \secondthirdSeparationqqStandardNoReturn
- 	& \secondthirdSeparationqqFiftyFiveNoReturn
- 	& \secondthirdSeparationqqSixtyNoReturn
- 	&0.04
- 	\\
- 	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
- 	& \secondthirdSeparationLDqFortyNoReturn
- 	& \secondthirdSeparationLDqFortyFiveNoReturn
- 	& \secondthirdSeparationLDqStandardNoReturn
- 	& \secondthirdSeparationLDqFiftyFiveNoReturn
- 	& \secondthirdSeparationLDqSixtyNoReturn
- 	& -
- 	\\
- 	\textbf{2$^{nd}$ Stage Flight Time (s)}
- 	& \secondFlightTimeqFortyNoReturn
- 	& \secondFlightTimeqFortyFiveNoReturn
- 	& \secondFlightTimeqStandardNoReturn
- 	& \secondFlightTimeqFiftyFiveNoReturn
- 	& \secondFlightTimeqSixtyNoReturn
- 	&-3.62
- 	\\
- 	\hline 
- 	\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
- 	& \textbf{\thirddExergyEffqFortyNoReturn}
- 	& \textbf{\thirddExergyEffqFortyFiveNoReturn}
- 	& \textbf{\thirddExergyEffqStandardNoReturn}
- 	& \textbf{\thirddExergyEffqFiftyFiveNoReturn}
- 	& \textbf{\thirddExergyEffqSixtyNoReturn}
- 	& -
- 	\\
- 	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
- 	& \thirdqOverFiveqFortyNoReturn
- 	& \thirdqOverFiveqFortyFiveNoReturn
- 	& \thirdqOverFiveqStandardNoReturn
- 	& \thirdqOverFiveqFiftyFiveNoReturn
- 	& \thirdqOverFiveqSixtyNoReturn
- 	& -
- 	\\
- 	\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
- 	& \thirdmaxAoAqFortyNoReturn
- 	& \thirdmaxAoAqFortyFiveNoReturn
- 	& \thirdmaxAoAqStandardNoReturn
- 	& \thirdmaxAoAqFiftyFiveNoReturn
- 	& \thirdmaxAoAqSixtyNoReturn
- 	&0
- 	\\
- 	\textbf{3$^{rd}$ Stage Fuel Mass (kg)}
- 	& \thirdmFuelqFortyNoReturn
- 	& \thirdmFuelqFortyFiveNoReturn
- 	& \thirdmFuelqStandardNoReturn
- 	& \thirdmFuelqFiftyFiveNoReturn
- 	& \thirdmFuelqSixtyNoReturn
- 	&-0.37
- 	\\
- 	\hline 
- \end{tabular} 
+\begin{tabular}{l c c c c c c} 
+	\hline \textbf{Trajectory Condition}
+	&q40
+	&q45
+	&q
+	&q55
+	&q60
+	& /\%
+	\\
+	\hline \textbf{Payload to Orbit (kg)}
+	& \textbf{\PayloadToOrbitqFortyNoReturn}
+	& \textbf{\PayloadToOrbitqFortyFiveNoReturn}
+	& \textbf{\PayloadToOrbitqStandardNoReturn}
+	& \textbf{\PayloadToOrbitqFiftyFiveNoReturn}
+	& \textbf{\PayloadToOrbitqSixtyNoReturn}
+	&\textbf{0.4}
+	\\
+	\textbf{Payload Variation (\%)}
+	& \PayloadVarqFortyNoReturn
+	& \PayloadVarqFortyFiveNoReturn
+	& \PayloadVarqStandardNoReturn
+	& \PayloadVarqFiftyFiveNoReturn
+	& \PayloadVarqSixtyNoReturn
+	&0.2
+	\\
+	\textbf{Total $\eta_{exergy}$ (\%)}
+	& \textbf{\totalExergyEffqFortyNoReturn}
+	& \textbf{\totalExergyEffqFortyFiveNoReturn}
+	& \textbf{\totalExergyEffqStandardNoReturn}
+	& \textbf{\totalExergyEffqFiftyFiveNoReturn}
+	& \textbf{\totalExergyEffqSixtyNoReturn}
+	& \textbf{3e-05}
+	\\
+	\hline 
+	\textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
+	& \textbf{\firstExergyEffqFortyNoReturn}
+	& \textbf{\firstExergyEffqFortyFiveNoReturn}
+	& \textbf{\firstExergyEffqStandardNoReturn}
+	& \textbf{\firstExergyEffqFiftyFiveNoReturn}
+	& \textbf{\firstExergyEffqSixtyNoReturn}
+	& \textbf{-0.003}
+	\\
+	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+	& \firstsecondSeparationAltqFortyNoReturn
+	& \firstsecondSeparationAltqFortyFiveNoReturn
+	& \firstsecondSeparationAltqStandardNoReturn
+	& \firstsecondSeparationAltqFiftyFiveNoReturn
+	& \firstsecondSeparationAltqSixtyNoReturn
+	&-0.06
+	\\
+	\textbf{Separation v, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationvqFortyNoReturn
+	& \firstsecondSeparationvqFortyFiveNoReturn
+	& \firstsecondSeparationvqStandardNoReturn
+	& \firstsecondSeparationvqFiftyFiveNoReturn
+	& \firstsecondSeparationvqSixtyNoReturn
+	& -
+	\\
+	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationgammaqFortyNoReturn
+	& \firstsecondSeparationgammaqFortyFiveNoReturn
+	& \firstsecondSeparationgammaqStandardNoReturn
+	& \firstsecondSeparationgammaqFiftyFiveNoReturn
+	& \firstsecondSeparationgammaqSixtyNoReturn
+	&-0.13
+	\\
+	\hline 
+	\textbf{2$^{nd}$ Stage $\eta_{exergy}$ (\%)}
+	& \textbf{\secondExergyEffqFortyNoReturn}
+	& \textbf{\secondExergyEffqFortyFiveNoReturn}
+	& \textbf{\secondExergyEffqStandardNoReturn}
+	& \textbf{\secondExergyEffqFiftyFiveNoReturn}
+	& \textbf{\secondExergyEffqSixtyNoReturn}
+	& \textbf{0.02}
+	\\
+	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+	& \secondthirdSeparationAltqFortyNoReturn
+	& \secondthirdSeparationAltqFortyFiveNoReturn
+	& \secondthirdSeparationAltqStandardNoReturn
+	& \secondthirdSeparationAltqFiftyFiveNoReturn
+	& \secondthirdSeparationAltqSixtyNoReturn
+	&-0.02
+	\\
+	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+	& \secondthirdSeparationvqFortyNoReturn
+	& \secondthirdSeparationvqFortyFiveNoReturn
+	& \secondthirdSeparationvqStandardNoReturn
+	& \secondthirdSeparationvqFiftyFiveNoReturn
+	& \secondthirdSeparationvqSixtyNoReturn
+	&1.56
+	\\
+	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+	& \secondthirdSeparationgammaqFortyNoReturn
+	& \secondthirdSeparationgammaqFortyFiveNoReturn
+	& \secondthirdSeparationgammaqStandardNoReturn
+	& \secondthirdSeparationgammaqFiftyFiveNoReturn
+	& \secondthirdSeparationgammaqSixtyNoReturn
+	&0.03
+	\\
+	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+	& \secondthirdSeparationqqFortyNoReturn
+	& \secondthirdSeparationqqFortyFiveNoReturn
+	& \secondthirdSeparationqqStandardNoReturn
+	& \secondthirdSeparationqqFiftyFiveNoReturn
+	& \secondthirdSeparationqqSixtyNoReturn
+	&0.04
+	\\
+	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+	& \secondthirdSeparationLDqFortyNoReturn
+	& \secondthirdSeparationLDqFortyFiveNoReturn
+	& \secondthirdSeparationLDqStandardNoReturn
+	& \secondthirdSeparationLDqFiftyFiveNoReturn
+	& \secondthirdSeparationLDqSixtyNoReturn
+	& -
+	\\
+	\textbf{2$^{nd}$ Stage Flight Time (s)}
+	& \secondFlightTimeqFortyNoReturn
+	& \secondFlightTimeqFortyFiveNoReturn
+	& \secondFlightTimeqStandardNoReturn
+	& \secondFlightTimeqFiftyFiveNoReturn
+	& \secondFlightTimeqSixtyNoReturn
+	&-3.62
+	\\
+	\hline 
+	\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
+	& \textbf{\thirddExergyEffqFortyNoReturn}
+	& \textbf{\thirddExergyEffqFortyFiveNoReturn}
+	& \textbf{\thirddExergyEffqStandardNoReturn}
+	& \textbf{\thirddExergyEffqFiftyFiveNoReturn}
+	& \textbf{\thirddExergyEffqSixtyNoReturn}
+	& -
+	\\
+	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+	& \thirdqOverFiveqFortyNoReturn
+	& \thirdqOverFiveqFortyFiveNoReturn
+	& \thirdqOverFiveqStandardNoReturn
+	& \thirdqOverFiveqFiftyFiveNoReturn
+	& \thirdqOverFiveqSixtyNoReturn
+	& -
+	\\
+	\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
+	& \thirdmaxAoAqFortyNoReturn
+	& \thirdmaxAoAqFortyFiveNoReturn
+	& \thirdmaxAoAqStandardNoReturn
+	& \thirdmaxAoAqFiftyFiveNoReturn
+	& \thirdmaxAoAqSixtyNoReturn
+	&0
+	\\
+	\textbf{3$^{rd}$ Stage Fuel Mass (kg)}
+	& \thirdmFuelqFortyNoReturn
+	& \thirdmFuelqFortyFiveNoReturn
+	& \thirdmFuelqStandardNoReturn
+	& \thirdmFuelqFiftyFiveNoReturn
+	& \thirdmFuelqSixtyNoReturn
+	&-0.37
+	\\
+	\hline 
+\end{tabular} 
  \caption{}
  \label{tab:qvarnoreturn}
 \end{table}
@@ -515,26 +536,53 @@ Only a small variation in optimal payload mass is observed, without modification
 While it is outside the scope of this study to directly estimate the thermal shielding mass increase necessary when increasing the maximum allowable dynamic pressure, it can be observed from Section \ref{sec:SpartanMassnoreturn} that the influence of the SPARTAN's mass on the performance of the system is large. The decrease in thermal protection system mass possible for lower dynamic pressure trajectories, which is likely to be significant, will serve to partially offset the minor loss in payload due to lower dynamic pressure operation. 
 \textcolor{red}{need to directly compare with mass variation study, to estimate magnitude of thermal mass variation which will make flying at lower q valuable}
 
+
+
 \subsection{Case 4: SPARTAN Drag Sensitivity}\label{sec:dragvariation}
 
 \begin{table}[ht!]
 	\centering
 	\begin{tabular}{l c c c c c c} 
 		\hline \textbf{Trajectory Condition}
-		&CdNinetyNoReturn
-		&CdNinetyFiveNoReturn
-		&CdStandardNoReturn
-		&CdOneHundredFiveNoReturn
-		&CdOneHundredTenNoReturn
+		&Cd90
+		&Cd95
+		&Cd
+		&Cd105
+		&Cd110
 		& /\%
 		\\
 		\hline \textbf{Payload to Orbit (kg)}
-		& \PayloadToOrbitCdNinetyNoReturn
-		& \PayloadToOrbitCdNinetyFiveNoReturn
-		& \PayloadToOrbitCdStandardNoReturn
-		& \PayloadToOrbitCdOneHundredFiveNoReturn
-		& \PayloadToOrbitCdOneHundredTenNoReturn
-		&-1.9
+		& \textbf{\PayloadToOrbitCdNinetyNoReturn}
+		& \textbf{\PayloadToOrbitCdNinetyFiveNoReturn}
+		& \textbf{\PayloadToOrbitCdStandardNoReturn}
+		& \textbf{\PayloadToOrbitCdOneHundredFiveNoReturn}
+		& \textbf{\PayloadToOrbitCdOneHundredTenNoReturn}
+		&\textbf{-1.9}
+		\\
+		\textbf{Payload Variation (\%)}
+		& \PayloadVarCdNinetyNoReturn
+		& \PayloadVarCdNinetyFiveNoReturn
+		& \PayloadVarCdStandardNoReturn
+		& \PayloadVarCdOneHundredFiveNoReturn
+		& \PayloadVarCdOneHundredTenNoReturn
+		&-0.99
+		\\
+		\textbf{Total $\eta_{exergy}$ (\%)}
+		& \textbf{\totalExergyEffCdNinetyNoReturn}
+		& \textbf{\totalExergyEffCdNinetyFiveNoReturn}
+		& \textbf{\totalExergyEffCdStandardNoReturn}
+		& \textbf{\totalExergyEffCdOneHundredFiveNoReturn}
+		& \textbf{\totalExergyEffCdOneHundredTenNoReturn}
+		& \textbf{-0.00016}
+		\\
+		\hline 
+		\textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\firstExergyEffCdNinetyNoReturn}
+		& \textbf{\firstExergyEffCdNinetyFiveNoReturn}
+		& \textbf{\firstExergyEffCdStandardNoReturn}
+		& \textbf{\firstExergyEffCdOneHundredFiveNoReturn}
+		& \textbf{\firstExergyEffCdOneHundredTenNoReturn}
+		& \textbf{-0.041}
 		\\
 		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 		& \firstsecondSeparationAltCdNinetyNoReturn
@@ -560,13 +608,14 @@ While it is outside the scope of this study to directly estimate the thermal shi
 		& \firstsecondSeparationgammaCdOneHundredTenNoReturn
 		&-0.22
 		\\
-		\textbf{1st Stage $\Delta$Exergy (GJ)}
-		& \firstdExergyCdNinetyNoReturn
-		& \firstdExergyCdNinetyFiveNoReturn
-		& \firstdExergyCdStandardNoReturn
-		& \firstdExergyCdOneHundredFiveNoReturn
-		& \firstdExergyCdOneHundredTenNoReturn
-		&-0.1
+		\hline 
+		\textbf{2$^{nd}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\secondExergyEffCdNinetyNoReturn}
+		& \textbf{\secondExergyEffCdNinetyFiveNoReturn}
+		& \textbf{\secondExergyEffCdStandardNoReturn}
+		& \textbf{\secondExergyEffCdOneHundredFiveNoReturn}
+		& \textbf{\secondExergyEffCdOneHundredTenNoReturn}
+		& \textbf{-0.086}
 		\\
 		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 		& \secondthirdSeparationAltCdNinetyNoReturn
@@ -616,13 +665,14 @@ While it is outside the scope of this study to directly estimate the thermal shi
 		& \secondFlightTimeCdOneHundredTenNoReturn
 		& -
 		\\
-		\textbf{2nd Stage $\Delta$Exergy (GJ)}
-		& \seconddExergyCdNinetyNoReturn
-		& \seconddExergyCdNinetyFiveNoReturn
-		& \seconddExergyCdStandardNoReturn
-		& \seconddExergyCdOneHundredFiveNoReturn
-		& \seconddExergyCdOneHundredTenNoReturn
-		&-0.16
+		\hline 
+		\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\thirddExergyEffCdNinetyNoReturn}
+		& \textbf{\thirddExergyEffCdNinetyFiveNoReturn}
+		& \textbf{\thirddExergyEffCdStandardNoReturn}
+		& \textbf{\thirddExergyEffCdOneHundredFiveNoReturn}
+		& \textbf{\thirddExergyEffCdOneHundredTenNoReturn}
+		& \textbf{0.047}
 		\\
 		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 		& \thirdqOverFiveCdNinetyNoReturn
@@ -640,29 +690,13 @@ While it is outside the scope of this study to directly estimate the thermal shi
 		& \thirdmaxAoACdOneHundredTenNoReturn
 		& -
 		\\
-		\textbf{3$^{rd}$ Stage Circularisation v (m/s)}
-		& \thirdcircvCdNinetyNoReturn
-		& \thirdcircvCdNinetyFiveNoReturn
-		& \thirdcircvCdStandardNoReturn
-		& \thirdcircvCdOneHundredFiveNoReturn
-		& \thirdcircvCdOneHundredTenNoReturn
-		&-8.24
-		\\
-		\textbf{3$^{rd}$ Stage Circularisation m (kg)}
-		& \thirdcircmCdNinetyNoReturn
-		& \thirdcircmCdNinetyFiveNoReturn
-		& \thirdcircmCdStandardNoReturn
-		& \thirdcircmCdOneHundredFiveNoReturn
-		& \thirdcircmCdOneHundredTenNoReturn
-		&-2.46
-		\\
-		\textbf{3$^{rd}$ Stage Circularisation Energy (GJ)}
-		& \thirdcircEnergyCdNinetyNoReturn
-		& \thirdcircEnergyCdNinetyFiveNoReturn
-		& \thirdcircEnergyCdStandardNoReturn
-		& \thirdcircEnergyCdOneHundredFiveNoReturn
-		& \thirdcircEnergyCdOneHundredTenNoReturn
-		&-0.24
+		\textbf{3$^{rd}$ Stage Fuel Mass (kg)}
+		& \thirdmFuelCdNinetyNoReturn
+		& \thirdmFuelCdNinetyFiveNoReturn
+		& \thirdmFuelCdStandardNoReturn
+		& \thirdmFuelCdOneHundredFiveNoReturn
+		& \thirdmFuelCdOneHundredTenNoReturn
+		&1.86
 		\\
 		\hline 
 	\end{tabular} 
@@ -682,21 +716,46 @@ The SPARTAN trajectory results show that when drag is varied, the optimal trajec
 \begin{table}[ht!]
 	\centering
 	\begin{tabular}{l c c c c c c} 
-		\hline \textbf{Specific Impulse}
-		&90\%
-		&95\%
-		&100\%
-		&105\%
-		&110\%
+		\hline \textbf{Trajectory Condition}
+		&Isp90
+		&Isp95
+		&Isp
+		&Isp105
+		&Isp110
 		& /\%
 		\\
 		\hline \textbf{Payload to Orbit (kg)}
-		& \PayloadToOrbitIspNinetyNoReturn
-		& \PayloadToOrbitIspNinetyFiveNoReturn
-		& \PayloadToOrbitIspStandardNoReturn
-		& \PayloadToOrbitIspOneHundredFiveNoReturn
-		& \PayloadToOrbitIspOneHundredTenNoReturn
-		&2.2
+		& \textbf{\PayloadToOrbitIspNinetyNoReturn}
+		& \textbf{\PayloadToOrbitIspNinetyFiveNoReturn}
+		& \textbf{\PayloadToOrbitIspStandardNoReturn}
+		& \textbf{\PayloadToOrbitIspOneHundredFiveNoReturn}
+		& \textbf{\PayloadToOrbitIspOneHundredTenNoReturn}
+		&\textbf{2.2}
+		\\
+		\textbf{Payload Variation (\%)}
+		& \PayloadVarIspNinetyNoReturn
+		& \PayloadVarIspNinetyFiveNoReturn
+		& \PayloadVarIspStandardNoReturn
+		& \PayloadVarIspOneHundredFiveNoReturn
+		& \PayloadVarIspOneHundredTenNoReturn
+		&1.16
+		\\
+		\textbf{Total $\eta_{exergy}$ (\%)}
+		& \textbf{\totalExergyEffIspNinetyNoReturn}
+		& \textbf{\totalExergyEffIspNinetyFiveNoReturn}
+		& \textbf{\totalExergyEffIspStandardNoReturn}
+		& \textbf{\totalExergyEffIspOneHundredFiveNoReturn}
+		& \textbf{\totalExergyEffIspOneHundredTenNoReturn}
+		& \textbf{0.0002}
+		\\
+		\hline 
+		\textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\firstExergyEffIspNinetyNoReturn}
+		& \textbf{\firstExergyEffIspNinetyFiveNoReturn}
+		& \textbf{\firstExergyEffIspStandardNoReturn}
+		& \textbf{\firstExergyEffIspOneHundredFiveNoReturn}
+		& \textbf{\firstExergyEffIspOneHundredTenNoReturn}
+		& -
 		\\
 		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 		& \firstsecondSeparationAltIspNinetyNoReturn
@@ -722,13 +781,14 @@ The SPARTAN trajectory results show that when drag is varied, the optimal trajec
 		& \firstsecondSeparationgammaIspOneHundredTenNoReturn
 		& -
 		\\
-		\textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
-		& \firstExergyEffIspNinetyNoReturn
-		& \firstExergyEffIspNinetyFiveNoReturn
-		& \firstExergyEffIspStandardNoReturn
-		& \firstExergyEffIspOneHundredFiveNoReturn
-		& \firstExergyEffIspOneHundredTenNoReturn
-		& -
+		\hline 
+		\textbf{2$^{nd}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\secondExergyEffIspNinetyNoReturn}
+		& \textbf{\secondExergyEffIspNinetyFiveNoReturn}
+		& \textbf{\secondExergyEffIspStandardNoReturn}
+		& \textbf{\secondExergyEffIspOneHundredFiveNoReturn}
+		& \textbf{\secondExergyEffIspOneHundredTenNoReturn}
+		& \textbf{0.162}
 		\\
 		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 		& \secondthirdSeparationAltIspNinetyNoReturn
@@ -778,13 +838,14 @@ The SPARTAN trajectory results show that when drag is varied, the optimal trajec
 		& \secondFlightTimeIspOneHundredTenNoReturn
 		& -
 		\\
-		\textbf{2$^{nd}$ Stage $\eta_{exergy}$ (\%)}
-		& \secondExergyEffIspNinetyNoReturn
-		& \secondExergyEffIspNinetyFiveNoReturn
-		& \secondExergyEffIspStandardNoReturn
-		& \secondExergyEffIspOneHundredFiveNoReturn
-		& \secondExergyEffIspOneHundredTenNoReturn
-		&0.16
+		\hline 
+		\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\thirddExergyEffIspNinetyNoReturn}
+		& \textbf{\thirddExergyEffIspNinetyFiveNoReturn}
+		& \textbf{\thirddExergyEffIspStandardNoReturn}
+		& \textbf{\thirddExergyEffIspOneHundredFiveNoReturn}
+		& \textbf{\thirddExergyEffIspOneHundredTenNoReturn}
+		& \textbf{-0.073}
 		\\
 		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 		& \thirdqOverFiveIspNinetyNoReturn
@@ -810,14 +871,6 @@ The SPARTAN trajectory results show that when drag is varied, the optimal trajec
 		& \thirdmFuelIspOneHundredTenNoReturn
 		&-2.2
 		\\
-		\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
-		& \thirddExergyEffIspNinetyNoReturn
-		& \thirddExergyEffIspNinetyFiveNoReturn
-		& \thirddExergyEffIspStandardNoReturn
-		& \thirddExergyEffIspOneHundredFiveNoReturn
-		& \thirddExergyEffIspOneHundredTenNoReturn
-		&-0.17
-		\\
 		\hline 
 	\end{tabular} 
 	
@@ -839,20 +892,45 @@ The additional efficiency allows the SPARTAN to accelerate more over the flight 
 	
 \begin{tabular}{l c c c c c c} 
 	\hline \textbf{Trajectory Condition}
-	&m
-	&m
-	&m
-	&m
-	&m
+	&m295
+	&m297.5
+	&m2
+	&m2102.5
+	&m2105
 	& /\%
 	\\
 	\hline \textbf{Payload to Orbit (kg)}
-	& \PayloadToOrbitmSPARTANNinetyFiveNoReturn
-	& \PayloadToOrbitmSPARTANNinetySevenFiveNoReturn
-	& \PayloadToOrbitmSPARTANStandardNoReturn
-	& \PayloadToOrbitmSPARTANOneHundredTwoFiveNoReturn
-	& \PayloadToOrbitmSPARTANOneHundredFiveNoReturn
-	&-1.5
+	& \textbf{\PayloadToOrbitmSPARTANNinetyFiveNoReturn}
+	& \textbf{\PayloadToOrbitmSPARTANNinetySevenFiveNoReturn}
+	& \textbf{\PayloadToOrbitmSPARTANStandardNoReturn}
+	& \textbf{\PayloadToOrbitmSPARTANOneHundredTwoFiveNoReturn}
+	& \textbf{\PayloadToOrbitmSPARTANOneHundredFiveNoReturn}
+	&\textbf{-1.5}
+	\\
+	\textbf{Payload Variation (\%)}
+	& \PayloadVarmSPARTANNinetyFiveNoReturn
+	& \PayloadVarmSPARTANNinetySevenFiveNoReturn
+	& \PayloadVarmSPARTANStandardNoReturn
+	& \PayloadVarmSPARTANOneHundredTwoFiveNoReturn
+	& \PayloadVarmSPARTANOneHundredFiveNoReturn
+	&-0.8
+	\\
+	\textbf{Total $\eta_{exergy}$ (\%)}
+	& \textbf{\totalExergyEffmSPARTANNinetyFiveNoReturn}
+	& \textbf{\totalExergyEffmSPARTANNinetySevenFiveNoReturn}
+	& \textbf{\totalExergyEffmSPARTANStandardNoReturn}
+	& \textbf{\totalExergyEffmSPARTANOneHundredTwoFiveNoReturn}
+	& \textbf{\totalExergyEffmSPARTANOneHundredFiveNoReturn}
+	& \textbf{-0.00011}
+	\\
+	\hline 
+	\textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
+	& \textbf{\firstExergyEffmSPARTANNinetyFiveNoReturn}
+	& \textbf{\firstExergyEffmSPARTANNinetySevenFiveNoReturn}
+	& \textbf{\firstExergyEffmSPARTANStandardNoReturn}
+	& \textbf{\firstExergyEffmSPARTANOneHundredTwoFiveNoReturn}
+	& \textbf{\firstExergyEffmSPARTANOneHundredFiveNoReturn}
+	& \textbf{-0.06}
 	\\
 	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 	& \firstsecondSeparationAltmSPARTANNinetyFiveNoReturn
@@ -878,13 +956,14 @@ The additional efficiency allows the SPARTAN to accelerate more over the flight 
 	& \firstsecondSeparationgammamSPARTANOneHundredFiveNoReturn
 	&-0.34
 	\\
-	\textbf{1st Stage $\Delta$Exergy (GJ)}
-	& \firstdExergymSPARTANNinetyFiveNoReturn
-	& \firstdExergymSPARTANNinetySevenFiveNoReturn
-	& \firstdExergymSPARTANStandardNoReturn
-	& \firstdExergymSPARTANOneHundredTwoFiveNoReturn
-	& \firstdExergymSPARTANOneHundredFiveNoReturn
-	&-0.18
+	\hline 
+	\textbf{2$^{nd}$ Stage $\eta_{exergy}$ (\%)}
+	& \textbf{\secondExergyEffmSPARTANNinetyFiveNoReturn}
+	& \textbf{\secondExergyEffmSPARTANNinetySevenFiveNoReturn}
+	& \textbf{\secondExergyEffmSPARTANStandardNoReturn}
+	& \textbf{\secondExergyEffmSPARTANOneHundredTwoFiveNoReturn}
+	& \textbf{\secondExergyEffmSPARTANOneHundredFiveNoReturn}
+	& \textbf{0.062}
 	\\
 	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 	& \secondthirdSeparationAltmSPARTANNinetyFiveNoReturn
@@ -934,13 +1013,14 @@ The additional efficiency allows the SPARTAN to accelerate more over the flight 
 	& \secondFlightTimemSPARTANOneHundredFiveNoReturn
 	& -
 	\\
-	\textbf{2nd Stage $\Delta$Exergy (GJ)}
-	& \seconddExergymSPARTANNinetyFiveNoReturn
-	& \seconddExergymSPARTANNinetySevenFiveNoReturn
-	& \seconddExergymSPARTANStandardNoReturn
-	& \seconddExergymSPARTANOneHundredTwoFiveNoReturn
-	& \seconddExergymSPARTANOneHundredFiveNoReturn
-	&0.12
+	\hline 
+	\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
+	& \textbf{\thirddExergyEffmSPARTANNinetyFiveNoReturn}
+	& \textbf{\thirddExergyEffmSPARTANNinetySevenFiveNoReturn}
+	& \textbf{\thirddExergyEffmSPARTANStandardNoReturn}
+	& \textbf{\thirddExergyEffmSPARTANOneHundredTwoFiveNoReturn}
+	& \textbf{\thirddExergyEffmSPARTANOneHundredFiveNoReturn}
+	& \textbf{0.052}
 	\\
 	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 	& \thirdqOverFivemSPARTANNinetyFiveNoReturn
@@ -958,32 +1038,17 @@ The additional efficiency allows the SPARTAN to accelerate more over the flight 
 	& \thirdmaxAoAmSPARTANOneHundredFiveNoReturn
 	& -
 	\\
-	\textbf{3$^{rd}$ Stage Circularisation v (m/s)}
-	& \thirdcircvmSPARTANNinetyFiveNoReturn
-	& \thirdcircvmSPARTANNinetySevenFiveNoReturn
-	& \thirdcircvmSPARTANStandardNoReturn
-	& \thirdcircvmSPARTANOneHundredTwoFiveNoReturn
-	& \thirdcircvmSPARTANOneHundredFiveNoReturn
-	&-9.67
-	\\
-	\textbf{3$^{rd}$ Stage Circularisation m (kg)}
-	& \thirdcircmmSPARTANNinetyFiveNoReturn
-	& \thirdcircmmSPARTANNinetySevenFiveNoReturn
-	& \thirdcircmmSPARTANStandardNoReturn
-	& \thirdcircmmSPARTANOneHundredTwoFiveNoReturn
-	& \thirdcircmmSPARTANOneHundredFiveNoReturn
-	& -
-	\\
-	\textbf{3$^{rd}$ Stage Circularisation Energy (GJ)}
-	& \thirdcircEnergymSPARTANNinetyFiveNoReturn
-	& \thirdcircEnergymSPARTANNinetySevenFiveNoReturn
-	& \thirdcircEnergymSPARTANStandardNoReturn
-	& \thirdcircEnergymSPARTANOneHundredTwoFiveNoReturn
-	& \thirdcircEnergymSPARTANOneHundredFiveNoReturn
-	& -
+	\textbf{3$^{rd}$ Stage Fuel Mass (kg)}
+	& \thirdmFuelmSPARTANNinetyFiveNoReturn
+	& \thirdmFuelmSPARTANNinetySevenFiveNoReturn
+	& \thirdmFuelmSPARTANStandardNoReturn
+	& \thirdmFuelmSPARTANOneHundredTwoFiveNoReturn
+	& \thirdmFuelmSPARTANOneHundredFiveNoReturn
+	&1.52
 	\\
 	\hline 
 \end{tabular} 
+
 	
 \end{table}
 
@@ -994,132 +1059,165 @@ A higher SPARTAN mass affects the first stage-SPARTAN separation velocity signif
 
 \subsection{Case 7: SPARTAN Fuel Mass Sensitivity}
 
-
-\begin{table}[ht]
-	\centering
-	\begin{tabular}{l c c c c c c} 
-		\hline \textbf{Trajectory Condition}
-		&mF90
-		&mF95
-		&mF100
-		&mF105
-		&mF110
-		& /\%
-		\\
-		\hline \textbf{Payload to Orbit (kg)}
-		& \PayloadToOrbitmFuelNinetyNoReturn
-		& \PayloadToOrbitmFuelNinetyFiveNoReturn
-		& \PayloadToOrbitmFuelStandardNoReturn
-		& \PayloadToOrbitmFuelOneHundredFiveNoReturn
-		& \PayloadToOrbitmFuelOneHundredTenNoReturn
-		&0.7
-		\\
-		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
-		& \firstsecondSeparationAltmFuelNinetyNoReturn
-		& \firstsecondSeparationAltmFuelNinetyFiveNoReturn
-		& \firstsecondSeparationAltmFuelStandardNoReturn
-		& \firstsecondSeparationAltmFuelOneHundredFiveNoReturn
-		& \firstsecondSeparationAltmFuelOneHundredTenNoReturn
-		&-0.08
-		\\
-		\textbf{Separation v, 1$\rightarrow$2 (m/s)}
-		& \firstsecondSeparationvmFuelNinetyNoReturn
-		& \firstsecondSeparationvmFuelNinetyFiveNoReturn
-		& \firstsecondSeparationvmFuelStandardNoReturn
-		& \firstsecondSeparationvmFuelOneHundredFiveNoReturn
-		& \firstsecondSeparationvmFuelOneHundredTenNoReturn
-		&-3.65
-		\\
-		\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
-		& \firstsecondSeparationgammamFuelNinetyNoReturn
-		& \firstsecondSeparationgammamFuelNinetyFiveNoReturn
-		& \firstsecondSeparationgammamFuelStandardNoReturn
-		& \firstsecondSeparationgammamFuelOneHundredFiveNoReturn
-		& \firstsecondSeparationgammamFuelOneHundredTenNoReturn
-		& -
-		\\
-		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
-		& \secondthirdSeparationAltmFuelNinetyNoReturn
-		& \secondthirdSeparationAltmFuelNinetyFiveNoReturn
-		& \secondthirdSeparationAltmFuelStandardNoReturn
-		& \secondthirdSeparationAltmFuelOneHundredFiveNoReturn
-		& \secondthirdSeparationAltmFuelOneHundredTenNoReturn
-		& -
-		\\
-		\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
-		& \secondthirdSeparationvmFuelNinetyNoReturn
-		& \secondthirdSeparationvmFuelNinetyFiveNoReturn
-		& \secondthirdSeparationvmFuelStandardNoReturn
-		& \secondthirdSeparationvmFuelOneHundredFiveNoReturn
-		& \secondthirdSeparationvmFuelOneHundredTenNoReturn
-		&4.78
-		\\
-		\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
-		& \secondthirdSeparationgammamFuelNinetyNoReturn
-		& \secondthirdSeparationgammamFuelNinetyFiveNoReturn
-		& \secondthirdSeparationgammamFuelStandardNoReturn
-		& \secondthirdSeparationgammamFuelOneHundredFiveNoReturn
-		& \secondthirdSeparationgammamFuelOneHundredTenNoReturn
-		&-0.04
-		\\
-		\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
-		& \secondthirdSeparationqmFuelNinetyNoReturn
-		& \secondthirdSeparationqmFuelNinetyFiveNoReturn
-		& \secondthirdSeparationqmFuelStandardNoReturn
-		& \secondthirdSeparationqmFuelOneHundredFiveNoReturn
-		& \secondthirdSeparationqmFuelOneHundredTenNoReturn
-		& -
-		\\
-		\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
-		& \secondthirdSeparationLDmFuelNinetyNoReturn
-		& \secondthirdSeparationLDmFuelNinetyFiveNoReturn
-		& \secondthirdSeparationLDmFuelStandardNoReturn
-		& \secondthirdSeparationLDmFuelOneHundredFiveNoReturn
-		& \secondthirdSeparationLDmFuelOneHundredTenNoReturn
-		& -
-		\\
-		\textbf{2$^{nd}$ Stage Flight Time (s)}
-		& \secondFlightTimemFuelNinetyNoReturn
-		& \secondFlightTimemFuelNinetyFiveNoReturn
-		& \secondFlightTimemFuelStandardNoReturn
-		& \secondFlightTimemFuelOneHundredFiveNoReturn
-		& \secondFlightTimemFuelOneHundredTenNoReturn
-		&4.41
-		\\
-		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
-		& \thirdqOverFivemFuelNinetyNoReturn
-		& \thirdqOverFivemFuelNinetyFiveNoReturn
-		& \thirdqOverFivemFuelStandardNoReturn
-		& \thirdqOverFivemFuelOneHundredFiveNoReturn
-		& \thirdqOverFivemFuelOneHundredTenNoReturn
-		&0.11
-		\\
-		\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
-		& \thirdmaxAoAmFuelNinetyNoReturn
-		& \thirdmaxAoAmFuelNinetyFiveNoReturn
-		& \thirdmaxAoAmFuelStandardNoReturn
-		& \thirdmaxAoAmFuelOneHundredFiveNoReturn
-		& \thirdmaxAoAmFuelOneHundredTenNoReturn
-		& -
-		\\
-		\textbf{3$^{rd}$ Stage final v (m/s)}
-		& \thirdcircvmFuelNinetyNoReturn
-		& \thirdcircvmFuelNinetyFiveNoReturn
-		& \thirdcircvmFuelStandardNoReturn
-		& \thirdcircvmFuelOneHundredFiveNoReturn
-		& \thirdcircvmFuelOneHundredTenNoReturn
-		&5.87
-		\\
-		\textbf{3$^{rd}$ Stage final m (kg)}
-		& \thirdcircmmFuelNinetyNoReturn
-		& \thirdcircmmFuelNinetyFiveNoReturn
-		& \thirdcircmmFuelStandardNoReturn
-		& \thirdcircmmFuelOneHundredFiveNoReturn
-		& \thirdcircmmFuelOneHundredTenNoReturn
-		& -
-		\\
-		\hline 
-	\end{tabular} 
+\begin{table}
+\begin{tabular}{l c c c c c c} 
+	\hline \textbf{Trajectory Condition}
+	&mF90
+	&mF95
+	&mF
+	&mF105
+	&mF110
+	& /\%
+	\\
+	\hline \textbf{Payload to Orbit (kg)}
+	& \textbf{\PayloadToOrbitmFuelNinetyNoReturn}
+	& \textbf{\PayloadToOrbitmFuelNinetyFiveNoReturn}
+	& \textbf{\PayloadToOrbitmFuelStandardNoReturn}
+	& \textbf{\PayloadToOrbitmFuelOneHundredFiveNoReturn}
+	& \textbf{\PayloadToOrbitmFuelOneHundredTenNoReturn}
+	&\textbf{0.7}
+	\\
+	\textbf{Payload Variation (\%)}
+	& \PayloadVarmFuelNinetyNoReturn
+	& \PayloadVarmFuelNinetyFiveNoReturn
+	& \PayloadVarmFuelStandardNoReturn
+	& \PayloadVarmFuelOneHundredFiveNoReturn
+	& \PayloadVarmFuelOneHundredTenNoReturn
+	&0.37
+	\\
+	\textbf{Total $\eta_{exergy}$ (\%)}
+	& \textbf{\totalExergyEffmFuelNinetyNoReturn}
+	& \textbf{\totalExergyEffmFuelNinetyFiveNoReturn}
+	& \textbf{\totalExergyEffmFuelStandardNoReturn}
+	& \textbf{\totalExergyEffmFuelOneHundredFiveNoReturn}
+	& \textbf{\totalExergyEffmFuelOneHundredTenNoReturn}
+	& \textbf{0}
+	\\
+	\hline 
+	\textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
+	& \textbf{\firstExergyEffmFuelNinetyNoReturn}
+	& \textbf{\firstExergyEffmFuelNinetyFiveNoReturn}
+	& \textbf{\firstExergyEffmFuelStandardNoReturn}
+	& \textbf{\firstExergyEffmFuelOneHundredFiveNoReturn}
+	& \textbf{\firstExergyEffmFuelOneHundredTenNoReturn}
+	& \textbf{-0.019}
+	\\
+	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+	& \firstsecondSeparationAltmFuelNinetyNoReturn
+	& \firstsecondSeparationAltmFuelNinetyFiveNoReturn
+	& \firstsecondSeparationAltmFuelStandardNoReturn
+	& \firstsecondSeparationAltmFuelOneHundredFiveNoReturn
+	& \firstsecondSeparationAltmFuelOneHundredTenNoReturn
+	&-0.08
+	\\
+	\textbf{Separation v, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationvmFuelNinetyNoReturn
+	& \firstsecondSeparationvmFuelNinetyFiveNoReturn
+	& \firstsecondSeparationvmFuelStandardNoReturn
+	& \firstsecondSeparationvmFuelOneHundredFiveNoReturn
+	& \firstsecondSeparationvmFuelOneHundredTenNoReturn
+	&-3.65
+	\\
+	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationgammamFuelNinetyNoReturn
+	& \firstsecondSeparationgammamFuelNinetyFiveNoReturn
+	& \firstsecondSeparationgammamFuelStandardNoReturn
+	& \firstsecondSeparationgammamFuelOneHundredFiveNoReturn
+	& \firstsecondSeparationgammamFuelOneHundredTenNoReturn
+	& -
+	\\
+	\hline 
+	\textbf{2$^{nd}$ Stage $\eta_{exergy}$ (\%)}
+	& \textbf{\secondExergyEffmFuelNinetyNoReturn}
+	& \textbf{\secondExergyEffmFuelNinetyFiveNoReturn}
+	& \textbf{\secondExergyEffmFuelStandardNoReturn}
+	& \textbf{\secondExergyEffmFuelOneHundredFiveNoReturn}
+	& \textbf{\secondExergyEffmFuelOneHundredTenNoReturn}
+	& \textbf{-0.03}
+	\\
+	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+	& \secondthirdSeparationAltmFuelNinetyNoReturn
+	& \secondthirdSeparationAltmFuelNinetyFiveNoReturn
+	& \secondthirdSeparationAltmFuelStandardNoReturn
+	& \secondthirdSeparationAltmFuelOneHundredFiveNoReturn
+	& \secondthirdSeparationAltmFuelOneHundredTenNoReturn
+	& -
+	\\
+	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+	& \secondthirdSeparationvmFuelNinetyNoReturn
+	& \secondthirdSeparationvmFuelNinetyFiveNoReturn
+	& \secondthirdSeparationvmFuelStandardNoReturn
+	& \secondthirdSeparationvmFuelOneHundredFiveNoReturn
+	& \secondthirdSeparationvmFuelOneHundredTenNoReturn
+	&4.78
+	\\
+	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+	& \secondthirdSeparationgammamFuelNinetyNoReturn
+	& \secondthirdSeparationgammamFuelNinetyFiveNoReturn
+	& \secondthirdSeparationgammamFuelStandardNoReturn
+	& \secondthirdSeparationgammamFuelOneHundredFiveNoReturn
+	& \secondthirdSeparationgammamFuelOneHundredTenNoReturn
+	&-0.04
+	\\
+	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+	& \secondthirdSeparationqmFuelNinetyNoReturn
+	& \secondthirdSeparationqmFuelNinetyFiveNoReturn
+	& \secondthirdSeparationqmFuelStandardNoReturn
+	& \secondthirdSeparationqmFuelOneHundredFiveNoReturn
+	& \secondthirdSeparationqmFuelOneHundredTenNoReturn
+	& -
+	\\
+	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+	& \secondthirdSeparationLDmFuelNinetyNoReturn
+	& \secondthirdSeparationLDmFuelNinetyFiveNoReturn
+	& \secondthirdSeparationLDmFuelStandardNoReturn
+	& \secondthirdSeparationLDmFuelOneHundredFiveNoReturn
+	& \secondthirdSeparationLDmFuelOneHundredTenNoReturn
+	& -
+	\\
+	\textbf{2$^{nd}$ Stage Flight Time (s)}
+	& \secondFlightTimemFuelNinetyNoReturn
+	& \secondFlightTimemFuelNinetyFiveNoReturn
+	& \secondFlightTimemFuelStandardNoReturn
+	& \secondFlightTimemFuelOneHundredFiveNoReturn
+	& \secondFlightTimemFuelOneHundredTenNoReturn
+	&4.41
+	\\
+	\hline 
+	\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
+	& \textbf{\thirddExergyEffmFuelNinetyNoReturn}
+	& \textbf{\thirddExergyEffmFuelNinetyFiveNoReturn}
+	& \textbf{\thirddExergyEffmFuelStandardNoReturn}
+	& \textbf{\thirddExergyEffmFuelOneHundredFiveNoReturn}
+	& \textbf{\thirddExergyEffmFuelOneHundredTenNoReturn}
+	& \textbf{-0.029}
+	\\
+	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+	& \thirdqOverFivemFuelNinetyNoReturn
+	& \thirdqOverFivemFuelNinetyFiveNoReturn
+	& \thirdqOverFivemFuelStandardNoReturn
+	& \thirdqOverFivemFuelOneHundredFiveNoReturn
+	& \thirdqOverFivemFuelOneHundredTenNoReturn
+	&0.11
+	\\
+	\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
+	& \thirdmaxAoAmFuelNinetyNoReturn
+	& \thirdmaxAoAmFuelNinetyFiveNoReturn
+	& \thirdmaxAoAmFuelStandardNoReturn
+	& \thirdmaxAoAmFuelOneHundredFiveNoReturn
+	& \thirdmaxAoAmFuelOneHundredTenNoReturn
+	& -
+	\\
+	\textbf{3$^{rd}$ Stage Fuel Mass (kg)}
+	& \thirdmFuelmFuelNinetyNoReturn
+	& \thirdmFuelmFuelNinetyFiveNoReturn
+	& \thirdmFuelmFuelStandardNoReturn
+	& \thirdmFuelmFuelOneHundredFiveNoReturn
+	& \thirdmFuelmFuelOneHundredTenNoReturn
+	&-0.71
+	\\
+	\hline 
+\end{tabular} 
 \end{table}
 
 The available fuel mass of the SPARTAN is varied by $\pm 10\%$, to investigate the effects of variation in the fuel tank size within the SPARTAN.
@@ -1136,18 +1234,43 @@ The significant effects of the variation in fuel mass indicates that it is benef
 		\hline \textbf{Trajectory Condition}
 		&m390
 		&m395
-		&m3100
+		&m3
 		&m3105
 		&m3110
 		& /\%
 		\\
 		\hline \textbf{Payload to Orbit (kg)}
-		& \PayloadToOrbitmThreeNinetyNoReturn
-		& \PayloadToOrbitmThreeNinetyFiveNoReturn
-		& \PayloadToOrbitmThreeStandardNoReturn
-		& \PayloadToOrbitmThreeOneHundredFiveNoReturn
-		& \PayloadToOrbitmThreeOneHundredTenNoReturn
-		&3.8
+		& \textbf{\PayloadToOrbitmThreeNinetyNoReturn}
+		& \textbf{\PayloadToOrbitmThreeNinetyFiveNoReturn}
+		& \textbf{\PayloadToOrbitmThreeStandardNoReturn}
+		& \textbf{\PayloadToOrbitmThreeOneHundredFiveNoReturn}
+		& \textbf{\PayloadToOrbitmThreeOneHundredTenNoReturn}
+		&\textbf{0.9}
+		\\
+		\textbf{Payload Variation (\%)}
+		& \PayloadVarmThreeNinetyNoReturn
+		& \PayloadVarmThreeNinetyFiveNoReturn
+		& \PayloadVarmThreeStandardNoReturn
+		& \PayloadVarmThreeOneHundredFiveNoReturn
+		& \PayloadVarmThreeOneHundredTenNoReturn
+		&0.46
+		\\
+		\textbf{Total $\eta_{exergy}$ (\%)}
+		& \textbf{\totalExergyEffmThreeNinetyNoReturn}
+		& \textbf{\totalExergyEffmThreeNinetyFiveNoReturn}
+		& \textbf{\totalExergyEffmThreeStandardNoReturn}
+		& \textbf{\totalExergyEffmThreeOneHundredFiveNoReturn}
+		& \textbf{\totalExergyEffmThreeOneHundredTenNoReturn}
+		& \textbf{8e-05}
+		\\
+		\hline 
+		\textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\firstExergyEffmThreeNinetyNoReturn}
+		& \textbf{\firstExergyEffmThreeNinetyFiveNoReturn}
+		& \textbf{\firstExergyEffmThreeStandardNoReturn}
+		& \textbf{\firstExergyEffmThreeOneHundredFiveNoReturn}
+		& \textbf{\firstExergyEffmThreeOneHundredTenNoReturn}
+		& \textbf{-0.041}
 		\\
 		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 		& \firstsecondSeparationAltmThreeNinetyNoReturn
@@ -1172,6 +1295,15 @@ The significant effects of the variation in fuel mass indicates that it is benef
 		& \firstsecondSeparationgammamThreeOneHundredFiveNoReturn
 		& \firstsecondSeparationgammamThreeOneHundredTenNoReturn
 		&-0.24
+		\\
+		\hline 
+		\textbf{2$^{nd}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\secondExergyEffmThreeNinetyNoReturn}
+		& \textbf{\secondExergyEffmThreeNinetyFiveNoReturn}
+		& \textbf{\secondExergyEffmThreeStandardNoReturn}
+		& \textbf{\secondExergyEffmThreeOneHundredFiveNoReturn}
+		& \textbf{\secondExergyEffmThreeOneHundredTenNoReturn}
+		& \textbf{0.034}
 		\\
 		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 		& \secondthirdSeparationAltmThreeNinetyNoReturn
@@ -1221,6 +1353,15 @@ The significant effects of the variation in fuel mass indicates that it is benef
 		& \secondFlightTimemThreeOneHundredTenNoReturn
 		& -
 		\\
+		\hline 
+		\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\thirddExergyEffmThreeNinetyNoReturn}
+		& \textbf{\thirddExergyEffmThreeNinetyFiveNoReturn}
+		& \textbf{\thirddExergyEffmThreeStandardNoReturn}
+		& \textbf{\thirddExergyEffmThreeOneHundredFiveNoReturn}
+		& \textbf{\thirddExergyEffmThreeOneHundredTenNoReturn}
+		& \textbf{0.039}
+		\\
 		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 		& \thirdqOverFivemThreeNinetyNoReturn
 		& \thirdqOverFivemThreeNinetyFiveNoReturn
@@ -1237,24 +1378,17 @@ The significant effects of the variation in fuel mass indicates that it is benef
 		& \thirdmaxAoAmThreeOneHundredTenNoReturn
 		&0
 		\\
-		\textbf{3$^{rd}$ Stage final v (m/s)}
-		& \thirdcircvmThreeNinetyNoReturn
-		& \thirdcircvmThreeNinetyFiveNoReturn
-		& \thirdcircvmThreeStandardNoReturn
-		& \thirdcircvmThreeOneHundredFiveNoReturn
-		& \thirdcircvmThreeOneHundredTenNoReturn
-		&-7.5
-		\\
-		\textbf{3$^{rd}$ Stage final m (kg)}
-		& \thirdcircmmThreeNinetyNoReturn
-		& \thirdcircmmThreeNinetyFiveNoReturn
-		& \thirdcircmmThreeStandardNoReturn
-		& \thirdcircmmThreeOneHundredFiveNoReturn
-		& \thirdcircmmThreeOneHundredTenNoReturn
-		&21.98
+		\textbf{3$^{rd}$ Stage Fuel Mass (kg)}
+		& \thirdmFuelmThreeNinetyNoReturn
+		& \thirdmFuelmThreeNinetyFiveNoReturn
+		& \thirdmFuelmThreeStandardNoReturn
+		& \thirdmFuelmThreeOneHundredFiveNoReturn
+		& \thirdmFuelmThreeOneHundredTenNoReturn
+		&29.15
 		\\
 		\hline 
 	\end{tabular} 
+	
 \end{table}
 
 \textcolor{red}{first paragraph is unclear, need to make clear that im varying the mass which is a combined and flexible combination of fuel, struct and payload}
@@ -1269,22 +1403,47 @@ The majority of the additional mass is used for fuel and additional structural m
 
 \begin{table}[ht]
 	\centering
-	\begin{tabular}{l c c c c c c}
+	\begin{tabular}{l c c c c c c} 
 		\hline \textbf{Trajectory Condition}
 		&T390
 		&T395
-		&T3100
+		&T3
 		&T3105
 		&T3110
 		& /\%
 		\\
 		\hline \textbf{Payload to Orbit (kg)}
-		& \PayloadToOrbitTThreeNinetyNoReturn
-		& \PayloadToOrbitTThreeNinetyFiveNoReturn
-		& \PayloadToOrbitTThreeStandardNoReturn
-		& \PayloadToOrbitTThreeOneHundredFiveNoReturn
-		& \PayloadToOrbitTThreeOneHundredTenNoReturn
-		&2.6
+		& \textbf{\PayloadToOrbitTThreeNinetyNoReturn}
+		& \textbf{\PayloadToOrbitTThreeNinetyFiveNoReturn}
+		& \textbf{\PayloadToOrbitTThreeStandardNoReturn}
+		& \textbf{\PayloadToOrbitTThreeOneHundredFiveNoReturn}
+		& \textbf{\PayloadToOrbitTThreeOneHundredTenNoReturn}
+		&\textbf{2.6}
+		\\
+		\textbf{Payload Variation (\%)}
+		& \PayloadVarTThreeNinetyNoReturn
+		& \PayloadVarTThreeNinetyFiveNoReturn
+		& \PayloadVarTThreeStandardNoReturn
+		& \PayloadVarTThreeOneHundredFiveNoReturn
+		& \PayloadVarTThreeOneHundredTenNoReturn
+		&1.35
+		\\
+		\textbf{Total $\eta_{exergy}$ (\%)}
+		& \textbf{\totalExergyEffTThreeNinetyNoReturn}
+		& \textbf{\totalExergyEffTThreeNinetyFiveNoReturn}
+		& \textbf{\totalExergyEffTThreeStandardNoReturn}
+		& \textbf{\totalExergyEffTThreeOneHundredFiveNoReturn}
+		& \textbf{\totalExergyEffTThreeOneHundredTenNoReturn}
+		& \textbf{0.00023}
+		\\
+		\hline 
+		\textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\firstExergyEffTThreeNinetyNoReturn}
+		& \textbf{\firstExergyEffTThreeNinetyFiveNoReturn}
+		& \textbf{\firstExergyEffTThreeStandardNoReturn}
+		& \textbf{\firstExergyEffTThreeOneHundredFiveNoReturn}
+		& \textbf{\firstExergyEffTThreeOneHundredTenNoReturn}
+		& -
 		\\
 		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 		& \firstsecondSeparationAltTThreeNinetyNoReturn
@@ -1309,6 +1468,15 @@ The majority of the additional mass is used for fuel and additional structural m
 		& \firstsecondSeparationgammaTThreeOneHundredFiveNoReturn
 		& \firstsecondSeparationgammaTThreeOneHundredTenNoReturn
 		& -
+		\\
+		\hline 
+		\textbf{2$^{nd}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\secondExergyEffTThreeNinetyNoReturn}
+		& \textbf{\secondExergyEffTThreeNinetyFiveNoReturn}
+		& \textbf{\secondExergyEffTThreeStandardNoReturn}
+		& \textbf{\secondExergyEffTThreeOneHundredFiveNoReturn}
+		& \textbf{\secondExergyEffTThreeOneHundredTenNoReturn}
+		& \textbf{0.056}
 		\\
 		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 		& \secondthirdSeparationAltTThreeNinetyNoReturn
@@ -1358,6 +1526,15 @@ The majority of the additional mass is used for fuel and additional structural m
 		& \secondFlightTimeTThreeOneHundredTenNoReturn
 		& -
 		\\
+		\hline 
+		\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\thirddExergyEffTThreeNinetyNoReturn}
+		& \textbf{\thirddExergyEffTThreeNinetyFiveNoReturn}
+		& \textbf{\thirddExergyEffTThreeStandardNoReturn}
+		& \textbf{\thirddExergyEffTThreeOneHundredFiveNoReturn}
+		& \textbf{\thirddExergyEffTThreeOneHundredTenNoReturn}
+		& \textbf{0.49}
+		\\
 		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 		& \thirdqOverFiveTThreeNinetyNoReturn
 		& \thirdqOverFiveTThreeNinetyFiveNoReturn
@@ -1374,21 +1551,13 @@ The majority of the additional mass is used for fuel and additional structural m
 		& \thirdmaxAoATThreeOneHundredTenNoReturn
 		&-0.01
 		\\
-		\textbf{3$^{rd}$ Stage final v (m/s)}
-		& \thirdcircvTThreeNinetyNoReturn
-		& \thirdcircvTThreeNinetyFiveNoReturn
-		& \thirdcircvTThreeStandardNoReturn
-		& \thirdcircvTThreeOneHundredFiveNoReturn
-		& \thirdcircvTThreeOneHundredTenNoReturn
-		&132.76
-		\\
-		\textbf{3$^{rd}$ Stage final m (kg)}
-		& \thirdcircmTThreeNinetyNoReturn
-		& \thirdcircmTThreeNinetyFiveNoReturn
-		& \thirdcircmTThreeStandardNoReturn
-		& \thirdcircmTThreeOneHundredFiveNoReturn
-		& \thirdcircmTThreeOneHundredTenNoReturn
-		&-65.97
+		\textbf{3$^{rd}$ Stage Fuel Mass (kg)}
+		& \thirdmFuelTThreeNinetyNoReturn
+		& \thirdmFuelTThreeNinetyFiveNoReturn
+		& \thirdmFuelTThreeStandardNoReturn
+		& \thirdmFuelTThreeOneHundredFiveNoReturn
+		& \thirdmFuelTThreeOneHundredTenNoReturn
+		&-2.56
 		\\
 		\hline 
 	\end{tabular} 
@@ -1410,18 +1579,43 @@ Increasing the thrust of the third stage rocket also allows the SPARTAN to have 
 		\hline \textbf{Trajectory Condition}
 		&Cd380
 		&Cd390
-		&Cd3100
+		&Cd3
 		&Cd3110
 		&Cd3120
 		& /\%
 		\\
 		\hline \textbf{Payload to Orbit (kg)}
-		& \PayloadToOrbitCdThreeEightyNoReturn
-		& \PayloadToOrbitCdThreeNinetyNoReturn
-		& \PayloadToOrbitCdThreeStandardNoReturn
-		& \PayloadToOrbitCdThreeOneHundredTenNoReturn
-		& \PayloadToOrbitCdThreeOneHundredTwentyNoReturn
+		& \textbf{\PayloadToOrbitCdThreeEightyNoReturn}
+		& \textbf{\PayloadToOrbitCdThreeNinetyNoReturn}
+		& \textbf{\PayloadToOrbitCdThreeStandardNoReturn}
+		& \textbf{\PayloadToOrbitCdThreeOneHundredTenNoReturn}
+		& \textbf{\PayloadToOrbitCdThreeOneHundredTwentyNoReturn}
+		&\textbf{0}
+		\\
+		\textbf{Payload Variation (\%)}
+		& \PayloadVarCdThreeEightyNoReturn
+		& \PayloadVarCdThreeNinetyNoReturn
+		& \PayloadVarCdThreeStandardNoReturn
+		& \PayloadVarCdThreeOneHundredTenNoReturn
+		& \PayloadVarCdThreeOneHundredTwentyNoReturn
 		&-0.02
+		\\
+		\textbf{Total $\eta_{exergy}$ (\%)}
+		& \textbf{\totalExergyEffCdThreeEightyNoReturn}
+		& \textbf{\totalExergyEffCdThreeNinetyNoReturn}
+		& \textbf{\totalExergyEffCdThreeStandardNoReturn}
+		& \textbf{\totalExergyEffCdThreeOneHundredTenNoReturn}
+		& \textbf{\totalExergyEffCdThreeOneHundredTwentyNoReturn}
+		& \textbf{0}
+		\\
+		\hline 
+		\textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\firstExergyEffCdThreeEightyNoReturn}
+		& \textbf{\firstExergyEffCdThreeNinetyNoReturn}
+		& \textbf{\firstExergyEffCdThreeStandardNoReturn}
+		& \textbf{\firstExergyEffCdThreeOneHundredTenNoReturn}
+		& \textbf{\firstExergyEffCdThreeOneHundredTwentyNoReturn}
+		& -
 		\\
 		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 		& \firstsecondSeparationAltCdThreeEightyNoReturn
@@ -1446,6 +1640,15 @@ Increasing the thrust of the third stage rocket also allows the SPARTAN to have 
 		& \firstsecondSeparationgammaCdThreeOneHundredTenNoReturn
 		& \firstsecondSeparationgammaCdThreeOneHundredTwentyNoReturn
 		& -
+		\\
+		\hline 
+		\textbf{2$^{nd}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\secondExergyEffCdThreeEightyNoReturn}
+		& \textbf{\secondExergyEffCdThreeNinetyNoReturn}
+		& \textbf{\secondExergyEffCdThreeStandardNoReturn}
+		& \textbf{\secondExergyEffCdThreeOneHundredTenNoReturn}
+		& \textbf{\secondExergyEffCdThreeOneHundredTwentyNoReturn}
+		& \textbf{-0.006}
 		\\
 		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 		& \secondthirdSeparationAltCdThreeEightyNoReturn
@@ -1495,6 +1698,15 @@ Increasing the thrust of the third stage rocket also allows the SPARTAN to have 
 		& \secondFlightTimeCdThreeOneHundredTwentyNoReturn
 		& -
 		\\
+		\hline 
+		\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\thirddExergyEffCdThreeEightyNoReturn}
+		& \textbf{\thirddExergyEffCdThreeNinetyNoReturn}
+		& \textbf{\thirddExergyEffCdThreeStandardNoReturn}
+		& \textbf{\thirddExergyEffCdThreeOneHundredTenNoReturn}
+		& \textbf{\thirddExergyEffCdThreeOneHundredTwentyNoReturn}
+		& \textbf{0.007}
+		\\
 		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 		& \thirdqOverFiveCdThreeEightyNoReturn
 		& \thirdqOverFiveCdThreeNinetyNoReturn
@@ -1511,24 +1723,17 @@ Increasing the thrust of the third stage rocket also allows the SPARTAN to have 
 		& \thirdmaxAoACdThreeOneHundredTwentyNoReturn
 		&0
 		\\
-		\textbf{3$^{rd}$ Stage final v (m/s)}
-		& \thirdcircvCdThreeEightyNoReturn
-		& \thirdcircvCdThreeNinetyNoReturn
-		& \thirdcircvCdThreeStandardNoReturn
-		& \thirdcircvCdThreeOneHundredTenNoReturn
-		& \thirdcircvCdThreeOneHundredTwentyNoReturn
-		& -
-		\\
-		\textbf{3$^{rd}$ Stage final m (kg)}
-		& \thirdcircmCdThreeEightyNoReturn
-		& \thirdcircmCdThreeNinetyNoReturn
-		& \thirdcircmCdThreeStandardNoReturn
-		& \thirdcircmCdThreeOneHundredTenNoReturn
-		& \thirdcircmCdThreeOneHundredTwentyNoReturn
-		& -
+		\textbf{3$^{rd}$ Stage Fuel Mass (kg)}
+		& \thirdmFuelCdThreeEightyNoReturn
+		& \thirdmFuelCdThreeNinetyNoReturn
+		& \thirdmFuelCdThreeStandardNoReturn
+		& \thirdmFuelCdThreeOneHundredTenNoReturn
+		& \thirdmFuelCdThreeOneHundredTwentyNoReturn
+		&0.04
 		\\
 		\hline 
 	\end{tabular} 
+	
 	
 \end{table}
 
