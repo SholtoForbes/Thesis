@@ -3,9 +3,6 @@
 \cleardoublepage
 \chapter{Optimised Trajectory Including Fly-Back}\label{chapter:Flyback}
 
-
-\textcolor{red}{note, bank angle is allowed to start at a high value. not sure how spartan will be released, leaving for now}
-
 This chapter presents the maximum payload-to-orbit optimised trajectory of the rocket-scramjet-rocket launch system, including the fly-back of the SPARTAN. 
  Returning the SPARTAN for landing at the initial launch site allows for rapid refurbishment and re-use, and is one of the primary enabling factors in the cost efficient operation of the launch system. 
 The fly-back of the SPARTAN requires a full turn-around of the SPARTAN, a glide which covers the necessary ground distance for return, and a deceleration which reduces the speed of the SPARTAN to landing approach velocity, while maintaining suitable high trajectory angle to allow for a controlled approach. 
@@ -84,6 +81,7 @@ This indicates that the launch system utilising the SPARTAN is capable of succes
 The maximum payload-to-orbit is reduced by XX\% compared to the optimised trajectory result without fly-back. The benefits of flying back the SPARTAN to its initial launch site, compared to the alternative of transporting the SPARTAN back to the launch site from a remote landing, are likely to far outweigh this associated reduction in payload. 
 
 
+
 \section{Ascent Trajectory}
 
  The initial launch for a maximum payload-to-orbit trajectory with SPARTAN fly-back is to the east.
@@ -105,10 +103,15 @@ During the ascent, the bank angle of the SPARTAN is significantly large and the 
 As a consequence, the net specific impulse of the SPARTAN is decreased during its acceleration, which can be observed in Figure \ref{fig:NetIspStandard}. This higher angle of attack results in no altitude raising manoeuvre in the middle of the acceleration trajectory of the SPARTAN. The SPARTAN no longer flies within the homogeneous region of the specific impulse of the C-REST engines, instead the flight conditions are close to a region where an increase in angle of attack causes a sharp decrease in specific impulse. 
 This indicates that at Mach 7 and 8 the angle of attack, and consequently, the allowable bank angle, of the SPARTAN may be being limited by the performance of the C-REST engines. 
 
- The bank angle is initially XX$^\circ$ at the first stage-SPARTAN separation, which aids the SPARTAN in decreasing its altitude to close to maximum dynamic pressure at XXs. The bank angle decreases as the SPARTAN reaches its maximum dynamic pressure, then adjusts and stays between XX$^\circ$ - XX$^\circ$ for the duration of the acceleration, until a pull-up is performed at XXs. During the pull-up, the bank angle is steadily reduced at its maximum change rate, until the release of the third stage rocket at 0$^\circ$ bank angle. 
+The first stage-SPARTAN separation is at a significantly higher altitude and trajectory angle when compared to the optimised trajectory with no SPARTAN fly-back in Section XX. This higher release point allows the first stage to achieve a higher velocity at separation, and causes a large altitude raising manoeuvre at the beginning of the SPARTAN's acceleration, which allows time for the bank angle of the SPARTAN to be increased. 
+ The bank angle is initially increased at the maximum change rate to XX$^\circ$ after the first stage-SPARTAN separation, which aids the SPARTAN in decreasing its altitude. As the dynamic pressure of the SPARTAN approaches its maximum, the bank angle stop increasing and the angle of attack is increased, to provide more lift to the SPARTAN to stop its descent. 
+As the SPARTAN reaches close to its maximum dynamic pressure at XXs, the angle of attack is reduced, and then the bank angle is increased, up to a maximum of XX. 
+ The bank angle stays between XX$^\circ$ - XX$^\circ$ for the duration of the acceleration, until a pull-up is performed at XXs. During the pull-up, the bank angle is steadily reduced at its maximum change rate, until the release of the third stage rocket at 0$^\circ$ bank angle. 
 
 A total fuel mass of XXkg is used during the SPARTAN's acceleration. This reduction in fuel mass used, along with the reduction in net specific impulse due to the higher angle of attack values, reduces the velocity at SPARTAN-third stage separation by XXm/s compared to the maximum payload-to-orbit case with no SPARTAN fly-back. The SPARTAN pulls up to \secondthirdSeparationAltStandard km altitude and \secondthirdSeparationgammaStandard $^\circ$ before SPARTAN-third stage separation, a difference of only XXkm and XX$^\circ$ compared to the maximum payload-to-orbit trajectory without fly-back. 
 
+
+-doesnt do the hop up to minimise ground distance covered
 
 
 \begin{figure}[ht!]
@@ -169,7 +172,7 @@ The SPARTAN reaches 1km altitude at XX$^\circ$ trajectory angle and XXm/s veloci
 
 \section{Design Sensitivity Analysis}
 
-It has been shown that the fly-back of the SPARTAN accelerator has a significant effect on the performance of the rocket-scramjet-rocket launch system, and that the maximum payload-to-orbit optimised trajectory changes significantly to compensate for the additional requirement of successfully returning the SPARTAN stage. The sensitivity of the launch system to changes in the vehicle design may be significantly affected by the fly-back trajectory, necessitating a sensitivity study be conducted with the fly-back of the SPARTAN included. As in Section \ref{sec:sensitivityNoReturn} this sensitivity study varies the following:
+It has been shown that the fly-back of the SPARTAN accelerator has a significant effect on the performance of the rocket-scramjet-rocket launch system, and that the maximum payload-to-orbit optimised trajectory changes significantly to compensate for the additional requirement of successfully returning the SPARTAN stage. The sensitivity of the launch system to changes in the vehicle design may be significantly affected by the fly-back trajectory, and as such, a sensitivity study is conducted with the fly-back of the SPARTAN included. As in Section \ref{sec:sensitivityNoReturn} this sensitivity study varies the following:
 \begin{itemize}
 	\item Dynamic Pressure
 	\item Specific Impulse
@@ -179,31 +182,42 @@ It has been shown that the fly-back of the SPARTAN accelerator has a significant
 	\item Third Stage Mass
 	\item Third Stage Thrust
 \end{itemize}
-As in Section \ref{sec:sensitivityNoReturn}, the effect of third stage drag is negligible. The third stage drag is omitted from this study. 
+As in Section \ref{sec:sensitivityNoReturn}, the effect of third stage drag is negligible. For this reason, variation in the third stage drag is omitted from this study. 
 
 
-The first stage-SPARTAN separation angle and altitude shows no clear trend in any of the sensitivity studies performed, in contrast to the sensitivity study with no fly-back, detailed in Section XX, in which the mass and drag parameters change the first stage release significantly. All of the optimised trajectory solutions show a distinct initial altitude raising manoeuvre, of similar size, controlled by the bank angle and angle of attack after first stage-SPARTAN separation.
-The similarly sized altitude raising manoeuvres with variation in drag indicates that this manoeuvre is no longer solely a product of an efficiency trade-off between the first stage pitching and SPARTAN engine efficiency. When fly-back is included and the SPARTAN is banking, this altitude raising manoeuvre allows large bank angles, changing the heading angle of the SPARTAN rapidly, while maintaining low angles of attack for efficiency. 
+
+In addition to investigating the trends in the performance of the launch system, this sensitivity study serves to verify the ability of LODESTAR to generate optimal trajectories with varied vehicle designs, as well as investigating the robustness of the optimised solution.
+The launch system is able to successfully place a small satellite in orbit for every varied performance condition which has been tested, while returning the SPARTAN to its initial launch location for landing. 
+Every maximum payload-to-orbit optimised trajectory exhibits considerable banking during the SPARTAN's ascent trajectory, as well as a pull-up of the SPARTAN before third stage release. 
+In every case the optimised return flight path exhibits an initial turn, boost and approach phase, with multiple skipping manoeuvres. 
+However, two aspects of the optimised trajectories vary between cases, exhibiting no clear trend across the sensitivity studies which have been performed; the first stage-SPARTAN release conditions, and the size of the second skip of the return phase. 
+
+\textcolor{red}{I need to make sure this is correct after all solutions are run}
+
+\textcolor{red}{i may be making too big of a deal about this, note similar work done}
+The first stage-SPARTAN separation angle and altitude shows no clear trend in any of the sensitivity studies performed, in contrast to the sensitivity study with no fly-back, detailed in Section XX, in which the mass and drag parameters change the first stage release significantly. All of the optimised trajectory solutions show a distinct initial altitude raising manoeuvre, however, their size is inconsistent across optimised trajectory solutions, indicating that this manoeuvre is no longer solely a product of an efficiency trade-off between the first stage pitching and SPARTAN engine efficiency. When fly-back is included and the SPARTAN is banking, this altitude raising manoeuvre allows large bank angles, changing the heading angle of the SPARTAN rapidly, while maintaining low angles of attack for efficiency. 
+In the maximum payload-to-orbit optimised trajectories calculated during the sensitivity analysis, it is observed that the trajectory angle at first-second stage release varies significantly between the optimised trajectories, in often unpredictable ways. When the SPARTAN is released at a high trajectory angle, there is a significant amount of time allowed for the bank angle to increase, and the high bank angle is utilised during the descent of the SPARTAN onto the maximum dynamic pressure path, where the trajectory angle is negative and the heading angle changes more rapidly. 
+When the trajectory angle at release of the SPARTAN is lower, the first stage is generally XX \textcolor{red}{look at exergy analysis}. A lower release angle results in the SPARTAN banking more, and flying a slightly less efficient trajectory. However, a lower release angle also results in the SPARTAN using its fuel more rapidly, and covering less ground, which results in the fly-back requiring less fuel. 
+The trade-off between first stage efficiency and the initial operational efficiency of the SPARTAN appears to be close, and 
+for each particular trajectory optimisation one or the other is favoured. 
 
 
-The release altitudes are significantly higher for the optimised maximum payload-to-orbit trajectory with fly-back of the SPARTAN than those of the optimised trajectories with no fly-back. 
-\textcolor{red}{i should probably point to this in the trajectory analysis at the start of this chapter}
+It is also observed that there are two distinct return trajectory shapes for the return trajectory of the SPARTAN. The more common return trajectory shape has been shown in the preceding section, and consists of three or more large skips to begin the return trajectory. The second trajectory shape exhibits a small second skip, with the first two burns very closely spaced, or combined into one longer burn. During the first two burns, a high bank angle is maintained  when compared to the large skip trajectory shape, however, after the first two burns are completed, the bank angle is reduced more rapidly. 
+An example of the second type of return trajectory is shown in Figure XX(appendix). 
+During simulations, it was observed that on occasion, the optimal return trajectory type would change as the initial guess or problem setup was altered, with no significant change in the fuel mass used during the return, or the payload-to-orbit capabilities of the launch system. This variability suggests that there is minimal difference between the two shapes of return trajectory. 
+
+
+
+
 
 \subsection{dynamic pressure}
 
-\textcolor{red}{might need to re-run this for better 60kpa result?}
+
 
 The maximum dynamic pressure  of the SPARTAN has an increased effect on the maximum payload-to-orbit optimised trajectory which includes the SPARTAN flying-back to the launch site. This is primarily due to the increased maximum dynamic pressure improving the manoeuvring capabilities of the SPARTAN and increasing the acceleration rate during ascent, which leads to a smaller flight time, and less ground coverage, generally reducing the amount of fuel necessary for fly-back. The exception is the fly-back of the 60kPa maximum dynamic pressure trajectory, which uses more fuel than the fly-back of the 55kPa maximum dynamic pressure trajectory. 
 
+Table \ref{tab:qvarreturn} shows a summary of the key parameters of each optimised trajectory, and trajectory comparison plots are shown in Appendix XX. The variation in each trajectory parameter per \% of the dynamic pressure is shown, if there is a clear trend. 
 
-
-
--initial skip is similar, loth lower q constraints having a slightly lower skip due to less velocity
-
--amount of fuel used for flyback generally decreases, though not for 60kPa case
-
--the increase in payload isnt as much to the 60kpa case, nor is the increase in velocity
--
 
 
 \begin{table}[ht]
@@ -212,7 +226,7 @@ The maximum dynamic pressure  of the SPARTAN has an increased effect on the maxi
 	\hline \textbf{Trajectory Condition}
 	&q40
 	&q45
-	&q100
+	&q50
 	&q55
 	&q60
 	& /\%
@@ -249,6 +263,14 @@ The maximum dynamic pressure  of the SPARTAN has an increased effect on the maxi
 	& \firstsecondSeparationgammaqSixty
 	& -
 	\\
+	\textbf{1st Stage $\Delta$Exergy (GJ)}
+	& \firstdExergyqForty
+	& \firstdExergyqFortyFive
+	& \firstdExergyqStandard
+	& \firstdExergyqFiftyFive
+	& \firstdExergyqSixty
+	& -
+	\\
 	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 	& \secondthirdSeparationAltqForty
 	& \secondthirdSeparationAltqFortyFive
@@ -279,7 +301,7 @@ The maximum dynamic pressure  of the SPARTAN has an increased effect on the maxi
 	& \secondthirdSeparationqqStandard
 	& \secondthirdSeparationqqFiftyFive
 	& \secondthirdSeparationqqSixty
-	&0.04
+	&0.05
 	\\
 	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
 	& \secondthirdSeparationLDqForty
@@ -295,7 +317,15 @@ The maximum dynamic pressure  of the SPARTAN has an increased effect on the maxi
 	& \secondFlightTimeqStandard
 	& \secondFlightTimeqFiftyFive
 	& \secondFlightTimeqSixty
-	&-2.58
+	&-2.57
+	\\
+	\textbf{2nd Stage $\Delta$Exergy (GJ)}
+	& \seconddExergyqForty
+	& \seconddExergyqFortyFive
+	& \seconddExergyqStandard
+	& \seconddExergyqFiftyFive
+	& \seconddExergyqSixty
+	&0.04
 	\\
 	\textbf{2$^{nd}$ Stage Return Fuel (kg)}
 	& \returnFuelqForty
@@ -321,7 +351,7 @@ The maximum dynamic pressure  of the SPARTAN has an increased effect on the maxi
 	& \thirdmaxAoAqSixty
 	&0
 	\\
-	\textbf{3$^{rd}$ Stage final v (m/s)}
+	\textbf{3$^{rd}$ Stage Circularisation v (m/s)}
 	& \thirdcircvqForty
 	& \thirdcircvqFortyFive
 	& \thirdcircvqStandard
@@ -329,16 +359,26 @@ The maximum dynamic pressure  of the SPARTAN has an increased effect on the maxi
 	& \thirdcircvqSixty
 	& -
 	\\
-	\textbf{3$^{rd}$ Stage final m (kg)}
+	\textbf{3$^{rd}$ Stage Circularisation m (kg)}
 	& \thirdcircmqForty
 	& \thirdcircmqFortyFive
 	& \thirdcircmqStandard
 	& \thirdcircmqFiftyFive
 	& \thirdcircmqSixty
-	&2.86
+	&2.85
+	\\
+	\textbf{3$^{rd}$ Stage Circularisation Energy (GJ)}
+	& \thirdcircEnergyqForty
+	& \thirdcircEnergyqFortyFive
+	& \thirdcircEnergyqStandard
+	& \thirdcircEnergyqFiftyFive
+	& \thirdcircEnergyqSixty
+	&0.19
 	\\
 	\hline 
 \end{tabular} 
+\caption{}
+\label{tab:qvarreturn}
 \end{table}
 
 
@@ -361,138 +401,170 @@ This smaller effect is due to the lower second stage acceleration time, which re
 
 \begin{table}[ht]
 	\centering
+\begin{tabular}{l c c c c c c} 
+	\hline \textbf{Trajectory Condition}
+	&Isp90
+	&Isp95
+	&Isp100
+	&Isp105
+	&Isp110
+	& /\%
+	\\
+	\hline \textbf{Payload to Orbit (kg)}
+	& \PayloadToOrbitIspNinety
+	& \PayloadToOrbitIspNinetyFive
+	& \PayloadToOrbitIspStandard
+	& \PayloadToOrbitIspOneHundredFive
+	& \PayloadToOrbitIspOneHundredTen
+	&1.7
+	\\
+	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+	& \firstsecondSeparationAltIspNinety
+	& \firstsecondSeparationAltIspNinetyFive
+	& \firstsecondSeparationAltIspStandard
+	& \firstsecondSeparationAltIspOneHundredFive
+	& \firstsecondSeparationAltIspOneHundredTen
+	& -
+	\\
+	\textbf{Separation v, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationvIspNinety
+	& \firstsecondSeparationvIspNinetyFive
+	& \firstsecondSeparationvIspStandard
+	& \firstsecondSeparationvIspOneHundredFive
+	& \firstsecondSeparationvIspOneHundredTen
+	& -
+	\\
+	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+	& \firstsecondSeparationgammaIspNinety
+	& \firstsecondSeparationgammaIspNinetyFive
+	& \firstsecondSeparationgammaIspStandard
+	& \firstsecondSeparationgammaIspOneHundredFive
+	& \firstsecondSeparationgammaIspOneHundredTen
+	& -
+	\\
+	\textbf{1st Stage $\Delta$Exergy (GJ)}
+	& \firstdExergyIspNinety
+	& \firstdExergyIspNinetyFive
+	& \firstdExergyIspStandard
+	& \firstdExergyIspOneHundredFive
+	& \firstdExergyIspOneHundredTen
+	& -
+	\\
+	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+	& \secondthirdSeparationAltIspNinety
+	& \secondthirdSeparationAltIspNinetyFive
+	& \secondthirdSeparationAltIspStandard
+	& \secondthirdSeparationAltIspOneHundredFive
+	& \secondthirdSeparationAltIspOneHundredTen
+	& -
+	\\
+	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+	& \secondthirdSeparationvIspNinety
+	& \secondthirdSeparationvIspNinetyFive
+	& \secondthirdSeparationvIspStandard
+	& \secondthirdSeparationvIspOneHundredFive
+	& \secondthirdSeparationvIspOneHundredTen
+	&11.13
+	\\
+	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+	& \secondthirdSeparationgammaIspNinety
+	& \secondthirdSeparationgammaIspNinetyFive
+	& \secondthirdSeparationgammaIspStandard
+	& \secondthirdSeparationgammaIspOneHundredFive
+	& \secondthirdSeparationgammaIspOneHundredTen
+	&-0.09
+	\\
+	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+	& \secondthirdSeparationqIspNinety
+	& \secondthirdSeparationqIspNinetyFive
+	& \secondthirdSeparationqIspStandard
+	& \secondthirdSeparationqIspOneHundredFive
+	& \secondthirdSeparationqIspOneHundredTen
+	& -
+	\\
+	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+	& \secondthirdSeparationLDIspNinety
+	& \secondthirdSeparationLDIspNinetyFive
+	& \secondthirdSeparationLDIspStandard
+	& \secondthirdSeparationLDIspOneHundredFive
+	& \secondthirdSeparationLDIspOneHundredTen
+	& -
+	\\
+	\textbf{2$^{nd}$ Stage Flight Time (s)}
+	& \secondFlightTimeIspNinety
+	& \secondFlightTimeIspNinetyFive
+	& \secondFlightTimeIspStandard
+	& \secondFlightTimeIspOneHundredFive
+	& \secondFlightTimeIspOneHundredTen
+	& -
+	\\
+	\textbf{2nd Stage $\Delta$Exergy (GJ)}
+	& \seconddExergyIspNinety
+	& \seconddExergyIspNinetyFive
+	& \seconddExergyIspStandard
+	& \seconddExergyIspOneHundredFive
+	& \seconddExergyIspOneHundredTen
+	&0.24
+	\\
+	\textbf{2$^{nd}$ Stage Return Fuel (kg)}
+	& \returnFuelIspNinety
+	& \returnFuelIspNinetyFive
+	& \returnFuelIspStandard
+	& \returnFuelIspOneHundredFive
+	& \returnFuelIspOneHundredTen
+	& -
+	\\
+	\textbf{2nd Stage Return $\Delta$Exergy (GJ)}
+	& \returndExergyIspNinety
+	& \returndExergyIspNinetyFive
+	& \returndExergyIspStandard
+	& \returndExergyIspOneHundredFive
+	& \returndExergyIspOneHundredTen
+	&-0.15
+	\\
+	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+	& \thirdqOverFiveIspNinety
+	& \thirdqOverFiveIspNinetyFive
+	& \thirdqOverFiveIspStandard
+	& \thirdqOverFiveIspOneHundredFive
+	& \thirdqOverFiveIspOneHundredTen
+	& -
+	\\
+	\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
+	& \thirdmaxAoAIspNinety
+	& \thirdmaxAoAIspNinetyFive
+	& \thirdmaxAoAIspStandard
+	& \thirdmaxAoAIspOneHundredFive
+	& \thirdmaxAoAIspOneHundredTen
+	& -
+	\\
+	\textbf{3$^{rd}$ Stage final v (m/s)}
+	& \thirdcircvIspNinety
+	& \thirdcircvIspNinetyFive
+	& \thirdcircvIspStandard
+	& \thirdcircvIspOneHundredFive
+	& \thirdcircvIspOneHundredTen
+	&11.82
+	\\
+	\textbf{3$^{rd}$ Stage final m (kg)}
+	& \thirdcircmIspNinety
+	& \thirdcircmIspNinetyFive
+	& \thirdcircmIspStandard
+	& \thirdcircmIspOneHundredFive
+	& \thirdcircmIspOneHundredTen
+	& -
+	\\
+	\textbf{3rd Stage $\Delta$Exergy (GJ)}
+	& \thirddExergyIspNinety
+	& \thirddExergyIspNinetyFive
+	& \thirddExergyIspStandard
+	& \thirddExergyIspOneHundredFive
+	& \thirddExergyIspOneHundredTen
+	& -
+	\\
+	\hline 
+\end{tabular} 
 
-	\begin{tabular}{l c c c c c c} 
-		\hline \textbf{Trajectory Condition}
-		&Isp90
-		&Isp95
-		&Isp100
-		&Isp105
-		&Isp110
-		& /\%
-		\\
-		\hline \textbf{Payload to Orbit (kg)}
-		& \PayloadToOrbitIspNinety
-		& \PayloadToOrbitIspNinetyFive
-		& \PayloadToOrbitIspStandard
-		& \PayloadToOrbitIspOneHundredFive
-		& \PayloadToOrbitIspOneHundredTen
-		&1.7
-		\\
-		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
-		& \firstsecondSeparationAltIspNinety
-		& \firstsecondSeparationAltIspNinetyFive
-		& \firstsecondSeparationAltIspStandard
-		& \firstsecondSeparationAltIspOneHundredFive
-		& \firstsecondSeparationAltIspOneHundredTen
-		& -
-		\\
-		\textbf{Separation v, 1$\rightarrow$2 (m/s)}
-		& \firstsecondSeparationvIspNinety
-		& \firstsecondSeparationvIspNinetyFive
-		& \firstsecondSeparationvIspStandard
-		& \firstsecondSeparationvIspOneHundredFive
-		& \firstsecondSeparationvIspOneHundredTen
-		& -
-		\\
-		\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
-		& \firstsecondSeparationgammaIspNinety
-		& \firstsecondSeparationgammaIspNinetyFive
-		& \firstsecondSeparationgammaIspStandard
-		& \firstsecondSeparationgammaIspOneHundredFive
-		& \firstsecondSeparationgammaIspOneHundredTen
-		& -
-		\\
-		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
-		& \secondthirdSeparationAltIspNinety
-		& \secondthirdSeparationAltIspNinetyFive
-		& \secondthirdSeparationAltIspStandard
-		& \secondthirdSeparationAltIspOneHundredFive
-		& \secondthirdSeparationAltIspOneHundredTen
-		& -
-		\\
-		\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
-		& \secondthirdSeparationvIspNinety
-		& \secondthirdSeparationvIspNinetyFive
-		& \secondthirdSeparationvIspStandard
-		& \secondthirdSeparationvIspOneHundredFive
-		& \secondthirdSeparationvIspOneHundredTen
-		&11.22
-		\\
-		\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
-		& \secondthirdSeparationgammaIspNinety
-		& \secondthirdSeparationgammaIspNinetyFive
-		& \secondthirdSeparationgammaIspStandard
-		& \secondthirdSeparationgammaIspOneHundredFive
-		& \secondthirdSeparationgammaIspOneHundredTen
-		&-0.09
-		\\
-		\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
-		& \secondthirdSeparationqIspNinety
-		& \secondthirdSeparationqIspNinetyFive
-		& \secondthirdSeparationqIspStandard
-		& \secondthirdSeparationqIspOneHundredFive
-		& \secondthirdSeparationqIspOneHundredTen
-		& -
-		\\
-		\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
-		& \secondthirdSeparationLDIspNinety
-		& \secondthirdSeparationLDIspNinetyFive
-		& \secondthirdSeparationLDIspStandard
-		& \secondthirdSeparationLDIspOneHundredFive
-		& \secondthirdSeparationLDIspOneHundredTen
-		& -
-		\\
-		\textbf{2$^{nd}$ Stage Flight Time (s)}
-		& \secondFlightTimeIspNinety
-		& \secondFlightTimeIspNinetyFive
-		& \secondFlightTimeIspStandard
-		& \secondFlightTimeIspOneHundredFive
-		& \secondFlightTimeIspOneHundredTen
-		& -
-		\\
-		\textbf{2$^{nd}$ Stage Return Fuel (kg)}
-		& \returnFuelIspNinety
-		& \returnFuelIspNinetyFive
-		& \returnFuelIspStandard
-		& \returnFuelIspOneHundredFive
-		& \returnFuelIspOneHundredTen
-		&-1.6
-		\\
-		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
-		& \thirdqOverFiveIspNinety
-		& \thirdqOverFiveIspNinetyFive
-		& \thirdqOverFiveIspStandard
-		& \thirdqOverFiveIspOneHundredFive
-		& \thirdqOverFiveIspOneHundredTen
-		&0.18
-		\\
-		\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
-		& \thirdmaxAoAIspNinety
-		& \thirdmaxAoAIspNinetyFive
-		& \thirdmaxAoAIspStandard
-		& \thirdmaxAoAIspOneHundredFive
-		& \thirdmaxAoAIspOneHundredTen
-		&0
-		\\
-		\textbf{3$^{rd}$ Stage final v (m/s)}
-		& \thirdcircvIspNinety
-		& \thirdcircvIspNinetyFive
-		& \thirdcircvIspStandard
-		& \thirdcircvIspOneHundredFive
-		& \thirdcircvIspOneHundredTen
-		&11.47
-		\\
-		\textbf{3$^{rd}$ Stage final m (kg)}
-		& \thirdcircmIspNinety
-		& \thirdcircmIspNinetyFive
-		& \thirdcircmIspStandard
-		& \thirdcircmIspOneHundredFive
-		& \thirdcircmIspOneHundredTen
-		& -
-		\\
-		\hline 
-	\end{tabular} 
 \end{table}
 
 \subsection{Cd}
@@ -532,7 +604,7 @@ The release altitude and angle of attack serve to initiate the first skip of the
 	& \PayloadToOrbitCdStandard
 	& \PayloadToOrbitCdOneHundredFive
 	& \PayloadToOrbitCdOneHundredTen
-	&-1.6
+	&-1.5
 	\\
 	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 	& \firstsecondSeparationAltCdNinety
@@ -558,13 +630,21 @@ The release altitude and angle of attack serve to initiate the first skip of the
 	& \firstsecondSeparationgammaCdOneHundredTen
 	& -
 	\\
+	\textbf{1st Stage $\Delta$Exergy (GJ)}
+	& \firstdExergyCdNinety
+	& \firstdExergyCdNinetyFive
+	& \firstdExergyCdStandard
+	& \firstdExergyCdOneHundredFive
+	& \firstdExergyCdOneHundredTen
+	&-0.06
+	\\
 	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 	& \secondthirdSeparationAltCdNinety
 	& \secondthirdSeparationAltCdNinetyFive
 	& \secondthirdSeparationAltCdStandard
 	& \secondthirdSeparationAltCdOneHundredFive
 	& \secondthirdSeparationAltCdOneHundredTen
-	&-0.05
+	&-0.04
 	\\
 	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
 	& \secondthirdSeparationvCdNinety
@@ -572,7 +652,7 @@ The release altitude and angle of attack serve to initiate the first skip of the
 	& \secondthirdSeparationvCdStandard
 	& \secondthirdSeparationvCdOneHundredFive
 	& \secondthirdSeparationvCdOneHundredTen
-	&-9.57
+	&-9.5
 	\\
 	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
 	& \secondthirdSeparationgammaCdNinety
@@ -606,13 +686,29 @@ The release altitude and angle of attack serve to initiate the first skip of the
 	& \secondFlightTimeCdOneHundredTen
 	& -
 	\\
+	\textbf{2nd Stage $\Delta$Exergy (GJ)}
+	& \seconddExergyCdNinety
+	& \seconddExergyCdNinetyFive
+	& \seconddExergyCdStandard
+	& \seconddExergyCdOneHundredFive
+	& \seconddExergyCdOneHundredTen
+	&-0.15
+	\\
 	\textbf{2$^{nd}$ Stage Return Fuel (kg)}
 	& \returnFuelCdNinety
 	& \returnFuelCdNinetyFive
 	& \returnFuelCdStandard
 	& \returnFuelCdOneHundredFive
 	& \returnFuelCdOneHundredTen
-	&3.65
+	& -
+	\\
+	\textbf{2nd Stage Return $\Delta$Exergy (GJ)}
+	& \returndExergyCdNinety
+	& \returndExergyCdNinetyFive
+	& \returndExergyCdStandard
+	& \returndExergyCdOneHundredFive
+	& \returndExergyCdOneHundredTen
+	&0.12
 	\\
 	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 	& \thirdqOverFiveCdNinety
@@ -636,7 +732,7 @@ The release altitude and angle of attack serve to initiate the first skip of the
 	& \thirdcircvCdStandard
 	& \thirdcircvCdOneHundredFive
 	& \thirdcircvCdOneHundredTen
-	&-8.26
+	&-8.51
 	\\
 	\textbf{3$^{rd}$ Stage final m (kg)}
 	& \thirdcircmCdNinety
@@ -644,6 +740,14 @@ The release altitude and angle of attack serve to initiate the first skip of the
 	& \thirdcircmCdStandard
 	& \thirdcircmCdOneHundredFive
 	& \thirdcircmCdOneHundredTen
+	& -
+	\\
+	\textbf{3rd Stage $\Delta$Exergy (GJ)}
+	& \thirddExergyCdNinety
+	& \thirddExergyCdNinetyFive
+	& \thirddExergyCdStandard
+	& \thirddExergyCdOneHundredFive
+	& \thirddExergyCdOneHundredTen
 	& -
 	\\
 	\hline 
@@ -658,11 +762,11 @@ The release altitude and angle of attack serve to initiate the first skip of the
 \centering
 \begin{tabular}{l c c c c c c} 
 	\hline \textbf{Trajectory Condition}
-	&m295
-	&m297.5
-	&m2100
-	&m2102.5
-	&m2105
+	&m
+	&m
+	&m
+	&m
+	&m
 	& /\%
 	\\
 	\hline \textbf{Payload to Orbit (kg)}
@@ -671,7 +775,7 @@ The release altitude and angle of attack serve to initiate the first skip of the
 	& \PayloadToOrbitmSPARTANStandard
 	& \PayloadToOrbitmSPARTANOneHundredTwoFive
 	& \PayloadToOrbitmSPARTANOneHundredFive
-	&-1.2
+	&-1.4
 	\\
 	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 	& \firstsecondSeparationAltmSPARTANNinetyFive
@@ -679,7 +783,7 @@ The release altitude and angle of attack serve to initiate the first skip of the
 	& \firstsecondSeparationAltmSPARTANStandard
 	& \firstsecondSeparationAltmSPARTANOneHundredTwoFive
 	& \firstsecondSeparationAltmSPARTANOneHundredFive
-	&-0.07
+	& -
 	\\
 	\textbf{Separation v, 1$\rightarrow$2 (m/s)}
 	& \firstsecondSeparationvmSPARTANNinetyFive
@@ -687,7 +791,7 @@ The release altitude and angle of attack serve to initiate the first skip of the
 	& \firstsecondSeparationvmSPARTANStandard
 	& \firstsecondSeparationvmSPARTANOneHundredTwoFive
 	& \firstsecondSeparationvmSPARTANOneHundredFive
-	&-7.95
+	&-7.84
 	\\
 	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
 	& \firstsecondSeparationgammamSPARTANNinetyFive
@@ -697,13 +801,21 @@ The release altitude and angle of attack serve to initiate the first skip of the
 	& \firstsecondSeparationgammamSPARTANOneHundredFive
 	& -
 	\\
+	\textbf{1st Stage $\Delta$Exergy (GJ)}
+	& \firstdExergymSPARTANNinetyFive
+	& \firstdExergymSPARTANNinetySevenFive
+	& \firstdExergymSPARTANStandard
+	& \firstdExergymSPARTANOneHundredTwoFive
+	& \firstdExergymSPARTANOneHundredFive
+	&-0.09
+	\\
 	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 	& \secondthirdSeparationAltmSPARTANNinetyFive
 	& \secondthirdSeparationAltmSPARTANNinetySevenFive
 	& \secondthirdSeparationAltmSPARTANStandard
 	& \secondthirdSeparationAltmSPARTANOneHundredTwoFive
 	& \secondthirdSeparationAltmSPARTANOneHundredFive
-	& -
+	&-0.06
 	\\
 	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
 	& \secondthirdSeparationvmSPARTANNinetyFive
@@ -711,7 +823,7 @@ The release altitude and angle of attack serve to initiate the first skip of the
 	& \secondthirdSeparationvmSPARTANStandard
 	& \secondthirdSeparationvmSPARTANOneHundredTwoFive
 	& \secondthirdSeparationvmSPARTANOneHundredFive
-	&-7.66
+	&-8.52
 	\\
 	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
 	& \secondthirdSeparationgammamSPARTANNinetyFive
@@ -719,7 +831,7 @@ The release altitude and angle of attack serve to initiate the first skip of the
 	& \secondthirdSeparationgammamSPARTANStandard
 	& \secondthirdSeparationgammamSPARTANOneHundredTwoFive
 	& \secondthirdSeparationgammamSPARTANOneHundredFive
-	&0.04
+	& -
 	\\
 	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
 	& \secondthirdSeparationqmSPARTANNinetyFive
@@ -745,6 +857,14 @@ The release altitude and angle of attack serve to initiate the first skip of the
 	& \secondFlightTimemSPARTANOneHundredFive
 	& -
 	\\
+	\textbf{2nd Stage $\Delta$Exergy (GJ)}
+	& \seconddExergymSPARTANNinetyFive
+	& \seconddExergymSPARTANNinetySevenFive
+	& \seconddExergymSPARTANStandard
+	& \seconddExergymSPARTANOneHundredTwoFive
+	& \seconddExergymSPARTANOneHundredFive
+	&0.06
+	\\
 	\textbf{2$^{nd}$ Stage Return Fuel (kg)}
 	& \returnFuelmSPARTANNinetyFive
 	& \returnFuelmSPARTANNinetySevenFive
@@ -769,15 +889,15 @@ The release altitude and angle of attack serve to initiate the first skip of the
 	& \thirdmaxAoAmSPARTANOneHundredFive
 	& -
 	\\
-	\textbf{3$^{rd}$ Stage final v (m/s)}
+	\textbf{3$^{rd}$ Stage Circularisation v (m/s)}
 	& \thirdcircvmSPARTANNinetyFive
 	& \thirdcircvmSPARTANNinetySevenFive
 	& \thirdcircvmSPARTANStandard
 	& \thirdcircvmSPARTANOneHundredTwoFive
 	& \thirdcircvmSPARTANOneHundredFive
-	&-7.7
+	& -
 	\\
-	\textbf{3$^{rd}$ Stage final m (kg)}
+	\textbf{3$^{rd}$ Stage Circularisation m (kg)}
 	& \thirdcircmmSPARTANNinetyFive
 	& \thirdcircmmSPARTANNinetySevenFive
 	& \thirdcircmmSPARTANStandard
@@ -785,29 +905,39 @@ The release altitude and angle of attack serve to initiate the first skip of the
 	& \thirdcircmmSPARTANOneHundredFive
 	& -
 	\\
+	\textbf{3$^{rd}$ Stage $\Delta$Exergy (GJ)}
+	& \thirddExergymSPARTANNinetyFive
+	& \thirddExergymSPARTANNinetySevenFive
+	& \thirddExergymSPARTANStandard
+	& \thirddExergymSPARTANOneHundredTwoFive
+	& \thirddExergymSPARTANOneHundredFive
+	& -
+	\\
+	\textbf{Total $\Delta$Exergy (GJ)}
+	& \totaldExergymSPARTANNinetyFive
+	& \totaldExergymSPARTANNinetySevenFive
+	& \totaldExergymSPARTANStandard
+	& \totaldExergymSPARTANOneHundredTwoFive
+	& \totaldExergymSPARTANOneHundredFive
+	& -
+	\\
 	\hline 
 \end{tabular} 
+
 \end{table}
 
 
 
--all return trajectories are the low second skip type
--I should identify this as an alternative trajectory type in the intro to this section
-
--spartan mass has a very small effect on the 1-2 separation altitude
---may be due to the heavier spartan requiring more aoa 
-
--heavier spartan requires more aoa for longer at start of trajectory, to pull out of descent
-
--all ascent trajectories very similar, with heavier spartan going a bit slower, but not pulling up much less (but does seem to pull-up a little less)
 
 
--less of an effect than in sensitivity study with no return
---doesnt decrease 2-3 stage separation v as much
---might be because its mainly flying in regions of high Isp, so that mass does not have as much of an effect on net isp
+The mass of the SPARTAN is varied by $\pm$5\% to investigate the sensitivity of the launch system performance to the structural mass of the second stage with the inclusion of the fly-back of the SPARTAN. 
+Varying the structural mass of the SPARTAN yields a change in potential payload-mass to orbit of 1.2kg per \% of structural mass variation. 
+The ascent trajectory varies little with variation in the mass of the SPARTAN. The lower velocity of first stage-SPARTAN separation means that when the SPARTAN is heavier, it is flying at lower velocities, which is beneficial for the specific impulse of the C-REST engines. For this reason, the heavier the SPARTAN is, the more acceleration is obtained over the scramjet-powered ascent. 
+Increasing the mass of the SPARTAN decreases the velocity at the end of the first stage by XX\%. Increasing the mass also decreases the altitude of first stage-SPARTAN separation by XX\%. 
+It was shown previously in Section XX that decreasing the velocity at first stage-SPARTAN separation does not necessarily affect the altitude of separation. The altitude decrease that is observed is likely to be caused by the increased mass of the SPARTAN requiring greater angle of attack to pull out of the initial altitude raising manoeuvre. As the mass of the SPARTAN increases, the angle of attack is raised for XXs longer to pull out of the descent onto a constant dynamic pressure path, and the decrease in altitude partially offsets the need for this manoeuvre. 
 
-
-
+The performance of the launch system shows less sensitivity to the mass of the SPARTAN in the presence of fly-back, 1.2kg/\% compared to 1.5kg/\% without SPARTAN fly-back. 
+The sensitivity of the SPARTAN-third stage separation velocity is correspondingly lower, -7.66m/s/\% with fly-back compared to -9.54m/s/\% without fly-back. This decreased effect on the separation velocity is due to the magnitude of the separation velocity, which is significantly lower when fly-back is included. This decreased separation velocity means that the SPARTAN is accelerating in a region of greater net specific impulse, so that the mass has less effect on the overall acceleration. 
 
 
 
@@ -830,7 +960,7 @@ The release altitude and angle of attack serve to initiate the first skip of the
 	& \PayloadToOrbitmFuelStandard
 	& \PayloadToOrbitmFuelOneHundredFive
 	& \PayloadToOrbitmFuelOneHundredTen
-	&0.8
+	&0.7
 	\\
 	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 	& \firstsecondSeparationAltmFuelNinety
@@ -846,7 +976,7 @@ The release altitude and angle of attack serve to initiate the first skip of the
 	& \firstsecondSeparationvmFuelStandard
 	& \firstsecondSeparationvmFuelOneHundredFive
 	& \firstsecondSeparationvmFuelOneHundredTen
-	&-2.58
+	&-2.56
 	\\
 	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
 	& \firstsecondSeparationgammamFuelNinety
@@ -854,7 +984,7 @@ The release altitude and angle of attack serve to initiate the first skip of the
 	& \firstsecondSeparationgammamFuelStandard
 	& \firstsecondSeparationgammamFuelOneHundredFive
 	& \firstsecondSeparationgammamFuelOneHundredTen
-	& -
+	&0.05
 	\\
 	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 	& \secondthirdSeparationAltmFuelNinety
@@ -870,7 +1000,7 @@ The release altitude and angle of attack serve to initiate the first skip of the
 	& \secondthirdSeparationvmFuelStandard
 	& \secondthirdSeparationvmFuelOneHundredFive
 	& \secondthirdSeparationvmFuelOneHundredTen
-	&5.3
+	&5.1
 	\\
 	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
 	& \secondthirdSeparationgammamFuelNinety
@@ -902,7 +1032,15 @@ The release altitude and angle of attack serve to initiate the first skip of the
 	& \secondFlightTimemFuelStandard
 	& \secondFlightTimemFuelOneHundredFive
 	& \secondFlightTimemFuelOneHundredTen
-	&4.82
+	&4.52
+	\\
+	\textbf{2$^{nd}$ Stage Return Fuel (kg)}
+	& \returnFuelmFuelNinety
+	& \returnFuelmFuelNinetyFive
+	& \returnFuelmFuelStandard
+	& \returnFuelmFuelOneHundredFive
+	& \returnFuelmFuelOneHundredTen
+	& -
 	\\
 	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 	& \thirdqOverFivemFuelNinety
@@ -926,7 +1064,7 @@ The release altitude and angle of attack serve to initiate the first skip of the
 	& \thirdcircvmFuelStandard
 	& \thirdcircvmFuelOneHundredFive
 	& \thirdcircvmFuelOneHundredTen
-	&7.54
+	&6.13
 	\\
 	\textbf{3$^{rd}$ Stage final m (kg)}
 	& \thirdcircmmFuelNinety
@@ -940,6 +1078,11 @@ The release altitude and angle of attack serve to initiate the first skip of the
 \end{tabular} 
 \end{table}
 	
+The fuel mass of the SPARTAN is varied by $\pm$10\%, to investigate the sensitivity of the performance of the launch system to variations in the size of the fuel tanks within the SPARTAN. 
+The sensitivity of the performance of the launch system to the fuel mass of the SPARTAN is very similar to the sensitivity observed in the study of the launch system with no SPARTAN fly-back. 
+The some of the additional fuel must be used for the fly-back of the SPARTAN, decreasing the effectiveness of the fuel added. However, this is counterbalanced by the additional fuel being utilised at lower velocities than in the no-fly back simulations, so that the additional fuel is used in a region where the C-REST engines have a higher specific impulse.
+
+As the fuel mass is increased, the trajectory of the SPARTAN varies similarly to the preceding section, when the mass of the SPARTAN is increased. An increase in the fuel mass of the SPARTAN results in a slightly longer period of high angle of attack required to pull out of its initial descent. The higher fuel mass then causes the SPARTAN to accelerate more slowly. However, the higher fuel mass allows the SPARTAN to accelerate for far longer, resulting in a significantly increased SPARTAN-third stage separation velocity. 
 
 \subsection{m3}
 
@@ -1078,15 +1221,14 @@ The release altitude and angle of attack serve to initiate the first skip of the
 	\end{tabular} 
 \end{table}
 
-The mass of the third stage rocket 
+The mass of the third stage rocket is varied by $\pm$10\% to investigate the sensitivity of the launch system to variations in the internal mass of the third stage. The internal mass which is varied is a combination of the fuel, structural and payload mass of the third stage. The structural mass held at 9\% of the total, non-TPS mass, and the remaining mass varied is the fuel and payload.
+
+The sensitivity of the performance of the launch system to the mass of the third stage rocket is much lower when the fly-back of the SPARTAN is included in the trajectory optimisation. 
+While the sensitivity of the third stage velocity and mass at circularisation to variations in the third stage mass is similar for the studies with and without fly-back, the release of the third stage from the SPARTAN is at considerably lower velocity when the fly-back of the SPARTAN is included, XX compared to XX for the baseline cases. 
+The exponential nature of the circularisation mass change, (exp(delta v)) in Equation XX, means that the velocity decrease at circularisation caused by increasing the third stage mass requires more fuel mass to overcome at lower total velocity. This causes the increased mass of the third stage to contribute less to payload as the total velocity decreases. 
 
 
--release of third stage with fly-back is at significantly lower velocity
--at lower velocity, higher angle of attack is required 
-
--the exponential nature of the circularisation mass change (exp(delta v)) means that the larger velocity difference cause by increasing the third stage mass makes more difference the lower the velocity is in the first place
-
-
+-\textcolor{red}{note exponential velocity dependence vs linear mass dependence}
 
 \subsection{T3}
 

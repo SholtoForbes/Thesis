@@ -50,19 +50,19 @@
 \BOOKMARK [1][-]{section.4.4}{Optimal Solution Analysis}{chapter.4}% 50
 \BOOKMARK [1][-]{section.4.5}{The Optimisation Process}{chapter.4}% 51
 \BOOKMARK [0][-]{chapter.5}{Optimised Ascent Trajectory}{}% 52
-\BOOKMARK [1][-]{section.5.1}{Constant Dynamic Pressure Trajectory}{chapter.5}% 53
-\BOOKMARK [1][-]{section.5.2}{Optimised Ascent Trajectory}{chapter.5}% 54
+\BOOKMARK [1][-]{section.5.1}{Case 1: Constant Dynamic Pressure Trajectory}{chapter.5}% 53
+\BOOKMARK [1][-]{section.5.2}{Case 2: Optimised Ascent Trajectory}{chapter.5}% 54
 \BOOKMARK [1][-]{section.5.3}{Sensitivity Analysis}{chapter.5}% 55
-\BOOKMARK [2][-]{subsection.5.3.1}{Dynamic Pressure Sensitivity}{section.5.3}% 56
-\BOOKMARK [2][-]{subsection.5.3.2}{Drag Sensitivity Analysis}{section.5.3}% 57
-\BOOKMARK [2][-]{subsection.5.3.3}{ISP}{section.5.3}% 58
-\BOOKMARK [2][-]{subsection.5.3.4}{mSPARTAN}{section.5.3}% 59
-\BOOKMARK [2][-]{subsection.5.3.5}{mFuel SPARTAN}{section.5.3}% 60
-\BOOKMARK [2][-]{subsection.5.3.6}{m3}{section.5.3}% 61
-\BOOKMARK [2][-]{subsection.5.3.7}{T3}{section.5.3}% 62
-\BOOKMARK [1][-]{section.5.4}{Cd3}{chapter.5}% 63
-\BOOKMARK [1][-]{section.5.5}{Comparison of Design Parameters}{chapter.5}% 64
-\BOOKMARK [1][-]{section.5.6}{Summary}{chapter.5}% 65
+\BOOKMARK [2][-]{subsection.5.3.1}{Case 3: Dynamic Pressure Sensitivity}{section.5.3}% 56
+\BOOKMARK [2][-]{subsection.5.3.2}{Case 4: SPARTAN Drag Sensitivity}{section.5.3}% 57
+\BOOKMARK [2][-]{subsection.5.3.3}{Case 5: C-REST Engine Specific Impulse Sensitivity}{section.5.3}% 58
+\BOOKMARK [2][-]{subsection.5.3.4}{Case 6: SPARTAN Mass Sensitivity}{section.5.3}% 59
+\BOOKMARK [2][-]{subsection.5.3.5}{Case 7: SPARTAN Fuel Mass Sensitivity}{section.5.3}% 60
+\BOOKMARK [2][-]{subsection.5.3.6}{Case 8: Third Stage Mass Sensitivity}{section.5.3}% 61
+\BOOKMARK [2][-]{subsection.5.3.7}{Case 9: Third Stage Thrust Sensitivity}{section.5.3}% 62
+\BOOKMARK [2][-]{subsection.5.3.8}{Case 10: Third Stage Drag Sensitivity}{section.5.3}% 63
+\BOOKMARK [1][-]{section.5.4}{Comparison of Design Parameters}{chapter.5}% 64
+\BOOKMARK [1][-]{section.5.5}{Summary}{chapter.5}% 65
 \BOOKMARK [0][-]{chapter.6}{Optimised Trajectory Including Fly-Back}{}% 66
 \BOOKMARK [1][-]{section.6.1}{Combined SPARTAN Ascent-Descent \046 Third Stage}{chapter.6}% 67
 \BOOKMARK [1][-]{section.6.2}{Ascent Trajectory}{chapter.6}% 68
