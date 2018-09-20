@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.8)  20 SEP 2018 15:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.8)  20 SEP 2018 17:01
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -2937,7 +2937,7 @@ File: ../LODESTAR_FINAL/Results/mode900/GroundTrackConstq.png Graphic file (typ
 e png)
  <use ../LODESTAR_FINAL/Results/mode900/GroundTrackConstq.png>
 Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode900/GroundTrackConstq.pn
-g used on input line 52.
+g used on input line 51.
 (pdftex.def)             Requested size: 483.69687pt x 391.09363pt.
 
 [93]
@@ -2947,7 +2947,7 @@ File: ../LODESTAR_FINAL/Results/mode900/FirstStageConstq.png Graphic file (type
  png)
  <use ../LODESTAR_FINAL/Results/mode900/FirstStageConstq.png>
 Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode900/FirstStageConstq.png
- used on input line 131.
+ used on input line 130.
 (pdftex.def)             Requested size: 435.32422pt x 368.7458pt.
 
 [94 <../LODESTAR_FINAL/Results/mode900/GroundTrackConstq.png (PNG copy)>]
@@ -2957,7 +2957,7 @@ File: ../LODESTAR_FINAL/Results/mode900/SecondStageConstq.png Graphic file (typ
 e png)
  <use ../LODESTAR_FINAL/Results/mode900/SecondStageConstq.png>
 Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode900/SecondStageConstq.pn
-g used on input line 148.
+g used on input line 147.
 (pdftex.def)             Requested size: 435.32422pt x 496.78255pt.
 
 [95]
@@ -2967,7 +2967,7 @@ File: ../LODESTAR_FINAL/Results/mode900/ThirdStageConstq.png Graphic file (type
  png)
  <use ../LODESTAR_FINAL/Results/mode900/ThirdStageConstq.png>
 Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode900/ThirdStageConstq.png
- used on input line 163.
+ used on input line 162.
 (pdftex.def)             Requested size: 435.32422pt x 368.7458pt.
 
 Underfull \vbox (badness 4505) has occurred while \output is active []
@@ -2982,60 +2982,62 @@ File: ../LODESTAR_FINAL/Results/mode10/GroundTrackStandard.png Graphic file (ty
 pe png)
  <use ../LODESTAR_FINAL/Results/mode10/GroundTrackStandard.png>
 Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode10/GroundTrackStandard.p
-ng used on input line 190.
+ng used on input line 189.
 (pdftex.def)             Requested size: 483.69687pt x 391.09363pt.
 
-[98 <../LODESTAR_FINAL/Results/mode900/ThirdStageConstq.png (PNG copy)>]
-<../LODESTAR_FINAL/Results/mode10/FirstStageStandard.png, id=2288, 639.89063pt 
+<../LODESTAR_FINAL/Results/mode10/FirstStageStandard.png, id=2284, 639.89063pt 
 x 542.025pt>
 File: ../LODESTAR_FINAL/Results/mode10/FirstStageStandard.png Graphic file (typ
 e png)
  <use ../LODESTAR_FINAL/Results/mode10/FirstStageStandard.png>
 Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode10/FirstStageStandard.pn
-g used on input line 199.
+g used on input line 198.
 (pdftex.def)             Requested size: 435.32422pt x 368.7458pt.
 
-[99 <../LODESTAR_FINAL/Results/mode10/GroundTrackStandard.png (PNG copy)>]
+Underfull \vbox (badness 3271) has occurred while \output is active []
+
+ [98 <../LODESTAR_FINAL/Results/mode900/ThirdStageConstq.png (PNG copy)>] [99 <
+../LODESTAR_FINAL/Results/mode10/GroundTrackStandard.png (PNG copy)>]
 <../LODESTAR_FINAL/Results/mode10/SecondStageStandard.png, id=2293, 639.89063pt
  x 721.19438pt>
 File: ../LODESTAR_FINAL/Results/mode10/SecondStageStandard.png Graphic file (ty
 pe png)
  <use ../LODESTAR_FINAL/Results/mode10/SecondStageStandard.png>
 Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode10/SecondStageStandard.p
-ng used on input line 283.
+ng used on input line 282.
 (pdftex.def)             Requested size: 435.32422pt x 490.6368pt.
 
 Underfull \vbox (badness 4505) has occurred while \output is active []
 
- [100 <../LODESTAR_FINAL/Results/mode10/FirstStageStandard.png (PNG copy)>] [10
-1]
-<../LODESTAR_FINAL/Results/mode10/NetIspStandard.png, id=2307, 676.02562pt x 46
+ [100 <../LODESTAR_FINAL/Results/mode10/FirstStageStandard.png (PNG copy)>]
+<../LODESTAR_FINAL/Results/mode10/NetIspStandard.png, id=2302, 676.02562pt x 46
 0.72125pt>
 File: ../LODESTAR_FINAL/Results/mode10/NetIspStandard.png Graphic file (type pn
 g)
  <use ../LODESTAR_FINAL/Results/mode10/NetIspStandard.png>
 Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode10/NetIspStandard.png us
-ed on input line 306.
+ed on input line 305.
 (pdftex.def)             Requested size: 386.95897pt x 263.72458pt.
 
-<../LODESTAR_FINAL/Results/mode10/IspStandard.png, id=2308, 421.575pt x 316.060
+<../LODESTAR_FINAL/Results/mode10/IspStandard.png, id=2303, 421.575pt x 316.060
 8pt>
 File: ../LODESTAR_FINAL/Results/mode10/IspStandard.png Graphic file (type png)
  <use ../LODESTAR_FINAL/Results/mode10/IspStandard.png>
 Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode10/IspStandard.png used 
-on input line 313.
+on input line 312.
 (pdftex.def)             Requested size: 386.95897pt x 290.11394pt.
 
-<../LODESTAR_FINAL/Results/mode10/ThirdStageStandard.png, id=2309, 639.89063pt 
+<../LODESTAR_FINAL/Results/mode10/ThirdStageStandard.png, id=2304, 639.89063pt 
 x 542.025pt>
 File: ../LODESTAR_FINAL/Results/mode10/ThirdStageStandard.png Graphic file (typ
 e png)
  <use ../LODESTAR_FINAL/Results/mode10/ThirdStageStandard.png>
 Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode10/ThirdStageStandard.pn
-g used on input line 324.
+g used on input line 323.
 (pdftex.def)             Requested size: 435.32422pt x 368.7458pt.
 
-Underfull \vbox (badness 5274) has occurred while \output is active []
+[101]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [102 <../LODESTAR_FINAL/Results/mode10/SecondStageStandard.png (PNG copy)>]
 
@@ -3048,16 +3050,16 @@ Overfull \vbox (1.47644pt too high) has occurred while \output is active []
 [103 <../LODESTAR_FINAL/Results/mode10/NetIspStandard.png> <../LODESTAR_FINAL/R
 esults/mode10/IspStandard.png>] [104 <../LODESTAR_FINAL/Results/mode10/ThirdSta
 geStandard.png (PNG copy)>]
-Overfull \hbox (3.9266pt too wide) in paragraph at lines 337--342
+Overfull \hbox (3.9266pt too wide) in paragraph at lines 336--341
 []\OT1/ptm/m/n/12 Compared to stud-ies con-sid-er-ing ve-hi-cles with a scramje
 t-rocket tran-si-tion within a sin-gle stage[[][]71[][],
  []
 
-[105] [106] [107]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[105] [106] [107] [108]
+Underfull \vbox (badness 6001) has occurred while \output is active []
 
- [108]
-[109] [110]
+ [109]
+[110]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [111]
@@ -3068,22 +3070,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 1360) has occurred while \output is active []
 
  [117]
-<figures/5_Ascent/BarChartRelativePayloadChange.png, id=2392, 459.96844pt x 271
-.76532pt>
+<figures/5_Ascent/BarChartRelativePayloadChange.png, id=2392, 1047.915pt x 465.
+23813pt>
 File: figures/5_Ascent/BarChartRelativePayloadChange.png Graphic file (type png
 )
  <use figures/5_Ascent/BarChartRelativePayloadChange.png>
 Package pdftex.def Info: figures/5_Ascent/BarChartRelativePayloadChange.png use
-d on input line 1800.
-(pdftex.def)             Requested size: 338.58632pt x 200.05818pt.
+d on input line 1798.
+(pdftex.def)             Requested size: 478.86255pt x 212.59944pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [118 <./figures/5_Ascent/BarChartRelativePayloadChange.png>]) (6_Flyback.tex [
-119]
-[120
+ [118 <./figures/5_Ascent/BarChartRelativePayloadChange.png>]
+Underfull \vbox (badness 6110) has occurred while \output is active []
 
-]
+ [119])
+(6_Flyback.tex [120]
 Chapter 6.
 
 <../LODESTAR_FINAL/Results/mode11/GroundTrackStandard.png, id=2408, 903.375pt x
@@ -3096,6 +3098,7 @@ ng used on input line 91.
 (pdftex.def)             Requested size: 483.69687pt x 391.09363pt.
 
 [121
+
 
 ]
 
@@ -3960,7 +3963,7 @@ nts/cm/cmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb>
 MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/
 type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on thesis.pdf (225 pages, 13186150 bytes).
+Output written on thesis.pdf (225 pages, 13216966 bytes).
 PDF statistics:
  3268 PDF objects out of 3580 (max. 8388607)
  742 named destinations out of 1000 (max. 500000)
