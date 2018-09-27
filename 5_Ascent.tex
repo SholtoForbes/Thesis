@@ -883,7 +883,7 @@ The exergy efficiency of the third stage is decreased as the specific impulse of
 
 \subsection{Case 6: SPARTAN Mass Sensitivity}\label{sec:SpartanMassnoreturn}
 
-
+\textcolor{red}{i need to add that the first stage efficiency decrease is also due to spending more time at less altitude}
 
 \begin{table}[ht]
 	\centering
@@ -1063,7 +1063,7 @@ This indicates that the trade-off between the efficiency of the SPARTAN and the 
 This seemingly runs counter to the results of Cases 4 and 5, which show the trade-off between the efficiencies of the SPARTAN and third stage shifting towards the SPARTAN as the exergy efficiency of the SPARTAN increases. 
 However, the exergy efficiency of the SPARTAN does not take into account the energy wasted accelerating the additional mass of the SPARTAN. This additional energy causes the overall exergy efficiency of the system to decrease as the mass of the SPARTAN increases, and causes the optimal trade-off between the exergy efficiencies of the SPARTAN and the third stage to shift towards the third stage. 
 
-\subsection{Case 7: SPARTAN Fuel Mass Sensitivity}
+\subsection{Case 7: SPARTAN Fuel Mass Sensitivity} \label{sec:fuelmassNoReturn}
 
 \begin{table}
 \begin{tabular}{l c c c c c c} 
@@ -1244,7 +1244,7 @@ In the previous cases it was shown that increasing, rather than decreasing, the 
 However, as the fuel mass is increased, the SPARTAN has more total energy from burning a greater amount of fuel. 
 The decreasing efficiency trend of the third stage rocket in the current case, which occurs as the the fuel mass of the SPARTAN is increased, implies that the more total energy which the SPARTAN is able to put towards 'useful' work, the more the efficiency trade-off between the SPARTAN and the third stage favours the SPARTAN. 
 
-\subsection{Case 8: Third Stage Mass Sensitivity}
+\subsection{Case 8: Third Stage Mass Sensitivity}\label{sec:m3noReturn}
 
 \begin{table}[ht]
 	\centering
@@ -1420,12 +1420,13 @@ The majority of the additional mass is used for fuel and structural mass, with o
  As the mass of the third stage increases, the altitude and trajectory angle of the first stage-SPARTAN separation point decrease, as was observed previously when the mass of the SPARTAN is increased. 
  The SPARTAN pulls-up to similar altitudes as the third stage mass is varied, however, the velocity at the SPARTAN-third stage separation is decreased by -75m/s (-2.8\%) at 110\% third stage mass, and increased by +65m/s (+2.4\%)  at 90\% third stage mass. 
  Consequently, a larger trajectory angle is required during SPARTAN pull-up, increasing by +0.9$^\circ$ (+8.3\%) when the third stage mass is increased, and decreasing by -0.4$^\circ$ (3.7\%) when the third stage mass is decreased. 
-As the mass of the third stage is varied by $\pm10\%$, the exergy efficiency of the SPARTAN varies by +0.262\% and -0.428\%, and the exergy efficiency of the third stage varies by +0.471\% and -0.379\%. The exergy efficiency of the SPARTAN varies due to flying at lower velocity when the third stage mass is higher, so that the specific impulse of the scramjet engines is higher. 
-The increase in the exergy efficiency of the third stage rocket as its mass increases is primarily due to a smaller percentage of the overall energy being needed to accelerate the heat shield, which is discarded, 'wasting' energy. As the mass of the heat shield becomes a significantly smaller overall percentage of the third stage mass, its exergy efficiency increases. 
+As the mass of the third stage is varied by $\pm10\%$, the exergy efficiency of the SPARTAN varies by +0.262\% and -0.428\%, and the exergy efficiency of the third stage varies by +0.471\% and -0.379\%. The exergy efficiency variation of the SPARTAN is due to the SPARTAN flying at lower velocity when the third stage mass is higher, resulting in higher specific impulse from the scramjet engines. 
+The increase in the exergy efficiency of the third stage rocket as its mass increases is primarily due to a smaller fraction of the fuel mass of the third stage being used during the in-atmosphere portion of its trajectory, 40.83\% of the total fuel mass at 90\%$m_3$, compared to 40.21\% at 110\%$m_3$. Within the atmosphere, atmospheric drag and the angle of attack necessary for altitude increase combine to decrease the exergy efficiency.
+In addition, a smaller percentage of the overall mass is dedicated to the heat shield, which is discarded, 'wasting' energy. As the mass of the heat shield becomes a significantly smaller overall percentage of the third stage mass, its exergy efficiency increases. 
 
 
 
-\subsection{Case 9: Third Stage Specific Impulse Sensitivity}
+\subsection{Case 9: Third Stage Specific Impulse Sensitivity}\label{sec:isp3NoReturn}
 
 \begin{table}[ht]
 	%note: these are labelled T3, but are actually Isp3. 
@@ -1771,7 +1772,7 @@ The first stage trajectory is not affected by variations in the drag of the thir
 The SPARTAN exhibits a slightly higher pull-up as the drag of the third stage is increased by 20\%, increasing altitude by +0.51km (+1.2\%), and trajectory angle at separation by +0.4$^\circ$ (+3.7\%) trajectory angle, while decreasing the separation velocity by -10.0m/s (-0.37\%). Conversely, decreasing the drag of the third stage by 20\% decreases the altitude at SPARTAN-third stage separation by -1.0km (-2.5\%), decreases the trajectory angle at separation by -0.6$^\circ$ (-5.6\%), and increases the velocity by +17m/s (+0.6\%). 
 Increasing the drag of the third stage by 20\% causes a decrease in the exergy efficiency of the SPARTAN of -0.092, and an increase in the efficiency of the third stage of +0.142\%, while decreasing the drag of the third stage by 20\% causes an increase in the exergy efficiency of the SPARTAN of +0.149\%, and a decrease in the third stage efficiency of -0.169\%. The exergy efficiency of the third stage increasing as the drag increases indicates that the trade-off between the efficiency of the SPARTAN and the third stage shifts towards the third stage significantly when the drag of the third stage is increased. The SPARTAN pulls-up to a higher altitude so that the third stage spends less time in a high dynamic pressure environment, where the increased drag has a significant effect, decreasing the energy loss due to the increased drag. The higher pull-up of the SPARTAN with the third stage drag increased by 20\%, decreases the time that the third stage spends above 5kPa dynamic pressure by -2.4s (-16.9\%) while the lower pull-up of the SPARTAN when the third stage drag is decreased by 20\% increases the time spent at greater than 5kPa dynamic pressure by +2.5s (+17.6\%).
 
-\section{Comparison of Design Parameters}
+\section{Comparison of Design Parameters}\label{sec:comparisonNoReturn}
 
 The preceding sections calculate the relative sensitivity of the launch system performance to a variety of design parameters. 
 Comparing and contrasting the sensitivity of the launch system to each design parameter allows for the relative impact of each design parameter to be assessed. 
@@ -1791,7 +1792,10 @@ The sensitivity to variation in the drag of the SPARTAN drag (1.9$\frac{\Delta k
 This implies that if a variation in the shape of the scramjet engines or forebody will increase the $I_{SP}$ of the SPARTAN by 1\% while increasing the drag of the SPARTAN by less than 1.16\%, then the performance of the launch system will be improved. 
 
  The aerodynamic performance of the third stage is shown to have only a very small impact on the performance of the launch system (0.02$\frac{\Delta kg}{\Delta\%C_{d,3}}$). This implies that for any third stage shape variations, the only relevant coupled factors are likely to be the structural and TPS mass necessary for in-atmosphere acceleration.
- The specific impulse of the third stage rocket has the highest percentage payload variation effect on the launch system of any of the design parameters tested, at 4.6$\frac{\Delta kg}{\Delta\%I_{SP,3}}$. Increasing the specific impulse of the third stage is likely to involve modifications to the engine, increasing the pressure within the fuel tanks, or adding a turbopump to assist fuel flow, all of which involve increasing the mass of the third stage rocket. So long as the specific impulse of the third stage can be increased at a rate of less than 3.1\% (101.2kg) mass gain for every 1.0\% $I_{SP}$ added, the performance of the launch system will be improved. However, increasing the specific impulse of the rocket engine is likely to add a large amount of cost to the third stage rocket, which is particularly important as the third stage is not reusable. This additional cost factor is likely to be the limiting factor on the specific impulse of the third stage rocket. 
+ The specific impulse of the third stage rocket has the highest percentage payload variation effect on the launch system of any of the design parameters tested, at 4.6$\frac{\Delta kg}{\Delta\%I_{SP,3}}$. Increasing the specific impulse of the third stage is likely to involve modifications to the engine, increasing the pressure within the fuel tanks, or adding a turbopump to assist fuel flow, all of which involve increasing the mass of the third stage rocket. 
+This additional mass is subtracted directly from the available payload mass of the system. This implies that so long as the specific impulse of the third stage can be increased by 1\% for less than 4.6kg additional mass, that the performance of the launch system will improve. 
+However, as previously, it is likely to be cost which is the main limiting factor to variations in the third stage specific impulse. 
+ However, increasing the specific impulse of the rocket engine is likely to add a large amount of cost to the third stage rocket, which is particularly important as the third stage is not reusable. This additional cost factor is likely to be the limiting factor on the specific impulse of the third stage rocket. 
 
 \begin{figure}[ht!]
 \centering
