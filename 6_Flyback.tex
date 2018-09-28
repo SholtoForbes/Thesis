@@ -2,7 +2,7 @@
 
 \cleardoublepage
 \chapter{Optimised Trajectory Including Fly-Back}\label{chapter:Flyback}
-\textcolor{red}{make sure that return fuel is in the same place in all tables}
+
 
 This chapter presents the maximum payload-to-orbit optimised trajectory of the rocket-scramjet-rocket launch system, including the fly-back of the SPARTAN. 
  Returning the SPARTAN for landing at the initial launch site allows for rapid refurbishment and re-use, and is one of the primary enabling factors in the cost efficient operation of the launch system. 
@@ -18,7 +18,6 @@ This chapter includes a sensitivity analysis, varying the:
 	\item Third Stage Mass,
 	\item \& Third Stage Thrust,
 \end{itemize}
-\textcolor{red}{case no.s}
 in the same manner as Chapter \ref{chapter:Ascent}. 
 This sensitivity analysis allows the influence of the fly-back of the SPARTAN on the design sensitivities of the launch system to be assessed.
 
@@ -28,7 +27,7 @@ This sensitivity analysis allows the influence of the fly-back of the SPARTAN on
 	\centering
 \begin{tabular}{l c } 
 	\hline \textbf{Trajectory Condition}
-	&Standard
+	& Value
 
 	\\
 	\hline \textbf{Payload to Orbit (kg)}
@@ -90,6 +89,7 @@ This sensitivity analysis allows the influence of the fly-back of the SPARTAN on
 	\\
 	\hline 
 \end{tabular} 
+\caption{Selected trajectory conditions for a maximum payload-to-orbit trajectory including SPARTAN fly-back.}
 \end{table}
 
 The trajectory of the rocket-scramjet-rocket launch system has been optimised in LODESTAR, including the return of the SPARTAN to its initial launch site. The optimised trajectory is shown in Figure \ref{fig:GroundTrackStandard}. 
@@ -100,7 +100,7 @@ This indicates that the launch system utilising the SPARTAN is capable of succes
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=1\linewidth]{../LODESTAR_FINAL/Results/mode11/GroundTrackStandard}
-	\caption{}
+	\caption{Maximum payload-to-orbit trajectory path with the inclusion of SPARTAN fly-back (Case 11). Initial heading angle of -12.44$^\circ$.}
 	\label{fig:GroundTrackStandard}
 \end{figure}
 The maximum payload-to-orbit is reduced by -10.0\% compared to the optimised trajectory result without fly-back. The benefits of flying back the SPARTAN to its initial launch site, compared to the alternative of transporting the SPARTAN back to the launch site from a remote landing, are likely to far outweigh this associated reduction in payload. 
@@ -124,20 +124,20 @@ The maximum payload-to-orbit is reduced by -10.0\% compared to the optimised tra
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=0.7\linewidth]{../LODESTAR_FINAL/Results/mode11/FirstStageStandard}
-\caption{}
+\caption{The first stage of the optimised maximum payload-to-orbit trajectory with SPARTAN fly-back (Case 11). }
 \label{fig:FirstStageStandard}
 \end{figure}
  
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=1\linewidth]{../LODESTAR_FINAL/Results/mode11/SecondStageStandard}
-\caption{}
+\caption{The acceleration of the SPARTAN flying an optimised maximum payload-to-orbit trajectory with SPARTAN fly-back (Case 11). }
 \label{fig:SecondStageStandard}
 \end{figure}
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=0.9\linewidth]{../LODESTAR_FINAL/Results/mode11/NetIspStandard}
-\caption{}
+\caption{Net $I_{SP}$ contours for the SPARTAN at Mach numbers between 6 and 8, showing the optimised trajectory path. }
 \label{fig:NetIspStandard}
 \end{figure}
 During the ascent, the bank angle of the SPARTAN is maintained between 50.4$^\circ$ and 58.6$^\circ$, exhibiting higher bank angles towards the latter part of the ascent. 
@@ -158,7 +158,7 @@ The exergy efficiency of the third stage is increased by +0.465\%$\eta$ (+2.3\%)
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=1\linewidth]{../LODESTAR_FINAL/Results/mode11/ThirdStageStandard}
-\caption{}
+\caption{The third stage trajectory of an optimised maximum payload-to-orbit trajectory with SPARTAN fly-back (Case 11). }
 \label{fig:ThirdStageStandard}
 \end{figure}
 
@@ -168,7 +168,7 @@ The exergy efficiency of the third stage is increased by +0.465\%$\eta$ (+2.3\%)
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=1\linewidth]{../LODESTAR_FINAL/Results/mode11/ReturnStandard}
-	\caption{}
+	\caption{The fly-back trajectory of the SPARTAN flying an optimised maximum payload-to-orbit trajectory (Case 11). }
 	\label{fig:ReturnStandard}
 \end{figure}
 
@@ -184,7 +184,7 @@ As the SPARTAN reaches the zenith of its initial skip, at 66.1s flight time and 
  At this point, the altitude of the SPARTAN is decreasing, and the SPARTAN rapidly comes close to hitting the maximum dynamic pressure limit of 50kPa. This increase in angle of attack, along with the aid of a reduction in the bank angle to 67.5$^\circ$, generates additional lift to slow the descent of the SPARTAN. 
 As the angle of attack of the SPARTAN increases, the high bank angle enables a large heading angle change during the initial phase of the trajectory, particularly at the first trough between the first and second skips. The heading angle increases from 104.8$^\circ$ at the beginning of fly-back, to 221.7$^\circ$ midway through the second skip. This large heading angle change minimises the total ground distance which the SPARTAN must cover during its return, decreasing the fuel mass necessary for fly-back. 
 
-\subsubsection{ Boost Phase}
+\subsubsection{ Boost-Skip Phase}
 At 182.8s flight time, as the bank angle is reducing, the scramjet engines are ignited. The C-REST engines are powered-on at a point of high potential specific impulse, at a low Mach number, and initially burn for 22s. The altitude of the SPARTAN is raised during the initial burn, ensuring that the Mach number is kept low for maximum efficiency. The maximum altitude during the burn is limited by the lower dynamic pressure limit of the C-REST engines of 20kPa. 
 At 204.8s flight time the initial burn ends, the angle of attack of the SPARTAN is decreased to 3.2$^\circ$, and the SPARTAN executes its second skip. As soon as the dynamic pressure is high enough for C-REST engine operation at 339.9s return flight time, the scramjet engines are once again ignited.
 During the second burn, the angle of attack of the SPARTAN is increased, to modify the temperature and Mach number at the inlet of the C-REST engines so that the maximum specific impulse is obtained from the C-REST engines during the burn. 
@@ -216,13 +216,13 @@ The SPARTAN reaches 1km altitude at -26.7$^\circ$ trajectory angle and 120.0m/s 
 
 It has been shown that the fly-back of the SPARTAN accelerator has a significant effect on the performance of the rocket-scramjet-rocket launch system, and that the maximum payload-to-orbit optimised trajectory changes significantly to compensate for the additional requirement of successfully returning the SPARTAN stage. The sensitivity of the launch system to changes in the vehicle design may be significantly affected by the fly-back trajectory, and as such, a sensitivity study is conducted with the fly-back of the SPARTAN included. This sensitivity study varies the following:
 \begin{itemize}
-	\item Dynamic Pressure
-	\item Specific Impulse
-	\item SPARTAN Drag
-	\item SPARTAN Mass
-	\item SPARTAN Fuel Mass
-	\item Third Stage Mass
-	\item Third Stage Thrust
+	\item Case 12: Dynamic Pressure, 
+	\item Case 13: Specific Impulse,
+	\item Case 14: SPARTAN Drag,
+	\item Case 15: SPARTAN Mass,
+	\item Case 16: SPARTAN Fuel Mass,
+	\item Case 17: Third Stage Mass,
+	\item \& Case 18: Third Stage Thrust.
 \end{itemize}
 As in Section \ref{sec:sensitivityNoReturn}, the effect of third stage drag is negligible. For this reason, variation in the third stage drag is omitted from this study. 
 
@@ -234,14 +234,11 @@ Every maximum payload-to-orbit optimised trajectory exhibits considerable bankin
 In every case the optimised return flight path exhibits an initial turn, boost and approach phase, with multiple skipping manoeuvres. 
 However, two aspects of the optimised trajectories vary between cases, exhibiting no clear trend across the sensitivity studies which have been performed; the first stage-SPARTAN release conditions, and the size of the second skip of the return phase. 
 
-\textcolor{red}{I need to make sure this is correct after all solutions are run}
-
-\textcolor{red}{i may be making too big of a deal about this, note similar work done}
-The first stage-SPARTAN separation angle and altitude shows no clear trend in any of the sensitivity studies performed, in contrast to the sensitivity study with no fly-back, detailed in Section XX, in which the mass and drag parameters change the first stage release significantly. All of the optimised trajectory solutions show a distinct initial altitude raising manoeuvre, however, their size is inconsistent across optimised trajectory solutions, indicating that this manoeuvre is no longer solely a product of an efficiency trade-off between the first stage pitching and SPARTAN engine efficiency. When fly-back is included and the SPARTAN is banking, this altitude raising manoeuvre allows large bank angles, changing the heading angle of the SPARTAN rapidly, while maintaining low angles of attack for efficiency. 
+The first stage-SPARTAN separation angle and altitude shows no clear trend in any of the sensitivity studies performed, except for the third stage mass variation, in contrast to the sensitivity study with no fly-back, detailed in Section \ref{sec:sensitivityNoReturn}, in which the SPARTAN mass and drag parameters change the first stage separation point significantly. All of the optimised trajectory solutions show a distinct initial altitude raising manoeuvre, however, their size is inconsistent across optimised trajectory solutions, indicating that this manoeuvre is no longer solely a product of an efficiency trade-off between the first stage pitching and SPARTAN engine efficiency. When fly-back is included and the SPARTAN is banking, this altitude raising manoeuvre allows large bank angles, changing the heading angle of the SPARTAN rapidly, while maintaining low angles of attack for efficiency. 
 In the maximum payload-to-orbit optimised trajectories calculated during the sensitivity analysis, it is observed that the trajectory angle at first-second stage release varies significantly between the optimised trajectories, in often unpredictable ways. When the SPARTAN is released at a high trajectory angle, there is a significant amount of time allowed for the bank angle to increase, and the high bank angle is utilised during the descent of the SPARTAN onto the maximum dynamic pressure path, where the trajectory angle is negative and the heading angle changes more rapidly. 
-When the trajectory angle at release of the SPARTAN is lower, the first stage is generally XX \textcolor{red}{look at exergy analysis}. A lower release angle results in the SPARTAN banking more, and flying a slightly less efficient trajectory. However, a lower release angle also results in the SPARTAN using its fuel more rapidly, and covering less ground, which results in the fly-back requiring less fuel. 
+ A lower release angle results in the SPARTAN banking more, and flying a slightly less efficient trajectory. However, a lower release angle also results in the SPARTAN using its fuel more rapidly, and covering less ground, which results in the fly-back requiring less fuel. 
 The trade-off between first stage efficiency and the initial operational efficiency of the SPARTAN appears to be close, and 
-for each particular trajectory optimisation one or the other is favoured. 
+for each particular trajectory optimisation one or the other is favoured with no clear trend. 
 
 
 It is also observed that there are two distinct return trajectory shapes for the return trajectory of the SPARTAN. The more common return trajectory shape has been shown in the preceding section, and consists of three or more large skips to begin the return trajectory. The second trajectory shape exhibits a small second skip, with the first two burns very closely spaced, or combined into one longer burn. During the first two burns, a high bank angle is maintained  when compared to the large skip trajectory shape, however, after the first two burns are completed, the bank angle is reduced more rapidly. 
@@ -642,7 +639,6 @@ the altitude of the SPARTAN-third stage separation shows a clear trend, decreasi
 The release altitude and angle of attack serve to initiate the first skip of the return trajectory in a consistent manner, so that the shape of the initial skip is very similar with drag variation. In all cases the angle of attack is reduced to 0$^\circ$ immediately during return to lessen the size of the initial skip, and is then raised to close to the maximum of 10$^\circ$ to prevent the dynamic pressure limit being exceeded. This consistency indicates that the initial skip of the return flight is driving the conditions at SPARTAN-third stage release, and that it is the control and structural limitations of the SPARTAN which determine the shape of this skip. 
 
 
-\textcolor{red}{XX fix this table}
 
 \begin{table}[ht]
 	\centering
@@ -769,6 +765,14 @@ The release altitude and angle of attack serve to initiate the first skip of the
 	& \secondFlightTimeCdOneHundredTen
 	& -
 	\\
+	\textbf{2$^{nd}$ Stage Return Fuel (kg)}
+	& \returnFuelCdNinety
+	& \returnFuelCdNinetyFive
+	& \returnFuelCdStandard
+	& \returnFuelCdOneHundredFive
+	& \returnFuelCdOneHundredTen
+	& -
+	\\
 	\hline 
 	\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
 	& \textbf{\thirddExergyEffCdNinety}
@@ -778,14 +782,7 @@ The release altitude and angle of attack serve to initiate the first skip of the
 	& \textbf{\thirddExergyEffCdOneHundredTen}
 	& \textbf{0.046}
 	\\
-	\textbf{2$^{nd}$ Stage Return Fuel (kg)}
-	& \returnFuelCdNinety
-	& \returnFuelCdNinetyFive
-	& \returnFuelCdStandard
-	& \returnFuelCdOneHundredFive
-	& \returnFuelCdOneHundredTen
-	& -
-	\\
+	
 	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 	& \thirdqOverFiveCdNinety
 	& \thirdqOverFiveCdNinetyFive
@@ -1561,7 +1558,7 @@ As the specific impulse of the third stage is increased, the angle of attack sch
 
 
 
-\subsection{Comparison of Sensitivities}
+\section{Comparison of Sensitivities}
 %0.4/(50*0.01)/(1.5/(4957*0.01)) calculated like this
 
 \begin{figure}[th]
@@ -1578,11 +1575,10 @@ This is due to the fly-back of the SPARTAN slightly offsetting the effects of th
 The sensitivity of the launch system to the maximum dynamic pressure is unchanged in the presence of fly-back. However, the slight decrease in the sensitivity of the launch system to the structural mass of the SPARTAN, to -1.4$\frac{\Delta kg}{\Delta\%m_{SPARTAN}}$, means that the potential beneficial effects of reducing the maximum dynamic pressure of the SPARTAN are reduced slightly. So long as the mass of the SPARTAN reduces by 28.3kg for each 1kPa reduction in the maximum dynamic pressure, the performance of the launch system will improve.
 
 In order to increase the specific impulse of the SPARTAN, it is likely that the shape of the C-REST engines or forebody will need to be modified, or extra systems will need to be added. 
- The sensitivity of the launch system to the specific impulse of the SPARTAN is decreased significantly when fly-back is included, to 1.7$\frac{\Delta kg}{\Delta\%I_{SP,SPARTAN}}$, a decrease of -0.5$\frac{\Delta kg}{\Delta\%I_{SP,SPARTAN}}$ (-22.7\%) compared to the sensitivity without fly-back. Comparing this with the SPARTAN structural mass sensitivity of -1.4$\frac{\Delta kg}{\Delta\%m_{SPARTAN}}$, this sensitivity implies that if the specific impulse of the SPARTAN can be increased by 1\% with less than 1.21\% increase in the total mass of the SPARTAN, then the overall performance of the launch system will be improved.  
+ The sensitivity of the launch system to the specific impulse of the SPARTAN is decreased significantly when fly-back is included, to 1.7$\frac{\Delta kg}{\Delta\%I_{SP,SPARTAN}}$, a decrease of -0.5$\frac{\Delta kg}{\Delta\%I_{SP,SPARTAN}}$ (-22.7\%) compared to the sensitivity without fly-back. Comparing this with the SPARTAN structural mass sensitivity of -1.4$\frac{\Delta kg}{\Delta\%m_{SPARTAN}}$, this sensitivity implies that if the specific impulse of the SPARTAN can be increased by 1\% with less than 1.21\% (60.0kg) increase in the total mass of the SPARTAN, then the overall performance of the launch system will be improved.  
 Similarly, the sensitivity of the launch system to variation in the drag of the SPARTAN is reduced, to -1.5$\frac{\Delta kg}{\Delta\%C_{d,SPARTAN}}$. This reduction indicates that if the specific impulse of the C-REST engines can be improved by 1\%, while increasing the drag of the SPARTAN by less than 1.13\% due to shape variation, that the overall performance change will be beneficial. 
-
-
-
+The decreased sensitivity of the launch system performance to the structural mass of the SPARTAN, along with the unchanged fuel mass sensitivity, means that so long as 1kg of fuel mass can be added with less than 1.59kg of structural mass added, the performance of the launch system will improve. Additionally, the decreased sensitivity of the launch system to the drag of the SPARTAN means that so long as 1kg of fuel can be added to the SPARTAN, with a drag increase of less than 0.030\%, then the maximum payload-to-orbit will increase. 
+The increased third stage mass sensitivity, to 1$\frac{\Delta kg}{\Delta\%m_{3}}$, along with the decreased SPARTAN drag sensitivity, means that if the size of the third stage can be increased so that the third stage mass increases by 1kg while the fuselage of the SPARTAN varied so that the increase in SPARTAN drag is less than 0.020\%, the maximum payload-to-orbit will increase. 
 
 
 
@@ -1594,17 +1590,20 @@ In this chapter, the maximum payload-to-orbit trajectory for a rocket-scramjet-r
 During the return flight, the scramjet engines are powered on three times, in total using \returnFuelStandard kg of fuel for the return flight.
 
 When the fly-back of the SPARTAN is included, The launch system launches in an easterly direction. 
-The  launch system exhibits a first stage-SPARTAN separation point of \firstsecondSeparationAltStandard km, an increase of 3.0km when compared to the maximum payload-to-orbit trajectory with no fly-back, and a trajectory angle of \firstsecondSeparationgammaStandard $^\circ$, an increase of 2.5$^\circ$. This higher separation point serves to increase the efficiency of the first stage, to \firstExergyEffStandard \%$\eta$, an increase of 0.426\%$\eta$ when compared to the maximum payload-to-orbit trajectory with no fly-back.
-In addition to increasing the exergy efficiency of the first stage, the higher first stage-SPARTAN separation serves to increase the altitude of the SPARTAN at the beginning of its trajectory. The SPARTAN banks heavily immediately after release and descends, allowing for the heading angle to change rapidly. The SPARTAN maintains a high bank angle throughout its trajectory, executing a banking manoeuvre, and staying close to its maximum dynamic pressure. 
-This banking manoeuvre decreases the exergy efficiency of the SPARTAN by -1.448\%$\eta$ (-12.2\%), but reduces the ground distance necessary for the return of the SPARTAN, decreasing the amount of fuel necessary for fly-back. 
+The launch system exhibits a first stage-SPARTAN separation point of \firstsecondSeparationAltStandard km, an increase of 3.0km when compared to the maximum payload-to-orbit trajectory with no fly-back, and a trajectory angle of \firstsecondSeparationgammaStandard $^\circ$, an increase of 2.5$^\circ$. 
+This higher separation point serves to increase the efficiency of the first stage, to \firstExergyEffStandard \%$\eta$, an increase of 0.426\%$\eta$ when compared to the maximum payload-to-orbit trajectory with no fly-back.
+In addition to increasing the exergy efficiency of the first stage, the higher first stage-SPARTAN separation serves to increase the altitude of the SPARTAN at the beginning of its trajectory. The SPARTAN banks heavily immediately after release, and descends, allowing for the heading angle to change rapidly. The SPARTAN maintains a high bank angle throughout its trajectory, executing a banking manoeuvre, and staying close to its maximum dynamic pressure. 
+This banking manoeuvre decreases the exergy efficiency of the SPARTAN by -1.448\%$\eta$ (-12.2\%), but also reduces the ground distance necessary for the return of the SPARTAN, decreasing the amount of fuel necessary for fly-back, and increasing the overall efficiency of the SPARTAN. 
 At the end of its acceleration, the SPARTAN was found to exhibit a pull-up manoeuvre before the separation of the third stage, in a similar fashion to the maximum payload-to-orbit trajectory with no fly-back. 
 
-
-
- In order to minimise the fuel used
- 
- The optimal trajectory terminates when SPARTAN reaches 1km altitude at a velocity of XXm/s. After this point, it is assumed that the SPARTAN lands on a traditional runway, at similar conditions to the space shuttle.  
+The fly-back of the SPARTAN is found to be separated into three stages; an initial turn, a boost phase, and an approach. 
+The initial turn takes place immediately after separation, and consists of the SPARTAN banking heavily in order to manoeuvre the heading angle back towards the initial launch site. 
+During the boost-skip phase the SPARTAN exhibits multiple 'skipping' manoeuvres. These skipping manoeuvres have been shown in previous literature to extend the flight range of hypersonic vehicles[CITEXX], and serve to reduce the amount of fuel used during the fly-back.
+In addition, the skipping manoeuvres allow the scramjet engines to be powered on at the points where the specific impulse of the C-REST engines are highest, maximising the performance of the SPARTAN, and minimising the fuel necessary for return. 
+During the approach phase, the trajectory of the SPARTAN is smoothed, and the SPARTAN glides to the landing point. 
+ The optimal trajectory terminates when SPARTAN reaches 1km altitude at a velocity of 120m/s. After this point, it is assumed that the SPARTAN lands on a traditional runway, at similar conditions to the space shuttle.  
 This result indicates that the fly-back of a hypersonic launch vehicle from high velocity separation at a Mach number greater than nine, returning to its initial launch site using scramjet hypersonic airbreathing engines, is feasible.  
 
-
+The sensitivity of the launch system to various design parameters is investigated. It is found that in all cases the exergy efficiency trade-off between the SPARTAN and the third stage rocket shifts in favour of the SPARTAN as the amount of 'useful' work available to the SPARTAN is increased, and vice versa. 
+The sensitivity of the launch system to variations in the specific impulse, drag and structural mass of the SPARTAN is decreased when fly-back is included, compared to the sensitivity study with no fly-back, indicating that the fly-back of the SPARTAN offsets some of the payload-to-orbit variation due to changes in these parameters. 
 

@@ -5,33 +5,34 @@
 \textcolor{red}{need to change \% efficiencies to \%$\eta$}
 
 This chapter presents a maximum payload-to-orbit trajectory optimisation for the rocket-scramjet-rocket launch system incorporating the SPARTAN scramjet-powered accelerator. 
-This launch system is simulated being launched from the Equatorial Launch Australia launch site in East Arnhem Land (Detailed in Section \ref{sec:mission}), and delivers a small satellite into sun synchronous orbit. LODESTAR is used to calculate maximum payload-to-orbit trajectory solutions for a variety of mission profiles.
-First, a trajectory is calculated for the case in which the SPARTAN flies at constant dynamic pressure. This trajectory is calculated to serve as a baseline for comparisons to be made, as previous studies have assumed that flying the SPARTAN at its maximum allowable dynamic pressure would produce the best overall system performance[CITEXX]. An optimal payload-to-orbit trajectory is then developed, and the trajectory shape compared and contrasted to the constant dynamic pressure trajectory.
+This launch system is simulated as being launched from the Equatorial Launch Australia launch site in East Arnhem Land (Detailed in Section \ref{sec:mission}), and delivers a small satellite into sun synchronous orbit. LODESTAR is used to calculate the maximum payload-to-orbit trajectory solutions for this launch system.
+First, a trajectory solution is calculated in which the SPARTAN flies at constant dynamic pressure. This trajectory is calculated to serve as a baseline for comparisons to be made, as previous studies have assumed that flying the SPARTAN at its maximum allowable dynamic pressure would produce the best overall system performance[CITEXX]. An optimal payload-to-orbit trajectory is then developed, and the trajectory shape compared and contrasted to the constant dynamic pressure trajectory.
 Lastly, a sensitivity study is performed, varying key performance parameters of the launch system and investigating the effects of each parameter on the performance of the launch system. 
 
 The following trajectories are developed: 
-\begin{enumerate}
-	\item: Case 1: $q = $ 50kPa fixed SPARTAN trajectory with minimum pull-up. \newline$\rightarrow$ This trajectory provides a baseline trajectory for comparison purposes.
-	\item: Case 2: Trajectory optimised for payload-to-orbit, $q_{max} = $ 50kPa. \newline$\rightarrow$ This trajectory demonstrates improved performance through trajectory optimisation.
-	\item: Case 3: Variation of maximum allowable dynamic pressure between $q_{max} = $ 40kPa \& $q_{max} = $ 60kPa. 
+\begin{itemize}
+	\item Case 1: $q = $ 50kPa fixed SPARTAN trajectory. \newline$\rightarrow$ This trajectory provides a baseline trajectory for comparison purposes.
+	\item Case 2: Trajectory optimised for payload-to-orbit, $q_{max} = $ 50kPa. \newline$\rightarrow$ This trajectory demonstrates improved performance through trajectory optimisation.
+	\item Case 3: Variation of maximum allowable dynamic pressure between $q_{max} = $ 40kPa \& $q_{max} = $ 60kPa. 
 	\newline$\rightarrow$ Comparison of these simulations allows an investigation into the influence of the SPARTAN's ability to withstand aerodynamic forces on the performance of the launch vehicle.
-	\item: Case 4: Variation of the coefficient of drag of the SPARTAN between $C_d = 90\%$ \& $C_d = 110\%$. 
-	\newline$\rightarrow$ Comparison of optimal trajectories with drag variation allows investigation of the effects of variations and uncertainties in the SPARTAN's aerodynamic design on launch system performance.
-	\item: Case 5: Variation of the specific impulse of the SPARTAN's C-REST engines between $I_{SP} = 90\%$ \& $I_{SP} = 110\%$. 
-	\newline$\rightarrow$ Comparison of optimal trajectories with specific impulse variation allows investigation of the effects of the efficiency of the C-REST engines on the performance of the launch system. 
-	\item: Case 6: Variation of the mass of the SPARTAN between $m_2 = 90\%$ \& $m_2 = 110\%$. 
+	\item Case 4: Variation of the coefficient of drag of the SPARTAN between $C_d = 90\%$ \& $C_d = 110\%$. 
+	\newline$\rightarrow$ Comparison of optimal trajectories with drag variation allows investigation of the effects of the SPARTAN's aerodynamic design on launch system performance.
+	\item Case 5: Variation of the specific impulse of the SPARTAN's C-REST engines between $I_{SP} = 90\%$ \& $I_{SP} = 110\%$. 
+	\newline$\rightarrow$ Comparison of optimal trajectories with C-REST specific impulse variation allows investigation of the effects of the efficiency of the C-REST engines on the performance of the launch system. 
+	\item Case 6: Variation of the mass of the SPARTAN between $m_2 = 95\%$ \& $m_2 = 105\%$. 
 	\newline$\rightarrow$ Comparison of optimal trajectories with SPARTAN mass variation allows investigation of the effects of the internal design of the SPARTAN on the launch system performance. 
-	\item: Case 7: Variation of the fuel mass of the SPARTAN between $m_{fuel} = 90\%$ \& $m_{fuel} = 110\%$. 
+	\item Case 7: Variation of the fuel mass of the SPARTAN between $m_{fuel} = 90\%$ \& $m_{fuel} = 110\%$. 
 	\newline$\rightarrow$ Comparison of optimal trajectories with SPARTAN fuel mass variation allows investigation of the effects of the amount of fuel which the SPARTAN is able to carry on the launch system efficiency. 
-	\item: Case 8: Variation of the mass of the third stage rocket between $m_3 = 90\%$ \& $m_3 = 110\%$. 
-	\newline$\rightarrow$ Comparison of optimal trajectories with third stage mass variation allows investigation of the effects of the third stage internal layout on the efficiency of the system. 
-	\item: Case 9: Variation of the thrust of the third stage rocket between $T_3 = 90\%$ \& $T_3 = 110\%$. 
-	\newline$\rightarrow$ Comparison of optimal trajectories with third stage thrust variation allows investigation of the effects of the output of the third stage engine on the efficiency of the launch system. 
-	\item Case 10: Variation of the coefficient of drag of the third stage rocket between $C_d = 90\%$ \& $C_d = 110\%$.
-	\newline$\rightarrow$ Comparison of optimal trajectories with third stage drag variation allows investigation of the effects of variations and uncertainties in the aerodynamic design of the third stage on the performance of the launch system.
-\end{enumerate}
-These case studies allow the benefits of flying an optimised trajectory to be quantified, and enable the key design parameters of the SPARTAN and third stage rocket to be characterised. Comparisons between the cases allows for the relative impact of each design parameter on the payload-to-orbit, as well as on the performance of each individual stage, to be assessed. 
-In order to effectively compare the performance of the stages of the launch system, exergy analysis is utilised. Exergy expresses how much useful work is available to a system, and exergy efficiency quantifies how well a system utilises the available work. Exergy is lost due to inefficiencies within a launch system. These inefficiencies arise from many sources, including the energy being lost due to the inability of the propulsion system to convert all of the combustion energy to thrust, the energy which must be used to overcome drag, and energy being lost due to manoeuvring. Exergy efficiency is an important parameter for analysing launch vehicles, allowing the relative efficiencies of each stage to be compared when the design or trajectory of a launch system is varied[CITEXX]. The exergy efficiency of a stage of a launch system is expressed as the fraction of the fuel combustion energy which is turned into kinetic and potential energy during flight:
+	\item Case 8: Variation of the mass of the third stage rocket between $m_3 = 90\%$ \& $m_3 = 110\%$. 
+	\newline$\rightarrow$ Comparison of optimal trajectories with third stage mass variation allows investigation of the effects of the third stage internal design on the efficiency of the system. 
+	\item Case 9: Variation of the specific impulse of the third stage rocket between $I_{SP,3} = 95\%$ \& $I_{SP,3} = 105\%$. 
+	\newline$\rightarrow$ Comparison of optimal trajectories with third stage specific impulse variation allows investigation of the effects of the efficiency of the third stage engine on the overall efficiency of the launch system. 
+	\item Case 10: Variation of the coefficient of drag of the third stage rocket between $C_d = 80\%$ \& $C_d = 120\%$.
+	\newline$\rightarrow$ Comparison of optimal trajectories with third stage drag variation allows investigation of the effects of the aerodynamic design of the third stage on the performance of the launch system.
+\end{itemize}
+These optimised trajectory cases allow the benefits of flying an optimised trajectory to be quantified, and enable the key design parameters of the SPARTAN and third stage rocket to be characterised. Comparisons between the sensitivity studies allow for the relative impact of each design parameter on the performance of the launch system to be assessed.
+ 
+The performance of launch system, as well as each individual stage, is quantified using exergy analysis. Exergy expresses how much useful work is available to a system, and exergy efficiency quantifies how well a system utilises the available work. Exergy is lost due to inefficiencies within a launch system. These inefficiencies arise from many sources, including the energy being lost due to the inability of the propulsion system to convert all of the combustion energy to thrust, the energy which must be used to overcome drag, and energy being lost due to manoeuvring. Exergy efficiency is an important parameter for analysing launch vehicles, allowing the relative efficiencies of each stage to be compared when the design or trajectory of a launch system is varied[CITEXX]. The exergy efficiency of a stage of a launch system is expressed as the fraction of the fuel combustion energy which is turned into kinetic and potential energy during flight:
 \begin{equation}
 \eta_{exergy,stage} = 1 - \frac{\Delta m_{fuel}H_{fuel} - \Delta KE - \int mg dz}{\Delta m_{fuel}H_{fuel}},
 \end{equation}
@@ -44,6 +45,7 @@ This exergy efficiency expresses how efficiently each stage utilises its availab
 \eta_{exergy} = \frac{\Delta KE_{payload} + \Delta PE_{payload}}{\sum_{stage} \Delta m_{fuel}H_{fuel}}.
 \end{equation}
 This total exergy efficiency expresses how efficiently the launch system as a whole is able to accelerate the payload to orbit. 
+Within this work, the exergy efficiency of the launch system, and each individual stage, is expressed as the percentage of total exergy utilised, \%$\eta$, ie. $\eta_{exergy} \times 100$. 
 
 \section{Case 1: Constant Dynamic Pressure Trajectory}
 \begin{figure}[ht]
@@ -288,14 +290,12 @@ These results indicate that the fuel mass utilised by the first stage has a dist
 
 After the initial deviation from the maximum dynamic pressure, the SPARTAN returns to 50kPa dynamic pressure for a time. 
 At 122.5 seconds, the altitude of the trajectory is again raised, and the dynamic pressure decreased, to a minimum of 35.6kPa. In this region the net specific impulse of the SPARTAN is relatively homogeneous with respect to changes in dynamic pressure. This homogeneous region can be observed in the specific impulse of the C-REST engines in Figure \ref{fig:IspStandard}, between inlet Mach number (M1) values of 6 and 7, and in Figure \ref{fig:NetIspStandardNoReturn}, in the Mach 7 and 8 plots of net specific impulse. This homogeneity means that the variation in engine performance with flight conditions is small and that flying at the maximum dynamic pressure in this region does not maximise the specific impulse from the C-REST engines. Figure \ref{fig:NetIspStandardNoReturn} shows that while the optimised trajectory differs significantly from a constant dynamic pressure trajectory, both achieve similar net specific impulses, with the exception of the initial trajectory conditions at Mach 5, where the efficiency of the SPARTAN is traded for first stage rocket performance. 
-
-
 Appendix \ref{sec:Appendix_qconst} details a maximum payload-to-orbit trajectory in which the trajectory is constrained to 50kPa between Mach 6-8, to prevent the altitude raising manoeuvre from taking place, for comparison. 
 The altitude raising manoeuvre
-increases the combined total efficiency launch system from \totalExergyEffqconstrained \% to \totalExergyEffStandardNoReturn \% (calculated including stage separations). This is a relatively minor variation, and the payload-to-orbit benefits of this altitude raising manoeuvre are correspondingly small. 
+increases the combined total efficiency launch system from \totalExergyEffqconstrained \% to \totalExergyEffStandardNoReturn \% (calculated including the energy lost due to stage separations). This is a relatively minor variation, and the payload-to-orbit benefits of this altitude raising manoeuvre are correspondingly small. 
 The optimised trajectory exhibits a payload-to-orbit increase of 0.4kg compared to the trajectory constrained to 50kPa between Mach 6-8, a difference of only 0.2\%.
 However, it is important to note that, while its benefits are small, the altitude raising manoeuvre is consistently observed in every maximum payload-to-orbit optimised trajectory. 
-Also, though its benefits to payload-to-orbit are small, this altitude raising manoeuvre is significant as it reduces the heating and structural loading on the SPARTAN, though it is beyond the scope of this study to quantify these benefits. 
+Also, despite its small benefit to payload-to-orbit, this altitude raising manoeuvre is significant as it reduces the heating and structural loading on the SPARTAN, though it is beyond the scope of this study to quantify these benefits. 
 
 
 
@@ -883,7 +883,6 @@ The exergy efficiency of the third stage is decreased as the specific impulse of
 
 \subsection{Case 6: SPARTAN Mass Sensitivity}\label{sec:SpartanMassnoreturn}
 
-\textcolor{red}{i need to add that the first stage efficiency decrease is also due to spending more time at less altitude}
 
 \begin{table}[ht]
 	\centering
@@ -1046,7 +1045,7 @@ The exergy efficiency of the third stage is decreased as the specific impulse of
 	&1.52
 	\\
 	\hline 
-\end{tabular} 
+\end{tabular}
 
 	
 \end{table}
@@ -1054,7 +1053,8 @@ The exergy efficiency of the third stage is decreased as the specific impulse of
 
 The mass of the SPARTAN is varied by $\pm$5\% ($\pm$247.9kg), to investigate the effects of the structural, thermal shielding, and system mass of the SPARTAN on the performance of the launch system. Only a total mass variation of 5\% is used, in order to prevent the first stage-SPARTAN separation velocity from dropping unacceptably low. 
 Variation in the mass of the SPARTAN causes the maximum payload-to-orbit of the launch system to vary by +7.4kg (+3.9\%) at 95\% structural mass and by -7.9kg (-4.2\%) at 105\% structural mass. 
-The exergy efficiency of the first stage rocket decreases as the mass of the SPARTAN is increased (-0.300\% at 105\% structural mass) and increases as the mass of the SPARTAN is decreased (+0.309\% at 95\% structural mass). Accelerating the additional SPARTAN mass is counted as 'useful' work during the first stage trajectory. However, as the mass of the SPARTAN increases, the altitude and trajectory angle at first stage-SPARTAN separation are decreased significantly. This change in separation conditions, along with the decreased exergy efficiency of the first stage, indicates that as the mass of the SPARTAN increases, it becomes beneficial to trade-off more of the exergy efficiency of the first stage to increase the performance of the SPARTAN. This variation in the optimal trade-off is due in part to the first stage being able to pitch more easily with added SPARTAN mass, so that it is physically able to achieve a wider range of separation conditions. The other factor which contributes to the variation in the optimal trade-off is the efficiency of the SPARTAN. As the SPARTAN's mass increases, the first stage-SPARTAN separation velocity decreases significantly. This results in the SPARTAN maintaining high specific impulse for a longer time at the beginning of its trajectory. As well as this initial increase in efficiency, the higher SPARTAN structural mass causes the SPARTAN to stay at relatively lower velocities over its trajectory, which results in a higher specific impulse throughout. The increased specific impulse of the SPARTAN means that the a larger trade-off of the first stage efficiency for the efficiency of the SPARTAN is beneficial. 
+The exergy efficiency of the first stage rocket decreases as the mass of the SPARTAN is increased (-0.300\% at 105\% structural mass) and increases as the mass of the SPARTAN is decreased (+0.309\% at 95\% structural mass). Accelerating the additional SPARTAN mass is counted as 'useful' work during the first stage trajectory. However, as the mass of the SPARTAN increases, the acceleration of the first stage decreases, and the first stage spends a larger time in high density conditions, causing the efficiency fo the system to be reduced.
+Additionally, the altitude and trajectory angle at first stage-SPARTAN separation are decreased significantly. This change in separation conditions, along with the decreased exergy efficiency of the first stage, indicates that as the mass of the SPARTAN increases, it becomes beneficial to trade-off more of the exergy efficiency of the first stage to increase the performance of the SPARTAN. This variation in the optimal trade-off is due in part to the first stage being able to pitch more easily with added SPARTAN mass, so that it is physically able to achieve a wider range of separation conditions. Another factor which contributes to the variation in the optimal trade-off is the efficiency of the SPARTAN. As the SPARTAN's mass increases, the first stage-SPARTAN separation velocity decreases significantly. This results in the SPARTAN maintaining high specific impulse for a longer time at the beginning of its trajectory. As well as this initial increase in efficiency, the higher SPARTAN structural mass causes the SPARTAN to stay at relatively lower velocities over its trajectory, which results in a higher specific impulse throughout. The increased specific impulse of the SPARTAN means that the a larger trade-off of the first stage efficiency for the efficiency of the SPARTAN is beneficial. 
 The increased efficiency of the C-REST engines, as well as the favourable trade-off from the first stage causes the exergy efficiency of the SPARTAN to rise as the structural mass increases (by +0.296\% at 105\% mass) and to decrease as the structural mass decreases (by -0.333\% at 95\% mass). However, as the SPARTAN mass is increased, more work must be used accelerating the additional mass, which is then separated, causing the overall efficiency of the launch system to decrease. 
 
 Variation in the structural mass of the SPARTAN does not significantly affect the altitude at the end of the pull-up manoeuvre, however, as the mass of the SPARTAN is varied, the velocity at SPARTAN-third stage separation does change significantly, by +46m/s (+17.1\%) at 95\% structural mass, and -50m/s (-18.6\%) at 105\% structural mass. In order to reach similar altitudes at the end of pull-up, the trajectory angle at the SPARTAN-third stage separation increases as the structural mass is increased (by +0.3$^\circ$, +2.8\% at 105\% structural mass) and decreases as the structural mass is decreased (by -0.2$^\circ$, -1.9\%, at 95\% structural mass). 
@@ -1774,6 +1774,13 @@ Increasing the drag of the third stage by 20\% causes a decrease in the exergy e
 
 \section{Comparison of Design Parameters}\label{sec:comparisonNoReturn}
 
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.99\linewidth]{figures/5_Ascent/BarChartRelativePayloadChange}
+	\caption{}
+	\label{fig:BarChartRelativePayloadChange}
+\end{figure}
+
 The preceding sections calculate the relative sensitivity of the launch system performance to a variety of design parameters. 
 Comparing and contrasting the sensitivity of the launch system to each design parameter allows for the relative impact of each design parameter to be assessed. 
 Figure \ref{fig:BarChartRelativePayloadChange} shows the change in payload mass per percentage point variation of each design parameter. 
@@ -1782,27 +1789,30 @@ However, a 1\% variation may have a significantly different implication in the c
 As such, the change per percentage is most useful when directly assessing each design parameter, and taking into account the associated effects on other, coupled design parameters. 
 
 The influence of maximum dynamic pressure on the performance of the launch system is very low, particularly when compared to the influence of closely linked the SPARTAN mass parameter. The SPARTAN's thermal protective properties and structural strength define the maximum dynamic pressure, so the low variance in performance with maximum dynamic pressure may be offset by the variation in the mass of the SPARTAN, ie. a lower maximum dynamic pressure requires less structural and thermal protection system mass.
- By comparing the relative sensitivities of the launch system dynamic pressure and SPARTAN mass (1.5$\frac{\Delta kg}{\Delta\%kg_{SPARTAN}}$), and their absolute magnitudes (50kPa and 4957kg respectively), it can be observed that so long as decreasing the dynamic pressure by 1kPa allows for a reduction in structural and TPS mass of greater than 26.5kg, then operating the SPARTAN at lower dynamic pressures may be preferable. 
+ By comparing the relative sensitivities of the launch system dynamic pressure and SPARTAN mass (1.5$\frac{\Delta kg}{\Delta\%kg_{SPARTAN}}$), and their absolute magnitudes (50kPa and 4957kg respectively), it can be observed that so long as decreasing the dynamic pressure by 1kPa allows for a reduction in structural and TPS mass of greater than -26.5kg, then operating the SPARTAN at lower dynamic pressures may be preferable. 
 
 The influence of the fuel mass of the SPARTAN is also low, however, the fuel mass is only a fraction of the total mass of the SPARTAN (24.0\%). This means that relatively small mass changes in fuel mass are still significant. Comparing the impact of the fuel mass and structural mass of the SPARTAN along with their relative magnitudes (1562kg of fuel mass and 4957kg of structural mass), the absolute impact of each is 0.044 and 0.030kg$_{payload}/$kg respectively. This implies that so long as fuel mass can be added to the SPARTAN with less than 1.47kg of structural mass incorporated for each kg of fuel mass, adding additional fuel mass will be beneficial. However, the fuel mass is constrained considerably by the available internal space within the SPARTAN, which is likely to be the main limiting factor.
+If the size of the fuselage of the SPARTAN is increased, the drag of the SPARTAN may be increased, so that the aerodynamic performance of the SPARTAN is decreased. 
+The sensitivity of the launch system to the drag of the SPARTAN, 1.9$\frac{\Delta kg}{\Delta\%C_d,{SPARTAN}}$, means that so long as 1kg of fuel mass can be added with less than 1.59kg of structural mass added, the performance of the launch system will improve. Additionally, the decreased sensitivity of the launch system to the drag of the SPARTAN means that so long as 1kg of fuel can be added to the SPARTAN, with a drag increase of less than 0.023\%, then the maximum payload-to-orbit will increase. 
+
 
 The specific impulse of the C-REST engines has a relatively large effect on the payload-to-orbit, of 2.2$\frac{\Delta kg}{\Delta\%I_{SP}}$. Increasing the specific impulse of the scramjet engines is likely to require the addition of extra systems within the scramjet engines, adding weight to the SPARTAN, or a change in the shape of the scramjet engines, adding drag to the SPARTAN. 
 The slightly lower sensitivity of the launch system to the SPARTAN mass (1.5$\frac{\Delta kg}{\Delta\%kg_{SPARTAN}}$) compared to the specific impulse, means that so long as increasing the $I_{SP}$ of the SPARTAN by 1\% increases the structural mass of the SPARTAN by less than 1.47\% (72.9kg), the performance of the launch system will improve. 
-The sensitivity to variation in the drag of the SPARTAN drag (1.9$\frac{\Delta kg}{\Delta\%C_d,{SPARTAN}}$) is similar in magnitude to the sensitivity to specific impulse. 
+The sensitivity of the launch system to variation of the SPARTAN drag (1.9$\frac{\Delta kg}{\Delta\%C_d,{SPARTAN}}$) is similar in magnitude to the sensitivity to specific impulse. 
 This implies that if a variation in the shape of the scramjet engines or forebody will increase the $I_{SP}$ of the SPARTAN by 1\% while increasing the drag of the SPARTAN by less than 1.16\%, then the performance of the launch system will be improved. 
+
+
 
  The aerodynamic performance of the third stage is shown to have only a very small impact on the performance of the launch system (0.02$\frac{\Delta kg}{\Delta\%C_{d,3}}$). This implies that for any third stage shape variations, the only relevant coupled factors are likely to be the structural and TPS mass necessary for in-atmosphere acceleration.
  The specific impulse of the third stage rocket has the highest percentage payload variation effect on the launch system of any of the design parameters tested, at 4.6$\frac{\Delta kg}{\Delta\%I_{SP,3}}$. Increasing the specific impulse of the third stage is likely to involve modifications to the engine, increasing the pressure within the fuel tanks, or adding a turbopump to assist fuel flow, all of which involve increasing the mass of the third stage rocket. 
 This additional mass is subtracted directly from the available payload mass of the system. This implies that so long as the specific impulse of the third stage can be increased by 1\% for less than 4.6kg additional mass, that the performance of the launch system will improve. 
+ Additionally, increasing the size of the third stage rocket is likely to require an increase in the size of the SPARTAN's fuselage. The sensitivity of the SPARTAN to drag, 1.9$\frac{\Delta kg}{\Delta\%C_d,{SPARTAN}}$, means that if the third stage can be enlarged so that the third stage mass increases by 1kg while the fuselage of the SPARTAN varied so that the increase in SPARTAN drag is less than 0.014\%, the maximum payload-to-orbit will increase. 
 However, as previously, it is likely to be cost which is the main limiting factor to variations in the third stage specific impulse. 
  However, increasing the specific impulse of the rocket engine is likely to add a large amount of cost to the third stage rocket, which is particularly important as the third stage is not reusable. This additional cost factor is likely to be the limiting factor on the specific impulse of the third stage rocket. 
 
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=0.99\linewidth]{figures/5_Ascent/BarChartRelativePayloadChange}
-\caption{}
-\label{fig:BarChartRelativePayloadChange}
-\end{figure}
+
+
+
 
 
 
@@ -1815,7 +1825,7 @@ A trajectory optimised for maximum payload-to-orbit was then calculated, which i
   The optimal flight path indicates that the optimal scramjet flight path for a system transitioning between separate airbreathing and rocket-powered stages involves the SPARTAN flying at less than its maximum dynamic pressure at three separate points along the trajectory. 
   Initially, the first stage-SPARTAN separation occurs at a higher trajectory angle than in the constant dynamic pressure trajectory, causing the SPARTAN to fly at lower dynamic pressure. 
   The optimal flight path then exhibits an altitude raising manoeuvre in the middle of the trajectory, which improves the exergy efficiency of the SPARTAN by a very minor 0.003\%$\eta$. 
-  Finally, the SPARTAN executes a pull-up manoeuvre before the SPARTAN-third stage separation. This optimal pull-up manoeuvre trades off velocity (a decrease of 116.2m/s) for altitude (an increase of 9.48km) and improved flight path angle (an increase of 10.45$^\circ$), when compared to the constant dynamic pressure case. 
+  Finally, the SPARTAN executes a pull-up manoeuvre before the SPARTAN-third stage separation. This optimal pull-up manoeuvre trades off velocity (a decrease of 116.2m/s) for altitude (an increase of 9.48km) and improved flight path angle (an increase of 10.45$^\circ$), when compared to the constant dynamic pressure case. \textcolor{red}{mention how much the efficiency is reduced}
   These conditions improve the exergy efficiency of the third stage rocket significantly, by 3.456\%$\eta$, an increase of 20.5\% over the third stage released from a constant dynamic pressure trajectory. 
  The pull up manoeuvre in the payload-to-orbit optimised trajectory also reduces the maximum dynamic pressure experienced by the third stage to 10.8kPa, a decrease of 43.4kPa compared to a trajectory with minimum pull-up, which allows future benefits due to heat shield mass reduction.  
 
