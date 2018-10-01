@@ -1,6 +1,6 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\contentsline {chapter}{List of figures}{xviii}{chapter*.14}
-\contentsline {chapter}{List of tables}{xx}{chapter*.15}
+\contentsline {chapter}{List of figures}{xx}{chapter*.14}
+\contentsline {chapter}{List of tables}{xxii}{chapter*.15}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Research aims}{3}{section.1.1}
 \contentsline {section}{\numberline {1.2}Thesis Outline and Contributions}{5}{section.1.2}
