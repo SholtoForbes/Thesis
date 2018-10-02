@@ -236,9 +236,185 @@ During simulations, it was observed that on occasion, the optimal return traject
 
 
 \subsection{Case 12: Dynamic Pressure Variation with Fly-Back Inclusion}
+
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{l c c c c c c} 
+		\hline \textbf{Trajectory Condition}   \qquad  $q_{max}$:
+		&40kPa
+		&45kPa
+		&50Kpa
+		&55kPa
+		&60kPa
+		& $\Delta/\Delta$/\%$q_{max}$
+		\\
+		\hline \textbf{Payload to Orbit (kg)}
+		& \textbf{\PayloadToOrbitqForty}
+		& \textbf{\PayloadToOrbitqFortyFive}
+		& \textbf{\PayloadToOrbitqStandard}
+		& \textbf{\PayloadToOrbitqFiftyFive}
+		& \textbf{\PayloadToOrbitqSixty}
+		&\textbf{0.4}
+		\\
+		\textbf{Payload Variation (\%)}
+		& \PayloadVarqForty
+		& \PayloadVarqFortyFive
+		& \PayloadVarqStandard
+		& \PayloadVarqFiftyFive
+		& \PayloadVarqSixty
+		&0.25
+		\\
+		\textbf{Total $\eta_{exergy}$ (\%)}
+		& \textbf{\totalExergyEffqForty}
+		& \textbf{\totalExergyEffqFortyFive}
+		& \textbf{\totalExergyEffqStandard}
+		& \textbf{\totalExergyEffqFiftyFive}
+		& \textbf{\totalExergyEffqSixty}
+		& \textbf{4e-05}
+		\\
+		\hline 
+		\textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\firstExergyEffqForty}
+		& \textbf{\firstExergyEffqFortyFive}
+		& \textbf{\firstExergyEffqStandard}
+		& \textbf{\firstExergyEffqFiftyFive}
+		& \textbf{\firstExergyEffqSixty}
+		& -
+		\\
+		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+		& \firstsecondSeparationAltqForty
+		& \firstsecondSeparationAltqFortyFive
+		& \firstsecondSeparationAltqStandard
+		& \firstsecondSeparationAltqFiftyFive
+		& \firstsecondSeparationAltqSixty
+		& -
+		\\
+		\textbf{Separation v, 1$\rightarrow$2 (m/s)}
+		& \firstsecondSeparationvqForty
+		& \firstsecondSeparationvqFortyFive
+		& \firstsecondSeparationvqStandard
+		& \firstsecondSeparationvqFiftyFive
+		& \firstsecondSeparationvqSixty
+		& -
+		\\
+		\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+		& \firstsecondSeparationgammaqForty
+		& \firstsecondSeparationgammaqFortyFive
+		& \firstsecondSeparationgammaqStandard
+		& \firstsecondSeparationgammaqFiftyFive
+		& \firstsecondSeparationgammaqSixty
+		& -
+		\\
+		\hline 
+		\textbf{2$^{nd}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\secondExergyEffqForty}
+		& \textbf{\secondExergyEffqFortyFive}
+		& \textbf{\secondExergyEffqStandard}
+		& \textbf{\secondExergyEffqFiftyFive}
+		& \textbf{\secondExergyEffqSixty}
+		& -
+		\\
+		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+		& \secondthirdSeparationAltqForty
+		& \secondthirdSeparationAltqFortyFive
+		& \secondthirdSeparationAltqStandard
+		& \secondthirdSeparationAltqFiftyFive
+		& \secondthirdSeparationAltqSixty
+		&-0.02
+		\\
+		\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+		& \secondthirdSeparationvqForty
+		& \secondthirdSeparationvqFortyFive
+		& \secondthirdSeparationvqStandard
+		& \secondthirdSeparationvqFiftyFive
+		& \secondthirdSeparationvqSixty
+		&1.99
+		\\
+		\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+		& \secondthirdSeparationgammaqForty
+		& \secondthirdSeparationgammaqFortyFive
+		& \secondthirdSeparationgammaqStandard
+		& \secondthirdSeparationgammaqFiftyFive
+		& \secondthirdSeparationgammaqSixty
+		& -
+		\\
+		\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+		& \secondthirdSeparationqqForty
+		& \secondthirdSeparationqqFortyFive
+		& \secondthirdSeparationqqStandard
+		& \secondthirdSeparationqqFiftyFive
+		& \secondthirdSeparationqqSixty
+		&0.04
+		\\
+		\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+		& \secondthirdSeparationLDqForty
+		& \secondthirdSeparationLDqFortyFive
+		& \secondthirdSeparationLDqStandard
+		& \secondthirdSeparationLDqFiftyFive
+		& \secondthirdSeparationLDqSixty
+		&0.02
+		\\
+		\textbf{2$^{nd}$ Stage Flight Time (s)}
+		& \secondFlightTimeqForty
+		& \secondFlightTimeqFortyFive
+		& \secondFlightTimeqStandard
+		& \secondFlightTimeqFiftyFive
+		& \secondFlightTimeqSixty
+		&-1.58
+		\\
+		\textbf{2$^{nd}$ Stage Return Fuel (kg)}
+		& \returnFuelqForty
+		& \returnFuelqFortyFive
+		& \returnFuelqStandard
+		& \returnFuelqFiftyFive
+		& \returnFuelqSixty
+		& -
+		\\
+		\hline 
+		\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\thirddExergyEffqForty}
+		& \textbf{\thirddExergyEffqFortyFive}
+		& \textbf{\thirddExergyEffqStandard}
+		& \textbf{\thirddExergyEffqFiftyFive}
+		& \textbf{\thirddExergyEffqSixty}
+		& -
+		\\
+		
+		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+		& \thirdqOverFiveqForty
+		& \thirdqOverFiveqFortyFive
+		& \thirdqOverFiveqStandard
+		& \thirdqOverFiveqFiftyFive
+		& \thirdqOverFiveqSixty
+		& -
+		\\
+		\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
+		& \thirdmaxAoAqForty
+		& \thirdmaxAoAqFortyFive
+		& \thirdmaxAoAqStandard
+		& \thirdmaxAoAqFiftyFive
+		& \thirdmaxAoAqSixty
+		&0
+		\\
+		\textbf{3$^{rd}$ Stage Fuel Mass (kg)}
+		& \thirdmFuelqForty
+		& \thirdmFuelqFortyFive
+		& \thirdmFuelqStandard
+		& \thirdmFuelqFiftyFive
+		& \thirdmFuelqSixty
+		&-0.42
+		\\
+		\hline 
+	\end{tabular} 
+	\caption{Comparison of key trajectory parameters with variation in the maximum dynamic pressure of the SPARTAN, with fly-back.}
+	\label{tab:qvarreturn}
+\end{table}
+
+
 The maximum dynamic pressure allowable during flight is varied by $\pm$20\% in order to determine the sensitivity of the launch system to the structural and thermal limitations of the SPARTAN. 
 No significant variation is observed between sensitivity studies with or without the fly-back included in the sensitivity of the launch system to the maximum dynamic pressure of the SPARTAN, by percentage. 
-Table \ref{tab:qvarreturn} shows a summary of the key parameters of each optimised trajectory, and trajectory comparison plots are shown in Appendix XX. The variation in each trajectory parameter per \% of the dynamic pressure is shown, if there is a clear trend. The payload-to-orbit of the launch system improves by +9.4kg (+5.51\%) at 60kPa, and decreases by -7.7kg (-4.52\%) at 40kPa.
+Table \ref{tab:qvarreturn} shows a summary of the key parameters of each optimised trajectory, and trajectory comparison plots are shown in Appendix \ref{sec:app_comparison21}. The variation in each trajectory parameter per \% of the dynamic pressure is shown, if there is a clear trend. The payload-to-orbit of the launch system improves by +9.4kg (+5.51\%) at 60kPa, and decreases by -7.7kg (-4.52\%) at 40kPa.
 the overall exergy efficiency of the system increases as the maximum dynamic pressure increases, by +0.06\% at 60kPa, and decreases as the maximum dynamic pressure decreases, by -0.062\% at 40kpa. 
 
 No trends are observed in the exergy efficiencies of each stage due to maximum dynamic pressure variation, when fly-back is included. Compared to the sensitivity study with no fly-back, the trade-offs between the efficiencies of the stages include the manoeuvrability of the SPARTAN, which dictates the fuel used during the return flight. This additional factor produces more complicated energy trade-offs, resulting in differing optimal trajectory shapes. This can particularly be observed in the 45kPa maximum dynamic pressure trajectory, which exhibits significantly different trade-offs between each stage, when compared to the other cases. 
@@ -253,366 +429,184 @@ The exergy efficiency of the SPARTAN is relatively consistent across the simulat
 This is due to the higher maximum dynamic pressure simulations using more fuel during the acceleration of the SPARTAN, and accelerating more over the trajectory (the velocity at SPARTAN-third stage separation increases by +51m/s, 2.0\%, at 60kpa maximum dynamic pressure, and decreases by -28m/s, 1.1\%, at 40kPa), resulting in the specific impulse of the scramjet engines being lower at the end of the acceleration. Overall, the SPARTAN is utilising more fuel mass at similar efficiencies, so that more overall 'useful' work is being gained. 
 
 
-
-\begin{table}[ht]
-\centering
-\begin{tabular}{l c c c c c c} 
-	\hline \textbf{Trajectory Condition}
-	&qForty
-	&qFortyFive
-	&qStandard
-	&qFiftyFive
-	&qSixty
-	& $\Delta/\Delta$/\%
-	\\
-	\hline \textbf{Payload to Orbit (kg)}
-	& \textbf{\PayloadToOrbitqForty}
-	& \textbf{\PayloadToOrbitqFortyFive}
-	& \textbf{\PayloadToOrbitqStandard}
-	& \textbf{\PayloadToOrbitqFiftyFive}
-	& \textbf{\PayloadToOrbitqSixty}
-	&\textbf{0.4}
-	\\
-	\textbf{Payload Variation (\%)}
-	& \PayloadVarqForty
-	& \PayloadVarqFortyFive
-	& \PayloadVarqStandard
-	& \PayloadVarqFiftyFive
-	& \PayloadVarqSixty
-	&0.25
-	\\
-	\textbf{Total $\eta_{exergy}$ (\%)}
-	& \textbf{\totalExergyEffqForty}
-	& \textbf{\totalExergyEffqFortyFive}
-	& \textbf{\totalExergyEffqStandard}
-	& \textbf{\totalExergyEffqFiftyFive}
-	& \textbf{\totalExergyEffqSixty}
-	& \textbf{4e-05}
-	\\
-	\hline 
-	\textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
-	& \textbf{\firstExergyEffqForty}
-	& \textbf{\firstExergyEffqFortyFive}
-	& \textbf{\firstExergyEffqStandard}
-	& \textbf{\firstExergyEffqFiftyFive}
-	& \textbf{\firstExergyEffqSixty}
-	& -
-	\\
-	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
-	& \firstsecondSeparationAltqForty
-	& \firstsecondSeparationAltqFortyFive
-	& \firstsecondSeparationAltqStandard
-	& \firstsecondSeparationAltqFiftyFive
-	& \firstsecondSeparationAltqSixty
-	& -
-	\\
-	\textbf{Separation v, 1$\rightarrow$2 (m/s)}
-	& \firstsecondSeparationvqForty
-	& \firstsecondSeparationvqFortyFive
-	& \firstsecondSeparationvqStandard
-	& \firstsecondSeparationvqFiftyFive
-	& \firstsecondSeparationvqSixty
-	& -
-	\\
-	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
-	& \firstsecondSeparationgammaqForty
-	& \firstsecondSeparationgammaqFortyFive
-	& \firstsecondSeparationgammaqStandard
-	& \firstsecondSeparationgammaqFiftyFive
-	& \firstsecondSeparationgammaqSixty
-	& -
-	\\
-	\hline 
-	\textbf{2$^{nd}$ Stage $\eta_{exergy}$ (\%)}
-	& \textbf{\secondExergyEffqForty}
-	& \textbf{\secondExergyEffqFortyFive}
-	& \textbf{\secondExergyEffqStandard}
-	& \textbf{\secondExergyEffqFiftyFive}
-	& \textbf{\secondExergyEffqSixty}
-	& -
-	\\
-	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
-	& \secondthirdSeparationAltqForty
-	& \secondthirdSeparationAltqFortyFive
-	& \secondthirdSeparationAltqStandard
-	& \secondthirdSeparationAltqFiftyFive
-	& \secondthirdSeparationAltqSixty
-	&-0.02
-	\\
-	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
-	& \secondthirdSeparationvqForty
-	& \secondthirdSeparationvqFortyFive
-	& \secondthirdSeparationvqStandard
-	& \secondthirdSeparationvqFiftyFive
-	& \secondthirdSeparationvqSixty
-	&1.99
-	\\
-	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
-	& \secondthirdSeparationgammaqForty
-	& \secondthirdSeparationgammaqFortyFive
-	& \secondthirdSeparationgammaqStandard
-	& \secondthirdSeparationgammaqFiftyFive
-	& \secondthirdSeparationgammaqSixty
-	& -
-	\\
-	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
-	& \secondthirdSeparationqqForty
-	& \secondthirdSeparationqqFortyFive
-	& \secondthirdSeparationqqStandard
-	& \secondthirdSeparationqqFiftyFive
-	& \secondthirdSeparationqqSixty
-	&0.04
-	\\
-	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
-	& \secondthirdSeparationLDqForty
-	& \secondthirdSeparationLDqFortyFive
-	& \secondthirdSeparationLDqStandard
-	& \secondthirdSeparationLDqFiftyFive
-	& \secondthirdSeparationLDqSixty
-	&0.02
-	\\
-	\textbf{2$^{nd}$ Stage Flight Time (s)}
-	& \secondFlightTimeqForty
-	& \secondFlightTimeqFortyFive
-	& \secondFlightTimeqStandard
-	& \secondFlightTimeqFiftyFive
-	& \secondFlightTimeqSixty
-	&-1.58
-	\\
-	\textbf{2$^{nd}$ Stage Return Fuel (kg)}
-	& \returnFuelqForty
-	& \returnFuelqFortyFive
-	& \returnFuelqStandard
-	& \returnFuelqFiftyFive
-	& \returnFuelqSixty
-	& -
-	\\
-	\hline 
-	\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
-	& \textbf{\thirddExergyEffqForty}
-	& \textbf{\thirddExergyEffqFortyFive}
-	& \textbf{\thirddExergyEffqStandard}
-	& \textbf{\thirddExergyEffqFiftyFive}
-	& \textbf{\thirddExergyEffqSixty}
-	& -
-	\\
-	
-	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
-	& \thirdqOverFiveqForty
-	& \thirdqOverFiveqFortyFive
-	& \thirdqOverFiveqStandard
-	& \thirdqOverFiveqFiftyFive
-	& \thirdqOverFiveqSixty
-	& -
-	\\
-	\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
-	& \thirdmaxAoAqForty
-	& \thirdmaxAoAqFortyFive
-	& \thirdmaxAoAqStandard
-	& \thirdmaxAoAqFiftyFive
-	& \thirdmaxAoAqSixty
-	&0
-	\\
-	\textbf{3$^{rd}$ Stage Fuel Mass (kg)}
-	& \thirdmFuelqForty
-	& \thirdmFuelqFortyFive
-	& \thirdmFuelqStandard
-	& \thirdmFuelqFiftyFive
-	& \thirdmFuelqSixty
-	&-0.42
-	\\
-	\hline 
-\end{tabular} 
-\caption{}
-\label{tab:qvarreturn}
-\end{table}
-
-
-\subsection{Case 13: C-REST Specific Impulse Variation with Fly-Back Inclusion}
-
-The specific impulse of the SPARTAN is varied by $\pm10\%$ in order to assess the sensitivity of the optimised trajectory to the performance of the scramjet engines.  
-The SPARTAN specific impulse increases the payload-to-orbit by +18.3kg (+10.71\%) at 110\% $I_{SP}$, and decreases the payload-to-orbit by -14.7kg (-8.63\%) at 90\% $I_{SP}$. 
-This produces a general trend in the payload-to-orbit of 1.7$\frac{\Delta kg}{\Delta \%I_{SP} }$, lower than the trend of 2.2$\frac{\Delta kg}{\Delta \%I_{SP} }$ observed in the sensitivity study without fly-back, in Section \ref{sec:ispsensitivitynoflyback}.
-This lowered sensitivity in the payload-to-orbit is due to a correspondingly lowered sensitivity in the exergy efficiency of the SPARTAN, of 0.129$\frac{\Delta \% \eta}{\Delta \%I_{SP} }$, compared to 0.162$\frac{\Delta \% \eta}{\Delta \%I_{SP} }$ in the sensitivity study without fly-back. This lowered sensitivity is due to the larger $I_{SP}$ increasing the acceleration of the SPARTAN, in turn increasing the ground distance covered by the SPARTAN and the velocity at SPARTAN-third stage separation. At 110\% $I_{SP}$, the SPARTAN covers \returnDistIspOneHundredTen km during fly-back, compared to \returnDistIspNinety km at 90\% $I_{SP}$. This more difficult return flight serves to increase the energy necessary for the return flight, partially offsetting the benefits of the increased $I_{SP}$. 
-
-Similarly to the specific impulse sensitivity study without fly-back conducted in Section XX, the first stage trajectory is not significantly altered as the specific impulse of the SPARTAN is varied, and consequently the first stage-SPARTAN separation conditions, as well as the exergy efficiency of the first stage, exhibit no clear trends. Following first stage-SPARTAN separation, the shape of the SPARTAN's acceleration does not change significantly with specific impulse variation, including the the pull-up location and acceleration flight times. As with the optimised trajectories with no fly-back, increasing the specific impulse of the scramjet engines by 10\% increases the velocity at separation (by +114m/s, +4.4\%) and decreases the trajectory angle (by -0.7$^\circ$, 6.4\%), while decreasing the specific impulse of the scramjet engines by 10\% decreases the velocity at SPARTAN-third stage separation (by -106m/s, -4.1\%), and increases the trajectory angle (by -1.1$^\circ$, -10\%).
-The exergy efficiency of the third stage rocket decreases as the exergy efficiency of the SPARTAN increases. This is in line with the trend which has been observed in all previous cases, that the efficiency trade-off between the SPARTAN and the third stage rocket shifts in favour of the SPARTAN as the useful energy of the SPARTAN increases. 
+\subsection{Case 13: SPARTAN Drag Sensitivity with Fly-Back Inclusion}
 
 
 \begin{table}[ht]
 	\centering
-\begin{tabular}{l c c c c c c} 
-	\hline \textbf{Trajectory Condition}
-	&Isp90
-	&Isp
-	&Isp
-	&Isp
-	&Isp
-	& $\Delta/\Delta$\%
-	\\
-	\hline \textbf{Payload to Orbit (kg)}
-	& \textbf{\PayloadToOrbitIspNinety}
-	& \textbf{\PayloadToOrbitIspNinetyFive}
-	& \textbf{\PayloadToOrbitIspStandard}
-	& \textbf{\PayloadToOrbitIspOneHundredFive}
-	& \textbf{\PayloadToOrbitIspOneHundredTen}
-	&\textbf{1.7}
-	\\
-	\textbf{Payload Variation (\%)}
-	& \PayloadVarIspNinety
-	& \PayloadVarIspNinetyFive
-	& \PayloadVarIspStandard
-	& \PayloadVarIspOneHundredFive
-	& \PayloadVarIspOneHundredTen
-	&0.98
-	\\
-	\textbf{Total $\eta_{exergy}$ (\%)}
-	& \textbf{\totalExergyEffIspNinety}
-	& \textbf{\totalExergyEffIspNinetyFive}
-	& \textbf{\totalExergyEffIspStandard}
-	& \textbf{\totalExergyEffIspOneHundredFive}
-	& \textbf{\totalExergyEffIspOneHundredTen}
-	& \textbf{0.00015}
-	\\
-	\hline 
-	\textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
-	& \textbf{\firstExergyEffIspNinety}
-	& \textbf{\firstExergyEffIspNinetyFive}
-	& \textbf{\firstExergyEffIspStandard}
-	& \textbf{\firstExergyEffIspOneHundredFive}
-	& \textbf{\firstExergyEffIspOneHundredTen}
-	& -
-	\\
-	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
-	& \firstsecondSeparationAltIspNinety
-	& \firstsecondSeparationAltIspNinetyFive
-	& \firstsecondSeparationAltIspStandard
-	& \firstsecondSeparationAltIspOneHundredFive
-	& \firstsecondSeparationAltIspOneHundredTen
-	& -
-	\\
-	\textbf{Separation v, 1$\rightarrow$2 (m/s)}
-	& \firstsecondSeparationvIspNinety
-	& \firstsecondSeparationvIspNinetyFive
-	& \firstsecondSeparationvIspStandard
-	& \firstsecondSeparationvIspOneHundredFive
-	& \firstsecondSeparationvIspOneHundredTen
-	& -
-	\\
-	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
-	& \firstsecondSeparationgammaIspNinety
-	& \firstsecondSeparationgammaIspNinetyFive
-	& \firstsecondSeparationgammaIspStandard
-	& \firstsecondSeparationgammaIspOneHundredFive
-	& \firstsecondSeparationgammaIspOneHundredTen
-	& -
-	\\
-	\hline 
-	\textbf{2$^{nd}$ Stage $\eta_{exergy}$ (\%)}
-	& \textbf{\secondExergyEffIspNinety}
-	& \textbf{\secondExergyEffIspNinetyFive}
-	& \textbf{\secondExergyEffIspStandard}
-	& \textbf{\secondExergyEffIspOneHundredFive}
-	& \textbf{\secondExergyEffIspOneHundredTen}
-	& \textbf{0.129}
-	\\
-	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
-	& \secondthirdSeparationAltIspNinety
-	& \secondthirdSeparationAltIspNinetyFive
-	& \secondthirdSeparationAltIspStandard
-	& \secondthirdSeparationAltIspOneHundredFive
-	& \secondthirdSeparationAltIspOneHundredTen
-	& -
-	\\
-	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
-	& \secondthirdSeparationvIspNinety
-	& \secondthirdSeparationvIspNinetyFive
-	& \secondthirdSeparationvIspStandard
-	& \secondthirdSeparationvIspOneHundredFive
-	& \secondthirdSeparationvIspOneHundredTen
-	&11.13
-	\\
-	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
-	& \secondthirdSeparationgammaIspNinety
-	& \secondthirdSeparationgammaIspNinetyFive
-	& \secondthirdSeparationgammaIspStandard
-	& \secondthirdSeparationgammaIspOneHundredFive
-	& \secondthirdSeparationgammaIspOneHundredTen
-	&-0.09
-	\\
-	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
-	& \secondthirdSeparationqIspNinety
-	& \secondthirdSeparationqIspNinetyFive
-	& \secondthirdSeparationqIspStandard
-	& \secondthirdSeparationqIspOneHundredFive
-	& \secondthirdSeparationqIspOneHundredTen
-	& -
-	\\
-	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
-	& \secondthirdSeparationLDIspNinety
-	& \secondthirdSeparationLDIspNinetyFive
-	& \secondthirdSeparationLDIspStandard
-	& \secondthirdSeparationLDIspOneHundredFive
-	& \secondthirdSeparationLDIspOneHundredTen
-	& -
-	\\
-	\textbf{2$^{nd}$ Stage Flight Time (s)}
-	& \secondFlightTimeIspNinety
-	& \secondFlightTimeIspNinetyFive
-	& \secondFlightTimeIspStandard
-	& \secondFlightTimeIspOneHundredFive
-	& \secondFlightTimeIspOneHundredTen
-	& -
-	\\
-		\textbf{2$^{nd}$ Stage Return Fuel (kg)}
-		& \returnFuelIspNinety
-		& \returnFuelIspNinetyFive
-		& \returnFuelIspStandard
-		& \returnFuelIspOneHundredFive
-		& \returnFuelIspOneHundredTen
+	\begin{tabular}{l c c c c c c} 
+		\hline \textbf{Trajectory Condition}   \qquad  $C_{d,2}$:
+		&90\%
+		&95\%
+		&100\%
+		&105\%
+		&110\%
+		& $\Delta/\Delta$/\%$C_{d,2}$
+		\\
+		\hline \textbf{Payload to Orbit (kg)}
+		& \textbf{\PayloadToOrbitCdNinety}
+		& \textbf{\PayloadToOrbitCdNinetyFive}
+		& \textbf{\PayloadToOrbitCdStandard}
+		& \textbf{\PayloadToOrbitCdOneHundredFive}
+		& \textbf{\PayloadToOrbitCdOneHundredTen}
+		&\textbf{-1.5}
+		\\
+		\textbf{Payload Variation (\%)}
+		& \PayloadVarCdNinety
+		& \PayloadVarCdNinetyFive
+		& \PayloadVarCdStandard
+		& \PayloadVarCdOneHundredFive
+		& \PayloadVarCdOneHundredTen
+		&-0.9
+		\\
+		\textbf{Total $\eta_{exergy}$ (\%)}
+		& \textbf{\totalExergyEffCdNinety}
+		& \textbf{\totalExergyEffCdNinetyFive}
+		& \textbf{\totalExergyEffCdStandard}
+		& \textbf{\totalExergyEffCdOneHundredFive}
+		& \textbf{\totalExergyEffCdOneHundredTen}
+		& \textbf{-0.00013}
+		\\
+		\hline 
+		\textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\firstExergyEffCdNinety}
+		& \textbf{\firstExergyEffCdNinetyFive}
+		& \textbf{\firstExergyEffCdStandard}
+		& \textbf{\firstExergyEffCdOneHundredFive}
+		& \textbf{\firstExergyEffCdOneHundredTen}
+		& \textbf{-0.029}
+		\\
+		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+		& \firstsecondSeparationAltCdNinety
+		& \firstsecondSeparationAltCdNinetyFive
+		& \firstsecondSeparationAltCdStandard
+		& \firstsecondSeparationAltCdOneHundredFive
+		& \firstsecondSeparationAltCdOneHundredTen
 		& -
 		\\
-	\hline 
-	\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
-	& \textbf{\thirddExergyEffIspNinety}
-	& \textbf{\thirddExergyEffIspNinetyFive}
-	& \textbf{\thirddExergyEffIspStandard}
-	& \textbf{\thirddExergyEffIspOneHundredFive}
-	& \textbf{\thirddExergyEffIspOneHundredTen}
-	& \textbf{-0.061}
-	\\
-	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
-	& \thirdqOverFiveIspNinety
-	& \thirdqOverFiveIspNinetyFive
-	& \thirdqOverFiveIspStandard
-	& \thirdqOverFiveIspOneHundredFive
-	& \thirdqOverFiveIspOneHundredTen
-	& -
-	\\
-	\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
-	& \thirdmaxAoAIspNinety
-	& \thirdmaxAoAIspNinetyFive
-	& \thirdmaxAoAIspStandard
-	& \thirdmaxAoAIspOneHundredFive
-	& \thirdmaxAoAIspOneHundredTen
-	& -
-	\\
-	\textbf{3$^{rd}$ Stage Fuel Mass (kg)}
-	& \thirdmFuelIspNinety
-	& \thirdmFuelIspNinetyFive
-	& \thirdmFuelIspStandard
-	& \thirdmFuelIspOneHundredFive
-	& \thirdmFuelIspOneHundredTen
-	&-1.67
-	\\
-	\hline 
-\end{tabular} 
-
+		\textbf{Separation v, 1$\rightarrow$2 (m/s)}
+		& \firstsecondSeparationvCdNinety
+		& \firstsecondSeparationvCdNinetyFive
+		& \firstsecondSeparationvCdStandard
+		& \firstsecondSeparationvCdOneHundredFive
+		& \firstsecondSeparationvCdOneHundredTen
+		&-3.66
+		\\
+		\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+		& \firstsecondSeparationgammaCdNinety
+		& \firstsecondSeparationgammaCdNinetyFive
+		& \firstsecondSeparationgammaCdStandard
+		& \firstsecondSeparationgammaCdOneHundredFive
+		& \firstsecondSeparationgammaCdOneHundredTen
+		& -
+		\\
+		\hline 
+		\textbf{2$^{nd}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\secondExergyEffCdNinety}
+		& \textbf{\secondExergyEffCdNinetyFive}
+		& \textbf{\secondExergyEffCdStandard}
+		& \textbf{\secondExergyEffCdOneHundredFive}
+		& \textbf{\secondExergyEffCdOneHundredTen}
+		& \textbf{-0.079}
+		\\
+		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+		& \secondthirdSeparationAltCdNinety
+		& \secondthirdSeparationAltCdNinetyFive
+		& \secondthirdSeparationAltCdStandard
+		& \secondthirdSeparationAltCdOneHundredFive
+		& \secondthirdSeparationAltCdOneHundredTen
+		&-0.04
+		\\
+		\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+		& \secondthirdSeparationvCdNinety
+		& \secondthirdSeparationvCdNinetyFive
+		& \secondthirdSeparationvCdStandard
+		& \secondthirdSeparationvCdOneHundredFive
+		& \secondthirdSeparationvCdOneHundredTen
+		&-9.5
+		\\
+		\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+		& \secondthirdSeparationgammaCdNinety
+		& \secondthirdSeparationgammaCdNinetyFive
+		& \secondthirdSeparationgammaCdStandard
+		& \secondthirdSeparationgammaCdOneHundredFive
+		& \secondthirdSeparationgammaCdOneHundredTen
+		& -
+		\\
+		\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+		& \secondthirdSeparationqCdNinety
+		& \secondthirdSeparationqCdNinetyFive
+		& \secondthirdSeparationqCdStandard
+		& \secondthirdSeparationqCdOneHundredFive
+		& \secondthirdSeparationqCdOneHundredTen
+		& -
+		\\
+		\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+		& \secondthirdSeparationLDCdNinety
+		& \secondthirdSeparationLDCdNinetyFive
+		& \secondthirdSeparationLDCdStandard
+		& \secondthirdSeparationLDCdOneHundredFive
+		& \secondthirdSeparationLDCdOneHundredTen
+		&-0.05
+		\\
+		\textbf{2$^{nd}$ Stage Flight Time (s)}
+		& \secondFlightTimeCdNinety
+		& \secondFlightTimeCdNinetyFive
+		& \secondFlightTimeCdStandard
+		& \secondFlightTimeCdOneHundredFive
+		& \secondFlightTimeCdOneHundredTen
+		& -
+		\\
+		\textbf{2$^{nd}$ Stage Return Fuel (kg)}
+		& \returnFuelCdNinety
+		& \returnFuelCdNinetyFive
+		& \returnFuelCdStandard
+		& \returnFuelCdOneHundredFive
+		& \returnFuelCdOneHundredTen
+		& -
+		\\
+		\hline 
+		\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\thirddExergyEffCdNinety}
+		& \textbf{\thirddExergyEffCdNinetyFive}
+		& \textbf{\thirddExergyEffCdStandard}
+		& \textbf{\thirddExergyEffCdOneHundredFive}
+		& \textbf{\thirddExergyEffCdOneHundredTen}
+		& \textbf{0.046}
+		\\
+		
+		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+		& \thirdqOverFiveCdNinety
+		& \thirdqOverFiveCdNinetyFive
+		& \thirdqOverFiveCdStandard
+		& \thirdqOverFiveCdOneHundredFive
+		& \thirdqOverFiveCdOneHundredTen
+		& -
+		\\
+		\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
+		& \thirdmaxAoACdNinety
+		& \thirdmaxAoACdNinetyFive
+		& \thirdmaxAoACdStandard
+		& \thirdmaxAoACdOneHundredFive
+		& \thirdmaxAoACdOneHundredTen
+		& -
+		\\
+		\textbf{3$^{rd}$ Stage Fuel Mass (kg)}
+		& \thirdmFuelCdNinety
+		& \thirdmFuelCdNinetyFive
+		& \thirdmFuelCdStandard
+		& \thirdmFuelCdOneHundredFive
+		& \thirdmFuelCdOneHundredTen
+		&1.53
+		\\
+		\hline 
+	\end{tabular} 
+	\caption{Comparison of key trajectory parameters with variation in the drag of the SPARTAN, with fly-back.}
+	\label{tab:comparison41}
 \end{table}
 
-\subsection{SPARTAN Drag Sensitivity with Fly-Back Inclusion}
 
-The coefficient of drag is varied by $\pm$10\% to investigate the effect of variation in the aerodynamic design of the SPARTAN on the performance of the launch system, including the effects on the fly-back of the SPARTAN. 
+The coefficient of drag is varied by $\pm$10\% to investigate the effect of variation in the aerodynamic design of the SPARTAN on the performance of the launch system, including the effects on the fly-back of the SPARTAN. Appendix \ref{sec:app_comparison41} presents trajectory comparison plots, and Table \ref{tab:comparison41} compares key parameters of each trajectory. 
 Increasing the drag of the SPARTAN by 10\% decreases the payload-to-orbit by -14.0kg (-8.2\%), while decreasing the drag by 10\% increases the payload-to-orbit by +18.3kg (+10.8\%). 
 The sensitivity to variations in the SPARTAN's aerodynamics is decreased when compared to the sensitivity study with no fly-back inclusion, down to -1.5 $\frac{\Delta kg}{\Delta\% C_{d}}$ (-0.9$\frac{\Delta \%}{\Delta\% C_{d}}$) compared to -1.9$\frac{\Delta kg}{\Delta\% C_{d}}$  (-0.99$\frac{\Delta \%}{\Delta\% C_{d}}$). 
 This is due to the increased drag decreasing the ground distance covered during the ascent, offsetting the detrimental effects of the increased drag on the aerodynamic performance of the SPARTAN during fly-back. Because of this, the amount of fuel necessary for fly-back has no significant trend with variation in the drag coefficient of the SPARTAN. 
@@ -625,192 +619,208 @@ the altitude of the SPARTAN-third stage separation shows a clear trend, decreasi
 The release altitude and angle of attack serve to initiate the first skip of the return trajectory in a consistent manner, so that the shape of the initial skip is very similar with drag variation. In all cases the angle of attack is reduced to 0$^\circ$ immediately during return to lessen the size of the initial skip, and is then raised to close to the maximum of 10$^\circ$ to prevent the dynamic pressure limit being exceeded. This consistency indicates that the initial skip of the return flight is driving the conditions at SPARTAN-third stage release, and that it is primarily the control and structural limitations, rather than the aerodynamics of the SPARTAN, which determine the shape of this skip. 
 
 
+\subsection{Case 14: C-REST Specific Impulse Variation with Fly-Back Inclusion}
+
 
 \begin{table}[ht]
 	\centering
-\begin{tabular}{l c c c c c c} 
-	\hline \textbf{Trajectory Condition}
-	&Cd90
-	&Cd
-	&Cd
-	&Cd
-	&Cd
-	& $\Delta/\Delta$/\%
-	\\
-	\hline \textbf{Payload to Orbit (kg)}
-	& \textbf{\PayloadToOrbitCdNinety}
-	& \textbf{\PayloadToOrbitCdNinetyFive}
-	& \textbf{\PayloadToOrbitCdStandard}
-	& \textbf{\PayloadToOrbitCdOneHundredFive}
-	& \textbf{\PayloadToOrbitCdOneHundredTen}
-	&\textbf{-1.5}
-	\\
-	\textbf{Payload Variation (\%)}
-	& \PayloadVarCdNinety
-	& \PayloadVarCdNinetyFive
-	& \PayloadVarCdStandard
-	& \PayloadVarCdOneHundredFive
-	& \PayloadVarCdOneHundredTen
-	&-0.9
-	\\
-	\textbf{Total $\eta_{exergy}$ (\%)}
-	& \textbf{\totalExergyEffCdNinety}
-	& \textbf{\totalExergyEffCdNinetyFive}
-	& \textbf{\totalExergyEffCdStandard}
-	& \textbf{\totalExergyEffCdOneHundredFive}
-	& \textbf{\totalExergyEffCdOneHundredTen}
-	& \textbf{-0.00013}
-	\\
-	\hline 
-	\textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
-	& \textbf{\firstExergyEffCdNinety}
-	& \textbf{\firstExergyEffCdNinetyFive}
-	& \textbf{\firstExergyEffCdStandard}
-	& \textbf{\firstExergyEffCdOneHundredFive}
-	& \textbf{\firstExergyEffCdOneHundredTen}
-	& \textbf{-0.029}
-	\\
-	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
-	& \firstsecondSeparationAltCdNinety
-	& \firstsecondSeparationAltCdNinetyFive
-	& \firstsecondSeparationAltCdStandard
-	& \firstsecondSeparationAltCdOneHundredFive
-	& \firstsecondSeparationAltCdOneHundredTen
-	& -
-	\\
-	\textbf{Separation v, 1$\rightarrow$2 (m/s)}
-	& \firstsecondSeparationvCdNinety
-	& \firstsecondSeparationvCdNinetyFive
-	& \firstsecondSeparationvCdStandard
-	& \firstsecondSeparationvCdOneHundredFive
-	& \firstsecondSeparationvCdOneHundredTen
-	&-3.66
-	\\
-	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
-	& \firstsecondSeparationgammaCdNinety
-	& \firstsecondSeparationgammaCdNinetyFive
-	& \firstsecondSeparationgammaCdStandard
-	& \firstsecondSeparationgammaCdOneHundredFive
-	& \firstsecondSeparationgammaCdOneHundredTen
-	& -
-	\\
-	\hline 
-	\textbf{2$^{nd}$ Stage $\eta_{exergy}$ (\%)}
-	& \textbf{\secondExergyEffCdNinety}
-	& \textbf{\secondExergyEffCdNinetyFive}
-	& \textbf{\secondExergyEffCdStandard}
-	& \textbf{\secondExergyEffCdOneHundredFive}
-	& \textbf{\secondExergyEffCdOneHundredTen}
-	& \textbf{-0.079}
-	\\
-	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
-	& \secondthirdSeparationAltCdNinety
-	& \secondthirdSeparationAltCdNinetyFive
-	& \secondthirdSeparationAltCdStandard
-	& \secondthirdSeparationAltCdOneHundredFive
-	& \secondthirdSeparationAltCdOneHundredTen
-	&-0.04
-	\\
-	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
-	& \secondthirdSeparationvCdNinety
-	& \secondthirdSeparationvCdNinetyFive
-	& \secondthirdSeparationvCdStandard
-	& \secondthirdSeparationvCdOneHundredFive
-	& \secondthirdSeparationvCdOneHundredTen
-	&-9.5
-	\\
-	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
-	& \secondthirdSeparationgammaCdNinety
-	& \secondthirdSeparationgammaCdNinetyFive
-	& \secondthirdSeparationgammaCdStandard
-	& \secondthirdSeparationgammaCdOneHundredFive
-	& \secondthirdSeparationgammaCdOneHundredTen
-	& -
-	\\
-	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
-	& \secondthirdSeparationqCdNinety
-	& \secondthirdSeparationqCdNinetyFive
-	& \secondthirdSeparationqCdStandard
-	& \secondthirdSeparationqCdOneHundredFive
-	& \secondthirdSeparationqCdOneHundredTen
-	& -
-	\\
-	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
-	& \secondthirdSeparationLDCdNinety
-	& \secondthirdSeparationLDCdNinetyFive
-	& \secondthirdSeparationLDCdStandard
-	& \secondthirdSeparationLDCdOneHundredFive
-	& \secondthirdSeparationLDCdOneHundredTen
-	&-0.05
-	\\
-	\textbf{2$^{nd}$ Stage Flight Time (s)}
-	& \secondFlightTimeCdNinety
-	& \secondFlightTimeCdNinetyFive
-	& \secondFlightTimeCdStandard
-	& \secondFlightTimeCdOneHundredFive
-	& \secondFlightTimeCdOneHundredTen
-	& -
-	\\
-	\textbf{2$^{nd}$ Stage Return Fuel (kg)}
-	& \returnFuelCdNinety
-	& \returnFuelCdNinetyFive
-	& \returnFuelCdStandard
-	& \returnFuelCdOneHundredFive
-	& \returnFuelCdOneHundredTen
-	& -
-	\\
-	\hline 
-	\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
-	& \textbf{\thirddExergyEffCdNinety}
-	& \textbf{\thirddExergyEffCdNinetyFive}
-	& \textbf{\thirddExergyEffCdStandard}
-	& \textbf{\thirddExergyEffCdOneHundredFive}
-	& \textbf{\thirddExergyEffCdOneHundredTen}
-	& \textbf{0.046}
-	\\
-	
-	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
-	& \thirdqOverFiveCdNinety
-	& \thirdqOverFiveCdNinetyFive
-	& \thirdqOverFiveCdStandard
-	& \thirdqOverFiveCdOneHundredFive
-	& \thirdqOverFiveCdOneHundredTen
-	& -
-	\\
-	\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
-	& \thirdmaxAoACdNinety
-	& \thirdmaxAoACdNinetyFive
-	& \thirdmaxAoACdStandard
-	& \thirdmaxAoACdOneHundredFive
-	& \thirdmaxAoACdOneHundredTen
-	& -
-	\\
-	\textbf{3$^{rd}$ Stage Fuel Mass (kg)}
-	& \thirdmFuelCdNinety
-	& \thirdmFuelCdNinetyFive
-	& \thirdmFuelCdStandard
-	& \thirdmFuelCdOneHundredFive
-	& \thirdmFuelCdOneHundredTen
-	&1.53
-	\\
-	\hline 
-\end{tabular} 
+	\begin{tabular}{l c c c c c c} 
+		\hline \textbf{Trajectory Condition}   \qquad  $I_{SP,2}$:
+		&90\%
+		&90\%
+		&100\%
+		&105\%
+		&110\%
+		& $\Delta/\Delta$\%$I_{SP,2}$
+		\\
+		\hline \textbf{Payload to Orbit (kg)}
+		& \textbf{\PayloadToOrbitIspNinety}
+		& \textbf{\PayloadToOrbitIspNinetyFive}
+		& \textbf{\PayloadToOrbitIspStandard}
+		& \textbf{\PayloadToOrbitIspOneHundredFive}
+		& \textbf{\PayloadToOrbitIspOneHundredTen}
+		&\textbf{1.7}
+		\\
+		\textbf{Payload Variation (\%)}
+		& \PayloadVarIspNinety
+		& \PayloadVarIspNinetyFive
+		& \PayloadVarIspStandard
+		& \PayloadVarIspOneHundredFive
+		& \PayloadVarIspOneHundredTen
+		&0.98
+		\\
+		\textbf{Total $\eta_{exergy}$ (\%)}
+		& \textbf{\totalExergyEffIspNinety}
+		& \textbf{\totalExergyEffIspNinetyFive}
+		& \textbf{\totalExergyEffIspStandard}
+		& \textbf{\totalExergyEffIspOneHundredFive}
+		& \textbf{\totalExergyEffIspOneHundredTen}
+		& \textbf{0.00015}
+		\\
+		\hline 
+		\textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\firstExergyEffIspNinety}
+		& \textbf{\firstExergyEffIspNinetyFive}
+		& \textbf{\firstExergyEffIspStandard}
+		& \textbf{\firstExergyEffIspOneHundredFive}
+		& \textbf{\firstExergyEffIspOneHundredTen}
+		& -
+		\\
+		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
+		& \firstsecondSeparationAltIspNinety
+		& \firstsecondSeparationAltIspNinetyFive
+		& \firstsecondSeparationAltIspStandard
+		& \firstsecondSeparationAltIspOneHundredFive
+		& \firstsecondSeparationAltIspOneHundredTen
+		& -
+		\\
+		\textbf{Separation v, 1$\rightarrow$2 (m/s)}
+		& \firstsecondSeparationvIspNinety
+		& \firstsecondSeparationvIspNinetyFive
+		& \firstsecondSeparationvIspStandard
+		& \firstsecondSeparationvIspOneHundredFive
+		& \firstsecondSeparationvIspOneHundredTen
+		& -
+		\\
+		\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+		& \firstsecondSeparationgammaIspNinety
+		& \firstsecondSeparationgammaIspNinetyFive
+		& \firstsecondSeparationgammaIspStandard
+		& \firstsecondSeparationgammaIspOneHundredFive
+		& \firstsecondSeparationgammaIspOneHundredTen
+		& -
+		\\
+		\hline 
+		\textbf{2$^{nd}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\secondExergyEffIspNinety}
+		& \textbf{\secondExergyEffIspNinetyFive}
+		& \textbf{\secondExergyEffIspStandard}
+		& \textbf{\secondExergyEffIspOneHundredFive}
+		& \textbf{\secondExergyEffIspOneHundredTen}
+		& \textbf{0.129}
+		\\
+		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
+		& \secondthirdSeparationAltIspNinety
+		& \secondthirdSeparationAltIspNinetyFive
+		& \secondthirdSeparationAltIspStandard
+		& \secondthirdSeparationAltIspOneHundredFive
+		& \secondthirdSeparationAltIspOneHundredTen
+		& -
+		\\
+		\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
+		& \secondthirdSeparationvIspNinety
+		& \secondthirdSeparationvIspNinetyFive
+		& \secondthirdSeparationvIspStandard
+		& \secondthirdSeparationvIspOneHundredFive
+		& \secondthirdSeparationvIspOneHundredTen
+		&11.13
+		\\
+		\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
+		& \secondthirdSeparationgammaIspNinety
+		& \secondthirdSeparationgammaIspNinetyFive
+		& \secondthirdSeparationgammaIspStandard
+		& \secondthirdSeparationgammaIspOneHundredFive
+		& \secondthirdSeparationgammaIspOneHundredTen
+		&-0.09
+		\\
+		\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
+		& \secondthirdSeparationqIspNinety
+		& \secondthirdSeparationqIspNinetyFive
+		& \secondthirdSeparationqIspStandard
+		& \secondthirdSeparationqIspOneHundredFive
+		& \secondthirdSeparationqIspOneHundredTen
+		& -
+		\\
+		\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
+		& \secondthirdSeparationLDIspNinety
+		& \secondthirdSeparationLDIspNinetyFive
+		& \secondthirdSeparationLDIspStandard
+		& \secondthirdSeparationLDIspOneHundredFive
+		& \secondthirdSeparationLDIspOneHundredTen
+		& -
+		\\
+		\textbf{2$^{nd}$ Stage Flight Time (s)}
+		& \secondFlightTimeIspNinety
+		& \secondFlightTimeIspNinetyFive
+		& \secondFlightTimeIspStandard
+		& \secondFlightTimeIspOneHundredFive
+		& \secondFlightTimeIspOneHundredTen
+		& -
+		\\
+		\textbf{2$^{nd}$ Stage Return Fuel (kg)}
+		& \returnFuelIspNinety
+		& \returnFuelIspNinetyFive
+		& \returnFuelIspStandard
+		& \returnFuelIspOneHundredFive
+		& \returnFuelIspOneHundredTen
+		& -
+		\\
+		\hline 
+		\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\thirddExergyEffIspNinety}
+		& \textbf{\thirddExergyEffIspNinetyFive}
+		& \textbf{\thirddExergyEffIspStandard}
+		& \textbf{\thirddExergyEffIspOneHundredFive}
+		& \textbf{\thirddExergyEffIspOneHundredTen}
+		& \textbf{-0.061}
+		\\
+		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
+		& \thirdqOverFiveIspNinety
+		& \thirdqOverFiveIspNinetyFive
+		& \thirdqOverFiveIspStandard
+		& \thirdqOverFiveIspOneHundredFive
+		& \thirdqOverFiveIspOneHundredTen
+		& -
+		\\
+		\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
+		& \thirdmaxAoAIspNinety
+		& \thirdmaxAoAIspNinetyFive
+		& \thirdmaxAoAIspStandard
+		& \thirdmaxAoAIspOneHundredFive
+		& \thirdmaxAoAIspOneHundredTen
+		& -
+		\\
+		\textbf{3$^{rd}$ Stage Fuel Mass (kg)}
+		& \thirdmFuelIspNinety
+		& \thirdmFuelIspNinetyFive
+		& \thirdmFuelIspStandard
+		& \thirdmFuelIspOneHundredFive
+		& \thirdmFuelIspOneHundredTen
+		&-1.67
+		\\
+		\hline 
+	\end{tabular} 
+	\caption{Comparison of key trajectory parameters with variation in the specific impulse of the C-REST engines, with fly-back.}
+	\label{tab:comparison31}
 \end{table}
 
+The specific impulse of the SPARTAN is varied by $\pm10\%$ in order to assess the sensitivity of the optimised trajectory to the performance of the scramjet engines. 
+Key parameters of the trajectories are summarised in Table \ref{tab:comparison31}, and comparison plots are shown in Appendix \ref{sec:app_comparison31}.
+The SPARTAN specific impulse increases the payload-to-orbit by +18.3kg (+10.71\%) at 110\% $I_{SP}$, and decreases the payload-to-orbit by -14.7kg (-8.63\%) at 90\% $I_{SP}$. 
+This produces a general trend in the payload-to-orbit of 1.7$\frac{\Delta kg}{\Delta \%I_{SP} }$, lower than the trend of 2.2$\frac{\Delta kg}{\Delta \%I_{SP} }$ observed in the sensitivity study without fly-back, in Section \ref{sec:ispsensitivitynoflyback}.
+This lowered sensitivity in the payload-to-orbit is due to a correspondingly lowered sensitivity in the exergy efficiency of the SPARTAN, of 0.129$\frac{\Delta \% \eta}{\Delta \%I_{SP} }$, compared to 0.162$\frac{\Delta \% \eta}{\Delta \%I_{SP} }$ in the sensitivity study without fly-back. This lowered sensitivity is due to the larger $I_{SP}$ increasing the acceleration of the SPARTAN, in turn increasing the ground distance covered by the SPARTAN and the velocity at SPARTAN-third stage separation. At 110\% $I_{SP}$, the SPARTAN covers \returnDistIspOneHundredTen km during fly-back, compared to \returnDistIspNinety km at 90\% $I_{SP}$. This more difficult return flight serves to increase the energy necessary for the return flight, partially offsetting the benefits of the increased $I_{SP}$. 
 
-\subsection{SPARTAN Mass Sensitivity}\label{sec:m2var}
+Similarly to the specific impulse sensitivity study without fly-back conducted in Section XX, the first stage trajectory is not significantly altered as the specific impulse of the SPARTAN is varied, and consequently the first stage-SPARTAN separation conditions, as well as the exergy efficiency of the first stage, exhibit no clear trends. Following first stage-SPARTAN separation, the shape of the SPARTAN's acceleration does not change significantly with specific impulse variation, including the the pull-up location and acceleration flight times. As with the optimised trajectories with no fly-back, increasing the specific impulse of the scramjet engines by 10\% increases the velocity at separation (by +114m/s, +4.4\%) and decreases the trajectory angle (by -0.7$^\circ$, 6.4\%), while decreasing the specific impulse of the scramjet engines by 10\% decreases the velocity at SPARTAN-third stage separation (by -106m/s, -4.1\%), and increases the trajectory angle (by -1.1$^\circ$, -10\%).
+The exergy efficiency of the third stage rocket decreases as the exergy efficiency of the SPARTAN increases. This is in line with the trend which has been observed in all previous cases, that the efficiency trade-off between the SPARTAN and the third stage rocket shifts in favour of the SPARTAN as the useful energy of the SPARTAN increases. 
+
+
+
+
+
+
+\subsection{Case 15: SPARTAN Mass Sensitivity}\label{sec:m2var}
 
 
 \begin{table}[ht]
 \centering
 \begin{tabular}{l c c c c c c} 
-	\hline \textbf{Trajectory Condition}
-	&m295
-	&m297.5
-	&m2
-	&m2102.5
-	&m2105
-	& $\Delta/\Delta$\%
+	\hline \textbf{Trajectory Condition}   \qquad  $m_{2}$:
+	&95\%
+	&97.5\%
+	&100\%
+	&102.5\%
+	&105\%
+	& $\Delta/\Delta$\%$m_{2}$
 	\\
 	\hline \textbf{Payload to Orbit (kg)}
 	& \textbf{\PayloadToOrbitmSPARTANNinetyFive}
@@ -969,11 +979,13 @@ The release altitude and angle of attack serve to initiate the first skip of the
 	\\
 	\hline 
 \end{tabular}
-
+\caption{Comparison of key trajectory parameters with variation in the structural mass of the SPARTAN, with fly-back.}
+\label{tab:comparison101}
 \end{table}
 
 
 The mass of the SPARTAN is varied by $\pm$5\% to investigate the sensitivity of the launch system performance to the structural mass of the second stage, with the inclusion of the fly-back of the SPARTAN. The mass is varied by only $\pm$5\% in order to limit the decrease in the velocity of first stage-SPARTAN separation, consequently limiting the extrapolation of the C-REST engine conditions below Mach 5 (where they are still assumed to be functional during the ascent).
+Table \ref{tab:comparison101} details key parameters of each trajectory, and Appendix \ref{sec:app_comparison101} shows comparison plots.
 Varying the structural mass of the SPARTAN yields a change in maximum payload-mass to orbit of +7.2kg (+4.22\%) at 95\% mass, and -6.0kg (-3.56\%) at 105\% mass. 
 
 The ascent trajectory of the first stage shows no significant trend with variation in the mass of the SPARTAN, except for a lower total acceleration due to having to accelerate a larger total mass.
@@ -991,18 +1003,18 @@ The third stage exergy efficiency increases as the mass of the SPARTAN is increa
 
 
 
-\subsection{SPARTAN Fuel Mass Sensitivity}
+\subsection{Case 16: SPARTAN Fuel Mass Sensitivity}
 
 \begin{table}[ht]
 	\centering
 \begin{tabular}{l c c c c c c} 
-	\hline \textbf{Trajectory Condition}
-	&mF90
-	&mF95
-	&mF
-	&mF105
-	&mF110
-	& $\Delta/\Delta$\%
+	\hline \textbf{Trajectory Condition}   \qquad  $m_{F,2}$:
+	&90\%
+	&95\%
+	&100\%
+	&105\%
+	&110\%
+	& $\Delta/\Delta$\%$m_{F,2}$
 	\\
 	\hline \textbf{Payload to Orbit (kg)}
 	& \textbf{\PayloadToOrbitmFuelNinety}
@@ -1161,9 +1173,12 @@ The third stage exergy efficiency increases as the mass of the SPARTAN is increa
 	\\
 	\hline 
 \end{tabular} 
+\caption{Comparison of key trajectory parameters with variation in the fuel mass of the SPARTAN, with fly-back.}
+\label{tab:comparison111}
 \end{table}
 	
 The fuel mass of the SPARTAN is varied by $\pm$10\%, to investigate the sensitivity of the performance of the launch system to variations in the size of the fuel tanks within the SPARTAN. 
+Appendix \ref{sec:app_comparison111} shows plots comparing each trajectory, and Table \ref{tab:comparison111} details comparisons of key trajectory parameters. 
 When the fuel mass within the SPARTAN is increased by 10\%, the payload to orbit increases by +9.6kg (+5.6\%) and when the fuel mass is decreased by 10\%, the payload mass reduces by -4.6kg (-2.7\%). The magnitude of the payload-to-orbit sensitivity is very similar to the sensitivity observed without fly-back, in Section \ref{sec:fuelmassNoReturn}. 
 
 The first stage shows no significant trend in its trajectory when the fuel mass of the SPARTAN is varied, besides a decrease in the overall acceleration due to the additional mass. 
@@ -1173,18 +1188,18 @@ Once again, as the amount of useful energy available to the SPARTAN increases, t
 
 
 
-\subsection{Third Stage Mass Sensitivity}
+\subsection{Case 17: Third Stage Mass Sensitivity}
 
 \begin{table}[ht]
 	\centering
 	\begin{tabular}{l c c c c c c} 
-		\hline \textbf{Trajectory Condition}
-		&m390
-		&m395
-		&m3
-		&m3105
-		&m3110
-		& $\Delta/\Delta$\%
+		\hline \textbf{Trajectory Condition}   \qquad  $m_{3}$:
+		&90\%
+		&95\%
+		&100\%
+		&105\%
+		&110\%
+		& $\Delta/\Delta$\%$m_{3}$
 		\\
 		\hline \textbf{Payload to Orbit (kg)}
 		& \textbf{\PayloadToOrbitmThreeNinety}
@@ -1343,9 +1358,11 @@ Once again, as the amount of useful energy available to the SPARTAN increases, t
 		\\
 		\hline 
 	\end{tabular} 
+	\caption{Comparison of key trajectory parameters with variation in the mass of the third stage, with fly-back.}
+	\label{tab:comparison81}
 \end{table}
 
-The mass of the third stage rocket is varied by $\pm$10\%. As in Section \ref{sec:m3noReturn}, the varied mass is a combination of the fuel, structural and payload mass of the third stage, representing the density of the components within the third stage. The heat shield mass is not varied, and the structural mass held at 9\% of the total, non-heat shield mass. The remaining mass variation is the combination of fuel and payload mass, which the optimiser utilises interchangeably to optimise the trajectory.
+The mass of the third stage rocket is varied by $\pm$10\%. Table \ref{tab:comparison81} details key trajectory parameters, and Appendix \ref{sec:app_comparison81} shows trajectory comparison plots. As in Section \ref{sec:m3noReturn}, the varied mass is a combination of the fuel, structural and payload mass of the third stage, representing the density of the components within the third stage. The heat shield mass is not varied, and the structural mass held at 9\% of the total, non-heat shield mass. The remaining mass variation is the combination of fuel and payload mass, which the optimiser utilises interchangeably to optimise the trajectory.
 
 Increasing the third stage mass by 10\% causes a corresponding increase in the payload-to-orbit of +9.9kg (+5.8\%), while decreasing the third stage mass by 10\% causes a decrease in payload-to-orbit of -9.4kg (-5.5\%). 
 This payload-to-orbit mass sensitivity is very similar when compared to the third stage mass sensitivity study without fly-back, in Section \ref{sec:m3noReturn}. However, due to the payload-to-orbit being lower when the fly-back of the SPARTAN is included, the overall percentage payload increase is higher, at 0.56$\frac{\Delta\%m_{payload}}{\Delta\%m_3}$, compared to 0.47$\frac{\Delta\%m_{payload}}{\Delta\%m_3}$ without fly-back. 
@@ -1355,32 +1372,20 @@ This trend in third stage exergy efficiency is very similar to the corresponding
 As with the trend observed in Section \ref{sec:m3noReturn}, this increase in third stage exergy efficiency as the mass of the third stage is increased is caused by a lower portion of the third stage fuel being utilised in-atmosphere when the third stage mass is increased, consisting of 41.89\% of the total fuel when $m_3$ is set to 110\% of the baseline mass, compared to 43.32\% of the total fuel when $m_3$ is set to 90\% of the baseline mass. 
 In addition, the heat shield is once again a lower fraction of the overall mass, resulting in a lower fraction of the third stage mass being discarded. 
 
-\subsection{Third Stage $I_{SP}$ Sensitivity}
-
-The specific impulse of the third stage rocket is varied by $\pm$5\% to investigate the sensitivity of the launch system to the performance of the third stage rocket when the fly-back of the SPARTAN is included. 
-Table \ref{tab:isp3} shows selected performance indicators, while Appendix XX shows comparison plots of the maximum payload-to-orbit trajectory at each magnitude of third stage specific impulse. 
-The sensitivity of the optimal trajectory with SPARTAN fly-back to the third stage specific impulse is very similar to that observed in Section \ref{sec:isp3NoReturn} with no SPARTAN fly-back.
-The specific impulse of the third stage has the most significant effect on the payload-to-orbit capability of the launch system, with a sensitivity of 4.6kg per \% $I_{SP}$ variation. 
- This indicates that the fly-back does not considerably effect the sensitivity of the launch system to variations in the third stage specific impulse, and that the third stage specific impulse has a consistent magnitude of effect at lower separation velocities. 
-The trajectory of the first stage does not change significantly as the specific impulse of the third stage is varied. 
-The exergy efficiency of the first stage shows a slight trend, however, this is very small. 
-The trajectory SPARTAN shows no distinct trends as the specific impulse of the third stage is varied. This lack of distinct trends indicates that the performance of the third stage has no bearing on the magnitude of the pull-up of the SPARTAN, and does not effect the efficiency trade-off between the SPARTAN and the third stage in a significant way. 
-As the specific impulse of the third stage is increased, the angle of attack schedule of the third stage is modified, so that 90km altitude is reached at circularisation conditions in all cases. This causes an increase in specific impulse to result in more time spent in-atmosphere, with the third stage spending 14.9s at dynamic pressures greater than 5kPa at 105\% $I_{SP}$, compared to 12.1s at 95\% $I_{SP}$. 
-
-
+\subsection{Case 18: Third Stage $I_{SP}$ Sensitivity}
 
 
 \begin{table}[ht]
 	% note the names of the variables are wrong, and should go from 95-105
 	\centering
 	\begin{tabular}{l c c c c c c} 
-		\hline \textbf{Trajectory Condition}
-		&ISP395
-		&ISP397.5
-		&ISP3
-		&ISP3102.5
-		&ISP3105
-		& $\Delta/\Delta$\%
+		\hline \textbf{Trajectory Condition}   \qquad  $I_{SP,3}$:
+		&95\%
+		&97.5\%
+		&100\%
+		&102.5\%
+		&105\%
+		& $\Delta/\Delta$\%$I_{SP,3}$
 		\\
 		\hline \textbf{Payload to Orbit (kg)}
 		& \textbf{\PayloadToOrbitISPThreeNinety}
@@ -1539,9 +1544,22 @@ As the specific impulse of the third stage is increased, the angle of attack sch
 		\\
 		\hline 
 	\end{tabular} 
-	\caption{heading}
+	\caption{Comparison of key trajectory parameters with variation in the specific impulse of the third stage, with fly-back.}
 	\label{tab:isp3}
 \end{table}
+
+The specific impulse of the third stage rocket is varied by $\pm$5\% to investigate the sensitivity of the launch system to the performance of the third stage rocket when the fly-back of the SPARTAN is included. 
+Table \ref{tab:isp3} shows selected performance indicators, while Appendix \ref{sec:app_comparison91} shows comparison plots of the maximum payload-to-orbit trajectory at each magnitude of third stage specific impulse. 
+The sensitivity of the optimal trajectory with SPARTAN fly-back to the third stage specific impulse is very similar to that observed in Section \ref{sec:isp3NoReturn} with no SPARTAN fly-back.
+The specific impulse of the third stage has the most significant effect on the payload-to-orbit capability of the launch system, with a sensitivity of 4.6kg per \% $I_{SP}$ variation. 
+ This indicates that the fly-back does not considerably effect the sensitivity of the launch system to variations in the third stage specific impulse, and that the third stage specific impulse has a consistent magnitude of effect at lower separation velocities. 
+The trajectory of the first stage does not change significantly as the specific impulse of the third stage is varied. 
+The exergy efficiency of the first stage shows a slight trend, however, this is very small. 
+The trajectory SPARTAN shows no distinct trends as the specific impulse of the third stage is varied. This lack of distinct trends indicates that the performance of the third stage has no bearing on the magnitude of the pull-up of the SPARTAN, and does not effect the efficiency trade-off between the SPARTAN and the third stage in a significant way. 
+As the specific impulse of the third stage is increased, the angle of attack schedule of the third stage is modified, so that 90km altitude is reached at circularisation conditions in all cases. This causes an increase in specific impulse to result in more time spent in-atmosphere, with the third stage spending 14.9s at dynamic pressures greater than 5kPa at 105\% $I_{SP}$, compared to 12.1s at 95\% $I_{SP}$. 
+
+
+
 
 
 
@@ -1551,7 +1569,7 @@ As the specific impulse of the third stage is increased, the angle of attack sch
 \begin{figure}[th]
 	\centering
 	\includegraphics[width=0.99\linewidth]{figures/6_FlyBack/BarChart}
-	\caption{Sensitivity of design parameters. Red and green coloured areas indicate decreases or increases in the magnitude of sensitivity respectively, compared to the sensitivity study without SPARTAN fly-back in Section \ref{sec:comparisonNoReturn}.}
+	\caption{The sensitivity of the key design parameters of the launch system, including SPARTAN fly-back. Red and green coloured areas indicate decreases or increases in the magnitude of sensitivity respectively, compared to the sensitivity study without SPARTAN fly-back in Section \ref{sec:comparisonNoReturn}.}
 	\label{fig:BarChartreturn}
 \end{figure}
 

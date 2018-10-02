@@ -118,6 +118,35 @@ The Mach number range of a scramjet engine varies by design, but Mach number ran
   
   \section{Small Satellite Launchers}\label{subsec:smallsats}
  
+ 
+ 
+ \afterpage{
+ 	\begin{landscape}% Landscape page
+ 		\begin{table}
+ 			
+ 			\begin{tabularx}{\linewidth}{|X|X|X|X|X|X|X|X|}
+ 				
+ 				\hline  \textbf{Launcher} & \textbf{Company} & \textbf{Country} & \textbf{Payload Capacity} & \textbf{Cost/Kg} (USD) & \textbf{Availability }& \textbf{Stages \& Propulsion} & \textbf{Reusability}  \\ 
+ 				\hline  Electron \cite{Electron} & RocketLab & NZ/USA & 150Kg to SSO & \$32,600 & Available & Rocket-rocket & No \\ 
+ 				\hline LauncherOne \cite{Virgin} & Virgin Orbit & UK & 300kg to SSO & \$33,000 & - & Aircraft-rocket-rocket & Aircraft\\ 
+ 				\hline Bloostar \cite{Bloostar} & Zero2Infinity & Spain & 100kg to SSO & \$40,000 &  - & Balloon-rocket-rocket-rocket & No \\ 
+ 				\hline XS-1 \cite{DARPA2017} & Boeing & USA & - & - &  - & - & First Stage\\ 
+ 				\hline Eris \cite{Gilmour} & Gilmour Space Technologies & Aus/SG& 380kg to LEO  &\$23,000-38,000   & Q4 2020 && No\\ 
+ 				\hline Black Arrow 2 \cite{Horizon}& Horizon   & UK & 350kg to SSO & - & 2019 & Rocket-rocket & No \\ 
+ 				\hline Intrepid-1 \cite{Intrepid} & Rocket Crafters  & USA & 376kg to SSO & \$23,936 & Q1 2019 & Rocket-rocket & No \\ 
+ 				\hline KZ-1A \cite{FT1} & CASIC  &  China & 250kg to SSO  & - & - & Rocket-rocket & No \\ 
+ 				\hline 500R \cite{500R} & Orbital Access  & UK & 500kg to SSO & - & - & Aircraft-Rocket & Fully Reusable \\ 
+ 				\hline Vector-H \cite{Vector}& Vector Space Systems  & USA & 160kg to LEO  & \$21,875 & 2018 & rocket-rocket-(third rocket optional)& No\\ 
+ 				\hline SMILE \cite{Kuhn2017} & NLR &  EU & 50kg & $<$\$50,000 & -  & -& -\\ 
+ 				\hline 
+ 			\end{tabularx} 
+ 			\caption{A summary of some of the small satellite launchers, operational and in development.}
+ 			\label{tab:smallsats}
+ 		\end{table}
+ 	\end{landscape}
+ }
+ 
+ 
   The vast improvements in computational technologies in recent years have allowed satellites to decrease in size and cost to a large degree. These factors have lowered the barrier of entry into small satellite manufacturing significantly, driving a surge in the demand for small satellite launches. Many private and public companies are currently developing small satellite launchers which will allow small satellites to be launched into bespoke orbits on schedules determined by the customer. A summary of the small satellite launchers currently in active development is shown in Table \ref{tab:smallsats}. Many of these launchers are projected to be available within the next few years, and will offer cost-per-kg comparable to piggybacking on larger launches. 
   
   
@@ -132,32 +161,6 @@ The Mach number range of a scramjet engine varies by design, but Mach number ran
   
   
 
-  
-  \begin{landscape}% Landscape page
-  	\begin{table}
-  		
-  		\begin{tabularx}{\linewidth}{|X|X|X|X|X|X|X|X|}
-  			
-  			\hline  \textbf{Launcher} & \textbf{Company} & \textbf{Country} & \textbf{Payload Capacity} & \textbf{Cost/Kg} (USD) & \textbf{Availability }& \textbf{Stages \& Propulsion} & \textbf{Reusability}  \\ 
-  			\hline  Electron \cite{Electron} & RocketLab & NZ/USA & 150Kg to SSO & \$32,600 & Available & Rocket-rocket & No \\ 
-  			\hline LauncherOne \cite{Virgin} & Virgin Orbit & UK & 300kg to SSO & \$33,000 & - & Aircraft-rocket-rocket & Aircraft\\ 
-  			\hline Bloostar \cite{Bloostar} & Zero2Infinity & Spain & 100kg to SSO & \$40,000 &  - & Balloon-rocket-rocket-rocket & No \\ 
-  			\hline XS-1 \cite{DARPA2017} & Boeing & USA & - & - &  - & - & First Stage\\ 
-  			\hline Eris \cite{Gilmour} & Gilmour Space Technologies & Aus/SG& 380kg to LEO  &\$23,000-38,000   & Q4 2020 && No\\ 
-  			\hline Black Arrow 2 \cite{Horizon}& Horizon   & UK & 350kg to SSO & - & 2019 & Rocket-rocket & No \\ 
-  			\hline Intrepid-1 \cite{Intrepid} & Rocket Crafters  & USA & 376kg to SSO & \$23,936 & Q1 2019 & Rocket-rocket & No \\ 
-  			\hline KZ-1A \cite{FT1} & CASIC  &  China & 250kg to SSO  & - & - & Rocket-rocket & No \\ 
-  			\hline 500R \cite{500R} & Orbital Access  & UK & 500kg to SSO & - & - & Aircraft-Rocket & Fully Reusable \\ 
-  			\hline Vector-H \cite{Vector}& Vector Space Systems  & USA & 160kg to LEO  & \$21,875 & 2018 & rocket-rocket-(third rocket optional)& No\\ 
-  			\hline SMILE \cite{Kuhn2017} & NLR &  EU & 50kg & $<$\$50,000 & -  & -& -\\ 
-  			\hline 
-  		\end{tabularx} 
-  		\caption{Summary of small satellite launchers, operational and in development.}
-  		\label{tab:smallsats}
-  	\end{table}
-  \end{landscape}
-  
-  
   
   
   \section{Airbreathing Access-to-Space Systems}
@@ -235,21 +238,22 @@ For example, a constant dynamic pressure flight may produce suboptimal condition
  The consideration of all stages and propulsion methods when designing the trajectory of a launch vehicle can produce a more optimal trajectory, which maximises the performance of the launch system, eg. increasing payload-to-orbit, or increasing the range of orbits attainable by the launch vehicle.
 
 \subsection{Single-Stage Vehicles}
-Optimal trajectories have previously been developed for launch systems integrating airbreathing and rocket propulsion within single-stage-to-orbit (SSTO) vehicles\cite{Powell1991,Lu1993,Trefny1999,Roche2000,Pescetelli2012,Young2006,Bradford2000}. These optimal trajectory studies found unanimously that a pull-up manoeuvre before the end of the airbreathing engine cut-off was the optimal flight path for the SSTO airbreathing-rocket vehicles being investigated. A pull-up was found to be optimal for vehicles where the rocket engines are not ignited until circularization altitude \cite{Powell1991,Lu1993}, vehicles where the rocket engine is ignited immediately after airbreathing engine cut-off \cite{Trefny1999,Roche2000,Pescetelli2012} as well as for vehicles which operate in combined scramjet-rocket mode\cite{Young2006,Bradford2000}. For SSTO vehicles a pull-up manoeuvre is a simple trade-off between the altitude at airbreathing engine cut-off and the velocity achievable at cut-off. Due to the entire vehicle being lifted into orbit, this becomes a relatively simple problem of engine efficiency. The airbreathing engine is used for its high efficiency, until the dynamic pressure drops below the operable limit of the airbreathing engine, or until the thrust provided by the airbreathing engine is significantly counteracted by the effects of drag and gravity. 
+Optimal trajectories have previously been developed for launch systems integrating airbreathing and rocket propulsion within single-stage-to-orbit (SSTO) vehicles\cite{Powell1991,Lu1993,Trefny1999,Roche2000,Pescetelli2012,Young2006,Bradford2000}. These optimal trajectory studies found unanimously that a pull-up manoeuvre before the end of the airbreathing engine cut-off was the optimal flight path for the SSTO airbreathing-rocket vehicles being investigated. An example of one of these vehicles, its trajectory, and associated pull-up manoeuvre is shown in Figure \ref{fig:Powell}, developed by Powell et al \cite{Powell1991}. A pull-up was found to be optimal for vehicles where the rocket engines are not ignited until circularization altitude \cite{Powell1991,Lu1993}, vehicles where the rocket engine is ignited immediately after airbreathing engine cut-off \cite{Trefny1999,Roche2000,Pescetelli2012} as well as for vehicles which operate in combined scramjet-rocket mode\cite{Young2006,Bradford2000}. For SSTO vehicles a pull-up manoeuvre is a simple trade-off between the altitude at airbreathing engine cut-off and the velocity achievable at cut-off. Due to the entire vehicle being lifted into orbit, this becomes a relatively simple problem of engine efficiency. The airbreathing engine is used for its high efficiency, until the dynamic pressure drops below the operable limit of the airbreathing engine, or until the thrust provided by the airbreathing engine is significantly counteracted by the effects of drag and gravity. 
 \begin{figure}[h]
 	\centering
 	\begin{minipage}[b]{0.3\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{"figures/2_literature-review/Powell Vehicle"}
-		\caption{}
+		
 		\label{fig:PowellVehicle}
 	\end{minipage}	
 	\begin{minipage}[b]{0.6\textwidth}
 		\includegraphics[width=\linewidth]{"figures/2_literature-review/Powell Trajectory"}
-		\caption{Powell}
+	
 		\label{fig:PowellTrajectory}
 	\end{minipage}
-	
+	\caption{The single stage-to-orbit vehicle of Powell et al \cite{Powell1991} and its launch trajectory, with pull-up manoeuvre evident.}
+	\label{fig:Powell}
 \end{figure}
  
  \subsection{Multi-Stage Vehicles}
@@ -272,46 +276,51 @@ There has been a number of studies which have identified a pull-up manoeuvre as 
 \begin{minipage}[b]{0.45\textwidth}
 	\centering
 	\includegraphics[width=\linewidth]{"figures/2_literature-review/Wilhite Booster Vehicle"}
-	\caption{}
+
 	\label{fig:WilhiteVehicle}
 \end{minipage}	
 \begin{minipage}[b]{0.45\textwidth}
 \includegraphics[width=\linewidth]{"figures/2_literature-review/WilHite Booster Trajectory"}
-\caption{Wilhite}
+
 \label{fig:WilHiteTrajectory}
 \end{minipage}
+\caption{The two stage-to-orbit launch vehicle of Wilhite \cite{Wilhite1991}. The launch trajectory is shown, with pull-up indicated.}
+\label{fig:Wilhite}
 \end{figure}
 \begin{figure}
 	\centering
 	\begin{minipage}[b]{0.45\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{"figures/2_literature-review/Tsuchiya Vehicles"}
-		\caption{a) Airbreathing b) Airbreathing/Rocket}
+	
 		\label{fig:TsuchiyaVehicle}
 	\end{minipage}	
 	\begin{minipage}[b]{0.45\textwidth}
 		\includegraphics[width=\linewidth]{"figures/2_literature-review/Tsuchiya"}
-		\caption{The trajectory of the launch system developed by Tsuchiya and Mori \cite{Tsuchiya2005}}
+
 		\label{fig:TsuchiyaTrajectory}
 	\end{minipage}
+	\caption{The two stage-to-orbit launch vehicle of Tsuchiya and Mori \cite{Tsuchiya2005}, with trajectories including pull-up and return for both airbreathing and airbreathing/rocket vehicles shown.}
+	\label{fig:Tsuchiya}
 \end{figure}
-In the studies by Tsuchiya et al.\cite{Tsuchiya2005} and Wilhite et al.\cite{Wilhite1991}, decreased dynamic pressure is necessary for the successful operation of the orbital rocket stages, of the systems under investigation. In these studies the airbreathing stages pull-up to the maximum allowable dynamic pressure for the rocket-powered orbital stages. When the orbital stages are able to operate, stage separation occurs. These pull-up manoeuvres demonstrate the advantages of a pull-up for the operation of the orbital stages, allowing the aerodynamic and thermal loading on the vehicle to be reduced. However these pull-up manoeuvres are not performed as part of optimal trajectories, instead they are designed to ensure that the performance constraints of the systems are met. 
+In the studies by Tsuchiya et al.\cite{Tsuchiya2005} and Wilhite et al.\cite{Wilhite1991}, decreased dynamic pressure is necessary for the successful operation of the orbital rocket stages, of the systems under investigation. The launch vehicles and trajectories developed in these studies are shown in Figures \ref{fig:Tsuchiya} and \ref{fig:Wilhite} respectively. In these studies the airbreathing stages pull-up to the maximum allowable dynamic pressure for the rocket-powered orbital stages. When the orbital stages are able to operate, stage separation occurs. These pull-up manoeuvres demonstrate the advantages of a pull-up for the operation of the orbital stages, allowing the aerodynamic and thermal loading on the vehicle to be reduced. However these pull-up manoeuvres are not performed as part of optimal trajectories, instead they are designed to ensure that the performance constraints of the systems are met. 
 \begin{figure}
 	\centering
 	\begin{minipage}[b]{0.3\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{"figures/2_literature-review/Mehta Vehicle"}
-		\caption{}
+
 		\label{fig:MehtaVehicle}
 	\end{minipage}	
 	\begin{minipage}[b]{0.6\textwidth}
 		\includegraphics[width=\linewidth]{"figures/2_literature-review/Mehta Trajectory"}
-		\caption{The trajectory of the launch system developed by Mehta and Bowles \cite{Mehta2001}.}
+	
 		\label{fig:MehtaTrajectory}
 	\end{minipage}
-	
+	\caption{The two stage-to-orbit launch system developed by Mehta and Bowles \cite{Mehta2001}, with trajectory and pull-up shown.}
+	\label{fig:Mehta}
 \end{figure}
-Mehta \& Bowles \cite{Mehta2001} prescribe a 2g pull-up at flight conditions of Mach 10, 95000 ft for an airbreathing stage in order to "lower dynamic pressures and to achieve the optimal launching flight path angle for the orbiter vehicle". This indicates that a pull-up manoeuvre before airbreathing-rocket transition is considered the optimal trajectory, however this study does not optimise the shape or magnitude of the pull-up manoeuvre, only considering the increased performance of the rocket vehicle. 
+Mehta \& Bowles \cite{Mehta2001} prescribe a 2g pull-up at flight conditions of Mach 10, 95000 ft for an airbreathing stage in order to "lower dynamic pressures and to achieve the optimal launching flight path angle for the orbiter vehicle". The launch vehicle and trajectory developed by Mehta \& Bowles is shown in Figure \ref{fig:Mehta}. This prescribed manoeuvre indicates that a pull-up before airbreathing-rocket transition is considered the optimal trajectory, however this study does not optimise the shape or magnitude of the pull-up manoeuvre, only considering the increased performance of the rocket vehicle. 
 
 
 

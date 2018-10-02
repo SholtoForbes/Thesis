@@ -127,7 +127,7 @@ The flow properties at the inlet of the engines is calculated using the Tayor-Ma
 \end{figure}
 
  The engine model used is a CRESTM10 database\cite{Preller2017,Preller2018}, analysed using quasi-1D simulation and provided for this study by Prof. Michael Smart. This database has previously been used in simulations of the SPARTAN, as detailed in Section \ref{sec:enginemodel}.
-This database provides data points of engine performance over inlet conditions within the operational range, at 50kPa dynamic pressure equivalent conditions. The specific impulse data set is shown in Figure \ref{fig:ISPinterp}. This data is interpolated between for the given inlet conditions, to calculate specific impulse produced by the engine. As the data points of the C-REST database are unevenly distributed in for inlet Mach and temperature, care must be taken in order to interpolate smoothly to allow the optimal control solver to converge successfully. To ensure that smooth interpolation is achieved, the C-REST database is first interpolated between using linear interpolation, for each 'set' of four nodes which form a square. A uniform grid is created using this linear interpolation, on which a cubic spline interpolation is applied using Matlab's griddedInterpolant function. This is explained in detail in Appendix XX. During flight the C-REST inlet conditions generally stay within the region bounded by the available data. However, for the purposes of the trajectory optimisation, it is necessary for the vehicle model to be able to extrapolate for ISP and equivalence ratio data. This extrapolation is performed in the same manner as the interpolation, a linear extrapolation, followed by a cubic spline interpolation of the extrapolated points. This allows for smooth continuity between the interpolated and extrapolated points, while ensuring that the extrapolated values are reasonable. 
+This database provides data points of engine performance over inlet conditions within the operational range, at 50kPa dynamic pressure equivalent conditions. The specific impulse data set is shown in Figure \ref{fig:ISPinterp}. This data is interpolated between for the given inlet conditions, to calculate specific impulse produced by the engine. As the data points of the C-REST database are unevenly distributed in for inlet Mach and temperature, care must be taken in order to interpolate smoothly to allow the optimal control solver to converge successfully. To ensure that smooth interpolation is achieved, the C-REST database is first interpolated between using linear interpolation, for each `set' of four nodes which form a square. A uniform grid is created using this linear interpolation, on which a cubic spline interpolation is applied using Matlab's griddedInterpolant function. This is explained in detail in Appendix XX. During flight the C-REST inlet conditions generally stay within the region bounded by the available data. However, for the purposes of the trajectory optimisation, it is necessary for the vehicle model to be able to extrapolate for ISP and equivalence ratio data. This extrapolation is performed in the same manner as the interpolation, a linear extrapolation, followed by a cubic spline interpolation of the extrapolated points. This allows for smooth continuity between the interpolated and extrapolated points, while ensuring that the extrapolated values are reasonable. 
 
 For operation at high Mach numbers, the fuel mass flow rate is assumed to be stoichiometric, so that $\dot{m_f}$ = $0.0291\dot{m}$. This ensures that the scramjet engines are performing at high efficiency throughout the acceleration of the scramjet stage. 
 \begin{figure}[ht]
@@ -707,7 +707,7 @@ Tungsten is used at the tip of the nose cone, the area of maximum heat loading. 
 				\caption{L/D.}
 				\label{fig:LD-ThirdStage}
 			\end{subfigure}
-			\caption{Aerodynamic characteristics of the baseline \textcolor{red}{dont refer to third stage rocket as baseline..} third stage rocket, for a reference area of 0.95m$^2$.}
+			\caption{Aerodynamic characteristics of the third stage rocket, for a reference area of 0.95m$^2$.}
 			\label{fig:ThirdStageAero}
 		\end{figure}
 		
@@ -729,4 +729,14 @@ Tungsten is used at the tip of the nose cone, the area of maximum heat loading. 
 \end{figure}
 		
 
-		
+	\section{Summary}	
+	
+	In this chapter, the design and simulation of a rocket-scramjet-rocket launch system was presented, based on the SPARTAN scramjet-powered accelerator. 
+	The design of the first stage is based on the first stage of the Falcon-1e, scaled down to 8.5m, and throttled down to 70\%. The third stage is designed around the SpaceX Kestrel engine, with the fuel tanks of the SPARTAN resized to accommodate for the new third stage size. 
+	 Mass breakdowns and key design features have been detailed for all three stages, including fuel ratios and structural mass fractions.
+	 The aerodynamic databases of all three stages were presented and analysed, and the process for generating these databases was detailed. 
+	 The CFD simulations of the first stage and SPARTAN in Cart3D have been detailed, including the process of verifying the convergence of each solution. 
+	 The propulsion modelling of the C-REST scramjet engines was presented, along with the schemes used to generate smooth, second order continuous interpolations of the engine data. 
+	The process for generating the trimmed aerodynamic databases for the SPARTAN has been presented, including the calculation of the control surface aerodynamics, and the calculation of the variable centre of gravity of the SPARTAN. The thrust vectoring for the first and third stages was detailed, along with the relevant limitations to thrust vector angle.
+	
+	

@@ -1521,9 +1521,7 @@
     \field{sortinithash}{F}
     \field{title}{{Trajectory Design of a Rocket-Scramjet-Rocket Multi-Stage
   Launch System}}
-    \field{volume}{TBD}
-    \field{journaltitle}{Journal of Spacecraft and Rockets - Under
-  Consideration}
+    \field{journaltitle}{Journal of Spacecraft and Rockets}
     \field{year}{2018}
   \endentry
 
@@ -4480,31 +4478,6 @@
     \field{year}{2010}
   \endentry
 
-  \entry{Ryba2017}{misc}{}
-    \name{author}{1}{}{%
-      {{hash=RJ}{%
-         family={Ryba},
-         familyi={R\bibinitperiod},
-         given={Jeanne},
-         giveni={J\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{RJ1}
-    \strng{fullhash}{RJ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{R}
-    \field{sortinithash}{R}
-    \field{title}{{Space Shuttle}}
-    \verb{url}
-    \verb https://www.nasa.gov/mission\_pages/shuttle/launch/landing101.html
-    \endverb
-    \field{year}{2017}
-    \field{urlday}{27}
-    \field{urlmonth}{11}
-    \field{urlyear}{2017}
-  \endentry
-
   \entry{Sagerman2017}{article}{}
     \name{author}{4}{}{%
       {{hash=SDG}{%
@@ -4675,7 +4648,9 @@
     \verb https://earthobservatory.nasa.gov/Features/OrbitsCatalog/page2.php
     \endverb
     \field{year}{2009}
-    \warn{\item Invalid format of field 'urldate'}
+    \field{urlday}{22}
+    \field{urlmonth}{08}
+    \field{urlyear}{2018}
   \endentry
 
   \entry{Smart2007a}{article}{}
