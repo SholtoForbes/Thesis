@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.8)  2 OCT 2018 16:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.8)  3 OCT 2018 17:31
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1672,7 +1672,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 16.
 \c__siunitx_mathtt_int=\count456
  (frontmatter.tex
-<figures/uq_logo.png, id=486, 286.00853pt x 114.36728pt>
+<figures/uq_logo.png, id=482, 286.00853pt x 114.36728pt>
 File: figures/uq_logo.png Graphic file (type png)
 
 <use figures/uq_logo.png>
@@ -1706,20 +1706,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--100
  []
 
 
-LaTeX Warning: Citation 'Forbes2018a' on page 6 undefined on input line 101.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
+
+ []
+
+
+Underfull \vbox (badness 5359) has occurred while \output is active []
 
  [6
 
 ]
-Overfull \hbox (6.20386pt too wide) in paragraph at lines 146--146
+Overfull \hbox (6.20386pt too wide) in paragraph at lines 148--148
 [][]\OT1/ptm/b/n/17.28 Statement of Parts of the The-sis Sub-mit-ted to Qual-if
 y for the Award
  []
@@ -1727,7 +1729,7 @@ y for the Award
 [7] [8
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 164--169
+Underfull \hbox (badness 10000) in paragraph at lines 169--174
 
  []
 
@@ -1735,13 +1737,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 164--169
 
 ] [10
 
-] (thesis.toc [11] [12] [13]
-Overfull \hbox (2.05945pt too wide) in paragraph at lines 112--112
- [] [][][]\OT1/ptm/b/n/12 Maximum Payload-To-Orbit Tra-jec-tory With Dy-namic P
-res-sure Con-strained Con-straint[][] []  
- []
-
-)
+] (thesis.toc [11] [12] [13])
 \tf@toc=\write8
 \openout8 = `thesis.toc'.
 
@@ -1759,19 +1755,19 @@ Overfull \hbox (0.81082pt too wide) in paragraph at lines 88--88
  sen-si-tiv-ity study with-out SPAR- 
  []
 
-[18] [19])
+[18] [19] [20])
 \tf@lof=\write9
 \openout9 = `thesis.lof'.
 
- [20] (thesis.lot [21
+ [21] [22
 
-])
+] (thesis.lot [23])
 \tf@lot=\write10
 \openout10 = `thesis.lot'.
 
 )
 No file thesis.nls.
-[22] (1_introduction.tex
+[24] (1_introduction.tex
 Chapter 1.
 [1
 
@@ -1781,7 +1777,7 @@ Chapter 1.
 Underfull \vbox (badness 3525) has occurred while \output is active []
 
  [2]
-<figures/1_introduction/project-spartan.jpg, id=1193, 772.8875pt x 404.51125pt>
+<figures/1_introduction/project-spartan.jpg, id=1254, 772.8875pt x 404.51125pt>
 File: figures/1_introduction/project-spartan.jpg Graphic file (type jpg)
 <use figures/1_introduction/project-spartan.jpg>
 Package pdftex.def Info: figures/1_introduction/project-spartan.jpg used on inp
@@ -1807,7 +1803,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--81
 ]) (2_literature-review.tex [6]
 Chapter 2.
 
-<figures/2_literature-review/scramjet.png, id=1231, 468.62578pt x 228.47859pt>
+<figures/2_literature-review/scramjet.png, id=1291, 468.62578pt x 228.47859pt>
 File: figures/2_literature-review/scramjet.png Graphic file (type png)
 
 <use figures/2_literature-review/scramjet.png>
@@ -1818,7 +1814,7 @@ Package pdftex.def Info: figures/2_literature-review/scramjet.png used on input
 
 
 ]
-<figures/2_literature-review/Scramjet-Efficiency.png, id=1247, 1010.27437pt x 6
+<figures/2_literature-review/Scramjet-Efficiency.png, id=1308, 1010.27437pt x 6
 56.4525pt>
 File: figures/2_literature-review/Scramjet-Efficiency.png Graphic file (type pn
 g)
@@ -1828,7 +1824,7 @@ ed on input line 44.
 (pdftex.def)             Requested size: 338.58632pt x 220.0056pt.
  [8 <./figures/2_literature-review/scramjet.png> <./figures/2_literature-review
 /Scramjet-Efficiency.png>]
-<figures/2_literature-review/LaunchVehicles.jpg, id=1276, 216.81pt x 139.6125pt
+<figures/2_literature-review/LaunchVehicles.jpg, id=1337, 216.81pt x 139.6125pt
 >
 File: figures/2_literature-review/LaunchVehicles.jpg Graphic file (type jpg)
  <use figures/2_literature-review/LaunchVehicles.jpg>
@@ -1836,7 +1832,7 @@ Package pdftex.def Info: figures/2_literature-review/LaunchVehicles.jpg used on
  input line 75.
 (pdftex.def)             Requested size: 435.32422pt x 280.35759pt.
 
-<"figures/2_literature-review/FalconTrajectory".jpg, id=1279, 964.60374pt x 563
+<"figures/2_literature-review/FalconTrajectory".jpg, id=1340, 964.60374pt x 563
 .10374pt>
 File: "figures/2_literature-review/FalconTrajectory".jpg Graphic file (type jpg
 )
@@ -1845,7 +1841,7 @@ Package pdftex.def Info: "figures/2_literature-review/FalconTrajectory".jpg use
 d on input line 82.
 (pdftex.def)             Requested size: 483.69687pt x 282.36745pt.
 
-<figures/2_literature-review/visuel_adeline1.jpg, id=1282, 803.0pt x 481.8pt>
+<figures/2_literature-review/visuel_adeline1.jpg, id=1343, 803.0pt x 481.8pt>
 File: figures/2_literature-review/visuel_adeline1.jpg Graphic file (type jpg)
 
 <use figures/2_literature-review/visuel_adeline1.jpg>
@@ -1946,7 +1942,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 151--151
  []
 
 [12]
-<./figures/2_literature-review/AirbreathingCorridor.png, id=1385, 531.48563pt x
+<./figures/2_literature-review/AirbreathingCorridor.png, id=1445, 531.48563pt x
  362.85562pt>
 File: ./figures/2_literature-review/AirbreathingCorridor.png Graphic file (type
  png)
@@ -1955,7 +1951,7 @@ Package pdftex.def Info: ./figures/2_literature-review/AirbreathingCorridor.png
  used on input line 180.
 (pdftex.def)             Requested size: 338.58632pt x 231.16376pt.
 
-<./figures/2_literature-review/SKYLON.png, id=1399, 562.35094pt x 392.21532pt>
+<./figures/2_literature-review/SKYLON.png, id=1459, 562.35094pt x 392.21532pt>
 File: ./figures/2_literature-review/SKYLON.png Graphic file (type png)
 
 <use ./figures/2_literature-review/SKYLON.png>
@@ -1967,7 +1963,7 @@ Package pdftex.def Info: ./figures/2_literature-review/SKYLON.png used on input
 
 ] [14 <./figures/2_literature-review/AirbreathingCorridor.png>] [15 <./figures/
 2_literature-review/SKYLON.png>]
-<./figures/2_literature-review/ConstqExample.png, id=1440, 514.17094pt x 359.09
+<./figures/2_literature-review/ConstqExample.png, id=1500, 514.17094pt x 359.09
 157pt>
 File: ./figures/2_literature-review/ConstqExample.png Graphic file (type png)
  <use ./figures/2_literature-review/ConstqExample.png>
@@ -1975,7 +1971,7 @@ Package pdftex.def Info: ./figures/2_literature-review/ConstqExample.png used o
 n input line 230.
 (pdftex.def)             Requested size: 435.32422pt x 304.0293pt.
  [16 <./figures/2_literature-review/ConstqExample.png>]
-<"figures/2_literature-review/Powell Vehicle".png, id=1473, 386.94562pt x 247.6
+<"figures/2_literature-review/Powell Vehicle".png, id=1533, 386.94562pt x 247.6
 7531pt>
 File: "figures/2_literature-review/Powell Vehicle".png Graphic file (type png)
  <use "figures/2_literature-review/Powell Vehicle".png>
@@ -1983,7 +1979,7 @@ Package pdftex.def Info: "figures/2_literature-review/Powell Vehicle".png used
 on input line 246.
 (pdftex.def)             Requested size: 145.11053pt x 92.88179pt.
 
-<"figures/2_literature-review/Powell Trajectory".png, id=1474, 357.58594pt x 22
+<"figures/2_literature-review/Powell Trajectory".png, id=1534, 357.58594pt x 22
 9.60782pt>
 File: "figures/2_literature-review/Powell Trajectory".png Graphic file (type pn
 g)
@@ -1996,7 +1992,7 @@ ed on input line 251.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [17]
-<"figures/2_literature-review/Wilhite Booster Vehicle".png, id=1486, 458.46281p
+<"figures/2_literature-review/Wilhite Booster Vehicle".png, id=1546, 458.46281p
 t x 333.49594pt>
 File: "figures/2_literature-review/Wilhite Booster Vehicle".png Graphic file (t
 ype png)
@@ -2006,7 +2002,7 @@ Package pdftex.def Info: "figures/2_literature-review/Wilhite Booster Vehicle".
 png used on input line 278.
 (pdftex.def)             Requested size: 217.66211pt x 158.3308pt.
 
-<"figures/2_literature-review/WilHite Booster Trajectory".png, id=1487, 572.890
+<"figures/2_literature-review/WilHite Booster Trajectory".png, id=1547, 572.890
 32pt x 415.5525pt>
 File: "figures/2_literature-review/WilHite Booster Trajectory".png Graphic file
  (type png)
@@ -2016,7 +2012,7 @@ Package pdftex.def Info: "figures/2_literature-review/WilHite Booster Trajector
 y".png used on input line 283.
 (pdftex.def)             Requested size: 217.66211pt x 157.88622pt.
 
-<"figures/2_literature-review/Tsuchiya Vehicles".png, id=1490, 441.90094pt x 30
+<"figures/2_literature-review/Tsuchiya Vehicles".png, id=1550, 441.90094pt x 30
 1.8778pt>
 File: "figures/2_literature-review/Tsuchiya Vehicles".png Graphic file (type pn
 g)
@@ -2025,14 +2021,14 @@ Package pdftex.def Info: "figures/2_literature-review/Tsuchiya Vehicles".png us
 ed on input line 294.
 (pdftex.def)             Requested size: 217.66211pt x 148.69527pt.
 
-<"figures/2_literature-review/Tsuchiya".png, id=1491, 328.22626pt x 234.8775pt>
+<"figures/2_literature-review/Tsuchiya".png, id=1551, 328.22626pt x 234.8775pt>
 File: "figures/2_literature-review/Tsuchiya".png Graphic file (type png)
 <use "figures/2_literature-review/Tsuchiya".png>
 Package pdftex.def Info: "figures/2_literature-review/Tsuchiya".png used on inp
 ut line 299.
 (pdftex.def)             Requested size: 217.66211pt x 155.75792pt.
 
-<"figures/2_literature-review/Mehta Vehicle".png, id=1498, 153.57375pt x 292.84
+<"figures/2_literature-review/Mehta Vehicle".png, id=1558, 153.57375pt x 292.84
 406pt>
 File: "figures/2_literature-review/Mehta Vehicle".png Graphic file (type png)
  <use "figures/2_literature-review/Mehta Vehicle".png>
@@ -2040,7 +2036,7 @@ Package pdftex.def Info: "figures/2_literature-review/Mehta Vehicle".png used o
 n input line 311.
 (pdftex.def)             Requested size: 145.11053pt x 276.72122pt.
 
-<"figures/2_literature-review/Mehta Trajectory".png, id=1499, 295.1025pt x 261.
+<"figures/2_literature-review/Mehta Trajectory".png, id=1559, 295.1025pt x 261.
 97874pt>
 File: "figures/2_literature-review/Mehta Trajectory".png Graphic file (type png
 )
@@ -2069,7 +2065,7 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
 [21]
-<"figures/2_literature-review/chai-boost skip".png, id=1557, 618.05907pt x 191.
+<"figures/2_literature-review/chai-boost skip".png, id=1617, 618.05907pt x 191.
 21437pt>
 File: "figures/2_literature-review/chai-boost skip".png Graphic file (type png)
 
@@ -2084,14 +2080,14 @@ aunch
  []
 
 
-<./figures/2_literature-review/SPARTAN.png, id=1562, 661.72218pt x 335.75438pt>
+<./figures/2_literature-review/SPARTAN.png, id=1622, 661.72218pt x 335.75438pt>
 File: ./figures/2_literature-review/SPARTAN.png Graphic file (type png)
 <use ./figures/2_literature-review/SPARTAN.png>
 Package pdftex.def Info: ./figures/2_literature-review/SPARTAN.png used on inpu
 t line 361.
 (pdftex.def)             Requested size: 338.58632pt x 171.796pt.
  [22 <./figures/2_literature-review/chai-boost skip.png>]
-<figures/2_literature-review/C-REST.png, id=1583, 319.94531pt x 284.56313pt>
+<figures/2_literature-review/C-REST.png, id=1643, 319.94531pt x 284.56313pt>
 File: figures/2_literature-review/C-REST.png Graphic file (type png)
 
 <use figures/2_literature-review/C-REST.png>
@@ -2109,7 +2105,7 @@ Package Fancyhdr Warning: \headheight is too small (15.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [23 <./figures/2_literature-review/SPARTAN.png>]
-<figures/2_literature-review/SPARTAN_traj1.png, id=1593, 542.025pt x 267.24844p
+<figures/2_literature-review/SPARTAN_traj1.png, id=1653, 542.025pt x 267.24844p
 t>
 File: figures/2_literature-review/SPARTAN_traj1.png Graphic file (type png)
  <use figures/2_literature-review/SPARTAN_traj1.png>
@@ -2117,7 +2113,7 @@ Package pdftex.def Info: figures/2_literature-review/SPARTAN_traj1.png used on
 input line 396.
 (pdftex.def)             Requested size: 383.09149pt x 188.89136pt.
 
-<figures/2_literature-review/SPARTAN_traj2.png, id=1594, 523.20468pt x 265.7428
+<figures/2_literature-review/SPARTAN_traj2.png, id=1654, 523.20468pt x 265.7428
 1pt>
 File: figures/2_literature-review/SPARTAN_traj2.png Graphic file (type png)
  <use figures/2_literature-review/SPARTAN_traj2.png>
@@ -2125,7 +2121,7 @@ Package pdftex.def Info: figures/2_literature-review/SPARTAN_traj2.png used on
 input line 402.
 (pdftex.def)             Requested size: 383.09149pt x 194.58264pt.
 
-<figures/2_literature-review/SPARTAN_traj3.png, id=1595, 509.65407pt x 263.4843
+<figures/2_literature-review/SPARTAN_traj3.png, id=1655, 509.65407pt x 263.4843
 8pt>
 File: figures/2_literature-review/SPARTAN_traj3.png Graphic file (type png)
  <use figures/2_literature-review/SPARTAN_traj3.png>
@@ -2143,7 +2139,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 394--412
  []
 
 
-<figures/2_literature-review/SPARTANElevons.png, id=1605, 551.81157pt x 143.787
+<figures/2_literature-review/SPARTANElevons.png, id=1665, 551.81157pt x 143.787
 19pt>
 File: figures/2_literature-review/SPARTANElevons.png Graphic file (type png)
  <use figures/2_literature-review/SPARTANElevons.png>
@@ -2151,7 +2147,7 @@ Package pdftex.def Info: figures/2_literature-review/SPARTANElevons.png used on
  input line 424.
 (pdftex.def)             Requested size: 338.58632pt x 88.23003pt.
  [24 <./figures/2_literature-review/C-REST.png>]
-<figures/2_literature-review/ThirdStage.png, id=1619, 404.26031pt x 135.50626pt
+<figures/2_literature-review/ThirdStage.png, id=1679, 404.26031pt x 135.50626pt
 >
 File: figures/2_literature-review/ThirdStage.png Graphic file (type png)
  <use figures/2_literature-review/ThirdStage.png>
@@ -2219,7 +2215,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 472--472
 
 
 ]
-<./figures/2_literature-review/SingleMultiple.png, id=1672, 487.06969pt x 239.3
+<./figures/2_literature-review/SingleMultiple.png, id=1732, 487.06969pt x 239.3
 9438pt>
 File: ./figures/2_literature-review/SingleMultiple.png Graphic file (type png)
  <use ./figures/2_literature-review/SingleMultiple.png>
@@ -2227,7 +2223,7 @@ Package pdftex.def Info: ./figures/2_literature-review/SingleMultiple.png used
 on input line 525.
 (pdftex.def)             Requested size: 435.32422pt x 213.96257pt.
  [30]
-<figures/2_literature-review/HPExamples.png, id=1699, 517.935pt x 231.11343pt>
+<figures/2_literature-review/HPExamples.png, id=1759, 517.935pt x 231.11343pt>
 File: figures/2_literature-review/HPExamples.png Graphic file (type png)
 
 <use figures/2_literature-review/HPExamples.png>
@@ -2236,7 +2232,7 @@ ut line 541.
 (pdftex.def)             Requested size: 435.32422pt x 194.26091pt.
  [31 <./figures/2_literature-review/SingleMultiple.png>] [32 <./figures/2_liter
 ature-review/HPExamples.png>]
-<figures/2_literature-review/OptimisationMethodComparisonChai.png, id=1742, 283
+<figures/2_literature-review/OptimisationMethodComparisonChai.png, id=1803, 283
 .81032pt x 204.765pt>
 File: figures/2_literature-review/OptimisationMethodComparisonChai.png Graphic 
 file (type png)
@@ -2285,7 +2281,7 @@ Overfull \hbox (4.27972pt too wide) in paragraph at lines 592--607
  []
 
 [35]
-<figures/2_literature-review/Skylon-CART3D.png, id=1822, 545.78906pt x 570.6318
+<figures/2_literature-review/Skylon-CART3D.png, id=1881, 545.78906pt x 570.6318
 8pt>
 File: figures/2_literature-review/Skylon-CART3D.png Graphic file (type png)
  <use figures/2_literature-review/Skylon-CART3D.png>
@@ -2293,7 +2289,7 @@ Package pdftex.def Info: figures/2_literature-review/Skylon-CART3D.png used on
 input line 647.
 (pdftex.def)             Requested size: 290.22107pt x 303.42607pt.
 
-<"figures/2_literature-review/CART3D Comparisons".png, id=1834, 584.93532pt x 4
+<"figures/2_literature-review/CART3D Comparisons".png, id=1893, 584.93532pt x 4
 86.31688pt>
 File: "figures/2_literature-review/CART3D Comparisons".png Graphic file (type p
 ng)
@@ -2310,7 +2306,7 @@ ure-review/CART3D Comparisons.png>]) (3_vehicle-design.tex [39] [40
 
 ]
 Chapter 3.
-<figures/3_vehicle_design/Trajsimple.png, id=1871, 839.38594pt x 503.63156pt>
+<figures/3_vehicle_design/Trajsimple.png, id=1930, 839.38594pt x 503.63156pt>
 File: figures/3_vehicle_design/Trajsimple.png Graphic file (type png)
 
 <use figures/3_vehicle_design/Trajsimple.png>
@@ -2329,7 +2325,7 @@ ver-sity of Queens-land and Hy-per-sonix[citeXX].
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [42 <./figures/3_vehicle_design/Trajsimple.png>]
-<figures/3_vehicle_design/NoInternal.png, id=1884, 1166.10657pt x 504.38437pt>
+<figures/3_vehicle_design/NoInternal.png, id=1943, 1166.10657pt x 504.38437pt>
 File: figures/3_vehicle_design/NoInternal.png Graphic file (type png)
 
 <use figures/3_vehicle_design/NoInternal.png>
@@ -2337,7 +2333,7 @@ Package pdftex.def Info: figures/3_vehicle_design/NoInternal.png used on input
 line 34.
 (pdftex.def)             Requested size: 338.58632pt x 146.44473pt.
 
-<figures/3_vehicle_design/INTERNALS.jpg, id=1885, 1412.27625pt x 245.41687pt>
+<figures/3_vehicle_design/INTERNALS.jpg, id=1944, 1412.27625pt x 245.41687pt>
 File: figures/3_vehicle_design/INTERNALS.jpg Graphic file (type jpg)
 
 <use figures/3_vehicle_design/INTERNALS.jpg>
@@ -2349,7 +2345,7 @@ Underfull \vbox (badness 6575) has occurred while \output is active []
 
  [43 <./figures/3_vehicle_design/NoInternal.png> <./figures/3_vehicle_design/IN
 TERNALS.jpg>] [44]
-<figures/3_vehicle_design/SPARTANEngineshock.png, id=1904, 626.34pt x 187.45032
+<figures/3_vehicle_design/SPARTANEngineshock.png, id=1964, 626.34pt x 187.45032
 pt>
 File: figures/3_vehicle_design/SPARTANEngineshock.png Graphic file (type png)
  <use figures/3_vehicle_design/SPARTANEngineshock.png>
@@ -2357,7 +2353,7 @@ Package pdftex.def Info: figures/3_vehicle_design/SPARTANEngineshock.png used o
 n input line 100.
 (pdftex.def)             Requested size: 338.58632pt x 101.3332pt.
 
-<figures/3_vehicle_design/ConicalM.png, id=1905, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/ConicalM.png, id=1965, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/ConicalM.png Graphic file (type png)
 
 <use figures/3_vehicle_design/ConicalM.png>
@@ -2365,7 +2361,7 @@ Package pdftex.def Info: figures/3_vehicle_design/ConicalM.png used on input li
 ne 109.
 (pdftex.def)             Requested size: 239.43127pt x 179.57387pt.
 
-<figures/3_vehicle_design/ConicalP.png, id=1906, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/ConicalP.png, id=1966, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/ConicalP.png Graphic file (type png)
 
 <use figures/3_vehicle_design/ConicalP.png>
@@ -2373,7 +2369,7 @@ Package pdftex.def Info: figures/3_vehicle_design/ConicalP.png used on input li
 ne 115.
 (pdftex.def)             Requested size: 239.43127pt x 179.57387pt.
 
-<figures/3_vehicle_design/ConicalT.png, id=1907, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/ConicalT.png, id=1967, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/ConicalT.png Graphic file (type png)
 
 <use figures/3_vehicle_design/ConicalT.png>
@@ -2388,7 +2384,7 @@ Overfull \hbox (2.28003pt too wide) in paragraph at lines 107--125
 [45 <./figures/3_vehicle_design/SPARTANEngineshock.png>] [46 <./figures/3_vehic
 le_design/ConicalM.png (PNG copy)> <./figures/3_vehicle_design/ConicalP.png (PN
 G copy)> <./figures/3_vehicle_design/ConicalT.png (PNG copy)>]
-<figures/3_vehicle_design/ISPinterp.png, id=1924, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/ISPinterp.png, id=1983, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/ISPinterp.png Graphic file (type png)
 
 <use figures/3_vehicle_design/ISPinterp.png>
@@ -2396,7 +2392,7 @@ Package pdftex.def Info: figures/3_vehicle_design/ISPinterp.png used on input l
 ine 135.
 (pdftex.def)             Requested size: 290.22107pt x 217.66837pt.
 
-<figures/3_vehicle_design/EquivalenceRatioInterp.png, id=1928, 421.575pt x 316.
+<figures/3_vehicle_design/EquivalenceRatioInterp.png, id=1987, 421.575pt x 316.
 18124pt>
 File: figures/3_vehicle_design/EquivalenceRatioInterp.png Graphic file (type pn
 g)
@@ -2406,7 +2402,7 @@ ed on input line 142.
 (pdftex.def)             Requested size: 290.22107pt x 217.66837pt.
  [47 <./figures/3_vehicle_design/ISPinterp.png (PNG copy)>] [48 <./figures/3_ve
 hicle_design/EquivalenceRatioInterp.png (PNG copy)>]
-<figures/3_vehicle_design/CartCoeffs_cells.png, id=1945, 412.54124pt x 268.0012
+<figures/3_vehicle_design/CartCoeffs_cells.png, id=2004, 412.54124pt x 268.0012
 5pt>
 File: figures/3_vehicle_design/CartCoeffs_cells.png Graphic file (type png)
  <use figures/3_vehicle_design/CartCoeffs_cells.png>
@@ -2414,7 +2410,7 @@ Package pdftex.def Info: figures/3_vehicle_design/CartCoeffs_cells.png used on
 input line 203.
 (pdftex.def)             Requested size: 239.43127pt x 155.54306pt.
 
-<figures/3_vehicle_design/CartCoeffs_its.png, id=1946, 412.54124pt x 268.00125p
+<figures/3_vehicle_design/CartCoeffs_its.png, id=2005, 412.54124pt x 268.00125p
 t>
 File: figures/3_vehicle_design/CartCoeffs_its.png Graphic file (type png)
  <use figures/3_vehicle_design/CartCoeffs_its.png>
@@ -2422,7 +2418,7 @@ Package pdftex.def Info: figures/3_vehicle_design/CartCoeffs_its.png used on in
 put line 208.
 (pdftex.def)             Requested size: 239.43127pt x 155.54306pt.
 
-<figures/3_vehicle_design/ErrorEst.png, id=1947, 412.54124pt x 268.00125pt>
+<figures/3_vehicle_design/ErrorEst.png, id=2006, 412.54124pt x 268.00125pt>
 File: figures/3_vehicle_design/ErrorEst.png Graphic file (type png)
 
 <use figures/3_vehicle_design/ErrorEst.png>
@@ -2436,7 +2432,7 @@ Overfull \hbox (2.28003pt too wide) in paragraph at lines 201--218
 
 [49] [50 <./figures/3_vehicle_design/CartCoeffs_cells.png> <./figures/3_vehicle
 _design/CartCoeffs_its.png> <./figures/3_vehicle_design/ErrorEst.png>]
-<figures/3_vehicle_design/ViscousCd1.png, id=1964, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/ViscousCd1.png, id=2024, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/ViscousCd1.png Graphic file (type png)
 
 <use figures/3_vehicle_design/ViscousCd1.png>
@@ -2444,7 +2440,7 @@ Package pdftex.def Info: figures/3_vehicle_design/ViscousCd1.png used on input
 line 231.
 (pdftex.def)             Requested size: 239.43127pt x 179.57387pt.
 
-<figures/3_vehicle_design/ViscousCd2.png, id=1965, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/ViscousCd2.png, id=2025, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/ViscousCd2.png Graphic file (type png)
 
 <use figures/3_vehicle_design/ViscousCd2.png>
@@ -2452,7 +2448,7 @@ Package pdftex.def Info: figures/3_vehicle_design/ViscousCd2.png used on input
 line 236.
 (pdftex.def)             Requested size: 239.43127pt x 179.57387pt.
 
-<figures/3_vehicle_design/ViscousCd3.png, id=1966, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/ViscousCd3.png, id=2026, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/ViscousCd3.png Graphic file (type png)
 
 <use figures/3_vehicle_design/ViscousCd3.png>
@@ -2460,7 +2456,7 @@ Package pdftex.def Info: figures/3_vehicle_design/ViscousCd3.png used on input
 line 242.
 (pdftex.def)             Requested size: 239.43127pt x 179.57387pt.
 
-<figures/3_vehicle_design/ViscousCd4.png, id=1967, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/ViscousCd4.png, id=2027, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/ViscousCd4.png Graphic file (type png)
 
 <use figures/3_vehicle_design/ViscousCd4.png>
@@ -2478,7 +2474,7 @@ Overfull \hbox (2.28003pt too wide) in paragraph at lines 229--252
  []
 
 
-<figures/3_vehicle_design/SPARTAN_FLAPS.jpg, id=1968, 1121.69063pt x 600.74437p
+<figures/3_vehicle_design/SPARTAN_FLAPS.jpg, id=2028, 1121.69063pt x 600.74437p
 t>
 File: figures/3_vehicle_design/SPARTAN_FLAPS.jpg Graphic file (type jpg)
  <use figures/3_vehicle_design/SPARTAN_FLAPS.jpg>
@@ -2488,7 +2484,7 @@ ut line 263.
  [51 <./figures/3_vehicle_design/ViscousCd1.png (PNG copy)> <./figures/3_vehicl
 e_design/ViscousCd2.png (PNG copy)> <./figures/3_vehicle_design/ViscousCd3.png 
 (PNG copy)> <./figures/3_vehicle_design/ViscousCd4.png (PNG copy)>]
-<figures/3_vehicle_design/SPARTANForces.png, id=1977, 753.5653pt x 243.15843pt>
+<figures/3_vehicle_design/SPARTANForces.png, id=2036, 753.5653pt x 243.15843pt>
 File: figures/3_vehicle_design/SPARTANForces.png Graphic file (type png)
 <use figures/3_vehicle_design/SPARTANForces.png>
 Package pdftex.def Info: figures/3_vehicle_design/SPARTANForces.png used on inp
@@ -2496,7 +2492,7 @@ ut line 277.
 (pdftex.def)             Requested size: 338.58632pt x 109.25331pt.
  [52 <./figures/3_vehicle_design/SPARTAN_FLAPS.jpg> <./figures/3_vehicle_design
 /SPARTANForces.png>]
-<figures/3_vehicle_design/CG1.png, id=1984, 1065.9825pt x 268.75406pt>
+<figures/3_vehicle_design/CG1.png, id=2043, 1065.9825pt x 268.75406pt>
 File: figures/3_vehicle_design/CG1.png Graphic file (type png)
 
 <use figures/3_vehicle_design/CG1.png>
@@ -2504,7 +2500,7 @@ Package pdftex.def Info: figures/3_vehicle_design/CG1.png used on input line 30
 3.
 (pdftex.def)             Requested size: 217.66211pt x 54.87349pt.
 
-<figures/3_vehicle_design/CG2.png, id=1985, 1068.24094pt x 264.23718pt>
+<figures/3_vehicle_design/CG2.png, id=2044, 1068.24094pt x 264.23718pt>
 File: figures/3_vehicle_design/CG2.png Graphic file (type png)
 
 <use figures/3_vehicle_design/CG2.png>
@@ -2512,7 +2508,7 @@ Package pdftex.def Info: figures/3_vehicle_design/CG2.png used on input line 30
 8.
 (pdftex.def)             Requested size: 217.66211pt x 53.83835pt.
 
-<figures/3_vehicle_design/CG3.png, id=1986, 1063.72406pt x 261.97874pt>
+<figures/3_vehicle_design/CG3.png, id=2045, 1063.72406pt x 261.97874pt>
 File: figures/3_vehicle_design/CG3.png Graphic file (type png)
 
 <use figures/3_vehicle_design/CG3.png>
@@ -2520,7 +2516,7 @@ Package pdftex.def Info: figures/3_vehicle_design/CG3.png used on input line 31
 4.
 (pdftex.def)             Requested size: 217.66211pt x 53.60605pt.
 
-<figures/3_vehicle_design/CG4.png, id=1987, 1082.54437pt x 264.99pt>
+<figures/3_vehicle_design/CG4.png, id=2046, 1082.54437pt x 264.99pt>
 File: figures/3_vehicle_design/CG4.png Graphic file (type png)
 
 <use figures/3_vehicle_design/CG4.png>
@@ -2528,7 +2524,7 @@ Package pdftex.def Info: figures/3_vehicle_design/CG4.png used on input line 32
 0.
 (pdftex.def)             Requested size: 217.66211pt x 53.28009pt.
 
-<figures/3_vehicle_design/CG5.png, id=1988, 1066.7353pt x 271.76532pt>
+<figures/3_vehicle_design/CG5.png, id=2047, 1066.7353pt x 271.76532pt>
 File: figures/3_vehicle_design/CG5.png Graphic file (type png)
 
 <use figures/3_vehicle_design/CG5.png>
@@ -2546,7 +2542,7 @@ Overfull \hbox (2.28003pt too wide) in paragraph at lines 301--330
  []
 
 
-<figures/3_vehicle_design/FlapEngineCG1.png, id=1990, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/FlapEngineCG1.png, id=2049, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/FlapEngineCG1.png Graphic file (type png)
 
 <use figures/3_vehicle_design/FlapEngineCG1.png>
@@ -2554,7 +2550,7 @@ Package pdftex.def Info: figures/3_vehicle_design/FlapEngineCG1.png used on inp
 ut line 345.
 (pdftex.def)             Requested size: 239.43127pt x 179.57387pt.
 
-<figures/3_vehicle_design/FlapEngineCG2.png, id=1991, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/FlapEngineCG2.png, id=2050, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/FlapEngineCG2.png Graphic file (type png)
 
 <use figures/3_vehicle_design/FlapEngineCG2.png>
@@ -2562,7 +2558,7 @@ Package pdftex.def Info: figures/3_vehicle_design/FlapEngineCG2.png used on inp
 ut line 350.
 (pdftex.def)             Requested size: 239.43127pt x 179.57387pt.
 
-<figures/3_vehicle_design/FlapEngineCG3.png, id=1992, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/FlapEngineCG3.png, id=2051, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/FlapEngineCG3.png Graphic file (type png)
 
 <use figures/3_vehicle_design/FlapEngineCG3.png>
@@ -2570,7 +2566,7 @@ Package pdftex.def Info: figures/3_vehicle_design/FlapEngineCG3.png used on inp
 ut line 356.
 (pdftex.def)             Requested size: 239.43127pt x 179.57387pt.
 
-<figures/3_vehicle_design/FlapNoEngineCG4.png, id=1993, 421.575pt x 316.18124pt
+<figures/3_vehicle_design/FlapNoEngineCG4.png, id=2052, 421.575pt x 316.18124pt
 >
 File: figures/3_vehicle_design/FlapNoEngineCG4.png Graphic file (type png)
  <use figures/3_vehicle_design/FlapNoEngineCG4.png>
@@ -2587,7 +2583,7 @@ Overfull \hbox (2.28003pt too wide) in paragraph at lines 343--366
 []$ $[]$ 
  []
 
-<figures/3_vehicle_design/FlowChart.png, id=1995, 469.00218pt x 581.92406pt>
+<figures/3_vehicle_design/FlowChart.png, id=2054, 469.00218pt x 581.92406pt>
 File: figures/3_vehicle_design/FlowChart.png Graphic file (type png)
 
 <use figures/3_vehicle_design/FlowChart.png>
@@ -2595,7 +2591,7 @@ Package pdftex.def Info: figures/3_vehicle_design/FlowChart.png used on input l
 ine 380.
 (pdftex.def)             Requested size: 338.58632pt x 420.1038pt.
 
-<figures/3_vehicle_design/Pointwise.png, id=1997, 521.69907pt x 296.60812pt>
+<figures/3_vehicle_design/Pointwise.png, id=2056, 521.69907pt x 296.60812pt>
 File: figures/3_vehicle_design/Pointwise.png Graphic file (type png)
 
 <use figures/3_vehicle_design/Pointwise.png>
@@ -2603,7 +2599,7 @@ Package pdftex.def Info: figures/3_vehicle_design/Pointwise.png used on input l
 ine 387.
 (pdftex.def)             Requested size: 290.22107pt x 165.00415pt.
  [53]
-<figures/3_vehicle_design/Pointwise-EngineBC.png, id=2005, 418.56375pt x 232.61
+<figures/3_vehicle_design/Pointwise-EngineBC.png, id=2064, 418.56375pt x 232.61
 906pt>
 File: figures/3_vehicle_design/Pointwise-EngineBC.png Graphic file (type png)
  <use figures/3_vehicle_design/Pointwise-EngineBC.png>
@@ -2628,7 +2624,7 @@ Underfull \vbox (badness 1199) has occurred while \output is active []
 
  [57 <./figures/3_vehicle_design/Pointwise.png> <./figures/3_vehicle_design/Poi
 ntwise-EngineBC.png>]
-<figures/3_vehicle_design/Thrust.png, id=2039, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/Thrust.png, id=2098, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/Thrust.png Graphic file (type png)
 
 <use figures/3_vehicle_design/Thrust.png>
@@ -2636,7 +2632,7 @@ Package pdftex.def Info: figures/3_vehicle_design/Thrust.png used on input line
  430.
 (pdftex.def)             Requested size: 290.22107pt x 217.66837pt.
 
-<figures/3_vehicle_design/Isp.png, id=2040, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/Isp.png, id=2099, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/Isp.png Graphic file (type png)
 
 <use figures/3_vehicle_design/Isp.png>
@@ -2644,7 +2640,7 @@ Package pdftex.def Info: figures/3_vehicle_design/Isp.png used on input line 43
 7.
 (pdftex.def)             Requested size: 290.22107pt x 217.66837pt.
 
-<figures/3_vehicle_design/EngineOn.png, id=2042, 2007.5pt x 1116.17pt>
+<figures/3_vehicle_design/EngineOn.png, id=2101, 2007.5pt x 1116.17pt>
 File: figures/3_vehicle_design/EngineOn.png Graphic file (type png)
 
 <use figures/3_vehicle_design/EngineOn.png>
@@ -2652,7 +2648,7 @@ Package pdftex.def Info: figures/3_vehicle_design/EngineOn.png used on input li
 ne 448.
 (pdftex.def)             Requested size: 435.32422pt x 242.03267pt.
 
-<figures/3_vehicle_design/Cl-EngineOn.png, id=2043, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/Cl-EngineOn.png, id=2102, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/Cl-EngineOn.png Graphic file (type png)
 
 <use figures/3_vehicle_design/Cl-EngineOn.png>
@@ -2660,7 +2656,7 @@ Package pdftex.def Info: figures/3_vehicle_design/Cl-EngineOn.png used on input
  line 457.
 (pdftex.def)             Requested size: 239.43127pt x 179.57387pt.
 
-<figures/3_vehicle_design/Cd-EngineOn.png, id=2044, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/Cd-EngineOn.png, id=2103, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/Cd-EngineOn.png Graphic file (type png)
 
 <use figures/3_vehicle_design/Cd-EngineOn.png>
@@ -2668,7 +2664,7 @@ Package pdftex.def Info: figures/3_vehicle_design/Cd-EngineOn.png used on input
  line 463.
 (pdftex.def)             Requested size: 239.43127pt x 179.57387pt.
 
-<figures/3_vehicle_design/LD-EngineOn.png, id=2045, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/LD-EngineOn.png, id=2104, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/LD-EngineOn.png Graphic file (type png)
 
 <use figures/3_vehicle_design/LD-EngineOn.png>
@@ -2680,7 +2676,7 @@ Overfull \hbox (2.28003pt too wide) in paragraph at lines 455--473
 []$[]$ $[]$
  []
 
-<figures/3_vehicle_design/CartSide.png, id=2046, 2007.5pt x 892.33376pt>
+<figures/3_vehicle_design/CartSide.png, id=2105, 2007.5pt x 892.33376pt>
 File: figures/3_vehicle_design/CartSide.png Graphic file (type png)
 
 <use figures/3_vehicle_design/CartSide.png>
@@ -2688,7 +2684,7 @@ Package pdftex.def Info: figures/3_vehicle_design/CartSide.png used on input li
 ne 484.
 (pdftex.def)             Requested size: 435.32422pt x 193.49554pt.
 
-<figures/3_vehicle_design/CartTop.png, id=2047, 2007.5pt x 892.33376pt>
+<figures/3_vehicle_design/CartTop.png, id=2106, 2007.5pt x 892.33376pt>
 File: figures/3_vehicle_design/CartTop.png Graphic file (type png)
 
 <use figures/3_vehicle_design/CartTop.png>
@@ -2696,7 +2692,7 @@ Package pdftex.def Info: figures/3_vehicle_design/CartTop.png used on input lin
 e 491.
 (pdftex.def)             Requested size: 435.32422pt x 193.49554pt.
 
-<figures/3_vehicle_design/Cl.png, id=2048, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/Cl.png, id=2107, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/Cl.png Graphic file (type png)
 
 <use figures/3_vehicle_design/Cl.png>
@@ -2704,7 +2700,7 @@ Package pdftex.def Info: figures/3_vehicle_design/Cl.png used on input line 499
 .
 (pdftex.def)             Requested size: 239.43127pt x 179.57387pt.
 
-<figures/3_vehicle_design/Cd.png, id=2049, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/Cd.png, id=2108, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/Cd.png Graphic file (type png)
 
 <use figures/3_vehicle_design/Cd.png>
@@ -2712,7 +2708,7 @@ Package pdftex.def Info: figures/3_vehicle_design/Cd.png used on input line 505
 .
 (pdftex.def)             Requested size: 239.43127pt x 179.57387pt.
 
-<figures/3_vehicle_design/LD.png, id=2050, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/LD.png, id=2109, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/LD.png Graphic file (type png)
 
 <use figures/3_vehicle_design/LD.png>
@@ -2725,7 +2721,7 @@ Overfull \hbox (2.28003pt too wide) in paragraph at lines 497--515
  []
 
 [58 <./figures/3_vehicle_design/Thrust.png (PNG copy)>]
-<figures/3_vehicle_design/Unstart.png, id=2059, 767.11594pt x 485.56406pt>
+<figures/3_vehicle_design/Unstart.png, id=2118, 767.11594pt x 485.56406pt>
 File: figures/3_vehicle_design/Unstart.png Graphic file (type png)
 
 <use figures/3_vehicle_design/Unstart.png>
@@ -2733,7 +2729,7 @@ Package pdftex.def Info: figures/3_vehicle_design/Unstart.png used on input lin
 e 527.
 (pdftex.def)             Requested size: 338.58632pt x 214.31566pt.
  [59 <./figures/3_vehicle_design/Isp.png (PNG copy)>]
-<figures/3_vehicle_design/FirstStageThrustVec.png, id=2068, 961.34157pt x 268.0
+<figures/3_vehicle_design/FirstStageThrustVec.png, id=2127, 961.34157pt x 268.0
 0125pt>
 File: figures/3_vehicle_design/FirstStageThrustVec.png Graphic file (type png)
  <use figures/3_vehicle_design/FirstStageThrustVec.png>
@@ -2741,7 +2737,7 @@ Package pdftex.def Info: figures/3_vehicle_design/FirstStageThrustVec.png used
 on input line 571.
 (pdftex.def)             Requested size: 435.32422pt x 121.36006pt.
  [60 <./figures/3_vehicle_design/EngineOn.png (PNG copy)>]
-<figures/3_vehicle_design/CARTcontour.png, id=2073, 2007.5pt x 711.65875pt>
+<figures/3_vehicle_design/CARTcontour.png, id=2132, 2007.5pt x 711.65875pt>
 File: figures/3_vehicle_design/CARTcontour.png Graphic file (type png)
 
 <use figures/3_vehicle_design/CARTcontour.png>
@@ -2749,7 +2745,7 @@ Package pdftex.def Info: figures/3_vehicle_design/CARTcontour.png used on input
  line 580.
 (pdftex.def)             Requested size: 338.58632pt x 120.02478pt.
 
-<figures/3_vehicle_design/FirstStageCl.png, id=2074, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/FirstStageCl.png, id=2133, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/FirstStageCl.png Graphic file (type png)
 
 <use figures/3_vehicle_design/FirstStageCl.png>
@@ -2757,7 +2753,7 @@ Package pdftex.def Info: figures/3_vehicle_design/FirstStageCl.png used on inpu
 t line 588.
 (pdftex.def)             Requested size: 239.43127pt x 179.57387pt.
 
-<figures/3_vehicle_design/FirstStageCd.png, id=2075, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/FirstStageCd.png, id=2134, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/FirstStageCd.png Graphic file (type png)
 
 <use figures/3_vehicle_design/FirstStageCd.png>
@@ -2765,7 +2761,7 @@ Package pdftex.def Info: figures/3_vehicle_design/FirstStageCd.png used on inpu
 t line 594.
 (pdftex.def)             Requested size: 239.43127pt x 179.57387pt.
 
-<figures/3_vehicle_design/FirstStageLD.png, id=2076, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/FirstStageLD.png, id=2135, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/FirstStageLD.png Graphic file (type png)
 
 <use figures/3_vehicle_design/FirstStageLD.png>
@@ -2777,7 +2773,7 @@ Overfull \hbox (2.28003pt too wide) in paragraph at lines 586--604
 []$[]$ $[]$
  []
 
-<figures/3_vehicle_design/3rdStage.jpg, id=2077, 811.53188pt x 176.15813pt>
+<figures/3_vehicle_design/3rdStage.jpg, id=2136, 811.53188pt x 176.15813pt>
 File: figures/3_vehicle_design/3rdStage.jpg Graphic file (type jpg)
 
 <use figures/3_vehicle_design/3rdStage.jpg>
@@ -2788,7 +2784,7 @@ ne 615.
 le_design/Cd-EngineOn.png (PNG copy)> <./figures/3_vehicle_design/LD-EngineOn.p
 ng (PNG copy)>] [62 <./figures/3_vehicle_design/CartSide.png (PNG copy)> <./fig
 ures/3_vehicle_design/CartTop.png (PNG copy)>]
-<"figures/3_vehicle_design/Thrust Coefficient - Arat".png, id=2092, 368.87813pt
+<"figures/3_vehicle_design/Thrust Coefficient - Arat".png, id=2152, 368.87813pt
  x 237.88875pt>
 File: "figures/3_vehicle_design/Thrust Coefficient - Arat".png Graphic file (ty
 pe png)
@@ -2818,7 +2814,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [66 <./figures/3_vehicle_design/3rdStage.jpg> <./figures/3_vehicle_design/Thru
 st Coefficient - Arat.png>]
-<figures/3_vehicle_design/ThirdStageCl.png, id=2126, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/ThirdStageCl.png, id=2185, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/ThirdStageCl.png Graphic file (type png)
 
 <use figures/3_vehicle_design/ThirdStageCl.png>
@@ -2826,7 +2822,7 @@ Package pdftex.def Info: figures/3_vehicle_design/ThirdStageCl.png used on inpu
 t line 694.
 (pdftex.def)             Requested size: 239.43127pt x 179.57387pt.
 
-<figures/3_vehicle_design/ThirdStageCd.png, id=2127, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/ThirdStageCd.png, id=2186, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/ThirdStageCd.png Graphic file (type png)
 
 <use figures/3_vehicle_design/ThirdStageCd.png>
@@ -2834,7 +2830,7 @@ Package pdftex.def Info: figures/3_vehicle_design/ThirdStageCd.png used on inpu
 t line 700.
 (pdftex.def)             Requested size: 239.43127pt x 179.57387pt.
 
-<figures/3_vehicle_design/ThirdStageLD.png, id=2128, 421.575pt x 316.18124pt>
+<figures/3_vehicle_design/ThirdStageLD.png, id=2187, 421.575pt x 316.18124pt>
 File: figures/3_vehicle_design/ThirdStageLD.png Graphic file (type png)
 
 <use figures/3_vehicle_design/ThirdStageLD.png>
@@ -2849,7 +2845,7 @@ Overfull \hbox (2.28003pt too wide) in paragraph at lines 692--710
 [67] [68 <./figures/3_vehicle_design/ThirdStageCl.png (PNG copy)> <./figures/3_
 vehicle_design/ThirdStageCd.png (PNG copy)> <./figures/3_vehicle_design/ThirdSt
 ageLD.png (PNG copy)>]
-<figures/3_vehicle_design/ThrustVec.png, id=2140, 625.58719pt x 222.07968pt>
+<figures/3_vehicle_design/ThrustVec.png, id=2200, 625.58719pt x 222.07968pt>
 File: figures/3_vehicle_design/ThrustVec.png Graphic file (type png)
 
 <use figures/3_vehicle_design/ThrustVec.png>
@@ -2875,7 +2871,7 @@ ro-dy-namic and en-gine per-for-mance databases,
 [71
 
 ]
-<figures/4_LODESTAR/FlowChartSmall.png, id=2158, 604.50844pt x 254.45062pt>
+<figures/4_LODESTAR/FlowChartSmall.png, id=2217, 604.50844pt x 254.45062pt>
 File: figures/4_LODESTAR/FlowChartSmall.png Graphic file (type png)
 
 <use figures/4_LODESTAR/FlowChartSmall.png>
@@ -2886,28 +2882,28 @@ ne 38.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [72 <./figures/4_LODESTAR/FlowChartSmall.png>]
-<figures/4_LODESTAR/global.png, id=2168, 296.60812pt x 282.30469pt>
+<figures/4_LODESTAR/global.png, id=2227, 296.60812pt x 282.30469pt>
 File: figures/4_LODESTAR/global.png Graphic file (type png)
 
 <use figures/4_LODESTAR/global.png>
 Package pdftex.def Info: figures/4_LODESTAR/global.png used on input line 70.
 (pdftex.def)             Requested size: 338.58632pt x 322.27005pt.
 
-<figures/4_LODESTAR/Axes.png, id=2169, 1125.45468pt x 508.14844pt>
+<figures/4_LODESTAR/Axes.png, id=2228, 1125.45468pt x 508.14844pt>
 File: figures/4_LODESTAR/Axes.png Graphic file (type png)
 
 <use figures/4_LODESTAR/Axes.png>
 Package pdftex.def Info: figures/4_LODESTAR/Axes.png used on input line 76.
 (pdftex.def)             Requested size: 435.32422pt x 196.54881pt.
  [73]
-<figures/4_LODESTAR/SSO.png, id=2182, 542.77782pt x 185.94469pt>
+<figures/4_LODESTAR/SSO.png, id=2242, 542.77782pt x 185.94469pt>
 File: figures/4_LODESTAR/SSO.png Graphic file (type png)
 
 <use figures/4_LODESTAR/SSO.png>
 Package pdftex.def Info: figures/4_LODESTAR/SSO.png used on input line 115.
 (pdftex.def)             Requested size: 386.95897pt x 132.56923pt.
  [74 <./figures/4_LODESTAR/global.png>]
-<figures/4_LODESTAR/SiteLocation.png, id=2194, 659.46375pt x 578.16pt>
+<figures/4_LODESTAR/SiteLocation.png, id=2254, 659.46375pt x 578.16pt>
 File: figures/4_LODESTAR/SiteLocation.png Graphic file (type png)
 
 <use figures/4_LODESTAR/SiteLocation.png>
@@ -2919,7 +2915,7 @@ ures/4_LODESTAR/SiteLocation.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [77]
-<figures/4_LODESTAR/Traj.png, id=2219, 801.74532pt x 381.67593pt>
+<figures/4_LODESTAR/Traj.png, id=2278, 801.74532pt x 381.67593pt>
 File: figures/4_LODESTAR/Traj.png Graphic file (type png)
 
 <use figures/4_LODESTAR/Traj.png>
@@ -2950,7 +2946,7 @@ Underfull \hbox (badness 4686) in paragraph at lines 244--244
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [82]
-[83] [84] <figures/4_LODESTAR/Hohmann.png, id=2268, 514.92375pt x 465.99094pt>
+[83] [84] <figures/4_LODESTAR/Hohmann.png, id=2327, 514.92375pt x 465.99094pt>
 File: figures/4_LODESTAR/Hohmann.png Graphic file (type png)
 
 <use figures/4_LODESTAR/Hohmann.png>
@@ -2966,7 +2962,7 @@ Underfull \vbox (badness 3525) has occurred while \output is active []
 
  [88]
 [89]
-<"figures/4_LODESTAR/Ascent Flowchart".png, id=2309, 987.69pt x 646.66594pt>
+<"figures/4_LODESTAR/Ascent Flowchart".png, id=2368, 987.69pt x 646.66594pt>
 File: "figures/4_LODESTAR/Ascent Flowchart".png Graphic file (type png)
 
 <use "figures/4_LODESTAR/Ascent Flowchart".png>
@@ -2981,7 +2977,7 @@ Chapter 5.
 
 
 ] [92]
-<../LODESTAR_FINAL/Results/mode900/GroundTrackConstq.png, id=2324, 903.375pt x 
+<../LODESTAR_FINAL/Results/mode900/GroundTrackConstq.png, id=2384, 903.375pt x 
 730.4088pt>
 File: ../LODESTAR_FINAL/Results/mode900/GroundTrackConstq.png Graphic file (typ
 e png)
@@ -2991,7 +2987,7 @@ g used on input line 52.
 (pdftex.def)             Requested size: 483.69687pt x 391.09363pt.
 
 [93]
-<../LODESTAR_FINAL/Results/mode900/FirstStageConstq.png, id=2333, 639.89063pt x
+<../LODESTAR_FINAL/Results/mode900/FirstStageConstq.png, id=2392, 639.89063pt x
  542.025pt>
 File: ../LODESTAR_FINAL/Results/mode900/FirstStageConstq.png Graphic file (type
  png)
@@ -3001,7 +2997,7 @@ Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode900/FirstStageConstq.png
 (pdftex.def)             Requested size: 435.32422pt x 368.7458pt.
 
 [94 <../LODESTAR_FINAL/Results/mode900/GroundTrackConstq.png (PNG copy)>]
-<../LODESTAR_FINAL/Results/mode900/SecondStageConstq.png, id=2341, 639.89063pt 
+<../LODESTAR_FINAL/Results/mode900/SecondStageConstq.png, id=2400, 639.89063pt 
 x 730.22812pt>
 File: ../LODESTAR_FINAL/Results/mode900/SecondStageConstq.png Graphic file (typ
 e png)
@@ -3011,1034 +3007,8 @@ g used on input line 146.
 (pdftex.def)             Requested size: 435.32422pt x 496.78255pt.
 
 [95]
-<../LODESTAR_FINAL/Results/mode900/ThirdStageConstq.png, id=2349, 639.89063pt x
+<../LODESTAR_FINAL/Results/mode900/ThirdStageConstq.png, id=2408, 639.89063pt x
  542.025pt>
 File: ../LODESTAR_FINAL/Results/mode900/ThirdStageConstq.png Graphic file (type
  png)
- <use ../LODESTAR_FINAL/Results/mode900/ThirdStageConstq.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode900/ThirdStageConstq.png
- used on input line 161.
-(pdftex.def)             Requested size: 435.32422pt x 368.7458pt.
-
-Underfull \vbox (badness 4505) has occurred while \output is active []
-
- [96 <../LODESTAR_FINAL/Results/mode900/FirstStageConstq.png (PNG copy)>]
-Underfull \vbox (badness 1668) has occurred while \output is active []
-
- [97 <../LODESTAR_FINAL/Results/mode900/SecondStageConstq.png (PNG copy)>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [98 <../LODESTAR_FINAL/Results/mode900/ThirdStageConstq.png (PNG copy)>]
-<../LODESTAR_FINAL/Results/mode10/GroundTrackStandard.png, id=2367, 903.375pt x
- 730.4088pt>
-File: ../LODESTAR_FINAL/Results/mode10/GroundTrackStandard.png Graphic file (ty
-pe png)
- <use ../LODESTAR_FINAL/Results/mode10/GroundTrackStandard.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode10/GroundTrackStandard.p
-ng used on input line 188.
-(pdftex.def)             Requested size: 483.69687pt x 391.09363pt.
-
-<../LODESTAR_FINAL/Results/mode10/FirstStageStandard.png, id=2369, 639.89063pt 
-x 542.025pt>
-File: ../LODESTAR_FINAL/Results/mode10/FirstStageStandard.png Graphic file (typ
-e png)
- <use ../LODESTAR_FINAL/Results/mode10/FirstStageStandard.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode10/FirstStageStandard.pn
-g used on input line 197.
-(pdftex.def)             Requested size: 435.32422pt x 368.7458pt.
-
-[99 <../LODESTAR_FINAL/Results/mode10/GroundTrackStandard.png (PNG copy)>]
-Underfull \vbox (badness 4505) has occurred while \output is active []
-
- [100 <../LODESTAR_FINAL/Results/mode10/FirstStageStandard.png (PNG copy)>]
-<../LODESTAR_FINAL/Results/mode10/SecondStageStandard.png, id=2379, 639.89063pt
- x 721.19438pt>
-File: ../LODESTAR_FINAL/Results/mode10/SecondStageStandard.png Graphic file (ty
-pe png)
- <use ../LODESTAR_FINAL/Results/mode10/SecondStageStandard.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode10/SecondStageStandard.p
-ng used on input line 281.
-(pdftex.def)             Requested size: 435.32422pt x 490.6368pt.
-
-[101]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [102 <../LODESTAR_FINAL/Results/mode10/SecondStageStandard.png (PNG copy)>]
-<../LODESTAR_FINAL/Results/mode10/NetIspStandard.png, id=2392, 676.02562pt x 46
-0.72125pt>
-File: ../LODESTAR_FINAL/Results/mode10/NetIspStandard.png Graphic file (type pn
-g)
- <use ../LODESTAR_FINAL/Results/mode10/NetIspStandard.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode10/NetIspStandard.png us
-ed on input line 302.
-(pdftex.def)             Requested size: 386.95897pt x 263.72458pt.
-
-<../LODESTAR_FINAL/Results/mode10/IspStandard.png, id=2393, 421.575pt x 316.060
-8pt>
-File: ../LODESTAR_FINAL/Results/mode10/IspStandard.png Graphic file (type png)
- <use ../LODESTAR_FINAL/Results/mode10/IspStandard.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode10/IspStandard.png used 
-on input line 309.
-(pdftex.def)             Requested size: 386.95897pt x 290.11394pt.
-
-<../LODESTAR_FINAL/Results/mode10/ThirdStageStandard.png, id=2394, 639.89063pt 
-x 542.025pt>
-File: ../LODESTAR_FINAL/Results/mode10/ThirdStageStandard.png Graphic file (typ
-e png)
- <use ../LODESTAR_FINAL/Results/mode10/ThirdStageStandard.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode10/ThirdStageStandard.pn
-g used on input line 320.
-(pdftex.def)             Requested size: 435.32422pt x 368.7458pt.
-
-[103 <../LODESTAR_FINAL/Results/mode10/NetIspStandard.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [104 <../LODESTAR_FINAL/Results/mode10/IspStandard.png>]
-Underfull \vbox (badness 4505) has occurred while \output is active []
-
- [105 <../LODESTAR_FINAL/Results/mode10/ThirdStageStandard.png (PNG copy)>]
-Underfull \vbox (badness 6380) has occurred while \output is active []
-
- [106]
-[107] [108] [109] [110]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [111]
-[112] [113] [114] [115]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [116]
-[117]
-<figures/5_Ascent/BarChartRelativePayloadChange.png, id=2483, 1047.915pt x 465.
-23813pt>
-File: figures/5_Ascent/BarChartRelativePayloadChange.png Graphic file (type png
-)
- <use figures/5_Ascent/BarChartRelativePayloadChange.png>
-Package pdftex.def Info: figures/5_Ascent/BarChartRelativePayloadChange.png use
-d on input line 1788.
-(pdftex.def)             Requested size: 478.86255pt x 212.59944pt.
- [118 <./figures/5_Ascent/BarChartRelativePayloadChange.png>]
-Underfull \vbox (badness 1043) has occurred while \output is active []
-
- [119]
-[120]) (6_Flyback.tex [121] [122
-
-]
-Chapter 6.
-
-Overfull \hbox (4.3029pt too wide) in paragraph at lines 15--15
-[]\OT1/ptm/b/n/17.28 Case 11: Com-bined SPAR-TAN Ascent-Descent & Third Stage 
- []
-
-
-<../LODESTAR_FINAL/Results/mode11/GroundTrackStandard.png, id=2508, 903.375pt x
- 730.4088pt>
-File: ../LODESTAR_FINAL/Results/mode11/GroundTrackStandard.png Graphic file (ty
-pe png)
- <use ../LODESTAR_FINAL/Results/mode11/GroundTrackStandard.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode11/GroundTrackStandard.p
-ng used on input line 93.
-(pdftex.def)             Requested size: 483.69687pt x 391.09363pt.
-
-[123
-
-] [124]
-<../LODESTAR_FINAL/Results/mode11/FirstStageStandard.png, id=2520, 578.16pt x 4
-33.62pt>
-File: ../LODESTAR_FINAL/Results/mode11/FirstStageStandard.png Graphic file (typ
-e png)
- <use ../LODESTAR_FINAL/Results/mode11/FirstStageStandard.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode11/FirstStageStandard.pn
-g used on input line 116.
-(pdftex.def)             Requested size: 338.58632pt x 253.93465pt.
-
-<../LODESTAR_FINAL/Results/mode11/SecondStageStandard.png, id=2521, 639.8304pt 
-x 730.4088pt>
-File: ../LODESTAR_FINAL/Results/mode11/SecondStageStandard.png Graphic file (ty
-pe png)
- <use ../LODESTAR_FINAL/Results/mode11/SecondStageStandard.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode11/SecondStageStandard.p
-ng used on input line 122.
-(pdftex.def)             Requested size: 483.69687pt x 552.18529pt.
-
-<../LODESTAR_FINAL/Results/mode11/NetIspStandard.png, id=2522, 705.38531pt x 27
-5.52937pt>
-File: ../LODESTAR_FINAL/Results/mode11/NetIspStandard.png Graphic file (type pn
-g)
- <use ../LODESTAR_FINAL/Results/mode11/NetIspStandard.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode11/NetIspStandard.png us
-ed on input line 128.
-(pdftex.def)             Requested size: 435.32422pt x 170.04024pt.
- [125 <../LODESTAR_FINAL/Results/mode11/GroundTrackStandard.png (PNG copy)>] [1
-26 <../LODESTAR_FINAL/Results/mode11/FirstStageStandard.png (PNG copy)>]
-Underfull \vbox (badness 4634) has occurred while \output is active []
-
- [127 <../LODESTAR_FINAL/Results/mode11/SecondStageStandard.png (PNG copy)>]
-<../LODESTAR_FINAL/Results/mode11/ThirdStageStandard.png, id=2538, 639.8304pt x
- 542.025pt>
-File: ../LODESTAR_FINAL/Results/mode11/ThirdStageStandard.png Graphic file (typ
-e png)
- <use ../LODESTAR_FINAL/Results/mode11/ThirdStageStandard.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode11/ThirdStageStandard.pn
-g used on input line 149.
-(pdftex.def)             Requested size: 483.69687pt x 409.7681pt.
-
-<../LODESTAR_FINAL/Results/mode11/ReturnStandard.png, id=2539, 639.8304pt x 730
-.4088pt>
-File: ../LODESTAR_FINAL/Results/mode11/ReturnStandard.png Graphic file (type pn
-g)
- <use ../LODESTAR_FINAL/Results/mode11/ReturnStandard.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode11/ReturnStandard.png us
-ed on input line 159.
-(pdftex.def)             Requested size: 483.69687pt x 552.18529pt.
- [128 <../LODESTAR_FINAL/Results/mode11/NetIspStandard.png>] [129 <../LODESTAR_
-FINAL/Results/mode11/ThirdStageStandard.png (PNG copy)>]
-Underfull \vbox (badness 4634) has occurred while \output is active []
-
- [130 <../LODESTAR_FINAL/Results/mode11/ReturnStandard.png (PNG copy)>] [131] [
-132]
-[133]
-Underfull \vbox (badness 2582) has occurred while \output is active []
-
- [134]
-[135]
-Underfull \vbox (badness 6125) has occurred while \output is active []
-
- [136]
-[137] [138]
-Underfull \vbox (badness 3525) has occurred while \output is active []
-
- [139]
-[140] [141]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1375.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1375.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1375.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1375.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1375.
-
-[142] <figures/6_FlyBack/BarChart.png, id=2639, 831.85782pt x 369.63094pt>
-File: figures/6_FlyBack/BarChart.png Graphic file (type png)
-
-<use figures/6_FlyBack/BarChart.png>
-Package pdftex.def Info: figures/6_FlyBack/BarChart.png used on input line 1571
-.
-(pdftex.def)             Requested size: 478.86255pt x 212.77866pt.
- [143] [144 <./figures/6_FlyBack/BarChart.png>] [145]) (9_conclusions.tex [146]
-
-Chapter 7.
-[147
-
-
-] [148]
-Underfull \vbox (badness 3525) has occurred while \output is active []
-
- [149]
-[150]
-Chapter 8.
-[151
-
-]) (10_references.tex [152]
-Overfull \hbox (10.48041pt too wide) in paragraph at lines 5--5
-\OT1/ptm/m/n/12 dy-nam-ics tools for mak-ing fit-for-purpose mod-elling de-ci-s
-ions''. In: \OT1/ptm/m/it/12 20th In-ter-na-tional Congress
- []
-
-Missing character: There is no ‚ in font ptmri7t!
-Missing character: There is no Ä in font ptmri7t!
-Missing character: There is no ô in font ptmri7t!
-
-Overfull \hbox (92.3444pt too wide) in paragraph at lines 5--5
-[]\OT1/ptm/m/it/12 Airbus De-fence and Spaces so-lu-tion to reuse space Launch-
-ers\OT1/ptm/m/n/12 . 2017. \OT1/ptm/m/sc/12 url\OT1/ptm/m/n/12 : [][]$\OT1/cmtt
-/m/n/12 https : / / airbusdefenceandspace .
- []
-
-
-Overfull \hbox (14.59753pt too wide) in paragraph at lines 5--5
-[]\OT1/ptm/m/n/12 Astos So-lu-tions. \OT1/ptm/m/it/12 As-tos So-lu-tions\OT1/pt
-m/m/n/12 . 2018. \OT1/ptm/m/sc/12 url\OT1/ptm/m/n/12 : [][]$\OT1/cmtt/m/n/12 ht
-tps : / / www . astos . de/$[][] \OT1/ptm/m/n/12 (vis-ited on 07/24/2018). 
- []
-
-[153
-
-
-]
-Overfull \hbox (5.47726pt too wide) in paragraph at lines 5--5
-\OT1/ptm/m/n/12 Flight Me-chan-ics Con-fer-ence''. In: \OT1/ptm/m/it/12 14th AA
-S/AIAA Space Flight Me-chan-ics Con-fer-ence \OT1/ptm/m/n/12 (2004),
- []
-
-
-Overfull \hbox (6.96846pt too wide) in paragraph at lines 5--5
-\OT1/ptm/m/n/12 137. \OT1/ptm/m/sc/12 issn\OT1/ptm/m/n/12 : 03770427. \OT1/ptm/
-m/sc/12 doi\OT1/ptm/m/n/12 : [][]$\OT1/cmtt/m/n/12 10 . 1016 / S0377 -[] 0427(0
-0 ) 00429 -[] 5$[][]\OT1/ptm/m/n/12 . \OT1/ptm/m/sc/12 url\OT1/ptm/m/n/12 : [][
-]$\OT1/cmtt/m/n/12 http : / / linkinghub .
- []
-
-
-Overfull \hbox (32.44177pt too wide) in paragraph at lines 5--5
-[]\OT1/ptm/m/n/12 a. C. Com-pos-ites. ``http://www.corkcomposites.amorim.com/im
-ages/livraria/TPS%20brochure.pdf''.
- []
-
-[154]
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no î in font ptmr7t!
-
-Overfull \hbox (3.07755pt too wide) in paragraph at lines 5--5
-\OT1/ptm/m/n/12 Space''. In: \OT1/ptm/m/it/12 39th AIAA/ASME/SAE/ASEE Joint Pro
-pul-sion Con-fer-ence and Ex-hibit \OT1/ptm/m/n/12 July (2003),
- []
-
-[155]
-Overfull \hbox (9.13742pt too wide) in paragraph at lines 5--5
-[]\OT1/ptm/m/n/12 Fariba Fahroo and I. Michael Ross. ``Costate Es-ti-ma-tion by
- a Leg-en-dre Pseu-dospec-tral Method''.
- []
-
-
-Overfull \hbox (1.72473pt too wide) in paragraph at lines 5--5
-[]\OT1/ptm/m/n/12 E. Fitzer and L.M. Manocha. \OT1/ptm/m/it/12 Car-bon Re-in-fo
-rce-ments and Car-bon/Carbon Com-pos-ites\OT1/ptm/m/n/12 . Berlin,
- []
-
-[156] [157] [158]
-Overfull \hbox (0.82611pt too wide) in paragraph at lines 5--5
-[]\OT1/ptm/m/n/12 NASA. \OT1/ptm/m/it/12 U.S. Stan-dard At-mo-sphere, 1976\OT1/
-ptm/m/n/12 . U.S. Gov-ern-ment Print-ing Of-fice, Wash-ing-ton, D.C.,
- []
-
-[159]
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ì in font ptmr7t!
-
-Overfull \hbox (4.86546pt too wide) in paragraph at lines 5--5
-[]\OT1/ptm/m/n/12 Shishir Pandya, Scott Mur-man, and Michael Aftosmis. ``Val-i-
-da-tion of In-let and Ex-haust Bound-
- []
-
-[160] [161]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 5.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 5.
-
-Overfull \hbox (18.46803pt too wide) in paragraph at lines 5--5
-[]\OT1/ptm/m/n/12 Marti Sarigul-Klijn and Nes-rin Sarigul-Klijn. ``Flight Me-ch
-an-ics of Manned Sub-Orbital Reusable
- []
-
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 5.
-[162]
-Missing character: There is no ‚ in font ptmri7t!
-Missing character: There is no Ä in font ptmri7t!
-Missing character: There is no ô in font ptmri7t!
-
-Overfull \hbox (1.4307pt too wide) in paragraph at lines 5--5
-[]\OT1/ptm/m/it/12 To Chal-lenge SpaceX, Rock-ets Get Wings\OT1/ptm/m/n/12 . 20
-16. \OT1/ptm/m/sc/12 url\OT1/ptm/m/n/12 : [][]$\OT1/cmtt/m/n/12 http : / / www 
-. spacesafetymagazine .
- []
-
-[163]
-Overfull \hbox (6.73541pt too wide) in paragraph at lines 5--5
-[]\OT1/ptm/m/n/12 VirginOrbit. \OT1/ptm/m/it/12 LauncherOne\OT1/ptm/m/n/12 . 20
-17. \OT1/ptm/m/sc/12 url\OT1/ptm/m/n/12 : [][]$\OT1/cmtt/m/n/12 https : / / vir
-ginorbit . com/$[][] \OT1/ptm/m/n/12 (vis-ited on 11/30/2017). 
- []
-
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ì in font ptmr7t!
-) (A1_details-of-test-conditions.tex [164]
-Appendix A.
-
-<figures/A1_uncertainty-analysis/interp.png, id=2944, 785.93625pt x 342.5297pt>
-File: figures/A1_uncertainty-analysis/interp.png Graphic file (type png)
-<use figures/A1_uncertainty-analysis/interp.png>
-Package pdftex.def Info: figures/A1_uncertainty-analysis/interp.png used on inp
-ut line 7.
-(pdftex.def)             Requested size: 386.95897pt x 168.65114pt.
- [165
-
- <./figures/A1_uncertainty-analysis/interp.png>] [166
-
-]
-Appendix B.
-[167]
-<figures/4_LODESTAR/Brachistochrone.png, id=2960, 727.21687pt x 286.82156pt>
-File: figures/4_LODESTAR/Brachistochrone.png Graphic file (type png)
-
-<use figures/4_LODESTAR/Brachistochrone.png>
-Package pdftex.def Info: figures/4_LODESTAR/Brachistochrone.png used on input l
-ine 51.
-(pdftex.def)             Requested size: 435.32422pt x 171.70036pt.
- [168 <./figures/4_LODESTAR/Brachistochrone.png>]
-Appendix C.
-<figures/3_vehicle_design/M3AoA6GRID.png, id=2967, 624.83438pt x 350.81062pt>
-File: figures/3_vehicle_design/M3AoA6GRID.png Graphic file (type png)
-
-<use figures/3_vehicle_design/M3AoA6GRID.png>
-Package pdftex.def Info: figures/3_vehicle_design/M3AoA6GRID.png used on input 
-line 77.
-(pdftex.def)             Requested size: 338.58632pt x 190.10402pt.
-
-<figures/3_vehicle_design/CARTmesh.png, id=2968, 788.19469pt x 371.88937pt>
-File: figures/3_vehicle_design/CARTmesh.png Graphic file (type png)
-
-<use figures/3_vehicle_design/CARTmesh.png>
-Package pdftex.def Info: figures/3_vehicle_design/CARTmesh.png used on input li
-ne 84.
-(pdftex.def)             Requested size: 338.58632pt x 159.75041pt.
-
-<figures/3_vehicle_design/M1p1AoA6.png, id=2969, 1066.98625pt x 378.41376pt>
-File: figures/3_vehicle_design/M1p1AoA6.png Graphic file (type png)
-
-<use figures/3_vehicle_design/M1p1AoA6.png>
-Package pdftex.def Info: figures/3_vehicle_design/M1p1AoA6.png used on input li
-ne 93.
-(pdftex.def)             Requested size: 435.32422pt x 154.38846pt.
-
-<figures/3_vehicle_design/M3AoA6.png, id=2970, 1066.98625pt x 378.41376pt>
-File: figures/3_vehicle_design/M3AoA6.png Graphic file (type png)
-
-<use figures/3_vehicle_design/M3AoA6.png>
-Package pdftex.def Info: figures/3_vehicle_design/M3AoA6.png used on input line
- 99.
-(pdftex.def)             Requested size: 435.32422pt x 154.38846pt.
- [169
-
-] [170 <./figures/3_vehicle_design/M3AoA6GRID.png> <./figures/3_vehicle_design/
-CARTmesh.png> <./figures/3_vehicle_design/M1p1AoA6.png (PNG copy)>] [171 <./fig
-ures/3_vehicle_design/M3AoA6.png (PNG copy)>] [172
-
-]
-Appendix D.
-[173] [174
-
-]
-Appendix E.
-
-<../LODESTAR_FINAL/Results/mode11/HamiltonianStandard.png, id=2998, 421.575pt x
- 316.0608pt>
-File: ../LODESTAR_FINAL/Results/mode11/HamiltonianStandard.png Graphic file (ty
-pe png)
- <use ../LODESTAR_FINAL/Results/mode11/HamiltonianStandard.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode11/HamiltonianStandard.p
-ng used on input line 120.
-(pdftex.def)             Requested size: 338.58632pt x 253.84727pt.
-
-<../LODESTAR_FINAL/Results/mode11/VerificationStandard.png, id=2999, 527.0892pt
- x 451.9284pt>
-File: ../LODESTAR_FINAL/Results/mode11/VerificationStandard.png Graphic file (t
-ype png)
- <use ../LODESTAR_FINAL/Results/mode11/VerificationStandard.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode11/VerificationStandard.
-png used on input line 127.
-(pdftex.def)             Requested size: 338.58632pt x 290.31583pt.
-
-<../LODESTAR_FINAL/Results/mode11/ForwardErrorStandard.png, id=3000, 527.0892pt
- x 451.9284pt>
-File: ../LODESTAR_FINAL/Results/mode11/ForwardErrorStandard.png Graphic file (t
-ype png)
- <use ../LODESTAR_FINAL/Results/mode11/ForwardErrorStandard.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode11/ForwardErrorStandard.
-png used on input line 134.
-(pdftex.def)             Requested size: 338.58632pt x 290.31583pt.
-
-<../LODESTAR_FINAL/Results/mode11/MeshHistory.png, id=3001, 578.16pt x 433.62pt
->
-File: ../LODESTAR_FINAL/Results/mode11/MeshHistory.png Graphic file (type png)
- <use ../LODESTAR_FINAL/Results/mode11/MeshHistory.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode11/MeshHistory.png used 
-on input line 144.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
- [175] [176 <../LODESTAR_FINAL/Results/mode11/HamiltonianStandard.png (PNG copy
-)> <../LODESTAR_FINAL/Results/mode11/VerificationStandard.png (PNG copy)>] [177
- <../LODESTAR_FINAL/Results/mode11/ForwardErrorStandard.png (PNG copy)> <../LOD
-ESTAR_FINAL/Results/mode11/MeshHistory.png (PNG copy)>] [178
-
-]
-Appendix F.
-
-<../LODESTAR_FINAL/Results/10-qconstrained/FirstStageConstq.png, id=3019, 578.1
-6pt x 433.62pt>
-File: ../LODESTAR_FINAL/Results/10-qconstrained/FirstStageConstq.png Graphic fi
-le (type png)
-
-<use ../LODESTAR_FINAL/Results/10-qconstrained/FirstStageConstq.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/10-qconstrained/FirstStageCo
-nstq.png used on input line 218.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/10-qconstrained/SecondStageConstq.png, id=3020, 639.
-8304pt x 730.4088pt>
-File: ../LODESTAR_FINAL/Results/10-qconstrained/SecondStageConstq.png Graphic f
-ile (type png)
-
-<use ../LODESTAR_FINAL/Results/10-qconstrained/SecondStageConstq.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/10-qconstrained/SecondStageC
-onstq.png used on input line 225.
-(pdftex.def)             Requested size: 386.95897pt x 441.74823pt.
-
-<../LODESTAR_FINAL/Results/10-qconstrained/ThirdStageConstq.png, id=3021, 639.8
-304pt x 542.025pt>
-File: ../LODESTAR_FINAL/Results/10-qconstrained/ThirdStageConstq.png Graphic fi
-le (type png)
-
-<use ../LODESTAR_FINAL/Results/10-qconstrained/ThirdStageConstq.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/10-qconstrained/ThirdStageCo
-nstq.png used on input line 232.
-(pdftex.def)             Requested size: 386.95897pt x 327.81448pt.
- [179]
-
-Package Fancyhdr Warning: \headheight is too small (15.0pt): 
- Make it at least 27.03389pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[180 <../LODESTAR_FINAL/Results/10-qconstrained/FirstStageConstq.png (PNG copy)
->] [181 <../LODESTAR_FINAL/Results/10-qconstrained/SecondStageConstq.png (PNG c
-opy)>]
-
-Package Fancyhdr Warning: \headheight is too small (15.0pt): 
- Make it at least 27.03389pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[182 <../LODESTAR_FINAL/Results/10-qconstrained/ThirdStageConstq.png (PNG copy)
->]
-Appendix G.
-
-<../LODESTAR_FINAL/Results/mode11/returnIspStandard.png, id=3039, 421.575pt x 3
-16.18124pt>
-File: ../LODESTAR_FINAL/Results/mode11/returnIspStandard.png Graphic file (type
- png)
- <use ../LODESTAR_FINAL/Results/mode11/returnIspStandard.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode11/returnIspStandard.png
- used on input line 241.
-(pdftex.def)             Requested size: 435.32422pt x 326.50014pt.
-
-[183
-
-] [184 <../LODESTAR_FINAL/Results/mode11/returnIspStandard.png>]
-Appendix H.
-
-<../LODESTAR_FINAL/Results/mode20/SecondStageComparison.png, id=3049, 578.16pt 
-x 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode20/SecondStageComparison.png Graphic file (
-type png)
- <use ../LODESTAR_FINAL/Results/mode20/SecondStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode20/SecondStageComparison
-.png used on input line 258.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode20/ThirdStageComparison.png, id=3050, 578.16pt x
- 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode20/ThirdStageComparison.png Graphic file (t
-ype png)
- <use ../LODESTAR_FINAL/Results/mode20/ThirdStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode20/ThirdStageComparison.
-png used on input line 265.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-[185
-
-]
-
-LaTeX Warning: Text page 186 contains only floats.
-
-[186 <../LODESTAR_FINAL/Results/mode20/SecondStageComparison.png (PNG copy)> <.
-./LODESTAR_FINAL/Results/mode20/ThirdStageComparison.png (PNG copy)>]
-<../LODESTAR_FINAL/Results/mode30/SecondStageComparison.png, id=3059, 578.16pt 
-x 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode30/SecondStageComparison.png Graphic file (
-type png)
- <use ../LODESTAR_FINAL/Results/mode30/SecondStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode30/SecondStageComparison
-.png used on input line 275.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode30/ThirdStageComparison.png, id=3060, 578.16pt x
- 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode30/ThirdStageComparison.png Graphic file (t
-ype png)
- <use ../LODESTAR_FINAL/Results/mode30/ThirdStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode30/ThirdStageComparison.
-png used on input line 282.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-[187 <../LODESTAR_FINAL/Results/mode30/SecondStageComparison.png (PNG copy)>]
-<../LODESTAR_FINAL/Results/mode40/SecondStageComparison.png, id=3065, 578.16pt 
-x 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode40/SecondStageComparison.png Graphic file (
-type png)
- <use ../LODESTAR_FINAL/Results/mode40/SecondStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode40/SecondStageComparison
-.png used on input line 291.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode40/ThirdStageComparison.png, id=3066, 578.16pt x
- 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode40/ThirdStageComparison.png Graphic file (t
-ype png)
- <use ../LODESTAR_FINAL/Results/mode40/ThirdStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode40/ThirdStageComparison.
-png used on input line 298.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-[188 <../LODESTAR_FINAL/Results/mode30/ThirdStageComparison.png (PNG copy)>]
-
-LaTeX Warning: Text page 189 contains only floats.
-
-[189 <../LODESTAR_FINAL/Results/mode40/SecondStageComparison.png (PNG copy)> <.
-./LODESTAR_FINAL/Results/mode40/ThirdStageComparison.png (PNG copy)>]
-<../LODESTAR_FINAL/Results/mode100/SecondStageComparison.png, id=3076, 578.16pt
- x 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode100/SecondStageComparison.png Graphic file 
-(type png)
- <use ../LODESTAR_FINAL/Results/mode100/SecondStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode100/SecondStageCompariso
-n.png used on input line 307.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode100/ThirdStageComparison.png, id=3077, 578.16pt 
-x 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode100/ThirdStageComparison.png Graphic file (
-type png)
- <use ../LODESTAR_FINAL/Results/mode100/ThirdStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode100/ThirdStageComparison
-.png used on input line 314.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-[190 <../LODESTAR_FINAL/Results/mode100/SecondStageComparison.png (PNG copy)>]
-<../LODESTAR_FINAL/Results/mode110/SecondStageComparison.png, id=3082, 578.16pt
- x 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode110/SecondStageComparison.png Graphic file 
-(type png)
- <use ../LODESTAR_FINAL/Results/mode110/SecondStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode110/SecondStageCompariso
-n.png used on input line 322.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode110/ThirdStageComparison.png, id=3083, 578.16pt 
-x 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode110/ThirdStageComparison.png Graphic file (
-type png)
- <use ../LODESTAR_FINAL/Results/mode110/ThirdStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode110/ThirdStageComparison
-.png used on input line 329.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-[191 <../LODESTAR_FINAL/Results/mode100/ThirdStageComparison.png (PNG copy)>]
-[192 <../LODESTAR_FINAL/Results/mode110/SecondStageComparison.png (PNG copy)> <
-../LODESTAR_FINAL/Results/mode110/ThirdStageComparison.png (PNG copy)>]
-<../LODESTAR_FINAL/Results/mode80/SecondStageComparison.png, id=3092, 578.16pt 
-x 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode80/SecondStageComparison.png Graphic file (
-type png)
- <use ../LODESTAR_FINAL/Results/mode80/SecondStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode80/SecondStageComparison
-.png used on input line 338.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode80/ThirdStageComparison.png, id=3093, 578.16pt x
- 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode80/ThirdStageComparison.png Graphic file (t
-ype png)
- <use ../LODESTAR_FINAL/Results/mode80/ThirdStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode80/ThirdStageComparison.
-png used on input line 346.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-[193
-
- <../LODESTAR_FINAL/Results/mode80/SecondStageComparison.png (PNG copy)>]
-<../LODESTAR_FINAL/Results/mode90/SecondStageComparison.png, id=3098, 578.16pt 
-x 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode90/SecondStageComparison.png Graphic file (
-type png)
- <use ../LODESTAR_FINAL/Results/mode90/SecondStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode90/SecondStageComparison
-.png used on input line 356.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode90/ThirdStageComparison.png, id=3099, 578.16pt x
- 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode90/ThirdStageComparison.png Graphic file (t
-ype png)
- <use ../LODESTAR_FINAL/Results/mode90/ThirdStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode90/ThirdStageComparison.
-png used on input line 363.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-[194 <../LODESTAR_FINAL/Results/mode80/ThirdStageComparison.png (PNG copy)>]
-[195 <../LODESTAR_FINAL/Results/mode90/SecondStageComparison.png (PNG copy)> <.
-./LODESTAR_FINAL/Results/mode90/ThirdStageComparison.png (PNG copy)>]
-<../LODESTAR_FINAL/Results/mode70/SecondStageComparison.png, id=3109, 578.16pt 
-x 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode70/SecondStageComparison.png Graphic file (
-type png)
- <use ../LODESTAR_FINAL/Results/mode70/SecondStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode70/SecondStageComparison
-.png used on input line 372.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode70/ThirdStageComparison.png, id=3110, 578.16pt x
- 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode70/ThirdStageComparison.png Graphic file (t
-ype png)
- <use ../LODESTAR_FINAL/Results/mode70/ThirdStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode70/ThirdStageComparison.
-png used on input line 380.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode21/SecondStageComparison.png, id=3111, 578.16pt 
-x 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode21/SecondStageComparison.png Graphic file (
-type png)
- <use ../LODESTAR_FINAL/Results/mode21/SecondStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode21/SecondStageComparison
-.png used on input line 391.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode21/ThirdStageComparison.png, id=3112, 578.16pt x
- 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode21/ThirdStageComparison.png Graphic file (t
-ype png)
- <use ../LODESTAR_FINAL/Results/mode21/ThirdStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode21/ThirdStageComparison.
-png used on input line 398.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode21/ReturnComparison.png, id=3113, 578.16pt x 433
-.62pt>
-File: ../LODESTAR_FINAL/Results/mode21/ReturnComparison.png Graphic file (type 
-png)
- <use ../LODESTAR_FINAL/Results/mode21/ReturnComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode21/ReturnComparison.png 
-used on input line 405.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode31/SecondStageComparison.png, id=3114, 578.16pt 
-x 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode31/SecondStageComparison.png Graphic file (
-type png)
- <use ../LODESTAR_FINAL/Results/mode31/SecondStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode31/SecondStageComparison
-.png used on input line 414.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode31/ThirdStageComparison.png, id=3115, 578.16pt x
- 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode31/ThirdStageComparison.png Graphic file (t
-ype png)
- <use ../LODESTAR_FINAL/Results/mode31/ThirdStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode31/ThirdStageComparison.
-png used on input line 421.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode31/ReturnComparison.png, id=3116, 578.16pt x 433
-.62pt>
-File: ../LODESTAR_FINAL/Results/mode31/ReturnComparison.png Graphic file (type 
-png)
- <use ../LODESTAR_FINAL/Results/mode31/ReturnComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode31/ReturnComparison.png 
-used on input line 428.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode41/SecondStageComparison.png, id=3117, 578.16pt 
-x 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode41/SecondStageComparison.png Graphic file (
-type png)
- <use ../LODESTAR_FINAL/Results/mode41/SecondStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode41/SecondStageComparison
-.png used on input line 437.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode41/ThirdStageComparison.png, id=3118, 578.16pt x
- 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode41/ThirdStageComparison.png Graphic file (t
-ype png)
- <use ../LODESTAR_FINAL/Results/mode41/ThirdStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode41/ThirdStageComparison.
-png used on input line 444.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode41/ReturnComparison.png, id=3119, 578.16pt x 433
-.62pt>
-File: ../LODESTAR_FINAL/Results/mode41/ReturnComparison.png Graphic file (type 
-png)
- <use ../LODESTAR_FINAL/Results/mode41/ReturnComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode41/ReturnComparison.png 
-used on input line 451.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode101/SecondStageComparison.png, id=3120, 578.16pt
- x 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode101/SecondStageComparison.png Graphic file 
-(type png)
- <use ../LODESTAR_FINAL/Results/mode101/SecondStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode101/SecondStageCompariso
-n.png used on input line 461.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode101/ThirdStageComparison.png, id=3121, 578.16pt 
-x 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode101/ThirdStageComparison.png Graphic file (
-type png)
- <use ../LODESTAR_FINAL/Results/mode101/ThirdStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode101/ThirdStageComparison
-.png used on input line 468.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode101/ReturnComparison.png, id=3122, 578.16pt x 43
-3.62pt>
-File: ../LODESTAR_FINAL/Results/mode101/ReturnComparison.png Graphic file (type
- png)
- <use ../LODESTAR_FINAL/Results/mode101/ReturnComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode101/ReturnComparison.png
- used on input line 475.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode111/SecondStageComparison.png, id=3123, 578.16pt
- x 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode111/SecondStageComparison.png Graphic file 
-(type png)
- <use ../LODESTAR_FINAL/Results/mode111/SecondStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode111/SecondStageCompariso
-n.png used on input line 485.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode111/ThirdStageComparison.png, id=3124, 578.16pt 
-x 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode111/ThirdStageComparison.png Graphic file (
-type png)
- <use ../LODESTAR_FINAL/Results/mode111/ThirdStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode111/ThirdStageComparison
-.png used on input line 492.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode111/ReturnComparison.png, id=3125, 578.16pt x 43
-3.62pt>
-File: ../LODESTAR_FINAL/Results/mode111/ReturnComparison.png Graphic file (type
- png)
- <use ../LODESTAR_FINAL/Results/mode111/ReturnComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode111/ReturnComparison.png
- used on input line 499.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode81/SecondStageComparison.png, id=3126, 578.16pt 
-x 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode81/SecondStageComparison.png Graphic file (
-type png)
- <use ../LODESTAR_FINAL/Results/mode81/SecondStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode81/SecondStageComparison
-.png used on input line 509.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode81/ThirdStageComparison.png, id=3127, 578.16pt x
- 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode81/ThirdStageComparison.png Graphic file (t
-ype png)
- <use ../LODESTAR_FINAL/Results/mode81/ThirdStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode81/ThirdStageComparison.
-png used on input line 516.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode81/ReturnComparison.png, id=3128, 578.16pt x 433
-.62pt>
-File: ../LODESTAR_FINAL/Results/mode81/ReturnComparison.png Graphic file (type 
-png)
- <use ../LODESTAR_FINAL/Results/mode81/ReturnComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode81/ReturnComparison.png 
-used on input line 525.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode91/SecondStageComparison.png, id=3129, 578.16pt 
-x 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode91/SecondStageComparison.png Graphic file (
-type png)
- <use ../LODESTAR_FINAL/Results/mode91/SecondStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode91/SecondStageComparison
-.png used on input line 534.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode91/ThirdStageComparison.png, id=3130, 578.16pt x
- 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode91/ThirdStageComparison.png Graphic file (t
-ype png)
- <use ../LODESTAR_FINAL/Results/mode91/ThirdStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode91/ThirdStageComparison.
-png used on input line 542.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode91/ReturnComparison.png, id=3131, 578.16pt x 433
-.62pt>
-File: ../LODESTAR_FINAL/Results/mode91/ReturnComparison.png Graphic file (type 
-png)
- <use ../LODESTAR_FINAL/Results/mode91/ReturnComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode91/ReturnComparison.png 
-used on input line 550.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
- [196
-
- <../LODESTAR_FINAL/Results/mode70/SecondStageComparison.png (PNG copy)>] [197 
-<../LODESTAR_FINAL/Results/mode70/ThirdStageComparison.png (PNG copy)> <../LODE
-STAR_FINAL/Results/mode21/SecondStageComparison.png (PNG copy)>] [198 <../LODES
-TAR_FINAL/Results/mode21/ThirdStageComparison.png (PNG copy)> <../LODESTAR_FINA
-L/Results/mode21/ReturnComparison.png (PNG copy)>] [199 <../LODESTAR_FINAL/Resu
-lts/mode31/SecondStageComparison.png (PNG copy)> <../LODESTAR_FINAL/Results/mod
-e31/ThirdStageComparison.png (PNG copy)>] [200 <../LODESTAR_FINAL/Results/mode3
-1/ReturnComparison.png (PNG copy)> <../LODESTAR_FINAL/Results/mode41/SecondStag
-eComparison.png (PNG copy)>] [201 <../LODESTAR_FINAL/Results/mode41/ThirdStageC
-omparison.png (PNG copy)> <../LODESTAR_FINAL/Results/mode41/ReturnComparison.pn
-g (PNG copy)>] [202 <../LODESTAR_FINAL/Results/mode101/SecondStageComparison.pn
-g (PNG copy)> <../LODESTAR_FINAL/Results/mode101/ThirdStageComparison.png (PNG 
-copy)>]
-[203 <../LODESTAR_FINAL/Results/mode101/ReturnComparison.png (PNG copy)> <../LO
-DESTAR_FINAL/Results/mode111/SecondStageComparison.png (PNG copy)>] [204 <../LO
-DESTAR_FINAL/Results/mode111/ThirdStageComparison.png (PNG copy)> <../LODESTAR_
-FINAL/Results/mode111/ReturnComparison.png (PNG copy)>] [205 <../LODESTAR_FINAL
-/Results/mode81/SecondStageComparison.png (PNG copy)> <../LODESTAR_FINAL/Result
-s/mode81/ThirdStageComparison.png (PNG copy)>] [206 <../LODESTAR_FINAL/Results/
-mode81/ReturnComparison.png (PNG copy)> <../LODESTAR_FINAL/Results/mode91/Secon
-dStageComparison.png (PNG copy)>] [207 <../LODESTAR_FINAL/Results/mode91/ThirdS
-tageComparison.png (PNG copy)> <../LODESTAR_FINAL/Results/mode91/ReturnComparis
-on.png (PNG copy)>] [208
-
-]
-Appendix I.
-
-Overfull \hbox (155.59546pt too wide) in paragraph at lines 565--696
- [][] 
- []
-
-
-<../LODESTAR_FINAL/Results/mode51/SecondStageComparison.png, id=3186, 578.16pt 
-x 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode51/SecondStageComparison.png Graphic file (
-type png)
- <use ../LODESTAR_FINAL/Results/mode51/SecondStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode51/SecondStageComparison
-.png used on input line 701.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-[209]
-<../LODESTAR_FINAL/Results/mode51/ThirdStageComparison.png, id=3192, 578.16pt x
- 433.62pt>
-File: ../LODESTAR_FINAL/Results/mode51/ThirdStageComparison.png Graphic file (t
-ype png)
- <use ../LODESTAR_FINAL/Results/mode51/ThirdStageComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode51/ThirdStageComparison.
-png used on input line 707.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
-
-<../LODESTAR_FINAL/Results/mode51/ReturnComparison.png, id=3193, 578.16pt x 433
-.62pt>
-File: ../LODESTAR_FINAL/Results/mode51/ReturnComparison.png Graphic file (type 
-png)
- <use ../LODESTAR_FINAL/Results/mode51/ReturnComparison.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode51/ReturnComparison.png 
-used on input line 715.
-(pdftex.def)             Requested size: 386.95897pt x 290.21953pt.
- [210 <../LODESTAR_FINAL/Results/mode51/SecondStageComparison.png (PNG copy)>] 
-[211 <../LODESTAR_FINAL/Results/mode51/ThirdStageComparison.png (PNG copy)> <..
-/LODESTAR_FINAL/Results/mode51/ReturnComparison.png (PNG copy)>] [212
-
-]
-Appendix J.
-
-<figures/6_FlyBack/OverPressureResponse.png, id=3207, 536.0025pt x 461.47406pt>
-File: figures/6_FlyBack/OverPressureResponse.png Graphic file (type png)
-<use figures/6_FlyBack/OverPressureResponse.png>
-Package pdftex.def Info: figures/6_FlyBack/OverPressureResponse.png used on inp
-ut line 724.
-(pdftex.def)             Requested size: 290.22107pt x 249.8612pt.
-
-<../LODESTAR_FINAL/Results/mode11/OverPressureStandard.png, id=3208, 421.575pt 
-x 316.0608pt>
-File: ../LODESTAR_FINAL/Results/mode11/OverPressureStandard.png Graphic file (t
-ype png)
- <use ../LODESTAR_FINAL/Results/mode11/OverPressureStandard.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode11/OverPressureStandard.
-png used on input line 737.
-(pdftex.def)             Requested size: 435.32422pt x 326.37576pt.
-
-[213 <./figures/6_FlyBack/OverPressureResponse.png>] [214 <../LODESTAR_FINAL/Re
-sults/mode11/OverPressureStandard.png (PNG copy)>]
-<../LODESTAR_FINAL/Results/mode01/GroundTrackAlternate.png, id=3221, 903.375pt 
-x 721.19438pt>
-File: ../LODESTAR_FINAL/Results/mode01/GroundTrackAlternate.png Graphic file (t
-ype png)
- <use ../LODESTAR_FINAL/Results/mode01/GroundTrackAlternate.png>
-Package pdftex.def Info: ../LODESTAR_FINAL/Results/mode01/GroundTrackAlternate.
-png used on input line 759.
-(pdftex.def)             Requested size: 483.69687pt x 386.15982pt.
-) [215 <../LODESTAR_FINAL/Results/mode01/GroundTrackAlternate.png (PNG copy)>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 36.
-
-[216]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 36.
- (thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 36.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 36.
-Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 9AE9C735C0FCA27BF2A5206FF677678F;9109.
-
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 36.
-
-Package biblatex Warning: Please (re)run BibTeX on the file(s):
-(biblatex)                thesis
-(biblatex)                and rerun LaTeX afterwards.
-
-Package logreq Info: Writing requests to 'thesis.run.xml'.
-\openout1 = `thesis.run.xml'.
-
- ) 
-Here is how much of TeX's memory you used:
- 43082 strings out of 493323
- 906499 string characters out of 3139058
- 1272649 words of memory out of 3000000
- 45052 multiletter control sequences out of 15000+200000
- 583145 words of font info for 126 fonts, out of 3000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 57i,14n,77p,10401b,1727s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmss12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/ur
-w/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.p
-fb>
-Output written on thesis.pdf (238 pages, 13342885 bytes).
-PDF statistics:
- 3428 PDF objects out of 3580 (max. 8388607)
- 743 named destinations out of 1000 (max. 500000)
- 1808 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ <use ../LODESTAR_FINAL/Results/mode

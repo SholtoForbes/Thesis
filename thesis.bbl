@@ -687,6 +687,47 @@
     \field{year}{2015}
   \endentry
 
+  \entry{chai2017}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=CJ}{%
+         family={Chai},
+         familyi={C\bibinitperiod},
+         given={Joseph},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Smart},
+         familyi={S\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=FSS}{%
+         family={Forbes-Spyratos},
+         familyi={F\bibinitperiod-S\bibinitperiod},
+         given={Sholto},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=KM}{%
+         family={Kearney},
+         familyi={K\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CJ+1}
+    \strng{fullhash}{CJSMFSSKM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{booktitle}{68th International Astronautical Congress}
+    \field{title}{{Fly Back Booster Design for Mach 5 Scramjet Launch}}
+    \list{location}{1}{%
+      {Aelaide, Australia}%
+    }
+    \field{year}{2017}
+  \endentry
+
   \entry{Clark2018}{misc}{}
     \name{author}{1}{}{%
       {{hash=CS}{%
@@ -1522,6 +1563,54 @@
     \field{title}{{Trajectory Design of a Rocket-Scramjet-Rocket Multi-Stage
   Launch System}}
     \field{journaltitle}{Journal of Spacecraft and Rockets}
+    \field{year}{2018}
+  \endentry
+
+  \entry{Forbes2018a}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=FSS}{%
+         family={Forbes-Spyratos},
+         familyi={F\bibinitperiod-S\bibinitperiod},
+         given={S.O.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=KM}{%
+         family={Kearney},
+         familyi={K\bibinitperiod},
+         given={M.P.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Smart},
+         familyi={S\bibinitperiod},
+         given={M.K.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=JI}{%
+         family={Jahn},
+         familyi={J\bibinitperiod},
+         given={I.H.},
+         giveni={I\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FSS+1}
+    \strng{fullhash}{FSSKMSMJI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{booktitle}{AIAA Scitech, 2018}
+    \verb{doi}
+    \verb 10.2514/6.2018-2177
+    \endverb
+    \field{isbn}{9781624105241}
+    \field{title}{{Fly-back of a scramjet-powered accelerator}}
+    \list{location}{1}{%
+      {Orlando, FL}%
+    }
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/forbes2018a.pdf:pdf
+    \endverb
     \field{year}{2018}
   \endentry
 

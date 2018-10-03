@@ -8,6 +8,7 @@ The purpose of this work was to design and investigate the launch trajectory for
 The trajectory of this launch system was optimised for maximum payload-to-orbit, and characterised in order to determine the key performance parameters of the launch system. 
 This aim was achieved through the completion of the set of objectives detailed as follows:
 
+\vspace{10pt}
 	\emph{Development of a detailed design and aerodynamic simulation for a rocket-scramjet-rocket launch system.}
 	
 	In order to create a representative model for a trajectory simulation, the design of a rocket-scramjet-rocket launch system was developed, structured around the SPARTAN scramjet-powered accelerator, which is in development at The University of Queensland. A first stage rocket was designed to accelerate the SPARTAN to its minimum operating of Mach 5. This first stage is based upon the Falcon-1e, scaled down lengthwise to 8.5m and throttled down to a constant 70\% to assist in pitching.
@@ -17,7 +18,7 @@ The internal layout of the SPARTAN was modified, to accommodate the redesigned t
 The aerodynamics of the first stage and the SPARTAN were calculated using Cart3D, an inviscid CFD package, and the aerodynamics of the SPARTAN were modified using a viscous correction for accuracy. The aerodynamics of the launch system were calculated across the operable regimes of the vehicles, which for the SPARTAN included both engine-on and engine-off conditions, across a range of Mach numbers from 0.2 to 10. The control surfaces of the SPARTAN were modelled, and the aerodynamics of the SPARTAN simulated with flaps deployed. A variable centre of gravity model was created for the SPARTAN, to model the changes in the vehicle dynamics during flight. The aerodynamics of the SPARTAN were calculated at multiple centre of gravity positions, and a trimmed aerodynamic database created. 
 The aerodynamics of the third stage were modelled using Missile Datcom, a partially empirical tool for estimating the aerodynamics of missile and rocket vehicles. 
 
-	
+	\vspace{10pt}
 \emph{Calculation of the maximum payload-to-orbit trajectory for a rocket-scramjet-rocket launch system using optimal control, with and without fly-back.}
 
 In order to calculate the maximum payload-to-orbit trajectory of the launch system, a software package was created to simulate and optimise launch system trajectories, designated LODESTAR. LODESTAR utilises GPOPS-2, a pseudospectral method optimal control solver. LODESTAR simulates the trajectory of each stage of the launch system in six degrees of freedom, in a geodetic rotational reference frame. 
@@ -44,6 +45,7 @@ After this initial turn, the boost-skip phase is initiated, consisting of multip
  After the scramjets were ignited a total of three times, the size of the skips were observed to decrease. Finally, the skips ceased entirely, beginning a steady descent and approach to the landing site. 
  In total, \returnFuelStandard kg of fuel was used during the fly-back, 17.2\% of the SPARTAN's total fuel mass.
 	
+	\vspace{10pt}
 	\emph{Analysis of the sensitivity of the maximum payload-to-orbit trajectory to variations in key design parameters of the launch system.}
 	
 Eight key design parameters of the launch system were modified, and the variation in the maximum payload-to-orbit trajectory of the launch system was studied, for cases with and without SPARTAN fly-back. 
