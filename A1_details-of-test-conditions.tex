@@ -40,7 +40,7 @@ This process is accurate, but time consuming, and would increase the computation
 Figures \ref{fig:M1} and \ref{fig:M3AoA6} show flow results for the SPARTAN, at Mach numbers of 1.1 and 3 respectively. It can be observed that at Mach 1.1, the bow shock is not significant, and the shock structure that is evident at higher speeds has not yet formed. At Mach 3, the unstarted C-REST engines are evident, causing significant amounts of the air entering the inlet to be expelled. Shock-shock interaction structures are evident on the cowl of the engines, causing areas of localised high pressure.
 
 
-
+\FloatBarrier
 \section{Cart3D Mesh}
 \begin{figure}[ht]
 	\centering
@@ -60,13 +60,13 @@ Figures \ref{fig:M3AoA6GRID} and \ref{fig:CARTmesh} show adapted meshes for Cart
 
 
 
-
+\FloatBarrier
 \section{Performance of the SPARTAN During Fly-Back}
 Figure \ref{fig:returnIspStandard} shows the performance of the SPARTAN during the boost phase, described in Section \ref{sec:boost}. 
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.9\linewidth]{../LODESTAR_FINAL/Results/mode11/returnIspStandard}
+	\includegraphics[width=0.7\linewidth]{../LODESTAR_FINAL/Results/mode11/returnIspStandard}
 	\caption{The performance of the SPARTAN during the boost phase. Light blue indicates that the scramjet engines are turned on.}
 	\label{fig:returnIspStandard}
 \end{figure}
@@ -144,7 +144,7 @@ The GPOPS-2 solution to the Brachistochrone problem is shown in Figure \ref{fig:
 		After the optimal trajectory has been calculated, it must be verified to ensure that the optimal control solver has converged correctly. Details on this verification are provided in Section \ref{sec:verification}. Figure \ref{fig:HamiltonianStandard} shows the Hamiltonian time history for the optimised trajectory solution. For an optimal solution to be found, the Hamiltonian should be equal to 0 at all points over every phase. In a practical solution, a Hamiltonian close to 0 is acceptable, which is observable over all phases in the optimised solution. A small deviation from 0 is shown at the end of the SPARTAN's acceleration, this is the region in the pull-up where the angle of attack limit is close to being reached. The Hamiltonian being close to 0 at all points of the trajectory indicates that an optimal solution has been found. 
 		\begin{figure}[ht]
 			\centering
-			\includegraphics[width=0.7\linewidth]{../LODESTAR_FINAL/Results/mode11/HamiltonianStandard}
+			\includegraphics[width=0.9\linewidth]{../LODESTAR_FINAL/Results/mode11/HamiltonianStandard}
 			\caption{The Hamiltonian time history of each phase of the optimised solution.}
 			\label{fig:HamiltonianStandard}
 		\end{figure}
@@ -156,7 +156,7 @@ The GPOPS-2 solution to the Brachistochrone problem is shown in Figure \ref{fig:
 		
 		\begin{figure}[ht]
 			\centering
-			\includegraphics[width=0.7\linewidth]{../LODESTAR_FINAL/Results/mode11/VerificationStandard}
+			\includegraphics[width=0.9\linewidth]{../LODESTAR_FINAL/Results/mode11/VerificationStandard}
 			\caption{The error between the integrated dynamics of the system, and the solution states. Normalised to the range of each state.}
 			\label{fig:VerificationStandard}
 		\end{figure}
@@ -165,7 +165,7 @@ The GPOPS-2 solution to the Brachistochrone problem is shown in Figure \ref{fig:
 		
 		\begin{figure}[ht]
 			\centering
-			\includegraphics[width=0.7\linewidth]{../LODESTAR_FINAL/Results/mode11/ForwardErrorStandard}
+			\includegraphics[width=0.9\linewidth]{../LODESTAR_FINAL/Results/mode11/ForwardErrorStandard}
 			\caption{The error between the forward simulated states, and the solution states. Normalised to the range of each state.}
 			\label{fig:ForwardErrorStandard}
 		\end{figure}
@@ -388,7 +388,7 @@ An alternate southerly launch is investigated for the rocket-scramjet-rocket lau
 		
 		\chapter{Trajectory Plot Comparisons}\label{sec:Appendix_trajectorycomparisons}
 		
-This section contains trajectory plot comparisons for the sensitivity studies performed in Section \ref{sec:sensitivityNoReturn} and \ref{sec:sensitivity}. Comparison and analysis between these trajectories is performed in the relevant section. 
+This section contains trajectory plot comparisons for the sensitivity studies performed in Section \ref{sec:sensitivityNoReturn} and \ref{sec:sensitivity}. Comparisons and analyses between these trajectories are performed in the relevant sections. 
 		
 		\section{Optimised Ascent Trajectory Comparisons With No Fly-Back}
 		
@@ -700,27 +700,51 @@ This section contains trajectory plot comparisons for the sensitivity studies pe
 
 
 The viscous drag component of the SPARTAN's aerodynamics is calculated using flat plate correlations, which require an estimation of the laminar to turbulent transition point on the body of the SPARTAN[CITEXX]. This transition point is difficult to estimate to a high degree of accuracy without prohibitively time consuming CFD, and can have a significant effect on the viscous drag of an aircraft[CITEXX].
-The viscous drag component of the SPARTAN's aerodynamics is varied, in order to assess the impact of the viscous drag model used. Optimal trajectories are calculated with the viscous drag set at levels of 20\%, 50\%, 107\% and 115\% of the baseline, which correspond to the possible viscous drag range due to transition point variation.
+The viscous drag component of the SPARTAN's aerodynamics is varied, in order to assess the impact of the viscous drag model used. Optimal trajectories are calculated with the viscous drag set at levels of 20\%, 50\%, 107\% and 115\% of the baseline, which correspond to the possible viscous drag range due to transition point variation. Table \ref{tab:viscous} details key trajectory parameters of the optimised trajectories, and Figures \ref{fig:SecondStageComparison-}, \ref{fig:ThirdStageComparison-} and \ref{fig:ReturnComparison-} show comparison plots of the optimised trajectories. This viscous drag comparison is intended as a reference to indicate the magnitude of variations in the viscous drag of the SPARTAN due to variations in modelling methods, and is not indicative of any physical design variations. The sensitivity of the launch system to the viscous drag of the SPARTAN is shown to be relatively low, indicating that the modelling process of the viscous drag is unlikely to have a large effect on the maximum payload-to-orbit achievable.
 
-\textcolor{red}{note: regression doesnt work for this} 
 \begin{table}[ht]
 	\centering
 	\begin{tabular}{l c c c c c c} 
-		\hline \textbf{Trajectory Condition}
-		&vCdTwenty
-		&vCdFifty
-		&vCdStandard
-		&vCdOneHundredSeven
-		&vCdOneHundredFifteen
-		& /\%
+		\hline \textbf{Trajectory Condition} \qquad vC$_D$:
+		&20\%
+		&50\%
+		&100\%
+		&107\%
+		&115\%
+		& $\Delta/\Delta$\%vC$_D$
 		\\
 		\hline \textbf{Payload to Orbit (kg)}
-		& \PayloadToOrbitvCdTwenty
-		& \PayloadToOrbitvCdFifty
-		& \PayloadToOrbitvCdStandard
-		& \PayloadToOrbitvCdOneHundredSeven
-		& \PayloadToOrbitvCdOneHundredFifteen
-		&-2.5
+		& \textbf{\PayloadToOrbitvCdTwenty}
+		& \textbf{\PayloadToOrbitvCdFifty}
+		& \textbf{\PayloadToOrbitvCdStandard}
+		& \textbf{\PayloadToOrbitvCdOneHundredSeven}
+		& \textbf{\PayloadToOrbitvCdOneHundredFifteen}
+		&\textbf{-2.5}
+		\\
+		\textbf{Payload Variation (\%)}
+		& \PayloadVarvCdTwenty
+		& \PayloadVarvCdFifty
+		& \PayloadVarvCdStandard
+		& \PayloadVarvCdOneHundredSeven
+		& \PayloadVarvCdOneHundredFifteen
+		&-0.31
+		\\
+		\textbf{Total $\eta_{exergy}$ (\%)}
+		& \textbf{\totalExergyEffvCdTwenty}
+		& \textbf{\totalExergyEffvCdFifty}
+		& \textbf{\totalExergyEffvCdStandard}
+		& \textbf{\totalExergyEffvCdOneHundredSeven}
+		& \textbf{\totalExergyEffvCdOneHundredFifteen}
+		& \textbf{-0.00022}
+		\\
+		\hline 
+		\textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\firstExergyEffvCdTwenty}
+		& \textbf{\firstExergyEffvCdFifty}
+		& \textbf{\firstExergyEffvCdStandard}
+		& \textbf{\firstExergyEffvCdOneHundredSeven}
+		& \textbf{\firstExergyEffvCdOneHundredFifteen}
+		& -
 		\\
 		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 		& \firstsecondSeparationAltvCdTwenty
@@ -746,6 +770,15 @@ The viscous drag component of the SPARTAN's aerodynamics is varied, in order to 
 		& \firstsecondSeparationgammavCdOneHundredFifteen
 		& -
 		\\
+		\hline 
+		\textbf{2$^{nd}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\secondExergyEffvCdTwenty}
+		& \textbf{\secondExergyEffvCdFifty}
+		& \textbf{\secondExergyEffvCdStandard}
+		& \textbf{\secondExergyEffvCdOneHundredSeven}
+		& \textbf{\secondExergyEffvCdOneHundredFifteen}
+		& \textbf{-0.154}
+		\\
 		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 		& \secondthirdSeparationAltvCdTwenty
 		& \secondthirdSeparationAltvCdFifty
@@ -760,7 +793,7 @@ The viscous drag component of the SPARTAN's aerodynamics is varied, in order to 
 		& \secondthirdSeparationvvCdStandard
 		& \secondthirdSeparationvvCdOneHundredSeven
 		& \secondthirdSeparationvvCdOneHundredFifteen
-		&-33.89
+		&-33.84
 		\\
 		\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
 		& \secondthirdSeparationgammavCdTwenty
@@ -776,7 +809,7 @@ The viscous drag component of the SPARTAN's aerodynamics is varied, in order to 
 		& \secondthirdSeparationqvCdStandard
 		& \secondthirdSeparationqvCdOneHundredSeven
 		& \secondthirdSeparationqvCdOneHundredFifteen
-		&-0.16
+		&-0.17
 		\\
 		\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
 		& \secondthirdSeparationLDvCdTwenty
@@ -784,7 +817,7 @@ The viscous drag component of the SPARTAN's aerodynamics is varied, in order to 
 		& \secondthirdSeparationLDvCdStandard
 		& \secondthirdSeparationLDvCdOneHundredSeven
 		& \secondthirdSeparationLDvCdOneHundredFifteen
-		& -
+		&-0.07
 		\\
 		\textbf{2$^{nd}$ Stage Flight Time (s)}
 		& \secondFlightTimevCdTwenty
@@ -802,13 +835,22 @@ The viscous drag component of the SPARTAN's aerodynamics is varied, in order to 
 		& \returnFuelvCdOneHundredFifteen
 		& -
 		\\
+		\hline 
+		\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\thirddExergyEffvCdTwenty}
+		& \textbf{\thirddExergyEffvCdFifty}
+		& \textbf{\thirddExergyEffvCdStandard}
+		& \textbf{\thirddExergyEffvCdOneHundredSeven}
+		& \textbf{\thirddExergyEffvCdOneHundredFifteen}
+		& -
+		\\
 		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 		& \thirdqOverFivevCdTwenty
 		& \thirdqOverFivevCdFifty
 		& \thirdqOverFivevCdStandard
 		& \thirdqOverFivevCdOneHundredSeven
 		& \thirdqOverFivevCdOneHundredFifteen
-		&-0.22
+		&-0.24
 		\\
 		\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
 		& \thirdmaxAoAvCdTwenty
@@ -818,37 +860,31 @@ The viscous drag component of the SPARTAN's aerodynamics is varied, in order to 
 		& \thirdmaxAoAvCdOneHundredFifteen
 		& -
 		\\
-		\textbf{3$^{rd}$ Stage final v (m/s)}
-		& \thirdcircvvCdTwenty
-		& \thirdcircvvCdFifty
-		& \thirdcircvvCdStandard
-		& \thirdcircvvCdOneHundredSeven
-		& \thirdcircvvCdOneHundredFifteen
-		&-47.52
-		\\
-		\textbf{3$^{rd}$ Stage final m (kg)}
-		& \thirdcircmvCdTwenty
-		& \thirdcircmvCdFifty
-		& \thirdcircmvCdStandard
-		& \thirdcircmvCdOneHundredSeven
-		& \thirdcircmvCdOneHundredFifteen
-		& -
+		\textbf{3$^{rd}$ Stage Fuel Mass (kg)}
+		& \thirdmFuelvCdTwenty
+		& \thirdmFuelvCdFifty
+		& \thirdmFuelvCdStandard
+		& \thirdmFuelvCdOneHundredSeven
+		& \thirdmFuelvCdOneHundredFifteen
+		&-32.96
 		\\
 		\hline 
 	\end{tabular} 
+	\caption{Summary of key trajectory parameters with SPARTAN viscous drag variation.}
+	\label{tab:viscous}
 \end{table} 
 
-\subsubsection{Trajectory Comparisons}
+
 \begin{figure}[!th]
 \centering
 \includegraphics[width=1\linewidth]{../LODESTAR_FINAL/Results/mode51/SecondStageComparison}
-\caption{}
+\caption{Comparison of SPARTAN ascent trajectories with variation in the viscous drag of the SPARTAN.}
 \label{fig:SecondStageComparison-}
 \end{figure}
 \begin{figure}[!th]
 \centering
 \includegraphics[width=1\linewidth]{../LODESTAR_FINAL/Results/mode51/ThirdStageComparison}
-\caption{}
+\caption{Comparison of third stage ascent trajectories with variation in the viscous drag of the SPARTAN.}
 \label{fig:ThirdStageComparison-}
 \end{figure}
 
@@ -856,6 +892,6 @@ The viscous drag component of the SPARTAN's aerodynamics is varied, in order to 
 \begin{figure}[!th]
 	\centering
 	\includegraphics[width=1\linewidth]{../LODESTAR_FINAL/Results/mode51/ReturnComparison}
-	\caption{}
+	\caption{Comparison of SPARTAN return trajectories with variation in the viscous drag of the SPARTAN.}
 	\label{fig:ReturnComparison-}
 \end{figure}
