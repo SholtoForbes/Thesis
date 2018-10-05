@@ -40,7 +40,6 @@
     \field{sortinit}{A}
     \field{sortinithash}{A}
     \field{booktitle}{20th International Congress on Modelling and Simulation}
-    \field{number}{December}
     \field{pages}{1\bibrangedash 6}
     \field{title}{{Comparison of computational and semi-empirical aerodynamics
   tools for making fit-for-purpose modelling decisions}}
@@ -51,6 +50,27 @@
     \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/abeynayake.pdf:pdf
     \endverb
     \field{year}{2013}
+  \endentry
+
+  \entry{CFX}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=A}{%
+         family={{AEA Technology}},
+         familyi={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{A1}
+    \strng{fullhash}{A1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{{Itroduction to CFX-TASCflow}}
+    \verb{url}
+    \verb http://hmf.enseeiht.fr/travaux/CD0102/travaux/optmfn/micp/reports/s19
+    \verb cfx2/pages/frame2.htm
+    \endverb
+    \warn{\item Invalid format of field 'urldate'}
   \endentry
 
   \entry{Aftosmis2011}{inproceedings}{}
@@ -262,6 +282,36 @@
     \field{year}{2016}
   \endentry
 
+  \entry{Ansys2014}{report}{}
+    \name{author}{1}{}{%
+      {{hash=A}{%
+         family={Ansys},
+         familyi={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{A2}
+    \strng{fullhash}{A2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{pages}{2}
+    \field{title}{{Fluent Bruchure}}
+    \verb{url}
+    \verb http://ansys.com/staticassets/ANSYS/staticassets/resourcelibrary/broc
+    \verb hure/ansys-fluent-brochure-14.0.pdf
+    \endverb
+    \list{institution}{1}{%
+      {Ansys}%
+    }
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/ansys-fluent-brochu
+    \verb re-140.pdf:pdf
+    \endverb
+    \field{type}{techreport}
+    \field{year}{2014}
+  \endentry
+
   \entry{astos}{misc}{}
     \name{author}{1}{}{%
       {{hash=A}{%
@@ -269,8 +319,8 @@
          familyi={A\bibinitperiod},
       }}%
     }
-    \strng{namehash}{A1}
-    \strng{fullhash}{A1}
+    \strng{namehash}{A3}
+    \strng{fullhash}{A3}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{sortinit}{A}
@@ -298,6 +348,33 @@
     \field{urlday}{21}
     \field{urlmonth}{06}
     \field{urlyear}{2018}
+  \endentry
+
+  \entry{hohmann}{report}{}
+    \name{author}{1}{}{%
+      {{hash=BB}{%
+         family={Barrar},
+         familyi={B\bibinitperiod},
+         given={B},
+         giveni={B},
+      }}%
+    }
+    \strng{namehash}{BB1}
+    \strng{fullhash}{BB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{{An Analytic Proof That the Hohmann-Type Transfer is the True
+  Minimum Tro-Impulse Transfer}}
+    \list{location}{1}{%
+      {Fort Belvoir, VA}%
+    }
+    \list{institution}{1}{%
+      {Defense Technical Information Center}%
+    }
+    \field{type}{techreport}
+    \field{year}{1962}
   \endentry
 
   \entry{Bazaraa2013}{book}{}
@@ -648,6 +725,46 @@
     \field{year}{1993}
   \endentry
 
+  \entry{Carlson1972}{article}{}
+    \name{author}{2}{}{%
+      {{hash=CHW}{%
+         family={Carlson},
+         familyi={C\bibinitperiod},
+         given={H.\bibnamedelima W.},
+         giveni={H\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+      {{hash=MDJ}{%
+         family={Maglieri},
+         familyi={M\bibinitperiod},
+         given={D.\bibnamedelima J.},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CHWMDJ1}
+    \strng{fullhash}{CHWMDJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{doi}
+    \verb 10.1121/1.1912901
+    \endverb
+    \field{issn}{0001-4966}
+    \field{number}{2C}
+    \field{pages}{675\bibrangedash 685}
+    \field{title}{{Review of Sonic‐Boom Generation Theory and Prediction
+  Methods}}
+    \verb{url}
+    \verb http://asa.scitation.org/doi/10.1121/1.1912901
+    \endverb
+    \field{volume}{51}
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Carlson.pdf:pdf
+    \endverb
+    \field{journaltitle}{The Journal of the Acoustical Society of America}
+    \field{year}{1972}
+  \endentry
+
   \entry{Chai2015}{article}{}
     \name{author}{4}{}{%
       {{hash=CD}{%
@@ -836,6 +953,26 @@
     \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Amorim.pdf:pdf
     \endverb
     \field{journaltitle}{Consultado em Mar\c{c}o de 2014}
+  \endentry
+
+  \entry{comsol}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=C}{%
+         family={COMSOL},
+         familyi={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{C1}
+    \strng{fullhash}{C1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{{Product: CFD Module}}
+    \verb{url}
+    \verb https://www.comsol.com/cfd-module\#cfd-software
+    \endverb
+    \warn{\item Invalid format of field 'urldate'}
   \endentry
 
   \entry{Cook2003}{article}{}
@@ -1782,6 +1919,28 @@
     \field{year}{2017}
   \endentry
 
+  \entry{openfoam}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=FTO}{%
+         family={Foundation},
+         familyi={F\bibinitperiod},
+         given={The\bibnamedelima OpenFOAM},
+         giveni={T\bibinitperiod\bibinitdelim O\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FTO1}
+    \strng{fullhash}{FTO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{{OpenFOAM}}
+    \verb{url}
+    \verb https://openfoam.org/
+    \endverb
+    \warn{\item Invalid format of field 'urldate'}
+  \endentry
+
   \entry{Foust2018}{misc}{}
     \name{author}{1}{}{%
       {{hash=FJ}{%
@@ -1927,6 +2086,52 @@
     \field{year}{2009}
   \endentry
 
+  \entry{Gilbert2015}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=GA}{%
+         family={Gilbert},
+         familyi={G\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MB}{%
+         family={Mesmer},
+         familyi={M\bibinitperiod},
+         given={Bryan},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=WMD}{%
+         family={Watson},
+         familyi={W\bibinitperiod},
+         given={Michael\bibnamedelima D.},
+         giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \keyw{attribute trade space,exergy,exergy analysis,rocket systems,system
+  efficiency,value-driven design}
+    \strng{namehash}{GAMBWMD1}
+    \strng{fullhash}{GAMBWMD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{booktitle}{9th Annual IEEE International Systems Conference, SysCon
+  2015}
+    \verb{doi}
+    \verb 10.1109/SYSCON.2015.7116765
+    \endverb
+    \field{isbn}{9781479959273}
+    \field{pages}{283\bibrangedash 288}
+    \field{title}{{Exergy analysis of rocket systems}}
+    \list{location}{1}{%
+      {Vancouver, British Columbia, Canada}%
+    }
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Gilbert.pdf:pdf
+    \endverb
+    \field{year}{2015}
+  \endentry
+
   \entry{Gilmour}{misc}{}
     \name{author}{1}{}{%
       {{hash=GA}{%
@@ -1950,6 +2155,74 @@
     \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Gilmour.pdf:pdf
     \endverb
     \field{year}{2017}
+  \endentry
+
+  \entry{Gollan2013b}{article}{}
+    \name{author}{2}{}{%
+      {{hash=GR}{%
+         family={Gollan},
+         familyi={G\bibinitperiod},
+         given={R},
+         giveni={R},
+      }}%
+      {{hash=JP}{%
+         family={Jacobs},
+         familyi={J\bibinitperiod},
+         given={P},
+         giveni={P},
+      }}%
+    }
+    \keyw{cardiovascular fluid mechanics,cerebral aneurysms,elastic
+  material,fluid,hyper,space,structure interactions,time methods}
+    \strng{namehash}{GRJP1}
+    \strng{fullhash}{GRJP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{abstract}{%
+    We present an overview of how the arterial fluid mechanics problems can be
+  modeled with the stabilized space–time fluid–structure interaction
+  (SSTFSI) technique developed by the Team for Advanced Flow Simulation and
+  Modeling (TAFSM). The SSTFSI technique includes the enhancements introduced
+  recently by the TAFSM to increase the scope, accuracy, robustness and
+  efficiency of this class of techniques. The SSTFSI technique is supplemented
+  with a number of special techniques developed for arterial fluid mechanics
+  modeling. These include a recipe for pre-FSI computations that improve the
+  convergence of the FSI computations, using an estimated zero-pressure
+  arterial geometry, and the sequentially coupled arterial FSI (SCAFSI)
+  technique. The recipe for pre-FSI computations is based on the assumption
+  that the arterial deformation during a cardiac cycle is driven mostly by the
+  blood pressure. The SCAFSI technique, which was introduced as an approximate
+  FSI approach in arterial fluid mechanics, is also based on that assumption.
+  The need for an estimated zero-pressure arterial geometry is based on
+  recognizing that the patient-specific image-based geometries correspond to
+  time-averaged blood pressure values. In our arterial fluid mechanics modeling
+  the arterial walls can be represented with the membrane or continuum
+  elements, both of which are geometrically nonlinear, and the continuum
+  element is made of hyperelastic (Fung) material. Test computations are
+  presented for cerebral and abdominal aortic aneurysms, where the arterial
+  geometries used in the computations are close approximations to the
+  patient-specific image-based data.%
+    }
+    \verb{doi}
+    \verb 10.1002/fld
+    \endverb
+    \verb{eprint}
+    \verb fld.1
+    \endverb
+    \field{isbn}{02712091 10970363}
+    \field{issn}{02712091}
+    \field{number}{73}
+    \field{title}{{About the formulation, verification and validation of the
+  hypersonic flow solver Eilmer}}
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Gollan2013b.pdf:pdf
+    \endverb
+    \field{journaltitle}{International Journal for Numerical Methods in Fluids}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{DOI: 10.1002}
+    \field{year}{2013}
   \endentry
 
   \entry{Gomez2004}{article}{}
@@ -2255,6 +2528,70 @@
     \endverb
     \field{type}{techreport}
     \field{year}{2005}
+  \endentry
+
+  \entry{Council2016}{report}{}
+    \name{author}{1}{}{%
+      {{hash=HJ}{%
+         family={Hentschke},
+         familyi={H\bibinitperiod},
+         given={Joy},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HJ1}
+    \strng{fullhash}{HJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{title}{{Ordinary meeting agenda}}
+    \list{location}{1}{%
+      {Streaky Bay, SA, Australia}%
+    }
+    \list{institution}{1}{%
+      {District Council of Streaky Bay}%
+    }
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Council Agenda-Repo
+    \verb rt - October 2017.pdf:pdf
+    \endverb
+    \field{type}{techreport}
+    \field{year}{2017}
+  \endentry
+
+  \entry{Hershey1976}{report}{}
+    \name{author}{2}{}{%
+      {{hash=HRL}{%
+         family={Hershey},
+         familyi={H\bibinitperiod},
+         given={Robert\bibnamedelima L},
+         giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=HTH}{%
+         family={Higgins},
+         familyi={H\bibinitperiod},
+         given={Thomas\bibnamedelima H},
+         giveni={T\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HRLHTH1}
+    \strng{fullhash}{HRLHTH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{booktitle}{Report FAA-RD-76-87}
+    \field{number}{July}
+    \field{title}{{Statistical Model of Sonic Boom Structural Damage}}
+    \list{institution}{1}{%
+      {U.S. Department of Transportation}%
+    }
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Hershey.pdf:pdf
+    \endverb
+    \field{type}{techreport}
+    \field{year}{1976}
   \endentry
 
   \entry{Hindi2006}{article}{}
@@ -2869,6 +3206,52 @@
     \endverb
     \field{journaltitle}{AIAA paper}
     \field{year}{2010}
+  \endentry
+
+  \entry{Kinney2004}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=KD}{%
+         family={Kinney},
+         familyi={K\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KD1}
+    \strng{fullhash}{KD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{abstract}{%
+    A software tool for the prediction of the aero-thermodynamic environments
+  of conceptual aerospace configurations is presented. The vehicle geometry is
+  defined using unstructured, triangulated surface meshes. For subsonic Mach
+  numbers a fast, unstructured, multi-pole panel code is coupled with a
+  streamline tracing formulation to define the viscous surface solution. For
+  supersonic and hypersonic Mach numbers, various independent panel methods are
+  coupled with the streamline tracing formulation, an attachment line detection
+  method, and stagnation-attachment line heating models to define the viscous
+  aero-thermal environment.%
+    }
+    \field{booktitle}{42nd AIAA Aerospace Sciences Meeting and Exhibit}
+    \verb{doi}
+    \verb 10.2514/6.2004-31
+    \endverb
+    \field{isbn}{978-1-62410-078-9}
+    \field{number}{January}
+    \field{pages}{1\bibrangedash 11}
+    \field{title}{{Aero-Thermodynamics for Conceptual Design}}
+    \verb{url}
+    \verb http://www.aric.or.kr/treatise/journal/content.asp?idx=53932
+    \endverb
+    \list{location}{1}{%
+      {Reno, NV}%
+    }
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/cbaero.pdf:pdf
+    \endverb
+    \field{year}{2004}
   \endentry
 
   \entry{Kodera2014}{article}{}
@@ -3922,6 +4305,33 @@
     \field{urlyear}{2017}
   \endentry
 
+  \entry{ELA}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=PM}{%
+         family={Palin},
+         familyi={P\bibinitperiod},
+         given={Megan},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PM1}
+    \strng{fullhash}{PM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{booktitle}{News.com.au}
+    \field{title}{{Australia’s first commercial space base to launch rockets
+  within a year}}
+    \verb{url}
+    \verb https://www.news.com.au/technology/science/space/australias-first-com
+    \verb mercial-space-base-to-launch-rockets-within-a-year/news-story/eb7841c
+    \verb 5b39e04fd31302e8b1056e3ab
+    \endverb
+    \field{year}{2017}
+    \warn{\item Invalid format of field 'urldate'}
+  \endentry
+
   \entry{Pandya2004}{article}{}
     \name{author}{3}{}{%
       {{hash=PS}{%
@@ -3981,6 +4391,87 @@
     \endverb
     \field{journaltitle}{22nd Applied Aerodynamics Conference and Exhibit}
     \field{year}{2004}
+  \endentry
+
+  \entry{Patterson2015}{report}{}
+    \name{author}{4}{}{%
+      {{hash=PMa}{%
+         family={Patterson},
+         familyi={P\bibinitperiod},
+         given={Michael\bibnamedelima a},
+         giveni={M\bibinitperiod\bibinitdelim a\bibinitperiod},
+      }}%
+      {{hash=PD}{%
+         family={Ph},
+         familyi={P\bibinitperiod},
+         given={D},
+         giveni={D},
+      }}%
+      {{hash=RAV}{%
+         family={Rao},
+         familyi={R\bibinitperiod},
+         given={Anil\bibnamedelima V},
+         giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+      {{hash=PD}{%
+         family={Ph},
+         familyi={P\bibinitperiod},
+         given={D},
+         giveni={D},
+      }}%
+    }
+    \strng{namehash}{PMa+1}
+    \strng{fullhash}{PMaPDRAVPD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{abstract}{%
+    Preface This document serves a user's guide for Version 2.0 of the MATLAB
+  optimal control software GPOPS − II: a general-pupose software for solving
+  optimal control problems using variable-order adaptive orthogonal collocation
+  methods together with sparse nonlinear programming. The class of problems
+  that GPOPS − II can solve is very broad and include applications in
+  engineering, economics, and medicine. GPOPS − II uses some of the latest
+  advancements in the area of orthogonal collocation methods along with the
+  state-of-the-art in nonlinear optimization. Specifically, GPOPS − II
+  employs a variable-order adaptive Legendre-Gauss-Radau quadrature collocation
+  method. GPOPS − II has been designed to work with the nonlinear programming
+  (NLP) solvers SNOPT and IPOPT, and MATLAB mex files for IPOPT are included
+  with the software (users must obtain SNOPT on their own, but the complete
+  interface for using SNOPT is included with GPOPS − II. The software has
+  been designed to be extremely flexible, allowing a user to formulate an
+  optimal control problem in a way that makes sense for the problem being
+  solved. Few, if any, restrictions have been placed on the manner in which a
+  problem needs to be modeled. As stated, the software is general-purpose, that
+  is, it has not been developed for any specific type of problem. While the
+  developers of GPOPS − II make no guarantee as to the fitness of the
+  software for any particular purpose, it is certainly hoped that software is
+  useful for a variety of applications. The new version of GPOPS − II
+  described in this user's guide differs from the first release of May 2013 in
+  the follows ways. First, some of the input syntax has been modified to be
+  more elegant than it was previously. Second, the software now includes a
+  complete input checker that provides errors and warnings regarding
+  user-defined inputs. Third, from an algorithmic standpoint the major change
+  is the way in which NLP solver derivatives can now be obtained. In addition
+  to the original sparse finite-differencing method (which is still included),
+  the user now has the choice of generating derivative source code using the
+  open-source automatic differentiation software ADiGator 1 (written by Matthew
+  J. Weinstein and available at http://sourceforge.net/projects/adigator) or by
+  providing user-supplied (analytic) derivatives. These improvements have been
+  made to increase both computational efficiency and reliability of the
+  software.%
+    }
+    \field{number}{October}
+    \field{pages}{1\bibrangedash 72}
+    \field{title}{{GPOPS-II manul: A General-Purpose MATLAB Software for
+  Solving Multiple-Phase Optimal Control Problems Version 2 . 1}}
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/gpops2UsersGuide.pd
+    \verb f:pdf
+    \endverb
+    \field{type}{techreport}
+    \field{year}{2015}
   \endentry
 
   \entry{Paull1993}{inproceedings}{}
@@ -4673,6 +5164,37 @@
     \field{year}{2009}
   \endentry
 
+  \entry{hotsose}{report}{}
+    \name{author}{2}{}{%
+      {{hash=RU}{%
+         family={Reisch},
+         familyi={R\bibinitperiod},
+         given={U},
+         giveni={U},
+      }}%
+      {{hash=AY}{%
+         family={Anseaume},
+         familyi={A\bibinitperiod},
+         given={Y},
+         giveni={Y},
+      }}%
+    }
+    \strng{namehash}{RUAY1}
+    \strng{fullhash}{RUAY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{title}{{Validation of the Approximate Calculation Procedure HOTSOSE
+  For Aerodynamic and Thermal Loads in Hypersonic Flow with Existing
+  Experimental and Numerical Results}}
+    \list{institution}{1}{%
+      {DLR-Forschungsbericht}%
+    }
+    \field{type}{techreport}
+    \field{year}{1998}
+  \endentry
+
   \entry{RichardWebb2016}{article}{}
     \name{author}{1}{}{%
       {{hash=R}{%
@@ -5112,6 +5634,60 @@
       {Reno, NV}%
     }
     \field{year}{2003}
+  \endentry
+
+  \entry{Schwamborn2006}{article}{}
+    \name{author}{3}{}{%
+      {{hash=SD}{%
+         family={Schwamborn},
+         familyi={S\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=GT}{%
+         family={Gerhold},
+         familyi={G\bibinitperiod},
+         given={T.},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=HR}{%
+         family={Heinrich},
+         familyi={H\bibinitperiod},
+         given={R.},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \keyw{complex,computational fluid dynamics,unstructured hybrid flow solver}
+    \strng{namehash}{SDGTHR1}
+    \strng{fullhash}{SDGTHR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{abstract}{%
+    This paper gives an overview of the TAU-Code, DLR’s system for complex
+  flow simulations on unstructured hybrid grids. Starting from a short
+  description of the system and its components, e.g. mesh adaptation or grid
+  deformation, its basic capabilities are discussed. Thereafter recent and
+  on-going developments are presented, such as the adjoint approach or a pilot
+  installation exploiting structured grids. The remainder of the paper
+  discusses a number of recent applications of varying complexity, both from
+  DLR and aircraft industry, such as simulation of half-model effects in wind
+  tunnels, effects of trailing edge devices on full aircraft configuration,
+  flow about a helicopter fuselage and generic Arianne-type launcher, full
+  aircraft simulations such as A380-type airplane with undercarriage or
+  complete EF2000 .%
+    }
+    \field{isbn}{90-9020970-0}
+    \field{pages}{1\bibrangedash 25}
+    \field{title}{{The DLR TAU-Code: Recent Applications in Research and
+  Industry}}
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/tau.pdf:pdf
+    \endverb
+    \field{journaltitle}{European Conference on Computational Fluid Dynamics,
+  ECCOMAS CFD 2006}
+    \field{year}{2006}
   \endentry
 
   \entry{Segal2009}{book}{}

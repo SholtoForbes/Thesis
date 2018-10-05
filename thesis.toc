@@ -60,8 +60,8 @@
 \contentsline {subsection}{\numberline {4.3.2}\leavevmode {\color {red}I.} First Stage Vertical Ascent}{79}{subsection.4.3.2}
 \contentsline {subsection}{\numberline {4.3.3}\leavevmode {\color {red}II.} First Stage Pitching Ascent}{80}{subsection.4.3.3}
 \contentsline {subsection}{\numberline {4.3.4}\leavevmode {\color {red}III.} Second Stage Ascent Trajectory}{81}{subsection.4.3.4}
-\contentsline {subsection}{\numberline {4.3.5}\leavevmode {\color {red}IV.} Second Stage Return Trajectory}{83}{subsection.4.3.5}
-\contentsline {subsection}{\numberline {4.3.6}\leavevmode {\color {red}V.} Third Stage Powered Ascent}{83}{subsection.4.3.6}
+\contentsline {subsection}{\numberline {4.3.5}\leavevmode {\color {red}IV.} Second Stage Return Trajectory}{82}{subsection.4.3.5}
+\contentsline {subsection}{\numberline {4.3.6}\leavevmode {\color {red}V.} Third Stage Powered Ascent}{84}{subsection.4.3.6}
 \contentsline {subsection}{\numberline {4.3.7}\leavevmode {\color {red}VI.} Third Stage Unpowered Ascent}{84}{subsection.4.3.7}
 \contentsline {subsection}{\numberline {4.3.8}\leavevmode {\color {red}VII.} Hohmann Transfer}{85}{subsection.4.3.8}
 \contentsline {section}{\numberline {4.4}Optimal Solution Analysis}{87}{section.4.4}
@@ -101,36 +101,36 @@
 \contentsline {chapter}{\numberline {7}Conclusions}{147}{chapter.7}
 \contentsline {chapter}{\numberline {8}Recommendations for future work}{151}{chapter.8}
 \contentsline {chapter}{References}{153}{chapter*.145}
-\contentsline {chapter}{\numberline {A}Modelling and Simulation}{167}{appendix.A}
-\contentsline {section}{\numberline {A.1}Propulsion Interpolation Scheme}{167}{section.A.1}
-\contentsline {section}{\numberline {A.2}SPARTAN Flow Results}{168}{section.A.2}
-\contentsline {section}{\numberline {A.3}Cart3D Mesh}{169}{section.A.3}
-\contentsline {section}{\numberline {A.4}Performance of the SPARTAN During Fly-Back}{170}{section.A.4}
-\contentsline {chapter}{\numberline {B}Example and Verification}{171}{appendix.B}
-\contentsline {section}{\numberline {B.1}GPOPS-2 Example - Brachistochrone Problem}{171}{section.B.1}
-\contentsline {section}{\numberline {B.2}Optimised Trajectory Analysis}{172}{section.B.2}
-\contentsline {subsection}{\numberline {B.2.1}Mesh History}{173}{subsection.B.2.1}
-\contentsline {subsection}{\numberline {B.2.2}Verification}{173}{subsection.B.2.2}
-\contentsline {chapter}{\numberline {C}Alternate Trajectory Cases}{179}{appendix.C}
-\contentsline {section}{\numberline {C.1}Maximum Payload-To-Orbit Trajectory With Dynamic Pressure Constraint}{179}{section.C.1}
-\contentsline {section}{\numberline {C.2}Sonic Boom Ground Effects}{179}{section.C.2}
-\contentsline {section}{\numberline {C.3}Alternate Launch Locations}{181}{section.C.3}
-\contentsline {chapter}{\numberline {D}Trajectory Plot Comparisons}{187}{appendix.D}
-\contentsline {section}{\numberline {D.1}Optimised Ascent Trajectory Comparisons With No Fly-Back}{187}{section.D.1}
-\contentsline {subsection}{\numberline {D.1.1}Case 3: Maximum Dynamic Pressure Sensitivity Comparison}{187}{subsection.D.1.1}
-\contentsline {subsection}{\numberline {D.1.2}Case 4: SPARTAN Specific Impulse Sensitivity Comparison}{190}{subsection.D.1.2}
-\contentsline {subsection}{\numberline {D.1.3}Case 5: SPARTAN Drag Sensitivity Comparison}{191}{subsection.D.1.3}
-\contentsline {subsection}{\numberline {D.1.4}Case 6: SPARTAN Mass Sensitivity Comparison}{194}{subsection.D.1.4}
-\contentsline {subsection}{\numberline {D.1.5}Case 7: SPARTAN Fuel Mass Sensitivity Comparison}{195}{subsection.D.1.5}
-\contentsline {subsection}{\numberline {D.1.6}Case 8: Third Stage Mass Sensitivity Comparison}{198}{subsection.D.1.6}
-\contentsline {subsection}{\numberline {D.1.7}Case 9: Third Stage Specific Impulse Sensitivity Comparison}{199}{subsection.D.1.7}
-\contentsline {subsection}{\numberline {D.1.8}Case 10:Third Stage Drag Sensitivity Comparison}{202}{subsection.D.1.8}
-\contentsline {section}{\numberline {D.2}Optimised Ascent Trajectory Comparisons With Fly-Back}{203}{section.D.2}
-\contentsline {subsection}{\numberline {D.2.1}Case 12: Dynamic Pressure Sensitivity Comparison}{203}{subsection.D.2.1}
-\contentsline {subsection}{\numberline {D.2.2}Case 13: SPARTAN Drag Sensitivity Comparison}{207}{subsection.D.2.2}
-\contentsline {subsection}{\numberline {D.2.3}Case 14:SPARTAN Specific Impulse Sensitivity Comparison}{210}{subsection.D.2.3}
-\contentsline {subsection}{\numberline {D.2.4}Case 15: SPARTAN Mass Sensitivity Comparison}{213}{subsection.D.2.4}
-\contentsline {subsection}{\numberline {D.2.5}Case 16: SPARTAN Fuel Mass Sensitivity Comparison}{216}{subsection.D.2.5}
-\contentsline {subsection}{\numberline {D.2.6}Case 17: Third Stage Mass Sensitivity Comparison}{219}{subsection.D.2.6}
-\contentsline {subsection}{\numberline {D.2.7}Case 18: Third Stage Specific Impulse Sensitivity Comparison}{222}{subsection.D.2.7}
-\contentsline {chapter}{\numberline {E}Viscous Drag Variation}{225}{appendix.E}
+\contentsline {chapter}{\numberline {A}Modelling and Simulation}{169}{appendix.A}
+\contentsline {section}{\numberline {A.1}Propulsion Interpolation Scheme}{169}{section.A.1}
+\contentsline {section}{\numberline {A.2}SPARTAN Flow Results}{170}{section.A.2}
+\contentsline {section}{\numberline {A.3}Cart3D Mesh}{171}{section.A.3}
+\contentsline {section}{\numberline {A.4}Performance of the SPARTAN During Fly-Back}{172}{section.A.4}
+\contentsline {chapter}{\numberline {B}Example and Verification}{173}{appendix.B}
+\contentsline {section}{\numberline {B.1}GPOPS-2 Example - Brachistochrone Problem}{173}{section.B.1}
+\contentsline {section}{\numberline {B.2}Optimised Trajectory Analysis}{174}{section.B.2}
+\contentsline {subsection}{\numberline {B.2.1}Mesh History}{175}{subsection.B.2.1}
+\contentsline {subsection}{\numberline {B.2.2}Verification}{175}{subsection.B.2.2}
+\contentsline {chapter}{\numberline {C}Alternate Trajectory Cases}{181}{appendix.C}
+\contentsline {section}{\numberline {C.1}Maximum Payload-To-Orbit Trajectory With Dynamic Pressure Constraint}{181}{section.C.1}
+\contentsline {section}{\numberline {C.2}Sonic Boom Ground Effects}{181}{section.C.2}
+\contentsline {section}{\numberline {C.3}Alternate Launch Locations}{183}{section.C.3}
+\contentsline {chapter}{\numberline {D}Trajectory Plot Comparisons}{189}{appendix.D}
+\contentsline {section}{\numberline {D.1}Optimised Ascent Trajectory Comparisons With No Fly-Back}{189}{section.D.1}
+\contentsline {subsection}{\numberline {D.1.1}Case 3: Maximum Dynamic Pressure Sensitivity Comparison}{189}{subsection.D.1.1}
+\contentsline {subsection}{\numberline {D.1.2}Case 4: SPARTAN Specific Impulse Sensitivity Comparison}{192}{subsection.D.1.2}
+\contentsline {subsection}{\numberline {D.1.3}Case 5: SPARTAN Drag Sensitivity Comparison}{193}{subsection.D.1.3}
+\contentsline {subsection}{\numberline {D.1.4}Case 6: SPARTAN Mass Sensitivity Comparison}{196}{subsection.D.1.4}
+\contentsline {subsection}{\numberline {D.1.5}Case 7: SPARTAN Fuel Mass Sensitivity Comparison}{197}{subsection.D.1.5}
+\contentsline {subsection}{\numberline {D.1.6}Case 8: Third Stage Mass Sensitivity Comparison}{200}{subsection.D.1.6}
+\contentsline {subsection}{\numberline {D.1.7}Case 9: Third Stage Specific Impulse Sensitivity Comparison}{201}{subsection.D.1.7}
+\contentsline {subsection}{\numberline {D.1.8}Case 10:Third Stage Drag Sensitivity Comparison}{204}{subsection.D.1.8}
+\contentsline {section}{\numberline {D.2}Optimised Ascent Trajectory Comparisons With Fly-Back}{205}{section.D.2}
+\contentsline {subsection}{\numberline {D.2.1}Case 12: Dynamic Pressure Sensitivity Comparison}{205}{subsection.D.2.1}
+\contentsline {subsection}{\numberline {D.2.2}Case 13: SPARTAN Drag Sensitivity Comparison}{209}{subsection.D.2.2}
+\contentsline {subsection}{\numberline {D.2.3}Case 14:SPARTAN Specific Impulse Sensitivity Comparison}{212}{subsection.D.2.3}
+\contentsline {subsection}{\numberline {D.2.4}Case 15: SPARTAN Mass Sensitivity Comparison}{215}{subsection.D.2.4}
+\contentsline {subsection}{\numberline {D.2.5}Case 16: SPARTAN Fuel Mass Sensitivity Comparison}{218}{subsection.D.2.5}
+\contentsline {subsection}{\numberline {D.2.6}Case 17: Third Stage Mass Sensitivity Comparison}{221}{subsection.D.2.6}
+\contentsline {subsection}{\numberline {D.2.7}Case 18: Third Stage Specific Impulse Sensitivity Comparison}{224}{subsection.D.2.7}
+\contentsline {chapter}{\numberline {E}Viscous Drag Variation}{227}{appendix.E}
