@@ -26,9 +26,9 @@
 \contentsline {subsection}{\numberline {2.8.2}Collocation Methods}{30}{subsection.2.8.2}
 \contentsline {subsubsection}{The Pseudospectral Method}{31}{section*.46}
 \contentsline {section}{\numberline {2.9}Available Optimal Control Solvers}{33}{section.2.9}
-\contentsline {section}{\numberline {2.10}Aerodynamic Analysis}{34}{section.2.10}
+\contentsline {section}{\numberline {2.10}Aerodynamic Analysis}{35}{section.2.10}
 \contentsline {subsection}{\numberline {2.10.1}Cart3D}{36}{subsection.2.10.1}
-\contentsline {subsection}{\numberline {2.10.2}Missile DATCOM}{37}{subsection.2.10.2}
+\contentsline {subsection}{\numberline {2.10.2}Missile Datcom}{37}{subsection.2.10.2}
 \contentsline {section}{\numberline {2.11}Summary}{38}{section.2.11}
 \contentsline {chapter}{\numberline {3}Launch Vehicle Design and Simulation}{41}{chapter.3}
 \contentsline {section}{\numberline {3.1}Second Stage Scramjet}{43}{section.3.1}
@@ -41,12 +41,12 @@
 \contentsline {subsubsection}{Centre of Gravity Analysis}{54}{section*.69}
 \contentsline {subsubsection}{Calculation of Trimmed Flap Deflections}{55}{section*.71}
 \contentsline {subsubsection}{Viscous Correction}{58}{section*.75}
-\contentsline {subsection}{\numberline {3.1.4}Trimmed Aerodynamic Database of the SPARTAN with Engine-On}{58}{subsection.3.1.4}
-\contentsline {subsection}{\numberline {3.1.5}Trimmed Aerodynamic Database of the SPARTAN with Engine-Off}{58}{subsection.3.1.5}
-\contentsline {section}{\numberline {3.2}First Stage Rocket}{60}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Aerodynamics Including First Stage}{61}{subsection.3.2.1}
-\contentsline {section}{\numberline {3.3}Third Stage Rocket - Baseline}{64}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Heat Shield Sizing}{67}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.1.4}Trimmed Aerodynamic Database of the SPARTAN with Engine-On}{59}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3.1.5}Trimmed Aerodynamic Database of the SPARTAN with Engine-Off}{59}{subsection.3.1.5}
+\contentsline {section}{\numberline {3.2}First Stage Rocket}{61}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Aerodynamics Including First Stage}{63}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.3}Third Stage Rocket - Baseline}{65}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Heat Shield Sizing}{66}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Fuel Tank Sizing}{67}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}The Aerodynamics of the Third Stage Rocket}{68}{subsection.3.3.3}
 \contentsline {subsubsection}{Thrust Vectoring}{68}{section*.91}

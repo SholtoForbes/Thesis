@@ -123,6 +123,42 @@
     \field{year}{2011}
   \endentry
 
+  \entry{CART3D}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=AMJ}{%
+         family={{Aftosmis, M. J., Berger}},
+         familyi={A\bibinitperiod},
+         given={M.\bibnamedelima J.},
+         giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=AG}{%
+         family={Adomavicius},
+         familyi={A\bibinitperiod},
+         given={G.},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AMJAG1}
+    \strng{fullhash}{AMJAG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{booktitle}{38th Aerospace Sciences Meeting and Exhibit}
+    \verb{doi}
+    \verb 10.2514/6.2000-808
+    \endverb
+    \field{title}{{A Parallel Multilevel Method for Adaptively Refined
+  Cartesian Grids with Embedded Boundaries}}
+    \list{location}{1}{%
+      {Reno NV}%
+    }
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/CART3D.ps:ps
+    \endverb
+    \field{year}{2000}
+  \endentry
+
   \entry{Adeline}{misc}{}
     \field{labeltitlesource}{title}
     \field{sortinit}{A}
@@ -1233,6 +1269,35 @@
     \field{year}{2011}
   \endentry
 
+  \entry{Cartplumes}{report}{}
+    \name{author}{1}{}{%
+      {{hash=D}{%
+         family={{Desktop Aeronautics}},
+         familyi={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{D1}
+    \strng{fullhash}{D1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{pages}{9\bibrangedash 11}
+    \field{title}{{Specifying Power BCs for Rocket Plumes}}
+    \verb{url}
+    \verb https://www.nas.nasa.gov/publications/software/docs/cart3d/pages/howt
+    \verb o/howTo\_RocketPlumes\_08.11.pdf
+    \endverb
+    \list{institution}{1}{%
+      {NASA}%
+    }
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/cart3dplumes.pdf:pd
+    \verb f
+    \endverb
+    \field{type}{techreport}
+  \endentry
+
   \entry{Eggers1957}{article}{}
     \name{author}{3}{}{%
       {{hash=EBAJ}{%
@@ -2322,6 +2387,27 @@
     \field{year}{2007}
   \endentry
 
+  \entry{tungsten}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=I}{%
+         family={{International Tungsten Industry Association}},
+         familyi={I\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{I1}
+    \strng{fullhash}{I1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{I}
+    \field{sortinithash}{I}
+    \field{booktitle}{About Tungsten}
+    \field{title}{{Tungsten Properties}}
+    \verb{url}
+    \verb https://www.itia.info/tungsten-properties.html
+    \endverb
+    \warn{\item Invalid format of field 'urldate'}
+  \endentry
+
   \entry{Jazra2013}{article}{}
     \name{author}{3}{}{%
       {{hash=JT}{%
@@ -3120,6 +3206,50 @@
     \field{year}{2012}
   \endentry
 
+  \entry{Lipp2014}{article}{}
+    \name{author}{2}{}{%
+      {{hash=LT}{%
+         family={Lipp},
+         familyi={L\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=BS}{%
+         family={Boyd},
+         familyi={B\bibinitperiod},
+         given={Stephen},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \keyw{convex optimisation,interior point method,minimum-time trajectory
+  generation,minimum-time trajectory generation,optimal speed c,optimal speed
+  control}
+    \strng{namehash}{LTBS1}
+    \strng{fullhash}{LTBS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \verb{doi}
+    \verb 10.1080/00207179.2013.875224
+    \endverb
+    \field{issn}{0020-7179}
+    \field{number}{January 2015}
+    \field{pages}{1297\bibrangedash 1311}
+    \field{title}{{Minimum-time speed optimisation over a fixed path}}
+    \verb{url}
+    \verb http://www.tandfonline.com/doi/abs/10.1080/00207179.2013.875224
+    \endverb
+    \field{volume}{87}
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/AppData/Local/Mendeley Ltd./Mendeley D
+    \verb esktop/Downloaded/Lipp, Boyd - 2014 - Minimum-time speed optimisation
+    \verb  over a fixed path.pdf:pdf
+    \endverb
+    \field{journaltitle}{International Journal of Control}
+    \field{year}{2014}
+  \endentry
+
   \entry{Lu1993}{article}{}
     \name{author}{1}{}{%
       {{hash=LP}{%
@@ -3163,6 +3293,43 @@
     \field{year}{1993}
   \endentry
 
+  \entry{TaylorMaccoll}{article}{}
+    \name{author}{1}{}{%
+      {{hash=MJW}{%
+         family={Maccoll},
+         familyi={M\bibinitperiod},
+         given={J.\bibnamedelima W.},
+         giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MJW1}
+    \strng{fullhash}{MJW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \verb{doi}
+    \verb 10.1098/rspa.1937.0083
+    \endverb
+    \field{isbn}{00804630}
+    \field{issn}{1364-5021}
+    \field{number}{898}
+    \field{pages}{459\bibrangedash 472}
+    \field{title}{{The Conical Shock Wave Formed by a Cone Moving at a High
+  Speed}}
+    \verb{url}
+    \verb http://rspa.royalsocietypublishing.org/cgi/doi/10.1098/rspa.1937.0083
+    \endverb
+    \field{volume}{159}
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/TaylorMaccoll.pdf:p
+    \verb df
+    \endverb
+    \field{journaltitle}{Proceedings of the Royal Society A: Mathematical,
+  Physical and Engineering Sciences}
+    \field{year}{1937}
+  \endentry
+
   \entry{Magee}{report}{}
     \name{author}{1}{}{%
       {{hash=MJW}{%
@@ -3173,8 +3340,8 @@
          giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod},
       }}%
     }
-    \strng{namehash}{MJW1}
-    \strng{fullhash}{MJW1}
+    \strng{namehash}{MJW2}
+    \strng{fullhash}{MJW2}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{sortinit}{M}
@@ -3187,6 +3354,159 @@
     \endverb
     \field{type}{techreport}
     \field{year}{2006}
+  \endentry
+
+  \entry{fun3d}{report}{}
+    \name{author}{13}{}{%
+      {{hash=MF}{%
+         family={Manual},
+         familyi={M\bibinitperiod},
+         given={Fund},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=BRT}{%
+         family={Biedron},
+         familyi={B\bibinitperiod},
+         given={Robert\bibnamedelima T},
+         giveni={R\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+      {{hash=DJM}{%
+         family={Derlaga},
+         familyi={D\bibinitperiod},
+         given={Joseph\bibnamedelima M},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=GPA}{%
+         family={Gnoffo},
+         familyi={G\bibinitperiod},
+         given={Peter\bibnamedelima A},
+         giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=HDP}{%
+         family={Hammond},
+         familyi={H\bibinitperiod},
+         given={Dana\bibnamedelima P},
+         giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=JWT}{%
+         family={Jones},
+         familyi={J\bibinitperiod},
+         given={William\bibnamedelima T},
+         giveni={W\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+      {{hash=KB}{%
+         family={Kleb},
+         familyi={K\bibinitperiod},
+         given={Bil},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=LrEM}{%
+         family={Lee-rausch},
+         familyi={L\bibinitperiod-r\bibinitperiod},
+         given={Elizabeth\bibnamedelima M},
+         giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=NEJ}{%
+         family={Nielsen},
+         familyi={N\bibinitperiod},
+         given={Eric\bibnamedelima J},
+         giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=PMA}{%
+         family={Park},
+         familyi={P\bibinitperiod},
+         given={Michael\bibnamedelima A},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=RCL}{%
+         family={Rumsey},
+         familyi={R\bibinitperiod},
+         given={Christopher\bibnamedelima L},
+         giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=TJL}{%
+         family={Thomas},
+         familyi={T\bibinitperiod},
+         given={James\bibnamedelima L},
+         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=WWA}{%
+         family={Wood},
+         familyi={W\bibinitperiod},
+         given={William\bibnamedelima A},
+         giveni={W\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MF+1}
+    \strng{fullhash}{MFBRTDJMGPAHDPJWTKBLrEMNEJPMARCLTJLWWA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{number}{February}
+    \field{title}{{FUN3D Manual: 13.3}}
+    \list{location}{1}{%
+      {Langley Research Center, Hampton, Virginia}%
+    }
+    \list{institution}{1}{%
+      {NASA}%
+    }
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/fun3d.pdf:pdf
+    \endverb
+    \field{type}{techreport}
+    \field{year}{2018}
+  \endentry
+
+  \entry{Mehta2015}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=MU}{%
+         family={Mehta},
+         familyi={M\bibinitperiod},
+         given={Unmeel},
+         giveni={U\bibinitperiod},
+      }}%
+      {{hash=AM}{%
+         family={Aftosmis},
+         familyi={A\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BJ}{%
+         family={Bowles},
+         familyi={B\bibinitperiod},
+         given={Jeffrey},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=PS}{%
+         family={Pandya},
+         familyi={P\bibinitperiod},
+         given={Shishir},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MU+1}
+    \strng{fullhash}{MUAMBJPS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{booktitle}{20th AIAA International Space Planes and Hypersonic
+  Systems and Technologies Conference}
+    \verb{doi}
+    \verb 10.2514/6.2015-3605
+    \endverb
+    \field{isbn}{9781624103209}
+    \field{number}{July}
+    \field{pages}{1\bibrangedash 21}
+    \field{title}{{Skylon Aerodynamics and SABRE Plumes}}
+    \list{location}{1}{%
+      {Glasgow, Scotland}%
+    }
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/MehtaSkylon.pdf:pdf
+    \endverb
+    \field{year}{2015}
   \endentry
 
   \entry{Mehta2016}{article}{}
@@ -3813,6 +4133,33 @@
     \field{urlday}{21}
     \field{urlmonth}{06}
     \field{urlyear}{2018}
+  \endentry
+
+  \entry{Pointwise}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=P}{%
+         family={Pointwise},
+         familyi={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{P1}
+    \strng{fullhash}{P1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{title}{www.pointwise.com}
+    \verb{url}
+    \verb http://www.pointwise.com/
+    \endverb
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/AppData/Local/Mendeley Ltd./Mendeley D
+    \verb esktop/Downloaded/6ddb3dc8f9b1c7d233f0763b54367f233c96fe44.html:html
+    \endverb
+    \field{year}{2017}
+    \field{urlday}{01}
+    \field{urlmonth}{02}
+    \field{urlyear}{2017}
   \endentry
 
   \entry{Powell1991}{article}{}
@@ -4524,6 +4871,62 @@
     \field{urlday}{01}
     \field{urlmonth}{12}
     \field{urlyear}{2017}
+  \endentry
+
+  \entry{Rosema2011}{report}{}
+    \name{author}{5}{}{%
+      {{hash=RC}{%
+         family={Rosema},
+         familyi={R\bibinitperiod},
+         given={Christopher},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=DJ}{%
+         family={Doyle},
+         familyi={D\bibinitperiod},
+         given={Joshua},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=AL}{%
+         family={Auman},
+         familyi={A\bibinitperiod},
+         given={Lamar},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=UM}{%
+         family={Underwood},
+         familyi={U\bibinitperiod},
+         given={Mark},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BWB}{%
+         family={Blake},
+         familyi={B\bibinitperiod},
+         given={William\bibnamedelima B},
+         giveni={W\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RC+1}
+    \strng{fullhash}{RCDJALUMBWB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \verb{doi}
+    \verb 10.21236/ad1000581
+    \endverb
+    \field{title}{{Missile DATCOM User's Manual - 2011 Revision.}}
+    \field{volume}{3071}
+    \list{institution}{2}{%
+      {Army Aviation}%
+      {Missile Research Development}%
+    }
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/MissileDatcom.pdf:p
+    \verb df
+    \endverb
+    \field{type}{techreport}
+    \field{year}{2011}
   \endentry
 
   \entry{Ross2002}{article}{}
@@ -5721,6 +6124,55 @@
     \field{urlday}{24}
     \field{urlmonth}{07}
     \field{urlyear}{2018}
+  \endentry
+
+  \entry{Ward2018}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=WAD}{%
+         family={Ward},
+         familyi={W\bibinitperiod},
+         given={Alexander\bibnamedelima D.},
+         giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=SMK}{%
+         family={Smart},
+         familyi={S\bibinitperiod},
+         given={Michael\bibnamedelima K.},
+         giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=GRJ}{%
+         family={Gollan},
+         familyi={G\bibinitperiod},
+         given={Rowan\bibnamedelima J.},
+         giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WADSMKGRJ1}
+    \strng{fullhash}{WADSMKGRJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{booktitle}{22nd AIAA International Space Planes and Hypersonics
+  Systems and Technologies Conference}
+    \verb{doi}
+    \verb 10.2514/6.2018-5270
+    \endverb
+    \field{isbn}{978-1-62410-577-7}
+    \field{number}{September}
+    \field{pages}{1\bibrangedash 14}
+    \field{title}{{Development of a Rapid Inviscid/Boundary-Layer Aerodynamics
+  Tool}}
+    \verb{url}
+    \verb https://arc.aiaa.org/doi/10.2514/6.2018-5270
+    \endverb
+    \list{location}{1}{%
+      {Orlando, FL}%
+    }
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Ward2018.pdf:pdf
+    \endverb
+    \field{year}{2018}
   \endentry
 
   \entry{Wassel2013}{article}{}
