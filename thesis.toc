@@ -14,32 +14,33 @@
 \contentsline {subsection}{\numberline {2.5.1}Single-Stage Vehicles}{17}{subsection.2.5.1}
 \contentsline {subsection}{\numberline {2.5.2}Multi-Stage Vehicles}{17}{subsection.2.5.2}
 \contentsline {section}{\numberline {2.6}Hypersonic Vehicle Fly-Back Trajectories}{20}{section.2.6}
-\contentsline {section}{\numberline {2.7}The University of Queensland's Rocket-Scramjet-Rocket Launch System}{22}{section.2.7}
+\contentsline {section}{\numberline {2.7}The University of Queensland's Rocket-Scramjet-Rocket Launch System}{21}{section.2.7}
 \contentsline {subsection}{\numberline {2.7.1}Scramjet Engine Model}{23}{subsection.2.7.1}
-\contentsline {subsection}{\numberline {2.7.2}The Trajectory of the SPARTAN}{24}{subsection.2.7.2}
-\contentsline {subsection}{\numberline {2.7.3}The Third Stage Rocket}{25}{subsection.2.7.3}
-\contentsline {subsection}{\numberline {2.7.4}Exoatmospheric Rocket Engines}{25}{subsection.2.7.4}
-\contentsline {section}{\numberline {2.8}Optimal Control}{29}{section.2.8}
-\contentsline {subsection}{\numberline {2.8.1}Shooting Methods}{30}{subsection.2.8.1}
-\contentsline {subsubsection}{The Single Shooting Method}{30}{section*.43}
-\contentsline {subsubsection}{The Multiple Shooting Method}{30}{section*.44}
-\contentsline {subsection}{\numberline {2.8.2}Collocation Methods}{31}{subsection.2.8.2}
-\contentsline {subsubsection}{The Pseudospectral Method}{32}{section*.47}
-\contentsline {section}{\numberline {2.9}Available Optimal Control Solvers}{34}{section.2.9}
-\contentsline {section}{\numberline {2.10}Aerodynamic Analysis}{35}{section.2.10}
-\contentsline {subsection}{\numberline {2.10.1}CART3D}{37}{subsection.2.10.1}
-\contentsline {subsection}{\numberline {2.10.2}Missile DATCOM}{38}{subsection.2.10.2}
+\contentsline {subsection}{\numberline {2.7.2}The Trajectory of the SPARTAN}{23}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.3}The Third Stage Rocket}{24}{subsection.2.7.3}
+\contentsline {subsection}{\numberline {2.7.4}Exoatmospheric Rocket Engines}{28}{subsection.2.7.4}
+\contentsline {section}{\numberline {2.8}Optimal Control}{28}{section.2.8}
+\contentsline {subsection}{\numberline {2.8.1}Shooting Methods}{29}{subsection.2.8.1}
+\contentsline {subsubsection}{The Single Shooting Method}{29}{section*.42}
+\contentsline {subsubsection}{The Multiple Shooting Method}{30}{section*.43}
+\contentsline {subsection}{\numberline {2.8.2}Collocation Methods}{30}{subsection.2.8.2}
+\contentsline {subsubsection}{The Pseudospectral Method}{31}{section*.46}
+\contentsline {section}{\numberline {2.9}Available Optimal Control Solvers}{33}{section.2.9}
+\contentsline {section}{\numberline {2.10}Aerodynamic Analysis}{34}{section.2.10}
+\contentsline {subsection}{\numberline {2.10.1}Cart3D}{36}{subsection.2.10.1}
+\contentsline {subsection}{\numberline {2.10.2}Missile DATCOM}{37}{subsection.2.10.2}
+\contentsline {section}{\numberline {2.11}Summary}{38}{section.2.11}
 \contentsline {chapter}{\numberline {3}Launch Vehicle Design and Simulation}{41}{chapter.3}
 \contentsline {section}{\numberline {3.1}Second Stage Scramjet}{43}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}The SPARTAN Accelerator}{43}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Propulsion}{44}{subsection.3.1.2}
-\contentsline {subsubsection}{Propulsion Modelling}{45}{section*.57}
+\contentsline {subsubsection}{Propulsion Modelling}{45}{section*.56}
 \contentsline {subsection}{\numberline {3.1.3}The Aerodynamics of the SPARTAN}{48}{subsection.3.1.3}
-\contentsline {subsubsection}{Cart3D Simulations}{49}{section*.63}
-\contentsline {subsubsection}{Engine-On Aerodynamic Analysis}{51}{section*.66}
-\contentsline {subsubsection}{Centre of Gravity Analysis}{54}{section*.70}
-\contentsline {subsubsection}{Calculation of Trimmed Flap Deflections}{55}{section*.72}
-\contentsline {subsubsection}{Viscous Correction}{58}{section*.76}
+\contentsline {subsubsection}{Cart3D Simulations}{49}{section*.62}
+\contentsline {subsubsection}{Engine-On Aerodynamic Analysis}{51}{section*.65}
+\contentsline {subsubsection}{Centre of Gravity Analysis}{54}{section*.69}
+\contentsline {subsubsection}{Calculation of Trimmed Flap Deflections}{55}{section*.71}
+\contentsline {subsubsection}{Viscous Correction}{58}{section*.75}
 \contentsline {subsection}{\numberline {3.1.4}Trimmed Aerodynamic Database of the SPARTAN with Engine-On}{58}{subsection.3.1.4}
 \contentsline {subsection}{\numberline {3.1.5}Trimmed Aerodynamic Database of the SPARTAN with Engine-Off}{58}{subsection.3.1.5}
 \contentsline {section}{\numberline {3.2}First Stage Rocket}{60}{section.3.2}
@@ -48,7 +49,7 @@
 \contentsline {subsection}{\numberline {3.3.1}Heat Shield Sizing}{67}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Fuel Tank Sizing}{67}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}The Aerodynamics of the Third Stage Rocket}{68}{subsection.3.3.3}
-\contentsline {subsubsection}{Thrust Vectoring}{68}{section*.92}
+\contentsline {subsubsection}{Thrust Vectoring}{68}{section*.91}
 \contentsline {section}{\numberline {3.4}Summary}{70}{section.3.4}
 \contentsline {chapter}{\numberline {4}LODESTAR}{71}{chapter.4}
 \contentsline {section}{\numberline {4.1}Vehicle Simulation}{73}{section.4.1}
@@ -84,9 +85,9 @@
 \contentsline {section}{\numberline {6.1}Case 11: Combined SPARTAN Ascent-Descent \& Third Stage}{123}{section.6.1}
 \contentsline {section}{\numberline {6.2}Ascent Trajectory}{124}{section.6.2}
 \contentsline {section}{\numberline {6.3}Fly-Back Trajectory}{128}{section.6.3}
-\contentsline {subsubsection}{ Initial Turn}{129}{section*.135}
-\contentsline {subsubsection}{ Boost-Skip Phase}{131}{section*.136}
-\contentsline {subsubsection}{ Approach}{132}{section*.137}
+\contentsline {subsubsection}{ Initial Turn}{129}{section*.134}
+\contentsline {subsubsection}{ Boost-Skip Phase}{131}{section*.135}
+\contentsline {subsubsection}{ Approach}{132}{section*.136}
 \contentsline {section}{\numberline {6.4}Design Sensitivity Analysis}{132}{section.6.4}
 \contentsline {subsection}{\numberline {6.4.1}Case 12: Dynamic Pressure Variation with Fly-Back Inclusion}{134}{subsection.6.4.1}
 \contentsline {subsection}{\numberline {6.4.2}Case 13: SPARTAN Drag Sensitivity with Fly-Back Inclusion}{135}{subsection.6.4.2}
@@ -99,7 +100,7 @@
 \contentsline {section}{\numberline {6.6}Summary}{145}{section.6.6}
 \contentsline {chapter}{\numberline {7}Conclusions}{147}{chapter.7}
 \contentsline {chapter}{\numberline {8}Recommendations for future work}{151}{chapter.8}
-\contentsline {chapter}{References}{153}{chapter*.146}
+\contentsline {chapter}{References}{153}{chapter*.145}
 \contentsline {chapter}{\numberline {A}Modelling and Simulation}{167}{appendix.A}
 \contentsline {section}{\numberline {A.1}Propulsion Interpolation Scheme}{167}{section.A.1}
 \contentsline {section}{\numberline {A.2}SPARTAN Flow Results}{168}{section.A.2}

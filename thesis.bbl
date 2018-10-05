@@ -1448,6 +1448,61 @@
     \field{year}{2013}
   \endentry
 
+  \entry{Faa2018}{report}{}
+    \name{author}{1}{}{%
+      {{hash=F}{%
+         family={{Federal Aviation Administration}},
+         familyi={F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{F1}
+    \strng{fullhash}{F1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{number}{January}
+    \field{pages}{255}
+    \field{title}{{The Annual Compendium of Commercial Space Transportation:
+  2018}}
+    \verb{url}
+    \verb https://www.faa.gov/about/office\_org/headquarters\_offices/ast/media
+    \verb /2018\_AST\_Compendium.pdf
+    \endverb
+    \list{location}{1}{%
+      {Washington, DC}%
+    }
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/2018\_AST\_Compendi
+    \verb um.pdf:pdf
+    \endverb
+    \field{type}{techreport}
+    \field{year}{2018}
+  \endentry
+
+  \entry{firefly}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=F}{%
+         family={Firefly},
+         familyi={F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{F2}
+    \strng{fullhash}{F2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{{Firefly}}
+    \verb{url}
+    \verb http://www.fireflyspace.com/
+    \endverb
+    \field{year}{2017}
+    \field{urlday}{30}
+    \field{urlmonth}{11}
+    \field{urlyear}{2017}
+  \endentry
+
   \entry{Fitzer}{book}{}
     \name{author}{2}{}{%
       {{hash=FE}{%
@@ -2183,29 +2238,6 @@
     \endverb
     \field{journaltitle}{2006 American Control Conference}
     \field{year}{2006}
-  \endentry
-
-  \entry{Horizon}{misc}{}
-    \name{author}{1}{}{%
-      {{hash=H}{%
-         family={Horizon},
-         familyi={H\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{H1}
-    \strng{fullhash}{H1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{H}
-    \field{sortinithash}{H}
-    \field{title}{{Black Arrow 2}}
-    \verb{url}
-    \verb http://www.horizonsas.com/products/
-    \endverb
-    \field{year}{2017}
-    \field{urlday}{01}
-    \field{urlmonth}{12}
-    \field{urlyear}{2017}
   \endentry
 
   \entry{Houska2011}{article}{}
@@ -3875,6 +3907,34 @@
     \verb ic-Airbreathing-Accelerating-Vehicle.pdf:pdf
     \endverb
     \field{type}{phdthesis}
+    \field{year}{2018}
+  \endentry
+
+  \entry{Preller2018a}{thesis}{}
+    \name{author}{1}{}{%
+      {{hash=PD}{%
+         family={Preller},
+         familyi={P\bibinitperiod},
+         given={Dawid},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PD1}
+    \strng{fullhash}{PD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{title}{{Multidisciplinary Design and Optimisation of a Pitch Trimmed
+  Hypersonic Airbreathing Accelerating Vehicle}}
+    \list{institution}{1}{%
+      {The University of Queensland}%
+    }
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/Dawids Stuff/s804635\_fina
+    \verb l\_thesis.pdf:pdf
+    \endverb
+    \field{type}{Ph.D Dissertation}
     \field{year}{2018}
   \endentry
 
