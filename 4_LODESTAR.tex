@@ -4,10 +4,11 @@
 \chapter{LODESTAR}\label{chapter:LODESTAR}
 
 
-The calculation of the maximum payload-to-orbit trajectory profile for a rocket-scramjet-rocket launch system is a complex task, and specialised packages for this purpose are not widely available. 
-This chapter presents the package LODESTAR (Launch Optimisation and Data Evaluation for Scramjet Trajectory Analysis Research), which has been developed to calculate the optimal trajectories of satellite launch systems by simulating the dynamics of the launch system, and interfacing appropriately with an optimal control solver. 
+
+This chapter presents the package LODESTAR (Launch Optimisation and Data Evaluation for Scramjet Trajectory Analysis Research), which has been developed to calculate the optimal trajectories of satellite launch systems. 
 LODESTAR optimises a trajectory towards a user-defined objective function, such as maximum payload-to-orbit, subject to constraints that bound the operational region of a vehicle.
-LODESTAR is developed in MATLAB and utilises GPOPS-2\cite{Patterson2015} a proprietary pseudospectral method optimisation package, which uses an hp-adaptive version of the Radau pseudospectral method, described in further detail in Section \ref{sec:optsolvers}.
+LODESTAR simulates the dynamics of a launch system, and interfaces with an optimal control solver, configuring the solver appropriately for launch trajectory optimisation and providing verification tools. 
+LODESTAR is developed in MATLAB, and utilises GPOPS-2\cite{Patterson2015}. GPOPS-2 is a proprietary pseudospectral method optimisation package, which is based on an \textsf{hp}-adaptive version of the Radau pseudospectral method, described in further detail in Section \ref{sec:optsolvers}, as well as the IPOPT nonlinear optimisation package\cite{Wachter2006}.
 LODESTAR performs multiple functions which facilitate the optimisation of launch trajectories, including:
 \begin{itemize}
 	\item providing a smooth, continuous interpolation of the aerodynamic and engine performance databases, 
@@ -31,8 +32,8 @@ LODESTAR performs multiple functions which facilitate the optimisation of launch
 \end{itemize}
  Within this chapter, the structure of LODESTAR is presented, as well as the set-up of LODESTAR for the rocket-scramjet-rocket trajectory optimisation, and the verification methods used to determine if a solution has converged correctly.
  
-Figure \ref{fig:FlowChartSmall} illustrates a simplified iteration of the pseudospectral solver. GPOPS-2 provides an initial guess of the solution to the external modules, over an initial mesh of nodes.
-The external modules calculate the aerodynamic and engine performance of the launch system at each point along the trajectory, along with atmospheric conditions. This data is then used to calculate the dynamics of the vehicle along the trajectory. The constraints and cost function are then evaluated by GPOPS-2 and passed through to the IPOPT nonlinear optimisation package\cite{Wachter2006}, which updates the guess of the state and control variables. This process is repeated for a set number of iterations, with the solution evaluated at each iteration to compute the feasibility and optimality of the solution. This process repeats until the solver reaches a predefined tolerance of optimality, or a predefined number of iterations. At this point, GPOPS-2 updates the node mesh, clustering nodes and creating mesh segments around key sections of the trajectory to improve accuracy. The process repeats for a number of mesh iterations defined by the user. 
+Figure \ref{fig:FlowChartSmall} shows a simplified illustration of an iteration of the optimal control  process within LODESTAR. Initially, GPOPS-2 provides the current iteration of the trajectory solution to LODESTAR, along with a mesh of nodes over which the solution is calculated.
+LODESTAR then calculates the aerodynamic and engine performance of the launch system at each point along the trajectory, along with atmospheric conditions. This data is used to calculate the dynamics of the vehicle along the trajectory in six degrees of freedom. LODESTAR evaluates the trajectory, and calculates the final payload-to-orbit. The vehicle dynamics and payload-to-orbit are evaluated by GPOPS-2, and passed through to IPOPT as constraint and cost functions. IPOPT then updates the guess of the trajectory solution, which is passed through GPOPS-2 to LODESTAR once more. The solution is evaluated by GPOPS-2 at each iteration to compute the feasibility and optimality of the solution. This process repeats until either a predefined tolerance of optimality, or a predefined number of iterations, is reached. At this point, GPOPS-2 updates the node mesh via \textsf{h} adaptation (illustrated in Figure \ref{fig:HPExamples}), creating mesh segments around key sections of the trajectory to improve accuracy. The process repeats for a number of mesh iterations defined by the user. 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.75\linewidth]{figures/4_LODESTAR/FlowChartSmall}
@@ -40,42 +41,53 @@ The external modules calculate the aerodynamic and engine performance of the lau
 	\label{fig:FlowChartSmall}
 \end{figure}
 
-Due to the nature of the pseudospectral method, it is possible that GPOPS-2 will not be able to converge to a physically valid or optimal solution. 
-LODESTAR contains a number of verification modules that assess the optimised trajectory solution to ensure that the solution has converged sufficiently, and that the dynamics of the solution are accurate. 
-To aid in ensuring that an optimal solution is reached, GPOPS-2 is initiated from four separate initial guesses, with final altitude guess varied by 1km between each guess. These iterations of GPOPS-2 are run in parallel, using Matlab's \textsf{Parfor} function. After all iterations of GPOPS-2 have completed, the state feasibility is calculated for each solution. The `best' solution is chosen as the solution with the most accurately modelled dynamics. 
 
+
+\section{Mission Definition}\label{sec:mission}
+The configuration of LODESTAR must be tailored towards the specific vehicle and mission profile which are being optimised. For this study, LODESTAR has been configured to simulate and optimise the launch of the rocket-scramjet-rocket vehicle, detailed in Chapter \ref{chapter:Design}, for maximum payload-to-orbit.
+The nominal mission of the rocket-scramjet-rocket is presented here in order to provide a suitable reference for the configuration specifications, which are detailed in the following sections. 
+
+The mission chosen for the optimal trajectory calculation is a launch to sun synchronous orbit. 
+A satellite in sun synchronous orbit is close to polar inclination, regressing so that it keeps its orbital alignment to the sun. The sun synchronous orbit is one of the most commonly used types of orbit for space science missions, as it has many useful properties\cite{Boain2004}. A sun synchonous orbit allows for global coverage, passing over each latitude at the same time each day, illustrated in Figure \ref{fig:SSO}. It also allows for a satellite to either have full sun and have consistent power generation, or alternatively, allows for a satellite to have a consistent `dark side' each day to alleviate thermal issues\cite{Boain2004}. A sun synchronous orbit at 566km has been used in previous studies as the target orbit\cite{Preller2017b}, and this orbit is also used for the current work. 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\linewidth]{figures/4_LODESTAR/SSO}
+	\caption{Sun synchronous orbit illustration, passing over the equator at the same time each day\cite{NASASSO}.}
+	\label{fig:SSO}
+\end{figure}
+
+The launch site selected for the simulation is the proposed Equatorial Launch Australia launch site near Nhulunbuy in the Northern Territory, Australia\cite{ELA}. This proposed launch site looks to take advantage of the remoteness of northern Australia, as well as its close proximity to the equator. While the proximity to the equator of this launch site is slightly disadvantageous for launch to sun synchronous orbits, the possibility of launch directions from this location, and its active development, make it an appropriate choice as a practical launch location within Australia. The site is `about 30km south of Nhulunbuy'\cite{ELA} which places it within the approximate region indicated in Figure \ref{fig:SiteLocation}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/4_LODESTAR/SiteLocation}
+	\caption{Approximate location of the ELA launch site. Image from Google maps.}
+	\label{fig:SiteLocation}
+\end{figure}
 
 
 \section{Vehicle Simulation}
 
-
-Each of the vehicles within the rocket-scramjet-rocket launch system are simulated by establishing a set of dynamic equations that fully describe the motion of the vehicle in terms of the time, states ($\mathbf{x}$), and controls ($\mathbf{u}$) of the system;
+LODESTAR simulates each of the vehicles within the rocket-scramjet-rocket launch system by establishing a set of dynamic equations that fully describe the motion of the vehicle in terms of the time, states ($\mathbf{x}$), and controls ($\mathbf{u}$) of the system;
 \begin{equation}
 \dot{\textbf{x}}(t) = f[t,\textbf{x}(t),\textbf{u}(t)].
 \end{equation}
- The states and controls are the variables that define the time dependent physical characteristics of the system. The state variables are dependent on the controls and the system dynamics, while the control variables are the variables that drive the behaviour of the system and are independently variable.  
-The state variables are defined by the coordinate system, and the outputs of each vehicle model. These are nonlinear functions that depend on the interpolation of data sets, which supply the atmospheric, aerodynamic and propulsion characteristics of each vehicle. 
+ The states and controls are the variables that define the time dependent physical characteristics of the system. The state variables are dependent on the controls and the system dynamics, while the control variables drive the behaviour of the system and are independently variable.  
+The state variables are defined by the coordinate system, and the outputs of each vehicle model. These are nonlinear functions, that depend on the interpolation of data sets which supply the atmospheric, aerodynamic and propulsion characteristics of each vehicle. 
 The methods used to interpolate these data sets must be as smooth and continuous as possible, and cover the entire possible operational range of the vehicle. 
-Even if the solution is well within the range of all input data sets, the solver will potentially explore all regions within the user-defined bounds. 
+Even if the optimal solution is well within the range of all input data sets, the optimal control solver will potentially explore all regions within the user-defined bounds. 
 If there are large discontinuities or inaccurate extrapolation effects within the possible solution space of a particular vehicle, the solver may be unable to converge, or converge to a physically invalid solution. 
 Discontinuities within the aerodynamics or engine properties of a particular vehicle must be mitigated through the careful application of interpolation techniques. Discontinuities that are unable to be mitigated, such as stage separations, must be separated into distinct phases within the optimal control solution, connected by linkage constraints. 
 
 \subsection{6DOF Equations of Motion}
 
 
-The dynamics of the vehicle are calculated in six degrees of freedom, illustrated in Figures \ref{fig:global} and \ref{fig:Axes}, with yaw constrained to zero. 
-The dynamics of all stages are calculated using an geodetic rotational reference frame, written in terms of the angle of attack $\alpha$, bank angle $\eta$, radius from centre of Earth $r$, longitude $\xi$, latitude $\phi$, flight path angle $\gamma$, velocity $v$ and heading angle $\zeta$. The equations of motion are given from\cite{Josselyn2002a}:
+The dynamics of the vehicle are calculated in six degrees of freedom, in a geodetic rotational reference frame, illustrated in Figure \ref{fig:global}. In this reference frame, the dynamics of each vehicle are expressed in terms of the angle of attack $\alpha$, bank angle $\eta$, radius from centre of Earth $r$, longitude $\xi$, latitude $\phi$, flight path angle $\gamma$, velocity $v$ and heading angle $\zeta$. The equations of motion are given from\cite{Josselyn2002a}:
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/4_LODESTAR/global}
 	\caption{The Earth-fixed components of the geodetic rotational coordinate system.}
 	\label{fig:global}
-\end{figure}
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=0.9\linewidth]{figures/4_LODESTAR/Axes}
-	\caption{The vehicle-based components of the coordinate system.}
-	\label{fig:Axes}
 \end{figure}
 
 
@@ -104,28 +116,6 @@ The dynamics of all stages are calculated using an geodetic rotational reference
 
 
 
-\section{Mission Definition}\label{sec:mission}
-LODESTAR is able to simulate any mission desired of a rocket-scramjet-rocket launch system. However, the configuration of the optimal control routines must be tailored towards the specific mission profile desired.
-The nominal mission of the rocket-scramjet-rocket is presented here in order to provide a suitable reference for the configuration specifications, detailed in the following sections. 
-
-The mission chosen for the optimal trajectory calculation is a launch to sun synchronous orbit. 
-A satellite in sun synchronous orbit is close to polar inclination, regressing so that it keeps its orbital alignment to the sun. The sun synchronous is one of the most commonly used types of orbit for space science missions, as it has many useful properties\cite{Boain2004}. A sun synchonous orbit allows for global coverage, passing over each latitude at the same time each day, illustrated in Figure \ref{fig:SSO}. It also allows for a satellite to either have full sun and have consistent power generation, or alternatively, allows for a satellite to have a consistent `dark side' each day to alleviate thermal issues\cite{Boain2004}. A sun synchronous orbit at 566km has been used in previous studies as the target orbit\cite{Preller2017b}, and this orbit is also used for the current work. 
-\begin{figure}[ht]
-\centering
-\includegraphics[width=0.8\linewidth]{figures/4_LODESTAR/SSO}
-\caption{Sun synchronous orbit illustration, passing over the equator at the same time each day\cite{NASASSO}.}
-\label{fig:SSO}
-\end{figure}
-
-The launch site selected for the simulation is the proposed Equatorial Launch Australia launch site near Nhulunbuy in the Northern Territory, Australia\cite{ELA}. This proposed launch site looks to take advantage of the remoteness of northern Australia, as well as its close proximity to the equator. While the proximity to the equator of this launch site is slightly disadvantageous for launch to sun synchronous orbits, the possibility of launch directions from this location, and its active development, make it an appropriate choice as a practical launch location within Australia. The site is `about 30km south of Nhulunbuy'\cite{ELA} which places it within the approximate region indicated in Figure \ref{fig:SiteLocation}.
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=0.7\linewidth]{figures/4_LODESTAR/SiteLocation}
-\caption{Approximate location of the ELA launch site. Image from Google maps.}
-\label{fig:SiteLocation}
-\end{figure}
-
 
 \section{Optimal Control Problem Structure}
 
@@ -143,12 +133,12 @@ where $M$ is the terminal cost function and $P$ is the time integrated cost.
 
 \noindent \textit{Dynamic Constraints}
 
-\noindent The constraints impose various conditions on the optimisation problem.
+\noindent 
 The optimisation problem is subject to a set of dynamic constraints, which describe the behaviour of the system over the solution space:
 \begin{equation} \label{eq:state}
 \dot{\textbf{x}}(t) - f[t,\textbf{x}(t),\textbf{u}(t)] = 0.
 \end{equation}
-These dynamic constraints ensure that the polynomial approximations of the state variables match the physical dynamics of the system, determined by the state variables of each vehicle. Implementing the dynamics as constraints allows each state variable to be approximated separately, and gives the optimiser some freedom to explore each state variable independently, greatly increasing the robustness of the optimal control problem.
+These dynamic constraints ensure that the polynomial approximations of the state variables match the physical dynamics of the system in six degrees of freedom. Implementing the dynamics as constraints allows each state variable to be approximated separately, and gives the optimiser some freedom to explore each state variable independently, greatly increasing the robustness of the optimal control problem.
 
 
 
@@ -163,7 +153,7 @@ The path constraints are inequality constraints which consist of functions based
 \begin{eqnarray}
 \mathbf{\lambda}[t,\textbf{x}(t),\textbf{u}(t)] \leq \textbf{0}.
 \end{eqnarray}
-Path constraints are generally used to impose physical limitations on the system such as structural, aerothermodynamic, pathing, and control limits.
+Path constraints are used by LODESTAR to impose physical limitations on the system such as structural, aerothermodynamic, pathing, and control limits.
 
 \noindent \textit{Event Constraints}
 
@@ -174,7 +164,7 @@ Path constraints are generally used to impose physical limitations on the system
 \begin{equation} \label{eq:2}
 \mathbf{\psi}_f[\textbf{x}(t_{f}), t_{f}] = \textbf{0}.
 \end{equation}
-These constraints determine the initial and terminal conditions of the optimisation problem, such as the initial location and velocity, and the starting fuel mass. Additionally, if the problem has multiple phases, these constraints are used to couple the states and time of each phase to the preceding and following phases as follows:
+These constraints determine the initial and terminal conditions of the optimisation problem, such as the initial location and velocity, and the starting fuel mass. Additionally, these constraints are used to couple the states and time of each phase to the preceding and following phases as follows:
 \begin{equation}
 \textbf{x}_{f,1} - \textbf{x}_{0,2} = 0,
 \end{equation}
@@ -418,7 +408,7 @@ m_{payload} = m_4 - m_{struct}
 
 
 \section{Optimal Solution Analysis}\label{sec:verification}
-
+Due to the nature of the pseudospectral method, it is possible that GPOPS-2 will not be able to converge to a physically valid or optimal solution. 
 LODESTAR provides the capacity to analyse the optimal solution provided by the pseudospectral method solver to assist in determining whether the pseudospectral method solver has converged close to an optimal solution of the nonlinear programming problem. It is particularly useful to verify that the optimality and constraint tolerances that have been chosen are sufficiently small, or to check whether the pseudospectral method solver has approached an optimal solution in the case that the defined tolerances are not able to be reached.   
 Checking the solution is achieved through the examination of five key parameters: the IPOPT constraint violation and dual infeasibility parameters; the Hamiltonian necessary condition for optimality; the state derivatives; and finally a forward simulation. 
 
@@ -446,17 +436,35 @@ This checks that the flight path will follow the path computed by GPOPS-2, using
 Splitting the forward simulation allows the forward simulation of the return stage to be assessed without the effects of the throttle model having an unreasonably large effect. 
 
 
+\section{Solution Analysis}
+\textcolor{red}{expand and update}
+The performance of launch system, as well as each individual stage, is quantified using exergy analysis. Exergy expresses how much useful work is available to a system, and exergy efficiency quantifies how well a system utilises the available work. Exergy is lost due to inefficiencies within a launch system. These inefficiencies arise from many sources, including the energy being lost due to the inability of the propulsion system to convert all of the combustion energy to thrust, the energy which must be used to overcome drag, and energy being lost due to manoeuvring. Exergy efficiency is an important parameter for analysing launch vehicles, allowing the relative efficiencies of each stage to be compared when the design or trajectory of a launch system is varied\cite{Gilbert2015}. The exergy efficiency of a stage of a launch system is expressed as the fraction of the fuel combustion energy which is turned into kinetic and potential energy during flight:
+\begin{equation}
+\eta_{exergy,stage} = 1 - \frac{\Delta m_{fuel}H_{fuel} - \Delta KE - \int mg dz}{\Delta m_{fuel}H_{fuel}},
+\end{equation}
+where $H_{fuel}$ is the heating value of the fuel, $KE$ is the change in the kinetic energy of the stage, and $\int mg dz$ is the change in potential energy of the stage over its trajectory.
+\nomenclature{$H$}{Heating Value (J/kg)}
+\nomenclature{$KE$}{Kinetic Energy (J)}
+\nomenclature{$PE$}{Potential Energy (J)}
+This exergy efficiency expresses how efficiently each stage utilises its available fuel over each individual trajectory. However, this stage-based exergy efficiency does not account for the effects of the unused mass of each stage on the performance of the launch system. The total exergy efficiency of the launch system is calculated as the fraction of the total available energy which goes directly into placing the payload into orbit:
+\begin{equation}
+\eta_{exergy} = \frac{\Delta KE_{payload} + \Delta PE_{payload}}{\sum_{stage} \Delta m_{fuel}H_{fuel}}.
+\end{equation}
+This total exergy efficiency expresses how efficiently the launch system as a whole is able to accelerate the payload to orbit. 
+Within this work, exergy efficiency is expressed as the percentage of total exergy utilised, \%$\eta$, ie. $\eta_{exergy} \times 100$.
+
 \section{The Optimisation Process}
 
-Figure \ref{fig:AscentFlowchart} shows the flow chart of the optimisation process, including the external simulation modules. The main process is run multiple times, with varying initial guesses, in order to be able to select the most converged solution. This process is parallelised, with green and red arrows in Figure \ref{fig:AscentFlowchart} indicating the initiation and termination of the parallel loop respectively. 
+Figure \ref{fig:AscentFlowchart} shows the flow chart of the optimisation process, including the external simulation modules. The section in which each module is described is shown. To aid in ensuring that an optimal solution is reached, GPOPS-2 is initiated from four separate initial guesses, with final altitude guess varied by 1km between each guess. These iterations of GPOPS-2 are run in parallel, using Matlab's \textsf{Parfor} function. After all iterations of GPOPS-2 have completed, the state feasibility is calculated for each solution. The `best' solution is chosen as the solution with the most accurately modelled dynamics. This process is parallelised, with green and red arrows in Figure \ref{fig:AscentFlowchart} indicating the initiation and termination of the parallel loop respectively. 
+
 
 
 
 \section{Summary}
 This chapter presented a tool for optimising the trajectory of launch systems, designated LODESTAR. 
-LODESTAR simulates each stage of a rocket-scramjet-rocket launch system, and interfaces with the optimal control solver GPOPS-2, to generate a maximum payload-to-orbit trajectory solution. 
+LODESTAR simulates each stage of a launch system, and interfaces with the optimal control solver GPOPS-2, to generate an optimised trajectory solution. 
+The set-up of LODESTAR for the launch of a rocket-scramjet-rocket launch system, delivering a small satellite to sun synchronous orbit, has been detailed. 
 Each stage of the launch system is simulated individually within LODESTAR, either as a separate phase of the optimal control problem, connected by event constraints, or as a forward simulation. 
-The set-up of LODESTAR for the launch of a small satellite to sun synchronous orbit has been detailed. 
 The bounds of each stage have been chosen so as to provide suitable limits to the dynamics of the system, and the payload-to-orbit capability of the system has been set as the end cost function of the optimal control problem. 
 The state and control variables of each stage were detailed, along with the state, event and path constraints.
 The capability of LODESTAR to verify the optimised solution was presented, including analysis using the necessary conditions of optimality, as well as forward simulation comparisons.
@@ -466,7 +474,7 @@ The capability of LODESTAR to verify the optimised solution was presented, inclu
 	\begin{figure}[ht]
 		\centering
 		\includegraphics[width=0.98\linewidth]{"figures/4_LODESTAR/Ascent Flowchart"}
-		\caption{The process of the rocket-scramjet-rocket trajectory optimisation. Relevant sections are indicated in square brackets at each process step.}
+		\caption{The process of the rocket-scramjet-rocket trajectory optimisation. Relevant sections are indicated in square brackets at each process step. \textcolor{red}{XX need to change the section references of this}}
 		\label{fig:AscentFlowchart}
 	\end{figure} 
 \end{landscape}
