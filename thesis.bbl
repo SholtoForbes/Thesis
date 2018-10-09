@@ -3635,6 +3635,52 @@
     \field{year}{1972}
   \endentry
 
+  \entry{Darby2011a}{article}{}
+    \name{author}{3}{}{%
+      {{hash=DCL}{%
+         family={Darby},
+         familyi={D\bibinitperiod},
+         given={Christopher\bibnamedelima L.},
+         giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=HWW}{%
+         family={Hager},
+         familyi={H\bibinitperiod},
+         given={William\bibnamedelima W.},
+         giveni={W\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+      {{hash=RAV}{%
+         family={Rao},
+         familyi={R\bibinitperiod},
+         given={Anil\bibnamedelima V.},
+         giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+    }
+    \keyw{constrained systems,discrete variational mechanics,multibody
+  dynamics,optimal control}
+    \strng{namehash}{DCLHWWRAV1}
+    \strng{fullhash}{DCLHWWRAV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1002/oca.957
+    \endverb
+    \field{number}{3}
+    \field{pages}{476\bibrangedash 502}
+    \field{title}{{An hp-adaptive pseudospectral method for solving optimal
+  control problems}}
+    \verb{url}
+    \verb http://doi.wiley.com/10.1002/oca.957
+    \endverb
+    \field{volume}{32}
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Darby\_et\_al-2011-
+    \verb Optimal\_Control\_Applications\_and\_Methods.pdf:pdf
+    \endverb
+    \field{journaltitle}{Optimal Control Applications and Methods}
+    \field{year}{2011}
+  \endentry
+
   \entry{Huntington2007}{article}{}
     \name{author}{3}{}{%
       {{hash=HG}{%
@@ -3679,49 +3725,41 @@
     \field{year}{2007}
   \endentry
 
-  \entry{Darby2011a}{article}{}
+  \entry{Garg2011}{article}{}
     \name{author}{3}{}{%
-      {{hash=DCL}{%
-         family={Darby},
-         familyi={D\bibinitperiod},
-         given={Christopher\bibnamedelima L.},
-         giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod},
+      {{hash=GD}{%
+         family={Garg},
+         familyi={G\bibinitperiod},
+         given={Divya},
+         giveni={D\bibinitperiod},
       }}%
       {{hash=HWW}{%
          family={Hager},
          familyi={H\bibinitperiod},
-         given={William\bibnamedelima W.},
+         given={William\bibnamedelima W},
          giveni={W\bibinitperiod\bibinitdelim W\bibinitperiod},
       }}%
       {{hash=RAV}{%
          family={Rao},
          familyi={R\bibinitperiod},
-         given={Anil\bibnamedelima V.},
+         given={Anil\bibnamedelima V},
          giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod},
       }}%
     }
-    \keyw{constrained systems,discrete variational mechanics,multibody
-  dynamics,optimal control}
-    \strng{namehash}{DCLHWWRAV1}
-    \strng{fullhash}{DCLHWWRAV1}
+    \strng{namehash}{GDHWWRAV1}
+    \strng{fullhash}{GDHWWRAV1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \verb{doi}
-    \verb 10.1002/oca.957
-    \endverb
-    \field{number}{3}
-    \field{pages}{476\bibrangedash 502}
-    \field{title}{{An hp-adaptive pseudospectral method for solving optimal
-  control problems}}
-    \verb{url}
-    \verb http://doi.wiley.com/10.1002/oca.957
-    \endverb
-    \field{volume}{32}
+    \field{number}{4}
+    \field{pages}{829\bibrangedash 837}
+    \field{title}{{Pseudospectral Methods for Solving Infnite-Horizon Optimal
+  Control Problems}}
+    \field{volume}{47}
     \verb{file}
-    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Darby\_et\_al-2011-
-    \verb Optimal\_Control\_Applications\_and\_Methods.pdf:pdf
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/infinitePseudospect
+    \verb ral.pdf:pdf
     \endverb
-    \field{journaltitle}{Optimal Control Applications and Methods}
+    \field{journaltitle}{Automatica}
     \field{year}{2011}
   \endentry
 
