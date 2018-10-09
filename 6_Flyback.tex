@@ -17,8 +17,7 @@ This sensitivity analysis allows the influence of the fly-back of the SPARTAN on
 	\centering
 \begin{tabular}{l c } 
 	\hline \textbf{Trajectory Condition}
-	& Value
-
+	&Value 
 	\\
 	\hline \textbf{Payload to Orbit (kg)}
 	& \textbf{\PayloadToOrbitStandard}
@@ -30,18 +29,24 @@ This sensitivity analysis allows the influence of the fly-back of the SPARTAN on
 	\textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
 	& \textbf{\firstExergyEffStandard}
 	\\
+	\textbf{1$^{st}$ Stage Destroyed Exergy (GJ)}
+	& \textbf{\firstExergyDestroyedStandard}
+	\\
 	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 	& \firstsecondSeparationAltStandard
 	\\
 	\textbf{Separation v, 1$\rightarrow$2 (m/s)}
 	& \firstsecondSeparationvStandard
 	\\
-	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+	\textbf{Separation $\gamma$, 1$\rightarrow$2 (deg)}
 	& \firstsecondSeparationgammaStandard
 	\\
 	\hline 
 	\textbf{2$^{nd}$ Stage $\eta_{exergy}$ (\%)}
 	& \textbf{\secondExergyEffStandard}
+	\\
+	\textbf{2$^{nd}$ Stage Destroyed Exergy (GJ)}
+	& \textbf{\secondExergyDestroyedStandard}
 	\\
 	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 	& \secondthirdSeparationAltStandard
@@ -52,23 +57,25 @@ This sensitivity analysis allows the influence of the fly-back of the SPARTAN on
 	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
 	& \secondthirdSeparationgammaStandard
 	\\
-	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
-	& \secondthirdSeparationqStandard
-	\\
-	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
-	& \secondthirdSeparationLDStandard
-	\\
 	\textbf{2$^{nd}$ Stage Flight Time (s)}
 	& \secondFlightTimeStandard
 	\\
-		\textbf{2$^{nd}$ Stage Return Fuel (kg)}
-		& \returnFuelStandard
-		\\
+	\textbf{2$^{nd}$ Stage Distance Flown (km)}
+	& \SecondDistStandard
+	\\
+	\textbf{2$^{nd}$ Stage Return Fuel (kg)}
+	& \returnFuelStandard
+	\\
+	\textbf{2$^{nd}$ Stage Return Distance (km)}
+	& \returnDistStandard
+	\\
 	\hline 
 	\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
 	& \textbf{\thirddExergyEffStandard}
 	\\
-
+	\textbf{3$^{rd}$ Stage Destroyed Exergy (GJ)}
+	& \textbf{\thirdExergyDestroyedStandard}
+	\\
 	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 	& \thirdqOverFiveStandard
 	\\
@@ -199,10 +206,104 @@ The SPARTAN reaches 1km altitude at -26.7$^\circ$ trajectory angle and 120.0m/s 
 
 
 
+\section{Exergy Utilisation Analysis}
 
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{l c c} 
+		\hline \textbf{Trajectory Condition}
+		& No Fly-Back
+		& With Fly-Back
+		\\
+		\textbf{Total First Stage Exergy} 
+		&\textbf{\firstEnergyStandardNoReturn} GJ
+		&\textbf{\firstEnergyStandard} GJ
+		\\
+		
+		\textcolor{blue}{KE + PE of Payload}
+		& \firstWpayloadStandardNoReturn \%
+		& \firstWpayloadStandard \%
+		\\
+		\textcolor{red}{KE + PE of  2$^{nd}$ \& 3$^{rd}$ Stage}
+		& \firstWnextStageStandardNoReturn \% & \firstWnextStageStandard \%
+		\\
+			\textcolor{red}{KE + PE of 1$^{st}$ Stage Structural Mass} 
+			& \WoneStandardNoReturn \% & \WoneStandard \%
+			\\
+		\textcolor{red}{Overcoming Drag} 
+		& \WDoneStandardNoReturn \% & \WDoneStandard \%
+		\\
+	
+		\textcolor{red}{Propulsion Inefficiency} 
+		& \PlossoneCombinedStandardNoReturn \% & \PlossoneCombinedStandard \%
+		\\ 
+		\textbf{Total SPARTAN Exergy} 
+		& \textbf{\secondEnergyStandardNoReturn} GJ & \textbf{\secondEnergyStandard} GJ
+		\\
+		\textcolor{blue}{KE + PE of Payload}
+		& \secondWpayloadStandardNoReturn \% & \secondWpayloadStandard \%
+		\\
+		\textcolor{red}{KE + PE of 3$^{rd}$ Stage}
+		& \secondWnextStageStandardNoReturn \% & \secondWnextStageStandard \%
+		\\
+		\textcolor{red}{Overcoming Drag}
+		& \WDsecondStandardNoReturn \% & \WDsecondStandard \%
+		\\
+		\textcolor{red}{KE + PE of SPARTAN Structural Mass}  
+		& \WsecondStandardNoReturn \% & \WsecondStandard \%
+		\\
+		\textcolor{red}{Propulsion Inefficiency}  
+		& \PlosssecondCombinedStandardNoReturn \% & \PlosssecondCombinedStandard \%
+		\\
+		
+		
+		
+		\textbf{Total Return Exergy} 
+		& - & \textbf{\returnEnergyStandard} GJ
+		\\
+				\textcolor{blue}{KE + PE of SPARTAN Structural Mass}  
+				& - & \WreturnStandard \%
+				\\
+		\textcolor{red}{Overcoming Drag}
+		& - & \WDreturnStandard \%
+		\\
+
+		\textcolor{red}{Propulsion Inefficiency}  
+		& - & \PlossreturnCombinedStandard \%
+		\\
+		
+		
+		\textbf{Total Third Stage Exergy}  
+		& \textbf{\thirdEnergyStandardNoReturn} GJ & \textbf{\thirdEnergyStandard} GJ
+		\\
+		\textcolor{blue}{KE + PE of Payload}  
+		&\thirddExergyEffStandardNoReturn \% &\thirddExergyEffStandard \%
+		\\
+		\textcolor{red}{KE + PE  of 3$^{rd}$ Stage Structural Mass}  
+		& \WthreeStandardNoReturn \% & \WthreeStandard \%
+		\\
+		\textcolor{red}{Overcoming Drag}  
+		& \WDthreeStandardNoReturn \% & \WDthreeStandard \%
+		\\
+		
+		
+		\textcolor{red}{KE + PE of Heat Shield}  
+		
+		& \WHSthreeStandardNoReturn \% & \WHSthreeStandard \%
+		\\
+		
+		\textcolor{red}{Propulsion Inefficiency}  
+		& \PlossthreeCombinedStandardNoReturn \% & \PlossthreeCombinedStandard \%
+		\\
+		\hline 
+	\end{tabular} 
+	\caption{An exergy usage breakdown of the ascent trajectories, both with, and without, SPARTAN fly-back (Cases 2 \& 11). Blue indicates a 'productive' exergy usage, whereas red indicates exergy 'wastage'.}
+	\label{tab:effStandard}
+\end{table}
 
 
 \section{Design Sensitivity Analysis}\label{sec:sensitivity}
+\textcolor{red}{XX note: exergy breakdown calculations were done without return, will need to redo if I want to talk about them}
 
 It has been shown that the fly-back of the SPARTAN accelerator has a significant effect on the performance of the rocket-scramjet-rocket launch system, and that the maximum payload-to-orbit optimised trajectory changes significantly to compensate for the additional requirement of successfully returning the SPARTAN stage. This section investigates the sensitivity of the launch system to changes in the vehicle design, with the fly-back of the SPARTAN included. This sensitivity study varies the following:
 \begin{itemize}
@@ -274,6 +375,14 @@ During simulations, it was observed that on occasion, the optimal return traject
 		& \textbf{4e-05}
 		\\
 		\hline 
+		\textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\firstExergyEffqForty}
+		& \textbf{\firstExergyEffqFortyFive}
+		& \textbf{\firstExergyEffqStandard}
+		& \textbf{\firstExergyEffqFiftyFive}
+		& \textbf{\firstExergyEffqSixty}
+		& -
+		\\
 		\textbf{1$^{st}$ Stage Destroyed Exergy (GJ)}
 		& \textbf{\firstExergyDestroyedqForty}
 		& \textbf{\firstExergyDestroyedqFortyFive}
@@ -307,6 +416,14 @@ During simulations, it was observed that on occasion, the optimal return traject
 		& -
 		\\
 		\hline 
+		\textbf{2$^{nd}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\secondExergyEffqForty}
+		& \textbf{\secondExergyEffqFortyFive}
+		& \textbf{\secondExergyEffqStandard}
+		& \textbf{\secondExergyEffqFiftyFive}
+		& \textbf{\secondExergyEffqSixty}
+		& -
+		\\
 		\textbf{2$^{nd}$ Stage Destroyed Exergy (GJ)}
 		& \textbf{\secondExergyDestroyedqForty}
 		& \textbf{\secondExergyDestroyedqFortyFive}
@@ -372,13 +489,21 @@ During simulations, it was observed that on occasion, the optimal return traject
 		&-5.98
 		\\
 		\hline 
+		\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\thirddExergyEffqForty}
+		& \textbf{\thirddExergyEffqFortyFive}
+		& \textbf{\thirddExergyEffqStandard}
+		& \textbf{\thirddExergyEffqFiftyFive}
+		& \textbf{\thirddExergyEffqSixty}
+		& \textbf{0.042}
+		\\
 		\textbf{3$^{rd}$ Stage Destroyed Exergy (GJ)}
 		& \textbf{\thirdExergyDestroyedqForty}
 		& \textbf{\thirdExergyDestroyedqFortyFive}
 		& \textbf{\thirdExergyDestroyedqStandard}
 		& \textbf{\thirdExergyDestroyedqFiftyFive}
 		& \textbf{\thirdExergyDestroyedqSixty}
-		& \textbf{-0.018687}
+		& \textbf{-0.019}
 		\\
 		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 		& \thirdqOverFiveqForty
@@ -414,7 +539,7 @@ During simulations, it was observed that on occasion, the optimal return traject
 The maximum dynamic pressure allowable during flight is varied by $\pm$20\% in order to determine the sensitivity of the launch system to the structural and thermal limitations of the SPARTAN. 
 No significant variation is observed between sensitivity studies with or without the fly-back included in the sensitivity of the launch system to the maximum dynamic pressure of the SPARTAN, by percentage. 
 Table \ref{tab:qvarreturn} shows a summary of the key parameters of each optimised trajectory, and trajectory comparison plots are shown in Appendix \ref{sec:app_comparison21}. The variation in each trajectory parameter per \% of the dynamic pressure is shown, if there is a clear trend. The payload-to-orbit of the launch system improves by +9.4kg (+5.51\%) at 60kPa, and decreases by -7.7kg (-4.52\%) at 40kPa.
-the overall exergy efficiency of the system increases as the maximum dynamic pressure increases, by +0.06\% at 60kPa, and decreases as the maximum dynamic pressure decreases, by -0.062\% at 40kpa. 
+the overall exergy efficiency of the system increases as the maximum dynamic pressure increases, by +0.083$\eta$\% at 60kPa, and decreases as the maximum dynamic pressure decreases, by -0.067$\eta$\% at 40kpa. 
 
 No trends are observed in the exergy efficiencies of each stage due to maximum dynamic pressure variation, when fly-back is included. Compared to the sensitivity study with no fly-back, the trade-offs between the efficiencies of the stages include the manoeuvrability of the SPARTAN, which dictates the fuel used during the return flight. This additional factor produces more complicated energy trade-offs, resulting in differing optimal trajectory shapes. This can particularly be observed in the 45kPa maximum dynamic pressure trajectory, which exhibits significantly different trade-offs between each stage, when compared to the other cases. 
 
@@ -467,13 +592,21 @@ This is due to the higher maximum dynamic pressure simulations using more fuel d
 		& \textbf{-0.00013}
 		\\
 		\hline 
+		\textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\firstExergyEffCdNinety}
+		& \textbf{\firstExergyEffCdNinetyFive}
+		& \textbf{\firstExergyEffCdStandard}
+		& \textbf{\firstExergyEffCdOneHundredFive}
+		& \textbf{\firstExergyEffCdOneHundredTen}
+		& \textbf{-0.025}
+		\\
 		\textbf{1$^{st}$ Stage Destroyed Exergy (GJ)}
 		& \textbf{\firstExergyDestroyedCdNinety}
 		& \textbf{\firstExergyDestroyedCdNinetyFive}
 		& \textbf{\firstExergyDestroyedCdStandard}
 		& \textbf{\firstExergyDestroyedCdOneHundredFive}
 		& \textbf{\firstExergyDestroyedCdOneHundredTen}
-		& \textbf{0.0539}
+		& \textbf{0.054}
 		\\
 		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 		& \firstsecondSeparationAltCdNinety
@@ -500,13 +633,21 @@ This is due to the higher maximum dynamic pressure simulations using more fuel d
 		& -
 		\\
 		\hline 
+		\textbf{2$^{nd}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\secondExergyEffCdNinety}
+		& \textbf{\secondExergyEffCdNinetyFive}
+		& \textbf{\secondExergyEffCdStandard}
+		& \textbf{\secondExergyEffCdOneHundredFive}
+		& \textbf{\secondExergyEffCdOneHundredTen}
+		& \textbf{-0.034}
+		\\
 		\textbf{2$^{nd}$ Stage Destroyed Exergy (GJ)}
 		& \textbf{\secondExergyDestroyedCdNinety}
 		& \textbf{\secondExergyDestroyedCdNinetyFive}
 		& \textbf{\secondExergyDestroyedCdStandard}
 		& \textbf{\secondExergyDestroyedCdOneHundredFive}
 		& \textbf{\secondExergyDestroyedCdOneHundredTen}
-		& \textbf{0.0643}
+		& \textbf{0.064}
 		\\
 		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 		& \secondthirdSeparationAltCdNinety
@@ -565,13 +706,21 @@ This is due to the higher maximum dynamic pressure simulations using more fuel d
 		& -
 		\\
 		\hline 
+		\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
+		& \textbf{\thirddExergyEffCdNinety}
+		& \textbf{\thirddExergyEffCdNinetyFive}
+		& \textbf{\thirddExergyEffCdStandard}
+		& \textbf{\thirddExergyEffCdOneHundredFive}
+		& \textbf{\thirddExergyEffCdOneHundredTen}
+		& \textbf{-0.149}
+		\\
 		\textbf{3$^{rd}$ Stage Destroyed Exergy (GJ)}
 		& \textbf{\thirdExergyDestroyedCdNinety}
 		& \textbf{\thirdExergyDestroyedCdNinetyFive}
 		& \textbf{\thirdExergyDestroyedCdStandard}
 		& \textbf{\thirdExergyDestroyedCdOneHundredFive}
 		& \textbf{\thirdExergyDestroyedCdOneHundredTen}
-		& \textbf{0.0666}
+		& \textbf{0.067}
 		\\
 		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 		& \thirdqOverFiveCdNinety
@@ -664,6 +813,14 @@ The release altitude and angle of attack serve to initiate the first skip of the
 		& \textbf{\firstExergyEffIspOneHundredTen}
 		& -
 		\\
+		\textbf{1$^{st}$ Stage Destroyed Exergy (GJ)}
+		& \textbf{\firstExergyDestroyedIspNinety}
+		& \textbf{\firstExergyDestroyedIspNinetyFive}
+		& \textbf{\firstExergyDestroyedIspStandard}
+		& \textbf{\firstExergyDestroyedIspOneHundredFive}
+		& \textbf{\firstExergyDestroyedIspOneHundredTen}
+		& -
+		\\
 		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 		& \firstsecondSeparationAltIspNinety
 		& \firstsecondSeparationAltIspNinetyFive
@@ -680,7 +837,7 @@ The release altitude and angle of attack serve to initiate the first skip of the
 		& \firstsecondSeparationvIspOneHundredTen
 		& -
 		\\
-		\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+		\textbf{Separation $\gamma$, 1$\rightarrow$2 (deg)}
 		& \firstsecondSeparationgammaIspNinety
 		& \firstsecondSeparationgammaIspNinetyFive
 		& \firstsecondSeparationgammaIspStandard
@@ -695,7 +852,15 @@ The release altitude and angle of attack serve to initiate the first skip of the
 		& \textbf{\secondExergyEffIspStandard}
 		& \textbf{\secondExergyEffIspOneHundredFive}
 		& \textbf{\secondExergyEffIspOneHundredTen}
-		& \textbf{0.129}
+		& \textbf{0.051}
+		\\
+		\textbf{2$^{nd}$ Stage Destroyed Exergy (GJ)}
+		& \textbf{\secondExergyDestroyedIspNinety}
+		& \textbf{\secondExergyDestroyedIspNinetyFive}
+		& \textbf{\secondExergyDestroyedIspStandard}
+		& \textbf{\secondExergyDestroyedIspOneHundredFive}
+		& \textbf{\secondExergyDestroyedIspOneHundredTen}
+		& \textbf{-0.095}
 		\\
 		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 		& \secondthirdSeparationAltIspNinety
@@ -721,28 +886,20 @@ The release altitude and angle of attack serve to initiate the first skip of the
 		& \secondthirdSeparationgammaIspOneHundredTen
 		&-0.09
 		\\
-		\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
-		& \secondthirdSeparationqIspNinety
-		& \secondthirdSeparationqIspNinetyFive
-		& \secondthirdSeparationqIspStandard
-		& \secondthirdSeparationqIspOneHundredFive
-		& \secondthirdSeparationqIspOneHundredTen
-		& -
-		\\
-		\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
-		& \secondthirdSeparationLDIspNinety
-		& \secondthirdSeparationLDIspNinetyFive
-		& \secondthirdSeparationLDIspStandard
-		& \secondthirdSeparationLDIspOneHundredFive
-		& \secondthirdSeparationLDIspOneHundredTen
-		& -
-		\\
 		\textbf{2$^{nd}$ Stage Flight Time (s)}
 		& \secondFlightTimeIspNinety
 		& \secondFlightTimeIspNinetyFive
 		& \secondFlightTimeIspStandard
 		& \secondFlightTimeIspOneHundredFive
 		& \secondFlightTimeIspOneHundredTen
+		& -
+		\\
+		\textbf{2$^{nd}$ Stage Distance Flown (km)}
+		& \SecondDistIspNinety
+		& \SecondDistIspNinetyFive
+		& \SecondDistIspStandard
+		& \SecondDistIspOneHundredFive
+		& \SecondDistIspOneHundredTen
 		& -
 		\\
 		\textbf{2$^{nd}$ Stage Return Fuel (kg)}
@@ -753,6 +910,14 @@ The release altitude and angle of attack serve to initiate the first skip of the
 		& \returnFuelIspOneHundredTen
 		& -
 		\\
+		\textbf{2$^{nd}$ Stage Return Distance (km)}
+		& \returnDistIspNinety
+		& \returnDistIspNinetyFive
+		& \returnDistIspStandard
+		& \returnDistIspOneHundredFive
+		& \returnDistIspOneHundredTen
+		&10.03
+		\\
 		\hline 
 		\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
 		& \textbf{\thirddExergyEffIspNinety}
@@ -760,7 +925,15 @@ The release altitude and angle of attack serve to initiate the first skip of the
 		& \textbf{\thirddExergyEffIspStandard}
 		& \textbf{\thirddExergyEffIspOneHundredFive}
 		& \textbf{\thirddExergyEffIspOneHundredTen}
-		& \textbf{-0.061}
+		& \textbf{0.162}
+		\\
+		\textbf{3$^{rd}$ Stage Destroyed Exergy (GJ)}
+		& \textbf{\thirdExergyDestroyedIspNinety}
+		& \textbf{\thirdExergyDestroyedIspNinetyFive}
+		& \textbf{\thirdExergyDestroyedIspStandard}
+		& \textbf{\thirdExergyDestroyedIspOneHundredFive}
+		& \textbf{\thirdExergyDestroyedIspOneHundredTen}
+		& \textbf{-0.073}
 		\\
 		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 		& \thirdqOverFiveIspNinety
@@ -796,7 +969,7 @@ The specific impulse of the SPARTAN is varied by $\pm10\%$ in order to assess th
 Key parameters of the trajectories are summarised in Table \ref{tab:comparison31}, and comparison plots are shown in Appendix \ref{sec:app_comparison31}.
 The SPARTAN specific impulse increases the payload-to-orbit by +18.3kg (+10.71\%) at 110\% $I_{SP}$, and decreases the payload-to-orbit by -14.7kg (-8.63\%) at 90\% $I_{SP}$. 
 This produces a general trend in the payload-to-orbit of 1.7$\frac{\Delta kg}{\Delta \%I_{SP} }$, lower than the trend of 2.2$\frac{\Delta kg}{\Delta \%I_{SP} }$ observed in the sensitivity study without fly-back, in Section \ref{sec:ispsensitivitynoflyback}.
-This lowered sensitivity in the payload-to-orbit is due to a correspondingly lowered sensitivity in the exergy efficiency of the SPARTAN, of 0.129$\frac{\Delta \% \eta}{\Delta \%I_{SP} }$, compared to 0.162$\frac{\Delta \% \eta}{\Delta \%I_{SP} }$ in the sensitivity study without fly-back. This lowered sensitivity is due to the larger $I_{SP}$ increasing the acceleration of the SPARTAN, in turn increasing the ground distance covered by the SPARTAN and the velocity at SPARTAN-third stage separation. At 110\% $I_{SP}$, the SPARTAN covers \returnDistIspOneHundredTen km during fly-back, compared to \returnDistIspNinety km at 90\% $I_{SP}$. This more difficult return flight serves to increase the energy necessary for the return flight, partially offsetting the benefits of the increased $I_{SP}$. 
+This lowered sensitivity in the payload-to-orbit is due to a correspondingly lowered sensitivity in the exergy efficiency of the SPARTAN, of 0.129\textcolor{red}{XX change this and watch for these}$\frac{\Delta \% \eta}{\Delta \%I_{SP} }$, compared to 0.162$\frac{\Delta \% \eta}{\Delta \%I_{SP} }$ in the sensitivity study without fly-back. This lowered sensitivity is due to the larger $I_{SP}$ increasing the acceleration of the SPARTAN, in turn increasing the ground distance covered by the SPARTAN and the velocity at SPARTAN-third stage separation. At 110\% $I_{SP}$, the SPARTAN covers \returnDistIspOneHundredTen km during fly-back, compared to \returnDistIspNinety km at 90\% $I_{SP}$. This more difficult return flight serves to increase the energy necessary for the return flight, partially offsetting the benefits of the increased $I_{SP}$. 
 
 Similarly to the specific impulse sensitivity study without fly-back conducted in Section \ref{sec:sensitivityNoReturn}, the first stage trajectory is not significantly altered as the specific impulse of the SPARTAN is varied, and consequently the first stage-SPARTAN separation conditions, as well as the exergy efficiency of the first stage, exhibit no clear trends. Following first stage-SPARTAN separation, the shape of the SPARTAN's acceleration does not change significantly with specific impulse variation, including the the pull-up location and acceleration flight times. As with the optimised trajectories with no fly-back, increasing the specific impulse of the scramjet engines by 10\% increases the velocity at separation (by +114m/s, +4.4\%) and decreases the trajectory angle (by -0.7$^\circ$, 6.4\%), while decreasing the specific impulse of the scramjet engines by 10\% decreases the velocity at SPARTAN-third stage separation (by -106m/s, -4.1\%), and increases the trajectory angle (by -1.1$^\circ$, -10\%).
 The exergy efficiency of the third stage rocket decreases as the exergy efficiency of the SPARTAN increases. This is in line with the trend which has been observed in all previous cases, that the efficiency trade-off between the SPARTAN and the third stage rocket shifts in favour of the SPARTAN as the useful energy of the SPARTAN increases. 
@@ -851,7 +1024,15 @@ The exergy efficiency of the third stage rocket decreases as the exergy efficien
 	& \textbf{\firstExergyEffmSPARTANStandard}
 	& \textbf{\firstExergyEffmSPARTANOneHundredTwoFive}
 	& \textbf{\firstExergyEffmSPARTANOneHundredFive}
-	& \textbf{-0.042}
+	& \textbf{-0.028}
+	\\
+	\textbf{1$^{st}$ Stage Destroyed Exergy (GJ)}
+	& \textbf{\firstExergyDestroyedmSPARTANNinetyFive}
+	& \textbf{\firstExergyDestroyedmSPARTANNinetySevenFive}
+	& \textbf{\firstExergyDestroyedmSPARTANStandard}
+	& \textbf{\firstExergyDestroyedmSPARTANOneHundredTwoFive}
+	& \textbf{\firstExergyDestroyedmSPARTANOneHundredFive}
+	& \textbf{0.061}
 	\\
 	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 	& \firstsecondSeparationAltmSPARTANNinetyFive
@@ -869,7 +1050,7 @@ The exergy efficiency of the third stage rocket decreases as the exergy efficien
 	& \firstsecondSeparationvmSPARTANOneHundredFive
 	&-7.84
 	\\
-	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+	\textbf{Separation $\gamma$, 1$\rightarrow$2 (deg)}
 	& \firstsecondSeparationgammamSPARTANNinetyFive
 	& \firstsecondSeparationgammamSPARTANNinetySevenFive
 	& \firstsecondSeparationgammamSPARTANStandard
@@ -884,7 +1065,15 @@ The exergy efficiency of the third stage rocket decreases as the exergy efficien
 	& \textbf{\secondExergyEffmSPARTANStandard}
 	& \textbf{\secondExergyEffmSPARTANOneHundredTwoFive}
 	& \textbf{\secondExergyEffmSPARTANOneHundredFive}
-	& \textbf{0.033}
+	& \textbf{-0.016}
+	\\
+	\textbf{2$^{nd}$ Stage Destroyed Exergy (GJ)}
+	& \textbf{\secondExergyDestroyedmSPARTANNinetyFive}
+	& \textbf{\secondExergyDestroyedmSPARTANNinetySevenFive}
+	& \textbf{\secondExergyDestroyedmSPARTANStandard}
+	& \textbf{\secondExergyDestroyedmSPARTANOneHundredTwoFive}
+	& \textbf{\secondExergyDestroyedmSPARTANOneHundredFive}
+	& \textbf{0.03}
 	\\
 	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 	& \secondthirdSeparationAltmSPARTANNinetyFive
@@ -910,28 +1099,20 @@ The exergy efficiency of the third stage rocket decreases as the exergy efficien
 	& \secondthirdSeparationgammamSPARTANOneHundredFive
 	& -
 	\\
-	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
-	& \secondthirdSeparationqmSPARTANNinetyFive
-	& \secondthirdSeparationqmSPARTANNinetySevenFive
-	& \secondthirdSeparationqmSPARTANStandard
-	& \secondthirdSeparationqmSPARTANOneHundredTwoFive
-	& \secondthirdSeparationqmSPARTANOneHundredFive
-	& -
-	\\
-	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
-	& \secondthirdSeparationLDmSPARTANNinetyFive
-	& \secondthirdSeparationLDmSPARTANNinetySevenFive
-	& \secondthirdSeparationLDmSPARTANStandard
-	& \secondthirdSeparationLDmSPARTANOneHundredTwoFive
-	& \secondthirdSeparationLDmSPARTANOneHundredFive
-	& -
-	\\
 	\textbf{2$^{nd}$ Stage Flight Time (s)}
 	& \secondFlightTimemSPARTANNinetyFive
 	& \secondFlightTimemSPARTANNinetySevenFive
 	& \secondFlightTimemSPARTANStandard
 	& \secondFlightTimemSPARTANOneHundredTwoFive
 	& \secondFlightTimemSPARTANOneHundredFive
+	& -
+	\\
+	\textbf{2$^{nd}$ Stage Distance Flown (km)}
+	& \SecondDistmSPARTANNinetyFive
+	& \SecondDistmSPARTANNinetySevenFive
+	& \SecondDistmSPARTANStandard
+	& \SecondDistmSPARTANOneHundredTwoFive
+	& \SecondDistmSPARTANOneHundredFive
 	& -
 	\\
 	\textbf{2$^{nd}$ Stage Return Fuel (kg)}
@@ -942,6 +1123,14 @@ The exergy efficiency of the third stage rocket decreases as the exergy efficien
 	& \returnFuelmSPARTANOneHundredFive
 	& -
 	\\
+	\textbf{2$^{nd}$ Stage Return Distance (km)}
+	& \returnDistmSPARTANNinetyFive
+	& \returnDistmSPARTANNinetySevenFive
+	& \returnDistmSPARTANStandard
+	& \returnDistmSPARTANOneHundredTwoFive
+	& \returnDistmSPARTANOneHundredFive
+	& -
+	\\
 	\hline 
 	\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
 	& \textbf{\thirddExergyEffmSPARTANNinetyFive}
@@ -949,7 +1138,15 @@ The exergy efficiency of the third stage rocket decreases as the exergy efficien
 	& \textbf{\thirddExergyEffmSPARTANStandard}
 	& \textbf{\thirddExergyEffmSPARTANOneHundredTwoFive}
 	& \textbf{\thirddExergyEffmSPARTANOneHundredFive}
-	& \textbf{0.041}
+	& \textbf{-0.132}
+	\\
+	\textbf{3$^{rd}$ Stage Destroyed Exergy (GJ)}
+	& \textbf{\thirdExergyDestroyedmSPARTANNinetyFive}
+	& \textbf{\thirdExergyDestroyedmSPARTANNinetySevenFive}
+	& \textbf{\thirdExergyDestroyedmSPARTANStandard}
+	& \textbf{\thirdExergyDestroyedmSPARTANOneHundredTwoFive}
+	& \textbf{\thirdExergyDestroyedmSPARTANOneHundredFive}
+	& \textbf{0.059}
 	\\
 	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 	& \thirdqOverFivemSPARTANNinetyFive
@@ -976,7 +1173,7 @@ The exergy efficiency of the third stage rocket decreases as the exergy efficien
 	&1.36
 	\\
 	\hline 
-\end{tabular}
+\end{tabular} 
 \caption{Comparison of key trajectory parameters with variation in the structural mass of the SPARTAN, with fly-back (Case 15).}
 \label{tab:comparison101}
 \end{table}
@@ -1047,6 +1244,14 @@ The third stage exergy efficiency increases as the mass of the SPARTAN is increa
 	& \textbf{\firstExergyEffmFuelOneHundredTen}
 	& -
 	\\
+	\textbf{1$^{st}$ Stage Destroyed Exergy (GJ)}
+	& \textbf{\firstExergyDestroyedmFuelNinety}
+	& \textbf{\firstExergyDestroyedmFuelNinetyFive}
+	& \textbf{\firstExergyDestroyedmFuelStandard}
+	& \textbf{\firstExergyDestroyedmFuelOneHundredFive}
+	& \textbf{\firstExergyDestroyedmFuelOneHundredTen}
+	& -
+	\\
 	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 	& \firstsecondSeparationAltmFuelNinety
 	& \firstsecondSeparationAltmFuelNinetyFive
@@ -1063,7 +1268,7 @@ The third stage exergy efficiency increases as the mass of the SPARTAN is increa
 	& \firstsecondSeparationvmFuelOneHundredTen
 	&-2.82
 	\\
-	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+	\textbf{Separation $\gamma$, 1$\rightarrow$2 (deg)}
 	& \firstsecondSeparationgammamFuelNinety
 	& \firstsecondSeparationgammamFuelNinetyFive
 	& \firstsecondSeparationgammamFuelStandard
@@ -1078,7 +1283,15 @@ The third stage exergy efficiency increases as the mass of the SPARTAN is increa
 	& \textbf{\secondExergyEffmFuelStandard}
 	& \textbf{\secondExergyEffmFuelOneHundredFive}
 	& \textbf{\secondExergyEffmFuelOneHundredTen}
-	& \textbf{-0.034}
+	& \textbf{-0.013}
+	\\
+	\textbf{2$^{nd}$ Stage Destroyed Exergy (GJ)}
+	& \textbf{\secondExergyDestroyedmFuelNinety}
+	& \textbf{\secondExergyDestroyedmFuelNinetyFive}
+	& \textbf{\secondExergyDestroyedmFuelStandard}
+	& \textbf{\secondExergyDestroyedmFuelOneHundredFive}
+	& \textbf{\secondExergyDestroyedmFuelOneHundredTen}
+	& \textbf{1.823}
 	\\
 	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 	& \secondthirdSeparationAltmFuelNinety
@@ -1104,22 +1317,6 @@ The third stage exergy efficiency increases as the mass of the SPARTAN is increa
 	& \secondthirdSeparationgammamFuelOneHundredTen
 	&-0.04
 	\\
-	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
-	& \secondthirdSeparationqmFuelNinety
-	& \secondthirdSeparationqmFuelNinetyFive
-	& \secondthirdSeparationqmFuelStandard
-	& \secondthirdSeparationqmFuelOneHundredFive
-	& \secondthirdSeparationqmFuelOneHundredTen
-	& -
-	\\
-	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
-	& \secondthirdSeparationLDmFuelNinety
-	& \secondthirdSeparationLDmFuelNinetyFive
-	& \secondthirdSeparationLDmFuelStandard
-	& \secondthirdSeparationLDmFuelOneHundredFive
-	& \secondthirdSeparationLDmFuelOneHundredTen
-	& -
-	\\
 	\textbf{2$^{nd}$ Stage Flight Time (s)}
 	& \secondFlightTimemFuelNinety
 	& \secondFlightTimemFuelNinetyFive
@@ -1127,6 +1324,14 @@ The third stage exergy efficiency increases as the mass of the SPARTAN is increa
 	& \secondFlightTimemFuelOneHundredFive
 	& \secondFlightTimemFuelOneHundredTen
 	&5.73
+	\\
+	\textbf{2$^{nd}$ Stage Distance Flown (km)}
+	& \SecondDistmFuelNinety
+	& \SecondDistmFuelNinetyFive
+	& \SecondDistmFuelStandard
+	& \SecondDistmFuelOneHundredFive
+	& \SecondDistmFuelOneHundredTen
+	&12.29
 	\\
 	\textbf{2$^{nd}$ Stage Return Fuel (kg)}
 	& \returnFuelmFuelNinety
@@ -1136,6 +1341,14 @@ The third stage exergy efficiency increases as the mass of the SPARTAN is increa
 	& \returnFuelmFuelOneHundredTen
 	& -
 	\\
+	\textbf{2$^{nd}$ Stage Return Distance (km)}
+	& \returnDistmFuelNinety
+	& \returnDistmFuelNinetyFive
+	& \returnDistmFuelStandard
+	& \returnDistmFuelOneHundredFive
+	& \returnDistmFuelOneHundredTen
+	& -
+	\\
 	\hline 
 	\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
 	& \textbf{\thirddExergyEffmFuelNinety}
@@ -1143,7 +1356,15 @@ The third stage exergy efficiency increases as the mass of the SPARTAN is increa
 	& \textbf{\thirddExergyEffmFuelStandard}
 	& \textbf{\thirddExergyEffmFuelOneHundredFive}
 	& \textbf{\thirddExergyEffmFuelOneHundredTen}
-	& \textbf{-0.026}
+	& \textbf{0.066}
+	\\
+	\textbf{3$^{rd}$ Stage Destroyed Exergy (GJ)}
+	& \textbf{\thirdExergyDestroyedmFuelNinety}
+	& \textbf{\thirdExergyDestroyedmFuelNinetyFive}
+	& \textbf{\thirdExergyDestroyedmFuelStandard}
+	& \textbf{\thirdExergyDestroyedmFuelOneHundredFive}
+	& \textbf{\thirdExergyDestroyedmFuelOneHundredTen}
+	& \textbf{-0.03}
 	\\
 	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 	& \thirdqOverFivemFuelNinety
@@ -1230,7 +1451,15 @@ Once again, as the amount of useful energy available to the SPARTAN increases, t
 		& \textbf{\firstExergyEffmThreeStandard}
 		& \textbf{\firstExergyEffmThreeOneHundredFive}
 		& \textbf{\firstExergyEffmThreeOneHundredTen}
-		& \textbf{-0.029}
+		& \textbf{-0.019}
+		\\
+		\textbf{1$^{st}$ Stage Destroyed Exergy (GJ)}
+		& \textbf{\firstExergyDestroyedmThreeNinety}
+		& \textbf{\firstExergyDestroyedmThreeNinetyFive}
+		& \textbf{\firstExergyDestroyedmThreeStandard}
+		& \textbf{\firstExergyDestroyedmThreeOneHundredFive}
+		& \textbf{\firstExergyDestroyedmThreeOneHundredTen}
+		& \textbf{0.042}
 		\\
 		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 		& \firstsecondSeparationAltmThreeNinety
@@ -1248,7 +1477,7 @@ Once again, as the amount of useful energy available to the SPARTAN increases, t
 		& \firstsecondSeparationvmThreeOneHundredTen
 		&-5.06
 		\\
-		\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+		\textbf{Separation $\gamma$, 1$\rightarrow$2 (deg)}
 		& \firstsecondSeparationgammamThreeNinety
 		& \firstsecondSeparationgammamThreeNinetyFive
 		& \firstsecondSeparationgammamThreeStandard
@@ -1263,7 +1492,15 @@ Once again, as the amount of useful energy available to the SPARTAN increases, t
 		& \textbf{\secondExergyEffmThreeStandard}
 		& \textbf{\secondExergyEffmThreeOneHundredFive}
 		& \textbf{\secondExergyEffmThreeOneHundredTen}
-		& \textbf{0.018}
+		& \textbf{0.029}
+		\\
+		\textbf{2$^{nd}$ Stage Destroyed Exergy (GJ)}
+		& \textbf{\secondExergyDestroyedmThreeNinety}
+		& \textbf{\secondExergyDestroyedmThreeNinetyFive}
+		& \textbf{\secondExergyDestroyedmThreeStandard}
+		& \textbf{\secondExergyDestroyedmThreeOneHundredFive}
+		& \textbf{\secondExergyDestroyedmThreeOneHundredTen}
+		& \textbf{-0.054}
 		\\
 		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 		& \secondthirdSeparationAltmThreeNinety
@@ -1289,22 +1526,6 @@ Once again, as the amount of useful energy available to the SPARTAN increases, t
 		& \secondthirdSeparationgammamThreeOneHundredTen
 		&0.09
 		\\
-		\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
-		& \secondthirdSeparationqmThreeNinety
-		& \secondthirdSeparationqmThreeNinetyFive
-		& \secondthirdSeparationqmThreeStandard
-		& \secondthirdSeparationqmThreeOneHundredFive
-		& \secondthirdSeparationqmThreeOneHundredTen
-		&-0.13
-		\\
-		\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
-		& \secondthirdSeparationLDmThreeNinety
-		& \secondthirdSeparationLDmThreeNinetyFive
-		& \secondthirdSeparationLDmThreeStandard
-		& \secondthirdSeparationLDmThreeOneHundredFive
-		& \secondthirdSeparationLDmThreeOneHundredTen
-		& -
-		\\
 		\textbf{2$^{nd}$ Stage Flight Time (s)}
 		& \secondFlightTimemThreeNinety
 		& \secondFlightTimemThreeNinetyFive
@@ -1312,6 +1533,14 @@ Once again, as the amount of useful energy available to the SPARTAN increases, t
 		& \secondFlightTimemThreeOneHundredFive
 		& \secondFlightTimemThreeOneHundredTen
 		& -
+		\\
+		\textbf{2$^{nd}$ Stage Distance Flown (km)}
+		& \SecondDistmThreeNinety
+		& \SecondDistmThreeNinetyFive
+		& \SecondDistmThreeStandard
+		& \SecondDistmThreeOneHundredFive
+		& \SecondDistmThreeOneHundredTen
+		&-3.92
 		\\
 		\textbf{2$^{nd}$ Stage Return Fuel (kg)}
 		& \returnFuelmThreeNinety
@@ -1321,6 +1550,14 @@ Once again, as the amount of useful energy available to the SPARTAN increases, t
 		& \returnFuelmThreeOneHundredTen
 		& -
 		\\
+		\textbf{2$^{nd}$ Stage Return Distance (km)}
+		& \returnDistmThreeNinety
+		& \returnDistmThreeNinetyFive
+		& \returnDistmThreeStandard
+		& \returnDistmThreeOneHundredFive
+		& \returnDistmThreeOneHundredTen
+		& -
+		\\
 		\hline 
 		\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
 		& \textbf{\thirddExergyEffmThreeNinety}
@@ -1328,7 +1565,15 @@ Once again, as the amount of useful energy available to the SPARTAN increases, t
 		& \textbf{\thirddExergyEffmThreeStandard}
 		& \textbf{\thirddExergyEffmThreeOneHundredFive}
 		& \textbf{\thirddExergyEffmThreeOneHundredTen}
-		& \textbf{0.041}
+		& \textbf{-0.071}
+		\\
+		\textbf{3$^{rd}$ Stage Destroyed Exergy (GJ)}
+		& \textbf{\thirdExergyDestroyedmThreeNinety}
+		& \textbf{\thirdExergyDestroyedmThreeNinetyFive}
+		& \textbf{\thirdExergyDestroyedmThreeStandard}
+		& \textbf{\thirdExergyDestroyedmThreeOneHundredFive}
+		& \textbf{\thirdExergyDestroyedmThreeOneHundredTen}
+		& \textbf{0.317}
 		\\
 		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 		& \thirdqOverFivemThreeNinety
@@ -1416,7 +1661,15 @@ In addition, the heat shield is once again a lower fraction of the overall mass,
 		& \textbf{\firstExergyEffISPThreeStandard}
 		& \textbf{\firstExergyEffISPThreeOneHundredFive}
 		& \textbf{\firstExergyEffISPThreeOneHundredTen}
-		& \textbf{0.003}
+		& \textbf{0.002}
+		\\
+		\textbf{1$^{st}$ Stage Destroyed Exergy (GJ)}
+		& \textbf{\firstExergyDestroyedISPThreeNinety}
+		& \textbf{\firstExergyDestroyedISPThreeNinetyFive}
+		& \textbf{\firstExergyDestroyedISPThreeStandard}
+		& \textbf{\firstExergyDestroyedISPThreeOneHundredFive}
+		& \textbf{\firstExergyDestroyedISPThreeOneHundredTen}
+		& \textbf{-0.004}
 		\\
 		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 		& \firstsecondSeparationAltISPThreeNinety
@@ -1434,7 +1687,7 @@ In addition, the heat shield is once again a lower fraction of the overall mass,
 		& \firstsecondSeparationvISPThreeOneHundredTen
 		& -
 		\\
-		\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+		\textbf{Separation $\gamma$, 1$\rightarrow$2 (deg)}
 		& \firstsecondSeparationgammaISPThreeNinety
 		& \firstsecondSeparationgammaISPThreeNinetyFive
 		& \firstsecondSeparationgammaISPThreeStandard
@@ -1449,6 +1702,14 @@ In addition, the heat shield is once again a lower fraction of the overall mass,
 		& \textbf{\secondExergyEffISPThreeStandard}
 		& \textbf{\secondExergyEffISPThreeOneHundredFive}
 		& \textbf{\secondExergyEffISPThreeOneHundredTen}
+		& -
+		\\
+		\textbf{2$^{nd}$ Stage Destroyed Exergy (GJ)}
+		& \textbf{\secondExergyDestroyedISPThreeNinety}
+		& \textbf{\secondExergyDestroyedISPThreeNinetyFive}
+		& \textbf{\secondExergyDestroyedISPThreeStandard}
+		& \textbf{\secondExergyDestroyedISPThreeOneHundredFive}
+		& \textbf{\secondExergyDestroyedISPThreeOneHundredTen}
 		& -
 		\\
 		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
@@ -1475,22 +1736,6 @@ In addition, the heat shield is once again a lower fraction of the overall mass,
 		& \secondthirdSeparationgammaISPThreeOneHundredTen
 		& -
 		\\
-		\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
-		& \secondthirdSeparationqISPThreeNinety
-		& \secondthirdSeparationqISPThreeNinetyFive
-		& \secondthirdSeparationqISPThreeStandard
-		& \secondthirdSeparationqISPThreeOneHundredFive
-		& \secondthirdSeparationqISPThreeOneHundredTen
-		& -
-		\\
-		\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
-		& \secondthirdSeparationLDISPThreeNinety
-		& \secondthirdSeparationLDISPThreeNinetyFive
-		& \secondthirdSeparationLDISPThreeStandard
-		& \secondthirdSeparationLDISPThreeOneHundredFive
-		& \secondthirdSeparationLDISPThreeOneHundredTen
-		& -
-		\\
 		\textbf{2$^{nd}$ Stage Flight Time (s)}
 		& \secondFlightTimeISPThreeNinety
 		& \secondFlightTimeISPThreeNinetyFive
@@ -1498,6 +1743,14 @@ In addition, the heat shield is once again a lower fraction of the overall mass,
 		& \secondFlightTimeISPThreeOneHundredFive
 		& \secondFlightTimeISPThreeOneHundredTen
 		& -
+		\\
+		\textbf{2$^{nd}$ Stage Distance Flown (km)}
+		& \SecondDistISPThreeNinety
+		& \SecondDistISPThreeNinetyFive
+		& \SecondDistISPThreeStandard
+		& \SecondDistISPThreeOneHundredFive
+		& \SecondDistISPThreeOneHundredTen
+		&1.75
 		\\
 		\textbf{2$^{nd}$ Stage Return Fuel (kg)}
 		& \returnFuelISPThreeNinety
@@ -1507,6 +1760,14 @@ In addition, the heat shield is once again a lower fraction of the overall mass,
 		& \returnFuelISPThreeOneHundredTen
 		& -
 		\\
+		\textbf{2$^{nd}$ Stage Return Distance (km)}
+		& \returnDistISPThreeNinety
+		& \returnDistISPThreeNinetyFive
+		& \returnDistISPThreeStandard
+		& \returnDistISPThreeOneHundredFive
+		& \returnDistISPThreeOneHundredTen
+		& -
+		\\
 		\hline 
 		\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
 		& \textbf{\thirddExergyEffISPThreeNinety}
@@ -1514,7 +1775,15 @@ In addition, the heat shield is once again a lower fraction of the overall mass,
 		& \textbf{\thirddExergyEffISPThreeStandard}
 		& \textbf{\thirddExergyEffISPThreeOneHundredFive}
 		& \textbf{\thirddExergyEffISPThreeOneHundredTen}
-		& \textbf{0.518}
+		& \textbf{0.479}
+		\\
+		\textbf{3$^{rd}$ Stage Destroyed Exergy (GJ)}
+		& \textbf{\thirdExergyDestroyedISPThreeNinety}
+		& \textbf{\thirdExergyDestroyedISPThreeNinetyFive}
+		& \textbf{\thirdExergyDestroyedISPThreeStandard}
+		& \textbf{\thirdExergyDestroyedISPThreeOneHundredFive}
+		& \textbf{\thirdExergyDestroyedISPThreeOneHundredTen}
+		& \textbf{-0.211}
 		\\
 		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 		& \thirdqOverFiveISPThreeNinety
