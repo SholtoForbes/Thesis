@@ -183,62 +183,68 @@ The GPOPS-2 solution to the Brachistochrone problem is shown in Figure \ref{fig:
 	\centering
 \begin{tabular}{l c } 
 	\hline \textbf{Trajectory Condition}
-	& Value
-	
+	&Value
+
 	\\
 	\hline \textbf{Payload to Orbit (kg)}
-	& \textbf{\PayloadToOrbitqconstrained}
+	& \textbf{\PayloadToOrbitqconstrainedNoReturn}
 	\\
 	\textbf{Total $\eta_{exergy}$ (\%)}
-	& \textbf{\totalExergyEffqconstrained}
+	& \textbf{\totalExergyEffqconstrainedNoReturn}
 	\\
 	\hline 
 	\textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
-	& \textbf{\firstExergyEffqconstrained}
+	& \textbf{\firstExergyEffqconstrainedNoReturn}
+	\\
+	\textbf{1$^{st}$ Stage Destroyed Exergy (GJ)}
+	& \textbf{\firstExergyDestroyedqconstrainedNoReturn}
 	\\
 	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
-	& \firstsecondSeparationAltqconstrained
+	& \firstsecondSeparationAltqconstrainedNoReturn
 	\\
 	\textbf{Separation v, 1$\rightarrow$2 (m/s)}
-	& \firstsecondSeparationvqconstrained
+	& \firstsecondSeparationvqconstrainedNoReturn
 	\\
-	\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
-	& \firstsecondSeparationgammaqconstrained
+	\textbf{Separation $\gamma$, 1$\rightarrow$2 (deg)}
+	& \firstsecondSeparationgammaqconstrainedNoReturn
 	\\
 	\hline 
 	\textbf{2$^{nd}$ Stage $\eta_{exergy}$ (\%)}
-	& \textbf{\secondExergyEffqconstrained}
+	& \textbf{\secondExergyEffqconstrainedNoReturn}
+	\\
+	\textbf{2$^{nd}$ Stage Destroyed Exergy (GJ)}
+	& \textbf{\secondExergyDestroyedqconstrainedNoReturn}
 	\\
 	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
-	& \secondthirdSeparationAltqconstrained
+	& \secondthirdSeparationAltqconstrainedNoReturn
 	\\
 	\textbf{Separation $v$, 2$\rightarrow$3 (m/s)}
-	& \secondthirdSeparationvqconstrained
+	& \secondthirdSeparationvqconstrainedNoReturn
 	\\
 	\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
-	& \secondthirdSeparationgammaqconstrained
-	\\
-	\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
-	& \secondthirdSeparationqqconstrained
-	\\
-	\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
-	& \secondthirdSeparationLDqconstrained
+	& \secondthirdSeparationgammaqconstrainedNoReturn
 	\\
 	\textbf{2$^{nd}$ Stage Flight Time (s)}
-	& \secondFlightTimeqconstrained
+	& \secondFlightTimeqconstrainedNoReturn
+	\\
+	\textbf{2$^{nd}$ Stage Distance Flown (km)}
+	& \SecondDistqconstrainedNoReturn
 	\\
 	\hline 
 	\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
-	& \textbf{\thirddExergyEffqconstrained}
+	& \textbf{\thirddExergyEffqconstrainedNoReturn}
+	\\
+	\textbf{3$^{rd}$ Stage Destroyed Exergy (GJ)}
+	& \textbf{\thirdExergyDestroyedqconstrainedNoReturn}
 	\\
 	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
-	& \thirdqOverFiveqconstrained
+	& \thirdqOverFiveqconstrainedNoReturn
 	\\
 	\textbf{3$^{rd}$ Stage max $\alpha$ (deg)}
-	& \thirdmaxAoAqconstrained
+	& \thirdmaxAoAqconstrainedNoReturn
 	\\
 	\textbf{3$^{rd}$ Stage Fuel Mass (kg)}
-	& \thirdmFuelqconstrained
+	& \thirdmFuelqconstrainedNoReturn
 	\\
 	\hline 
 \end{tabular} 

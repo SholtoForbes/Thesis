@@ -6434,6 +6434,32 @@
     \warn{\item Invalid format of field 'urldate'}
   \endentry
 
+  \entry{Betts2009}{book}{}
+    \name{author}{1}{}{%
+      {{hash=BJT}{%
+         family={Betts},
+         familyi={B\bibinitperiod},
+         given={John\bibnamedelima T.},
+         giveni={J\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Cambridge University Press}%
+    }
+    \strng{namehash}{BJT1}
+    \strng{fullhash}{BJT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{edition}{2nd}
+    \field{isbn}{0898716888 9780898716887}
+    \field{title}{{Practical Methods for Optimal Control and Estimation Using
+  Nonlinear Programming}}
+    \list{location}{1}{%
+      {New York, NY}%
+    }
+    \field{year}{2009}
+  \endentry
+
   \entry{hohmann}{report}{}
     \name{author}{1}{}{%
       {{hash=BB}{%
@@ -6630,6 +6656,45 @@
     \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Gilbert.pdf:pdf
     \endverb
     \field{year}{2015}
+  \endentry
+
+  \entry{Spittle2003}{report}{}
+    \name{author}{1}{}{%
+      {{hash=SP}{%
+         family={Spittle},
+         familyi={S\bibinitperiod},
+         given={Peter},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SP1}
+    \strng{fullhash}{SP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Options for access to Gas turbine technology%
+    }
+    \field{booktitle}{Physics Education}
+    \verb{doi}
+    \verb 10.1088/0031-9120/38/6/002
+    \endverb
+    \field{issn}{0031-9120}
+    \field{number}{6}
+    \field{pages}{504\bibrangedash 511}
+    \field{title}{{Gas Turbine Technology}}
+    \verb{url}
+    \verb http://iopscience.iop.org/0031-9120/38/6/002/pdf/0031-9120\_38\_6\_00
+    \verb 2.pdf
+    \endverb
+    \field{volume}{38}
+    \list{institution}{1}{%
+      {Concordia}%
+    }
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Spittle.pdf:pdf
+    \endverb
+    \field{type}{techreport}
+    \field{year}{2003}
   \endentry
 
   \entry{Eggers1957}{article}{}

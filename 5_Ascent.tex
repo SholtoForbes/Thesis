@@ -8,6 +8,9 @@
 
 \textcolor{red}{mentio that exergy is B, and change exergy to B where necessary. also check for all textcolo{red}}
 
+
+\textcolor{red}{i need to check my argument of third stage exegyr efficiency, and propulsive inefficiencies vs velocity at pull up with ingo}
+
 This chapter presents a maximum payload-to-orbit trajectory optimisation for the rocket-scramjet-rocket launch system incorporating the SPARTAN scramjet-powered accelerator. 
 This launch system is simulated as being launched from the Equatorial Launch Australia launch site in East Arnhem Land (Detailed in Section \ref{sec:mission}), and delivers a small satellite into sun synchronous orbit. LODESTAR is used to calculate the maximum payload-to-orbit trajectory solutions for this launch system.
 First, a trajectory solution is calculated in which the SPARTAN flies at constant dynamic pressure. This trajectory is calculated to serve as a baseline for comparisons, as previous studies have assumed that flying the SPARTAN at its maximum allowable dynamic pressure would produce the best overall system performance\cite{Preller2017b}. An optimal payload-to-orbit trajectory is then developed, and the trajectory shape compared and contrasted to the constant dynamic pressure trajectory.
@@ -69,9 +72,7 @@ In addition, the simulation of the aerodynamics and design of the launch system 
 		\textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
 		& \textbf{\firstExergyEffConstqNoReturn}
 		\\
-		\textbf{1$^{st}$ Stage Destroyed Exergy (GJ)}
-		& \textbf{\firstExergyDestroyedConstqNoReturn}
-		\\
+	
 		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 		& \firstsecondSeparationAltConstqNoReturn
 		\\
@@ -84,9 +85,6 @@ In addition, the simulation of the aerodynamics and design of the launch system 
 		\hline 
 		\textbf{2$^{nd}$ Stage $\eta_{exergy}$ (\%)}
 		& \textbf{\secondExergyEffConstqNoReturn}
-		\\
-		\textbf{2$^{nd}$ Stage Destroyed Exergy (GJ)}
-		& \textbf{\secondExergyDestroyedConstqNoReturn}
 		\\
 		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 		& \secondthirdSeparationAltConstqNoReturn
@@ -107,9 +105,7 @@ In addition, the simulation of the aerodynamics and design of the launch system 
 		\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
 		& \textbf{\thirddExergyEffConstqNoReturn}
 		\\
-		\textbf{3$^{rd}$ Stage Destroyed Exergy (GJ)}
-		& \textbf{\thirdExergyDestroyedConstqNoReturn}
-		\\
+	
 		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 		& \thirdqOverFiveConstqNoReturn
 		\\
@@ -137,7 +133,7 @@ The rocket-scramjet-rocket system launches vertically, flying a fixed vertical t
 After pitchover the angle of attack stays constant at 0$^\circ$ for 49.1s, as shown in Figure \ref{fig:FirstStageConstq}. At this point, the angle of attack is reduced, reaching a minimum of -4.89$^\circ$, before increasing back up to 0$^\circ$ for stage separation. 
 The SPARTAN is separated at a trajectory angle of \firstsecondSeparationgammaConstqNoReturn$^\circ$ at an altitude of \firstsecondSeparationAltConstqNoReturn km, a total flight time of 120.9s, with a total ground distance of \FirstStageDistStandardNoReturn km covered under power of the first stage rocket. 
  In order to reach optimal first stage-SPARTAN separation conditions, the first stage must launch with a lower-than-maximum fuel mass, to allow it to pitch in the correct manner. To achieve an optimal constant dynamic pressure trajectory, the first stage launches with a fuel mass of 17010kg, significantly lower than the full amount of allowable fuel mass, 17934kg. 
-The first stage rocket achieves an exergy efficiency of \firstExergyEffConstqNoReturn  XX\%$\eta$ when separating the SPARTAN onto a constant dynamic pressure trajectory. 
+The first stage rocket achieves an exergy efficiency of \firstExergyEffConstqNoReturn\%$\eta$ when separating the SPARTAN onto a constant dynamic pressure trajectory. 
 
 
 \begin{figure}[ht!]
@@ -151,7 +147,7 @@ The first stage rocket achieves an exergy efficiency of \firstExergyEffConstqNoR
 The constant dynamic pressure trajectory for the SPARTAN stage is shown in Figure \ref{fig:SecondStageConstq} with key results summarised in Table \ref{tab:constqsummary}. After the separation of the first stage rocket, the SPARTAN flies north west over the Arafura Sea, and crosses West Papua before releasing the third stage rocket. Due to the clear objective of a constant dynamic pressure trajectory, any deviations from the target dynamic pressure are readily apparent, allowing the efficacy of the optimiser to be verified. 
 The constant dynamic pressure simulation, shown in Figure \ref{fig:SecondStageConstq}, shows very close adherence to 50kPa dynamic pressure (maximum 0.2\% deviation). Third stage release occurs at \secondFlightTimeConstqNoReturn s at \secondthirdSeparationAltConstqNoReturn km altitude. 
 Over the trajectory, the Mach no. increases from 4.85 to 9.23, the velocity increases from \firstsecondSeparationvConstqNoReturn m/s to \secondthirdSeparationvConstqNoReturn m/s, and the flap deflection increases from $-3.2^\circ$ to $4.7^\circ$. At the beginning of the trajectory the equivalence ratio increases as the capture limitations are relaxed with increasing Mach number. This causes the net specific impulse to increase, to a maximum of 1481s, during the first 169.3s flight time.  After this initial increase, the net specific impulse ($I_{sp_{net}} = \frac{T-D}{\dot{m}_f g}$) decreases over the trajectory, as the efficiency of the scramjet engines decreases. 
-The exergy efficiency of the SPARTAN is \secondExergyEffConstqNoReturn  XX\%$\eta$ over its trajectory, 4.250 XX\%$\eta$ higher than the exergy efficiency of the first stage rocket. This increased exergy efficiency compared to the first stage rocket is due to the high specific impulse of the scramjet engines, utilising the available fuel more effectively. 
+The exergy efficiency of the SPARTAN is \secondExergyEffConstqNoReturn\%$\eta$ over its trajectory, significantly higher than the exergy efficiency of the first stage rocket. This increased exergy efficiency compared to the first stage rocket is due to the high specific impulse of the scramjet engines, utilising the available fuel more effectively. 
 \textcolor{red}{see ingos note, i should rewrite using exergy breakdown}
 
 
@@ -164,7 +160,7 @@ The exergy efficiency of the SPARTAN is \secondExergyEffConstqNoReturn  XX\%$\et
 
 Figure \ref{fig:ThirdStageConstq} shows the corresponding third stage atmospheric exit trajectory after release, evaluated as described in Chapter \ref{chapter:LODESTAR}. The third stage released from a constant dynamic pressure trajectory, shown in Figure \ref{fig:ThirdStageConstq}, is limited by the maximum thrust vector angle for the first 37.3s of flight. This places significant limitations on the maximum allowable angle of attack. This angle of attack limitation reduces the lift of the rocket, causing the flight path angle to stay close to horizontal for the first 20s of flight. This slow ascent leads to the rocket spending a large amount of time at low altitude, in a high drag environment, spending \thirdqOverFiveConstqNoReturn s at over 5kPa dynamic pressure. The angle of attack increases gradually to a maximum of 13.2$^\circ$ at 62.5s before decreasing until burnout at 130.4s. The dynamic pressure of the third stage rocket reduces to 10kPa at 171.4s, at which point the heat shield is discarded. The rocket coasts to a trajectory angle of 0$^\circ$, which is reached at a total flight time of 214.4s. The trajectory terminates at 90km, the lowest allowable altitude for circularisation. 
 When this altitude is reached, the trajectory is circularised and a Hohmann transfer manoeuvre is performed to reach sun synchronous orbit.
-The exergy efficiency of the third stage rocket over its trajectory is significantly lower than the preceding two stages, at only \thirddExergyEffConstqNoReturn  XX\%$\eta$. This low efficiency is a consequence of the third stage rocket spending large amounts of time within the atmosphere, at low trajectory angle. A significant portion of the available energy of the third stage must be used to overcome the high drag and aerodynamic moments present at low altitude, as well as being used to provide additional lift to the third stage rocket.  
+The exergy efficiency of the third stage rocket over its trajectory is significantly lower than the preceding two stages, at only \thirddExergyEffConstqNoReturn\%$\eta$. This low efficiency is a consequence of the third stage rocket spending large amounts of time within the atmosphere, at low trajectory angle. A significant portion of the available energy of the third stage must be used to overcome the high drag and aerodynamic moments present at low altitude, as well as being used to provide additional lift to the third stage rocket.  
 \textcolor{red}{see ingos note, rephrase and use exergy breakdown}
 
 
@@ -197,7 +193,7 @@ The first stage, shown in Figure \ref{fig:FirstStageStandardNoReturn}, follows a
 	\caption{The optimised maximum payload-to-orbit trajectory of the launch system under power of the first stage rocket (Case 2).}
 	\label{fig:FirstStageStandardNoReturn}
 \end{figure}
- However, the trajectory angle at the separation of the SPARTAN is \secondthirdSeparationgammaqStandardNoReturn$^\circ$, rather than the trajectory angle of \secondthirdSeparationgammaConstqNoReturn$^\circ$ required for the SPARTAN to fly a constant dynamic pressure trajectory. Additionally, the altitude at first stage-SPARTAN separation is raised to \firstsecondSeparationAltStandardNoReturn km, an increase of 0.34km compared to the separation point of a SPARTAN flying at constant 50kPa dynamic pressure. This higher release angle and altitude causes the altitude of the SPARTAN to initially increase, and consequently for its dynamic pressure to decrease. This trajectory angle at release is the consequence of a trade-off between the efficiency of the SPARTAN and the first stage efficiency. The efficiency of the first stage is increased to 8.171 XX\%$\eta$, an overall improvement of +0.161 XX\%$\eta$ (+2.0\%) compared to the first stage separating the SPARTAN at 50kPa conditions. 
+ However, the trajectory angle at the separation of the SPARTAN is \secondthirdSeparationgammaqStandardNoReturn$^\circ$, rather than the trajectory angle of \secondthirdSeparationgammaConstqNoReturn$^\circ$ required for the SPARTAN to fly a constant dynamic pressure trajectory. Additionally, the altitude at first stage-SPARTAN separation is raised to \firstsecondSeparationAltStandardNoReturn km, an increase of 0.34km compared to the separation point of a SPARTAN flying at constant 50kPa dynamic pressure. This higher release angle and altitude causes the altitude of the SPARTAN to initially increase, and consequently for its dynamic pressure to decrease. This trajectory angle at release is the consequence of a trade-off between the efficiency of the SPARTAN and the first stage efficiency. The efficiency of the first stage is increased to 8.171\%$\eta$, an overall improvement of +0.148\%$\eta$ (+2.4\%) compared to the first stage separating the SPARTAN at 50kPa conditions. 
  
  In addition to improving the exergy efficiency of the first stage, the higher release angle and altitude conditions also allow the first stage to launch with more fuel. In order to release the SPARTAN at a trajectory angle conducive to flying at 50kPa, the first stage must launch with a low fuel mass, to allow it to pitch in the correct manner. When the SPARTAN release angle and altitude are able to increase, the first stage is launches with a fuel mass of 17185kg, an increase of 1.0\% compared to the constant dynamic pressure trajectory in Case 1. During the maximum payload-to-orbit trajectory, the first stage rocket releases the SPARTAN at a velocity of 1484.3m/s, an increase of 2.7\% compared to the first stage releasing the SPARTAN onto a constant dynamic pressure trajectory. Neither first stage utilises the full amount of allowable fuel mass, 17934kg, indicating that using the full fuel mass would necessitate separation conditions which would reduce the efficiency of the SPARTAN unfavourably. 
 These results indicate that the fuel mass utilised by the first stage has a distinct optimal magnitude, and that including additional fuel over the optimal amount does not increase the performance of the system. This implies that the size of the first stage is closely linked to the optimal trajectory of the system, and that future first stage designs should be sized so that optimal pitching is achieved. 
@@ -218,9 +214,7 @@ These results indicate that the fuel mass utilised by the first stage has a dist
 	\textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
 	& \textbf{\firstExergyEffStandardNoReturn}
 	\\
-	\textbf{1$^{st}$ Stage Destroyed Exergy (GJ)}
-	& \textbf{\firstExergyDestroyedStandardNoReturn}
-	\\
+
 	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 	& \firstsecondSeparationAltStandardNoReturn
 	\\
@@ -234,9 +228,7 @@ These results indicate that the fuel mass utilised by the first stage has a dist
 	\textbf{2$^{nd}$ Stage $\eta_{exergy}$ (\%)}
 	& \textbf{\secondExergyEffStandardNoReturn}
 	\\
-	\textbf{2$^{nd}$ Stage Destroyed Exergy (GJ)}
-	& \textbf{\secondExergyDestroyedStandardNoReturn}
-	\\
+
 	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 	& \secondthirdSeparationAltStandardNoReturn
 	\\
@@ -256,9 +248,7 @@ These results indicate that the fuel mass utilised by the first stage has a dist
 	\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
 	& \textbf{\thirddExergyEffStandardNoReturn}
 	\\
-	\textbf{3$^{rd}$ Stage Destroyed Exergy (GJ)}
-	& \textbf{\thirdExergyDestroyedStandardNoReturn}
-	\\
+
 	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 	& \thirdqOverFiveStandardNoReturn
 	\\
@@ -290,10 +280,9 @@ These results indicate that the fuel mass utilised by the first stage has a dist
 
 
 After the initial deviation from the maximum dynamic pressure, the SPARTAN returns to 50kPa dynamic pressure for a time. 
-At 122.5 seconds, the altitude of the trajectory is again raised, and the dynamic pressure decreased, to a minimum of 35.6kPa. In this region the net specific impulse of the SPARTAN is relatively homogeneous with respect to changes in dynamic pressure. This homogeneous region can be observed in the specific impulse of the C-REST engines in Figure \ref{fig:IspStandard}, between inlet Mach number (M1) values of 6 and 7, and in Figure \ref{fig:NetIspStandardNoReturn}, in the flight Mach number 7 and 8 plots of net specific impulse. In these figures, the flight dynamic pressure varies inversely with altitude. The homogeneity between flight conditions means that the variation in engine performance with flight conditions is small and that flying at the maximum dynamic pressure in this region does not maximise the specific impulse from the C-REST engines. Figure \ref{fig:NetIspStandardNoReturn} shows that while the optimised trajectory differs significantly from a constant dynamic pressure trajectory, both achieve similar net specific impulses with no detectable variations \textcolor{red}{XX have a look at exergy breakdown to get more info here (see ingos notes)}, with the exception of the initial trajectory conditions at Mach 5, where the efficiency of the SPARTAN is traded for first stage rocket performance. 
+At 122.5 seconds, the altitude of the trajectory is again raised, and the dynamic pressure decreased, to a minimum of 35.6kPa. In this region the net specific impulse of the SPARTAN is relatively homogeneous with respect to changes in dynamic pressure. This homogeneous region can be observed in the specific impulse of the C-REST engines in Figure \ref{fig:IspStandard}, between inlet Mach number (M1) values of 6 and 7, and in Figure \ref{fig:NetIspStandardNoReturn}, in the flight Mach number 7 and 8 plots of net specific impulse. In these figures, the flight dynamic pressure varies inversely with altitude. The homogeneity between flight conditions means that the variation in engine performance with flight conditions is small and that flying at the maximum dynamic pressure in this region does not maximise the specific impulse from the C-REST engines. Figure \ref{fig:NetIspStandardNoReturn} shows that while the optimised trajectory differs significantly from a constant dynamic pressure trajectory, both achieve similar net specific impulses, with the exception of the initial trajectory conditions at Mach 5, where the efficiency of the SPARTAN is traded for first stage rocket performance. 
 Appendix \ref{sec:Appendix_qconst} details a maximum payload-to-orbit trajectory in which the SPARTAN is constrained to 50kPa between Mach 6-8, to prevent the altitude raising manoeuvre from taking place. This constrained trajectory allows for the magnitude of the performance gain from the altitude raising manoeuvre to be quantified. 
-The altitude raising manoeuvre
-increases the combined total efficiency launch system from \totalExergyEffqconstrained  XX\%$\eta$ to \totalExergyEffStandardNoReturn  XX\%$\eta$ (calculated including the energy lost due to stage separations). This is a relatively minor variation, and the payload-to-orbit benefits of this altitude raising manoeuvre are correspondingly small. 
+Overall, the altitude raising manoeuvre results in a slight increase in net specific impulse, compared to the trajectory constrained to maximum $q$, increasing the overall efficiency of the launch system from \totalExergyEffqconstrainedNoReturn \%$\eta$ to \totalExergyEffStandardNoReturn\%$\eta$ (calculated including the energy lost due to stage separations). This is a relatively minor variation, and the payload-to-orbit benefits of this altitude raising manoeuvre are correspondingly small. 
 The optimised trajectory exhibits a payload-to-orbit increase of 0.4kg compared to the trajectory constrained to 50kPa between Mach 6-8, a difference of only 0.2\%.
 However, it is important to note that, while its benefits are small, the altitude raising manoeuvre is consistently observed in all maximum payload-to-orbit optimised trajectories in which dynamic pressure is unconstrained. 
 Also, despite its small benefit to payload-to-orbit, this altitude raising manoeuvre is significant as it reduces the heating and structural loading on the SPARTAN, though it is beyond the scope of this study to quantify these benefits. 
@@ -326,8 +315,8 @@ At high Mach numbers, flight in a lower dynamic pressure environment results in 
 	\label{fig:ThirdStageStandardNoReturn}
 \end{figure}
 The scramjet stage pull-up assists the rocket in manoeuvring to exoatmospheric altitude by increasing the altitude and angle at separation, utilising the superior aerodynamics and manoeuvrability of the scramjet vehicle. The increase in release angle, to the optimal angle of \secondthirdSeparationgammaStandardNoReturn$^\circ$, significantly reduces the turning that is required by the rocket as evident from comparing Fig \ref{fig:ThirdStageConstq} and \ref{fig:ThirdStageStandardNoReturn}. 
-Overall, the altitude raising manoeuvres which the SPARTAN performs result in a decrease in the exergy efficiency of the SPARTAN to \secondExergyEffStandardNoReturn  XX\%$\eta$, a total decrease of 1.318 XX\%$\eta$ compared to the SPARTAN flying at a constant dynamic pressure. However, the optimised trajectory drastically increases the exergy efficiency of the third stage, to \thirddExergyEffStandardNoReturn  XX\%$\eta$, an overall increase of \textcolor{red}{XX6.72  XX\%$\eta$} compared to the third stage released from the SPARTAN flying a fixed dynamic pressure trajectory.  
-This leads to the total exergy efficiency of the launch system increasing from \totalExergyEffConstqNoReturn  XX\%$\eta$ to \totalExergyEffStandardNoReturn  XX\%$\eta$. 
+Overall, the altitude raising manoeuvres which the SPARTAN performs result in a decrease in the exergy efficiency of the SPARTAN to \secondExergyEffStandardNoReturn\%$\eta$, a total decrease of -0.508\%$\eta$ (-9.7\%) compared to the SPARTAN flying at a constant dynamic pressure. However, the optimised trajectory drastically increases the exergy efficiency of the third stage, to \thirddExergyEffStandardNoReturn\%$\eta$, an overall increase of +3.286\%$\eta$ (+21.3\%) compared to the third stage released from the SPARTAN flying a fixed dynamic pressure trajectory.  
+This leads to the total exergy efficiency of the launch system increasing from \totalExergyEffConstqNoReturn\%$\eta$ to \totalExergyEffStandardNoReturn\%$\eta$. 
 
 The trajectory of the third stage rocket after release from an optimised scramjet trajectory is shown in Figure \ref{fig:ThirdStageStandardNoReturn}. Release at a higher, more optimal angle, reduces the aerodynamic moment necessary to trim the vehicle. In turn, this reduced moment reduces the necessary thrust vector angle, so that the thrust vector limit is not reached. The third stage rocket is released at a high trajectory angle, and continuously gains altitude, avoiding the close-to-horizontal flight required by the fixed dynamic pressure release (Case 1).
 Due to the higher altitude and release angle, the third stage rocket is released at a lower dynamic pressure, \secondthirdSeparationqCdStandardNoReturn kPa compared to \secondthirdSeparationqConstqNoReturn kPa, and spends much less time flying in a high dynamic pressure environment, \thirdqOverFiveStandard s at over 5kPa dynamic pressure rather than \thirdqOverFiveConstqNoReturn s. 
@@ -341,7 +330,7 @@ to separate the scramjet stage results in a lower altitude scramjet-rocket trans
 stage vehicle designs.
 
 
-\section{Exergy Usage Analysis}
+\section{Energy Usage Analysis}\label{sec:exergy1}
 
 
 \begin{table}[ht]
@@ -351,86 +340,97 @@ stage vehicle designs.
 		&50kpa Constant $q$
 		&No $q$ Constraint
 		\\
-		\textbf{Total First Stage Exergy} 
+		\textbf{First Stage Fuel Exergy} 
 		&\textbf{\firstEnergyConstqNoReturn} GJ
 		&\textbf{\firstEnergyStandardNoReturn} GJ
 		\\
 		
 		\textcolor{blue}{KE + PE of Payload}
-		& \firstWpayloadConstqNoReturn \%
-		& \firstWpayloadStandardNoReturn \%
+		& \firstWpayloadConstqNoReturn \% (0.20GJ)
+		& \firstWpayloadStandardNoReturn \% (0.25GJ)
 		\\
 		\textcolor{red}{KE + PE of  2$^{nd}$ \& 3$^{rd}$ Stage}
-		& \firstWnextStageConstqNoReturn \% & \firstWnextStageStandardNoReturn \%
+		& \firstWnextStageConstqNoReturn \% (12.32GJ) & \firstWnextStageStandardNoReturn \% (12.87GJ)
 		\\
 		
 		\textcolor{red}{Overcoming Drag} 
-		& \WDoneConstqNoReturn \% & \WDoneStandardNoReturn \%
+		& \WDoneConstqNoReturn \% (3.32GJ) & \WDoneStandardNoReturn \% (3.44GJ)
 		\\
 		\textcolor{red}{KE + PE of 1$^{st}$ Stage Structural Mass} 
-		& \WoneConstqNoReturn \% & \WoneStandardNoReturn \%
-		\\
-		\textcolor{red}{Propulsion Inefficiency} 
-		& \PlossoneCombinedConstqNoReturn \% & \PlossoneCombinedStandardNoReturn \%
+		& \WoneConstqNoReturn \% (2.08GJ) & \WoneStandardNoReturn \% (2.19GJ)
 		\\ 
-		\textbf{Total SPARTAN Exergy} 
+		\textcolor{red}{Propulsion Inefficiency} 
+		& \PlossoneCombinedConstqNoReturn (185.85GJ) \% & \PlossoneCombinedStandardNoReturn \% (189.78GJ)
+		\\ 
+		\textbf{SPARTAN Fuel Exergy} 
 		& \textbf{\secondEnergyConstqNoReturn} GJ & \textbf{\secondEnergyStandardNoReturn} GJ
 		\\
 		\textcolor{blue}{KE + PE of Payload}
-		& \secondWpayloadConstqNoReturn \% & \secondWpayloadStandardNoReturn \%
+		& \secondWpayloadConstqNoReturn \% (0.47 GJ) & \secondWpayloadStandardNoReturn \% (0.51 GJ) 
 		\\
 		\textcolor{red}{KE + PE of 3$^{rd}$ Stage}
-		& \secondWnextStageConstqNoReturn \% & \secondWnextStageStandardNoReturn \%
+		& \secondWnextStageConstqNoReturn \% (9.32 GJ) & \secondWnextStageStandardNoReturn \% (8.33 GJ)
 		\\
 		\textcolor{red}{Overcoming Drag}
-		& \WDsecondConstqNoReturn \% & \WDsecondStandardNoReturn \%
+		& \WDsecondConstqNoReturn \% (34.32 GJ) & \WDsecondStandardNoReturn \% (36.76 GJ)
 		\\
 		\textcolor{red}{KE + PE of SPARTAN Structural Mass}  
-		& \WsecondConstqNoReturn \% & \WsecondStandardNoReturn \%
+		& \WsecondConstqNoReturn \% (14.71 GJ) & \WsecondStandardNoReturn \% (13.28 GJ)
 		\\
 		\textcolor{red}{Propulsion Inefficiency}  
-		& \PlosssecondCombinedConstqNoReturn \% & \PlosssecondCombinedStandardNoReturn \%
+		& \PlosssecondCombinedConstqNoReturn \% (128.54 GJ) & \PlosssecondCombinedStandardNoReturn \% (128.51 GJ)
 		\\
 		
-		\textbf{Total Third Stage Exergy}  
-		& \textbf{\thirdEnergyConstqNoReturn} GJ & \textbf{\thirdEnergyStandardNoReturn} GJ
+		\textbf{Third Stage Fuel Exergy}  
+		& \textbf{\thirdEnergyConstqNoReturn}  GJ & \textbf{\thirdEnergyStandardNoReturn}  GJ
 		\\
 		\textcolor{blue}{KE + PE of Payload}  
-		&\thirddExergyEffConstqNoReturn \% &\thirddExergyEffStandardNoReturn \%
+		&\thirddExergyEffConstqNoReturn \% (5.35 GJ) &\thirddExergyEffStandardNoReturn \% (6.42 GJ)
 		\\
 		\textcolor{red}{Overcoming Drag}  
-		& \WDthreeConstqNoReturn \% & \WDthreeStandardNoReturn \%
+		& \WDthreeConstqNoReturn \% (1.82 GJ) & \WDthreeStandardNoReturn \% (0.20 GJ)
 		\\
 		\textcolor{red}{KE + PE  of 3$^{rd}$ Stage Structural Mass}  
-		& \WthreeConstqNoReturn \% & \WthreeStandardNoReturn \%
+		& \WthreeConstqNoReturn \% (9.49 GJ) & \WthreeStandardNoReturn \% (9.56 GJ)
 		\\
 		
 		\textcolor{red}{KE + PE of Heat Shield}  
 		
-		& \WHSthreeConstqNoReturn \% & \WHSthreeStandardNoReturn \%
+		& \WHSthreeConstqNoReturn \% (2.52 GJ) & \WHSthreeStandardNoReturn \% (1.02 GJ)
 		\\
 		
 		\textcolor{red}{Propulsion Inefficiency}  
-		& \PlossthreeCombinedConstqNoReturn \% & \PlossthreeCombinedStandardNoReturn \%
+		& \PlossthreeCombinedConstqNoReturn \% (15.48 GJ) & \PlossthreeCombinedStandardNoReturn \% (17.09 GJ)
 		\\
 		\hline 
 	\end{tabular} 
-	\caption{An exergy usage breakdown of the ascent trajectories, both with, and without, the SPARTAN constrained to constant dynamic pressure (Cases 1 \& 2). Blue indicates a 'productive' exergy usage, whereas red indicates exergy 'wastage'.}
+	\caption{An energy usage breakdown of the ascent trajectories, both with, and without, the SPARTAN constrained to constant dynamic pressure (Cases 1 \& 2). Blue indicates a 'productive' energy usage, whereas red indicates energy 'wastage'.}
 	\label{tab:effStandardNoReturn}
 \end{table}
 
 
 
-An exergy analysis is conducted on the maximum payload-to-orbit launch trajectories, both with, and without the SPARTAN constrained to constant dynamic pressure flight (Cases 1 \& 2). This is performed in order to understand the primary sources of exergy loss for each stage, and to compare the trajectories optimised with, and without the SPARTAN constrained to constant dynamic pressure. An exergy breakdown of each of each stage is compared in Table \ref{tab:effStandardNoReturn}. The exergy used to accelerate the payload is shown, along with the exergy wasted imparting energy to the successive stages; overcoming drag; imparting energy to the structural mass of each stage, which is separated; and lost due to propulsion inefficiency. 
+An energy usage analysis is conducted on the maximum payload-to-orbit launch trajectories, both with, and without the SPARTAN constrained to constant dynamic pressure flight (Cases 1 \& 2). This is performed in order to understand the primary sources of energy loss for each stage, and to compare the trajectories optimised with, and without the SPARTAN constrained to constant dynamic pressure. An energy usage breakdown of each of each stage is compared in Table \ref{tab:effStandardNoReturn}. The energy used to accelerate the payload is shown, along with the energy imparted to the successive stages; the energy used overcoming drag; the energy used imparting energy to the structural mass of each stage, which is separated; and the energy lost due to propulsion inefficiency. 
 
-From this exergy usage breakdown it can be observed that the exergy utilised by the first stage and the SPARTAN to impart energy to the payload is relatively low, compared to the exergy of the third stage utilised for this purpose, which is significantly higher. This is due to the larger mass fraction of the payload during the acceleration of the third stage, particularly during the Hohmann transfer, where large velocities are imparted. 
-The SPARTAN uses more exergy accelerating the third stage when flying a maximum-payload-to-orbit trajectory with no dynamic pressure constraint, compared to a trajectory constrained to 50kPa, and at the same time uses imparts less exergy to the third stage. This is due to the trade-off between the payload and fuel of the third stage, which decreases the third stage fuel mass as the payload increases. 
-The first stage rocket loses a significant portion of its exergy to propulsion inefficiency, at \PlossoneCombinedStandardNoReturn \% when flying a trajectory without a dynamic pressure constraint. This is due to the low propulsive efficiency of rockets at low speeds, which results from a large amount of kinetic energy being imparted onto the accelerated propellant, for very little acceleration of the launch system. 
-This is higher than both the SPARTAN's  and the third stage's losses to propulsion inefficiency, at \PlosssecondCombinedStandardNoReturn \% and \PlossthreeCombinedStandardNoReturn \% respectively.
-The SPARTAN has significantly lower propulsion losses due to its scramjet engines utilising atmospheric oxygen as oxidiser, resulting in a high propulsive efficiency. However, the SPARTAN loses \WDsecondStandardNoReturn \% of its exergy to overcoming drag. This high drag loss is due to the SPARTAN accelerating at high speeds within the atmosphere, and serves to partially offset the reduced exergy loss due to high propulsive efficiency. 
-The propulsive energy losses of the third stage are also low, at \PlossthreeCombinedStandardNoReturn \%. This is due to the larger velocity of the third stage, compared to the first stage, which increases the propulsive efficiency of the rocket. 
-The exergy lost from the third stage overcoming drag is dependant on the amount of time which the rocket spends in the atmosphere, and comprises \WDthreeConstqNoReturn \% when released at 50kPa, and \WDthreeStandardNoReturn \% when released after a pull-up of the SPARTAN.
-The exergy lost accelerating the heat shield is also significantly larger when released from a constant dynamic pressure trajectory, at \WHSthreeConstqNoReturn \%, compared to only \WHSthreeStandardNoReturn \% when the third stage is released after a pull-up of the SPARTAN. This is due to the third stage spending considerably more time in a high dynamic pressure environment when released from a constant $q$ trajectory, requiring the heat shield for longer. 
+From this energy usage breakdown it can be observed that the energy utilised by the first stage and the SPARTAN to impart energy to the payload is relatively low, compared to the energy of the third stage utilised for this purpose, which is significantly higher. This is due to the larger mass fraction of the payload during the acceleration of the third stage, particularly during the Hohmann transfer, where large velocities are imparted. 
+The SPARTAN uses more energy accelerating the third stage when flying a maximum-payload-to-orbit trajectory with no dynamic pressure constraint, compared to a trajectory constrained to 50kPa, and at the same time uses imparts less energy to the third stage. This is due to the trade-off between the payload and fuel of the third stage, which decreases the third stage fuel mass as the payload increases. 
+The first stage rocket loses a significant portion of its energy to propulsion inefficiency, at \PlossoneCombinedStandardNoReturn \% when flying a trajectory without a dynamic pressure constraint.  This is due to the low propulsive efficiency of rockets at low speeds, illustrated by the equation for the propulsive efficiency of a rocket\cite{RPE}:
+\begin{equation}\label{eq:rocketeff}
+\eta_P = \frac{2\,v_0/v_g}{1\,+\,(v_0/v_g)^2}, 
+\end{equation}
+where $v_g$ is the exhaust velocity, and $v_0$ is the velocity of the vehicle.
+Low rocket velocities result in a large difference between the flight speed of the vehicle, and the exhaust velocity of the rocket engine, in turn resulting in low propulsion efficiencies. 
+The propulsion inefficiency losses of the first stage are significantly higher than losses to propulsion inefficiency of both the SPARTAN and the third stage, at \PlosssecondCombinedStandardNoReturn \% and \PlossthreeCombinedStandardNoReturn \% respectively.
+The SPARTAN has significantly lower propulsion losses due to its scramjet engines utilising atmospheric oxygen as an oxidiser, resulting in a high propulsive efficiency, illustrated by the equation for the propulsive efficiency of an airbreathing engine\cite{Spittle2003}:
+\begin{equation}
+ \eta_P = \frac{2}{1\,+\,v_g/v_0}. 
+\end{equation}
+ However, the SPARTAN loses \WDsecondStandardNoReturn \% of its energy to overcoming drag. This high drag loss is due to the SPARTAN accelerating at high speeds within the atmosphere, at high dynamic pressures. These drag losses serve to partially offset the reduced energy loss due to the high propulsive efficiency of the SPARTAN. 
+The drag losses of the SPARTAN flying a trajectory with no $q$ constraint are higher than those of the SPARTAN flying a constant dynamic pressure trajectory, at \WDsecondStandardNoReturn\%, compared to \WDsecondConstqNoReturn\%. This is due to the additional manoeuvring of the SPARTAN during the pull-up before third stage release when $q$ is not constrained, which requires high angles of attack, and increases drag significantly. 
+
+The propulsive energy losses of the third stage are low, at \PlossthreeCombinedStandardNoReturn \%. This is due to the larger velocity of the third stage, compared to the first stage, which increases the propulsive efficiency of the rocket. 
+The energy lost from the third stage overcoming drag is dependant on the amount of time which the rocket spends in the atmosphere, and comprises \WDthreeConstqNoReturn \% when released at 50kPa, and \WDthreeStandardNoReturn \% when released after a pull-up of the SPARTAN.
+The energy lost accelerating the heat shield is also significantly larger when released from a constant dynamic pressure trajectory, at \WHSthreeConstqNoReturn \%, compared to only \WHSthreeStandardNoReturn \% when the third stage is released after a pull-up of the SPARTAN. This is due to the third stage spending considerably more time in a high dynamic pressure environment when released from a constant $q$ trajectory, requiring the heat shield for longer, so that more kinetic and potential energy is imparted upon the heat shield during acceleration. The energy losses due to propulsion inefficiency of the third stage are higher for the trajectory with no $q$ constraint, compared to the trajectory constrained to constant $q$. This is due to the third stage being released at lower velocity, from the end of a SPARTAN pull-up manoeuvre, resulting in a lower efficiency, illustrated in Equation \ref{eq:rocketeff}. This indicates that there is a trade-off between the propulsion inefficiencies of the third stage, and the drag and heat shield energy losses, which drives the pull-up manoeuvre of the SPARTAN.  
 
 \section{Sensitivity Analysis}\label{sec:sensitivityNoReturn}
 
@@ -494,14 +494,7 @@ All optimised trajectories within this section use the full amount of fuel avail
 	& \textbf{\firstExergyEffqSixtyNoReturn}
 	& \textbf{-0.002}
 	\\
-	\textbf{1$^{st}$ Stage Destroyed Exergy (GJ)}
-	& \textbf{\firstExergyDestroyedqFortyNoReturn}
-	& \textbf{\firstExergyDestroyedqFortyFiveNoReturn}
-	& \textbf{\firstExergyDestroyedqStandardNoReturn}
-	& \textbf{\firstExergyDestroyedqFiftyFiveNoReturn}
-	& \textbf{\firstExergyDestroyedqSixtyNoReturn}
-	& -
-	\\
+
 	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 	& \firstsecondSeparationAltqFortyNoReturn
 	& \firstsecondSeparationAltqFortyFiveNoReturn
@@ -535,14 +528,7 @@ All optimised trajectories within this section use the full amount of fuel avail
 	& \textbf{\secondExergyEffqSixtyNoReturn}
 	& \textbf{0.008}
 	\\
-	\textbf{2$^{nd}$ Stage Destroyed Exergy (GJ)}
-	& \textbf{\secondExergyDestroyedqFortyNoReturn}
-	& \textbf{\secondExergyDestroyedqFortyFiveNoReturn}
-	& \textbf{\secondExergyDestroyedqStandardNoReturn}
-	& \textbf{\secondExergyDestroyedqFiftyFiveNoReturn}
-	& \textbf{\secondExergyDestroyedqSixtyNoReturn}
-	& \textbf{-0.015}
-	\\
+
 	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 	& \secondthirdSeparationAltqFortyNoReturn
 	& \secondthirdSeparationAltqFortyFiveNoReturn
@@ -592,14 +578,7 @@ All optimised trajectories within this section use the full amount of fuel avail
 	& \textbf{\thirddExergyEffqSixtyNoReturn}
 	& \textbf{0.037}
 	\\
-	\textbf{3$^{rd}$ Stage Destroyed Exergy (GJ)}
-	& \textbf{\thirdExergyDestroyedqFortyNoReturn}
-	& \textbf{\thirdExergyDestroyedqFortyFiveNoReturn}
-	& \textbf{\thirdExergyDestroyedqStandardNoReturn}
-	& \textbf{\thirdExergyDestroyedqFiftyFiveNoReturn}
-	& \textbf{\thirdExergyDestroyedqSixtyNoReturn}
-	& \textbf{-0.016}
-	\\
+
 	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 	& \thirdqOverFiveqFortyNoReturn
 	& \thirdqOverFiveqFortyFiveNoReturn
@@ -692,14 +671,7 @@ These increased drag losses result in a less efficient first stage trajectory, w
 		& \textbf{\firstExergyEffCdOneHundredTenNoReturn}
 		& \textbf{-0.034}
 		\\
-		\textbf{1$^{st}$ Stage Destroyed Exergy (GJ)}
-		& \textbf{\firstExergyDestroyedCdNinetyNoReturn}
-		& \textbf{\firstExergyDestroyedCdNinetyFiveNoReturn}
-		& \textbf{\firstExergyDestroyedCdStandardNoReturn}
-		& \textbf{\firstExergyDestroyedCdOneHundredFiveNoReturn}
-		& \textbf{\firstExergyDestroyedCdOneHundredTenNoReturn}
-		& -
-		\\
+	
 		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 		& \firstsecondSeparationAltCdNinetyNoReturn
 		& \firstsecondSeparationAltCdNinetyFiveNoReturn
@@ -733,14 +705,7 @@ These increased drag losses result in a less efficient first stage trajectory, w
 		& \textbf{\secondExergyEffCdOneHundredTenNoReturn}
 		& \textbf{-0.037}
 		\\
-		\textbf{2$^{nd}$ Stage Destroyed Exergy (GJ)}
-		& \textbf{\secondExergyDestroyedCdNinetyNoReturn}
-		& \textbf{\secondExergyDestroyedCdNinetyFiveNoReturn}
-		& \textbf{\secondExergyDestroyedCdStandardNoReturn}
-		& \textbf{\secondExergyDestroyedCdOneHundredFiveNoReturn}
-		& \textbf{\secondExergyDestroyedCdOneHundredTenNoReturn}
-		& \textbf{0.069}
-		\\
+	
 		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 		& \secondthirdSeparationAltCdNinetyNoReturn
 		& \secondthirdSeparationAltCdNinetyFiveNoReturn
@@ -790,14 +755,7 @@ These increased drag losses result in a less efficient first stage trajectory, w
 		& \textbf{\thirddExergyEffCdOneHundredTenNoReturn}
 		& \textbf{-0.181}
 		\\
-		\textbf{3$^{rd}$ Stage Destroyed Exergy (GJ)}
-		& \textbf{\thirdExergyDestroyedCdNinetyNoReturn}
-		& \textbf{\thirdExergyDestroyedCdNinetyFiveNoReturn}
-		& \textbf{\thirdExergyDestroyedCdStandardNoReturn}
-		& \textbf{\thirdExergyDestroyedCdOneHundredFiveNoReturn}
-		& \textbf{\thirdExergyDestroyedCdOneHundredTenNoReturn}
-		& \textbf{0.08}
-		\\
+
 		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 		& \thirdqOverFiveCdNinetyNoReturn
 		& \thirdqOverFiveCdNinetyFiveNoReturn
@@ -836,7 +794,7 @@ The SPARTAN trajectory results show that when drag is varied, the optimal trajec
 As the drag of the SPARTAN increases, the exergy efficiency of the third stage shows a corresponding decrease, from \thirddExergyEffCdNinetyNoReturn\%$\eta$ at 90\% drag, to \thirddExergyEffCdOneHundredTenNoReturn\%$\eta$ at 110\% drag.
 This is primarily due to the lower velocity of SPARTAN-third stage separation at higher drag, which results in a decreased third stage propulsive efficiency. This decreased propulsive efficiency in turn increases the losses due to propulsive inefficiency, from \PlossthreeCombinedCdOneHundredTenNoReturn\% at $C_D$=110\%, to \PlossthreeCombinedCdNinetyNoReturn\% at $C_D$=90\% .
 
-\textcolor{red}{XX done after exergy improvements, but check last line}
+\textcolor{red}{XX done after exergy improvements, but check last line, im talking about third stage every time, maybe condense?, talk about trade-offs between heat shield etc}
 
 \subsection{Case 5: C-REST Engine Specific Impulse Sensitivity}\label{sec:ispsensitivitynoflyback}
 
@@ -884,14 +842,7 @@ This is primarily due to the lower velocity of SPARTAN-third stage separation at
 		& \textbf{\firstExergyEffIspOneHundredTenNoReturn}
 		& -
 		\\
-		\textbf{1$^{st}$ Stage Destroyed Exergy (GJ)}
-		& \textbf{\firstExergyDestroyedIspNinetyNoReturn}
-		& \textbf{\firstExergyDestroyedIspNinetyFiveNoReturn}
-		& \textbf{\firstExergyDestroyedIspStandardNoReturn}
-		& \textbf{\firstExergyDestroyedIspOneHundredFiveNoReturn}
-		& \textbf{\firstExergyDestroyedIspOneHundredTenNoReturn}
-		& -
-		\\
+
 		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 		& \firstsecondSeparationAltIspNinetyNoReturn
 		& \firstsecondSeparationAltIspNinetyFiveNoReturn
@@ -925,14 +876,7 @@ This is primarily due to the lower velocity of SPARTAN-third stage separation at
 		& \textbf{\secondExergyEffIspOneHundredTenNoReturn}
 		& \textbf{0.065}
 		\\
-		\textbf{2$^{nd}$ Stage Destroyed Exergy (GJ)}
-		& \textbf{\secondExergyDestroyedIspNinetyNoReturn}
-		& \textbf{\secondExergyDestroyedIspNinetyFiveNoReturn}
-		& \textbf{\secondExergyDestroyedIspStandardNoReturn}
-		& \textbf{\secondExergyDestroyedIspOneHundredFiveNoReturn}
-		& \textbf{\secondExergyDestroyedIspOneHundredTenNoReturn}
-		& \textbf{-0.121}
-		\\
+	
 		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 		& \secondthirdSeparationAltIspNinetyNoReturn
 		& \secondthirdSeparationAltIspNinetyFiveNoReturn
@@ -982,14 +926,7 @@ This is primarily due to the lower velocity of SPARTAN-third stage separation at
 		& \textbf{\thirddExergyEffIspOneHundredTenNoReturn}
 		& \textbf{0.212}
 		\\
-		\textbf{3$^{rd}$ Stage Destroyed Exergy (GJ)}
-		& \textbf{\thirdExergyDestroyedIspNinetyNoReturn}
-		& \textbf{\thirdExergyDestroyedIspNinetyFiveNoReturn}
-		& \textbf{\thirdExergyDestroyedIspStandardNoReturn}
-		& \textbf{\thirdExergyDestroyedIspOneHundredFiveNoReturn}
-		& \textbf{\thirdExergyDestroyedIspOneHundredTenNoReturn}
-		& \textbf{-0.094}
-		\\
+
 		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 		& \thirdqOverFiveIspNinetyNoReturn
 		& \thirdqOverFiveIspNinetyFiveNoReturn
@@ -1028,9 +965,9 @@ The lack of a clear trend in the first stage release point indicates that the ef
 Varying the specific impulse of the C-REST engines has a considerable effect on the exergy efficiency of the SPARTAN, causing the efficiency to increase by +0.688\%$\eta$ (+14.6\%) at 110\%$I_{SP}$ and decrease by -0.621\%$\eta$ (-13.2\%) at 90\% $I_{SP}$. 
 Increasing the specific impulse of the C-REST engines allows the SPARTAN to accelerate more over the flight time, increasing the velocity at SPARTAN-third stage separation significantly. The propulsive inefficiency losses decrease from \PlosssecondCombinedIspNinetyNoReturn\% at 90\% $I_{SP}$, to \PlosssecondCombinedIspOneHundredTenNoReturn \% at 110\% $I_{SP}$. However, the drag losses, and the energy needed to accelerate the structural mass of the third stage, increase from \WDsecondIspNinetyNoReturn\% and \WsecondIspNinetyNoReturn\% at 90\% $I_{SP}$, to \WDsecondIspOneHundredTenNoReturn\% and \WsecondIspOneHundredTenNoReturn\% of the SPARTAN's total exergy at 110\% $I_{SP}$, partially offsetting the increased performance. These increased losses are due to the additional velocity at the end of the trajectory causing increased drag, and requiring more kinetic energy to be imparted upon the structural mass of the SPARTAN. 
  Varying the specific impulse does not change the optimal SPARTAN-third stage separation altitude significantly, however the increased velocity allows this altitude to be reached by the SPARTAN with less trajectory angle variation during the pull-up. Increasing the specific impulse allows the third stage to successfully reach orbit from a lower trajectory angle release point, as low as \secondthirdSeparationgammaIspOneHundredTenNoReturn$^\circ$ (-5.6\%) at 110\% $I_{SP}$, while decreasing the specific impulse requires a higher release point, up to \secondthirdSeparationgammaIspNinetyNoReturn$^\circ$ (+10.2\%) at 90\% $I_{SP}$.
-The exergy efficiency of the third stage is increased as the specific impulse of the SPARTAN increases, varying by +2.339\%$\eta$ at 110\% $I_{SP}$ to -1.976\%$\eta$ at 90\% $I_{SP}$. This is due to the significantly decreased propulsive losses of the third stage when released at a higher velocity, \PlossthreeCombinedIspOneHundredTenNoReturn\% (16.10GJ) at 110\%$I_{SP}$, compared to \PlossthreeCombinedIspNinetyNoReturn\% (17.96GJ) at 90\%$I_{SP}$. 
+The exergy efficiency of the third stage is increased as the specific impulse of the SPARTAN increases, varying by +2.339\%$\eta$ at 110\% $I_{SP}$ to -1.976\%$\eta$ at 90\% $I_{SP}$. This is due to the significantly decreased propulsive losses of the third stage when released at a higher velocity, \PlossthreeCombinedIspOneHundredTenNoReturn\% (16.10 GJ) at 110\%$I_{SP}$, compared to \PlossthreeCombinedIspNinetyNoReturn\% (17.96 GJ) at 90\%$I_{SP}$. 
 
-\textcolor{red}{XX done after exergy improvements}
+\textcolor{red}{XX done after exergy improvements, cite equation for rocket propulsive efficiency}
 
 \subsection{Case 6: SPARTAN Mass Sensitivity}\label{sec:SpartanMassnoreturn}
 
@@ -1080,14 +1017,7 @@ The exergy efficiency of the third stage is increased as the specific impulse of
 		& \textbf{\firstExergyEffmSPARTANOneHundredFiveNoReturn}
 		& \textbf{-0.043}
 		\\
-		\textbf{1$^{st}$ Stage Destroyed Exergy (GJ)}
-		& \textbf{\firstExergyDestroyedmSPARTANNinetyFiveNoReturn}
-		& \textbf{\firstExergyDestroyedmSPARTANNinetySevenFiveNoReturn}
-		& \textbf{\firstExergyDestroyedmSPARTANStandardNoReturn}
-		& \textbf{\firstExergyDestroyedmSPARTANOneHundredTwoFiveNoReturn}
-		& \textbf{\firstExergyDestroyedmSPARTANOneHundredFiveNoReturn}
-		& \textbf{-0.488}
-		\\
+	
 		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 		& \firstsecondSeparationAltmSPARTANNinetyFiveNoReturn
 		& \firstsecondSeparationAltmSPARTANNinetySevenFiveNoReturn
@@ -1121,14 +1051,7 @@ The exergy efficiency of the third stage is increased as the specific impulse of
 		& \textbf{\secondExergyEffmSPARTANOneHundredFiveNoReturn}
 		& \textbf{-0.01}
 		\\
-		\textbf{2$^{nd}$ Stage Destroyed Exergy (GJ)}
-		& \textbf{\secondExergyDestroyedmSPARTANNinetyFiveNoReturn}
-		& \textbf{\secondExergyDestroyedmSPARTANNinetySevenFiveNoReturn}
-		& \textbf{\secondExergyDestroyedmSPARTANStandardNoReturn}
-		& \textbf{\secondExergyDestroyedmSPARTANOneHundredTwoFiveNoReturn}
-		& \textbf{\secondExergyDestroyedmSPARTANOneHundredFiveNoReturn}
-		& \textbf{0.019}
-		\\
+	
 		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 		& \secondthirdSeparationAltmSPARTANNinetyFiveNoReturn
 		& \secondthirdSeparationAltmSPARTANNinetySevenFiveNoReturn
@@ -1178,14 +1101,7 @@ The exergy efficiency of the third stage is increased as the specific impulse of
 		& \textbf{\thirddExergyEffmSPARTANOneHundredFiveNoReturn}
 		& \textbf{-0.147}
 		\\
-		\textbf{3$^{rd}$ Stage Destroyed Exergy (GJ)}
-		& \textbf{\thirdExergyDestroyedmSPARTANNinetyFiveNoReturn}
-		& \textbf{\thirdExergyDestroyedmSPARTANNinetySevenFiveNoReturn}
-		& \textbf{\thirdExergyDestroyedmSPARTANStandardNoReturn}
-		& \textbf{\thirdExergyDestroyedmSPARTANOneHundredTwoFiveNoReturn}
-		& \textbf{\thirdExergyDestroyedmSPARTANOneHundredFiveNoReturn}
-		& \textbf{0.065}
-		\\
+	
 		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 		& \thirdqOverFivemSPARTANNinetyFiveNoReturn
 		& \thirdqOverFivemSPARTANNinetySevenFiveNoReturn
@@ -1225,7 +1141,7 @@ Additionally, the altitude and trajectory angle at first stage-SPARTAN separatio
 
 A higher SPARTAN structural mass causes the SPARTAN to stay at relatively lower velocities over its trajectory, which results in a higher specific impulse throughout. 
 Varying the structural mass of the SPARTAN does not significantly affect the altitude at the end of the pull-up manoeuvre. However, as the mass of the SPARTAN is varied, the velocity at SPARTAN-third stage separation does change significantly, by +46m/s (+17.1\%) at 95\% structural mass, and -50m/s (-18.6\%) at 105\% structural mass. In order to reach similar altitudes at the end of pull-up, the trajectory angle at the SPARTAN-third stage separation increases as the structural mass is increased (by +0.3$^\circ$ (+2.8\%) at 105\% structural mass) and decreases as the structural mass is decreased (by -0.2$^\circ$ (-1.9\%), at 95\% structural mass). 
-As the mass of the SPARTAN increases, the exergy efficiency of the third stage is decreased, varying by -0.76\%$\eta$ at 105\% structural mass, and as the SPARTAN mass is decreased, the exergy efficiency of the third stage is increased, varying by +0.722\%$\eta$ at 95\% structural mass, due to being released at a lower velocity. 
+As the mass of the SPARTAN increases, the exergy efficiency of the third stage is decreased, varying by -0.76\%$\eta$ at 105\% structural mass, and as the SPARTAN mass is decreased, the exergy efficiency of the third stage is increased, varying by +0.722\%$\eta$ at 95\% structural mass, due to increased propulsive efficiency from being released at a higher velocity (illustrated by Equation \ref{eq:rocketeff}). 
 
 \textcolor{red}{XX done after exergy improvements, maybe should expand on end, maybe should mention about pull-up and propulsive efficiency as previously?}
 
@@ -1233,7 +1149,7 @@ As the mass of the SPARTAN increases, the exergy efficiency of the third stage i
 
 \begin{table}[!ht]
 \begin{tabular}{l c c c c c c} 
-	\hline \textbf{Trajectory Condition}   \qquad  $m_{F,2}$:
+	\hline \textbf{Trajectory Condition}   \qquad  $m_{f,2}$:
 	&90\%
 	&95\%
 	&100\%
@@ -1274,14 +1190,7 @@ As the mass of the SPARTAN increases, the exergy efficiency of the third stage i
 	& \textbf{\firstExergyEffmFuelOneHundredTenNoReturn}
 	& \textbf{-0.013}
 	\\
-	\textbf{1$^{st}$ Stage Destroyed Exergy (GJ)}
-	& \textbf{\firstExergyDestroyedmFuelNinetyNoReturn}
-	& \textbf{\firstExergyDestroyedmFuelNinetyFiveNoReturn}
-	& \textbf{\firstExergyDestroyedmFuelStandardNoReturn}
-	& \textbf{\firstExergyDestroyedmFuelOneHundredFiveNoReturn}
-	& \textbf{\firstExergyDestroyedmFuelOneHundredTenNoReturn}
-	& \textbf{-0.149}
-	\\
+
 	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 	& \firstsecondSeparationAltmFuelNinetyNoReturn
 	& \firstsecondSeparationAltmFuelNinetyFiveNoReturn
@@ -1315,14 +1224,7 @@ As the mass of the SPARTAN increases, the exergy efficiency of the third stage i
 	& \textbf{\secondExergyEffmFuelOneHundredTenNoReturn}
 	& \textbf{-0.014}
 	\\
-	\textbf{2$^{nd}$ Stage Destroyed Exergy (GJ)}
-	& \textbf{\secondExergyDestroyedmFuelNinetyNoReturn}
-	& \textbf{\secondExergyDestroyedmFuelNinetyFiveNoReturn}
-	& \textbf{\secondExergyDestroyedmFuelStandardNoReturn}
-	& \textbf{\secondExergyDestroyedmFuelOneHundredFiveNoReturn}
-	& \textbf{\secondExergyDestroyedmFuelOneHundredTenNoReturn}
-	& \textbf{1.812}
-	\\
+
 	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 	& \secondthirdSeparationAltmFuelNinetyNoReturn
 	& \secondthirdSeparationAltmFuelNinetyFiveNoReturn
@@ -1372,14 +1274,7 @@ As the mass of the SPARTAN increases, the exergy efficiency of the third stage i
 	& \textbf{\thirddExergyEffmFuelOneHundredTenNoReturn}
 	& \textbf{0.068}
 	\\
-	\textbf{3$^{rd}$ Stage Destroyed Exergy (GJ)}
-	& \textbf{\thirdExergyDestroyedmFuelNinetyNoReturn}
-	& \textbf{\thirdExergyDestroyedmFuelNinetyFiveNoReturn}
-	& \textbf{\thirdExergyDestroyedmFuelStandardNoReturn}
-	& \textbf{\thirdExergyDestroyedmFuelOneHundredFiveNoReturn}
-	& \textbf{\thirdExergyDestroyedmFuelOneHundredTenNoReturn}
-	& \textbf{-0.03}
-	\\
+
 	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 	& \thirdqOverFivemFuelNinetyNoReturn
 	& \thirdqOverFivemFuelNinetyFiveNoReturn
@@ -1419,13 +1314,11 @@ The fuel mass causes the maximum payload to orbit to vary by +6.9kg (+3.6\%) at 
 All cases exhibit similar trajectory shapes, with the SPARTAN pulling-up to similar altitudes, so that increasing the fuel mass directly increases the velocity at SPARTAN-third stage separation and requires slightly less pull-up angle. The SPARTAN-third stage separation velocity is increased by +47m/s (+17.5\%) and the trajectory angle is decreased by -0.4$^\circ$ (-3.7\%) at 110\% fuel mass, while the velocity is decreased by -48m/s (-17.9\%) and the trajectory angle is increased by +0.4$^\circ$ (+3.7\%) at 90\% fuel mass. 
 As the increased fuel mass directly increases the velocity at the end of the SPARTAN's trajectory, the beneficial effects of additional fuel exhibit diminishing returns as the velocity at the end of the SPARTAN's trajectory increases, and Isp decreases.
 This diminishing specific impulse causes the exergy efficiency of the SPARTAN to decrease by -0.134\%$\eta$ (-2.8\%) at 110\% fuel mass, and to increase by +0.153\%$\eta$ (+3.2\%) at 90\% fuel mass. 
-While the exergy efficiency decreases, the addition of extra fuel mass means that there is more total energy available (XX at XX compared to XX \textcolor{red}{see ingos notes here, maybe use exergy breakdown}), and so the SPARTAN is able to accelerate more over its trajectory. For this reason, the payload mass-to-orbit of the vehicle increases as extra fuel is added to the SPARTAN, even though the total exergy efficiency of the system decreases. 
+However, the addition of extra fuel mass means that there is more total energy available to the SPARTAN (206.1 GJ at 110\% fuel mass, compared to 168.6 GJ at 90\% fuel mass), and so the SPARTAN is able to accelerate more over its trajectory. For this reason, the addition of fuel mass to the SPARTAN is beneficial, although the benefits to the payload-to-orbit exhibit diminishing returns. 
 
-The exergy efficiency of the third stage is decreased as the fuel mass is increased. 
-This indicates that as the fuel mass of the SPARTAN is increased, the optimal performance trade-off between the SPARTAN and third stage rocket shifts to favour the SPARTAN. 
-In the previous cases it was shown that increasing, rather than decreasing, the efficiency of the SPARTAN shifted the efficiency trade-off towards SPARTAN. 
-However, as the fuel mass is increased, the SPARTAN has more total energy from burning a greater amount of fuel. 
-The decreasing efficiency trend of the third stage rocket in the current case, which occurs as the the fuel mass of the SPARTAN is increased, implies that the more total energy which the SPARTAN is able to put towards `useful' work, the more the efficiency trade-off between the SPARTAN and the third stage favours the SPARTAN. 
+One again, as the SPARTAN-third stage release velocity increases, the exergy efficiency of the third stage increases, and the release angle is able to be lowered due to the increasing propulsion efficiency. 
+
+\textcolor{red}{XX done after exergy improvements}
 
 \subsection{Case 8: Third Stage Mass Sensitivity}\label{sec:m3noReturn}
 
@@ -1474,14 +1367,7 @@ The decreasing efficiency trend of the third stage rocket in the current case, w
 		& \textbf{\firstExergyEffmThreeOneHundredTenNoReturn}
 		& \textbf{-0.029}
 		\\
-		\textbf{1$^{st}$ Stage Destroyed Exergy (GJ)}
-		& \textbf{\firstExergyDestroyedmThreeNinetyNoReturn}
-		& \textbf{\firstExergyDestroyedmThreeNinetyFiveNoReturn}
-		& \textbf{\firstExergyDestroyedmThreeStandardNoReturn}
-		& \textbf{\firstExergyDestroyedmThreeOneHundredFiveNoReturn}
-		& \textbf{\firstExergyDestroyedmThreeOneHundredTenNoReturn}
-		& \textbf{-0.317}
-		\\
+	
 		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 		& \firstsecondSeparationAltmThreeNinetyNoReturn
 		& \firstsecondSeparationAltmThreeNinetyFiveNoReturn
@@ -1515,14 +1401,7 @@ The decreasing efficiency trend of the third stage rocket in the current case, w
 		& \textbf{\secondExergyEffmThreeOneHundredTenNoReturn}
 		& \textbf{0.037}
 		\\
-		\textbf{2$^{nd}$ Stage Destroyed Exergy (GJ)}
-		& \textbf{\secondExergyDestroyedmThreeNinetyNoReturn}
-		& \textbf{\secondExergyDestroyedmThreeNinetyFiveNoReturn}
-		& \textbf{\secondExergyDestroyedmThreeStandardNoReturn}
-		& \textbf{\secondExergyDestroyedmThreeOneHundredFiveNoReturn}
-		& \textbf{\secondExergyDestroyedmThreeOneHundredTenNoReturn}
-		& \textbf{-0.07}
-		\\
+	
 		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 		& \secondthirdSeparationAltmThreeNinetyNoReturn
 		& \secondthirdSeparationAltmThreeNinetyFiveNoReturn
@@ -1572,14 +1451,7 @@ The decreasing efficiency trend of the third stage rocket in the current case, w
 		& \textbf{\thirddExergyEffmThreeOneHundredTenNoReturn}
 		& \textbf{-0.095}
 		\\
-		\textbf{3$^{rd}$ Stage Destroyed Exergy (GJ)}
-		& \textbf{\thirdExergyDestroyedmThreeNinetyNoReturn}
-		& \textbf{\thirdExergyDestroyedmThreeNinetyFiveNoReturn}
-		& \textbf{\thirdExergyDestroyedmThreeStandardNoReturn}
-		& \textbf{\thirdExergyDestroyedmThreeOneHundredFiveNoReturn}
-		& \textbf{\thirdExergyDestroyedmThreeOneHundredTenNoReturn}
-		& \textbf{0.32}
-		\\
+	
 		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 		& \thirdqOverFivemThreeNinetyNoReturn
 		& \thirdqOverFivemThreeNinetyFiveNoReturn
@@ -1611,18 +1483,17 @@ The decreasing efficiency trend of the third stage rocket in the current case, w
 \end{table}
 
 
-The total mass of the third stage rocket is varied by $\pm10\%$, to investigate the effects of variations in the internal mass density of the third stage rocket on the performance of the launch system. Table \ref{tab:comparison80} details key trajectory parameters, and Appendix \ref{sec:app_comparison80} presents comparison plots of each trajectory. The mass which is added or subtracted from the third stage is a combination of payload, fuel and structural mass. 
-The mass of the heat shield is unchanged at 130.9kg, and the structural mass is assumed to contribute to 9\% of the remaining mass (so that the structural mass varies by $\pm10\%$). The remaining mass which is varied consists of a flexible combination of fuel and payload mass, ie. the optimiser may use the available mass as fuel, and the mass leftover when orbit is reached is assumed to be payload, in the same manner as all other cases. 
+The total mass of the third stage rocket is varied by $\pm10\%$, to investigate the effects of variations in the internal mass density of the third stage rocket on the performance of the launch system. Table \ref{tab:comparison80} details key trajectory parameters, and Appendix \ref{sec:app_comparison80} presents comparison plots of each trajectory.
+The mass of the heat shield is unchanged at 130.9kg, and the structural mass is assumed to contribute to 9\% of the remaining mass (so that the structural mass varies by $\pm10\%$). The remaining mass which is varied consists of a flexible combination of fuel and payload mass, in the same manner as all other cases. 
 This mass variation investigates the effects of the third stage internal layout on the trajectory of the launch system, quantifying the consequences of fitting additional fuel, payload and structure within the available space.
 
 Varying the mass of the third stage rocket by $\pm10\%$ varies the maximum payload-to-orbit by +7.4kg (3.9\%) and -10.2kg (-5.4\%). 
-The majority of the additional mass is used for fuel and structural mass, with only 2.1\% of the added mass utilised for payload. The payload mass percentage of the additional mass is less than the payload mass percentage of the standard third stage, without heat shield, 6.0\%, indicating that as mass is added to the internals of the third stage, the payload efficiency of the third stage decreases.
+The majority of the additional mass is used for fuel and structural mass, with only 2.1\% of the added third stage mass utilised for payload. The payload mass percentage of the additional mass is less than the payload mass percentage of the standard third stage, without heat shield, 6.0\%, indicating that as mass is added to the internals of the third stage, the payload efficiency of the third stage decreases.
  As the mass of the third stage increases, the altitude and trajectory angle of the first stage-SPARTAN separation point decrease, as was observed previously when the mass of the SPARTAN is increased. 
  The SPARTAN pulls-up to similar altitudes as the third stage mass is varied, however, the velocity at the SPARTAN-third stage separation is decreased by -75m/s (-2.8\%) at 110\% third stage mass, and increased by +65m/s (+2.4\%) at 90\% third stage mass. 
  Consequently, a larger trajectory angle is required during SPARTAN pull-up as the third stage mass is increased, increasing by +0.9$^\circ$ (+8.3\%) at 110\% third stage mass, and decreasing by -0.4$^\circ$ (-3.7\%) at 90\% third stage mass. 
-As the mass of the third stage is varied by $\pm10\%$, the exergy efficiency of the SPARTAN varies by +0.340\%$\eta$ (+7.2\%) and -0.414\%$\eta$ (-8.8\%) respectively, and the exergy efficiency of the third stage varies by -0.986\%$\eta$ (-5.3\%) and +0.927\%$\eta$ (+4.9\%) respectively. The exergy efficiency variation of the SPARTAN is due to the SPARTAN flying at lower velocity when the third stage mass is higher, resulting in higher specific impulse from the scramjet engines. 
-The increase in the exergy efficiency of the third stage rocket, as its mass increases, is primarily due to a smaller fraction of the fuel mass of the third stage being used during the in-atmosphere portion of its trajectory, 40.83\% of the total fuel mass at 90\%$m_3$, compared to 40.21\% at 110\%$m_3$. Within the atmosphere, the atmospheric drag, the angle of attack necessary for increasing altitude, and the thrust vector angle needed for aerodynamic trim combine to decrease the exergy efficiency of the third stage.
-In addition, a smaller percentage of the overall mass is dedicated to the heat shield, which is discarded, `wasting' energy. As the mass of the heat shield becomes a significantly smaller overall percentage of the third stage mass, its exergy efficiency increases. 
+As the mass of the third stage is varied by $\pm10\%$, the exergy efficiency of the SPARTAN varies by +0.340\%$\eta$ (+7.2\%) and -0.414\%$\eta$ (-8.8\%) respectively, and the exergy efficiency of the third stage varies by -0.986\%$\eta$ (-5.3\%) and +0.927\%$\eta$ (+4.9\%) respectively. The exergy efficiency variation of the SPARTAN is due to the SPARTAN flying at lower velocities when the third stage mass is higher, resulting in higher specific impulse from the scramjet engines. 
+The decrease in the exergy efficiency of the third stage rocket, as its mass increases, is primarily due to the additional energy which is needed to accelerate the added structural mass, but is also due to the decreased velocity at separation, which decreases the propulsive efficiency of the third stage. 
 
 
 
@@ -1673,14 +1544,7 @@ In addition, a smaller percentage of the overall mass is dedicated to the heat s
 		& \textbf{\firstExergyEffTThreeOneHundredTenNoReturn}
 		& -
 		\\
-		\textbf{1$^{st}$ Stage Destroyed Exergy (GJ)}
-		& \textbf{\firstExergyDestroyedTThreeNinetyNoReturn}
-		& \textbf{\firstExergyDestroyedTThreeNinetyFiveNoReturn}
-		& \textbf{\firstExergyDestroyedTThreeStandardNoReturn}
-		& \textbf{\firstExergyDestroyedTThreeOneHundredFiveNoReturn}
-		& \textbf{\firstExergyDestroyedTThreeOneHundredTenNoReturn}
-		& -
-		\\
+	
 		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 		& \firstsecondSeparationAltTThreeNinetyNoReturn
 		& \firstsecondSeparationAltTThreeNinetyFiveNoReturn
@@ -1714,14 +1578,7 @@ In addition, a smaller percentage of the overall mass is dedicated to the heat s
 		& \textbf{\secondExergyEffTThreeOneHundredTenNoReturn}
 		& \textbf{0.002}
 		\\
-		\textbf{2$^{nd}$ Stage Destroyed Exergy (GJ)}
-		& \textbf{\secondExergyDestroyedTThreeNinetyNoReturn}
-		& \textbf{\secondExergyDestroyedTThreeNinetyFiveNoReturn}
-		& \textbf{\secondExergyDestroyedTThreeStandardNoReturn}
-		& \textbf{\secondExergyDestroyedTThreeOneHundredFiveNoReturn}
-		& \textbf{\secondExergyDestroyedTThreeOneHundredTenNoReturn}
-		& \textbf{-0.004}
-		\\
+	
 		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 		& \secondthirdSeparationAltTThreeNinetyNoReturn
 		& \secondthirdSeparationAltTThreeNinetyFiveNoReturn
@@ -1771,14 +1628,7 @@ In addition, a smaller percentage of the overall mass is dedicated to the heat s
 		& \textbf{\thirddExergyEffTThreeOneHundredTenNoReturn}
 		& \textbf{0.484}
 		\\
-		\textbf{3$^{rd}$ Stage Destroyed Exergy (GJ)}
-		& \textbf{\thirdExergyDestroyedTThreeNinetyNoReturn}
-		& \textbf{\thirdExergyDestroyedTThreeNinetyFiveNoReturn}
-		& \textbf{\thirdExergyDestroyedTThreeStandardNoReturn}
-		& \textbf{\thirdExergyDestroyedTThreeOneHundredFiveNoReturn}
-		& \textbf{\thirdExergyDestroyedTThreeOneHundredTenNoReturn}
-		& \textbf{-0.211}
-		\\
+	
 		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 		& \thirdqOverFiveTThreeNinetyNoReturn
 		& \thirdqOverFiveTThreeNinetyFiveNoReturn
@@ -1815,7 +1665,11 @@ The specific impulse variation has a significant effect on the trajectory of the
 Though the effect of the specific impulse of the third stage on the maximum payload-to-orbit is large, the majority of the improved efficiency comes from the circularisation and Hohmann transfer manoeuvres, where increasing the specific impulse results in significantly less fuel mass usage, which directly translates to additional payload. Varying the specific impulse of the third stage only changes the in-atmosphere trajectory of the third stage slightly, varying the velocity of the third stage before circularisation by only +55.7m/s (+1.5\%) at 105\%$I_{sp}$ and -28.1m/s (-0.7\%) at 95\% $I_{sp}$. 
 The third stage specific impulse variation has no direct influence on the trajectory of the first stage rocket, and the first stage-SPARTAN separation conditions are relatively consistent across the thrust levels simulated.
 As the specific impulse of the third stage is varied, the size and shape of the SPARTAN's trajectory and pull-up manoeuvre are only slightly affected by the specific impulse of the third stage rocket engine, with no consistent trend. 
- However, the exergy efficiency of the SPARTAN increases as the third stage specific impulse is increased, by +0.031\%$\eta$ (+0.66\%) at 105\% $I_{SP}$, and decreases as the third stage specific impulse is decreased, by -0.014\%$\eta$ (-0.030\%) at 95\% $I_{SP}$. This trend indicates that as the efficiency of the third stage increases, the trade-off between the efficiencies of the SPARTAN and the third stage shifts slightly to favour the SPARTAN. This trade-off shift is small, because the third stage specific impulse has a relatively minor effect of within the atmosphere, where the trade-off occurs. 
+ However, the exergy efficiency and velocity of the SPARTAN increase as the third stage specific impulse is increased, by +0.031\%$\eta$ (+0.66\%) and +7m/s (+0.26\%) respectively at 105\% $I_{SP}$, and decrease as the third stage specific impulse is decreased, by -0.014\%$\eta$ (-0.30\%) and -3m/s (-0.11\%) respectively at 95\% $I_{SP}$. 
+ In addition, the energy losses due to propulsive inefficiency of the third stage are decreased as the specific impulse is increased, to \PlossthreeCombinedTThreeOneHundredTenNoReturn\% at 105\% $I_{SP}$, compared to \PlossthreeCombinedTThreeNinetyNoReturn\% at 95\% $I_{SP}$, due to the more rapid acceleration of the third stage.
+ This trend indicates that as the specific impulse, and propulsion efficiency, of the third stage increase, it is beneficial to fly a trajectory with a slightly smaller pull-up (`smaller' indicating a lower combined altitude and trajectory angle).
+
+\textcolor{red}{XX done after exergy improvements}
 
 
 \subsection{Case 10: Third Stage Drag Sensitivity}
@@ -1864,14 +1718,7 @@ As the specific impulse of the third stage is varied, the size and shape of the 
 		& \textbf{\firstExergyEffCdThreeOneHundredTwentyNoReturn}
 		& -
 		\\
-		\textbf{1$^{st}$ Stage Destroyed Exergy (GJ)}
-		& \textbf{\firstExergyDestroyedCdThreeEightyNoReturn}
-		& \textbf{\firstExergyDestroyedCdThreeNinetyNoReturn}
-		& \textbf{\firstExergyDestroyedCdThreeStandardNoReturn}
-		& \textbf{\firstExergyDestroyedCdThreeOneHundredTenNoReturn}
-		& \textbf{\firstExergyDestroyedCdThreeOneHundredTwentyNoReturn}
-		& -
-		\\
+	
 		\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 		& \firstsecondSeparationAltCdThreeEightyNoReturn
 		& \firstsecondSeparationAltCdThreeNinetyNoReturn
@@ -1905,14 +1752,7 @@ As the specific impulse of the third stage is varied, the size and shape of the 
 		& \textbf{\secondExergyEffCdThreeOneHundredTwentyNoReturn}
 		& \textbf{-0.002}
 		\\
-		\textbf{2$^{nd}$ Stage Destroyed Exergy (GJ)}
-		& \textbf{\secondExergyDestroyedCdThreeEightyNoReturn}
-		& \textbf{\secondExergyDestroyedCdThreeNinetyNoReturn}
-		& \textbf{\secondExergyDestroyedCdThreeStandardNoReturn}
-		& \textbf{\secondExergyDestroyedCdThreeOneHundredTenNoReturn}
-		& \textbf{\secondExergyDestroyedCdThreeOneHundredTwentyNoReturn}
-		& \textbf{0.004}
-		\\
+
 		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 		& \secondthirdSeparationAltCdThreeEightyNoReturn
 		& \secondthirdSeparationAltCdThreeNinetyNoReturn
@@ -1962,14 +1802,7 @@ As the specific impulse of the third stage is varied, the size and shape of the 
 		& \textbf{\thirddExergyEffCdThreeOneHundredTwentyNoReturn}
 		& \textbf{-0.004}
 		\\
-		\textbf{3$^{rd}$ Stage Destroyed Exergy (GJ)}
-		& \textbf{\thirdExergyDestroyedCdThreeEightyNoReturn}
-		& \textbf{\thirdExergyDestroyedCdThreeNinetyNoReturn}
-		& \textbf{\thirdExergyDestroyedCdThreeStandardNoReturn}
-		& \textbf{\thirdExergyDestroyedCdThreeOneHundredTenNoReturn}
-		& \textbf{\thirdExergyDestroyedCdThreeOneHundredTwentyNoReturn}
-		& \textbf{0.002}
-		\\
+	
 		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 		& \thirdqOverFiveCdThreeEightyNoReturn
 		& \thirdqOverFiveCdThreeNinetyNoReturn
@@ -2005,10 +1838,15 @@ The coefficient of drag of the third stage rocket is varied by $\pm20\%$ to inve
 
 The first stage trajectory is not affected by variations in the drag of the third stage. 
 The SPARTAN exhibits a slightly higher pull-up as the drag of the third stage is increased by 20\%, increasing altitude by +0.51km (+1.2\%), and trajectory angle at separation by +0.4$^\circ$ (+3.7\%) trajectory angle, while decreasing the separation velocity by -10.0m/s (-0.37\%). Conversely, decreasing the drag of the third stage by 20\% decreases the altitude at SPARTAN-third stage separation by -1.0km (-2.5\%), decreases the trajectory angle at separation by -0.6$^\circ$ (-5.6\%), and increases the velocity by +17m/s (+0.6\%). 
-Increasing the drag of the third stage by 20\% causes a decrease in the exergy efficiency of the SPARTAN of -0.036\%$\eta$ (-0.76\%), and an increase in the efficiency of the third stage of -0.068\%$\eta$ (-0.36\%), while decreasing the drag of the third stage by 20\% causes an increase in the exergy efficiency of the SPARTAN of +0.060\%$\eta$ (+1.27\%), and a decrease in the third stage efficiency of +0.082\%$\eta$ (+0.44\%). The increasing exergy efficiency of the third stage as the drag increases indicates that the trade-off between the efficiency of the SPARTAN and the third stage shifts towards the third stage significantly when the drag of the third stage is increased. The SPARTAN pulls-up to a higher altitude so that the third stage spends less time in a high dynamic pressure environment, where the increased drag has a significant effect, mitigating the energy loss due to the increased drag considerably. The higher pull-up of the SPARTAN with the third stage drag increased by 20\%, decreases the time that the third stage spends above 5kPa dynamic pressure by -2.4s (-16.9\%) while the lower pull-up of the SPARTAN when the third stage drag is decreased by 20\% increases the time spent at greater than 5kPa dynamic pressure by +2.5s (+17.6\%).
+Increasing the drag of the third stage by 20\% causes a decrease in the exergy efficiency of the SPARTAN of -0.036\%$\eta$ (-0.76\%), and a decrease in the efficiency of the third stage of -0.068\%$\eta$ (-0.36\%), while decreasing the drag of the third stage by 20\% causes an increase in the exergy efficiency of the SPARTAN of +0.060\%$\eta$ (+1.27\%), and an increase in the third stage efficiency of +0.082\%$\eta$ (+0.44\%). 
+As the drag of the third stage increases, the SPARTAN pulls-up to a higher altitude so that the third stage spends less time in a high dynamic pressure environment, where the increased drag has a significant effect, mitigating the energy loss due to the increased drag. The higher pull-up of the SPARTAN with the third stage drag increased by 20\%, decreases the time that the third stage spends above 5kPa dynamic pressure by -2.4s (-16.9\%), resulting in drag losses of \WDthreeCdThreeOneHundredTwentyNoReturn\% (0.19 GJ), while the lower pull-up of the SPARTAN when the third stage drag is decreased by 20\% increases the time spent at greater than 5kPa dynamic pressure by +2.5s (+17.6\%), resulting in drag losses of \WDthreeCdThreeEightyNoReturn\% (0.22 GJ). This indicates that as the drag of the third stage is increased, the optimal pull-up manoeuvre is increased so as to more than compensate for the additional energy losses, trading off the efficiency of the SPARTAN to do so. 
+
+\textcolor{red}{XX done after exergy improvements}
+
+
 
 \section{Comparison of Design Parameters}\label{sec:comparisonNoReturn}
-
+\textcolor{red}{XX remove  anything about old exergy trade-offs}
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.99\linewidth]{figures/5_Ascent/BarChartRelativePayloadChange}
@@ -2019,33 +1857,35 @@ Increasing the drag of the third stage by 20\% causes a decrease in the exergy e
 The preceding sections calculate the relative sensitivity of the launch system performance to a variety of design parameters. 
 Comparing and contrasting the sensitivity of the launch system to each design parameter allows for the relative impact of each design parameter to be assessed. 
 Figure \ref{fig:BarChartRelativePayloadChange} shows the change in payload mass per percentage point variation of each design parameter. 
-This change per percentage variation indicates the magnitude by which the payload-to-orbit varies as each design parameter is varied by +1\% (with sign reversed for -1\% variation), and is measure of the sensitivity of the launch system to variations in each design parameter. 
-However, a 1\% variation has a significantly different implication in the context of each individual design parameter. 
+This change per percentage variation indicates the magnitude by which the payload-to-orbit varies as each design parameter is varied by $\pm$1\% (signs are shown for positive parameter variations, with negative signs indicating a decrease in performance), and is measure of the sensitivity of the launch system to variations in each design parameter. 
+However, a 1\% variation has a significantly different implication in the context of each individual design parameter, as certain parameters can be adjusted more easily. 
 As such, the change per percentage is most useful when directly assessing each design parameter, and taking into account the associated effects on other, coupled design parameters. 
 
-The influence of maximum dynamic pressure on the performance of the launch system is low, particularly when compared to the influence of the closely linked the SPARTAN mass parameter. The SPARTAN's thermal protective properties and structural strength define the maximum dynamic pressure. This means that the low variance in performance with maximum dynamic pressure may be offset by the variation in the mass of the SPARTAN, ie. a lower maximum dynamic pressure requires less structural and thermal protection system mass.
- Comparing the relative sensitivities of the launch system dynamic pressure and SPARTAN mass (1.5$\frac{\Delta kg}{\Delta\%kg_{SPARTAN}}$), and their absolute magnitudes (50kPa and 4957kg respectively), allows the sensitivities of these coupled effects to be directly quantified. So long as decreasing the dynamic pressure by 1kPa allows for a reduction in structural and TPS mass of greater than -26.5kg, then operating the SPARTAN at lower dynamic pressures may be preferable. 
+The influence of maximum dynamic pressure on the performance of the launch system is low, particularly when compared to the influence of the closely linked SPARTAN mass parameter. The SPARTAN's thermal protective properties and structural strength define the maximum dynamic pressure. This means that the low variance in performance with maximum dynamic pressure may be offset by the variation in the mass of the SPARTAN, ie. a lower maximum dynamic pressure requires less structural and thermal protection system mass.
+ Comparing the relative sensitivities of the launch system to dynamic pressure (0.4$\frac{\Delta kg}{\Delta\%q_{max}}$), and SPARTAN mass (1.5$\frac{\Delta kg}{\Delta\%kg_{SPARTAN}}$), and their absolute magnitudes (50kPa and 4957kg respectively), allows the sensitivities of these coupled effects to be directly quantified. Comparing these sensitivities implies that so long as decreasing the dynamic pressure by 1kPa allows for a reduction in structural and TPS mass of greater than -26.5kg, then operating the SPARTAN at lower dynamic pressures may be preferable. 
 
 The influence of the fuel mass of the SPARTAN is also low, however, the fuel mass is only a fraction of the total mass of the SPARTAN (24.0\%). This means that relatively small mass changes in fuel mass are still significant. 
 When the fuel mass of the SPARTAN is increased, the structural mass of the tanks will require a corresponding increase. 
 Comparing the impact of the fuel mass and structural mass of the SPARTAN along with their relative magnitudes (1562kg of fuel mass and 4957kg of structural mass), the absolute impact of each is 0.044kg$_{payload}/$kg and 0.030kg$_{payload}/$kg respectively. This means that so long as fuel mass can be added to the SPARTAN with less than 1.47kg of structural mass incorporated for each 1kg of fuel mass, adding additional fuel mass will be beneficial. However, the fuel mass is constrained considerably by the available internal space within the SPARTAN, which is likely to be the main limiting factor.
-If the size of the fuselage of the SPARTAN is increased, the aerodynamic performance of the SPARTAN may be decreased. 
-The sensitivity of the launch system to the drag of the SPARTAN, , means that so long as 1kg of fuel can be added to the SPARTAN, with a drag increase of less than 0.024\%, then the maximum payload-to-orbit will increase. 
+If the size of the fuselage of the SPARTAN is increased, the aerodynamic performance of the SPARTAN will be altered proportionally. 
+The sensitivity of the launch system to the drag of the SPARTAN, means that so long as 1kg of fuel can be added to the SPARTAN, with a drag increase of less than 0.024\%, then the maximum payload-to-orbit will increase. 
 
 
 The payload-to-orbit is sensitive to the specific impulse of the C-REST engines, varying at a rate of 2.2$\frac{\Delta kg}{\Delta\%I_{SP}}$. Increasing the specific impulse of the scramjet engines is likely to require the addition of extra systems within the scramjet engines, adding weight to the SPARTAN, or a change in the shape of the scramjet engines, adding drag to the SPARTAN. 
 The slightly lower sensitivity of the launch system to the SPARTAN mass (1.5$\frac{\Delta kg}{\Delta\%kg_{SPARTAN}}$) compared to the sensitivity to the specific impulse, means that so long as increasing the $I_{SP}$ of the SPARTAN by 1\% causes a corresponding increase in the structural mass of the SPARTAN of less than 1.47\% (72.9kg), the performance of the launch system will improve. 
+
 The sensitivity of the launch system to variation of the SPARTAN drag (1.9$\frac{\Delta kg}{\Delta\%C_d,{SPARTAN}}$) is similar in magnitude to the sensitivity to specific impulse. 
 If a variation in the shape of the scramjet engines or forebody increases the $I_{SP}$ of the SPARTAN by 1\%, while increasing the drag of the SPARTAN by less than 1.16\%, then the efficiency of the launch system will be improved. 
 
 
 
  The aerodynamic performance of the third stage is shown to have only a very small impact on the performance of the launch system, with a drag sensitivity of only 0.02$\frac{\Delta kg}{\Delta\%C_{d,3}}$. This means that for any third stage shape variations, the aerodynamic sensitivity is small, and so long as the magnitude of the third stage lift force is maintained, the only significant coupled design factors are likely to be the structural and TPS mass necessary for in-atmosphere acceleration.
+ 
  The specific impulse of the third stage rocket has the highest percentage payload variation effect on the launch system of any of the design parameters tested, at 4.6$\frac{\Delta kg}{\Delta\%I_{SP,3}}$. Increasing the specific impulse of the third stage is likely to involve modifications to the engine, increasing the pressure within the fuel tanks, or adding a turbopump to assist fuel flow, all of which involve increasing the mass of the third stage rocket. 
 This additional mass is subtracted directly from the available payload mass of the system. This implies that so long as the specific impulse of the third stage can be increased by 1\% for less than 4.6kg additional engine and system mass, that the performance of the launch system will improve. 
  Additionally, increasing the size of the third stage rocket is likely to require an increase in the size of the SPARTAN's fuselage. The sensitivity of the SPARTAN to drag, 1.9$\frac{\Delta kg}{\Delta\%C_d,{SPARTAN}}$, means that if the third stage can be enlarged so that the third stage mass increases by 1kg while the fuselage of the SPARTAN varied so that the increase in SPARTAN drag is less than 0.014\%, the maximum payload-to-orbit will increase. 
 However, it is likely to be cost which is the main limiting factor to variations in the third stage specific impulse. 
-Increasing the specific impulse of the rocket engine is likely to add a large amount of cost to the third stage rocket, which is particularly important as the third stage is not reusable. This additional cost factor is likely to be the limiting factor on the specific impulse of the third stage rocket. 
+Increasing the specific impulse of the rocket engine is likely to add a large amount of cost to the third stage rocket, which is particularly detrimental, as the third stage is not reusable. This additional cost factor is likely to be the limiting factor on the specific impulse of the third stage rocket. 
 
 
 
@@ -2061,15 +1901,14 @@ A trajectory was simulated in which the SPARTAN stage flies at a constant dynami
 A trajectory optimised for maximum payload-to-orbit was then calculated, which increased payload mass to heliosynchronous orbit to \PayloadToOrbitStandard kg (an increase of 16.3\%) compared to the constant dynamic pressure trajectory.
   The optimal flight path indicates that the optimal scramjet flight path for a system transitioning between separate airbreathing and rocket-powered stages involves the SPARTAN flying at less than its maximum dynamic pressure at three separate points along the trajectory. 
   Initially, the first stage-SPARTAN separation occurs at a higher trajectory angle than in the constant dynamic pressure trajectory, causing the SPARTAN to fly at lower dynamic pressure, and trading off the exergy efficiency of the SPARTAN for the exergy efficiency of the first stage, for an overall performance gain. 
-  The optimal flight path then exhibits an altitude raising manoeuvre in the middle of the trajectory, which improves the exergy efficiency of the SPARTAN by a very minor +0.003 XX\%$\eta$ (+0.03\%). 
-  Finally, the SPARTAN executes a pull-up manoeuvre before the SPARTAN-third stage separation. This optimal pull-up manoeuvre trades off velocity (a decrease of 116.2m/s) for altitude (an increase of 9.48km) and improved flight path angle (an increase of 10.45$^\circ$), decreasing the exergy efficiency of the SPARTAN by -1.32  XX\%$\eta$ (-10.7\%) when compared to the constant dynamic pressure case. 
-  These conditions improve the exergy efficiency of the third stage rocket significantly, by 3.456 XX\%$\eta$, an increase of 20.5\% over the third stage released from a constant dynamic pressure trajectory. 
+  The optimal flight path then exhibits an altitude raising manoeuvre in the middle of the trajectory, which improves the exergy efficiency of the SPARTAN by a very minor +0.003\%$\eta$ (+0.03\%). 
+  Finally, the SPARTAN executes a pull-up manoeuvre before the SPARTAN-third stage separation. This optimal pull-up manoeuvre trades off velocity (a decrease of 116.2m/s) for altitude (an increase of 9.48km) and improved flight path angle (an increase of 10.45$^\circ$), decreasing the exergy efficiency of the SPARTAN by -0.508\%$\eta$ (-9.7\%) when compared to the constant dynamic pressure case. 
+  However, these conditions improve the exergy efficiency of the third stage rocket significantly, by +3.286\%$\eta$, an increase of +21.3\% over the third stage released from a constant dynamic pressure trajectory. 
  The pull up manoeuvre in the payload-to-orbit optimised trajectory also reduces the maximum dynamic pressure experienced by the third stage to 10.8kPa, a decrease of 43.4kPa compared to a trajectory with minimum pull-up, which allows future design benefits due to heat shield mass reduction.  
 
 A sensitivity study was conducted, to determine the relative effects of key vehicle design parameters on the optimised trajectory. 
 The maximum dynamic pressure, specific impulse, aerodynamic performance, structural mass, and fuel mass of the SPARTAN, were modified along with the specific impulse, mass and aerodynamic performance of the third stage, and the magnitudes of their payload-to-orbit sensitivities compared. 
 It was observed that the efficiency trade-off between the first stage and the SPARTAN depends primarily on the pitching ability of the first stage, so that when the first stage is capable of pitching more rapidly, the trade-off shifts in favour of the SPARTAN. 
-It was also observed that when the overall magnitude of `useful' energy utilised during the SPARTAN acceleration is increased, the trade-off between the efficiency of the SPARTAN and the third stage rocket shifts in favour of the SPARTAN, decreasing the size of the pull-up before SPARTAN-third stage separation. 
 The specific impulse of the third stage rocket was found to produce the most overall effect on the payload-to-orbit, increasing the payload by +45.9kg (+24.26\%) at 105\% $I_{sp}$, and decreasing the payload by -45.9kg (-24.26\%) at 95\% $I_{sp}$. However, increasing the specific impulse of the third stage rocket is likely to come at a high cost premium, which may be undesirable as the third stage is non-reusable. 
 The third stage aerodynamic performance was found to have negligible effect on the payload-to-orbit, indicating this is not a significant design factor. 
 The most easily variable design factor, the maximum dynamic pressure of the SPARTAN, was found to have a relatively small effect on the payload-to-orbit performance of the launch system, varying the payload-to-orbit by only +24.2kg (+12.8\%) at 60kPa and -20.5kg (-10.8\%) at 40kPa. The negative effect on the payload-to-orbit when flying at 40kPa is likely to be offset by the lower TPS and structural mass required by lower dynamic pressure flight. It was determined that if the TPS and structural mass decrease is greater than -26.5kg for every 1kPa reduction in the maximum dynamic pressure, then flying at lower dynamic pressure is potentially preferable. 
