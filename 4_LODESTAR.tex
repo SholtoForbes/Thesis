@@ -266,11 +266,11 @@ Allowing the initial fuel mass to vary increases the flexibility of the optimal 
 \centering
 \begin{tabular}{|c|c|c|}
 	\hline \textbf{Variable Group}  & \textbf{Associated Variables} & \textbf{Value/Range}\\
-	\hline Initial Constraints  & Velocity & 30m/s\\ & Altitude& 90m \\ & Latitude & $-12.16^\circ$ \\& Longitude & 136.75$^\circ$\\ & Trajectory Angle & 89.9$^\circ$\\ & Angle of Attack& 0$^\circ$\\
+	\hline Initial Constraints  & Velocity (v) & 30m/s\\ & Altitude (z)& 90m \\ & Latitude ($\phi$)  & $-12.16^\circ$ \\& Longitude ($\xi$) & 136.75$^\circ$\\ & Trajectory Angle ($\gamma$) & 89.9$^\circ$\\ & Angle of Attack ($\alpha$)& 0$^\circ$\\
 	\hline Terminal Constraints & $\textbf{x}_{f,\textrm{\rom{2}}} - \textbf{x}_{0,\textrm{\rom{3}}}$ & 0\\ & $t_{f,\textrm{\rom{2}}} - t_{0,\textrm{\rom{3}}}$ & 0\\
-	\hline Path Constraints & Dynamic Pressure & 0kPa - 50kPa\\ 
+	\hline Path Constraints & Dynamic Pressure ($q$) & 0kPa - 50kPa\\ 
 		\hline Control Variables & $\ddot{\alpha}$ & $\pm0.029^\circ/s^2$\\ 
-		\hline State Variables & Altitude & 0 - 30km\\ & Velocity& 10 - 3000m/s\\ & Trajectory Angle& $-5.7^\circ$ - $89.9^\circ$ \\   & Latitude& $\pm28.6^\circ$ \\  & Longitude& $114.6^\circ$ - $171.9^\circ$\\   & Heading Angle& $\pm360^\circ$\\  & Total Mass& 11453 - 29388kg \\  & Angle of Attack ($\alpha$)&  $-5^\circ$ - 0$^\circ$\\  & $\dot{\alpha}$& $\pm5.7^\circ/s$\\ 
+		\hline State Variables & Altitude (z) & 0 - 30km\\ & Velocity (v) & 10 - 3000m/s\\ & Trajectory Angle ($\gamma$)& $-5.7^\circ$ - $89.9^\circ$ \\   & Latitude ($\phi$) & $\pm28.6^\circ$ \\  & Longitude ($\xi$)& $114.6^\circ$ - $171.9^\circ$\\   & Heading Angle ($\zeta$)& $\pm360^\circ$\\  & Total Mass (m)& 11453 - 29388kg \\  & Angle of Attack ($\alpha$)&  $-5^\circ$ - 0$^\circ$\\  & $\dot{\alpha}$& $\pm5.7^\circ/s$\\ 
 	\hline 
 \end{tabular} 
 
@@ -287,14 +287,14 @@ Allowing the initial fuel mass to vary increases the flexibility of the optimal 
 	\centering
 	\begin{tabular}{|c|c|c|}
 		\hline \textbf{Variable Group}  & \textbf{Associated Variables} & \textbf{Value/Range}\\
-		\hline Initial Constraints  & Fuel Mass & 1562kg\\ 
+		\hline Initial Constraints  & Fuel Mass ($m_F$) & 1562kg\\ 
 		Terminal Constraints & $\textbf{x}_{f,\textrm{\rom{2}}} - \textbf{x}_{0,\textrm{\rom{3}}}$ & 0\\ & $t_{f,\textrm{\rom{2}}} - t_{0,\textrm{\rom{3}}}$ & 0\\
-		\hline Terminal Constraints & Altitude & 0 - 45km\\ & Trajectory Angle& 0 - 15$^\circ$\\  & Bank Angle $\eta$& 0$^\circ$\\  & $\textbf{x}_{f,\textrm{\rom{3}}} - \textbf{x}_{0,\textrm{\rom{4}}}$ & 0\\ & $t_{f,\textrm{\rom{3}}} - t_{0,\textrm{\rom{4}}}$ & 0\\
+		\hline Terminal Constraints & Altitude (z) & 0 - 45km\\ & Trajectory Angle ($\gamma$)& 0 - 15$^\circ$\\  & Bank Angle ($\eta$)& 0$^\circ$\\  & $\textbf{x}_{f,\textrm{\rom{3}}} - \textbf{x}_{0,\textrm{\rom{4}}}$ & 0\\ & $t_{f,\textrm{\rom{3}}} - t_{0,\textrm{\rom{4}}}$ & 0\\
 		 & $\textbf{x}_{f,\textrm{\rom{3}}} - \textbf{x}_{0,\textrm{\rom{5}}}$ & 0\\ & $t_{f,\textrm{\rom{3}}} - t_{0,\textrm{\rom{5}}}$ & 0\\
 		\hline Path Constraints & Dynamic Pressure& 0 - 50kPa\\ 
 		\hline Target Cost (Optional) & Dynamic Pressure$^*$ & $(q-50000)^2/50000$\\ 
 		\hline Control Variables & $\dot{\alpha}$ &  $\pm0.5^\circ$/s\\  & $\dot{\eta}$ &  $\pm1^\circ$/s\\ 
-		\hline State Variables & Altitude & 0 - 50km\\ & Velocity& 10 - 3000m/s\\ & Trajectory Angle& $-28.6^\circ$ - $15^\circ$\\   & Latitude&$\pm28.6^\circ$ \\  & Longitude& $114.6^\circ$ - $171.9^\circ$\\   & Heading Angle& $-240^\circ$ - $360^\circ$ \\  & Fuel Mass& 0 - 1562kg \\  & Angle of Attack ($\alpha$)&  0$^\circ$ - $10^\circ$ \\  & Bank Angle $\eta$& $-1^\circ$ - $90^\circ$ \\  
+		\hline State Variables & Altitude (z) & 0 - 50km\\ & Velocity (v)& 10 - 3000m/s\\ & Trajectory Angle ($\gamma$)& $-28.6^\circ$ - $15^\circ$\\   & Latitude ($\phi$) &$\pm28.6^\circ$ \\  & Longitude ($\xi$)& $114.6^\circ$ - $171.9^\circ$\\   & Heading Angle ($\zeta$)& $-240^\circ$ - $360^\circ$ \\  & Fuel Mass ($m_F$)& 0 - 1562kg \\  & Angle of Attack ($\alpha$)&  0$^\circ$ - $10^\circ$ \\  & Bank Angle $\eta$& $-1^\circ$ - $90^\circ$ \\  
 		\hline 
 	\end{tabular} 
 	\caption{Optimisation setup of the second stage ascent. $^*$ This is only used in the constant dynamic pressure simulation.}
@@ -328,12 +328,12 @@ and the thrust of the engine is assumed to scale linearly with the fuel mass flo
 	\centering
 \begin{tabular}{|c|c|c|}
 	\hline \textbf{Variable Group}  & \textbf{Associated Variables} & \textbf{Value/Range}\\
-	\hline Initial Constraints  & Bank Angle $\eta$& 0$^\circ$ \\ 
+	\hline Initial Constraints  & Bank Angle ($\eta$)& 0$^\circ$ \\ 
 	 & $\textbf{x}_{f,\textrm{\rom{3}}} - \textbf{x}_{0,\textrm{\rom{4}}}$ & 0\\ & $t_{f,\textrm{\rom{3}}} - t_{0,\textrm{\rom{4}}}$ & 0\\
-	\hline Terminal Constraints& Latitude & $-12.16^\circ$ \\& Longitude & 136.75$^\circ$\\
-	\hline Path Constraints & Dynamic Pressure& 0 - 50kPa\\ 
+	\hline Terminal Constraints& Latitude ($\phi$)  & $-12.16^\circ$ \\& Longitude ($\xi$) & 136.75$^\circ$\\
+	\hline Path Constraints & Dynamic Pressure ($q$)& 0 - 50kPa\\ 
 				\hline Control Variables & $\dot{\alpha}$ &  $\pm0.5^\circ$/s\\  & $\dot{\eta}$ &  $\pm1^\circ$/s\\ & $\dot{Throttle}$& $\pm0.2$/s\\
-				\hline State Variables& Altitude & 0 - 70km\\ & Velocity& 10 - 5000m/s\\ & Trajectory Angle& $\pm80^\circ$\\    & Latitude&$\pm28.6^\circ$ \\  & Longitude& $114.6^\circ$ - $171.9^\circ$\\   & Heading Angle& $60^\circ$ - $500^\circ$ \\  & Fuel Mass& 0kg - 500kg\\  & Angle of Attack ($\alpha$)&  0$^\circ$ - 10$^\circ$\\  & Bank Angle ($\eta$)& $0^\circ$ - 90$^\circ$\\  & Throttle & 0 - 1 \\ 
+				\hline State Variables& Altitude (z) & 0 - 70km\\ & Velocity (v)& 10 - 5000m/s\\ & Trajectory Angle ($\gamma$)& $\pm80^\circ$\\    & Latitude ($\phi$) &$\pm28.6^\circ$ \\  & Longitude ($\xi$)& $114.6^\circ$ - $171.9^\circ$\\   & Heading Angle ($\zeta$)& $60^\circ$ - $500^\circ$ \\  & Fuel Mass ($m_F$)& 0kg - 500kg\\  & Angle of Attack ($\alpha$)&  0$^\circ$ - 10$^\circ$\\  & Bank Angle ($\eta$)& $0^\circ$ - 90$^\circ$\\  & Throttle & 0 - 1 \\ 
 	\hline 
 \end{tabular} 
 \caption{Optimisation setup of the second stage return.}
@@ -356,13 +356,13 @@ The other terminal constraints of this phase correspond to end constraints impos
 \begin{table}[ht]
 	\centering
 \begin{tabular}{|c|c|c|}
-\hline \textbf{Variable Group}  & \textbf{Associated Variables} & \textbf{Value/Range}\\	\hline Initial Constraints  & Total Mass & 3300kg\\ 
+\hline \textbf{Variable Group}  & \textbf{Associated Variables} & \textbf{Value/Range}\\	\hline Initial Constraints  & Total Mass (m) & 3300kg\\ 
 & $\textbf{x}_{f,\textrm{\rom{3}}} - \textbf{x}_{0,\textrm{\rom{5}}}$ & 0\\ & $t_{f,\textrm{\rom{3}}} - t_{0,\textrm{\rom{5}}}$ & 0\\
-	\hline Terminal Constraints & Alt$_{f,\textrm{\rom{6}}}$ & $\geq$90km\\ & Heading Angle, $\zeta_{f,\textrm{\rom{6}}}$ & 97.64$^\circ$\\  & Angle of Attack ($\alpha$) & 0$^\circ$\\
+	\hline Terminal Constraints & Alt$_{f,\textrm{\rom{6}}}$ & $\geq$90km\\ & Heading Angle ($\zeta$) $_{\textrm{\rom{6}}}$ & 97.64$^\circ$\\  & Angle of Attack ($\alpha$) & 0$^\circ$\\
 	\hline Path Constraints & Angle of Attack ($\alpha$) & Maximum $F_N$\\  & Thrust Vector Angle & $\pm8^\circ$\\ 
 	\hline Target Cost & Payload-to-Orbit & Payload Calculated in Phase \rom{7}\\ 
 				\hline Control Variables & $\dot{\alpha}$ & $\pm1^\circ$\\ 
-				\hline State Variables & Altitude & 30 - 84km\\ & Velocity& 10 - 8000m/s\\ & Trajectory Angle& $-5^\circ$ - 30$^\circ$ \\   & Latitude&$\pm28.6^\circ$ \\   & Heading Angle& $80^\circ$ - 120$^\circ$\\  & Total Mass& 0kg - 3300kg \\  & Angle of Attack ($\alpha$)&  $-5^\circ$ - 0$^\circ$\\ 
+				\hline State Variables & Altitude (z) & 30 - 84km\\ & Velocity (v)& 10 - 8000m/s\\ & Trajectory Angle ($\gamma$)& $-5^\circ$ - 30$^\circ$ \\   & Latitude ($\phi$) &$\pm28.6^\circ$ \\   & Heading Angle ($\zeta$)& $80^\circ$ - 120$^\circ$\\  & Total Mass (m)& 0kg - 3300kg \\  & Angle of Attack ($\alpha$)&  $-5^\circ$ - 0$^\circ$\\ 
 	\hline 
 \end{tabular} 
 \caption{Optimisation setup of the third stage powered ascent.}
@@ -388,15 +388,15 @@ To this end, the final manoeuvre performed by the third stage rocket is a Hohman
 \end{figure}
 The orbit of the third stage is first circularised into a low orbit:
 \begin{equation}
-\Delta V_{12} = \sqrt{\dfrac{\mu}{r_2}} - V_1.
+\Delta v{12} = \sqrt{\dfrac{\mu}{r_2}} - v_1.
 \end{equation}
 Following circularisation, the third stage engine is reignited (or remains ignited) and the third stage manoeuvres into an appropriate elliptical orbit: 
 \begin{equation}
-\Delta V_{23} = \sqrt{\dfrac{\mu}{r_2}} \left( \sqrt{\dfrac{2r_4}{r_2 + r_4}} -1 \right).
+\Delta v_{23} = \sqrt{\dfrac{\mu}{r_2}} \left( \sqrt{\dfrac{2r_4}{r_2 + r_4}} -1 \right).
 \end{equation}
 At the apogee of the transfer orbit, corresponding to the desired orbital radius, an insertion burn is performed, and the orbit is circularised:
 \begin{equation}
-\Delta V_{34} = \sqrt{\dfrac{\mu}{r_4}} \left(1- \sqrt{\dfrac{2r_2}{r_2 + r_4}}  \right).
+\Delta v_{34} = \sqrt{\dfrac{\mu}{r_4}} \left(1- \sqrt{\dfrac{2r_2}{r_2 + r_4}}  \right).
 \end{equation}
 At this point, the payload is separated from the third stage rocket. 
 
@@ -451,28 +451,26 @@ Splitting the forward simulation allows the forward simulation of the return sta
 
 \section{Trajectory and Performance Analysis}
 
-\textcolor{red}{need to update this with more exergy specifics, and add sructural mass removal}
 LODESTAR provides the ability to investigate the optimised trajectory solution, to determine the driving factors behind the optimal trajectory shape, and to analyse the performance of the launch vehicle. 
-LODESTAR provides a variety of plotting tools, which present the optimised trajectory graphically, along with various performance indicators of the vehicles, including L/D, net specific impulse, and control time histories. 
-LODESTAR also calculates an exergy breakdown of the launch system, which can identify the critical sources of energy loss, and assist with quantifying the efficiency trade-offs between the stages. 
+For this purpose, LODESTAR provides a range of plotting tools, which present the optimised trajectory graphically, along with various performance indicators of each vehicle, including L/D, net specific impulse, and control time histories. LODESTAR also possesses the capability to graphically show the specific impulse and net specific impulse of the vehicle over the range of possible flight conditions, with overlays of the optimised trajectory path. These can be used to identify the performance region in which the vehicle is flying, in order to distinguish trends and trade-offs in the optimal flight path. 
+In addition to graphical tools, LODESTAR also calculates an energy usage analysis of the launch system, flying the optimal trajectory path. This includes calculating the exergy efficiency of each vehicle, and the overall launch system, as well as individual sources of energy losses.  
 
-Exergy expresses how much useful work is available to a system, and exergy efficiency quantifies how well a system utilises the available work. Exergy is lost due to inefficiencies within a launch system. These inefficiencies arise from many sources, including the energy being lost due to the inability of the propulsion system to convert all of the combustion energy to thrust, the energy which must be used to overcome drag, and energy being lost due to manoeuvring. Exergy efficiency is an important parameter for analysing launch vehicles, allowing the relative efficiencies of each stage to be compared when the design or trajectory of a launch system is varied\cite{Gilbert2015}. The exergy efficiency of a stage of a launch system is expressed as the fraction of the fuel combustion energy which is turned into kinetic and potential energy during flight:
+Exergy expresses how much useful work is available to a system, and exergy efficiency quantifies how well a system utilises the available work. 
+ Exergy efficiency can show how well each stage is using its available energy, and assist with quantifying the efficiency trade-offs between the stages.
+ Exergy efficiency is an important parameter for analysing launch vehicles, allowing the relative efficiencies of each stage to be compared when the design or trajectory of a launch system is varied\cite{Gilbert2015}. The exergy efficiency of a stage of a launch system is expressed as the fraction of the fuel combustion energy which is turned into `useful' kinetic and potential energy during flight:
 \begin{equation}
-\eta_{exergy,stage} = 1 - \frac{\Delta m_{fuel}H_{fuel} - \Delta KE - \int mg dz}{\Delta m_{fuel}H_{fuel}},
+\eta_{exergy,stage} = 1 - \frac{\Delta m_{fuel}H_{fuel} - \Delta KE -\Delta PE + \Delta KE_{discarded} + \Delta PE_{discarded}}{\Delta m_{fuel}H_{fuel}},
 \end{equation}
-where $H_{fuel}$ is the heating value of the fuel, $KE$ is the change in the kinetic energy of the stage, and $\int mg dz$ is the change in potential energy of the stage over its trajectory.
+where $H_{fuel}$ is the heating value of the fuel, $\Delta KE$ is the change in the kinetic energy of the stage, $\Delta PE$ is the change in the potential energy of the stage over its trajectory, and $\Delta KE_{discarded} + \Delta PE_{discarded}$ is the energy imparted to the mass discarded at staging.
 \nomenclature{$H$}{Heating Value (J/kg)}
 \nomenclature{$KE$}{Kinetic Energy (J)}
 \nomenclature{$PE$}{Potential Energy (J)}
-This exergy efficiency expresses how efficiently each stage utilises its available fuel over each individual trajectory. However, this stage-based exergy efficiency does not account for the effects of the unused mass of each stage on the performance of the launch system. The total exergy efficiency of the launch system is calculated as the fraction of the total available energy which goes directly into placing the payload into orbit:
+This exergy efficiency expresses how efficiently each stage utilises its available fuel over each individual trajectory. However, this stage-based exergy efficiency does not account for the effects of the unused mass of the successive stages on the performance of the launch system, ie. the efficiency of each stage is a measure of how well it accelerates the next stage. The total exergy efficiency of the launch system is calculated as the fraction of the total available energy which goes directly into placing the payload into orbit:
 \begin{equation}
 \eta_{exergy} = \frac{\Delta KE_{payload} + \Delta PE_{payload}}{\sum_{stage} \Delta m_{fuel}H_{fuel}}.
 \end{equation}
 This total exergy efficiency expresses how efficiently the launch system as a whole is able to accelerate the payload to orbit. 
 Within this work, exergy efficiency is expressed as the percentage of total exergy utilised, \%$\eta$, ie. $\eta_{exergy} \times 100$.
-
-
-
 
 
 
@@ -484,4 +482,4 @@ Each stage of the launch system is simulated individually within LODESTAR, eithe
 The bounds of each stage have been chosen so as to provide suitable limits to the dynamics of the system, and the payload-to-orbit capability of the system has been set as the end cost function of the optimal control problem. 
 The state and control variables of each stage were detailed, along with the state, event and path constraints.
 The capability of LODESTAR to verify the optimised solution was presented, including analysis using the necessary conditions of optimality, as well as forward simulation comparisons.
-
+Finally, the trajectory and vehicle performance analysis capabilities of LODESTAR were presented, which include graphical tools, as well as energy analysis capabilities. 

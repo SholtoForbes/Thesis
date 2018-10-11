@@ -206,17 +206,6 @@ The SPARTAN reaches 1km altitude at -26.7$^\circ$ trajectory angle and 120.0m/s 
 
 \section{Energy Usage Analysis}
 
-An energy usage analysis is conducted for a maximum payload-to-orbit trajectory, including the fly-back of the SPARTAN. This is compared to the energy usage breakdown of the maximum payload-to-orbit trajectory, without the fly-back of the SPARTAN, in Table \ref{tab:effStandard}. Similarly to Section \ref{sec:exergy1}, the energy used to accelerate the payload is shown, along with the energy imparted to the successive stages; the energy used overcoming drag; the energy used imparting energy to the structural mass of each stage, which is separated; and the energy lost due to propulsion inefficiency. 
-
-
-
-The first stage rocket starts with a larger fuel mass when the fly-back of the SPARTAN is included, and so starts with a larger fuel exergy. Overall, more of the energy of the first stage is imparted upon the combination of the payload, SPARTAN. and third stages, when SPARTAN fly-back is included (6.6\%, 14.37GJ, compared to 6.292\%, 13.12GJ, without SPARTAN fly-back). This is due to the rocket flying a more efficient trajectory, releasing the payload, SPARTAN, and third stage at a higher altitude and velocity.
-
-The SPARTAN flies a slightly less efficient trajectory when fly-back is included, due to the less favourable separation conditions, and the high banking throughout the acceleration. 
-The return of the SPARTAN reduces the fuel, and thus the exergy, available to the SPARTAN during ascent, causing less energy to be imparted to the payload and third stage, compared to the trajectory without fly-back. 
-The energy necessary to return the SPARTAN to its initial launch location is provided by both the fuel used during the return (32.15GJ), as well as the kinetic and potential energy imparted upon the SPARTAN during its ascent (18.40GJ). Significantly more energy is required to overcome drag during the return (30.94GJ) than is available from the kinetic and potential energy of the SPARTAN (18.40 GJ), illustrating the necessity for the scramjet engines to be ignited during the return flight. 
-
-The third stage is released from a lower, slower separation point, when fly-back is included, causing the efficiency of the third stage to decrease over all metrics. The propulsive inefficiency losses show a larger increase than the other sources of energy loss, due to the lower velocity of the separation point, which decresaes the propulsive efficiency of the third stage (illustrated by Equation \ref{eq:rocketeff}). 
 
 \begin{table}[ht]
 	\centering
@@ -237,14 +226,14 @@ The third stage is released from a lower, slower separation point, when fly-back
 		\textcolor{red}{KE + PE of  2$^{nd}$ \& 3$^{rd}$ Stage}
 		& \firstWnextStageStandardNoReturn \% (12.87 GJ) & \firstWnextStageStandard \% (14.12 GJ)
 		\\
-			\textcolor{red}{Overcoming Drag} 
-			& \WDoneStandardNoReturn \% (3.44 GJ) & \WDoneStandard \% (2.92 GJ)
-			\\
-			\textcolor{red}{KE + PE of 1$^{st}$ Stage Structural Mass} 
-			& \WoneStandardNoReturn \% (2.19 GJ) & \WoneStandard \% (2.39 GJ)
-			\\
-	
-	
+		\textcolor{red}{Overcoming Drag} 
+		& \WDoneStandardNoReturn \% (3.44 GJ) & \WDoneStandard \% (2.92 GJ)
+		\\
+		\textcolor{red}{KE + PE of 1$^{st}$ Stage Structural Mass} 
+		& \WoneStandardNoReturn \% (2.19 GJ) & \WoneStandard \% (2.39 GJ)
+		\\
+		
+		
 		\textcolor{red}{Propulsion Inefficiency} 
 		& \PlossoneCombinedStandardNoReturn \% (189.78 GJ) & \PlossoneCombinedStandard \% (197.96 GJ)
 		\\ 
@@ -272,13 +261,13 @@ The third stage is released from a lower, slower separation point, when fly-back
 		\textbf{Return Fuel Exergy} 
 		& - & \textbf{\returnEnergyStandard} GJ
 		\\
-				KE + PE of SPARTAN Structural Mass
-				& - & \WreturnStandard \% (18.40 GJ)
-				\\
+		KE + PE of SPARTAN Structural Mass
+		& - & \WreturnStandard \% (18.40 GJ)
+		\\
 		\textcolor{red}{Overcoming Drag}
 		& - & \WDreturnStandard \% (30.94 GJ)
 		\\
-
+		
 		\textcolor{red}{Propulsion Inefficiency}  
 		& - & \PlossreturnCombinedStandard \% (19.61 GJ)
 		\\
@@ -287,7 +276,7 @@ The third stage is released from a lower, slower separation point, when fly-back
 		\textbf{Third Stage Fuel Exergy}  
 		& \textbf{\thirdEnergyStandardNoReturn} GJ & \textbf{\thirdEnergyStandard} GJ
 		\\
-		\textcolor{red}{KE + PE of Payload}  
+		\textcolor{blue}{KE + PE of Payload}  
 		&\thirddExergyEffStandardNoReturn \% (6.42 GJ) &\thirddExergyEffStandard \% (5.83 GJ)
 		\\
 		\textcolor{red}{Overcoming Drag}  
@@ -312,6 +301,24 @@ The third stage is released from a lower, slower separation point, when fly-back
 	\caption{An energy usage breakdown of the ascent trajectories, both with, and without, SPARTAN fly-back (Cases 11 \& 2). Blue indicates a 'productive' energy usage, whereas red indicates energy 'wastage'. Negative energy indicates energy being supplied.}
 	\label{tab:effStandard}
 \end{table}
+
+
+An energy usage analysis is conducted for a maximum payload-to-orbit trajectory, including the fly-back of the SPARTAN. This is compared to the energy usage breakdown of the optimised trajectory without fly-back of the SPARTAN in Table \ref{tab:effStandard}. Similarly to Section \ref{sec:exergy1}, the energy used to accelerate the payload is shown, along with the energy imparted to the successive stages; the energy used overcoming drag; the energy used imparting energy to the structural mass of each stage, which is separated; and the energy lost due to propulsion inefficiency. 
+
+
+
+The first stage rocket starts with a larger fuel mass when the fly-back of the SPARTAN is included, and thus starts with a larger fuel exergy. Overall, when the fly-back is included, more of the exergy of the first stage is utilised imparting energy upon the combination of the payload and the successive stages, at 6.6\% (14.37GJ), compared to 6.292\% ( 13.12GJ) without SPARTAN fly-back. This is due to the rocket flying a more efficient trajectory, with lower drag and propulsive losses, terminating at a higher altitude and velocity.
+
+ 
+When flying a trajectory where the SPARTAN's fly-back is included, the drag losses during the ascent of the SPARTAN consist of a larger percentage of the fuel exergy usage  (\WDsecondStandard \%, compared to \WDsecondStandardNoReturn \% without fly-back). These increased drag losses are due to the less favourable first stage-SPARTAN separation conditions, and the high banking throughout the acceleration. However, the percentage of energy loss due to propulsive inefficiency is lower when fly-back is included, at \PlosssecondCombinedStandard \%, compared to \PlosssecondCombinedStandardNoReturn \% without fly-back. This is due to the lower total acceleration of the SPARTAN when fly-back is included, which results in flight over a more efficient propulsion regime. 
+Overall, when the fly-back is included, the SPARTAN imparts a larger percentage of its available energy to the payload and third stage, at 5.196\%, compared to 4.718\% without fly-back.
+However, the fly-back of the SPARTAN reduces the fuel, and thus the fuel exergy, available to the SPARTAN during ascent, causing less total energy to be imparted to the payload and third stage (7.47GJ), compared to the trajectory without fly-back (8.84GJ). 
+This results in the third stage separating at a lower velocity, and at a lower altitude. This lower, slower separation point, when fly-back is included, causes the losses of the third stage to increase from all sources. The propulsive inefficiency losses are particularly affected, increasing from \PlossthreeCombinedStandard \% (17.80 GJ) without fly-back to \PlossthreeCombinedStandardNoReturn \% (17.09 GJ) with fly-back, due to the lower velocity of the separation point, which decreases the propulsive efficiency of the third stage (illustrated by Equation \ref{eq:rocketeff}).
+
+The energy necessary to return the SPARTAN to its initial launch location is provided by both the fuel used during the return (32.15GJ), as well as the kinetic and potential energy imparted upon the SPARTAN during its ascent (18.40GJ). Significantly more energy is required to overcome drag during the return (30.94GJ) than is available from the kinetic and potential energy of the SPARTAN (18.40 GJ), illustrating the necessity for igniting the scramjet engines during the return flight. 
+
+
+
 
 
 \section{Design Sensitivity Analysis}\label{sec:sensitivity}
@@ -349,7 +356,6 @@ During simulations, it was observed that on occasion, the optimal return traject
 
 \subsection{Case 12: Dynamic Pressure Variation with Fly-Back Inclusion}
 
-\textcolor{red}{redo all tables}
 \begin{table}[ht]
 	\centering
 	\begin{tabular}{l c c c c c c} 
@@ -528,7 +534,7 @@ Table \ref{tab:qvarreturn} shows a summary of the key parameters of each optimis
 The overall exergy efficiency of the system increases as the maximum dynamic pressure increases, by +0.083$\eta$\% at 60kPa, and decreases as the maximum dynamic pressure decreases, by -0.067$\eta$\% at 40kpa. 
 No significant variation is observed between sensitivity studies with or without the fly-back included in the sensitivity of the launch system to the maximum dynamic pressure of the SPARTAN, by percentage.
 
-No trends are observed in the exergy efficiencies of the first stage or SPARTAN due to maximum dynamic pressure variation, when fly-back is included. Compared to the sensitivity study with no fly-back, the trade-offs between the efficiencies of the stages include the manoeuvrability of the SPARTAN, which dictates the fuel used during the return flight. This additional factor produces more complicated energy trade-offs, resulting in differing optimal trajectory shapes. This can particularly be observed in the 45kPa maximum dynamic pressure trajectory, which exhibits significantly different trade-offs between each stage, when compared to the other cases. 
+When fly-back is included, no trends are observed in the exergy efficiencies of the first stage or SPARTAN, due to maximum dynamic pressure variation. Compared to the sensitivity study with no fly-back, the trade-offs between the efficiencies of the stages include the manoeuvrability of the SPARTAN, which dictates the fuel used during the return flight. This additional factor produces more complicated energy trade-offs, resulting in differing optimal trajectory shapes. This can particularly be observed in the 45kPa maximum dynamic pressure trajectory, which exhibits significantly different trade-offs between each stage, when compared to the other cases. 
 
  The 45kPa maximum dynamic pressure simulation shows a low exergy efficiency for the first stage than would be suggested by the general exergy efficiency trends. 
  However, the 45kPa simulation trades the performance of the first stage to achieve greater manoeuvrability at the beginning of the SPARTAN's trajectory, resulting in less fuel being used during fly-back, and a higher overall exergy efficiency for the SPARTAN. The first stage-SPARTAN separation occurs at a lower altitude and trajectory angle compared to the other simulations, allowing the acceleration to be achieved more quickly at the start of the trajectory, and enabling the SPARTAN to manoeuvre more effectively at the beginning of its trajectory. 
@@ -721,7 +727,7 @@ Increasing the drag of the SPARTAN by 10\% decreases the payload-to-orbit by -14
 The sensitivity to variations in the SPARTAN's aerodynamics is decreased when compared to the sensitivity study with no fly-back inclusion, down to -1.5 $\frac{\Delta kg}{\Delta\% C_{d}}$ (-0.9$\frac{\Delta \%}{\Delta\% C_{d}}$) compared to -1.9$\frac{\Delta kg}{\Delta\% C_{d}}$  (-0.99$\frac{\Delta \%}{\Delta\% C_{d}}$). 
 This is due to the increased drag decreasing the total acceleration, which in turn decreases the ground distance covered during the ascent, offsetting the detrimental effects of the increased drag on the performance of the launch system.
 
-The exergy efficiencies of all three stages are decreased significantly as the drag of the SPARTAN is increased. This decrease in efficiency is due to the increased drag losses of the first stage and SPARTAN, \WDoneCdOneHundredTen\% and \WDsecondCdOneHundredTen\% respectively at 110\%$C_D$, and \WDoneCdNinety\% \WDsecondCdNinety\% respectively at 90\%$C_D$, and the increased propulsive inefficiency losses of the third stage when released from a lower velocity, \PlossthreeCombinedCdOneHundredTen\% at 110\%$C_D$, and \PlossthreeCombinedCdNinety at 90\%$C_D$.
+The exergy efficiencies of all three stages are decreased significantly as the drag of the SPARTAN is increased. This decrease in efficiency is due to the increased drag losses of the first stage and SPARTAN, \WDoneCdOneHundredTen\% and \WDsecondCdOneHundredTen\% respectively at 110\%$C_D$, and \WDoneCdNinety\% and \WDsecondCdNinety\% respectively at 90\%$C_D$, and the increased propulsive inefficiency losses of the third stage when released from a lower velocity, \PlossthreeCombinedCdOneHundredTen\% at 110\%$C_D$, and \PlossthreeCombinedCdNinety at 90\%$C_D$.
 As was observed in the drag sensitivity study with no fly-back, the SPARTAN-third stage separation angle shows a general increase as the drag is increased, increasing by +0.7$^\circ$ (+6.4\%) at 110\% drag, and decreasing by -0.2$^\circ$ (-1.8\%) at 90\% drag. In addition, the altitude of the SPARTAN-third stage separation shows a clear trend, decreasing slightly as the drag of the SPARTAN is increased, by -0.1km (-0.24\%) at 110\% drag, and increasing slightly as the drag is decreased, by +0.79km (+1.93\%) at 90\% drag.  
 The release altitude and angle of attack serve to initiate the first skip of the return trajectory in a consistent manner, so that the shape of the initial skip is very similar with drag variation. In all cases the angle of attack is reduced to 0$^\circ$ immediately during return to lessen the size of the initial skip, and is then raised to close to the maximum of 10$^\circ$ to prevent the dynamic pressure limit being exceeded. This consistency indicates that the initial skip of the return flight is driving the conditions at SPARTAN-third stage release, and that it is primarily the control and structural limitations, rather than the aerodynamics of the SPARTAN, which determine the shape of this skip. 
 

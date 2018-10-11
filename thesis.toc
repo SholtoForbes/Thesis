@@ -73,34 +73,34 @@
 \contentsline {section}{\numberline {5.3}Energy Usage Analysis}{107}{section.5.3}
 \contentsline {section}{\numberline {5.4}Sensitivity Analysis}{109}{section.5.4}
 \contentsline {subsection}{\numberline {5.4.1}Case 3: Dynamic Pressure Sensitivity}{110}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Case 4: SPARTAN Drag Sensitivity}{112}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.2}Case 4: SPARTAN Drag Sensitivity}{111}{subsection.5.4.2}
 \contentsline {subsection}{\numberline {5.4.3}Case 5: C-REST Engine Specific Impulse Sensitivity}{113}{subsection.5.4.3}
 \contentsline {subsection}{\numberline {5.4.4}Case 6: SPARTAN Mass Sensitivity}{114}{subsection.5.4.4}
-\contentsline {subsection}{\numberline {5.4.5}Case 7: SPARTAN Fuel Mass Sensitivity}{116}{subsection.5.4.5}
+\contentsline {subsection}{\numberline {5.4.5}Case 7: SPARTAN Fuel Mass Sensitivity}{115}{subsection.5.4.5}
 \contentsline {subsection}{\numberline {5.4.6}Case 8: Third Stage Mass Sensitivity}{117}{subsection.5.4.6}
 \contentsline {subsection}{\numberline {5.4.7}Case 9: Third Stage Specific Impulse Sensitivity}{118}{subsection.5.4.7}
-\contentsline {subsection}{\numberline {5.4.8}Case 10: Third Stage Drag Sensitivity}{120}{subsection.5.4.8}
+\contentsline {subsection}{\numberline {5.4.8}Case 10: Third Stage Drag Sensitivity}{119}{subsection.5.4.8}
 \contentsline {section}{\numberline {5.5}Comparison of Design Parameters}{121}{section.5.5}
 \contentsline {section}{\numberline {5.6}Summary}{123}{section.5.6}
-\contentsline {chapter}{\numberline {6}Optimised Trajectory Including Fly-Back}{127}{chapter.6}
-\contentsline {section}{\numberline {6.1}Case 11: Combined SPARTAN Ascent-Descent \& Third Stage}{128}{section.6.1}
-\contentsline {section}{\numberline {6.2}Ascent Trajectory}{129}{section.6.2}
-\contentsline {section}{\numberline {6.3}Fly-Back Trajectory}{135}{section.6.3}
-\contentsline {subsubsection}{ Initial Turn}{135}{section*.133}
-\contentsline {subsubsection}{ Boost-Skip Phase}{135}{section*.134}
-\contentsline {subsubsection}{ Approach}{136}{section*.135}
-\contentsline {section}{\numberline {6.4}Energy Usage Analysis}{136}{section.6.4}
-\contentsline {section}{\numberline {6.5}Design Sensitivity Analysis}{137}{section.6.5}
-\contentsline {subsection}{\numberline {6.5.1}Case 12: Dynamic Pressure Variation with Fly-Back Inclusion}{139}{subsection.6.5.1}
-\contentsline {subsection}{\numberline {6.5.2}Case 13: SPARTAN Drag Sensitivity with Fly-Back Inclusion}{141}{subsection.6.5.2}
-\contentsline {subsection}{\numberline {6.5.3}Case 14: C-REST Specific Impulse Variation with Fly-Back Inclusion}{143}{subsection.6.5.3}
-\contentsline {subsection}{\numberline {6.5.4}Case 15: SPARTAN Mass Sensitivity}{144}{subsection.6.5.4}
-\contentsline {subsection}{\numberline {6.5.5}Case 16: SPARTAN Fuel Mass Sensitivity}{145}{subsection.6.5.5}
-\contentsline {subsection}{\numberline {6.5.6}Case 17: Third Stage Mass Sensitivity}{146}{subsection.6.5.6}
-\contentsline {subsection}{\numberline {6.5.7}Case 18: Third Stage $I_{SP}$ Sensitivity}{148}{subsection.6.5.7}
-\contentsline {section}{\numberline {6.6}Comparison of Sensitivities}{149}{section.6.6}
-\contentsline {section}{\numberline {6.7}Summary}{151}{section.6.7}
-\contentsline {chapter}{\numberline {7}Conclusions}{153}{chapter.7}
+\contentsline {chapter}{\numberline {6}Optimised Trajectory Including Fly-Back}{125}{chapter.6}
+\contentsline {section}{\numberline {6.1}Case 11: Combined SPARTAN Ascent-Descent \& Third Stage}{126}{section.6.1}
+\contentsline {section}{\numberline {6.2}Ascent Trajectory}{127}{section.6.2}
+\contentsline {section}{\numberline {6.3}Fly-Back Trajectory}{133}{section.6.3}
+\contentsline {subsubsection}{ Initial Turn}{133}{section*.133}
+\contentsline {subsubsection}{ Boost-Skip Phase}{133}{section*.134}
+\contentsline {subsubsection}{ Approach}{134}{section*.135}
+\contentsline {section}{\numberline {6.4}Energy Usage Analysis}{134}{section.6.4}
+\contentsline {section}{\numberline {6.5}Design Sensitivity Analysis}{136}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}Case 12: Dynamic Pressure Variation with Fly-Back Inclusion}{138}{subsection.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}Case 13: SPARTAN Drag Sensitivity with Fly-Back Inclusion}{139}{subsection.6.5.2}
+\contentsline {subsection}{\numberline {6.5.3}Case 14: C-REST Specific Impulse Variation with Fly-Back Inclusion}{141}{subsection.6.5.3}
+\contentsline {subsection}{\numberline {6.5.4}Case 15: SPARTAN Mass Sensitivity}{142}{subsection.6.5.4}
+\contentsline {subsection}{\numberline {6.5.5}Case 16: SPARTAN Fuel Mass Sensitivity}{143}{subsection.6.5.5}
+\contentsline {subsection}{\numberline {6.5.6}Case 17: Third Stage Mass Sensitivity}{145}{subsection.6.5.6}
+\contentsline {subsection}{\numberline {6.5.7}Case 18: Third Stage $I_{SP}$ Sensitivity}{146}{subsection.6.5.7}
+\contentsline {section}{\numberline {6.6}Comparison of Sensitivities}{147}{section.6.6}
+\contentsline {section}{\numberline {6.7}Summary}{149}{section.6.7}
+\contentsline {chapter}{\numberline {7}Conclusions}{151}{chapter.7}
 \contentsline {chapter}{\numberline {8}Recommendations for future work}{157}{chapter.8}
 \contentsline {chapter}{References}{159}{chapter*.145}
 \contentsline {chapter}{\numberline {A}Modelling and Simulation}{175}{appendix.A}
