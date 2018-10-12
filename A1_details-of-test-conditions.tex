@@ -183,7 +183,7 @@ The GPOPS-2 solution to the Brachistochrone problem is shown in Figure \ref{fig:
 	\centering
 \begin{tabular}{l c } 
 	\hline \textbf{Trajectory Condition}
-	&Value
+	& Value
 
 	\\
 	\hline \textbf{Payload to Orbit (kg)}
@@ -195,9 +195,6 @@ The GPOPS-2 solution to the Brachistochrone problem is shown in Figure \ref{fig:
 	\hline 
 	\textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
 	& \textbf{\firstExergyEffqconstrainedNoReturn}
-	\\
-	\textbf{1$^{st}$ Stage Destroyed Exergy (GJ)}
-	& \textbf{\firstExergyDestroyedqconstrainedNoReturn}
 	\\
 	\textbf{Separation Alt, 1$\rightarrow$2 (km)}
 	& \firstsecondSeparationAltqconstrainedNoReturn
@@ -211,9 +208,6 @@ The GPOPS-2 solution to the Brachistochrone problem is shown in Figure \ref{fig:
 	\hline 
 	\textbf{2$^{nd}$ Stage $\eta_{exergy}$ (\%)}
 	& \textbf{\secondExergyEffqconstrainedNoReturn}
-	\\
-	\textbf{2$^{nd}$ Stage Destroyed Exergy (GJ)}
-	& \textbf{\secondExergyDestroyedqconstrainedNoReturn}
 	\\
 	\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 	& \secondthirdSeparationAltqconstrainedNoReturn
@@ -233,9 +227,6 @@ The GPOPS-2 solution to the Brachistochrone problem is shown in Figure \ref{fig:
 	\hline 
 	\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
 	& \textbf{\thirddExergyEffqconstrainedNoReturn}
-	\\
-	\textbf{3$^{rd}$ Stage Destroyed Exergy (GJ)}
-	& \textbf{\thirdExergyDestroyedqconstrainedNoReturn}
 	\\
 	\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 	& \thirdqOverFiveqconstrainedNoReturn
@@ -329,6 +320,7 @@ In this section, an alternate southerly launch is investigated for the rocket-sc
 	\begin{tabular}{l c} 
 		\hline \textbf{Trajectory Condition}
 		& Value
+
 		\\
 		\hline \textbf{Payload to Orbit (kg)}
 		& \textbf{\PayloadToOrbitAlternate}
@@ -346,7 +338,7 @@ In this section, an alternate southerly launch is investigated for the rocket-sc
 		\textbf{Separation v, 1$\rightarrow$2 (m/s)}
 		& \firstsecondSeparationvAlternate
 		\\
-		\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+		\textbf{Separation $\gamma$, 1$\rightarrow$2 (deg)}
 		& \firstsecondSeparationgammaAlternate
 		\\
 		\hline 
@@ -362,17 +354,17 @@ In this section, an alternate southerly launch is investigated for the rocket-sc
 		\textbf{Separation $\gamma$, 2$\rightarrow$3 (deg)}
 		& \secondthirdSeparationgammaAlternate
 		\\
-		\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
-		& \secondthirdSeparationqAlternate
-		\\
-		\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
-		& \secondthirdSeparationLDAlternate
-		\\
 		\textbf{2$^{nd}$ Stage Flight Time (s)}
 		& \secondFlightTimeAlternate
 		\\
+		\textbf{2$^{nd}$ Stage Distance Flown (km)}
+		& \SecondDistAlternate
+		\\
 		\textbf{2$^{nd}$ Stage Return Fuel (kg)}
 		& \returnFuelAlternate
+		\\
+		\textbf{2$^{nd}$ Stage Return Distance (km)}
+		& \returnDistAlternate
 		\\
 		\hline 
 		\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
@@ -726,7 +718,7 @@ This section contains trajectory plot comparisons for the sensitivity studies pe
 
 This section presents the sensitivity of the launch system performance to variations in the viscous drag of the SPARTAN. This sensitivity analysis is intended as a reference, to indicate the magnitude of variations in the viscous drag of the SPARTAN due to variations in modelling methods, and is unlikely to be indicative of any physical design variations.
 The viscous drag component of the SPARTAN's aerodynamics is calculated using flat plate correlations, which require an estimation of the laminar to turbulent transition point on the body of the SPARTAN\cite{Ward2018}. This transition point is difficult to estimate to a high degree of accuracy, and can have a significant effect on the viscous drag of an aircraft\cite{Ward2018}.
-The viscous drag component of the SPARTAN's aerodynamics is varied, in order to assess the impact of the viscous drag model used. Optimal trajectories are calculated with the viscous drag set at levels of 20\%, 50\%, 107\% and 115\% of the baseline, which correspond to the possible viscous drag range due to transition point variation. Table \ref{tab:viscous} details key trajectory parameters of the optimised trajectories, and Figures \ref{fig:SecondStageComparison-}, \ref{fig:ThirdStageComparison-} and \ref{fig:ReturnComparison-} show comparison plots of the optimised trajectories. The sensitivity of the launch system to the viscous drag of the SPARTAN is shown to be relatively low, indicating that the modelling process of the viscous drag is unlikely to have a large effect on the accuracy of the maximum payload-to-orbit solution.
+The viscous drag component of the SPARTAN's aerodynamics is varied, in order to assess the impact of the viscous drag model used. Optimal trajectories are calculated with the viscous drag set at levels of 20\%, 50\%, 107\% and 115\% of the baseline, which correspond to the possible viscous drag range due to transition point variation. Table \ref{tab:viscous} details key trajectory parameters of the optimised trajectories, and Figures \ref{fig:SecondStageComparison-}, \ref{fig:ThirdStageComparison-} and \ref{fig:ReturnComparison-} show comparison plots of the optimised trajectories. The sensitivity of the launch system to the viscous drag of the SPARTAN is shown to be relatively low, as the deviations in the viscous drag model are expected to be small, relative to the range tested. This low sensitivity indicating that the modelling process of the viscous drag is unlikely to have a large effect on the accuracy of the maximum payload-to-orbit solution.
 
 \begin{table}[ht]
 	\centering
@@ -761,7 +753,7 @@ The viscous drag component of the SPARTAN's aerodynamics is varied, in order to 
 		& \textbf{\totalExergyEffvCdStandard}
 		& \textbf{\totalExergyEffvCdOneHundredSeven}
 		& \textbf{\totalExergyEffvCdOneHundredFifteen}
-		& \textbf{-0.00022}
+		& \textbf{-0.00024}
 		\\
 		\hline 
 		\textbf{1$^{st}$ Stage $\eta_{exergy}$ (\%)}
@@ -788,7 +780,7 @@ The viscous drag component of the SPARTAN's aerodynamics is varied, in order to 
 		& \firstsecondSeparationvvCdOneHundredFifteen
 		& -
 		\\
-		\textbf{Separation $\gamma$, 1$\rightarrow$2 (m/s)}
+		\textbf{Separation $\gamma$, 1$\rightarrow$2 (deg)}
 		& \firstsecondSeparationgammavCdTwenty
 		& \firstsecondSeparationgammavCdFifty
 		& \firstsecondSeparationgammavCdStandard
@@ -803,7 +795,7 @@ The viscous drag component of the SPARTAN's aerodynamics is varied, in order to 
 		& \textbf{\secondExergyEffvCdStandard}
 		& \textbf{\secondExergyEffvCdOneHundredSeven}
 		& \textbf{\secondExergyEffvCdOneHundredFifteen}
-		& \textbf{-0.154}
+		& \textbf{-0.064}
 		\\
 		\textbf{Separation Alt, 2$\rightarrow$3 (km)}
 		& \secondthirdSeparationAltvCdTwenty
@@ -829,28 +821,20 @@ The viscous drag component of the SPARTAN's aerodynamics is varied, in order to 
 		& \secondthirdSeparationgammavCdOneHundredFifteen
 		&-0.1
 		\\
-		\textbf{Separation $q$, 2$\rightarrow$3(kPa)}
-		& \secondthirdSeparationqvCdTwenty
-		& \secondthirdSeparationqvCdFifty
-		& \secondthirdSeparationqvCdStandard
-		& \secondthirdSeparationqvCdOneHundredSeven
-		& \secondthirdSeparationqvCdOneHundredFifteen
-		&-0.17
-		\\
-		\textbf{2$^{nd}$ Stage L/D, 2$\rightarrow$3}
-		& \secondthirdSeparationLDvCdTwenty
-		& \secondthirdSeparationLDvCdFifty
-		& \secondthirdSeparationLDvCdStandard
-		& \secondthirdSeparationLDvCdOneHundredSeven
-		& \secondthirdSeparationLDvCdOneHundredFifteen
-		&-0.07
-		\\
 		\textbf{2$^{nd}$ Stage Flight Time (s)}
 		& \secondFlightTimevCdTwenty
 		& \secondFlightTimevCdFifty
 		& \secondFlightTimevCdStandard
 		& \secondFlightTimevCdOneHundredSeven
 		& \secondFlightTimevCdOneHundredFifteen
+		& -
+		\\
+		\textbf{2$^{nd}$ Stage Distance Flown (km)}
+		& \SecondDistvCdTwenty
+		& \SecondDistvCdFifty
+		& \SecondDistvCdStandard
+		& \SecondDistvCdOneHundredSeven
+		& \SecondDistvCdOneHundredFifteen
 		& -
 		\\
 		\textbf{2$^{nd}$ Stage Return Fuel (kg)}
@@ -861,6 +845,14 @@ The viscous drag component of the SPARTAN's aerodynamics is varied, in order to 
 		& \returnFuelvCdOneHundredFifteen
 		& -
 		\\
+		\textbf{2$^{nd}$ Stage Return Distance (km)}
+		& \returnDistvCdTwenty
+		& \returnDistvCdFifty
+		& \returnDistvCdStandard
+		& \returnDistvCdOneHundredSeven
+		& \returnDistvCdOneHundredFifteen
+		&-21.35
+		\\
 		\hline 
 		\textbf{3$^{rd}$ Stage $\eta_{exergy}$ (\%)}
 		& \textbf{\thirddExergyEffvCdTwenty}
@@ -868,7 +860,7 @@ The viscous drag component of the SPARTAN's aerodynamics is varied, in order to 
 		& \textbf{\thirddExergyEffvCdStandard}
 		& \textbf{\thirddExergyEffvCdOneHundredSeven}
 		& \textbf{\thirddExergyEffvCdOneHundredFifteen}
-		& -
+		& \textbf{-0.249}
 		\\
 		\textbf{3$^{rd}$ Stage $t$, $q >$ 5kpa (s)}
 		& \thirdqOverFivevCdTwenty
