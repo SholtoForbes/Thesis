@@ -3093,6 +3093,80 @@
     \field{year}{2015}
   \endentry
 
+  \entry{Eggers1957}{report}{}
+    \name{author}{3}{}{%
+      {{hash=EBAJ}{%
+         family={Eggers},
+         familyi={E\bibinitperiod},
+         given={By\bibnamedelima Alfred\bibnamedelima J},
+         giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim
+  J\bibinitperiod},
+      }}%
+      {{hash=AHJ}{%
+         family={Allen},
+         familyi={A\bibinitperiod},
+         given={H\bibnamedelima Julian},
+         giveni={H\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=NSE}{%
+         family={Neice},
+         familyi={N\bibinitperiod},
+         given={Stanford\bibnamedelima E},
+         giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{EBAJAHJNSE1}
+    \strng{fullhash}{EBAJAHJNSE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{October}
+    \field{title}{{A Comparative Analysis of the Performance of Long-Range
+  Hypervelocity Vehicles}}
+    \list{institution}{1}{%
+      {Ames Aeronautical Society}%
+    }
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Eggers1957.pdf:pdf
+    \endverb
+    \field{type}{techreport}
+    \field{year}{1957}
+  \endentry
+
+  \entry{Kanda2007}{article}{}
+    \name{author}{2}{}{%
+      {{hash=KT}{%
+         family={Kanda},
+         familyi={K\bibinitperiod},
+         given={Takeshi},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=HT}{%
+         family={Hiraiwa},
+         familyi={H\bibinitperiod},
+         given={Tetsuo},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KTHT1}
+    \strng{fullhash}{KTHT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.2514/1.31143
+    \endverb
+    \field{issn}{0021-8669}
+    \field{number}{6}
+    \field{pages}{2076\bibrangedash 2077}
+    \field{title}{{Evaluation of Effectiveness of Periodic Flight by a
+  Hypersonic Vehicle}}
+    \field{volume}{44}
+    \verb{file}
+    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Kanda2007.pdf:pdf
+    \endverb
+    \field{journaltitle}{Journal of Aircraft}
+    \field{year}{2007}
+  \endentry
+
   \entry{Jazra2013}{article}{}
     \name{author}{3}{}{%
       {{hash=JT}{%
@@ -6656,114 +6730,6 @@
     \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Gilbert.pdf:pdf
     \endverb
     \field{year}{2015}
-  \endentry
-
-  \entry{Spittle2003}{report}{}
-    \name{author}{1}{}{%
-      {{hash=SP}{%
-         family={Spittle},
-         familyi={S\bibinitperiod},
-         given={Peter},
-         giveni={P\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{SP1}
-    \strng{fullhash}{SP1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{abstract}{%
-    Options for access to Gas turbine technology%
-    }
-    \field{booktitle}{Physics Education}
-    \verb{doi}
-    \verb 10.1088/0031-9120/38/6/002
-    \endverb
-    \field{issn}{0031-9120}
-    \field{number}{6}
-    \field{pages}{504\bibrangedash 511}
-    \field{title}{{Gas Turbine Technology}}
-    \verb{url}
-    \verb http://iopscience.iop.org/0031-9120/38/6/002/pdf/0031-9120\_38\_6\_00
-    \verb 2.pdf
-    \endverb
-    \field{volume}{38}
-    \list{institution}{1}{%
-      {Concordia}%
-    }
-    \verb{file}
-    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Spittle.pdf:pdf
-    \endverb
-    \field{type}{techreport}
-    \field{year}{2003}
-  \endentry
-
-  \entry{Eggers1957}{article}{}
-    \name{author}{3}{}{%
-      {{hash=EBAJ}{%
-         family={Eggers},
-         familyi={E\bibinitperiod},
-         given={By\bibnamedelima Alfred\bibnamedelima J},
-         giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim
-  J\bibinitperiod},
-      }}%
-      {{hash=AHJ}{%
-         family={Allen},
-         familyi={A\bibinitperiod},
-         given={H\bibnamedelima Julian},
-         giveni={H\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-      {{hash=NSE}{%
-         family={Neice},
-         familyi={N\bibinitperiod},
-         given={Stanford\bibnamedelima E},
-         giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{EBAJAHJNSE1}
-    \strng{fullhash}{EBAJAHJNSE1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{number}{October}
-    \field{title}{{Technical Note 4046}}
-    \verb{file}
-    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Eggers1957.pdf:pdf
-    \endverb
-    \field{year}{1957}
-  \endentry
-
-  \entry{Kanda2007}{article}{}
-    \name{author}{2}{}{%
-      {{hash=KT}{%
-         family={Kanda},
-         familyi={K\bibinitperiod},
-         given={Takeshi},
-         giveni={T\bibinitperiod},
-      }}%
-      {{hash=HT}{%
-         family={Hiraiwa},
-         familyi={H\bibinitperiod},
-         given={Tetsuo},
-         giveni={T\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{KTHT1}
-    \strng{fullhash}{KTHT1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \verb{doi}
-    \verb 10.2514/1.31143
-    \endverb
-    \field{issn}{0021-8669}
-    \field{number}{6}
-    \field{pages}{2076\bibrangedash 2077}
-    \field{title}{{Evaluation of Effectiveness of Periodic Flight by a
-  Hypersonic Vehicle}}
-    \field{volume}{44}
-    \verb{file}
-    \verb :C$\backslash$:/Users/uqsforb1/Dropbox/phd/papers/Kanda2007.pdf:pdf
-    \endverb
-    \field{journaltitle}{Journal of Aircraft}
-    \field{year}{2007}
   \endentry
 
   \entry{Carlson1972}{article}{}

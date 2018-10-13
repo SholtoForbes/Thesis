@@ -138,7 +138,7 @@ The first stage rocket achieves an exergy efficiency of \firstExergyEffConstqNoR
 
 The constant dynamic pressure trajectory for the SPARTAN stage is shown in Figure \ref{fig:SecondStageConstq}, with key results summarised in Table \ref{tab:constqsummary}. After the separation of the first stage rocket, the SPARTAN flies north west over the Arafura Sea, and crosses West Papua before releasing the third stage rocket. Due to the clear objective of a constant dynamic pressure trajectory, any deviations from the target dynamic pressure are readily apparent, allowing the efficacy of the optimiser to be verified. 
 The constant dynamic pressure trajectory shows very close adherence to 50kPa dynamic pressure  throughout the trajectory (maximum 0.2\% deviation), indicating that flight at a constant dynamic pressure is able to be achieved by the SPARTAN.  
-Over the trajectory, the Mach number increases from 4.85 to 9.23, the velocity increases from \firstsecondSeparationvConstqNoReturn m/s to \secondthirdSeparationvConstqNoReturn m/s, and the flap deflection increases from $-3.2^\circ$ to $4.7^\circ$. At the beginning of the trajectory the equivalence ratio increases, as the capture limitations are relaxed with increasing Mach number. This causes the net specific impulse to increase, to a maximum of 1481s, during the first 169.3s flight time.  After this initial increase, the net specific impulse ($I_{sp_{net}} = \frac{T-D}{\dot{m}_f g}$) decreases over the trajectory, as the efficiency of the scramjet engines decreases. 
+Over the trajectory, the Mach number increases from 4.85 to 9.23, the velocity increases from \firstsecondSeparationvConstqNoReturn m/s to \secondthirdSeparationvConstqNoReturn m/s, and the flap deflection increases from $-3.2^\circ$ to $4.7^\circ$. The angles of attack of the SPARTAN are very low across the trajectory, generally between 0.5-0.7$^\circ$, indicating that the lift of the SPARTAN is high for this mission profile. At the beginning of the trajectory the equivalence ratio increases, as the capture limitations are relaxed with increasing Mach number. This causes the net specific impulse to increase, to a maximum of 1481s, during the first 169.3s flight time.  After this initial increase, the net specific impulse ($I_{sp_{net}} = \frac{T-D}{\dot{m}_f g}$) decreases over the trajectory, as the efficiency of the scramjet engines decreases. 
 Third stage release occurs at \secondFlightTimeConstqNoReturn s, at \secondthirdSeparationAltConstqNoReturn km altitude.
 
 \begin{figure}[ht!]
@@ -161,7 +161,7 @@ When this altitude is reached, the trajectory is circularised and a Hohmann tran
 
 This section presents the maximum payload-to-orbit trajectory for the rocket-scramjet-rocket launch system, with the SPARTAN able to deviate from its maximum dynamic pressure. 
 The optimal trajectory shape for a 50kPa dynamic pressure limited trajectory is shown in Figure \ref{fig:GroundTrackStandardNoReturn}, with detailed trajectory information for each stage shown in Figures \ref{fig:FirstStageStandardNoReturn} - \ref{fig:ThirdStageStandardNoReturn}, and key results summarised in Table \ref{tab:summaryStandardNoReturn}. The maximum payload-to-orbit trajectory shape involves the SPARTAN performing altitude raising manoeuvres, where the dynamic pressure of the SPARTAN is lowered from its maximum of 50kPa. These manoeuvres serve either to increase the net specific impulse of the SPARTAN, or to trade-off the efficiency of the SPARTAN in order to increase the efficiency of the first and third stages. 
-This payload-to-orbit optimised trajectory is able to deliver \PayloadToOrbitStandardNoReturn kg of payload to heliocentric orbit, an increase of 16.3\% over the constant, 50kPa dynamic pressure result (Case 1).
+This payload-to-orbit optimised trajectory is able to deliver \PayloadToOrbitStandardNoReturn kg of payload to heliocentric orbit, an increase of 19.5\% over the constant, 50kPa dynamic pressure result (Case 1).
 
 \begin{figure}[ht!]
 	
@@ -440,7 +440,7 @@ When necessary for the trajectory simulations within this section, it is assumed
 All optimised trajectories within this section use the full amount of fuel available to the SPARTAN vehicle. 
 
 
-\subsection{Case 3: Dynamic Pressure Sensitivity}\label{sec:qvariation}
+\subsection{Case 3: Maximum Dynamic Pressure Sensitivity}\label{sec:qvariation}
 
 
 \begin{table}[ht!]
@@ -1879,7 +1879,7 @@ However, variations in the size of the third stage rocket are likely to require 
 
 In this chapter, LODESTAR was used to design the trajectory of the rocket-scramjet-rocket multi-stage launch system incorporating the SPARTAN scramjet-powered accelerator. 
 A trajectory was simulated in which the SPARTAN stage flies at a constant dynamic pressure, producing \PayloadToOrbitConstqNoReturn kg of payload-to-orbit. This trajectory served to verify LODESTAR and the simulation of  the launch system, as well as providing a baseline trajectory for comparison. 
-A trajectory optimised for maximum payload-to-orbit was then calculated, which increased the payload mass to sun synchronous orbit to \PayloadToOrbitStandard kg (an increase of 16.3\%) compared to the constant dynamic pressure trajectory.
+A trajectory optimised for maximum payload-to-orbit was then calculated, which increased the payload mass to sun synchronous orbit to \PayloadToOrbitStandardNoReturn kg (an increase of 19.5\%) compared to the constant dynamic pressure trajectory.
   The optimal flight path indicates that the optimal scramjet flight path for a system transitioning between separate airbreathing and rocket-powered stages involves the SPARTAN flying at less than its maximum dynamic pressure at three separate points along the trajectory. 
   Initially, the first stage-SPARTAN separation occurs at a higher trajectory angle than in the constant dynamic pressure trajectory, causing the SPARTAN to fly at lower dynamic pressure, and trading off the exergy efficiency of the SPARTAN for an increase in the exergy efficiency and fuel mass of the first stage, for an overall performance gain. 
   The optimal flight path then exhibits an altitude raising manoeuvre in the middle of the trajectory, which improves the exergy efficiency of the SPARTAN by a very minor +0.003\%$\eta$ (+0.03\%). 

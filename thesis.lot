@@ -6,13 +6,13 @@
 \contentsline {table}{\numberline {2.3}{\ignorespaces Summary of programs capable of pseudospectral optimisation.\relax }}{35}{table.caption.48}
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {3.1}{\ignorespaces Mass breakdown of the modified SPARTAN vehicle.\relax }}{44}{table.caption.55}
-\contentsline {table}{\numberline {3.2}{\ignorespaces First Stage Engine Properties\cite {Wade2017}.\relax }}{63}{table.caption.82}
-\contentsline {table}{\numberline {3.3}{\ignorespaces Third stage heat shield breakdown.\relax }}{68}{table.caption.88}
-\contentsline {table}{\numberline {3.4}{\ignorespaces Third stage fuel distribution.\relax }}{68}{table.caption.89}
+\contentsline {table}{\numberline {3.2}{\ignorespaces First Stage Engine Properties\cite {Wade2017}.\relax }}{62}{table.caption.82}
+\contentsline {table}{\numberline {3.3}{\ignorespaces Third stage heat shield breakdown.\relax }}{67}{table.caption.88}
+\contentsline {table}{\numberline {3.4}{\ignorespaces Third stage fuel distribution.\relax }}{67}{table.caption.89}
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {4.1}{\ignorespaces Segment coupling conditions for combined trajectory optimisation.\relax }}{80}{table.caption.98}
-\contentsline {table}{\numberline {4.2}{\ignorespaces Optimisation setup of the first stage phase. \relax }}{82}{table.caption.99}
-\contentsline {table}{\numberline {4.3}{\ignorespaces Optimisation setup of the second stage ascent. $^*$ This is only used in the constant dynamic pressure simulation.\relax }}{83}{table.caption.100}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Optimisation setup of the first stage phase. \relax }}{81}{table.caption.99}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Optimisation setup of the second stage ascent. $^*$ This is only used in the constant dynamic pressure simulation.\relax }}{82}{table.caption.100}
 \contentsline {table}{\numberline {4.4}{\ignorespaces Optimisation setup of the second stage return.\relax }}{84}{table.caption.101}
 \contentsline {table}{\numberline {4.5}{\ignorespaces Optimisation setup of the third stage powered ascent.\relax }}{85}{table.caption.102}
 \addvspace {10\p@ }
@@ -34,7 +34,7 @@
 \contentsline {table}{\numberline {6.4}{\ignorespaces Comparison of key trajectory parameters with variation in the drag of the SPARTAN, with fly-back (Case 13).\relax }}{139}{table.caption.138}
 \contentsline {table}{\numberline {6.5}{\ignorespaces Comparison of key trajectory parameters with variation in the specific impulse of the C-REST engines, with fly-back (Case 14).\relax }}{141}{table.caption.139}
 \contentsline {table}{\numberline {6.6}{\ignorespaces Comparison of key trajectory parameters with variation in the structural mass of the SPARTAN, with fly-back (Case 15).\relax }}{142}{table.caption.140}
-\contentsline {table}{\numberline {6.7}{\ignorespaces Comparison of key trajectory parameters with variation in the fuel mass of the SPARTAN, with fly-back (Case 16).\relax }}{143}{table.caption.141}
+\contentsline {table}{\numberline {6.7}{\ignorespaces Comparison of key trajectory parameters with variation in the fuel mass of the SPARTAN, with fly-back (Case 16).\relax }}{144}{table.caption.141}
 \contentsline {table}{\numberline {6.8}{\ignorespaces Comparison of key trajectory parameters with variation in the mass of the third stage, with fly-back (Case 17).\relax }}{145}{table.caption.142}
 \contentsline {table}{\numberline {6.9}{\ignorespaces Comparison of key trajectory parameters with variation in the specific impulse of the third stage, with fly-back (Case 18).\relax }}{146}{table.caption.143}
 \addvspace {10\p@ }

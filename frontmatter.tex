@@ -51,25 +51,24 @@
  Significant work has previously been carried out on the design and shape optimisation of the scramjet-powered stage of the launch system, designated the SPARTAN. 
  However, the first stage has not been designed, and the third stage previously used an Aerojet Rocketdyne RL-10-3A motor, which is a costly, pump-fed motor. 
  A first stage rocket is developed, based on a Falcon-1e scaled down lengthwise to 8.5m, an appropriate size to accelerate the SPARTAN to the minimum operable conditions of the scramjet engines. The third stage rocket is redesigned, to be powered by a cost effective SpaceX Kestrel upper stage motor. 
- The aerodynamics of the first stage and the SPARTAN are simulated using inviscid CFD, along with a viscous correction, to produce accurate aerodynamic databases.  
- The aerodynamics of the third stage are modelled using Missile Datcom.
+ The aerodynamics of the first stage and the SPARTAN are simulated using computational fluid dynamics, to produce accurate aerodynamic databases. The aerodynamics of the control surfaces of the SPARTAN are simulated, and trimmed aerodynamic databases are created.   
+ The aerodynamics of the third stage are modelled using Missile Datcom, and propulsion models are developed for all three stages. The aerodynamic and performance models are used to create an accurate six degree of freedom simulation of the launch system. 
  
- A package is created to calculate the maximum payload-to-orbit trajectory of the rocket-scramjet-rocket launch system in six degrees of freedom, designated LODESTAR.
- In order to determine the maximum payload-to-orbit trajectory shape, optimal control theory is used. For this, LODESTAR utilises GPOPS-2 a pseudospectral method optimal control software. 
- The launch trajectory is initially simulated without the fly-back of the SPARTAN, assuming that the SPARTAN lands at some position downrange. A launch trajectory is first simulated in which the SPARTAN flies at maximum dynamic pressure, for comparison with previous reference cases. In order for the SPARTAN to fly at its maximum dynamic pressure for the duration of its trajectory, the first stage pitches rapidly, flying at negative angle of attack. The SPARTAN then flies at close to horizontal flight, releasing the third stage at a low trajectory angle. 
+ A package is developed to calculate the maximum payload-to-orbit trajectory of the rocket-scramjet-rocket launch system, designated LODESTAR, which uses optimal control theory to determine an optimal trajectory shape. For this, LODESTAR utilises GPOPS-2, a pseudospectral method optimal control software. LODESTAR configures GPOPS-2 to calculate optimised trajectory profiles, and provides the dynamic simulation of each vehicle, along with tools to verify the optimised solutions produced by GPOPS-2. 
  
-The maximum payload-to-orbit trajectory of the launch system is calculated, and is found to differ significantly from the trajectory in which the SPARTAN flies at maximum dynamic pressure. 
+ The launch trajectory is initially simulated assuming that the SPARTAN lands at some position downrange. A launch trajectory is simulated in which the SPARTAN flies at maximum dynamic pressure, for use as a reference and verification case. In order to reach separation conditions which allow the SPARTAN to fly at its maximum dynamic pressure for the duration of its trajectory, the first stage must pitch rapidly, flying at negative angle of attack. The SPARTAN then flies at close to horizontal flight, releasing the third stage at a low trajectory angle, after which the third stage must spend a considerable amount of time in-atmosphere. This trajectory achieves a payload-to-orbit of \PayloadToOrbitConstqNoReturn kg.  
+ 
+The maximum payload-to-orbit trajectory of the launch system is calculated, and is found to differ significantly from the trajectory in which the SPARTAN flies at its maximum dynamic pressure for the duration of its acceleration. 
  The SPARTAN is found to deviate from its maximum dynamic pressure at both stage separation points, and for a segment in the middle of its trajectory.
  Higher first stage-SPARTAN and SPARTAN-third stage separation points result in the efficiency of the SPARTAN reducing, but increase the efficiency of the rocket stages, improving the overall efficiency of the system. 
-  Additionally, an altitude raising manoeuvre is performed in a region where the specific impulse of the scramjet engines is relatively homogeneous with varied flight conditions, resulting in a very small performance increase. Overall, flying an optimal trajectory increases the payload-to-orbit of the system launching to sun synchronous orbit to \PayloadToOrbitStandardNoReturn kg, an increase of 16.3\% compared to a trajectory in which the SPARTAN flies at maximum dynamic pressure.  
+  Additionally, an altitude raising manoeuvre is performed in a region where the specific impulse of the scramjet engines is relatively homogeneous with varied flight conditions, resulting in a very small performance increase. Overall, flying an optimal trajectory increases the payload-to-orbit of the system launching to sun synchronous orbit to \PayloadToOrbitStandardNoReturn kg, an increase of 19.5\% compared to a trajectory in which the SPARTAN flies at maximum dynamic pressure.  
  
  
  The fly-back of the SPARTAN is included within the trajectory optimisation, and a maximum payload-to-orbit flight path is simulated. 
- It is found that the SPARTAN must ignite its scramjet engines during its return flight, causing the fly-back to become an important consideration in the optimal trajectory shape. When fly-back is included, the first stage pitches towards the east, though the final orbital inclination is a polar sun synchronous orbit, and the SPARTAN banks heavily throughout its acceleration. This manoeuvre decreases the performance of the SPARTAN, but also reduces the amount of fuel used during fly-back, for a net performance gain. 
-The fly-back is found to exhibit multiple `skipping' manoeuvres. These skipping manoeuvres serve to increase the glide range of the SPARTAN, minimising the fuel necessary during the return flight. Additionally, the scramjet engines are powered on at the trough of the first three skips, which allows the scramjet engines to ignite at the points of highest possible specific impulse. In total, 17.2\% of the SPARTAN's fuel mass is used during the return flight, and the launch system is able to deliver \PayloadToOrbitStandard kg of payload to sun synchronous orbit while returning the SPARTAN successfully to its initial launch site.
+ It is found that the SPARTAN must ignite its scramjet engines during its return flight, using fuel and causing the fly-back to become an important consideration in the optimal trajectory shape. When the fly-back is included, the first stage pitches towards the east, even though the final orbital inclination is a polar sun synchronous orbit. The SPARTAN banks heavily throughout its acceleration to manoeuvre to polar inclination, a manoeuvre which decreases the performance of the SPARTAN, but also reduces the amount of fuel used during fly-back, for a net performance gain. 
+The fly-back is found to exhibit multiple `skipping' manoeuvres. These skipping manoeuvres serve to increase the glide range of the SPARTAN, minimising the fuel necessary during the return flight. Additionally, the scramjet engines are powered on at the trough of the first three skips, which allows the scramjet engines to ignite at the points of highest possible specific impulse. In total, 17.2\% of the SPARTAN's fuel mass is used during the return flight, and the launch system is able to deliver \PayloadToOrbitStandard kg of payload to sun synchronous orbit while successfully returning the SPARTAN to its initial launch site.
 
-The design of the launch system is undergoing significant modifications and improvements.
-For this reason, a study is conducted to quantify the sensitivity of the launch system to variations in key design parameters. The behaviour of the maximum payload-to-orbit trajectory, both with and without SPARTAN fly-back, is investigated as the physical characteristics of the launch system are modified. 
+A study is conducted to quantify the sensitivity of the launch system to variations in key design parameters. The behaviour of the maximum payload-to-orbit trajectory, both with and without SPARTAN fly-back, is investigated as the physical characteristics of the launch system are modified. 
 The sensitivities of coupled design parameters are compared, to quantify their relative impact on the performance of the launch system. The magnitudes of these relative impacts are assessed, to indicate the design trade-offs which will produce an increase in the launch system performance. Importantly, it is found that if a reduction in the maximum dynamic pressure of the SPARTAN by -1kPa reduces the structural and thermal protection mass of the SPARTAN by greater than -26.5kg (or -28.4kg with SPARTAN fly-back), then the performance of the launch system will improve. 
 
  
@@ -142,9 +141,8 @@ This thesis comprises partly of publications, as allowed by University of Queens
 
 \section*{Contributions by Others to the Thesis}
 
-Except for the contributions by others to publications above, there are no contributions by others to this thesis.
+The model of the Baseline SPARTAN was provided for this work by Dr. Dawid Preller and Mr. Joseph Chai, including mass properties, dimensions, and CAD models. The CRESTM10 scramjet engine database was provided for this study by Prof. Michael Smart, consisting of tabulated performance data over a range of inlet conditions. The viscous correction incorporated into the SPARTAN's aerodynamic calculations was performed by Mr. Alexander Ward, and provided for this study in the form of a tabulated aerodynamic database. 
 
-\textcolor{red}{XX talk to ingo about this, should I put dawid or alex, also above, should michael get more contribution for the c-rest?}
 \section*{Statement of Parts of the Thesis Submitted to Qualify for the Award of Another Degree}
 
 None.
@@ -152,7 +150,7 @@ None.
 \clearpage
 
 \section*{} 
-  For Kaitlin, with love to my family and friends, and utmost gratitude to my advisors. 
+  For Kaitlin, with love to my family and friends and utmost gratitude to my advisors, Ingo Jahn, Michael Kearney, and Michael Smart. 
 
       \vspace*{\fill}
 \begin{flushright}

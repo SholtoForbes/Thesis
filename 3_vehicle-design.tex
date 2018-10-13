@@ -23,8 +23,8 @@ The rocket-scramjet-rocket launch system described in this chapter is used as a 
  The launch system is launched vertically under rocket power, from a traditional small rocket launch facility. The SPARTAN is mounted to the front of the first stage rocket allowing the SPARTAN to take the brunt of the aerodynamic forces and heating, as well as allowing the use of the control surfaces of the SPARTAN. During first stage rocket operation, the launch system pitches rapidly, reaching close to horizontal flight to allow the SPARTAN to stay at high dynamic pressure conditions. The SPARTAN is accelerated to its minimum operating velocity of approximately Mach 5, at which point separation occurs. The SPARTAN's four scramjet engines are ignited, and the SPARTAN is accelerated through the atmosphere, reaching approximately Mach 9. At this point, the specific impulse of the scramjet engines, and thus the efficiency of the SPARTAN, have decreased, and the third stage rocket is separated. The third stage rocket accelerates and performs a pull-up, before cutting its engine and coasting out of the atmosphere. Once the rocket is exoatmospheric, the engine is reignited, performing first a circularisation burn, and then a Hohmann transfer to the intended orbit. Meanwhile, the SPARTAN banks and executes a fly-back manoeuvre to return to its initial launch site. The SPARTAN extends landing gear, and lands on a traditional runway in the style of a conventional aircraft. The SPARTAN is able to be rapidly refurbished and remounted for further launches. To fulfil the requirements of this trajectory, the SPARTAN must be able to fly and manoeuvre from velocities greater than Mach 9 to landing, as well as being able to withstand high structural and heating loads without significant deterioration.
  
  The launch configuration of the three stage launch system incorporating the SPARTAN is shown in Figures \ref{fig:NoInternal} \& \ref{fig:INTERNALS}. 
- The size and external design of the SPARTAN scramjet accelerator are used exactly as defined for the Baseline SPARTAN vehicle designed by Preller \& Smart\cite{Preller2017b}. Both the first and third stage rockets are designed in this study, and are sized around the baseline SPARTAN vehicle. 
- The first stage rocket has not previously been designed, and as such is created for this study, while the third stage is redesigned to use a SpaceX Kestrel engine. This third stage design replaces the third stage used in previous SPARTAN studies, which was powered by a Pratt \& Whitney RL-10-3A engine\cite{Preller2017b}. The pump-fed RL-10-3A engine was deemed to costly, and it has been replaced by a significantly cheaper pressure-fed Kestrel engine in this study.  
+ The size and external design of the SPARTAN scramjet accelerator are used exactly as defined for the Baseline SPARTAN vehicle designed by Preller \& Smart\cite{Preller2017b}. Both the first and third stage rockets are designed in this study, and are sized around the Baseline SPARTAN vehicle. 
+ The first stage rocket has not previously been designed, and as such is created for this study, while the third stage is redesigned to use a SpaceX Kestrel engine. This third stage design replaces the third stage used in previous SPARTAN studies, which was powered by a Pratt \& Whitney RL-10-3A engine\cite{Preller2017b}. The pump-fed RL-10-3A engine was deemed too costly, and it has been replaced by a significantly cheaper pressure-fed Kestrel engine in this study.  
  The internal layout of the SPARTAN has been reconfigured around this redesigned third stage. 
  This launch system weighs a total of 29356kg, and is 32.44m long. 
  
@@ -56,7 +56,7 @@ The SPARTAN design is presented first, as the design of the SPARTAN drives the o
 
 	
 	
-	\section{Second Stage Scramjet}\label{sec:SPARTAN}
+	\section{The Second Stage Scramjet Accelerator}\label{sec:SPARTAN}
 
 	
 		\subsection{The SPARTAN Accelerator}
@@ -70,9 +70,9 @@ The SPARTAN design is presented first, as the design of the SPARTAN drives the o
 		\end{figure}
 		A mass breakdown of the SPARTAN is shown in Table \ref{tab:MassBreakdown}, adapted from\cite{Preller2017b}. The fuel tank sizes and total fuel mass are sized to accommodate the Kestrel-powered third stage, described in Section \ref{sec:ThirdStageBaseline}.
 		\begin{table}[h]
-		\begin{tabular}{|c|c|c|c|c|c|c|c|}
-			\hline  \textbf{Part} & Fuselage & Wings & Tanks & Systems & Landing Gear & Scramjets & Fuel \\ 
-			\hline \textbf{Mass} (kg) & 2861.6 & 350.7 & 179.4 & 707.5 & 188.9 & 669.0 & 1562.0 \\ 
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+			\hline  \textbf{Part} & Total & Fuselage & Wings & Tanks & Systems & Landing Gear & Scramjets & Fuel \\ 
+			\hline \textbf{Mass} (kg) & 6519.1 & 2861.6 & 350.7 & 179.4 & 707.5 & 188.9 & 669.0 & 1562.0 \\ 
 			\hline 
 		\end{tabular} 
 		\caption{Mass breakdown of the modified SPARTAN vehicle.}
@@ -86,12 +86,12 @@ This study assumes that the third stage is stored within the fuselage of the SPA
 
 		The fuel tanks are sized to fit around the kestrel-powered third stage. There are three fuel tanks; two cylindrical tanks situated underneath the third stage; and a truncated conical tank in the nose. The conical fuel tank is designed to fit immediately forward of the third stage. This fuel tank is 8m long, leaving 1.47m$^3$ of space in the nose for cooling systems, frontal landing gear, and any additional systems or sensors which are necessary in the nose cone. The cylindrical tanks are positioned underneath and slightly to either side of the third stage, leaving space underneath for vehicle systems. The cylindrical fuel tanks are designed to be 8.5m long, with diameters of 0.87m, sized to give a nominal total tank volume of 22m$^3$.
 The resized fuel tanks hold a total of 1562kg of LH2 fuel. This assumes an LH2 density of 71kg/m$^3$, slightly denser than LH2 at phase transition point at 1 atm.
-The mass of the fuel tanks is scaled, by area, from Dawid Preller's Baseline vehicle model of the SPARTAN\cite{Preller2017b}, giving a total fuel tank mass of 179.4kg.
+The mass of the fuel tanks is scaled, by surface area, from Dawid Preller's Baseline vehicle model of the SPARTAN\cite{Preller2017b}, giving a total fuel tank mass of 179.4kg.
 		
 		
 
 
-\subsection{Propulsion}
+\subsection{Propulsion}\label{sec:propulsion}
 
 
 The SPARTAN is powered by four underslung scramjet engines, fuelled by liquid hydrogen. These engines are Rectangular To Elliptical Shape Transition (REST) engines, configured to allow for a conical forebody (C-REST). REST engines have a rectangular to elliptical shape transition inlet, and an elliptical combustor, offering simplicity in design as well as reduced thermal loading and viscous drag compared to scramjets with planar geometries\cite{Suraweera2009}.  REST engines are also specifically designed to operate over a wide range of Mach numbers, and at off design conditions, making them particularly applicable to use on scramjet accelerator vehicles. 
@@ -191,19 +191,18 @@ F_L = \frac{1}{2}\rho c_L v^2 A .
 \end{equation}
 
 
-
-
-The trimmed aerodynamic databases of the SPARTAN are generated in full prior to trajectory simulation to improve the computational efficiency of the simulation. The aerodynamic coefficients of lift, drag and moment are tabulated, and these tables are interpolated during simulation. 
-The aerodynamics are calculated for Mach numbers between 0-10, angles of attack between 0$^\circ$ and 10$^\circ$, and for altitudes between 0-40km. Separate aerodynamic simulations are performed for engine-on and engine-off conditions, as the operation of the scramjet engines changes the aerodynamic characteristics of the SPARTAN significantly. When the engines are powered-on, the engines are generating thrust on the internal nozzle, as well as on the boat tail and base.  When the scramjet engines are not operational air flows through the engine flowpath without fuel injection, generating a large amount of drag. 
-
-
-The process for generating the aerodynamic databases is shown in Figure \ref{fig:FlowChart}. First, a CAD model of the SPARTAN is developed, providing the centre of gravity of the SPARTAN, as well as a geometry database which is used to create triangulated surface meshes. These surface meshes are then imported into the inviscid CFD solver Cart3D\cite{CART3D}, which calculates flow solutions to determine the aerodynamics of the SPARTAN at various flight conditions. CFD solutions are generated for the SPARTAN with the scramjet engines turned off, as well as with the scramjet engines operational, and for a range of flap deflections. 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/3_vehicle_design/FlowChart}
 	\caption{The process for generating aerodynamic databases.}
 	\label{fig:FlowChart}
 \end{figure}
+
+The trimmed aerodynamic databases of the SPARTAN are generated in full prior to trajectory simulation to improve the computational efficiency of the simulation. The aerodynamic coefficients of lift, drag and moment are tabulated, and these tables are interpolated during simulation. 
+The aerodynamics are calculated for Mach numbers between 0-10, angles of attack between 0$^\circ$ and 10$^\circ$, and for altitudes between 0-40km. Separate aerodynamic simulations are performed for engine-on and engine-off conditions, as the operation of the scramjet engines changes the aerodynamic characteristics of the SPARTAN significantly. When the engines are powered-on, the engines are generating thrust on the internal nozzle, as well as on the boat tail and base.  When the scramjet engines are not operational air flows through the engine flowpath without fuel injection, generating a large amount of drag. 
+
+
+The process for generating the aerodynamic databases is shown in Figure \ref{fig:FlowChart}. First, a CAD model of the SPARTAN is developed, providing the centre of gravity of the SPARTAN, as well as a geometry database which is used to create triangulated surface meshes. These surface meshes are then imported into the inviscid CFD solver Cart3D\cite{CART3D}, which calculates flow solutions to determine the aerodynamics of the SPARTAN at various flight conditions. CFD solutions are generated for the SPARTAN with the scramjet engines turned off, as well as with the scramjet engines operational, and for a range of flap deflections. 
 The flap deflections necessary to trim the vehicle are calculated at every flight condition, by balancing the aerodynamic moment of the SPARTAN with the aerodynamic moment generated by the flaps. 
 The additional lift and drag generated by the flaps are then added to the untrimmed aerodynamics to create a trimmed database.
 Finally, the viscous components of the aerodynamics of the SPARTAN are calculated, and added to the aerodynamic database. These processes are described in detail in the following sections. 
@@ -215,26 +214,19 @@ Finally, the viscous components of the aerodynamics of the SPARTAN are calculate
 
 
 \subsubsection{Cart3D Simulations}\label{sec:cart3d}
-
-The aerodynamics of the SPARTAN have been calculated using Cart3D, an inviscid CFD package used in the preliminary design of aerospace vehicles. Cart3D utilises adjoint mesh adaption with a Cartesian cut-cells approach to produce an iteratively refined mesh to fit a flow solution. Cart3D is used to generate the aerodynamic database of the SPARTAN vehicle due to its applicability in both the subsonic
-and supersonic regimes, and its robustness across multiple flow solutions\cite{Sagerman2017,Abeynayake,Aftosmis2011,Almosnino2016a,Gomez2004}. Cart3D has previously been used to
-analyse hypersonic vehicles, and has shown good agreement with experimental data across multiple studies\cite{Sagerman2017,Abeynayake,Aftosmis2011,Almosnino2016a}, as described in Section \ref{sec:Cart3d}.
-
-
-Initially, a surface triangulation of the SPARTAN is created in Pointwise, shown in Figure \ref{fig:Pointwise}. This is then imported into CART3D as a watertight surface. 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.6\linewidth]{figures/3_vehicle_design/Pointwise}
 	\caption{Surface triangulation of the Baseline SPARTAN, generated using Pointwise\cite{Pointwise}.}
 	\label{fig:Pointwise}
 \end{figure}
-The Cart3D Meshes are then initiated with an outer boundary distance of 40 times the vehicle length. This boundary distance has been observed to produce suitable free stream conditions and good mesh convergence. Nine mesh adaption levels are used. Nine levels have been observed to generally produce good convergence, with moderate computation times of 1-3 hours per simulation. The convergence of the residuals and forces are investigated to ascertain if a solution has converged. Figure \ref{fig:Cart3dValidation} shows an example solution validation for Mach 6, 2$^\circ$ angle of attack, engine-on conditions. Good convergence can be observed in the force functionals, with a corresponding decrease in the error estimate of the functional indicating solution convergence.  
 
-Following simulation in CART3D over the required flight conditions, the aerodynamic coefficients are extracted. The simulation files are processed using Clic, a subprogram of CART3D used to calculate aerodynamic forces and moments, given surface pressure distributions. 
-For engine-off aerodynamics, the aerodynamic coefficients of the entire SPARTAN are extracted. However, for the engine-on aerodynamics of the SPARTAN, the engine flowpath, boat tail and base of the SPARTAN are removed when the aerodynamic coefficients are extracted. The flowpath of the scramjet engines is assumed to be replaced by the conditions given by the C-RESTM10 engine database, and a separate Cart3D simulation is used to calculate the aerodynamic forces on the boat tail and base. 
+The aerodynamics of the SPARTAN have been calculated using Cart3D, an inviscid CFD package used in the preliminary design of aerospace vehicles. Cart3D utilises adjoint mesh adaption with a Cartesian cut-cells approach to produce an iteratively refined mesh to fit a flow solution. Cart3D is used to generate the aerodynamic database of the SPARTAN vehicle due to its applicability in both the subsonic
+and supersonic regimes, and its robustness across multiple flow solutions\cite{Sagerman2017,Abeynayake,Aftosmis2011,Almosnino2016a,Gomez2004}. Cart3D has previously been used to
+analyse hypersonic vehicles, and has shown good agreement with experimental data across multiple studies\cite{Sagerman2017,Abeynayake,Aftosmis2011,Almosnino2016a}, as described in Section \ref{sec:Cart3d}.
 
 
-\begin{figure}
+\begin{figure}[ht]
 	\begin{subfigure}{.5\textwidth}
 		\centering
 		\includegraphics[width=0.99\linewidth]{figures/3_vehicle_design/CartCoeffs_cells}
@@ -256,6 +248,14 @@ For engine-off aerodynamics, the aerodynamic coefficients of the entire SPARTAN 
 	\caption{The convergence of a Cart3D simulation.}
 	\label{fig:Cart3dValidation}
 \end{figure}
+
+Initially, a surface triangulation of the SPARTAN is created in Pointwise, shown in Figure \ref{fig:Pointwise}. This is then imported into CART3D as a watertight surface. 
+The Cart3D Meshes are then initiated with an outer boundary distance of 40 times the vehicle length. This boundary distance has been observed to produce suitable free stream conditions and good mesh convergence. Nine mesh adaption levels are used. Nine levels have been observed to generally produce good convergence, with moderate computation times of 1-3 hours per simulation. The convergence of the residuals and forces are investigated to ascertain if a solution has converged. Figure \ref{fig:Cart3dValidation} shows an example solution validation for Mach 6, 2$^\circ$ angle of attack, engine-on conditions. Good convergence can be observed in the force functionals, with a corresponding decrease in the error estimate of the functional indicating solution convergence.  
+
+Following simulation in CART3D over the required flight conditions, the aerodynamic coefficients are extracted. The simulation files are processed using Clic, a subprogram of CART3D used to calculate aerodynamic forces and moments, given surface pressure distributions. 
+For engine-off aerodynamics, the aerodynamic coefficients of the entire SPARTAN are extracted. However, for the engine-on aerodynamics of the SPARTAN, the engine flowpath, boat tail and base of the SPARTAN are removed when the aerodynamic coefficients are extracted. The flowpath of the scramjet engines is assumed to be replaced by the conditions given by the C-RESTM10 engine database, and a separate Cart3D simulation is used to calculate the aerodynamic forces on the boat tail and base. 
+
+
 
 \subsubsection{Engine-On Aerodynamic Analysis}\label{sec:engine-oncart}
 
@@ -360,7 +360,7 @@ Where $^*$ indicates the nondimensionalised input to Cart3D. This nondimensional
 		\subsubsection{Calculation of Trimmed Flap Deflections}\label{sec:trim}
 		
 		The SPARTAN as designed by Preller\cite{Preller2017b} is trimmed using control surfaces on the wings, shown in figure \ref{fig:SPARTAN_FLAPS}. 
-		The flaps of the SPARTAN are modelled at deflected states of -20$^\circ$, -10$^\circ$, 10$^\circ$, and 20$^\circ$. Each of these deflected states are modelled in CREO and a surface mesh is created in Pointwise. 
+		The flaps of the SPARTAN are modelled at deflected states of -20$^\circ$, -10$^\circ$, 10$^\circ$, and 20$^\circ$. The SPARTAN is modelled in CREO with the flaps at each of these deflected states, and a surface mesh is created in Pointwise. 
 		Cart3D is used to simulate each of these flap deflected states, and Clic is used to extract the aerodynamic coefficients, for Mach numbers between 0.2 and 10. These aerodynamic coefficients are tabulated, and interpolation splines fitted, so that the flight Mach number and the moment generated by the flaps are used to interpolate for the flap deflection, ie. $\theta_{Flaps} = f(M,M_{Flaps})$.
 		\begin{figure}[ht]
 			\centering
@@ -457,7 +457,7 @@ Where $^*$ indicates the nondimensionalised input to Cart3D. This nondimensional
 		
 		
 		
-		\subsection{Trimmed Aerodynamic Database of the SPARTAN with Engine-On}
+		\subsection{Trimmed Aerodynamic Database of the SPARTAN with Engine-On}\label{sec:trimmedongineon}
 		
 		The engine-on aerodynamics of the SPARTAN are used during the simulation of the acceleration phase, when the C-REST engines are operational at all times, as well as during the fly-back phase, when the engines are operational for a short time to aid the SPARTAN in returning to its initial launch site.
 		The external aerodynamics of the SPARTAN with the scramjet engines powered-on are calculated by removing the engine and boat tail from Cart3D simulations of the SPARTAN with engine flowpaths. Engine-on aerodynamic calculations are performed for Mach numbers 5,7,9 and 10. An example of a Cart3D solution of the nozzle exit and boat tail with the scramjet engines powered-on is shown in Figure \ref{fig:EngineOn}, and the aerodynamics of the SPARTAN with engines powered-on are shown in Figure \ref{fig:EngineOnAero}.
@@ -496,7 +496,7 @@ Where $^*$ indicates the nondimensionalised input to Cart3D. This nondimensional
 		
 		
 
-\subsection{Trimmed Aerodynamic Database of the SPARTAN with Engine-Off}
+\subsection{Trimmed Aerodynamic Database of the SPARTAN with Engine-Off}\label{sec:trimmedongineoff}
 
 \begin{figure}[ht]
 \begin{subfigure}{.9\textwidth}
@@ -553,7 +553,7 @@ These results show a distinct maximum region in the L/D of the SPARTAN at high M
 \end{figure}
 
 
-\section{First Stage Rocket}\label{sec:firststage}
+\section{The First Stage Rocket}\label{sec:firststage}
 The first stage rocket is required to deliver the second stage to near horizontal flight at Mach 5.1 flight conditions,
 after which it is discarded. To achieve this, the first stage rocket is modelled as a Falcon-1e first stage scaled down
 lengthwise to 8.5m, keeping the original diameter of 1.67m\cite{Vehicle2008}. An additional 1m is added between the first stage and the SPARTAN to allow for any necessary stage interfacing. 
@@ -581,7 +581,7 @@ The thrust and specific impulse of the Merlin 1-C are determined by interpolatio
 \end{table}
 
 
-  \subsection{Aerodynamics Including First Stage}\label{sec:firststageaero}
+  \subsection{Aerodynamics Including the First Stage}\label{sec:firststageaero}
    \begin{figure}
    	\centering
    	\includegraphics[width=0.8\linewidth]{figures/3_vehicle_design/CARTcontour}
@@ -609,7 +609,7 @@ The thrust and specific impulse of the Merlin 1-C are determined by interpolatio
     		\caption{L/D.}
     		\label{fig:LD-EFirstStage}
     	\end{subfigure}
-    	\caption{Aerodynamic characteristics of the SPARTAN including the first stage rocket.}
+    	\caption{The aerodynamic characteristics of the SPARTAN including the first stage rocket.  Coefficients correspond to a reference area of 62.77m$^2$.}
     	\label{fig:FirstStageAero}
     \end{figure}
   The aerodynamics of the launch system during first stage flight are calculated in a similar manner to those of the SPARTAN without the first stage rocket, as detailed in Section \ref{sec:aero}. 
@@ -635,7 +635,7 @@ The thrust and specific impulse of the Merlin 1-C are determined by interpolatio
 
 	
 
-	\section{Third Stage Rocket - Baseline}\label{sec:ThirdStageBaseline}
+	\section{The Third Stage Rocket}\label{sec:ThirdStageBaseline}
 	
 	\begin{figure}
 \centering
