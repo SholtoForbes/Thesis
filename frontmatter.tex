@@ -54,7 +54,7 @@
  The aerodynamics of the first stage and the SPARTAN are simulated using computational fluid dynamics, to produce accurate aerodynamic databases. The aerodynamics of the control surfaces of the SPARTAN are simulated, and trimmed aerodynamic databases are created.   
  The aerodynamics of the third stage are modelled using Missile Datcom, and propulsion models are developed for all three stages. The aerodynamic and performance models are used to create an accurate six degree of freedom simulation of the launch system. 
  
- A package is developed to calculate the maximum payload-to-orbit trajectory of the rocket-scramjet-rocket launch system, designated LODESTAR, which uses optimal control theory to determine an optimal trajectory shape. For this, LODESTAR utilises GPOPS-2, a pseudospectral method optimal control software. LODESTAR configures GPOPS-2 to calculate optimised trajectory profiles, and provides the dynamic simulation of each vehicle, along with tools to verify the optimised solutions produced by GPOPS-2. 
+ A package is developed to calculate the maximum payload-to-orbit trajectory of the rocket-scramjet-rocket launch system, designated LODESTAR, which uses optimal control theory to design flight paths. For this, LODESTAR utilises GPOPS-2, a pseudospectral method optimal control software. LODESTAR configures GPOPS-2 to calculate optimised trajectory profiles, and provides the dynamic simulation of each vehicle, along with tools to verify the optimised solutions produced by GPOPS-2. 
  
  The launch trajectory is initially simulated assuming that the SPARTAN lands at some position downrange. A launch trajectory is simulated in which the SPARTAN flies at maximum dynamic pressure, for use as a reference and verification case. In order to reach separation conditions which allow the SPARTAN to fly at its maximum dynamic pressure for the duration of its trajectory, the first stage must pitch rapidly, flying at negative angle of attack. The SPARTAN then flies at close to horizontal flight, releasing the third stage at a low trajectory angle, after which the third stage must spend a considerable amount of time in-atmosphere. This trajectory achieves a payload-to-orbit of \PayloadToOrbitConstqNoReturn kg.  
  
@@ -65,8 +65,8 @@ The maximum payload-to-orbit trajectory of the launch system is calculated, and 
  
  
  The fly-back of the SPARTAN is included within the trajectory optimisation, and a maximum payload-to-orbit flight path is simulated. 
- It is found that the SPARTAN must ignite its scramjet engines during its return flight, using fuel and causing the fly-back to become an important consideration in the optimal trajectory shape. When the fly-back is included, the first stage pitches towards the east, even though the final orbital inclination is a polar sun synchronous orbit. The SPARTAN banks heavily throughout its acceleration to manoeuvre to polar inclination, a manoeuvre which decreases the performance of the SPARTAN, but also reduces the amount of fuel used during fly-back, for a net performance gain. 
-The fly-back is found to exhibit multiple `skipping' manoeuvres. These skipping manoeuvres serve to increase the glide range of the SPARTAN, minimising the fuel necessary during the return flight. Additionally, the scramjet engines are powered on at the trough of the first three skips, which allows the scramjet engines to ignite at the points of highest possible specific impulse. In total, 17.2\% of the SPARTAN's fuel mass is used during the return flight, and the launch system is able to deliver \PayloadToOrbitStandard kg of payload to sun synchronous orbit while successfully returning the SPARTAN to its initial launch site.
+ It is found that the SPARTAN must ignite its scramjet engines during its return flight, using fuel and causing the fly-back to become an important consideration in the optimal trajectory shape. When the fly-back is included, the first stage pitches towards the east, although the final orbital inclination is a polar sun synchronous orbit. The SPARTAN banks heavily throughout its acceleration to manoeuvre to polar inclination, a manoeuvre which decreases the performance of the SPARTAN, but also reduces the amount of fuel used during fly-back, for a net performance gain. 
+The fly-back is found to exhibit multiple `skipping' manoeuvres. These skipping manoeuvres serve to increase the glide range of the SPARTAN, minimising the fuel necessary during the return flight. Additionally, the scramjet engines are powered on at the trough of the first three skips, which allows the scramjet engines to ignite at the points of highest possible specific impulse. In total, 17.2\% of the SPARTAN's fuel mass is used during the return flight, and the launch system is able to deliver \PayloadToOrbitStandard kg of payload to sun synchronous orbit while successfully returning the SPARTAN to its initial launch site.  
 
 A study is conducted to quantify the sensitivity of the launch system to variations in key design parameters. The behaviour of the maximum payload-to-orbit trajectory, both with and without SPARTAN fly-back, is investigated as the physical characteristics of the launch system are modified. 
 The sensitivities of coupled design parameters are compared, to quantify their relative impact on the performance of the launch system. The magnitudes of these relative impacts are assessed, to indicate the design trade-offs which will produce an increase in the launch system performance. Importantly, it is found that if a reduction in the maximum dynamic pressure of the SPARTAN by -1kPa reduces the structural and thermal protection mass of the SPARTAN by greater than -26.5kg (or -28.4kg with SPARTAN fly-back), then the performance of the launch system will improve. 
@@ -150,7 +150,7 @@ None.
 \clearpage
 
 \section*{} 
-  For Kaitlin, with love to my family and friends and utmost gratitude to my advisors, Ingo Jahn, Michael Kearney, and Michael Smart. 
+  For Kaitlin, with love to my family and friends and utmost gratitude to my advisors: Ingo Jahn, Michael Kearney, and Michael Smart. 
 
       \vspace*{\fill}
 \begin{flushright}
@@ -164,10 +164,10 @@ Rocket Raccoon
 
 \subsection*{Australian and New Zealand Standard Research Classification (ANZSRC)}
 
-  ANZSRC code: 090107 Hypersonic Propulsion and Hypersonic Aerodynamics, 10\% \newline
+  ANZSRC code: 090107 Hypersonic Propulsion and Hypersonic Aerodynamics, 20\% \newline
  ANZSRC code: 090106 Flight Dynamics, 10\% \newline
- ANZSRC code: 090108, Satellite, Space Vehicle and Missile Design and Testing, 20\% \newline
-ANZSRC code: 090104 Aircraft Performance and Flight Control Systems, 30\% \newline
+ ANZSRC code: 090108, Satellite, Space Vehicle and Missile Design and Testing, 25\% \newline
+ANZSRC code: 090104 Aircraft Performance and Flight Control Systems, 15\% \newline
 ANZSRC code: 010303 Optimisation, 30\% \newline
 
 \subsection*{Fields of Research (FoR) Classification}

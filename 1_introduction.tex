@@ -26,7 +26,7 @@ Airbreathing engines produce higher specific impulse than rockets, and do not re
   	 
   	 
   	 Calculating a suitable trajectory for an airbreathing launch system is an integral part of the preliminary vehicle and mission design process. 
-  	 A trajectory must be calculated that allows the launch system to achieve its objectives of placing a payload into orbit, while recovering any reusable stages.
+  	 A trajectory must be calculated that allows the launch system to achieve its objective of placing a payload into orbit, while recovering any reusable stages.
   	 Ideally, the calculated trajectory will achieve the maximum possible payload-to-orbit, while adhering to the structural, heating and propulsive limitations of the vehicle.  
   	 The trajectory design for a partially-airbreathing launch system is complex and requires consideration of each of the individual stages in order to maximise the performance of the launch system, and consequently, its cost efficiency. 
   	   The airbreathing engines of a ramjet or scramjet-powered stage require high dynamic pressure to operate effectively, and airbreathing stages are generally designed for high lift-to-drag. Conversely, rocket-powered stages operate more efficiently at higher altitude, and are generally designed for weight and cost efficiency. For these launch systems, the various stages and engines involved during launch require trade-offs in engine efficiency and thrust generation, stage mass, and vehicle aerodynamics. These factors require the launch trajectory of the system to be thoroughly simulated and optimised, to ensure that the launch vehicle is operating effectively. 
@@ -42,13 +42,13 @@ Airbreathing engines produce higher specific impulse than rockets, and do not re
 
   
   
-  	   This study applies optimal control theory to a three stage rocket-scramjet-rocket launch system being developed by The University of Queensland, The second stage of this system is a scramjet-powered accelerator, designated the SPARTAN\cite{Preller2017b}. This launch system is designed to be partially reusable, with at least the second stage scramjet vehicle flying back to the initial launch site, as well as possibly the first stage booster\cite{Preller2017b}, although this is beyond the scope of this study. 
+  	   This study applies optimal control theory to a three stage rocket-scramjet-rocket launch system being developed by The University of Queensland, The second stage of this system is a scramjet-powered accelerator, designated the SPARTAN\cite{Preller2017b}. This launch system is designed to be partially reusable, with at least the second stage scramjet vehicle flying back to the initial launch site, as well as possibly the first stage booster\cite{Preller2017b} although this is beyond the scope of this study. 
   	   In previous studies it has been assumed that by maximising the performance of the SPARTAN, that the performance of the launch system is also maximised\cite{Preller2017b}. 
   	   The trajectory of the launch system has been designed around the SPARTAN flying at its
   	   maximum dynamic pressure, and all other trajectory stages have conformed to this assumption. However, these studies did not consider the interaction between stages, or the fly-back of the SPARTAN.
   	   This study will develop trajectory planning tools for partially-airbreathing launch systems, and calculate an optimised launch trajectory for the rocket-scramjet-rocket system incorporating the SPARTAN. This optimised trajectory will be calculated with the aim of producing an optimal
   	   trajectory profile which may be applied to any multi-stage rocket-airbreathing-rocket system for delivering small
-  	   satellites to Earth orbit. The impact of the fly-back of the scramjet stage on the optimised trajectory will be studied, and the ability of the rocket-scramjet-rocket system to effectively deliver small payloads to orbit with fly-back will be assessed. 
+  	   satellites to Earth orbit. The impact of the fly-back of the scramjet stage on the optimised trajectory will be studied, and the ability of the rocket-scramjet-rocket system to effectively deliver small payloads to orbit and return the scramjet stage to its initial launch site will be assessed. 
   	   
   	  	\begin{figure}[ht]
   	  		\centering
@@ -77,7 +77,7 @@ The optimal trajectory shape of a multi-stage rocket-scramjet-rocket system is s
       \item \emph{Analysis of the sensitivity of the maximum payload-to-orbit trajectory to variations in key design parameters of the launch system} 
 
 	The optimal trajectory shape and maximum payload-to-orbit are dependent on the design of the launch system. 
-	Assessing the sensitivity of the optimised trajectory shape and payload-to-orbit to key aerodynamic and propulsive properties allows the relative impacts of various design parameters to be calculated and contrasted. \\
+	Assessing the sensitivity of the optimised trajectory shape and payload-to-orbit to key aerodynamic and propulsive properties allows the relative impacts of various design parameters to be calculated and contrasted, and for the optimal trajectory shape to be investigated. \\
 
     
 
@@ -90,7 +90,7 @@ The optimal trajectory shape of a multi-stage rocket-scramjet-rocket system is s
 
     \subsubsection*{Chapter 2 - Literature Review}
 
-      A review of literature related to the various aspects of this study is presented. The theory behind scramjet propulsion is outlined, followed by a background of reusable and small satellite launch systems. A review of the trajectories of partially-airbreathing launch systems is presented, comparing the optimised trajectories of various conceptual vehicles. An overview of optimal control techniques is presented, with particular emphasis on the pseudospectral method of solving optimal control problems, which is employed within this study. Lastly, an overview of the optimal control and aerodynamic solvers, which are used in this study is presented.
+      A review of literature related to the various aspects of this study is presented. The theory behind scramjet propulsion is outlined, followed by a background of reusable and small satellite launch systems. A review of the trajectories of partially-airbreathing launch systems is presented, comparing the optimised trajectories of various conceptual vehicles. An overview of optimal control techniques is presented, with particular emphasis on the pseudospectral method of solving optimal control problems, which is employed within this study. Lastly, an overview of the optimal control and aerodynamic solvers that are used in this study is presented.
       
 
     \subsubsection*{Chapter 3 - Launch Vehicle Design and Simulation}
@@ -100,13 +100,14 @@ The optimal trajectory shape of a multi-stage rocket-scramjet-rocket system is s
       
       \subsubsection*{Chapter 4 - LODESTAR}
       
-      The method used for the simulation and optimisation of the trajectory is detailed, including the creation of the trajectory analysis program, LODESTAR, which has been created for this study. The specifics of the optimal control methodology are presented. The simulation methodology is detailed, along with the construction of the optimal control simulation for the mission used in this study. The specific set-up of the optimal control program is detailed for each trajectory stage, specifying the costs and constraints which drive the optimal control solver. Finally, the methods for validating the final solutions are specified.
+      The method used for the simulation and optimisation of the trajectory is presented, including the details of the trajectory analysis program, LODESTAR, which has been developed for this study. The specifics of the optimal control methodology are presented. The simulation methodology is detailed, along with the construction of the optimal control simulation for the mission used in this study. The specific set-up of the optimal control program is detailed for each trajectory stage, specifying the costs and constraints which drive the optimal control solver. Finally, the methods for validating the final solutions are specified.
       
       \subsubsection*{Chapter 5 - Optimised Ascent Trajectory}
       
-
- The ascent of the SPARTAN and third stage rocket are optimised using LODESTAR, for maximum payload-to-orbit. The first stage rocket is optimised to the first-second stage separation point, for minimum fuel usage. The optimal trajectory is analysed. It is found that a pull-up at the end of the scramjet stage trajectory significantly improves payload-to-orbit.  
- The sensitivity of the optimal trajectory to variation of key vehicle design parameters is studied. Optimised trajectories are calculated, and the trends in maximised payload-to-orbit and optimal trajectory shape are analysed to study the relative impact of the design parameters of the SPARTAN. 
+Optimised trajectories, designed using LODESTAR, are presented. A trajectory is designed in which the SPARTAN flies at a constant dynamic pressure, for comparison purposes. 
+ A maximum payload-to-orbit trajectory is created and it is found that an increase in altitude at the stage separation points significantly improves payload-to-orbit.
+ This trajectory is compared and contrasted to the constant dynamic pressure trajectory to determine the sources of the performance increase.  
+ Key vehicle design parameters are varied. The trends in maximised payload-to-orbit and trajectory shape are analysed to study the relative impact of the design parameters on the performance of the launch system. 
  
  
       
@@ -115,6 +116,7 @@ The optimal trajectory shape of a multi-stage rocket-scramjet-rocket system is s
       The trajectory of the launch system is optimised for maximum payload-to-orbit, including the fly-back of the SPARTAN to its initial launch location. 
       It is found to be necessary to reignite the scramjet engines during the return flight of the SPARTAN to achieve fly-back.
       The SPARTAN is found to bank during acceleration to lessen the fuel consumed during the return flight.
+      The trajectories with, and without, fly-back are compared to determine the impact of SPARTAN fly-back on the performance of the launch system
       In a similar fashion to Chapter 5, the effects of key vehicle parameters on the optimised trajectory are studied. The sensitivity of the optimised trajectory and payload-to-orbit are analysed, with emphasis on how the fly-back trajectory is affected by the varied vehicle parameters.
       
      
