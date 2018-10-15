@@ -53,20 +53,21 @@
 \contentsline {section}{\numberline {3.4}Summary}{65}{section.3.4}
 \contentsline {chapter}{\numberline {4}LODESTAR}{69}{chapter.4}
 \contentsline {section}{\numberline {4.1}Mission Definition}{70}{section.4.1}
-\contentsline {section}{\numberline {4.2}Vehicle Simulation}{72}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}6DOF Equations of Motion}{74}{subsection.4.2.1}
-\contentsline {section}{\numberline {4.3}Optimal Control Problem Structure}{75}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Trajectory Connection Points}{76}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}\leavevmode {\color {red}I.} First Stage Vertical Ascent}{78}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}\leavevmode {\color {red}II.} First Stage Pitching Ascent}{79}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}\leavevmode {\color {red}III.} Second Stage Ascent Trajectory}{80}{subsection.4.3.4}
-\contentsline {subsection}{\numberline {4.3.5}\leavevmode {\color {red}IV.} Second Stage Return Trajectory}{81}{subsection.4.3.5}
-\contentsline {subsection}{\numberline {4.3.6}\leavevmode {\color {red}V.} Third Stage Powered Ascent}{82}{subsection.4.3.6}
-\contentsline {subsection}{\numberline {4.3.7}\leavevmode {\color {red}VI.} Third Stage Unpowered Ascent}{83}{subsection.4.3.7}
-\contentsline {subsection}{\numberline {4.3.8}\leavevmode {\color {red}VII.} Hohmann Transfer}{84}{subsection.4.3.8}
-\contentsline {section}{\numberline {4.4}Optimal Solution Analysis}{85}{section.4.4}
-\contentsline {section}{\numberline {4.5}Trajectory and Performance Analysis}{87}{section.4.5}
-\contentsline {section}{\numberline {4.6}Summary}{88}{section.4.6}
+\contentsline {section}{\numberline {4.2}Vehicle Simulation}{71}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}6DOF Equations of Motion}{72}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.3}Optimal Control Problem Structure}{73}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Trajectory Connection Points}{75}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}\leavevmode {\color {red}I.} First Stage Vertical Ascent}{76}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}\leavevmode {\color {red}II.} First Stage Pitching Ascent}{77}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}\leavevmode {\color {red}III.} Second Stage Ascent Trajectory}{78}{subsection.4.3.4}
+\contentsline {subsection}{\numberline {4.3.5}\leavevmode {\color {red}IV.} Second Stage Return Trajectory}{80}{subsection.4.3.5}
+\contentsline {subsection}{\numberline {4.3.6}\leavevmode {\color {red}V.} Third Stage Powered Ascent}{81}{subsection.4.3.6}
+\contentsline {subsection}{\numberline {4.3.7}\leavevmode {\color {red}VI.} Third Stage Unpowered Ascent}{82}{subsection.4.3.7}
+\contentsline {subsection}{\numberline {4.3.8}\leavevmode {\color {red}VII.} Hohmann Transfer}{82}{subsection.4.3.8}
+\contentsline {section}{\numberline {4.4}Optimal Solution Analysis}{84}{section.4.4}
+\contentsline {section}{\numberline {4.5}The Optimisation Process in LODESTAR}{86}{section.4.5}
+\contentsline {section}{\numberline {4.6}Trajectory and Performance Analysis}{88}{section.4.6}
+\contentsline {section}{\numberline {4.7}Summary}{89}{section.4.7}
 \contentsline {chapter}{\numberline {5}Optimised Ascent Trajectory}{91}{chapter.5}
 \contentsline {section}{\numberline {5.1}Case 1: Constant Dynamic Pressure Trajectory}{92}{section.5.1}
 \contentsline {section}{\numberline {5.2}Case 2: Optimised Ascent Trajectory}{98}{section.5.2}
@@ -93,7 +94,7 @@
 \contentsline {section}{\numberline {6.5}Design Sensitivity Analysis}{134}{section.6.5}
 \contentsline {subsection}{\numberline {6.5.1}Case 12: Maximum Dynamic Pressure Sensitivity with Fly-Back}{136}{subsection.6.5.1}
 \contentsline {subsection}{\numberline {6.5.2}Case 13: SPARTAN Drag Sensitivity with Fly-Back}{137}{subsection.6.5.2}
-\contentsline {subsection}{\numberline {6.5.3}Case 14: C-REST Specific Impulse Sensitivity with Fly-Back}{138}{subsection.6.5.3}
+\contentsline {subsection}{\numberline {6.5.3}Case 14: C-REST Specific Impulse Sensitivity with Fly-Back}{139}{subsection.6.5.3}
 \contentsline {subsection}{\numberline {6.5.4}Case 15: SPARTAN Mass Sensitivity with Fly-Back}{140}{subsection.6.5.4}
 \contentsline {subsection}{\numberline {6.5.5}Case 16: SPARTAN Fuel Mass Sensitivity with Fly-Back}{141}{subsection.6.5.5}
 \contentsline {subsection}{\numberline {6.5.6}Case 17: Third Stage Mass Sensitivity with Fly-Back}{142}{subsection.6.5.6}

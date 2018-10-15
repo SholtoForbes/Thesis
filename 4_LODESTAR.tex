@@ -5,52 +5,18 @@
 
 
 This chapter presents the package LODESTAR (Launch Optimisation and Data Evaluation for Scramjet Trajectory Analysis Research), which has been developed to calculate the optimal trajectories of partially airbreathing satellite launch systems, as a general tool for this purpose is not currently widely available. LODESTAR has the capability to calculate optimal mission profiles for systems consisting of various combinations of rocket and airbreathing stages, using high fidelity optimisation techniques. 
-LODESTAR optimises a trajectory towards a user-defined objective function, such as maximum payload-to-orbit, subject to constraints that bound the operational region of a vehicle.
-LODESTAR calculates an optimal trajectory by simulating the dynamics of a launch system, configuring and interfacing with an optimal control solver, and providing verification tools. 
-LODESTAR is developed in MATLAB, and utilises GPOPS-2\cite{Patterson2015}. GPOPS-2 is a proprietary pseudospectral method optimisation package, which is based on an \textsf{hp}-adaptive version of the Radau pseudospectral method, described in further detail in Section \ref{sec:optsolvers}. GPOPS-2 utilises the IPOPT nonlinear optimisation package\cite{Wachter2006}.
-LODESTAR performs multiple functions which facilitate the optimisation of launch trajectories, including:
-\begin{itemize}
-	\item providing a smooth, continuous interpolation of the aerodynamic and engine performance databases, 
-	
-	\item calculating the dynamics of each vehicle in six degree of freedom,
-	
-	\item interfacing with GPOPS-2 to provide the configuration of the multi-stage optimisation problem,
-	
-	\item adaptively calculating an initial guess for the initialisation of the optimal control solution,
-	
-	\item performing simulations of the uncontrolled segments of the trajectory, 
-	
-	\item parallelising the optimal solution process,
-	
-	\item assessing and validating the optimised trajectory solution, 
-	
-	\item and visualising the optimised trajectory solution along with key vehicle performance indicators.  
-	
-	
-	
-\end{itemize}
- Within this chapter, the structure of LODESTAR is presented, as well as the set-up of LODESTAR for the rocket-scramjet-rocket trajectory optimisation, and the verification methods used to determine if a solution has converged correctly.
+LODESTAR optimises a trajectory towards a user-defined objective function, such as maximum payload-to-orbit, subject to constraints that ensure that the launch system does not exceed its aerodynamic or structural limitations.
+LODESTAR calculates an optimal trajectory by simulating the dynamics of the launch system, and configuring an optimal control solver to define the launch trajectory optimisation problem being solved. 
+The dynamics of the launch system are calculated in six degrees of freedom, with the performance of each vehicle calculated from aerodynamic and propulsion databases using precalculated interpolations, as described in Chapter \ref{chapter:Design}. These interpolations are designed to be smooth and continuous in order to improve the robustness of the optimal control solver.
+LODESTAR separates a launch trajectory into multiple segments, to assist the solution process within the optimal control solver, improving robustness and accuracy. The segments with variable controls are solved within the optimal control solver, while the segments without control, or with prescribed control laws, are simulated directly in LODESTAR.
+The segments which are simulated directly in LODESTAR are evaluated during the solution process, and the information necessary for the optimisation is passed to the optimal control solver.
+Once the solution has been calculated, LODESTAR possesses the capability to verify the optimal control solution, an integral step when calculating an optimised trajectory with complex vehicle dynamics. 
+LODESTAR is developed in MATLAB, and utilises GPOPS-2\cite{Patterson2015} as an optimal control solver. GPOPS-2 is a proprietary pseudospectral method optimisation package, which is based on an \textsf{hp}-adaptive version of the Radau pseudospectral method, described in further detail in Section \ref{sec:optsolvers}. 
+
+
+ Within this chapter, the structure of LODESTAR is presented, as well as the set-up of LODESTAR for trajectory optimisation, and the verification methods used to determine if a solution has converged correctly.
+ The configuration of LODESTAR presented in this chapter is designed specifically to calculate the maximum payload-to-orbit trajectory of a rocket-scramjet-rocket launch system, delivering a small satellite to sun synchronous orbit. 
  
- 
- \afterpage{
- 	\begin{landscape}% Landscape page
- 		\begin{figure}[ht]
- 			\centering
- 			\includegraphics[width=0.98\linewidth]{"figures/4_LODESTAR/Ascent Flowchart"}
- 			\caption{The process of the rocket-scramjet-rocket trajectory optimisation. Relevant sections are indicated in square brackets at each process step.}
- 			\label{fig:AscentFlowchart}
- 		\end{figure} 
- 	\end{landscape}
- }
-
-Figure \ref{fig:AscentFlowchart} shows an illustration of the optimal control routine within LODESTAR. Each of the processes shown is described in more detail in the following sections, which are indicated in Figure \ref{fig:AscentFlowchart}. Initially, LODESTAR provides the initial guess and problem setup, configuring GPOPS-2 and defining the optimal control problem being solved. 
-The iterative process begins with GPOPS-2 providing the current iteration of the trajectory solution to LODESTAR, along with a mesh of nodes that define the points in time at which the dynamics of the system are approximated.
-LODESTAR then calculates the aerodynamic and engine performance of the launch system at each node along the trajectory, as well as atmospheric and flight conditions. This data is used to calculate the dynamics of the vehicle along the trajectory in six degrees of freedom. LODESTAR evaluates the trajectory, and simulates the unpowered third stage ascent and Hohmann transfer as forward simulations. LODESTAR uses the mass of the third stage fuel remaining at the end of its trajectory to calculate the payload-to-orbit, and passes this to GPOPS-2 as an endpoint cost function. 
-The vehicle dynamics and payload-to-orbit are evaluated by GPOPS-2, which utilises IPOPT to update the guess of the trajectory solution via an interior point method, at which point this updated guess is passed through to LODESTAR once more. The solution is evaluated by GPOPS-2 at each iteration to compute the feasibility and optimality of the solution. This process repeats until either a predefined tolerance of optimality, or a predefined number of iterations, is reached. The process repeats for a number of mesh iterations defined by the user, which further refine the trajectory. 
-To aid in ensuring that an optimal solution is reached, GPOPS-2 is initiated from four separate initial guesses, with the final altitude guess varied by 1km between each initial trajectory. These iterations of GPOPS-2 are run in parallel, using Matlab's \textsf{Parfor} function. After all the iterations of GPOPS-2 have completed, the solutions are evaluated, and the `best' solution is chosen as the solution with the most accurately modelled dynamics. This process is parallelised within LODESTAR, with green and red arrows in Figure \ref{fig:AscentFlowchart} indicating the initiation and termination of the parallel loop respectively. 
-
-
-
 
 
 
@@ -80,7 +46,7 @@ The launch site selected for the simulation is the proposed Equatorial Launch Au
 \section{Vehicle Simulation}
 
 LODESTAR simulates each of the vehicles within the rocket-scramjet-rocket launch system by establishing a set of dynamic equations that fully describe the motion of the vehicle in terms of the time, states ($\mathbf{x}$), and controls ($\mathbf{u}$) of the system;
-\begin{equation}
+\begin{equation}\label{eq:states}
 \dot{\textbf{x}}(t) = f[t,\textbf{x}(t),\textbf{u}(t)].
 \end{equation}
  The states and controls are the variables that define the time dependent physical characteristics of the system. The state variables are dependent on the controls and the system dynamics, while the control variables drive the behaviour of the system and can be varied independently \cite{Stryk1992}.  
@@ -93,7 +59,7 @@ Discontinuities within the aerodynamics or engine properties of a particular veh
 \subsection{6DOF Equations of Motion}
 
 
-The dynamics of the vehicle are calculated in six degrees of freedom, in a geodetic rotational reference frame, illustrated in Figure \ref{fig:global}. In this reference frame, the dynamics of each vehicle are expressed in terms of the angle of attack $\alpha$, bank angle $\eta$, radius from centre of Earth $r$, longitude $\xi$, latitude $\phi$, flight path angle $\gamma$, velocity $v$ and heading angle $\zeta$. The equations of motion are given from\cite{Josselyn2002a}:
+The dynamics of the launch system are calculated in six degrees of freedom, in a geodetic rotational reference frame, illustrated in Figure \ref{fig:global}. In this reference frame, the dynamics of each vehicle are expressed in terms of the angle of attack $\alpha$, bank angle $\eta$, radius from centre of Earth $r$, longitude $\xi$, latitude $\phi$, flight path angle $\gamma$, velocity $v$ and heading angle $\zeta$. The equations of motion are given by\cite{Josselyn2002a}:
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/4_LODESTAR/global}
@@ -124,13 +90,11 @@ The dynamics of the vehicle are calculated in six degrees of freedom, in a geode
 \begin{equation}\label{eq:heading}
 \dot{\zeta} = \frac{T\sin\alpha \sin\eta}{mv \cos \gamma}-\frac{v}{r}\tan\phi\cos\gamma\cos\zeta +2\omega_E\cos\phi\tan\gamma\sin\zeta - \frac{\omega_E^2 r}{v\cos\gamma}\sin\phi\cos\phi\cos\zeta-2\omega_E\sin\phi 
 \end{equation}
-
-
-
+These dynamics are used as the dynamic constraints of the launch system, as shown in Equation \ref{eq:states}, with each dynamic parameter implemented as a state variable ($\mathbf{x}$). The lift ($L$) and drag ($D$) forces are interpolated from the aerodynamic databases, described in Chapter \ref{chapter:Design}.
 
 \section{Optimal Control Problem Structure}\label{sec:optstruct}
 
-One of the primary functions of LODESTAR is to interface with the optimal control solver GPOPS-2. GPOPS-2 is a generic optimal control solver that utilises the pseudospectral method of optimal control, described in detail in Section \ref{sec:Optimisation}. Practically, the implementation of optimal control involves the specification of the dynamics of the system to be optimised, as well as the set of constraints and objectives that define the optimisation problem, described as follows:
+One of the primary functions of LODESTAR is to interface with the optimal control solver GPOPS-2. GPOPS-2 is a generic optimal control solver that utilises the pseudospectral method of optimal control, as well as the IPOPT nonlinear optimisation package. GPOPS-2 is described in detail in Section \ref{sec:optsolvers}. Practically, the implementation of optimal control involves the specification of the dynamics of the system to be optimised, as well as the set of constraints and objectives that define the optimisation problem, described as follows:
 
 \noindent \textit{Cost Function}
 
@@ -459,6 +423,29 @@ The state feasibility of the solution is checked through a verification of the s
 This checks that the flight path will follow the path computed by GPOPS-2, using only the calculated control inputs. This is the most complete test of the constraints of the optimal solution. However, in some cases calculating a forward solution may be problematic. The pseudospectral method has a limited number of nodes, potentially spread across relatively large time steps. Due to the high accuracy of the polynomial approximation, the pseudospectral method is able to maintain accuracy over large time steps\cite{Ross2004,Darby2011a}. However, a forward simulation necessarily has less accuracy than the spectral method, and may interpolate differently when applied to the optimal solution, causing minor deviations. These variations are usually negligibly small, however, this is problematic during the return phase, due to the way the throttling of the engines is modelled, ie. the specific impulse of the engines is set to 0 under Mach 5 or 20kPa inlet conditions during the optimisation process. As the engines are often throttled close to the minimum operable conditions, these restrictions can intensify the effects of otherwise minor deviations in the forward simulation.
  For this reason, the forward simulation of the return stage is split into three segments, with divisions at 1/6th and 1/3rd of the total trajectory length, chosen to separate the first major `skip' and bank, and split the `skipping' section of the trajectory. A forward simulation is initiated at each of these segments, mitigating some of the effects of the engines throttling on and off in the forward simulation. 
 Splitting the forward simulation allows the forward simulation of the return stage to be assessed without the effects of the throttle model having an unreasonably large effect. 
+
+
+
+\afterpage{
+	\begin{landscape}% Landscape page
+		\begin{figure}[ht]
+			\centering
+			\includegraphics[width=0.98\linewidth]{"figures/4_LODESTAR/Ascent Flowchart"}
+			\caption{The process of the rocket-scramjet-rocket trajectory optimisation. Relevant sections are indicated in square brackets at each process step.}
+			\label{fig:AscentFlowchart}
+		\end{figure} 
+	\end{landscape}
+}
+
+
+\section{The Optimisation Process in LODESTAR}
+Figure \ref{fig:AscentFlowchart} shows an illustration of the optimal control routine within LODESTAR. Each of the processes shown is described in more detail in the preceding sections, which are indicated in Figure \ref{fig:AscentFlowchart}. Initially, LODESTAR provides the initial guess and problem setup, configuring GPOPS-2 and defining the optimal control problem being solved. 
+The iterative process begins with GPOPS-2 providing the current iteration of the trajectory solution to LODESTAR, along with a mesh of nodes that define the points in time at which the dynamics of the system are approximated.
+LODESTAR then calculates the aerodynamic and engine performance of the launch system at each node along the trajectory, as well as atmospheric and flight conditions. This data is used to calculate the dynamics of the vehicle along the trajectory in six degrees of freedom. LODESTAR evaluates the trajectory, and simulates the unpowered third stage ascent and Hohmann transfer as forward simulations. LODESTAR uses the mass of the third stage fuel remaining at the end of its trajectory to calculate the payload-to-orbit, and passes this to GPOPS-2 as an endpoint cost function. 
+The vehicle dynamics and payload-to-orbit are evaluated by GPOPS-2, which utilises the IPOPT nonlinear programming solver\cite{Wachter2006} to update the guess of the trajectory solution via an interior point method, at which point this updated guess is passed through to LODESTAR once more. The solution is evaluated by GPOPS-2 at each iteration to compute the feasibility and optimality of the solution. This process repeats until either a predefined tolerance of optimality, or a predefined number of iterations, is reached. The process repeats for a number of mesh iterations defined by the user, which further refine the trajectory. 
+To aid in ensuring that an optimal solution is reached, GPOPS-2 is initiated from four separate initial guesses, with the final altitude guess varied by 1km between each initial trajectory. These iterations of GPOPS-2 are run in parallel, using Matlab's \textsf{Parfor} function. After all the iterations of GPOPS-2 have completed, the solutions are evaluated, and the `best' solution is chosen as the solution with the most accurately modelled dynamics. This process is parallelised within LODESTAR, with green and red arrows in Figure \ref{fig:AscentFlowchart} indicating the initiation and termination of the parallel loop respectively. 
+
+
 
 
 \section{Trajectory and Performance Analysis}
